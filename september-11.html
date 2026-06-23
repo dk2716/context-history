@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>September 11, 2001 — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="event-page">
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type event">Event</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>Events</span><span class="breadcrumb-sep">›</span>
+      <span>United States</span><span class="breadcrumb-sep">›</span>
+      <span>September 11, 2001</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+      <div style="flex:1;min-width:0;">
+        <div class="hero-region-tag">United States · September 11, 2001</div>
+        <h1 style="margin-top:0;">September 11, 2001</h1>
+        <p class="hero-sub">The morning nineteen al-Qaeda operatives hijacked four commercial aircraft and killed 2,977 people — an attack that ended one era of American foreign policy and launched another whose full costs are still being counted.</p>
+        <div class="hero-meta">
+          <span>~18 min read</span><span>·</span>
+          <span>8 academic sources</span><span>·</span>
+          <span>Last updated June 2026</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP5EBBICGor63QIl_HAU0UnSvm6p4ZaeXcu1GxC1PuHg&s=10" alt="September 11, 2001"
+          style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(232,168,56,0.25);display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav">
+      <li><a href="#quick-facts">Quick Facts</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#figures">Key Figures</a></li>
+      <li><a href="#events">The Day Itself</a></li>
+      <li><a href="#turning-points">Turning Points</a></li>
+      <li><a href="#matters">Why It Matters Today</a></li>
+      <li><a href="#legacy">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <article>
+
+    <section id="quick-facts">
+      <div class="quick-facts">
+        <div class="quick-facts-label">Quick Facts</div>
+        <div class="quick-facts-grid">
+          <div class="qf-item"><div class="qf-label">Date</div><div class="qf-value">September 11, 2001 — 8:46 a.m. to 10:28 a.m. EDT</div></div>
+          <div class="qf-item"><div class="qf-label">Location</div><div class="qf-value">New York City (World Trade Center) · Arlington, Virginia (Pentagon) · Shanksville, Pennsylvania</div></div>
+          <div class="qf-item"><div class="qf-label">Perpetrators</div><div class="qf-value">Al-Qaeda — 19 hijackers, planned and financed by Osama bin Laden</div></div>
+          <div class="qf-item"><div class="qf-label">Death toll</div><div class="qf-value">2,977 victims + 19 hijackers; ~6,000 injured; deaths from related illnesses continuing</div></div>
+          <div class="qf-item"><div class="qf-label">Aircraft</div><div class="qf-value">4 hijacked: AA Flight 11, UA Flight 175 (WTC); AA Flight 77 (Pentagon); UA Flight 93 (Shanksville)</div></div>
+          <div class="qf-item"><div class="qf-label">Immediate response</div><div class="qf-value">U.S. airspace closed; NATO invokes Article 5 (first time in history); Afghanistan invasion begins October 7, 2001</div></div>
+          <div class="qf-item"><div class="qf-label">Long-term response</div><div class="qf-value">Authorization for Use of Military Force (AUMF); PATRIOT Act; Department of Homeland Security; Iraq War 2003; NSA mass surveillance</div></div>
+          <div class="qf-item"><div class="qf-label">Cost</div><div class="qf-value">Economic damage: est. $10 billion direct; $2+ trillion in subsequent wars (Watson Institute, 2021)</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>Background: Al-Qaeda Before the Attacks</h2>
+      <p>Osama bin Laden founded al-Qaeda — "the Base" in Arabic — in the late 1980s from the networks of Arab volunteers who had fought the Soviet occupation of Afghanistan. The organisation's ideology combined Salafi-jihadist theology with a geopolitical grievance: the presence of U.S. military bases in Saudi Arabia, which bin Laden had framed, since 1996, as a sacred duty to expel. His 1996 fatwa declared war on Americans. His 1998 fatwa — co-signed with Egyptian Islamic Jihad's Ayman al-Zawahiri — declared that killing Americans and their allies was "an individual duty for every Muslim."</p>
+
+      <p>These declarations were not made in secret. The U.S. intelligence community was aware of them. What it struggled with was translating a diffuse threat — an organisation with cells in dozens of countries, recruiting through mosques, funded through Saudi charitable networks, operating training camps in Taliban-controlled Afghanistan — into specific actionable intelligence about specific plots. The Clinton administration had come close to killing bin Laden with cruise missiles in 1998 after the East Africa embassy bombings, which killed 224 people, and again in 1999. Neither strike succeeded.</p>
+
+      <p>The al-Qaeda cell that executed the September 11 attacks was planned from 1999 onward. Mohamed Atta, an Egyptian citizen who had studied in Hamburg and received flight training in Florida, was the operational lead. The 19 hijackers entered the United States legally, trained at American flight schools, and lived openly in American cities for months. Fifteen of the nineteen were Saudi citizens. Two were from the UAE, one from Egypt, one from Lebanon. None were Iraqi or Afghan. The 9/11 Commission found that the plot cost roughly $400,000 to $500,000 to execute.</p>
+
+      <p>The Bush administration, which had taken office in January 2001, was briefed extensively on the al-Qaeda threat in its first months. CIA Director George Tenet later said his "hair was on fire" with concern about an imminent attack. National Security Advisor Condoleezza Rice was briefed. On August 6, 2001 — thirty-six days before the attacks — President Bush received a Presidential Daily Brief titled "Bin Laden Determined to Strike in US." He did not convene a principals meeting in response.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">2,977</div><div class="stat-label">Victims killed on September 11, 2001 — the deadliest terrorist attack in history</div></div>
+        <div class="stat-box"><div class="stat-number">19</div><div class="stat-label">Hijackers — 15 Saudi nationals, 2 Emirati, 1 Egyptian, 1 Lebanese</div></div>
+        <div class="stat-box"><div class="stat-number">$500K</div><div class="stat-label">Estimated cost of the operation — against $2+ trillion in U.S. war spending</div></div>
+        <div class="stat-box"><div class="stat-number">20 years</div><div class="stat-label">Duration of the Afghanistan war that followed — ending August 2021</div></div>
+      </div>
+    </section>
+
+    <section id="figures">
+      <h2>Key Figures</h2>
+      <div class="figures-grid">
+        <div class="figure-card">
+          <div class="figure-name">Osama bin Laden</div>
+          <div class="figure-role">Al-Qaeda founder and operational planner</div>
+          <div class="figure-desc">A Saudi millionaire radicalised during the Soviet-Afghan War, bin Laden conceived and financed the September 11 attacks from Afghanistan. He evaded capture until May 2, 2011, when U.S. Navy SEALs killed him at a compound in Abbottabad, Pakistan — a hundred meters from the Pakistani Military Academy. He had been hiding there for years, apparently unknown to Pakistani intelligence, or concealed by elements of it.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Mohamed Atta</div>
+          <div class="figure-role">Lead hijacker, AA Flight 11</div>
+          <div class="figure-desc">An Egyptian architecture student who became radicalised in Hamburg in the mid-1990s, Atta was the operational commander of the cell. He flew American Airlines Flight 11 into the North Tower. The 9/11 Commission portrait of him — methodical, humorless, deeply ideological — is the standard account of how a middle-class professional becomes a mass murderer through ideological immersion.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">George W. Bush</div>
+          <div class="figure-role">President of the United States</div>
+          <div class="figure-desc">Bush was reading to schoolchildren at Emma E. Booker Elementary in Sarasota, Florida, when the attacks occurred. His initial response was widely criticised as slow and directionless; his September 14 speech at Ground Zero — "I can hear you! The rest of the world hears you! And the people who knocked these buildings down will hear all of us soon!" — was a defining presidential moment. The decisions he made in the months that followed — Afghanistan, the PATRIOT Act, the eventual pivot to Iraq — defined his presidency.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Dick Cheney</div>
+          <div class="figure-role">Vice President</div>
+          <div class="figure-desc">Cheney was evacuated to the Presidential Emergency Operations Center beneath the White House on the morning of September 11 and effectively managed the executive response while Bush remained airborne. He was the dominant voice within the administration for the most expansive possible interpretation of the emergency — enhanced interrogation techniques, mass warrantless surveillance, and the eventual decision that Iraq was the priority theatre of the War on Terror.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">George Tenet</div>
+          <div class="figure-role">CIA Director</div>
+          <div class="figure-desc">Tenet later claimed he had been sounding alarms about al-Qaeda throughout 2001 — the metaphor he used was that "the system was blinking red." He also presided over the CIA's post-9/11 enhanced interrogation programme, including waterboarding, which was later found by the Senate Intelligence Committee to have produced little actionable intelligence. His memoir, <em>At the Center of the Storm</em>, is a sustained exercise in partial accountability.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">The passengers of Flight 93</div>
+          <div class="figure-role">Civilian resisters</div>
+          <div class="figure-desc">After learning by phone that hijacked aircraft had been used as weapons, passengers including Todd Beamer, Mark Bingham, Tom Burnett, and Jeremy Glick voted to storm the cockpit. The aircraft crashed into a field near Shanksville, Pennsylvania, at 10:03 a.m. The intended target — most likely the U.S. Capitol — was spared. The final cockpit voice recording captures the passengers' assault on the door and the hijackers' decision to crash the plane before it was retaken.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <h2>The Day Itself</h2>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">8:14 – 8:46 A.M.</div>
+            <div class="tl-title">American Airlines Flight 11 — The First Strike</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>American Airlines Flight 11 departed Boston Logan at 7:59 a.m. bound for Los Angeles with 92 people aboard, including five hijackers. At 8:14 a.m., the hijackers moved. Mohamed Atta and his team used box cutters — allowed under pre-9/11 security rules — to subdue the crew. At 8:19 a.m., flight attendant Betty Ong called the airline's reservation center and reported the hijacking in a remarkably calm 25-minute call that became the first real-time account of the attacks. At 8:46 a.m., Atta flew the aircraft into the North Tower of the World Trade Center at roughly 440 mph. The impact between floors 93 and 99 killed everyone aboard and hundreds inside the building instantly.</p>
+          <p>Initial reports described a small plane or accident. The scale of the damage — a massive fireball, floors destroyed, thousands of gallons of jet fuel burning — quickly made clear this was not an accident. But the U.S. air defence system, NORAD, had not been notified of the hijacking in time to respond. The FAA and NORAD protocols of the time were designed for threats originating outside U.S. airspace, not for domestic aircraft turned into weapons.</p>
+          <div class="tl-sources"><span class="src-chip">9/11 Commission Report (2004)</span><span class="src-chip">Bernstein et al. (2002)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">9:03 A.M.</div>
+            <div class="tl-title">United Airlines Flight 175 — The World Watches</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>By the time United Airlines Flight 175 struck the South Tower at 9:03 a.m., television cameras from across New York were trained on the burning North Tower. The second impact — broadcast live worldwide — removed all remaining ambiguity: the United States was under attack. The aircraft hit between floors 77 and 85. Both towers now had structural damage that their designers — who had accounted for accidental aircraft strikes — had not anticipated at this fuel load and speed.</p>
+          <p>The South Tower, which was hit at a lower floor and at an angle that distributed load unevenly, would collapse first — at 9:59 a.m., 56 minutes after impact. The North Tower followed at 10:28 a.m. Both collapses were caused by the combination of impact damage to load-bearing columns and the sustained fire from burning jet fuel weakening steel at temperatures the fireproofing could not contain. The design worked exactly as intended up to a point no designer had designed for.</p>
+          <div class="tl-sources"><span class="src-chip">9/11 Commission Report (2004)</span><span class="src-chip">NIST Report (2005)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">9:37 A.M.</div>
+            <div class="tl-title">American Airlines Flight 77 — The Pentagon</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>American Airlines Flight 77, en route from Washington Dulles to Los Angeles, was hijacked and turned around over Ohio. At 9:37 a.m., Hani Hanjour flew the aircraft into the west facade of the Pentagon at 530 mph, killing 184 people — 64 on the aircraft and 125 in the building. The impact and fire destroyed a newly renovated section of the Pentagon that had been reinforced with blast-resistant windows and kevlar-lined walls. The reinforcements almost certainly saved lives. Five hijackers flew a 757 into the headquarters of the world's most powerful military without being intercepted.</p>
+          <p>Vice President Cheney, watching from the Presidential Emergency Operations Center, was informed of the Pentagon strike shortly after it occurred. He had already authorised fighters to shoot down unresponsive aircraft — an order whose legal basis was disputed, since it had not come directly from the President. The question of who authorised what and when on the morning of September 11 remains a subject of historical disagreement.</p>
+          <div class="tl-sources"><span class="src-chip">9/11 Commission Report (2004)</span><span class="src-chip">Woodward (2002)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">10:03 A.M.</div>
+            <div class="tl-title">United Airlines Flight 93 — The Passengers Fight Back</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>United Airlines Flight 93 departed Newark 41 minutes late. The delay proved consequential: by the time the four hijackers seized the aircraft over Ohio, passengers and crew were able to make phone calls learning that hijacked planes had already been used as missiles. A vote was taken. "Are you guys ready?" Todd Beamer asked. "Let's roll." The passengers used a food cart as a battering ram against the cockpit door. The cockpit voice recording — reviewed by families and the 9/11 Commission — captured the hijackers deciding to crash the plane at 10:03 a.m. rather than risk it being retaken, 20 minutes' flying time from Washington.</p>
+          <p>The intended target of Flight 93 has never been definitively confirmed. The 9/11 Commission concluded it was most likely the U.S. Capitol, based on statements by Khalid Sheikh Mohammed and the flight path. The White House was also a possibility. The passengers' revolt — spontaneous, unglamourised, effective — prevented whatever was planned. It is one of the few moments in the story of September 11 where individual decision-making made a direct, documentable difference.</p>
+          <div class="tl-sources"><span class="src-chip">9/11 Commission Report (2004)</span><span class="src-chip">Longman (2002)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">SEPT–OCT 2001</div>
+            <div class="tl-title">The Aftermath — From Ground Zero to Afghanistan</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The immediate aftermath involved extraordinary scenes of rescue and recovery in Lower Manhattan, where 343 firefighters and 71 police officers had died in the collapses. The smell of Ground Zero — burning metal, plastic, and something worse — persisted for months. Thousands of first responders developed respiratory illnesses; hundreds have since died from cancers linked to their exposure. The James Zadroga 9/11 Health and Compensation Act, providing healthcare for first responders, was not passed until 2010 — and required Jon Stewart's public shaming of Congress to extend it permanently in 2019.</p>
+          <p>Within days, Congress passed the Authorization for Use of Military Force (AUMF), which authorised the President to use "all necessary and appropriate force" against those responsible for the attacks. The resolution passed 420 to 1 in the House — the lone dissenter was Barbara Lee of California, who warned that "military action will not prevent further acts of international terrorism against the United States." It remains on the books today, cited as legal authority for military operations in dozens of countries its 2001 authors never contemplated.</p>
+          <p>On October 7, 2001, the United States and the United Kingdom launched Operation Enduring Freedom, striking Taliban and al-Qaeda targets in Afghanistan. The Taliban government fell within months. Osama bin Laden escaped into Pakistan at the battle of Tora Bora in December 2001, when a decision was made to rely on Afghan militias rather than U.S. ground forces to seal the mountain passes. He would not be found for another decade.</p>
+          <div class="tl-sources"><span class="src-chip">9/11 Commission Report (2004)</span><span class="src-chip">Mayer (2008)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="turning-points">
+      <h2>Turning Points</h2>
+      <div class="turning-points">
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 1</div>
+          <div class="turning-card-title">The August 6 PDB — "Bin Laden Determined to Strike in US"</div>
+          <p>Thirty-six days before the attacks, President Bush received a Presidential Daily Brief specifically warning that al-Qaeda intended to strike inside the United States, potentially using hijackings. Bush asked no follow-up questions and convened no principals meeting. National Security Advisor Condoleezza Rice later described the PDB as "historical" rather than operational — a characterisation disputed by the CIA briefer who delivered it. Whether this constitutes a culpable failure of attention or a reasonable prioritisation in a sea of threat warnings remains the central contested question about U.S. government responsibility for September 11.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 2</div>
+          <div class="turning-card-title">Tora Bora — The Decision Not to Use U.S. Ground Forces</div>
+          <p>In December 2001, with bin Laden cornered in the Tora Bora mountain complex on the Afghan-Pakistan border, the decision was made to rely on Afghan militias — some of whose commanders were negotiating with al-Qaeda — rather than commit U.S. Army Rangers or Special Forces to seal the passes. Bin Laden escaped into Pakistan. General Tommy Franks and Defense Secretary Rumsfeld later disputed that bin Laden was definitively at Tora Bora; subsequent Senate investigations found that he was. The decision not to commit U.S. forces — whether driven by ideology about using local proxies, concern about repeating the Soviet experience, or genuine uncertainty — allowed the architect of September 11 to survive for another decade.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 3</div>
+          <div class="turning-card-title">The "Wall" Between CIA and FBI</div>
+          <p>In August 2001, a CIA analyst identified two of the future hijackers — Nawaf al-Hazmi and Khalid al-Mihdhar — as al-Qaeda operatives who had entered the United States. The information was not shared with the FBI in time to locate them. A legal interpretation of the Foreign Intelligence Surveillance Act, implemented in the 1990s, had erected a procedural "wall" limiting intelligence sharing between CIA foreign operations and FBI domestic investigations. Both men died in the Pentagon attack six weeks later. The 9/11 Commission found this "wall" was the single most important structural failure that allowed the plot to proceed undetected.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 4</div>
+          <div class="turning-card-title">The Iraq Decision — Connecting Unconnected Dots</div>
+          <p>Within hours of the September 11 attacks, Deputy Defense Secretary Paul Wolfowitz raised the possibility of striking Iraq — a country with no involvement in the attacks. Within days, Defense Secretary Rumsfeld was asking his staff for "best info fast. Judge whether good enough hit S.H. [Saddam Hussein] at same time." The decision to invade Iraq in 2003 — justified partly by false claims of an Iraq–al-Qaeda connection — redirected the War on Terror toward a country that bore no responsibility for September 11, destabilised the region, and created conditions that gave rise to ISIS. It is one of the most consequential non sequiturs in the history of American foreign policy.</p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"We're at war. Someone has declared war on us, and we will respond accordingly."</blockquote>
+        <cite>— President George W. Bush, diary entry, September 11, 2001</cite>
+      </div>
+    </section>
+
+    <section id="matters">
+      <h2>Why It Matters Today</h2>
+      <p>The September 11 attacks set in motion changes to American law, foreign policy, and civil liberties whose effects are still unfolding more than two decades later. The question is no longer what happened on September 11 — it is what the response revealed, and cost.</p>
+
+      <div class="matters-grid">
+        <div class="matters-card">
+          <h3>The AUMF Still Governs Military Operations</h3>
+          <p>The 2001 Authorization for Use of Military Force — passed three days after the attacks in a climate of shock and unanimity — has been invoked to justify military operations in at least 19 countries. It was used to justify the 2011 killing of bin Laden in Pakistan, drone strikes in Yemen and Somalia, and operations against groups that did not exist in 2001. Congress has never updated or repealed it.</p>
+          <ul class="matters-subpoints">
+            <li>Cited in legal filings for Guantánamo detentions still ongoing</li>
+            <li>Used to authorise U.S. operations against ISIS — an organisation that didn't exist in 2001</li>
+            <li>Multiple reform attempts have stalled in Congress since 2013</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Mass Surveillance Became Permanent Infrastructure</h3>
+          <p>The NSA's post-9/11 surveillance programmes — revealed by Edward Snowden in 2013 — showed that the response to September 11 included building a mass surveillance architecture that collected data on hundreds of millions of people, including American citizens, with minimal judicial oversight. The programmes were authorised secretly under FISA Court orders and the PATRIOT Act.</p>
+          <ul class="matters-subpoints">
+            <li>NSA bulk phone metadata collection ran from 2001 to 2015</li>
+            <li>PRISM programme collected internet data from nine major U.S. tech companies</li>
+            <li>The Privacy and Civil Liberties Oversight Board found in 2014 that bulk phone collection had produced no unique counterterrorism leads</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Guantánamo Bay Remains Open</h3>
+          <p>President Bush opened the Guantánamo Bay detention facility in January 2002 to hold "enemy combatants" outside the reach of U.S. courts. At its peak it held 780 detainees. As of 2024, 30 remain — some never charged with any crime, held for more than two decades. Obama promised to close it on his first day as president and never did. The facility has become a symbol of the legal architecture built in the shadow of September 11.</p>
+          <ul class="matters-subpoints">
+            <li>9 detainees have died at Guantánamo, including 3 ruled suicides in 2006</li>
+            <li>The 9/11 mastermind Khalid Sheikh Mohammed has been awaiting trial there since 2006</li>
+            <li>Annual cost: approximately $13 million per detainee</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Wars' Human Cost</h3>
+          <p>The Watson Institute at Brown University estimates that the post-9/11 wars — in Afghanistan, Iraq, Pakistan, Syria, and elsewhere — have killed between 897,000 and 929,000 people directly, including 387,000 civilians, and displaced 38 million. The financial cost exceeds $8 trillion when projected future veterans' care is included. The September 11 attacks killed 2,977 people. The proportionality of the response is a live moral and strategic question.</p>
+          <ul class="matters-subpoints">
+            <li>7,052 U.S. military deaths in Afghanistan and Iraq</li>
+            <li>30,177 active-duty U.S. military suicides since 9/11 — four times the combat death toll</li>
+            <li>Afghanistan returned to Taliban control in August 2021</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="legacy">
+      <h2>Legacy &amp; Debate</h2>
+      <p>The historiography of September 11 has produced genuine scholarly disagreement on several fronts: whether the attacks were preventable, whether the intelligence community failed or was simply overwhelmed, whether the civil liberties trade-offs of the response were necessary or cynical, and whether the Iraq War — the most consequential downstream decision — was a sincere mistake or a premeditated misdirection. These debates have not been resolved; they have deepened.</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">The 9/11 Commission</div>
+          <div class="scholar-card-title">National Commission on Terrorist Attacks · Final Report (2004)</div>
+          <div class="scholar-card-verdict">The most authoritative account, based on 1,200 interviews and 2.5 million pages of documents. The Commission found systemic failures of imagination, policy, capabilities, and management — but distributed blame widely rather than assigning individual culpability. It concluded the attacks were not the result of any single failure but of a system designed for a different world. The report is rigorous and readable; its recommendations on intelligence reform were implemented unevenly.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Richard Clarke</div>
+          <div class="scholar-card-title">National Coordinator for Counterterrorism · <em>Against All Enemies</em> (2004)</div>
+          <div class="scholar-card-verdict">Clarke, the senior counterterrorism official in both the Clinton and Bush administrations, argues that the Bush team systematically downgraded the al-Qaeda threat in its first eight months — preoccupied with missile defence and Iraq — despite persistent warnings. He describes briefing Condoleezza Rice in January 2001 with what he characterises as a sense that she had never heard of al-Qaeda. His account is self-serving in parts but broadly corroborated by the Commission's findings on the August 6 PDB and the principals' meeting record.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Jane Mayer</div>
+          <div class="scholar-card-title">The New Yorker · <em>The Dark Side</em> (2008)</div>
+          <div class="scholar-card-verdict">Mayer's account of the post-9/11 response is the most detailed examination of how Cheney, Addington, Yoo, and the "war council" built the legal architecture for enhanced interrogation, warrantless surveillance, and indefinite detention within weeks of the attacks — and how that architecture was shielded from review by other parts of the executive branch. Her conclusion is that the response to September 11 damaged the United States institutionally in ways that outlasted the security gains, if any were made.</div>
+        </div>
+      </div>
+
+      <h3>The Central Contested Questions</h3>
+      <p>Was September 11 preventable? The honest answer is: possibly, but the conditions required were not in place. Preventing it would have required a different legal framework for intelligence sharing, a different set of priorities within the new administration, and either the successful assassination of bin Laden in the late 1990s or a successful disruption of the Hamburg cell before it trained in Afghanistan. Each of these was possible in retrospect; none was straightforward in prospect.</p>
+      <p>Did the response make the United States safer? The absence of a comparable domestic attack in the twenty-three years since is cited as evidence that it did. The creation of conditions that produced ISIS, the radicalisation of hundreds of thousands of people in Iraq and elsewhere, and the documented failure of programmes like the NSA bulk collection to produce unique counterterrorism leads are cited as evidence against. Both observations can be simultaneously true: some measures worked, some were counterproductive, and distinguishing between them has been made harder by classification and the absence of the counterfactual.</p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">The case that the response was proportionate</div>
+          <ul>
+            <li>No comparable domestic attack has occurred since 2001 <span class="perspective-attr">— DHS/FBI</span></li>
+            <li>Al-Qaeda's central organisation was degraded significantly by 2011 <span class="perspective-attr">— DNI assessments</span></li>
+            <li>The PATRIOT Act's roving wiretaps and delayed-notice provisions were tools already used in drug cases <span class="perspective-attr">— DOJ</span></li>
+            <li>Afghanistan under the Taliban had been a direct state sponsor of the attack <span class="perspective-attr">— 9/11 Commission</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">The case that the response was disproportionate</div>
+          <ul>
+            <li>Iraq had no connection to September 11; its invasion killed hundreds of thousands <span class="perspective-attr">— 9/11 Commission</span></li>
+            <li>NSA bulk collection produced no unique counterterrorism leads <span class="perspective-attr">— PCLOB (2014)</span></li>
+            <li>Torture produced little actionable intelligence per Senate Intelligence Committee <span class="perspective-attr">— SSCI Report (2014)</span></li>
+            <li>U.S. military suicides since 9/11 (30,177) are 4× combat deaths <span class="perspective-attr">— VA statistics</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"We're going to find out who did this and we're going to go after the bastards. We're going to smoke them out of their caves."</blockquote>
+        <cite>— George W. Bush, informal remarks, September 11, 2001 — capturing the emotional logic that would drive two decades of response</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People at the centre of the response</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="george-w-bush.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png" alt="George W. Bush">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">George W. Bush</div>
+            <div class="topic-preview">The president who declared the War on Terror, launched two wars, and whose presidency was defined entirely by the choices made in September 11's shadow.</div>
+          </a>
+          <a class="topic-card" href="dick-cheney.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwifClQLmQj250ZINEDUpxZFcEdcOfarsLdvqwbPzRNw&s" alt="Dick Cheney">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Dick Cheney</div>
+            <div class="topic-preview">The Vice President who ran the executive response on the morning of September 11 and became the foremost architect of its legal and military aftermath.</div>
+          </a>
+          <a class="topic-card" href="colin-powell.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS3aLYacLrJu_FNiULm5D31SY8R0fZhEMI8wFVMEWkYg&s=10" alt="Colin Powell">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Colin Powell</div>
+            <div class="topic-preview">The Secretary of State who warned Bush that Iraq was like a Pottery Barn — "you break it, you own it" — and then went to the UN to make the case for war anyway.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Events that followed directly</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="iraq-war.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScLTw9WdugDbXqXqhEJhKeqjsW6l4fcV6vBPv_tu-uPw&s=10" alt="The Iraq War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Iraq War</div>
+            <div class="topic-preview">The war that began in March 2003 as a stated response to September 11, despite Iraq's non-involvement — the most consequential downstream decision of the attacks.</div>
+          </a>
+          <a class="topic-card" href="gulf-war.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuSe7BQmMirtoN0s0l1JYDzbABbvOyjJMBthJxyTkdWQ&s=10" alt="The Gulf War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Gulf War</div>
+            <div class="topic-preview">The U.S. military's presence in Saudi Arabia following the Gulf War was bin Laden's stated primary grievance — the reason he declared war on America in 1996.</div>
+          </a>
+          <a class="topic-card" href="realpolitik.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH3DYaEm4v8Ap6BffjhehNLn_w9ZApN4NToEWpf28-Q&s=10" alt="Realpolitik">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Realpolitik</div>
+            <div class="topic-preview">The doctrine that drove U.S. support for Saudi Arabia, Pakistan, and the Afghan mujahideen — and that created the conditions from which al-Qaeda emerged.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">National Commission on Terrorist Attacks Upon the United States. (2004). <em>The 9/11 Commission Report.</em></span>
+          <span class="src-journal"> W.W. Norton.</span>
+          <span class="src-note">The foundational document — 567 pages based on 1,200 interviews and 2.5 million pages of records. The most authoritative public account of the planning, execution, and intelligence failures of September 11. Available free at 9-11commission.gov.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Clarke, R.A. (2004). <em>Against All Enemies: Inside America's War on Terror.</em></span>
+          <span class="src-journal"> Free Press.</span>
+          <span class="src-note">The most important insider account of U.S. counterterrorism policy from the 1990s through September 11. Clarke's perspective is that the Bush administration systematically downgraded the al-Qaeda threat. Self-serving in parts but corroborated on key factual questions by the Commission. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Mayer, J. (2008). <em>The Dark Side: The Inside Story of How the War on Terror Turned into a War on American Ideals.</em></span>
+          <span class="src-journal"> Doubleday.</span>
+          <span class="src-note">The definitive account of the post-9/11 legal architecture: enhanced interrogation, warrantless surveillance, and indefinite detention. Based on extensive interviews with current and former officials. The most carefully researched examination of what the response to September 11 cost the United States institutionally. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Bernstein, R., et al. (2002). <em>Out of the Blue: The Story of September 11, 2001, from Jihad to Ground Zero.</em></span>
+          <span class="src-journal"> Times Books.</span>
+          <span class="src-note">A New York Times reconstruction of the attacks, drawing on interviews with survivors, families, and officials. Strong on the human experience of the day itself and the immediate aftermath. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Longman, J. (2002). <em>Among the Heroes: United Flight 93 and the Passengers and Crew Who Fought Back.</em></span>
+          <span class="src-journal"> HarperCollins.</span>
+          <span class="src-note">The most detailed account of Flight 93, based on the phone calls made by passengers and interviews with their families. Covers the vote to storm the cockpit, the individual characters involved, and the final minutes. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">6</span>
+          <span class="src-title">Woodward, B. (2002). <em>Bush at War.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">Based on extensive access to senior Bush administration officials, covers the decision-making process in the days and weeks after September 11, including the early conversations about Iraq and the Afghanistan strategy. Written with administration cooperation, so should be read with awareness of that context. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">7</span>
+          <span class="src-title">Crawford Neta, C. (2021). <em>The United States Budgetary Costs of the Post-9/11 Wars.</em></span>
+          <span class="src-journal"> Watson Institute, Brown University.</span>
+          <span class="src-note">The most rigorous accounting of the financial cost of the post-9/11 wars — $8 trillion and counting when projected veterans' care is included. Free online at Brown's Costs of War project: watson.brown.edu/costsofwar.</span>
+        </li>
+        <li>
+          <span class="src-num">8</span>
+          <span class="src-title">Senate Select Committee on Intelligence. (2014). <em>Committee Study of the Central Intelligence Agency's Detention and Interrogation Program.</em></span>
+          <span class="src-journal"> U.S. Senate.</span>
+          <span class="src-note">The Senate's five-year investigation into the CIA's post-9/11 enhanced interrogation programme, finding that the techniques produced little unique intelligence and that the CIA misled Congress and the White House about their effectiveness. The executive summary (525 pages of a 6,700-page classified report) is available publicly. A landmark document.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div><!-- /.outer -->
+</div><!-- /.page-wrap -->
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html' },
+    { type: 'event',   title: 'The Gulf War',            desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html' },
+    { type: 'person',  title: 'Bill Clinton',            desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html' },
+    { type: 'person',  title: 'Hillary Clinton',         desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html' },
+    { type: 'concept', title: 'Realpolitik',             desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html' },
+    { type: 'person',  title: 'Tony Blair',              desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html' },
+    { type: 'person',  title: 'Colin Powell',            desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html' },
+    { type: 'person',  title: 'Dick Cheney',             desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html' },
+    { type: 'event',   title: 'The Iraq War',            desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html' },
+    { type: 'concept', title: 'Democratic Socialism',    desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War', desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Iran-Iraq War',       desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html' },
+    { type: 'concept', title: "Ba'athism",               desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html' },
+    { type: 'person',  title: 'Khalifa Haftar',          desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement', desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',             desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'event',   title: 'The Libyan Civil War',    desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html' },
+    { type: 'event',   title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html' },
+    { type: 'person',  title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html' },
+    { type: 'person',  title: 'Augusto Pinochet',        desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html' },
+    { type: 'person',  title: 'Saddam Hussein',          desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html' },
+    { type: 'person',  title: 'Henry Kissinger',         desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html' },
+    { type: 'person',  title: 'Salvador Allende',        desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html' },
+    { type: 'person',  title: 'Richard Nixon',           desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html' },
+    { type: 'person',  title: 'Barack Obama',            desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html' },
+    { type: 'person',  title: 'George W. Bush',          desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html' },
+    { type: 'person',  title: 'Ayatollah Khomeini',      desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn=document.getElementById('searchIconBtn'),dd=document.getElementById('searchDropdown'),inp=document.getElementById('searchInput');
+  _searchOpen=!_searchOpen; btn.classList.toggle('active',_searchOpen); dd.classList.toggle('open',_searchOpen);
+  if(_searchOpen){inp.focus();runSearch('');}else{inp.value='';_focusIdx=-1;}
+}
+function runSearch(q) {
+  const box=document.getElementById('searchResults'),term=q.trim().toLowerCase();
+  const seen=new Set();
+  const all=CONTEXT_ARTICLES.filter(a=>{if(seen.has(a.url))return false;seen.add(a.url);return true;});
+  const hits=term===''?all:all.filter(a=>a.title.toLowerCase().includes(term)||a.desc.toLowerCase().includes(term)||a.type.includes(term));
+  _focusIdx=-1;
+  if(!hits.length){box.innerHTML='<div class="search-empty">No articles yet — more coming soon.</div>';return;}
+  box.innerHTML=hits.map((a,i)=>`<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='ArrowDown'){e.preventDefault();_focusIdx=Math.min(_focusIdx+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();_focusIdx=Math.max(_focusIdx-1,0);}
+  else if(e.key==='Enter'&&_focusIdx>=0){items[_focusIdx].click();return;}
+  else if(e.key==='Escape'){toggleSearch();return;}
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click',e=>{if(_searchOpen&&!document.querySelector('.search-wrap').contains(e.target))toggleSearch();});
+window.addEventListener('scroll',()=>{
+  document.getElementById('progressBar').style.width=Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'),navItems=document.querySelectorAll('.sidebar-nav li');let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el){const w=el.classList.contains('active');document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active'));if(!w)el.classList.add('active');}
+function toggleSave(){
+  const btn=document.getElementById('saveBtn'),toast=document.getElementById('toast'),isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

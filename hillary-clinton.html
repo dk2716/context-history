@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hillary Clinton — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>People</span><span class="breadcrumb-sep">›</span>
+      <span>U.S. Officials</span><span class="breadcrumb-sep">›</span>
+      <span>Hillary Clinton</span>
+    </div>
+    <div class="hero-person-layout">
+      <div class="hero-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg" alt="Hillary Clinton"></div>
+      <div>
+        <div class="hero-region-tag">United States · First Lady · Senator · Secretary of State</div>
+        <h1>Hillary Clinton</h1>
+        <p class="hero-sub">The first woman to win a major party's presidential nomination — whose career spanned First Lady, US Senator, Secretary of State, and two presidential campaigns — and whose legacy remains among the most fiercely contested in American politics.</p>
+        <div class="hero-meta">
+          <span>~15 min read</span><span>·</span>
+          <span>Active: 1993–2016</span><span>·</span>
+          <span>United States</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav">
+      <li><a href="#quick-facts">Quick Facts</a></li>
+      <li><a href="#origins">Origins &amp; Rise</a></li>
+      <li><a href="#first-lady">First Lady</a></li>
+      <li><a href="#senator">Senator &amp; 2008 Run</a></li>
+      <li><a href="#secstate">Secretary of State</a></li>
+      <li><a href="#2016">The 2016 Campaign</a></li>
+      <li><a href="#legacy">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <article>
+
+    <section id="quick-facts">
+      <div class="quick-facts">
+        <div class="quick-facts-label">Quick Facts</div>
+        <div class="quick-facts-grid">
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Hillary Diane Rodham Clinton</div></div>
+          <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">October 26, 1947 — Chicago, Illinois</div></div>
+          <div class="qf-item"><div class="qf-label">Education</div><div class="qf-value">Wellesley College (BA, Political Science) · Yale Law School (JD, 1973)</div></div>
+          <div class="qf-item"><div class="qf-label">First Lady</div><div class="qf-value">January 20, 1993 – January 20, 2001 (Clinton administration)</div></div>
+          <div class="qf-item"><div class="qf-label">US Senator</div><div class="qf-value">New York, January 3, 2001 – January 21, 2009</div></div>
+          <div class="qf-item"><div class="qf-label">Secretary of State</div><div class="qf-value">January 21, 2009 – February 1, 2013 (Obama's first term)</div></div>
+          <div class="qf-item"><div class="qf-label">Presidential campaigns</div><div class="qf-value">2008 (lost Democratic primary to Barack Obama) · 2016 (won popular vote by 2.9M; lost Electoral College to Donald Trump)</div></div>
+          <div class="qf-item"><div class="qf-label">Key controversies</div><div class="qf-value">Private email server · Benghazi attack · 2016 campaign · Bill Clinton's impeachment</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="origins">
+      <h2>Origins &amp; Rise</h2>
+      <p>Hillary Rodham grew up in Park Ridge, a conservative Chicago suburb, in a Republican household — her father, Hugh Rodham, was a small-businessman who voted for Eisenhower and Nixon. She was, by all accounts, a serious and driven student who was president of her high school class, won recognition as a National Merit Finalist, and arrived at Wellesley College in 1965 as a Goldwater Republican. By the time she left for Yale Law School in 1969, she had moved steadily leftward under the influence of the civil rights movement, the Vietnam War, and the community organising philosophy of Saul Alinsky, whose work she analysed in a senior thesis. The transformation was not unusual for the era, but she was more systematic about it than most.</p>
+
+      <p>At Yale she met Bill Clinton, who by all accounts pursued her with a determination she initially resisted. She clerked for a civil rights law firm in Oakland, worked on the Nixon impeachment inquiry as a young staffer on the House Judiciary Committee, and — making a choice she has characterised as among the most significant of her life — followed Bill to Arkansas rather than pursue the Washington career she might easily have had. She joined the Rose Law Firm, became a partner, and served as Arkansas's First Lady through the 1980s while raising Chelsea and building her own professional reputation.</p>
+
+      <p>The choice to follow Bill Clinton to Arkansas rather than build an independent career was the foundational decision of her political life. Everything that came after — the opportunities and the constraints, the power and the controversy — flowed from that decision to intertwine her career with his.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">1969</div><div class="stat-label">First student commencement speaker at Wellesley — her speech drew national attention</div></div>
+        <div class="stat-box"><div class="stat-number">2000</div><div class="stat-label">Year she won election to the US Senate — first First Lady to win elected office</div></div>
+        <div class="stat-box"><div class="stat-number">65.9M</div><div class="stat-label">Popular votes in 2016 — the most of any losing presidential candidate in history</div></div>
+        <div class="stat-box"><div class="stat-number">112</div><div class="stat-label">Countries visited as Secretary of State — a record for the position at the time</div></div>
+      </div>
+    </section>
+
+    <section id="first-lady">
+      <h2>First Lady: Healthcare and Scandal</h2>
+      <p>Hillary Clinton arrived in the White House in January 1993 determined to be the most active First Lady since Eleanor Roosevelt — and arguably more so. Bill Clinton appointed her to chair the Task Force on National Health Care Reform, making her the first First Lady to hold a formal policy role in a presidential administration. The resulting proposal — a 1,342-page plan for universal coverage through managed competition — failed to reach a floor vote in Congress, killed by insurance industry lobbying, Republican opposition, and what critics called its own impenetrable complexity. The failure of "Hillarycare" damaged the administration severely and contributed to the 1994 midterm catastrophe.</p>
+
+      <p>She drew lessons from it. In the years that followed, she pursued smaller legislative wins — CHIP, the child health insurance programme, was largely her initiative. But the public image had already been set: she was polarising in a way that earlier First Ladies had not been, partly because she was more willing to exercise visible power, and partly because she had become a symbolic target for conservatives who objected to both her politics and the idea of an activist presidential spouse.</p>
+
+      <div class="callout warning">
+        <div class="callout-label">The Lewinsky Scandal</div>
+        <h4>The Personal and Political Costs</h4>
+        <p>When the Lewinsky scandal broke in January 1998, Hillary Clinton's first public response was to go on the Today show and attribute the allegations to "a vast right-wing conspiracy" against her husband. The conspiracy framing was later derided — the affair was real — but her description of the political infrastructure driving the investigation was not entirely inaccurate. Bill Clinton told her the allegations were false before telling her the truth months later. She has said the discovery of his deception was the most painful experience of her life. She chose to stay in the marriage. Whatever the personal calculus, the political consequences were significant: the scandal defined her public image in ways that followed her for two decades and gave critics a permanent line of attack on her judgment and authenticity.</p>
+      </div>
+    </section>
+
+    <section id="senator">
+      <h2>Senator from New York and the 2008 Run</h2>
+      <p>Her decision to run for the open Senate seat in New York in 2000 was — like her decision to go to Arkansas in the 1970s — a choice that divided observers between admiring her political calculation and questioning her authenticity. She had never lived in New York. She conducted a "listening tour" of the state that was openly mocked. She won by 12 points and won re-election in 2006 by 36 points, having used the intervening years to quietly master Senate procedure, build relationships across the aisle, and develop genuine expertise in military affairs — serving on the Armed Services Committee in part, colleagues noted, because she understood that a former First Lady needed to demonstrate command of national security issues if she wanted to be taken seriously as a presidential candidate.</p>
+
+      <p>On September 11, 2001 — eight months into her Senate term — the attacks transformed her political context. She voted to authorise the use of force in Afghanistan and, in October 2002, to authorise force in Iraq. The Iraq vote became the most damaging decision of her 2008 presidential campaign. Unlike Barack Obama, who had opposed the war from the beginning, she initially refused to call the vote a mistake — saying she had relied on the intelligence provided and that knowing what she knew at the time, she had voted correctly. When the political damage became clear, her positioning shifted incrementally but never produced a clean apology. Obama's campaign used the contrast to devastating effect in Iowa and New Hampshire.</p>
+
+      <p>The 2008 primary against Barack Obama was the closest major primary contest in Democratic history. She won more primary votes than Obama in the popular vote count; he won more delegates. The campaign was marked by genuine policy differences (her healthcare mandate vs. his voluntary approach), by generational contrasts (the first Black president vs. the first woman president), and by accusations of race-baiting from her campaign that damaged her relationship with Black voters. She conceded in June 2008 after Obama secured sufficient delegates, delivered what many considered the best speech of her campaign — "18 million cracks in the highest glass ceiling" — and endorsed him strongly.</p>
+    </section>
+
+    <section id="secstate">
+      <h2>Secretary of State</h2>
+      <p>Obama's appointment of Hillary Clinton as Secretary of State — nominating the woman who had just spent a year attacking his readiness to govern — was a deliberate evocation of Abraham Lincoln's "team of rivals" approach. She proved an energetic if not transformative Secretary, clocking more air miles than any predecessor, rebuilding relationships damaged by the Bush years, and overseeing several significant policy shifts. The pivotal controversies — Libya and the email server — also occurred on her watch.</p>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">2010–2011</div>
+            <div class="tl-title">The Arab Spring and the Libya Intervention</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>When Muammar Gaddafi's government faced an armed uprising in early 2011 and Gaddafi threatened to massacre the rebels in Benghazi, Clinton became the most forceful advocate within the Obama administration for military intervention. She helped assemble the Arab League support that enabled the UN Security Council resolution authorising a no-fly zone — and then, with France and the UK, expanded the operation from civilian protection to regime change. Gaddafi was killed in October 2011. The intervention was initially celebrated as a model: decisive, multilateral, no American ground troops.</p>
+          <p>Within two years, Libya had collapsed into factional civil war. The weapons Gaddafi had stockpiled — including man-portable surface-to-air missiles — scattered across the Sahel, fuelling conflicts in Mali, Niger, and Chad. The Islamic State established a presence. Clinton's role in the Libya decision became one of the central critiques of her tenure — an example, critics argued, of intervention without a plan for what came after. Obama himself later called the lack of post-war planning the worst mistake of his presidency. Clinton's defenders note that the Security Council resolution limited what was legally permissible and that the collapse of Libyan civil society was not foreseeable. Her critics note that it was entirely foreseeable — and was forecast by career State Department officials who were ignored.</p>
+          <div class="tl-sources"><span class="src-chip">Clinton (2014)</span><span class="src-chip">Chozick (2018)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">SEPTEMBER 11, 2012</div>
+            <div class="tl-title">Benghazi — The Attack and Its Political Aftermath</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>On September 11, 2012 — the eleventh anniversary of the 9/11 attacks — armed militants attacked the US diplomatic compound in Benghazi, Libya, killing Ambassador J. Christopher Stevens and three other Americans: Sean Smith, Tyrone Woods, and Glen Doherty. It was the first killing of a US ambassador since 1979. The attack occurred in a country that had just been destabilised by the intervention Clinton had championed.</p>
+          <p>The immediate controversy centred on the Obama administration's initial public messaging, which emphasised a spontaneous protest against an anti-Islam YouTube video rather than a planned terrorist attack. This framing was wrong; the intelligence picture was murkier in real time than it appeared in retrospect, but the administration's public statements overstated confidence in the protest narrative. Clinton testified to Congress that the specific cause — spontaneous protest or planned attack — was not her primary concern: "What difference, at this point, does it make?" The line was immediately weaponised by Republicans and followed her for years.</p>
+          <p>Congress held eight separate investigations of Benghazi, producing roughly 33,000 pages of documents. None found evidence of criminal wrongdoing by Clinton or deliberate cover-up. The 2016 Benghazi committee, chaired by Trey Gowdy, revealed the existence of her private email server — inadvertently, while investigating an unrelated subject. The investigations were, by any objective measure, disproportionate to the factual findings they produced. They were also, by any objective measure, politically effective: they damaged Clinton's approval ratings significantly in the period before her 2016 campaign.</p>
+          <div class="tl-sources"><span class="src-chip">Clinton (2014)</span><span class="src-chip">Bernstein (2007)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">2009–2013</div>
+            <div class="tl-title">The Private Email Server — Security Breach or Political Targeting?</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Throughout her tenure as Secretary of State, Clinton used a private email server — set up in her home in Chappaqua, New York — for all official State Department correspondence, rather than a government email account. The arrangement was discovered during the Benghazi investigation in 2015. The subsequent FBI investigation, led by Director James Comey, found that Clinton had sent and received classified material on the private server — including some material that was classified at the time it was sent — and that she and her aides had been "extremely careless in their handling of very sensitive, highly classified information." The investigation found no evidence of criminal intent and did not recommend prosecution.</p>
+          <p>The competing assessments of the email server split along predictable lines. Clinton's defenders note that Colin Powell and Condoleezza Rice had also used private email accounts for official business, that no evidence of actual security compromise was found, and that the rules governing personal email use were ambiguous at the time she set up the server in 2009. Her critics note that a private server — not just a private email address but a physical server under her direct control — was qualitatively different from what her predecessors had done, and that her initial explanations were misleading: she claimed she had used one device for convenience; the investigation found she had used multiple devices. The FBI Director's characterisation of her conduct as "extremely careless" was widely quoted by her opponents throughout 2016.</p>
+          <div class="tl-sources"><span class="src-chip">Chozick (2018)</span><span class="src-chip">Bernstein (2007)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="2016">
+      <h2>The 2016 Campaign</h2>
+      <p>Hillary Clinton's 2016 presidential campaign began with her as the overwhelming favourite — more experienced, better funded, and better organised than any opponent. It ended with Donald Trump winning the Electoral College 306 to 232, despite Clinton winning the popular vote by 2.87 million. The defeat prompted one of the most sustained post-mortems in American political history, with genuinely contested explanations that say as much about the analysts as about the campaign.</p>
+
+      <div class="callout warning">
+        <div class="callout-label">The Key Facts</div>
+        <h4>How 2016 Was Actually Decided</h4>
+        <p>Trump won by 77,744 votes across three states — Pennsylvania (44,292), Michigan (10,704), and Wisconsin (22,748). Had those votes flipped, Clinton would have been president. Her margin of defeat in each state was smaller than: the number of Green Party votes cast; the number of voters who stayed home compared to 2012; the statistical impact of Comey's October 28 letter (which FBI data suggests moved the polls by ~3 points). Multiple causes were operating simultaneously. Identifying a single decisive factor is politically motivated rather than analytically precise.</p>
+      </div>
+
+      <p>The primary against Bernie Sanders was bruising. Sanders's insurgent campaign — funded by small donors, focused on income inequality and financial regulation — exposed a genuine generational and ideological divide within the Democratic Party. Clinton won decisively, but Sanders's supporters' sense that the DNC primaries were tilted against him — later partly substantiated by leaked DNC emails released by WikiLeaks — created a reservoir of resentment that did not fully heal before November. Whether Sanders voters who stayed home or voted third party in 2016 were rationally expressing policy disagreement or irresponsibly enabling Trump is a debate that continues within the Democratic Party.</p>
+
+      <p>The general election was disrupted by two events that are difficult to assess separately. On October 7, 2016, the Access Hollywood tape — in which Trump bragged about sexually assaulting women — was published. Virtually every Republican establishment figure called for him to withdraw. Within hours, WikiLeaks released the first batch of John Podesta's hacked emails, redirecting the news cycle. Twelve days before the election, FBI Director James Comey sent a letter to Congress announcing the discovery of additional emails on a device shared by Clinton aide Huma Abedin and her then-husband Anthony Weiner. The letter, sent before the emails had been reviewed, reopened the investigation that Comey had closed in July. Nine days later, the investigation was again closed without new findings. Comey's letter moved the polls measurably; whether it was decisive in a race decided by 77,744 votes is logically unresolvable.</p>
+    </section>
+
+    <section id="legacy">
+      <h2>Legacy &amp; Debate</h2>
+      <p>Hillary Clinton's legacy is inseparable from questions of gender, power, and the limits of what American political culture would accept from an ambitious woman. Her supporters argue she was subjected to scrutiny and hostility that no comparable male politician would have faced. Her critics argue she was a flawed candidate whose personal choices — the email server, the paid speeches, the corporate ties — were legitimate liabilities that she compounded with poor political instincts. Both arguments have merit. They are not mutually exclusive.</p>
+
+      <div class="legacy-grid">
+        <div class="legacy-card positive">
+          <div class="legacy-label">The Case For</div>
+          <ul>
+            <li>First woman nominated for president by a major US party</li>
+            <li>Won popular vote in 2016 by 2.87 million — the largest margin of any losing candidate in history</li>
+            <li>Substantive Secretary of State: Reset with Russia (initially), pivot to Asia, women's rights as foreign policy priority</li>
+            <li>Led the coalition that intervened in Libya, preventing an immediate massacre in Benghazi (March 2011)</li>
+            <li>Effective Senator: bipartisan reputation, respected by colleagues across the aisle</li>
+            <li>CHIP programme largely her initiative as First Lady</li>
+            <li>Held together the Clinton administration through its most damaging moments</li>
+          </ul>
+        </div>
+        <div class="legacy-card negative">
+          <div class="legacy-label">The Case Against</div>
+          <ul>
+            <li>Libya intervention without post-war planning — contributed to a decade of civil war and a weapons crisis across the Sahel</li>
+            <li>Private email server — at minimum, poor judgment; FBI characterised it as "extremely careless"</li>
+            <li>2008 Iraq authorisation vote — refused to call it a mistake until politically convenient</li>
+            <li>$675,000 in paid speeches to Goldman Sachs while considering a presidential run</li>
+            <li>2016 campaign: failed to compete effectively in the Rust Belt states that decided the election</li>
+            <li>Initial "vast right-wing conspiracy" response to Lewinsky allegations was misleading</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legacy-card complex" style="margin-top:1.25rem;">
+        <div class="legacy-label">Genuinely Contested</div>
+        <ul>
+          <li>Did gender bias cost her the 2016 election, or did her own choices?</li>
+          <li>Was Comey's October 28 letter the decisive factor — or one of many?</li>
+          <li>Were the Benghazi and email investigations proportionate to the facts, or politically motivated?</li>
+          <li>Was the Libya intervention a success that collapsed, or a predictable failure?</li>
+          <li>Would she have been a consequential president, or would polarisation have paralysed her administration?</li>
+        </ul>
+      </div>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Carl Bernstein</div>
+          <div class="scholar-card-title">Washington Post / Sirius XM · <em>A Woman in Charge</em> (2007)</div>
+          <div class="scholar-card-verdict">The most thorough biography, based on hundreds of interviews. Bernstein's Clinton is a person of genuine intelligence, strong convictions, and significant achievements — whose political instincts are sometimes undermined by a defensive secrecy that she developed in response to decades of attack. She is not the figure her enemies constructed, but she contributed to her own problems.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Amy Chozick</div>
+          <div class="scholar-card-title">New York Times · <em>Chasing Hillary</em> (2018)</div>
+          <div class="scholar-card-verdict">A reporter who covered Clinton for a decade describes a candidate and operation that was simultaneously overconfident and defensive, that treated press access as an obstacle to be managed rather than a relationship to be cultivated, and that consistently made poor political choices about transparency. The campaign's failure was not primarily external — it reflected strategic and temperamental weaknesses the candidate never resolved.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Rebecca Traister</div>
+          <div class="scholar-card-title">New York Magazine · <em>Good and Mad</em> (2018)</div>
+          <div class="scholar-card-verdict">Traister situates Clinton's career within the broader history of women in American politics — arguing that the standards applied to Clinton (likability, authenticity, warmth) were standards systematically applied to ambitious women and not to their male counterparts. The hostility she faced was real, patterned, and significantly explains both her defensive style and her ultimate defeat. This does not require finding Clinton blameless — it requires understanding the conditions in which she operated.</div>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"I know I have work to do on this. Rebuilding trust takes time. And I am absolutely committed to doing whatever it takes to rebuild it, because I think I owe you that much."</blockquote>
+        <cite>— Hillary Clinton, Iowa campaign event, 2015 — responding to questions about her email server</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People directly connected</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="bill-clinton.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg" alt="Bill Clinton">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Bill Clinton</div>
+            <div class="topic-preview">Husband, political partner, and the figure whose presidency both elevated her public platform and imposed costs on her political career she spent decades managing.</div>
+          </a>
+          <a class="topic-card" href="obama.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg" alt="Barack Obama">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Barack Obama</div>
+            <div class="topic-preview">The opponent who defeated her in 2008, then appointed her Secretary of State — one of the most unusual political relationships in modern American history.</div>
+          </a>
+          <a class="topic-card" href="dick-cheney.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwifClQLmQj250ZINEDUpxZFcEdcOfarsLdvqwbPzRNw&s" alt="Dick Cheney">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Dick Cheney</div>
+            <div class="topic-preview">The Vice President whose Iraq War authorisation vote Clinton cast in 2002 — a vote she later struggled to characterise as a mistake — became the defining obstacle of her 2008 campaign.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Events and concepts that shaped her career</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="libyan-civil-war.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauTAgmpsG54Nrx44zBq9E8ULZ277MHKl6Sb1u36uoKg&s=10" alt="The Libyan Civil War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Libyan Civil War</div>
+            <div class="topic-preview">Clinton was the Obama administration's strongest advocate for intervention — making the Libya outcome her most consequential and most contested foreign policy legacy.</div>
+          </a>
+          <a class="topic-card" href="iraq-war.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScLTw9WdugDbXqXqhEJhKeqjsW6l4fcV6vBPv_tu-uPw&s=10" alt="The Iraq War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Iraq War</div>
+            <div class="topic-preview">Her 2002 Senate vote to authorise force in Iraq — and her reluctance to call it a mistake — was the defining vulnerability of her 2008 presidential campaign.</div>
+          </a>
+          <a class="topic-card" href="responsibility-to-protect.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN64RcrqCtuQHaO9sY3UWxc-6G74E_aXlnE2nYkVLGPA&s=10" alt="The Responsibility to Protect">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">The Responsibility to Protect</div>
+            <div class="topic-preview">Clinton invoked R2P to justify the Libya intervention — and the intervention's collapse tested the doctrine's limits in practice.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Bernstein, C. (2007). <em>A Woman in Charge: The Life of Hillary Rodham Clinton.</em></span>
+          <span class="src-journal"> Knopf.</span>
+          <span class="src-note">The most comprehensive biography, based on hundreds of interviews over many years. Covers her life through 2007 in depth. Available in most libraries. Bernstein is broadly sympathetic but rigorously documented.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Chozick, A. (2018). <em>Chasing Hillary: Ten Years, Two Presidential Campaigns, and One Intact Glass Ceiling.</em></span>
+          <span class="src-journal"> Harper.</span>
+          <span class="src-note">A New York Times reporter's account of covering Clinton across two campaigns. The most detailed inside account of the 2016 campaign's strategic failures and the campaign culture that produced them. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Clinton, H. (2014). <em>Hard Choices.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">Clinton's own account of her time as Secretary of State. Indispensable as a primary source for her perspective on Libya, Benghazi, and the Russia Reset, while appropriately read with awareness that it is a pre-campaign memoir written to frame her record. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Traister, R. (2018). <em>Good and Mad: The Revolutionary Power of Women's Anger.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">Situates Clinton's career within the broader history of women in American politics. Essential for understanding the structural context — particularly the gendered standards applied to ambitious women — that shaped how Clinton was perceived and how she responded. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Sheehy, G. (1999). <em>Hillary's Choice.</em></span>
+          <span class="src-journal"> Random House.</span>
+          <span class="src-note">Profiles Clinton's character and the key decisions of her early career, particularly the choice to follow Bill to Arkansas and the formative experiences that shaped her defensive public style. Useful for understanding the First Lady years and the psychology behind her political choices. Available in libraries.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div><!-- /.outer -->
+</div><!-- /.page-wrap -->
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html' },
+    { type: 'concept', title: 'Realpolitik',            desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html' },
+    { type: 'person',  title: 'Tony Blair',             desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html' },
+    { type: 'person',  title: 'Colin Powell',           desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html' },
+    { type: 'person',  title: 'Dick Cheney',            desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html' },
+    { type: 'event',   title: 'The Iraq War',           desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html' },
+    { type: 'concept', title: 'Democratic Socialism',   desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War', desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Iran-Iraq War',      desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html' },
+    { type: 'concept', title: "Ba'athism",              desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html' },
+    { type: 'person',  title: 'Khalifa Haftar',         desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement', desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',            desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'event',   title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html' },
+    { type: 'event',   title: 'Operation Condor',       desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html' },
+    { type: 'person',  title: 'Muammar Gaddafi',        desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html' },
+    { type: 'person',  title: 'Augusto Pinochet',       desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html' },
+    { type: 'person',  title: 'Saddam Hussein',         desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html' },
+    { type: 'person',  title: 'Henry Kissinger',        desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html' },
+    { type: 'person',  title: 'Salvador Allende',       desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html' },
+    { type: 'person',  title: 'Richard Nixon',          desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html' },
+    { type: 'person',  title: 'Barack Obama',           desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',     desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html' },
+    { type: 'person',  title: 'George W. Bush',         desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html' },
+    { type: 'person',  title: 'Ayatollah Khomeini',     desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn=document.getElementById('searchIconBtn'),dd=document.getElementById('searchDropdown'),inp=document.getElementById('searchInput');
+  _searchOpen=!_searchOpen; btn.classList.toggle('active',_searchOpen); dd.classList.toggle('open',_searchOpen);
+  if(_searchOpen){inp.focus();runSearch('');}else{inp.value='';_focusIdx=-1;}
+}
+function runSearch(q) {
+  const box=document.getElementById('searchResults'),term=q.trim().toLowerCase();
+  const seen=new Set();
+  const all=CONTEXT_ARTICLES.filter(a=>{if(seen.has(a.url))return false;seen.add(a.url);return true;});
+  const hits=term===''?all:all.filter(a=>a.title.toLowerCase().includes(term)||a.desc.toLowerCase().includes(term)||a.type.includes(term));
+  _focusIdx=-1;
+  if(!hits.length){box.innerHTML='<div class="search-empty">No articles yet — more coming soon.</div>';return;}
+  box.innerHTML=hits.map((a,i)=>`<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='ArrowDown'){e.preventDefault();_focusIdx=Math.min(_focusIdx+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();_focusIdx=Math.max(_focusIdx-1,0);}
+  else if(e.key==='Enter'&&_focusIdx>=0){items[_focusIdx].click();return;}
+  else if(e.key==='Escape'){toggleSearch();return;}
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click',e=>{if(_searchOpen&&!document.getElementById('searchWrap').contains(e.target))toggleSearch();});
+window.addEventListener('scroll',()=>{
+  document.getElementById('progressBar').style.width=Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'),navItems=document.querySelectorAll('.sidebar-nav li');let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el){const w=el.classList.contains('active');document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active'));if(!w)el.classList.add('active');}
+function toggleSave(){
+  const btn=document.getElementById('saveBtn'),toast=document.getElementById('toast'),isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

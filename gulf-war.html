@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Gulf War — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="event-page">
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type event">Event</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>Events</span><span class="breadcrumb-sep">›</span>
+      <span>Middle East</span><span class="breadcrumb-sep">›</span>
+      <span>The Gulf War</span>
+    </div>
+    <div class="hero-region-tag">Middle East · 1990–1991</div>
+    <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+      <div style="flex:1;min-width:0;">
+        <h1 style="margin-top:0;">The Gulf War</h1>
+        <p class="hero-sub">How Iraq's invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.</p>
+        <div class="hero-meta">
+          <span>~15 min read</span><span>·</span>
+          <span>5 academic sources</span><span>·</span>
+          <span>Last updated June 2025</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuSe7BQmMirtoN0s0l1JYDzbABbvOyjJMBthJxyTkdWQ&s=10" alt="The Gulf War"
+          style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(232,168,56,0.25);display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav">
+      <li><a href="#quick-facts">Quick Facts</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#figures">Key Figures</a></li>
+      <li><a href="#timeline">Key Events</a></li>
+      <li><a href="#turning-points">Turning Points</a></li>
+      <li><a href="#matters">Why It Matters Today</a></li>
+      <li><a href="#debate">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <article>
+
+    <section id="quick-facts">
+      <div class="quick-facts">
+        <div class="quick-facts-label">Quick Facts</div>
+        <div class="quick-facts-grid">
+          <div class="qf-item"><div class="qf-label">Duration</div><div class="qf-value">August 2, 1990 – April 11, 1991 (formal end)</div></div>
+          <div class="qf-item"><div class="qf-label">Trigger</div><div class="qf-value">Iraq invaded and annexed Kuwait on August 2, 1990</div></div>
+          <div class="qf-item"><div class="qf-label">Parties</div><div class="qf-value">Iraq vs. 35-nation coalition led by the United States, Saudi Arabia, United Kingdom, France, Egypt</div></div>
+          <div class="qf-item"><div class="qf-label">Coalition troops</div><div class="qf-value">~750,000 (US: ~540,000)</div></div>
+          <div class="qf-item"><div class="qf-label">Iraqi forces</div><div class="qf-value">~545,000 in theater at peak</div></div>
+          <div class="qf-item"><div class="qf-label">Coalition deaths</div><div class="qf-value">~292 killed in action (US: 148)</div></div>
+          <div class="qf-item"><div class="qf-label">Iraqi military deaths</div><div class="qf-value">Estimated 8,000–35,000 (contested; Iraqi records not released)</div></div>
+          <div class="qf-item"><div class="qf-label">Outcome</div><div class="qf-value">Kuwait liberated; Iraq expelled but Saddam Hussein remained in power; UN sanctions imposed</div></div>
+          <div class="qf-item"><div class="qf-label">Key UN resolution</div><div class="qf-value">Resolution 678 (Nov 29, 1990) — authorised force if Iraq did not withdraw by January 15, 1991</div></div>
+          <div class="qf-item"><div class="qf-label">Current status</div><div class="qf-value">War ended; Iraq invaded again 2003 (see The Iraq War)</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>Background</h2>
+      <p>By the summer of 1990, Saddam Hussein was facing a crisis of his own making. The Iran-Iraq War (1980–88) had left Iraq with an estimated $80 billion in debt, much of it owed to neighbouring Gulf states — Kuwait and Saudi Arabia chief among them. Saddam had framed the war as a buffer protecting Sunni Arab states from Khomeini's revolutionary Islam; he now wanted debt forgiveness as the price of that service. Kuwait refused. Worse, from Baghdad's perspective, Kuwait was deliberately exceeding its OPEC production quota, flooding the oil market and driving down the price per barrel — costing Iraq hundreds of millions in revenue at the worst possible moment. Saddam characterised this as "economic warfare."</p>
+
+      <p>The territorial claim was older than the debt dispute. Iraq had contested Kuwait's status as a separate entity since Kuwaiti independence in 1961, arguing that the British had carved Kuwait out of what should have remained part of Basra province. In addition, Iraq accused Kuwait of "slant drilling" into the shared Rumaila oil field — effectively stealing Iraqi oil from beneath the border. These grievances were real, but observers who watched Iraqi troop movements through the summer of 1990 noted something else: Saddam was preparing an invasion, not a negotiation.</p>
+
+      <p>The moment that has never fully escaped historical scrutiny came on July 25, 1990, eight days before the invasion. US Ambassador April Glaspie met Saddam in Baghdad and, according to the transcript later released by Iraq, told him that the United States had "no opinion on Arab-Arab conflicts, like your border disagreement with Kuwait." Whether Glaspie was conveying Washington's genuine position or inadvertently signalling non-intervention has been debated for three decades. The State Department disputed the transcript; Glaspie testified she had warned Saddam against force. But Iraqi forces crossed the Kuwaiti border at 2 a.m. on August 2, 1990 — and within twelve hours, Kuwait City had fallen.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">$80bn</div><div class="stat-label">Iraq's debt after the Iran-Iraq War — the financial pressure behind the invasion</div></div>
+        <div class="stat-box"><div class="stat-number">35</div><div class="stat-label">Nations in the coalition that ultimately expelled Iraq from Kuwait</div></div>
+        <div class="stat-box"><div class="stat-number">100</div><div class="stat-label">Hours of the ground war — one of the shortest major conflicts in modern history</div></div>
+        <div class="stat-box"><div class="stat-number">12</div><div class="stat-label">Years between the Gulf War ceasefire and the US-led invasion that toppled Saddam</div></div>
+      </div>
+    </section>
+
+    <section id="figures">
+      <h2>Key Figures</h2>
+      <div class="figures-grid">
+        <div class="figure-card">
+          <div class="figure-name">George H.W. Bush</div>
+          <div class="figure-role">US President</div>
+          <div class="figure-desc">The architect of the coalition. A former CIA director and UN ambassador, Bush understood multilateral diplomacy in a way his son would not. He made 50 phone calls in the first 48 hours after the invasion, lining up support from Moscow to Cairo. His decision to stop the ground war after 100 hours — leaving Saddam in power — defined the war's contested legacy.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Saddam Hussein</div>
+          <div class="figure-role">President of Iraq</div>
+          <div class="figure-desc">Miscalculated at every turn: assumed the US would not fight, assumed Arab solidarity would fracture the coalition, assumed his army could absorb air bombardment, promised "the mother of all battles" and delivered a rout. He emerged from the war weakened but in power — and spent the next twelve years under sanctions while privately calculating how to outlast them.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Dick Cheney</div>
+          <div class="figure-role">US Secretary of Defense</div>
+          <div class="figure-desc">Managed the military planning and publicly supported stopping at Kuwait's liberation rather than marching to Baghdad — a position he reversed twelve years later as Vice President. His decision to recommend Norman Schwarzkopf over other senior generals shaped how the war was fought on the ground.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Colin Powell</div>
+          <div class="figure-role">Chairman, Joint Chiefs of Staff</div>
+          <div class="figure-desc">Applied what became known as the Powell Doctrine — overwhelming force, clear objectives, defined exit strategy. Argued forcefully for giving sanctions more time before military action; when overruled, executed the war with maximal efficiency. The Gulf War made his reputation and launched his political career.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Norman Schwarzkopf</div>
+          <div class="figure-role">Commander, US Central Command</div>
+          <div class="figure-desc">Commanded coalition forces with a famous temper and a genuine gift for theatre. His "Left Hook" — sending armoured divisions through the western desert to outflank Iraqi positions — became a textbook example of operational maneuver. Furious at being ordered to halt after 100 hours, he felt the ceasefire terms were too lenient.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Margaret Thatcher / John Major</div>
+          <div class="figure-role">UK Prime Ministers</div>
+          <div class="figure-desc">Thatcher, still PM when Kuwait fell, reportedly stiffened Bush's resolve with her famous warning: "Don't go wobbly, George." She was ousted in November 1990; John Major led Britain through the war itself, committing 45,000 troops — the largest British deployment since the Falklands.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="timeline">
+      <h2>Key Events</h2>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">AUGUST 2, 1990</div>
+            <div class="tl-title">Iraq Invades Kuwait — The World Reacts</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Iraqi armoured divisions crossed the Kuwaiti border at 2 a.m. on August 2, 1990. By dawn, Republican Guard units were fighting in Kuwait City. By noon, Kuwait's ruler, Emir Jaber Al-Ahmad Al-Sabah, had fled to Saudi Arabia. The Kuwaiti army, outnumbered ten-to-one and without warning, managed to delay the advance at a few key points but could not stop it. Within 12 hours, the country was occupied. Saddam formally annexed Kuwait as Iraq's 19th province four days later.</p>
+          <p>The international response was faster and more unified than Saddam anticipated. The Arab League condemned the invasion 12-to-3. The UN Security Council passed Resolution 660 within hours — unanimous condemnation and demand for immediate withdrawal. Even the Soviet Union, Iraq's Cold War patron, supported the resolution. President Bush immediately froze Iraqi assets and began calling every foreign leader who might contribute to a coalition. The question was not whether the world was opposed to what Iraq had done — it was whether the world would do anything about it.</p>
+          <div class="tl-sources"><span class="src-chip">Freedman & Karsh (1993)</span><span class="src-chip">Woodward (1991)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">AUG 1990 – JAN 1991</div>
+            <div class="tl-title">Operation Desert Shield — Building the Coalition</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The five months between the invasion and the air war were primarily a diplomatic and logistical achievement. Bush assembled a 35-nation coalition that included not just NATO allies but Arab states — Egypt, Syria, Saudi Arabia, the UAE — whose participation was essential for both military and political reasons. Getting Syria's Hafez Assad, a Ba'athist rival of Saddam's, to join the coalition against a fellow Arab leader was particularly striking. Saudi Arabia's agreement to host US forces on its soil — the first time in modern history — was diplomatically necessary but religiously sensitive; it planted a seed of grievance that Osama bin Laden would later water.</p>
+          <p>The UN Security Council passed Resolution 678 on November 29, 1990, authorising member states to use "all necessary means" to force Iraq from Kuwait if it had not withdrawn by January 15, 1991. In Washington, debate was fierce. The Senate vote to authorise force passed by only 52 to 47. Colin Powell advocated giving sanctions longer to work; Baker and Cheney pushed for a military deadline. Bush chose the deadline. Saddam did not withdraw.</p>
+          <div class="tl-sources"><span class="src-chip">Freedman & Karsh (1993)</span><span class="src-chip">Powell (1995)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">JAN 17 – FEB 23, 1991</div>
+            <div class="tl-title">Operation Desert Storm — 38 Days of Air War</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The air campaign began at 2:38 a.m. on January 17, 1991, with cruise missiles striking Baghdad while CNN broadcast live. What followed was the most intensive aerial bombardment since World War II — over 100,000 sorties flown in 38 days, targeting Iraqi command infrastructure, air defenses, communications, and military logistics. The campaign was designed to degrade Iraq's capacity to resist before a single ground soldier crossed the border.</p>
+          <p>Saddam responded in ways that were diplomatically clever and militarily ineffective. He fired Scud missiles at Israel — hoping Israeli retaliation would fracture Arab participation in the coalition. Israel, under intense US pressure, absorbed the attacks without responding. He also released millions of gallons of Kuwaiti oil into the Persian Gulf (the largest oil spill in history at that time) and set fire to over 600 Kuwaiti oil wells as coalition forces approached, creating an environmental catastrophe visible from space. Both acts were expressions of defiance that changed nothing militarily. By the time the ground war began on February 24, Iraq's air force had been effectively destroyed and its army had been under sustained bombardment for five weeks.</p>
+          <div class="tl-sources"><span class="src-chip">Atkinson (1993)</span><span class="src-chip">Gordon & Trainor (1995)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">FEB 24–28, 1991</div>
+            <div class="tl-title">The 100-Hour Ground War — The Left Hook</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Schwarzkopf's ground offensive was a masterpiece of deception. Iraqi commanders expected the coalition to attack directly into Kuwait from Saudi Arabia. Instead, two US armoured corps secretly repositioned hundreds of miles to the west over several weeks. When the ground war began on February 24, a Marine feint along the coast drew Iraqi attention while the main force — the "Left Hook" — swept through the western desert, encircling the Republican Guard from behind. Iraqi resistance, devastated by five weeks of air strikes and deprived of communications, collapsed within hours in most sectors.</p>
+          <p>The Highway of Death became the war's most controversial image. On the night of February 26–27, as Iraqi forces fled Kuwait City north along Highway 80, US aircraft attacked the column for hours. Hundreds of vehicles were destroyed; estimates of deaths ranged from a few hundred to several thousand. Images of the burned convoy prompted intense debate about proportionality: were these soldiers fleeing or regrouping? Were these legitimate military targets or a massacre? The question was not resolved before President Bush called a ceasefire at midnight on February 27, ending the ground war after exactly 100 hours. Kuwait was liberated. Saddam Hussein was still in power.</p>
+          <div class="tl-sources"><span class="src-chip">Atkinson (1993)</span><span class="src-chip">Gordon & Trainor (1995)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">MARCH–APRIL 1991</div>
+            <div class="tl-title">The Uprisings America Did Not Support</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Within days of the ceasefire, both Shia Muslims in southern Iraq and Kurds in the north rose up against Saddam. Bush had called on Iraqis to rise up and overthrow him in radio broadcasts during the war. When they did, the US watched. Schwarzkopf, in the ceasefire negotiations at Safwan on March 3, permitted Iraqi forces to fly armed helicopters — nominally to move military officials across the country. Saddam used them to massacre the Shia uprising in the south. An estimated 60,000–100,000 Shia were killed.</p>
+          <p>The Kurds in the north were similarly crushed, creating a massive refugee crisis at the Turkish border. The images — hundreds of thousands of people fleeing into mountains in winter — finally prompted the US and UK to create a no-fly zone and "safe haven" in northern Iraq. But for the Shia in the south, there was no such protection. The failure to support the uprisings has been cited by Arab observers as one of the most significant betrayals of American foreign policy in the modern Middle East, creating a deep suspicion of American promises that would shape Iraqi politics for decades.</p>
+          <div class="tl-sources"><span class="src-chip">Freedman & Karsh (1993)</span><span class="src-chip">Powell (1995)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="turning-points">
+      <h2>Turning Points</h2>
+      <div class="turning-points">
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 1</div>
+          <div class="turning-card-title">The April Glaspie Meeting — Did America Greenlight the Invasion?</div>
+          <p>When Ambassador Glaspie told Saddam on July 25 that the US had "no opinion" on Arab-Arab border disputes, she may have inadvertently communicated that an invasion of Kuwait would not trigger US intervention. If Saddam had believed the US would fight, he would likely not have invaded — he had specifically sought assurances before the decision. A clearer warning might have prevented the war entirely, or forced Saddam to negotiate the debt and oil disputes through other means.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 2</div>
+          <div class="turning-card-title">Stopping at the Kuwait Border — The Decision That Made 2003 Possible</div>
+          <p>Bush, Cheney, Powell, and Baker all agreed in 1991 that the coalition's mandate was to liberate Kuwait, not to topple Saddam. Going to Baghdad, they argued, would have required occupying Iraq with no exit strategy and would have shattered the Arab coalition. That judgment was vindicated in 2003 when exactly those consequences played out. But leaving Saddam in power required twelve years of sanctions, no-fly zones, and unresolved confrontation — ending only when a different Bush administration made the opposite choice.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 3</div>
+          <div class="turning-card-title">Safwan — Permitting Iraqi Helicopters</div>
+          <p>At the ceasefire negotiations on March 3, General Schwarzkopf permitted Iraq to fly armed helicopters across the country, thinking only fixed-wing aircraft could threaten the coalition's position. Saddam used those helicopters to crush the Shia uprising in the south within days. Schwarzkopf later called it his greatest mistake of the war. If the US had refused helicopter flights, the Shia uprising might have succeeded — and the history of the next thirty years in Iraq would have been entirely different.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 4</div>
+          <div class="turning-card-title">US Troops in Saudi Arabia — Bin Laden's Grievance</div>
+          <p>Basing 500,000 US troops in Saudi Arabia — home of Islam's two holiest sites — was a military necessity but a religious provocation. Osama bin Laden, who had offered Saudi Arabia the use of his Afghan mujahideen fighters against Iraq and been refused, cited the ongoing US military presence on Saudi soil as the primary justification for the 1996 and 1998 bombings and ultimately the September 11 attacks. The Gulf War's military geography directly shaped the next decade of global terrorism.</p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"We have accomplished our mission, and when the decision was made to stop, there was a hundred thousand of his soldiers that were still there... I frankly wished, at the time, that it had gone on a little longer so that we could have gotten the Republican Guard."</blockquote>
+        <cite>— Norman Schwarzkopf, reflecting on the ceasefire decision, 1992</cite>
+      </div>
+    </section>
+
+    <section id="matters">
+      <h2>Why It Matters Today</h2>
+      <p>The Gulf War was the first post-Cold War test of American power and of the UN collective security system. Its outcomes — military, diplomatic, and unintended — continue to shape the Middle East and US foreign policy.</p>
+
+      <div class="matters-grid">
+        <div class="matters-card">
+          <h3>The Unfinished War That Became the Iraq War</h3>
+          <p>The decision to leave Saddam in power in 1991 required a containment strategy — sanctions, inspections, no-fly zones — that consumed twelve years, imposed enormous suffering on Iraqi civilians, and was ultimately deemed unsustainable. The 2003 invasion was partly an attempt to resolve what 1991 had left unresolved. The former Cheney and Bush officials who supported stopping in 1991 reversed their position in 2003.</p>
+          <ul class="matters-subpoints">
+            <li>UN sanctions killed an estimated 500,000 Iraqi children (Madeleine Albright's "worth it" interview became one of the most controversial statements in US foreign policy history)</li>
+            <li>The weapons inspection regime (UNSCOM, then UNMOVIC) became the mechanism through which the 2003 war was justified and contested</li>
+            <li>Saddam's deliberate ambiguity about WMDs — maintaining the appearance of a programme while actually dismantling it — was designed to deter Iran, but it gave his enemies the pretext they needed</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Template for Coalition Warfare</h3>
+          <p>The Gulf War defined the model of US-led multilateral military action: UN authorisation, broad coalition, overwhelming force, rapid victory. Every subsequent US military intervention has been measured against this template — either as a success to emulate (Kosovo 1999) or a cautionary tale to avoid (Iraq 2003, Afghanistan 2001–2021).</p>
+          <ul class="matters-subpoints">
+            <li>The Powell Doctrine — overwhelming force, clear objectives, exit strategy, public support — emerged from the Gulf War and was abandoned in Iraq 2003</li>
+            <li>The war demonstrated that Arab states would join Western-led coalitions when their own interests were threatened</li>
+            <li>China and the Soviet Union's acquiescence at the UN Security Council marked a brief moment of post-Cold War great-power cooperation that did not last</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Saudi Arabia, Bin Laden, and the Road to 9/11</h3>
+          <p>The permanent basing of US troops in Saudi Arabia after the Gulf War became the central grievance in Osama bin Laden's public justification for terrorism. Al-Qaeda's founding ideology was shaped directly by the Gulf War's geography — specifically, by what bin Laden saw as the defilement of the Arabian Peninsula by non-Muslim armies.</p>
+          <ul class="matters-subpoints">
+            <li>Bin Laden's 1996 "Declaration of War against the Americans" specifically cites US troops in Saudi Arabia as its primary casus belli</li>
+            <li>The US eventually relocated most Gulf forces to Qatar after 9/11 — partly to remove the specific grievance bin Laden had cited</li>
+            <li>The Shia-Sunni tensions inflamed by the war and its aftermath continued to shape Iraqi politics through 2023</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Kurdish Autonomy — A Legacy That Endures</h3>
+          <p>The no-fly zone established in northern Iraq after the war to protect Kurds from Saddam became the foundation of a de facto Kurdish autonomous region. That autonomy grew over the following decades and became the Kurdistan Regional Government — a significant political entity that played a key role in the 2003 Iraq War and remains a semi-independent region today.</p>
+          <ul class="matters-subpoints">
+            <li>The KRG (Kurdistan Regional Government) held an independence referendum in 2017 — a direct descendant of the protected autonomy created in 1991</li>
+            <li>US abandonment of the Shia uprising created lasting distrust among Iraqi Shia, many of whom turned toward Iran for support</li>
+            <li>The Highway of Death images remain a reference point in debates about the laws of war and proportionality</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="debate">
+      <h2>Legacy &amp; Debate</h2>
+      <p>At the time, the Gulf War was celebrated as a model of American leadership — fast, decisive, multilateral, successful. George H.W. Bush's approval rating hit 89% in February 1991. Twenty years later, the same events looked very different: the war that stopped short had required a second, far more costly war to finish what it started. The reassessment has never ended.</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Lawrence Freedman &amp; Efraim Karsh</div>
+          <div class="scholar-card-title">King's College London · <em>The Gulf Conflict 1990–1991</em> (1993)</div>
+          <div class="scholar-card-verdict">The definitive scholarly account argues that Bush's coalition-building was a genuine diplomatic achievement, that the decision to stop at Kuwait was correct given the coalition's limited mandate, and that the failure to support the uprisings reflected a realistic — if morally uncomfortable — calculation about regional stability. The war achieved its stated objective.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Michael R. Gordon &amp; Bernard Trainor</div>
+          <div class="scholar-card-title">New York Times / Marine Corps War College · <em>The Generals' War</em> (1995)</div>
+          <div class="scholar-card-verdict">A deeply reported critique arguing that the ceasefire was called prematurely for political reasons, that the Safwan negotiations were bungled, and that the failure to destroy the Republican Guard before halting left the instrument of Saddam's power intact. The 100-hour war was militarily premature — Schwarzkopf's fury at being stopped was justified.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Rick Atkinson</div>
+          <div class="scholar-card-title">Washington Post · <em>Crusade: The Untold Story of the Persian Gulf War</em> (1993)</div>
+          <div class="scholar-card-verdict">Acknowledges both the military achievement and its moral costs — the Highway of Death, the abandoned Shia, the Kurdish refugees. The war was a success by any standard military metric; whether it was a success by any broader standard depends on what you think it was for and what it produced twelve years later.</div>
+        </div>
+      </div>
+
+      <h3>Was the Gulf War Really About Kuwait — or About Oil?</h3>
+      <p>The official justification for the war was straightforward: a small country had been illegally invaded and annexed by its neighbour. The UN Charter's prohibition on territorial conquest by force was being tested, and the international community was responding. This framing was broadly accepted at the time — including by most Arab states, who saw Saddam's behaviour as a threat to Gulf stability that transcended the specific Kuwaiti case.</p>
+
+      <p>The critical counter-argument has always focused on what the war was actually protecting: Gulf oil supplies and the Saudi regime that controlled them. The US had no formal defence treaty with Kuwait. It had spent the previous decade supporting Saddam Hussein as a counterweight to Iran. The Bush administration's pre-war planning placed heavy emphasis on protecting Saudi oil fields — the economic rationale was front and centre in internal deliberations. Senator Daniel Patrick Moynihan, among others, noted that if Kuwait's primary export had been carrots, the world would not have mobilised 750,000 troops.</p>
+
+      <p>The honest answer is that both framings contain truth. The invasion of Kuwait genuinely did violate international law and set a dangerous precedent. It also genuinely did threaten the oil supply and regional stability that the United States and its allies had a material interest in protecting. These are not contradictory: the war served both a legal principle and a strategic interest, which is precisely why 35 nations joined it. Wars that serve only one tend to be harder to sustain politically.</p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">The Case For the Coalition</div>
+          <ul>
+            <li>Iraq violated a fundamental norm of international order — the prohibition on territorial conquest — that required a response <span class="perspective-attr">Freedman & Karsh (1993)</span></li>
+            <li>The coalition was genuinely multilateral: Arab states, including Syria, chose to join <span class="perspective-attr">Woodward (1991)</span></li>
+            <li>The UN mandate was respected — the coalition stopped when Kuwait was liberated, not when Baghdad was taken <span class="perspective-attr">Powell (1995)</span></li>
+            <li>The alternative — Saddam controlling Kuwait's oil and positioned to threaten Saudi Arabia — was genuinely catastrophic for the global economy <span class="perspective-attr">Freedman & Karsh (1993)</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">The Critical Case</div>
+          <ul>
+            <li>The US helped arm and enable Saddam through the 1980s; the Gulf War was partly a clean-up operation for its own client <span class="perspective-attr">Gordon & Trainor (1995)</span></li>
+            <li>The Highway of Death raised serious proportionality questions — attacking a retreating column for hours goes beyond military necessity <span class="perspective-attr">Atkinson (1993)</span></li>
+            <li>Encouraging the Shia and Kurdish uprisings then abandoning them was a moral betrayal with lasting consequences <span class="perspective-attr">Gordon & Trainor (1995)</span></li>
+            <li>The sanctions regime that followed killed far more civilians than the war itself — primarily children under five <span class="perspective-attr">Freedman & Karsh (1993)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p>The Gulf War's ultimate verdict may be inseparable from the 2003 Iraq War's. If the decision to stop short of Baghdad in 1991 was wise — avoiding a quagmire — then the war was a qualified success. If stopping short simply postponed an inevitable confrontation at much greater cost, then 1991 looks less like a triumph and more like an unfinished sentence. Cheney, who defended stopping in 1991 and reversed his position in 2003, lived out that contradiction in public.</p>
+
+      <div class="pull-quote">
+        <blockquote>"If we'd gone to Baghdad and got rid of Saddam Hussein, we'd have had to put a lot of forces in and run him to ground someplace. And then you've got to put a new government in his place and then what? Is it going to be a Sunni government or Shia government? …How many additional American casualties is Saddam worth? And the answer is not that damned many."</blockquote>
+        <cite>— Dick Cheney, 1994 — a position he abandoned by 2002</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People directly connected</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="saddam-hussein.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Saddam_Hussein_in_1998.png" alt="Saddam Hussein">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Saddam Hussein</div>
+            <div class="topic-preview">The Iraqi president whose invasion of Kuwait triggered the coalition response — and who survived the war to remain a problem for another twelve years.</div>
+          </a>
+          <a class="topic-card" href="dick-cheney.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwifClQLmQj250ZINEDUpxZFcEdcOfarsLdvqwbPzRNw&s" alt="Dick Cheney">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Dick Cheney</div>
+            <div class="topic-preview">Secretary of Defense during the Gulf War — publicly defended stopping at Kuwait, then reversed course as VP in 2003.</div>
+          </a>
+          <a class="topic-card" href="colin-powell.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS3aLYacLrJu_FNiULm5D31SY8R0fZhEMI8wFVMEWkYg&s=10" alt="Colin Powell">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Colin Powell</div>
+            <div class="topic-preview">The Chairman of the Joint Chiefs who executed the war's strategy and gave his name to the doctrine of overwhelming force it exemplified.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Related events</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="iraq-war.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScLTw9WdugDbXqXqhEJhKeqjsW6l4fcV6vBPv_tu-uPw&s=10" alt="The Iraq War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Iraq War</div>
+            <div class="topic-preview">The 2003 invasion that completed what the Gulf War left unfinished — and produced the chaos that the 1991 decision to stop short had been designed to avoid.</div>
+          </a>
+          <a class="topic-card" href="iran-iraq-war.html"><img class="topic-card-thumb" src="https://www.atlanticcouncil.org/wp-content/uploads/2018/08/IraqiMinister_Feature.jpg" alt="The Iran-Iraq War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Iran-Iraq War</div>
+            <div class="topic-preview">The eight-year war that left Iraq $80 billion in debt — the financial pressure that drove Saddam toward Kuwait.</div>
+          </a>
+          <a class="topic-card" href="september-11.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP5EBBICGor63QIl_HAU0UnSvm6p4ZaeXcu1GxC1PuHg&s=10" alt="September 11, 2001"><span class="topic-type-tag event">Event</span>
+            <div class="topic-name">September 11, 2001</div>
+            <div class="topic-preview">Partly rooted in Osama bin Laden's fury at US troops stationed in Saudi Arabia after the Gulf War — an unintended consequence of the coalition's geography.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Related concepts</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="realpolitik.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH3DYaEm4v8Ap6BffjhehNLn_w9ZApN4NToEWpf28-Q&s=10" alt="Realpolitik">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Realpolitik</div>
+            <div class="topic-preview">The war's mixed motives — international law and oil interests — make it a textbook case of how moral and strategic justifications intertwine in major conflicts.</div>
+          </a>
+          <a class="topic-card" href="baathism.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRleA1omBJ8JkTf_Zg3OF6_aUJp9jqhhoyqmPMs967xRg&s=10" alt="Ba'athism">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Ba'athism</div>
+            <div class="topic-preview">The Arab nationalist ideology that underpinned Saddam's regime — and whose internal contradictions helped explain why the Gulf War did not produce a democratic Iraq.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Freedman, L. &amp; Karsh, E. (1993). <em>The Gulf Conflict 1990–1991: Diplomacy and War in the New World Order.</em></span>
+          <span class="src-journal"> Princeton University Press.</span>
+          <span class="src-note">The most comprehensive academic history of the war. Covers diplomacy, military operations, and political context with extensive sourcing. Available in university libraries; widely considered the definitive scholarly account.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Atkinson, R. (1993). <em>Crusade: The Untold Story of the Persian Gulf War.</em></span>
+          <span class="src-journal"> Houghton Mifflin.</span>
+          <span class="src-note">A Pulitzer Prize–winning journalist's deeply reported account of the war's military operations, with extensive access to senior commanders. Particularly strong on the ground campaign and the Highway of Death. Available in most libraries.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Gordon, M.R. &amp; Trainor, B.E. (1995). <em>The Generals' War: The Inside Story of the Conflict in the Gulf.</em></span>
+          <span class="src-journal"> Little, Brown.</span>
+          <span class="src-note">The most critical account of the war's military leadership — argues the ceasefire was called too early and the Safwan negotiations were bungled. Written by a New York Times military correspondent and a retired Marine general. Essential for the counter-narrative.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Powell, C. &amp; Persico, J.E. (1995). <em>My American Journey.</em></span>
+          <span class="src-journal"> Random House.</span>
+          <span class="src-note">Powell's memoir covers the Gulf War in detail from his perspective as Chairman of the Joint Chiefs. Essential for understanding the internal debates about timing and the decision to stop. Self-serving in places but valuable for its insider perspective.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Woodward, B. (1991). <em>The Commanders.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">Woodward's real-time account of the Bush administration's decision-making process, from the invasion to the ground war. Based on extensive interviews with senior officials. Best source on the coalition-building diplomacy and internal White House debates.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div><!-- /.outer -->
+</div><!-- /.page-wrap -->
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html' },
+    { type: 'concept', title: 'Realpolitik',            desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html' },
+    { type: 'person',  title: 'Tony Blair',             desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html' },
+    { type: 'person',  title: 'Colin Powell',           desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html' },
+    { type: 'person',  title: 'Dick Cheney',            desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html' },
+    { type: 'event',   title: 'The Iraq War',           desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html' },
+    { type: 'concept', title: 'Democratic Socialism',   desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War', desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Iran-Iraq War',      desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html' },
+    { type: 'concept', title: "Ba'athism",              desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html' },
+    { type: 'person',  title: 'Khalifa Haftar',         desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement', desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',            desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'event',   title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html' },
+    { type: 'event',   title: 'Operation Condor',       desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html' },
+    { type: 'person',  title: 'Muammar Gaddafi',        desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html' },
+    { type: 'person',  title: 'Augusto Pinochet',       desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html' },
+    { type: 'person',  title: 'Saddam Hussein',         desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html' },
+    { type: 'person',  title: 'Henry Kissinger',        desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html' },
+    { type: 'person',  title: 'Salvador Allende',       desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html' },
+    { type: 'person',  title: 'Richard Nixon',          desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html' },
+    { type: 'person',  title: 'Barack Obama',           desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',     desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html' },
+    { type: 'person',  title: 'George W. Bush',         desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html' },
+    { type: 'person',  title: 'Ayatollah Khomeini',     desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn=document.getElementById('searchIconBtn'),dd=document.getElementById('searchDropdown'),inp=document.getElementById('searchInput');
+  _searchOpen=!_searchOpen; btn.classList.toggle('active',_searchOpen); dd.classList.toggle('open',_searchOpen);
+  if(_searchOpen){inp.focus();runSearch('');}else{inp.value='';_focusIdx=-1;}
+}
+function runSearch(q) {
+  const box=document.getElementById('searchResults'),term=q.trim().toLowerCase();
+  const seen=new Set();
+  const all=CONTEXT_ARTICLES.filter(a=>{if(seen.has(a.url))return false;seen.add(a.url);return true;});
+  const hits=term===''?all:all.filter(a=>a.title.toLowerCase().includes(term)||a.desc.toLowerCase().includes(term)||a.type.includes(term));
+  _focusIdx=-1;
+  if(!hits.length){box.innerHTML='<div class="search-empty">No articles yet — more coming soon.</div>';return;}
+  box.innerHTML=hits.map((a,i)=>`<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='ArrowDown'){e.preventDefault();_focusIdx=Math.min(_focusIdx+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();_focusIdx=Math.max(_focusIdx-1,0);}
+  else if(e.key==='Enter'&&_focusIdx>=0){items[_focusIdx].click();return;}
+  else if(e.key==='Escape'){toggleSearch();return;}
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click',e=>{if(_searchOpen&&!document.getElementById('searchWrap').contains(e.target))toggleSearch();});
+window.addEventListener('scroll',()=>{
+  document.getElementById('progressBar').style.width=Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'),navItems=document.querySelectorAll('.sidebar-nav li');let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el){const w=el.classList.contains('active');document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active'));if(!w)el.classList.add('active');}
+function toggleSave(){
+  const btn=document.getElementById('saveBtn'),toast=document.getElementById('toast'),isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

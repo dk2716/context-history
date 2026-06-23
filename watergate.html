@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Watergate — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="event-page">
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type event">Event</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>Events</span><span class="breadcrumb-sep">›</span>
+      <span>United States</span><span class="breadcrumb-sep">›</span>
+      <span>Watergate</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+      <div style="flex:1;min-width:0;">
+        <div class="hero-region-tag">United States · 1972–1974</div>
+        <h1 style="margin-top:0;">Watergate</h1>
+        <p class="hero-sub">The break-in was a third-rate burglary — the cover-up was a constitutional crisis that ended a presidency, sent 48 people to prison, and taught America that its president could lie to its face.</p>
+        <div class="hero-meta">
+          <span>~16 min read</span><span>·</span>
+          <span>7 academic sources</span><span>·</span>
+          <span>Last updated June 2026</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLHyG-CasLEHFhKH0MECBRcFkay6JVRB77rl24b5RltQ&s=10" alt="Watergate"
+          style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(232,168,56,0.25);display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav">
+      <li><a href="#quick-facts">Quick Facts</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#figures">Key Figures</a></li>
+      <li><a href="#events">The Scandal Unfolds</a></li>
+      <li><a href="#turning-points">Turning Points</a></li>
+      <li><a href="#matters">Why It Matters Today</a></li>
+      <li><a href="#legacy">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <article>
+
+    <section id="quick-facts">
+      <div class="quick-facts">
+        <div class="quick-facts-label">Quick Facts</div>
+        <div class="quick-facts-grid">
+          <div class="qf-item"><div class="qf-label">The break-in</div><div class="qf-value">June 17, 1972 — five operatives arrested at the Watergate complex, Washington D.C.</div></div>
+          <div class="qf-item"><div class="qf-label">Nixon's resignation</div><div class="qf-value">August 9, 1974 — the only U.S. president to resign from office</div></div>
+          <div class="qf-item"><div class="qf-label">Convictions</div><div class="qf-value">69 people charged; 48 convicted — including Nixon's Chief of Staff, Counsel, and Attorney General</div></div>
+          <div class="qf-item"><div class="qf-label">The tapes</div><div class="qf-value">Nixon had secretly recorded conversations in the Oval Office since 1971; the 18½-minute gap in one tape became infamous</div></div>
+          <div class="qf-item"><div class="qf-label">Saturday Night Massacre</div><div class="qf-value">October 20, 1973 — Nixon fired Special Prosecutor Archibald Cox; Attorney General and Deputy AG resigned rather than carry it out</div></div>
+          <div class="qf-item"><div class="qf-label">Smoking gun</div><div class="qf-value">June 23, 1972 tape released August 5, 1974, proved Nixon ordered the FBI blocked from investigating — six days after the break-in</div></div>
+          <div class="qf-item"><div class="qf-label">The pardon</div><div class="qf-value">September 8, 1974 — President Gerald Ford pardoned Nixon for "all offenses against the United States," ending any prospect of prosecution</div></div>
+          <div class="qf-item"><div class="qf-label">Deep Throat</div><div class="qf-value">Mark Felt, Associate Director of the FBI — revealed as Woodward's source in 2005, 30 years after the events</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>Background: Nixon's Paranoia and the Politics of 1972</h2>
+      <p>Richard Nixon won the 1968 presidential election by the narrowest of margins — 0.7 percentage points over Hubert Humphrey. He had spent most of his adult life in politics, won and lost national races, and been written off by the press after losing the 1962 California governor's race ("You won't have Nixon to kick around anymore"). The experience had left him with a siege mentality that was, in some respects, not irrational: he had enemies, the press genuinely disliked him, and his policy positions — on Vietnam, on China — were sophisticated enough to generate real opposition.</p>
+
+      <p>What transformed this understandable defensiveness into criminal conspiracy was the 1972 re-election campaign. Nixon was, by any political measure, unbeatable. He had opened China in February 1972. He had signed the SALT I arms reduction agreement with the Soviets. The economy was growing. His Democratic opponent would be whoever emerged from a chaotic primary process. The Committee to Re-Elect the President — deliberately and mockingly acronymed CREEP — had raised more money than any previous campaign. None of this was enough. Nixon authorised a covert operations unit, staffed by former CIA officers, tasked with dirty tricks against Democratic candidates, infiltration of political opponents, and — fatally — burglary.</p>
+
+      <p>The operatives who broke into the Democratic National Committee's offices at the Watergate complex on June 17, 1972, were looking for documents and planting bugs. The precise target — what they were looking for — has never been definitively established. The five men arrested that night had connections to the White House, the CIA, and the Bay of Pigs operation. The cover-up began within hours of their arrest. Nixon's biggest mistake was not the break-in — it was the tape-recorded conversation six days later in which he ordered the CIA to tell the FBI that pursuing the investigation would jeopardise national security. That conversation, preserved on the White House recording system he had installed himself, became known as the "smoking gun."</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">48</div><div class="stat-label">People convicted in connection with Watergate, including Nixon's most senior aides</div></div>
+        <div class="stat-box"><div class="stat-number">18½</div><div class="stat-label">Minutes erased from the key June 20, 1972 White House tape — the gap that haunted the investigation</div></div>
+        <div class="stat-box"><div class="stat-number">520</div><div class="stat-label">Electoral votes Nixon won in 1972 — a landslide that made the break-in not just criminal but absurd</div></div>
+        <div class="stat-box"><div class="stat-number">1</div><div class="stat-label">Vote in the House against authorising impeachment hearings — even Nixon's own party had largely abandoned him</div></div>
+      </div>
+    </section>
+
+    <section id="figures">
+      <h2>Key Figures</h2>
+      <div class="figures-grid">
+        <div class="figure-card">
+          <div class="figure-name">Richard Nixon</div>
+          <div class="figure-role">President of the United States, 1969–1974</div>
+          <div class="figure-desc">Nixon's presidency achieved genuinely significant things — the opening of China, détente with the Soviet Union, the end of the draft, the EPA, the normalisation of U.S. foreign policy after Vietnam. None of it mattered in the end. The tapes showed a man who used the instruments of the state — the FBI, CIA, IRS — as personal weapons against political enemies, and who put the preservation of his own power above the law. He was the first president to resign from office and the only one who clearly should have been removed if he hadn't.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">H.R. Haldeman</div>
+          <div class="figure-role">White House Chief of Staff</div>
+          <div class="figure-desc">Nixon's most important aide and the man who ran day-to-day White House operations with a discipline that earned him the nickname "the Berlin Wall" — nothing reached Nixon without going through Haldeman. He was present for the "smoking gun" conversation on June 23, 1972, in which Nixon ordered the CIA to obstruct the FBI investigation. Haldeman served 18 months in prison for obstruction of justice, conspiracy, and perjury. His diaries, published posthumously, are an invaluable primary source on Nixon's character.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">John Dean</div>
+          <div class="figure-role">White House Counsel</div>
+          <div class="figure-desc">Dean managed the cover-up from inside the White House before concluding — after the cover-up began to unravel in early 1973 — that he was being set up as the fall guy. He went to the prosecutors. His Senate testimony in June 1973 was the first detailed account of Nixon's personal involvement in the cover-up. Convicted of obstruction of justice, he served four months. His statement that "there is a cancer growing on the presidency" became one of the defining lines of the scandal.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Archibald Cox</div>
+          <div class="figure-role">Special Prosecutor</div>
+          <div class="figure-desc">A Harvard law professor and former Solicitor General, Cox was appointed Special Prosecutor in May 1973. His subpoena of the White House tapes — and Nixon's refusal to comply — created the constitutional crisis at the heart of Watergate. When Nixon ordered him fired on October 20, 1973 (the Saturday Night Massacre), Attorney General Elliot Richardson and his deputy William Ruckelshaus resigned rather than carry out the order. The resulting public outrage led directly to impeachment proceedings. Cox was replaced by Leon Jaworski, who proved equally tenacious.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Bob Woodward &amp; Carl Bernstein</div>
+          <div class="figure-role">Washington Post reporters</div>
+          <div class="figure-desc">Two relatively junior Washington Post reporters whose persistent reporting on the Watergate break-in — guided partly by the FBI's Associate Director Mark Felt, who met Woodward in underground car parks and became known as "Deep Throat" — kept the story alive when it might otherwise have died. Their book <em>All the President's Men</em> made investigative journalism romantic and is partly responsible for the cultural mythology of Watergate as a story about press freedom. The mythology somewhat overstates the reporters' role relative to congressional investigators and the prosecutors.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Judge John Sirica</div>
+          <div class="figure-role">Chief Judge, U.S. District Court for D.C.</div>
+          <div class="figure-desc">The judge who tried the Watergate burglars in early 1973 and refused to accept their silence. Sirica's aggressive questioning — and his willingness to impose maximum provisional sentences to pressure cooperation — broke the cover-up open. When James McCord wrote a letter claiming that political pressure had been applied to keep the defendants quiet, Sirica read it in open court. The cover-up effectively collapsed from that moment. Sirica's role is often underrated relative to the journalists and Senate investigators.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <h2>The Scandal Unfolds</h2>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">JUNE 17, 1972</div>
+            <div class="tl-title">The Break-In — Five Men Arrested at the Watergate</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>At 2:30 a.m. on June 17, 1972, a security guard named Frank Wills noticed tape covering the latch of a basement door at the Watergate office complex in Washington D.C. He removed it, walked on, returned twenty minutes later, and found the tape had been replaced. He called the police. Officers found five men in suits inside the offices of the Democratic National Committee, carrying cameras, lock-picking tools, and listening devices. All five had connections to the CIA and to CREEP. One, James McCord, was the security coordinator for Nixon's re-election committee.</p>
+          <p>The Nixon White House's initial response — dismissing it as "a third-rate burglary attempt" — was politically effective for months. Nixon won the November 1972 election by one of the largest margins in American history: 520 electoral votes to McGovern's 17. The cover-up seemed to be working. The Washington Post's early reporting, guided by Deep Throat, kept the story from dying entirely — but through the election, it remained a second-tier story for most of the press. The unravelling came slowly, then very fast.</p>
+          <div class="tl-sources"><span class="src-chip">Woodward &amp; Bernstein (1974)</span><span class="src-chip">Emery (1994)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">JANUARY – MARCH 1973</div>
+            <div class="tl-title">The Trial — Judge Sirica Breaks the Cover-Up</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The Watergate burglars went to trial in January 1973 before Judge John Sirica. All either pleaded guilty or were convicted. All refused to implicate the White House or reveal who had ordered the operation. Judge Sirica was openly skeptical. He imposed maximum provisional sentences — up to 40 years — to pressure cooperation, indicating he would reconsider if defendants came forward with information. The tactic was legally aggressive and eventually decisive.</p>
+          <p>In March 1973, James McCord sent Sirica a letter alleging that political pressure had been applied to keep the defendants silent, that perjury had been committed at trial, and that higher-ups were involved. Sirica read the letter aloud in court on March 23. The cover-up — held together by money, loyalty, and implied threats — began to collapse. John Dean concluded he was being positioned as the fall guy and contacted prosecutors. Haldeman and Ehrlichman resigned on April 30. Nixon went on television to say he accepted "responsibility" but claim he had known nothing.</p>
+          <div class="tl-sources"><span class="src-chip">Dean (1976)</span><span class="src-chip">Kutler (1990)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">MAY – AUGUST 1973</div>
+            <div class="tl-title">The Senate Hearings — Dean's Testimony and the Discovery of the Tapes</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The Senate Select Committee on Presidential Campaign Activities, chaired by Senator Sam Ervin of North Carolina, held public hearings beginning May 17, 1973. The hearings were televised live. An estimated 85% of American households watched at least part of them. John Dean's testimony on June 25–29 was the pivot: methodical, specific, devastating — Dean laid out Nixon's personal involvement in the cover-up in detail, describing conversations the White House denied having had. His credibility against Nixon's was the central question going into the summer.</p>
+          <p>The question was resolved on July 16 when Alexander Butterfield, a former White House aide, was asked in a routine staff interview whether there was any way to corroborate or refute Dean's account of his conversations with Nixon. Butterfield revealed that Nixon had installed a secret taping system in the Oval Office, the Cabinet Room, and several telephones. The tapes existed. The Senate Committee and the Special Prosecutor immediately subpoenaed them. Nixon refused to comply. The constitutional crisis was now explicit: a president claiming executive privilege to withhold evidence of his own potential crimes.</p>
+          <div class="tl-sources"><span class="src-chip">Dean (1976)</span><span class="src-chip">Emery (1994)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">OCTOBER 20, 1973</div>
+            <div class="tl-title">The Saturday Night Massacre — Nixon Fires the Prosecutor</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>On October 20, 1973, Nixon ordered Attorney General Elliot Richardson to fire Special Prosecutor Archibald Cox, who had refused to accept a compromise on the tapes and was pressing his subpoena in court. Richardson refused and resigned. Deputy Attorney General William Ruckelshaus also refused and was fired. Solicitor General Robert Bork, third in line at the Justice Department, carried out the order. In a single evening, Nixon had fired the independent prosecutor investigating him and triggered the resignation of his two most senior Justice Department officials.</p>
+          <p>The public and congressional reaction was immediate and severe. More than 450,000 telegrams flooded Congress in the days that followed — the largest such volume in history at that point. Impeachment resolutions began to accumulate. The House Judiciary Committee opened a formal inquiry. Nixon had calculated that the public would support his authority over an unaccountable prosecutor; the calculation was catastrophically wrong. He was forced to appoint Leon Jaworski as a new Special Prosecutor with an explicit guarantee of independence — effectively conceding that the office he had just tried to destroy had to exist.</p>
+          <div class="tl-sources"><span class="src-chip">Kutler (1990)</span><span class="src-chip">Emery (1994)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">JULY – AUGUST 1974</div>
+            <div class="tl-title">The Supreme Court, the Smoking Gun, and the Resignation</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>On July 24, 1974, the Supreme Court ruled unanimously — 8 to 0 — in <em>United States v. Nixon</em> that the president could not use executive privilege to withhold evidence from a criminal investigation. Nixon had to hand over the tapes. Three days later, the House Judiciary Committee passed the first of three articles of impeachment: obstruction of justice, abuse of power, and contempt of Congress. The vote was bipartisan. Nixon's own party was abandoning him.</p>
+          <p>On August 5, Nixon released transcripts of three conversations from June 23, 1972 — six days after the break-in. The transcripts showed Nixon and Haldeman explicitly discussing using the CIA to obstruct the FBI's investigation of the burglars. This was the smoking gun the White House had denied existed for two years. The ten remaining Republican members of the House Judiciary Committee who had voted against impeachment announced they would now vote for it. Republican Senate leaders Barry Goldwater and Hugh Scott visited the White House on August 7 and told Nixon he had, at most, fifteen votes in the Senate — well below the 34 needed to avoid removal. On August 8, Nixon announced his resignation on national television. He departed the White House on August 9, 1974.</p>
+          <div class="tl-sources"><span class="src-chip">Kutler (1990)</span><span class="src-chip">Bernstein &amp; Woodward (1976)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">SEPTEMBER 8, 1974</div>
+            <div class="tl-title">The Pardon — Ford Ends Any Prospect of Prosecution</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>On September 8, 1974, one month after Nixon's resignation, President Gerald Ford granted Nixon "a full, free, and absolute pardon… for all offenses against the United States which he… has committed or may have committed or taken part in" during his presidency. Ford's stated reason was that a prolonged prosecution would divide the country and distract from pressing national business. The decision cost him heavily: his press secretary Jerald terHorst resigned the same day, and the pardon became the primary reason many historians cite for Ford's defeat to Jimmy Carter in 1976.</p>
+          <p>The pardon foreclosed accountability for the single most serious abuse of power in American presidential history. Whether it was the right decision — weighing institutional closure against the principle that no one is above the law — has been debated ever since. Ford testified before Congress that there was no deal, and no evidence of a pre-resignation bargain has emerged. In 2001, Ted Kennedy awarded Ford the Profile in Courage Award for the pardon, arguing history had vindicated it. Many legal scholars and historians disagree.</p>
+          <div class="tl-sources"><span class="src-chip">Ambrose (1991)</span><span class="src-chip">Kutler (1990)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="turning-points">
+      <h2>Turning Points</h2>
+      <div class="turning-points">
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 1</div>
+          <div class="turning-card-title">Nixon Didn't Burn the Tapes</div>
+          <p>From the moment Alexander Butterfield revealed the White House taping system in July 1973, Nixon had a choice: destroy the tapes and claim executive privilege, or try to withhold them through litigation. He chose litigation — possibly because destroying them would have been obvious obstruction, possibly because he believed they would ultimately exonerate him, possibly because he could not bring himself to destroy something he had created to document his own greatness. Whatever the reason, it was the decision that made his removal inevitable. The "smoking gun" tape of June 23, 1972 existed because Nixon kept it.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 2</div>
+          <div class="turning-card-title">John Dean Decided to Talk</div>
+          <p>By early 1973, Dean had concluded that the cover-up was unravelling and that he was being positioned to take the fall. His decision to contact prosecutors — in April 1973, before the Senate hearings began — was the act that converted a successful cover-up into a criminal prosecution of the White House itself. Nixon's camp later argued that Dean's testimony was self-serving and unverifiable; the tapes proved it accurate. Had Dean remained silent or accepted a plea deal without cooperating, the cover-up might have held. Dean went to prison for four months. Haldeman and Ehrlichman got 18 months. John Mitchell, the Attorney General, got 19 months.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 3</div>
+          <div class="turning-card-title">Richardson and Ruckelshaus Refused the Order</div>
+          <p>When Nixon ordered the firing of Archibald Cox on October 20, 1973, Attorney General Elliot Richardson and his deputy William Ruckelshaus had a choice: obey or resign. Both resigned. Had either complied and the firing proceeded without the senior Justice Department officials' departure, the political damage might have been manageable. The resignations transformed the firing from an act of executive authority into a visible constitutional crisis. The Saturday Night Massacre would not have been a massacre without the refusals. It is one of the clearest examples in American history of institutional resistance mattering.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 4</div>
+          <div class="turning-card-title">The Supreme Court Ruled 8–0</div>
+          <p>Nixon had appointed four of the eight justices who ruled against him in <em>United States v. Nixon</em>, including Chief Justice Warren Burger. The unanimous ruling that executive privilege could not shield evidence in a criminal investigation was the legal end of Nixon's presidency. Had even a single justice broken with the majority — had the Court split along perceived partisan lines — Nixon might have used the division to resist compliance. The unanimity gave the ruling a moral authority that resistance would have been politically impossible to sustain. It also established the principle, still contested, that no president is above the law.</p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"I am not a crook."</blockquote>
+        <cite>— Richard Nixon, November 17, 1973, at a press conference where he was trying to demonstrate he had not profited from the presidency — the line that became the defining image of Watergate's dark comedy</cite>
+      </div>
+    </section>
+
+    <section id="matters">
+      <h2>Why It Matters Today</h2>
+      <p>Watergate's legacy is not primarily the scandal itself — it is what the scandal revealed about the assumptions Americans had made about their presidents, and the institutional and cultural changes it set in motion.</p>
+
+      <div class="matters-grid">
+        <div class="matters-card">
+          <h3>The Permanent Wound to Presidential Trust</h3>
+          <p>Before Watergate, the American public's default assumption was that the president, whatever his faults, did not actively lie to them about matters of high constitutional importance. After Watergate, the default assumption reversed. Every subsequent political scandal — Iran-Contra, Monica Lewinsky, the Iraq WMD case, and dozens of smaller controversies — has been interpreted through the Watergate template, with journalists and voters asking not "what did the president do?" but "what is the president hiding?"</p>
+          <ul class="matters-subpoints">
+            <li>The suffix "-gate" now automatically signals political scandal in English</li>
+            <li>Presidential approval ratings have never recovered their pre-1968 baseline</li>
+            <li>The decline in institutional trust documented in polling since the 1970s tracks directly to this period</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Laws That Watergate Made</h3>
+          <p>Congress responded to Watergate with a wave of reform legislation: the War Powers Act (limiting presidential authority to commit troops), the Campaign Finance Reform Act, the Ethics in Government Act, the Inspector General Act, and the Foreign Intelligence Surveillance Act. Many of these reforms have been eroded or circumvented over the decades since, but they defined the post-Watergate regulatory framework for executive power.</p>
+          <ul class="matters-subpoints">
+            <li>The Independent Counsel statute — creating prosecutors outside DOJ control — was the direct legal legacy of the Saturday Night Massacre</li>
+            <li>Financial disclosure requirements for senior officials date to the post-Watergate reforms</li>
+            <li>The Presidential Records Act (1978) requires the preservation of all presidential records</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Executive Power and Its Limits — Still Contested</h3>
+          <p>The constitutional questions Watergate raised — whether a president can use executive privilege to withhold evidence of crimes, whether a sitting president can be indicted, what constitutes an impeachable offence — remain unresolved. The Supreme Court's 8–0 ruling in <em>United States v. Nixon</em> established that executive privilege has limits; it did not define what those limits are in other circumstances. Subsequent presidents have tested them repeatedly.</p>
+          <ul class="matters-subpoints">
+            <li>The question of whether a sitting president can be indicted was raised in 2018–2019 and remains legally unresolved</li>
+            <li>Dick Cheney — Ford's Chief of Staff during Watergate — later argued that Watergate had weakened the presidency inappropriately</li>
+            <li>Executive privilege claims have been litigated continuously since 1974</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Press and Its Mythology</h3>
+          <p>Watergate made investigative journalism culturally heroic in a way it had not previously been. <em>All the President's Men</em> — published in 1974, filmed in 1976 with Robert Redford and Dustin Hoffman — romanticised the role of Woodward and Bernstein in ways that subsequent scholarship has complicated. The press's role was real but secondary to the Senate committee, the prosecutors, and Judge Sirica. The myth of the press as democracy's last line of defence against presidential overreach has been both inspiring and misleading in the decades since.</p>
+          <ul class="matters-subpoints">
+            <li>Applications to journalism schools spiked dramatically after 1974</li>
+            <li>The "follow the money" quote attributed to Deep Throat was invented by screenwriter William Goldman — Felt never said it</li>
+            <li>Mark Felt's identity as Deep Throat was kept secret for 31 years</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="legacy">
+      <h2>Legacy &amp; Debate</h2>
+      <p>Historians broadly agree on the basic facts of Watergate: Nixon authorised the cover-up, the cover-up was criminal, the tapes proved it, and resignation was the appropriate outcome. The debates are about context, causation, and consequence — about what kind of president Nixon was overall, whether the pardon was the right call, and what Watergate did to American politics.</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Stanley Kutler</div>
+          <div class="scholar-card-title">University of Wisconsin · <em>The Wars of Watergate</em> (1990)</div>
+          <div class="scholar-card-verdict">The definitive scholarly history, based on the Nixon tapes and extensive archival research. Kutler's Nixon is not a tragic figure undone by a single mistake but a career politician who had used extralegal means throughout his public life and who applied the same methods, in a more structured and more dangerous way, from the White House. Kutler later sued to force public release of the White House tapes and won. His work is the starting point for any serious study of Watergate.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Emery, Fred</div>
+          <div class="scholar-card-title">BBC · <em>Watergate: The Corruption of American Politics and the Fall of Richard Nixon</em> (1994)</div>
+          <div class="scholar-card-verdict">A comprehensive reconstruction by a British journalist, drawing on newly declassified documents and interviews with key participants. Emery is particularly good on the mechanics of the cover-up — the money flows, the coordination of testimony, the specific lies told to specific people — and on the question of what exactly the burglars were looking for at the DNC, which remains unresolved. A rigorous alternative to the Woodward-Bernstein narrative centring the journalists.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Ambrose, Stephen</div>
+          <div class="scholar-card-title">University of New Orleans · <em>Nixon: Ruin and Recovery</em> (1991)</div>
+          <div class="scholar-card-verdict">The final volume of Ambrose's three-volume Nixon biography takes seriously the question of what kind of president Nixon was overall — arguing that the genuine foreign policy achievements (China, détente, SALT) deserve recognition alongside the crimes. Ambrose's Nixon is a man of extraordinary political intelligence who applied that intelligence to self-destruction with equal efficiency. The biography is sympathetic without being exculpatory and is essential for understanding why Watergate was so much more tragic than a simple story of villainy.</div>
+        </div>
+      </div>
+
+      <h3>Did Nixon Know About the Break-In in Advance?</h3>
+      <p>The question of whether Nixon personally authorised the Watergate break-in — as opposed to merely orchestrating the cover-up — has never been definitively resolved. The "smoking gun" tape proves he ordered the cover-up six days after the fact. It does not prove advance knowledge. John Dean has said he believes Nixon knew; Haldeman said he did not. G. Gordon Liddy, who ran the operation, never cooperated with investigators. The balance of historical evidence suggests Nixon probably did not order this specific operation but had created an organisational culture in which such operations were understood to be wanted.</p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">The case that the system worked</div>
+          <ul>
+            <li>The tapes were produced; Congress acted; Nixon resigned — the constitutional process functioned <span class="perspective-attr">— Kutler (1990)</span></li>
+            <li>48 convictions demonstrated that no one — including the president — was above the law <span class="perspective-attr">— DOJ records</span></li>
+            <li>The press played a meaningful role in keeping the story alive before the evidence was public <span class="perspective-attr">— Woodward (1974)</span></li>
+            <li>Congress passed significant reforms constraining executive power <span class="perspective-attr">— Congressional Research Service</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">The case that it didn't work well enough</div>
+          <ul>
+            <li>Nixon was pardoned before facing any legal accountability <span class="perspective-attr">— multiple scholars</span></li>
+            <li>The cover-up succeeded for two years; structural reforms have been mostly eroded <span class="perspective-attr">— Emery (1994)</span></li>
+            <li>Institutional trust has declined continuously since Watergate — the damage outlasted the reforms <span class="perspective-attr">— Gallup polling</span></li>
+            <li>Dick Cheney explicitly drew the lesson that Watergate had weakened the presidency too much — and acted on it <span class="perspective-attr">— Barton Gellman (2008)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"When the president does it, that means that it is not illegal."</blockquote>
+        <cite>— Richard Nixon, interview with David Frost, May 19, 1977 — the claim that the Watergate investigation, the impeachment proceedings, and the Supreme Court had collectively refuted, and that Nixon still believed</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People at the centre of the story</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="richard-nixon.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Richard_M._Nixon%2C_ca._1935_-_1982_-_NARA_-_530679.jpg" alt="Richard Nixon">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Richard Nixon</div>
+            <div class="topic-preview">The 37th president — who opened China, deepened Vietnam, and became the only U.S. president to resign from office under the threat of impeachment.</div>
+          </a>
+          <a class="topic-card" href="henry-kissinger.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg" alt="Henry Kissinger">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Henry Kissinger</div>
+            <div class="topic-preview">Nixon's National Security Advisor and Secretary of State, who continued to shape U.S. foreign policy throughout Watergate and whose wiretapping of his own staff contributed to the culture of paranoia that produced it.</div>
+          </a>
+          <a class="topic-card" href="dick-cheney.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwifClQLmQj250ZINEDUpxZFcEdcOfarsLdvqwbPzRNw&s" alt="Dick Cheney">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Dick Cheney</div>
+            <div class="topic-preview">Gerald Ford's Chief of Staff during the post-Watergate period — who drew the explicit lesson that the scandal had weakened presidential power too much, and spent his vice presidency trying to restore it.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Related events and concepts</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="operation-condor.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-G2XVVmYlkMhDwayqqReq7VLvMpX9Q7K-V_Q-CumGjg&s=10" alt="Operation Condor">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">Operation Condor</div>
+            <div class="topic-preview">The covert assassination network authorised under Nixon and Kissinger — running parallel to Watergate and reflecting the same willingness to use extralegal means for political ends.</div>
+          </a>
+          <a class="topic-card" href="1973-arab-israeli-war.html"><img class="topic-card-thumb" src="https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1" alt="The 1973 Arab-Israeli War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The 1973 Arab-Israeli War</div>
+            <div class="topic-preview">The war that erupted in October 1973 — the same month as the Saturday Night Massacre — forcing Nixon and Kissinger to manage a major Middle East crisis while the presidency was collapsing domestically.</div>
+          </a>
+          <a class="topic-card" href="realpolitik.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH3DYaEm4v8Ap6BffjhehNLn_w9ZApN4NToEWpf28-Q&s=10" alt="Realpolitik">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Realpolitik</div>
+            <div class="topic-preview">The doctrine Nixon and Kissinger applied to foreign policy — and whose logic of power over principle was, in a sense, applied domestically with catastrophic results.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Kutler, S.I. (1990). <em>The Wars of Watergate: The Last Crisis of Richard Nixon.</em></span>
+          <span class="src-journal"> Knopf.</span>
+          <span class="src-note">The definitive scholarly history, based on extensive archival research and the Nixon tapes. Kutler later successfully sued to force public release of additional tapes. The most rigorous single-volume account. Available in most libraries.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Woodward, B. &amp; Bernstein, C. (1974). <em>All the President's Men.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">The reporters' account of their Washington Post investigation — the book that made Watergate famous. Essential as a primary source for the journalism; should be read alongside Kutler and Emery for a fuller picture of how the story actually broke. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Woodward, B. &amp; Bernstein, C. (1976). <em>The Final Days.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">Covers the collapse of the Nixon presidency in August 1974, based on interviews conducted after the fact. The portrait of Nixon in his final days — drinking, praying with Kissinger, talking to portraits — is disputed in some details but broadly consistent with other accounts. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Dean, J. (1976). <em>Blind Ambition: The White House Years.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">Dean's account of his role in the cover-up and his decision to cooperate with prosecutors. An essential primary source — Dean was at the centre of the events he describes, and his account is corroborated in its key facts by the tapes. Should be read with awareness that he is also defending himself. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Emery, F. (1994). <em>Watergate: The Corruption of American Politics and the Fall of Richard Nixon.</em></span>
+          <span class="src-journal"> Times Books.</span>
+          <span class="src-note">The most rigorous reconstruction of the mechanics of the scandal, drawing on newly available documents. Particularly strong on the question of what the burglars were actually looking for and on the financial flows of the cover-up. A good counterweight to the journalist-centred narrative. Available in libraries.</span>
+        </li>
+        <li>
+          <span class="src-num">6</span>
+          <span class="src-title">Ambrose, S.E. (1991). <em>Nixon: Ruin and Recovery, 1973–1990.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">The final volume of the definitive Nixon biography, covering Watergate and Nixon's post-presidential rehabilitation. Ambrose takes Nixon's foreign policy achievements seriously while documenting his crimes without exculpation. The most balanced single account of Nixon the man. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">7</span>
+          <span class="src-title">Gellman, B. (2008). <em>Angler: The Cheney Vice Presidency.</em></span>
+          <span class="src-journal"> Penguin Press.</span>
+          <span class="src-note">Essential for understanding the long shadow Watergate cast: Cheney and Rumsfeld, both serving under Ford during Watergate's aftermath, drew explicit lessons about executive power that shaped their conduct in the George W. Bush administration. Gellman's account documents how Watergate's institutional legacy was deliberately undone. Widely available.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div><!-- /.outer -->
+</div><!-- /.page-wrap -->
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html' },
+    { type: 'event',   title: 'The Gulf War',            desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html' },
+    { type: 'person',  title: 'Bill Clinton',            desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html' },
+    { type: 'person',  title: 'Hillary Clinton',         desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html' },
+    { type: 'concept', title: 'Realpolitik',             desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html' },
+    { type: 'person',  title: 'Tony Blair',              desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html' },
+    { type: 'person',  title: 'Colin Powell',            desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html' },
+    { type: 'person',  title: 'Dick Cheney',             desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html' },
+    { type: 'event',   title: 'The Iraq War',            desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html' },
+    { type: 'concept', title: 'Democratic Socialism',    desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War', desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Iran-Iraq War',       desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html' },
+    { type: 'concept', title: "Ba'athism",               desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html' },
+    { type: 'person',  title: 'Khalifa Haftar',          desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement', desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',             desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'event',   title: 'The Libyan Civil War',    desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html' },
+    { type: 'event',   title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html' },
+    { type: 'person',  title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html' },
+    { type: 'person',  title: 'Augusto Pinochet',        desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html' },
+    { type: 'person',  title: 'Saddam Hussein',          desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html' },
+    { type: 'person',  title: 'Henry Kissinger',         desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html' },
+    { type: 'person',  title: 'Salvador Allende',        desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html' },
+    { type: 'person',  title: 'Richard Nixon',           desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html' },
+    { type: 'person',  title: 'Barack Obama',            desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html' },
+    { type: 'person',  title: 'George W. Bush',          desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html' },
+    { type: 'person',  title: 'Ayatollah Khomeini',      desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn=document.getElementById('searchIconBtn'),dd=document.getElementById('searchDropdown'),inp=document.getElementById('searchInput');
+  _searchOpen=!_searchOpen; btn.classList.toggle('active',_searchOpen); dd.classList.toggle('open',_searchOpen);
+  if(_searchOpen){inp.focus();runSearch('');}else{inp.value='';_focusIdx=-1;}
+}
+function runSearch(q) {
+  const box=document.getElementById('searchResults'),term=q.trim().toLowerCase();
+  const seen=new Set();
+  const all=CONTEXT_ARTICLES.filter(a=>{if(seen.has(a.url))return false;seen.add(a.url);return true;});
+  const hits=term===''?all:all.filter(a=>a.title.toLowerCase().includes(term)||a.desc.toLowerCase().includes(term)||a.type.includes(term));
+  _focusIdx=-1;
+  if(!hits.length){box.innerHTML='<div class="search-empty">No articles yet — more coming soon.</div>';return;}
+  box.innerHTML=hits.map((a,i)=>`<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='ArrowDown'){e.preventDefault();_focusIdx=Math.min(_focusIdx+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();_focusIdx=Math.max(_focusIdx-1,0);}
+  else if(e.key==='Enter'&&_focusIdx>=0){items[_focusIdx].click();return;}
+  else if(e.key==='Escape'){toggleSearch();return;}
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click',e=>{if(_searchOpen&&!document.querySelector('.search-wrap').contains(e.target))toggleSearch();});
+window.addEventListener('scroll',()=>{
+  document.getElementById('progressBar').style.width=Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'),navItems=document.querySelectorAll('.sidebar-nav li');let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el){const w=el.classList.contains('active');document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active'));if(!w)el.classList.add('active');}
+function toggleSave(){
+  const btn=document.getElementById('saveBtn'),toast=document.getElementById('toast'),isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>
