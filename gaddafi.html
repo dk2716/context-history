@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muammar Gaddafi — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="#">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Leaders & Rulers</a><span class="breadcrumb-sep">›</span>
+        <span>Muammar Gaddafi</span>
+      </div>
+
+      <div class="hero-person-layout">
+        <div class="hero-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg" alt="Muammar Gaddafi"></div>
+        <div>
+          <div class="hero-region-tag">Libya · Dictator</div>
+          <h1>Muammar Gaddafi</h1>
+          <p class="hero-native">معمر القذافي &nbsp;·&nbsp; b. 1942, Sirte — d. 2011, Sirte</p>
+          <p class="hero-sub">The son of a Bedouin goat-herder who seized power at 27 and held it for 42 years. One of the 20th century's most eccentric, brutal, and — for a time — genuinely influential dictators.</p>
+          <div class="hero-meta">
+            <span>~18 min read</span><span>·</span>
+            <span>In power: 1969–2011</span><span>·</span>
+            <span>Libya, North Africa</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins & Rise</a></li>
+        <li><a href="#ideology">Ideology</a></li>
+        <li><a href="#rule">How He Ruled</a></li>
+        <li><a href="#foreign">Foreign Policy</a></li>
+        <li><a href="#fall">The Fall</a></li>
+        <li><a href="#legacy">Legacy & Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <!-- QUICK FACTS -->
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="quick-facts-grid">
+            <div class="qf-item">
+              <div class="qf-label">Full name</div>
+              <div class="qf-value">Muammar Muhammad Abu Minyar al-Gaddafi</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Born</div>
+              <div class="qf-value">c. June 7, 1942 — near Sirte, Libya</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Died</div>
+              <div class="qf-value">October 20, 2011 — Sirte, Libya (captured and killed by rebels)</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">In power</div>
+              <div class="qf-value">September 1, 1969 – October 20, 2011 (42 years)</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Came to power by</div>
+              <div class="qf-value">Military coup against King Idris I, age 27</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Ideology</div>
+              <div class="qf-value">Third Universal Theory · Arab nationalism · Islamic socialism · Anti-imperialism</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Official titles (self-given)</div>
+              <div class="qf-value">"Brother Leader," "Guide of the Revolution," "King of Kings of Africa"</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Tribe</div>
+              <div class="qf-value">Qaddadfa (from Sirte — long marginalised under the monarchy)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORIGINS -->
+      <section id="origins">
+        <h2>Origins & Rise to Power</h2>
+
+        <p>Muammar Gaddafi was born in a tent. His father was a Bedouin goat-herder of the Qaddadfa tribe, one of the smaller tribal groups in Libya's central Sirte Basin — far from the country's coastal urban centres of Tripoli and Benghazi that dominated political and economic life. This background shaped everything: Gaddafi's deep resentment of urban elites, his tribal identity, his romanticisation of Bedouin simplicity, and his lifelong suspicion of institutions.</p>
+
+        <p>His first exposure to formal education came relatively late. He was a bright student but often had to follow his family's seasonal migrations, disrupting his schooling. He developed an early obsession with Arab nationalism — specifically with Egyptian president Gamal Abdel Nasser, who had humiliated Britain and France in the 1956 Suez Crisis and seemed to prove that an Arab leader could stand against the old colonial powers. To a young man from a marginalised tribe in a country that had only been independent since 1951, Nasser was a model.</p>
+
+        <p>Gaddafi joined the Libyan Army and enrolled in the military academy at Benghazi in 1963, and later trained in Britain at the Royal Military Academy. While in the army, he began organising a secret cell of like-minded young officers — the Free Unionist Officers, modelled on the Egyptian group that had brought Nasser to power. They were young, they were angry, and they were watching for an opportunity.</p>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-number">27</div>
+            <div class="stat-label">Age when he seized power</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">42</div>
+            <div class="stat-label">Years in power (1969–2011)</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">1969</div>
+            <div class="stat-label">Year of the coup</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">1951</div>
+            <div class="stat-label">Libya's year of independence</div>
+          </div>
+        </div>
+
+        <h3>The Coup: September 1, 1969</h3>
+
+        <p>On September 1, 1969, while King Idris I was abroad receiving medical treatment in Turkey, Gaddafi's small group of officers executed a bloodless coup. They seized the radio stations, the army barracks, and the key government buildings. Idris, elderly and ill, declined to fight back and went into exile. Gaddafi, a 27-year-old captain, had just become the de facto ruler of one of Africa's most oil-rich countries. The coup shocked the West but met with surprisingly little internal resistance — the monarchy had been widely seen as corrupt and subservient to foreign oil companies.</p>
+
+        <p>In the immediate aftermath, Gaddafi's appeal was genuine in some quarters. He expelled the American Wheelus Air Base and British forces within a year, renegotiated oil revenues sharply upward (winning more favourable terms than the monarchy ever had), and banned alcohol and casinos. He spoke the language of Arab dignity against Western exploitation. Many Libyans, particularly younger ones, initially welcomed him. But what began as nationalist populism would harden into something far darker.</p>
+
+        <div class="callout concept">
+          <div class="callout-label">Context</div>
+          <h4>Why Libya Had Oil — and Why That Mattered for Gaddafi</h4>
+          <p>Oil was discovered in Libya in 1959, eight years after independence, transforming one of the world's poorest countries almost overnight. By the late 1960s, Libya was one of the world's top oil exporters. This meant Gaddafi inherited an extraordinary resource: the ability to fund a state, buy loyalty, and project influence far beyond Libya's modest population — all without needing to build functioning tax-collecting institutions or a productive economy. Oil wealth is a double-edged gift to dictators: it enables them, and it also makes them complacent.</p>
+        </div>
+      </section>
+
+      <!-- IDEOLOGY -->
+      <section id="ideology">
+        <h2>The Green Book: Gaddafi's Political Theory</h2>
+
+        <p>Most dictators don't write their own ideology. Gaddafi did — three slim volumes published between 1975 and 1979, bound in green (the colour of Islam and of his revolution), collectively titled <em>The Green Book</em>. It is one of the stranger documents in 20th-century political history: part Rousseau, part tribal elder, part fever dream. Understanding it is essential for understanding what Gaddafi was actually trying to do — and why Libya ended up as structurally hollow as it did.</p>
+
+        <p>The core thesis is what Gaddafi called the Third Universal Theory: a rejection of both capitalism (which he saw as exploiting workers through wage labour) and communism (which he saw as exploiting people through state control). In their place, he proposed something he called Jamahiriya — roughly translatable as "state of the masses" — in which political parties were abolished and power was formally devolved to thousands of local "people's committees." On paper, Libya under the Green Book was a radical direct democracy. In practice, the committees debated minor local matters while Gaddafi made every decision that actually mattered.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">On Democracy</div>
+            <p>Political parties, Gaddafi argued, are "the modern instrument of dictatorial government" because they represent sectional interests, not the people. True democracy means every citizen governs directly through committees — no parties, no parliaments, no representatives. In practice this eliminated any organised political opposition.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">On Economics</div>
+            <p>Wage labour is "a form of slavery." Workers should own the means of production directly. Private property beyond personal use is illegitimate. In practice Gaddafi nationalised most of the economy and in 1978 had private homes redistributed — creating chaos and destroying the merchant class.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">On Society</div>
+            <p>The family and tribe are the natural units of human organisation — not the individual (too small) or the nation-state (too artificial). Gaddafi fused this with Islamic values but rejected clerical authority. Religion is personal; the Quran guides but does not govern. This earned him enemies among Islamists.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">On Women</div>
+            <p>The Green Book declares women and men naturally equal. Gaddafi recruited women into the army and trained a female bodyguard corps (the "Amazonian Guard"). Libyan women gained rights to education, work, and divorce. But these rights existed within a system where the rule of law was entirely personal — Gaddafi's personal favour mattered more than any statute.</p>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"Parliaments are a legal barrier between the people and power... The mere existence of a parliament means the absence of the people."</blockquote>
+          <cite>— Muammar Gaddafi, <em>The Green Book</em>, Part One: The Solution of the Problem of Democracy, 1975</cite>
+        </div>
+
+        <p>The Jamahiriya — the official name of Libya from 1977 — was, in historian Dirk Vandewalle's characterisation, a system built on the deliberate absence of state capacity. Gaddafi believed he needed no army, no bureaucracy, no courts worthy of the name, because "the people" governed directly. What actually filled the vacuum were informal networks of loyalty — family, tribe, oil money — with Gaddafi at the centre. It was an elaborate justification for personal rule dressed in the language of radical democracy.</p>
+
+        <div class="callout amber">
+          <div class="callout-label">Why This Matters</div>
+          <h4>The hollow state problem</h4>
+          <p>When Gaddafi fell in 2011, Libya didn't just lose a leader — it lost the entire informal system that held the country together. There were no institutions to fall back on because Gaddafi had deliberately prevented any from forming. This is the key structural reason why Libya descended into civil war while Tunisia (which had a professional civil service and judiciary) managed a partial democratic transition. Weak institutions don't just disappear when a dictator falls — they were never allowed to exist in the first place.</p>
+        </div>
+      </section>
+
+      <!-- HOW HE RULED -->
+      <section id="rule">
+        <h2>How He Ruled</h2>
+
+        <p>Forty-two years is an extraordinary length of time to hold power. Understanding how Gaddafi maintained it reveals something important about authoritarian durability — and about the specific techniques available to a ruler sitting on oil wealth in a tribal society.</p>
+
+        <h3>Oil money as social contract</h3>
+
+        <p>Gaddafi used Libya's oil revenues — which he seized from international companies in the early 1970s at dramatically higher royalty rates than his predecessor had negotiated — to build a social compact. Housing subsidies, fuel subsidies, food subsidies, free healthcare, free education. Per-capita income in Libya rose from roughly $2,000 in 1969 to over $10,000 by the 1980s. For much of his rule, many ordinary Libyans were materially better off than their grandparents had been under Italian colonialism or the monarchy. This bought genuine, if diminishing, loyalty.</p>
+
+        <h3>Tribal balancing</h3>
+
+        <p>Libya's population is deeply tribal. Gaddafi never tried to eliminate tribalism — he weaponised it. His own tribe, the Qaddadfa, provided his inner circle and personal security. Other powerful tribes were brought into the system through patronage: government contracts, jobs in the security apparatus, preferential treatment. Tribes that might challenge him were deliberately starved of resources and prestige. Cyrenaica (eastern Libya), historically the most politically significant region and home to the Sanussi monarchy, was particularly marginalised — a decision that would come back to destroy him. The 2011 uprising began in Benghazi, Cyrenaica's capital.</p>
+
+        <h3>Institutionalised fear</h3>
+
+        <p>Loyalty bought with oil money needed reinforcement. Gaddafi's security apparatus — actually several overlapping and competing security services, each watching the others — maintained surveillance and fear throughout Libyan society. Dissidents were publicly hanged, sometimes on live television. A notorious 1996 massacre at Abu Salim prison killed an estimated 1,200 political prisoners in a single afternoon. Libyans in exile were hunted by Gaddafi's agents internationally; the murder of his critics abroad was frequent enough that Amnesty International maintained lists of them.</p>
+
+        <div class="callout warning">
+          <div class="callout-label">Human Rights</div>
+          <h4>The Abu Salim Massacre, 1996</h4>
+          <p>In June 1996, prisoners at Tripoli's Abu Salim prison rioted after years of severe overcrowding and poor conditions. Gaddafi's security forces responded by shooting approximately 1,200 prisoners — most of them political detainees — over a single afternoon. The regime denied the massacre for years. It became one of the central grievances of the 2011 uprising, and the arrest of the lawyer representing the victims' families was a direct trigger for the first protests in Benghazi in February 2011.</p>
+        </div>
+
+        <h3>Cult of personality without the cult</h3>
+
+        <p>Gaddafi's persona was eccentric by design. He wore elaborate, theatrical clothing — flowing robes, military uniforms studded with medals, Bedouin headwear. He travelled with a tent and a camel. He delivered four-hour speeches and wrote philosophical poetry. He gave himself increasingly grandiose titles: "Brother Leader and Guide of the Revolution," "Dean of Arab Leaders," and, in 2008, "King of Kings of Africa" — a title bestowed on him by a gathering of African traditional chiefs he himself had organised and funded.</p>
+
+        <p>But unlike North Korea or Stalin's Soviet Union, Gaddafi did not build the standard apparatus of totalitarian worship — no obligatory Gaddafi portraits in every home, no compulsory Green Book study sessions with formal exams, no single mass party. His control was more informal, more personal, and — crucially — more fragile. It depended on him being alive and on the oil money flowing.</p>
+
+        <div class="pull-quote">
+          <blockquote>"Gaddafi was personally charming, highly intelligent, and completely unpredictable. You never knew in any given meeting which Gaddafi would arrive — the philosopher-king, the tribal elder, the paranoid autocrat, or the showman."</blockquote>
+          <cite>— Cited in Ronald Bruce St John, <em>Libya: From Colony to Independence</em> (2008)</cite>
+        </div>
+      </section>
+
+      <!-- FOREIGN POLICY -->
+      <section id="foreign">
+        <h2>Foreign Policy: The World Stage</h2>
+
+        <p>If Gaddafi was merely a brutal local autocrat, he might have been forgotten. What made him a global figure was his foreign policy — decades of funding terrorism, sponsoring liberation movements, provoking the United States, mediating African conflicts, and cycling between international pariah and Western business partner. His foreign policy is impossible to reduce to a single coherent principle, because it was driven less by strategic logic than by a desire to be important.</p>
+
+        <h3>State sponsor of terrorism</h3>
+
+        <p>Through the 1970s and 1980s, Libya under Gaddafi was one of the world's primary state sponsors of terrorism. The list of groups Gaddafi funded or trained is extraordinary: the IRA in Ireland, the PLO and its breakaway factions, Germany's Baader-Meinhof Group, Uganda's Idi Amin, the Moro Liberation Front in the Philippines, and various other insurgent, separatist, and terrorist organisations across three continents. His motivation was partly ideological (opposition to imperialism, support for liberation movements), partly personal (he genuinely admired fighters who challenged established order), and partly opportunistic (terrorism was a tool to punch above Libya's weight on the world stage).</p>
+
+        <p>The peak of his sponsorship came with two acts of mass murder. In December 1988, Libyan intelligence officers bombed Pan Am Flight 103 over Lockerbie, Scotland, killing 270 people. In September 1989, they bombed UTA Flight 772 over Niger, killing 170. Both attacks were eventually attributed to Libyan intelligence with strong evidence; Gaddafi denied involvement for over a decade. The bombings triggered UN sanctions in 1992 that severely damaged Libya's economy.</p>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-number">270</div>
+            <div class="stat-label">Killed in Lockerbie bombing (1988)</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">170</div>
+            <div class="stat-label">Killed in UTA Flight 772 (1989)</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">1992</div>
+            <div class="stat-label">UN sanctions imposed</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">2003</div>
+            <div class="stat-label">WMD renunciation deal with West</div>
+          </div>
+        </div>
+
+        <h3>The rehabilitation: 2003–2011</h3>
+
+        <p>Gaddafi's extraordinary rehabilitation in the 2000s is a case study in how Western governments balance principle and interest. Under pressure from UN sanctions and watching Saddam Hussein's fate after the 2003 invasion of Iraq, Gaddafi did something almost without precedent: he voluntarily surrendered his weapons of mass destruction programme, acknowledged Libyan responsibility for Lockerbie (paying $2.7 billion in compensation to victims' families), and invited Western companies back into Libya's energy sector.</p>
+
+        <p>The response was rapid. Tony Blair visited Tripoli in 2004 — famously shaking hands with Gaddafi in his tent — and British Petroleum signed a $900 million exploration deal. Condoleezza Rice visited in 2008. European heads of government followed. Nicolas Sarkozy signed a major arms deal and hosted Gaddafi at the Élysée Palace in 2007, where Gaddafi pitched his Bedouin tent in the palace gardens and met with French intellectuals. The Libyan sovereign wealth fund invested billions in European companies. Libya was back.</p>
+
+        <p>The hypocrisy of this rehabilitation was evident to many — Gaddafi's human rights record had not improved, and Abu Salim had occurred less than a decade earlier. But it mattered enormously when the 2011 uprising began: Sarkozy's enthusiasm for intervention was partly about burying his own embrace of Gaddafi. France moved fastest to recognise the rebels and launch airstrikes, partly to get ahead of its own recent embarrassment.</p>
+
+        <h3>Pan-Africanism and the African Union</h3>
+
+        <p>Frustrated by the failure of Arab unity (multiple attempts at political union with Egypt, Tunisia, Morocco, and others had all collapsed), Gaddafi pivoted in the late 1990s toward Africa. He funded the African Union, contributed billions to African development projects, handed out cash to African leaders, and cultivated a network of personal relationships across the continent. His "King of Kings of Africa" coronation was a theatrical expression of this ambition — that he could become, through money and personality, the patron of an entire continent.</p>
+
+        <p>His investments in Africa were real and sometimes useful. He funded infrastructure, mediated conflicts, and his cash kept the AU functioning when member states did not pay their dues. But it was also patronage politics at continental scale — dependent entirely on Gaddafi personally remaining in power and remaining wealthy.</p>
+      </section>
+
+      <!-- THE FALL -->
+      <section id="fall">
+        <h2>The Fall: 2011</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">February 2011</div>
+              <div class="tl-title">Protests Erupt in Benghazi</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>The spark was specific: on February 15th, security forces arrested Fathi Terbil — a lawyer representing families of the Abu Salim massacre victims — in Benghazi. Hundreds gathered outside the police headquarters to demand his release. It was a local act, but it connected to everything: the long marginalisation of Cyrenaica, the Abu Salim impunity, the contrast between Gaddafi's oil-funded lifestyle and ordinary Libyans' frustrations. The crowd grew. The protests spread.</p>
+            <p>What is contested — and matters for how you evaluate the subsequent NATO intervention — is whether the protests remained civilian demonstrations or became an armed insurgency within days. Researcher Alan Kuperman documents that armed groups seized military installations from the first week. The uprising in Derna, a historically radicalised eastern city, was quickly led by veterans of Iraq and Afghanistan. Gaddafi had always governed the east through marginalisation and fear; those methods now became a liability.</p>
+            <div class="tl-sources"><span class="src-chip">Kuperman (2013)</span><span class="src-chip">Vandewalle (2012)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">February–March 2011</div>
+              <div class="tl-title">Gaddafi's Response: The "Rats" Speech</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Gaddafi's public response to the uprising was catastrophic for his international position, even if it is debated whether it reflected a real plan or simply performative rage. In a televised speech on February 22nd, he vowed to "cleanse Libya house by house" and called protesters "rats" and "cockroaches" who were drunk on drugs supplied by Osama Bin Laden. He appeared deranged — sitting on a throne-like chair, waving an umbrella, ranting for nearly an hour.</p>
+            <p>This speech was taken extremely seriously by Western governments and the UN as evidence of genocidal intent. Whether it was a serious threat or Gaddafi's characteristic theatrical excess remains genuinely contested. But it provided the political cover — and arguably the moral justification — for UN Security Council Resolution 1973 and NATO's subsequent intervention. Gaddafi had handed his enemies exactly what they needed.</p>
+            <div class="tl-sources"><span class="src-chip">Daalder & Stavridis (2012)</span><span class="src-chip">Evans (2020)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">March–August 2011</div>
+              <div class="tl-title">NATO Intervenes; The War Stalemates</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>UN Resolution 1973 passed on March 17th. NATO struck the armoured column approaching Benghazi on March 19th. Gaddafi's military — capable of suppressing a domestic uprising — had no answer to precision air power. But the war dragged on for six months rather than ending quickly, because the rebels were not organised or trained well enough to capitalise on NATO's air cover. Gaddafi made multiple ceasefire offers throughout this period; the NTC and NATO rejected them all. The mission had moved beyond civilian protection to regime change.</p>
+            <p>For Gaddafi personally, these months were a descent. He moved frequently, his inner circle began to fracture, senior officials defected to the rebel side, and his sons began quarrelling about strategy. The man who had survived 42 years through flexibility and cunning now seemed trapped — too stubborn to flee, too outmatched to win. In a different era, a ceasefire and exile might have saved him. In 2011, that window closed.</p>
+            <div class="tl-sources"><span class="src-chip">Kuperman (2013)</span><span class="src-chip">Evans (2020)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">October 20, 2011</div>
+              <div class="tl-title">Capture and Death in Sirte</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>After Tripoli fell to rebel forces in August, Gaddafi retreated to Sirte — the city of his birth and the stronghold of his tribe. He was found on October 20th hiding in a concrete drainage pipe on the outskirts of the city, after NATO airstrikes struck a convoy trying to flee. A video filmed by rebel fighters showed him alive when captured — bloodied, confused, pleading. He was then beaten and shot. The manner of his death was watched by millions online.</p>
+            <p>Gaddafi died in the city where he was born — a symmetry that has struck many commentators. He was buried without public ceremony in an unmarked desert location, his tomb kept secret to prevent it becoming a shrine. His son Mutassim was killed the same day. His son Saif al-Islam survived, was captured, and is, as of 2026, still living in Libya under uncertain legal status. Gaddafi's other sons scattered to various countries. His tribe, the Qaddadfa, was expelled from their role in Libyan politics and became one of the most marginalised groups in the country he once ruled.</p>
+            <div class="tl-sources"><span class="src-chip">HRW (2012)</span></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- WHY IT MATTERS TODAY -->
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+        <p>Gaddafi has been dead since 2011, but the state he built — and then destroyed — is still producing consequences. Libya is not a solved problem. It is an open wound in the centre of the Mediterranean, and understanding how it got there requires understanding the man who ruled it for 42 years.</p>
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>Libya Is Still Not a State</h3>
+            <p>More than a decade after Gaddafi's fall, Libya remains divided between rival governments, neither of which controls the full country. The UN-recognised Government of National Unity sits in Tripoli; a parallel authority backed by Khalifa Haftar controls the east. Gaddafi deliberately hollowed out institutions to prevent any rival power centre from forming — and that hollow, when he fell, produced exactly the vacuum that now persists.</p>
+            <ul class="matters-subpoints">
+              <li>Libya has had no functioning national election since 2014; UN-mediated talks have repeatedly collapsed</li>
+              <li>Haftar's Libyan National Army controls the oil crescent — the country's primary revenue source — giving neither side a complete economy</li>
+              <li>Turkish forces and Wagner Group mercenaries (later rebranded after Wagner's 2023 collapse) back opposite sides, internationalising the stalemate</li>
+              <li>The absence of state institutions — which Gaddafi never allowed to develop — is the direct cause of every subsequent failure to rebuild</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The Migration Crisis and European Politics</h3>
+            <p>Libya's coastline is the main departure point for migrants crossing the Mediterranean to Europe. Gaddafi had made explicit deals with Italy to manage migration flows — and used the threat of "opening the gates" as geopolitical leverage. When he fell, those controls went with him.</p>
+            <ul class="matters-subpoints">
+              <li>In 2011 alone, over 60,000 migrants crossed from Libya to Italy; at the crisis peak in 2015–16, hundreds of thousands attempted the crossing annually</li>
+              <li>EU deals with Libyan militias to block migration have been credibly linked to torture, arbitrary detention, and forced labour in Libyan camps</li>
+              <li>The migration backlash directly fuelled the rise of Matteo Salvini in Italy, Marine Le Pen's electoral surge in France, and AfD growth in Germany</li>
+              <li>Gaddafi's 2008 Treaty of Friendship with Berlusconi — under which he was paid €5 billion to limit migration — was the model Europe has attempted to replicate, with far less leverage</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Weapons Proliferation Across the Sahel</h3>
+            <p>Gaddafi spent four decades stockpiling weapons. When his armouries were looted in 2011, that arsenal scattered across the continent. The consequences are still multiplying across the Sahel — the world's fastest-growing jihadist conflict zone.</p>
+            <ul class="matters-subpoints">
+              <li>An estimated 15,000 MANPADs (man-portable air-defence missiles capable of downing aircraft) went unaccounted for after 2011</li>
+              <li>Tuareg fighters who had served in Gaddafi's Islamic Legion returned to Mali armed in 2012, triggering a coup and a jihadist takeover of the north</li>
+              <li>Weapons traced to Gaddafi's stockpiles have been recovered in at least 14 countries, including Nigeria, Niger, Chad, Sudan, and the Central African Republic</li>
+              <li>France's Opération Serval and then Barkhane were direct responses to the Mali crisis — a military commitment directly traceable to the 2011 intervention</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The Intervention Debate He Left Behind</h3>
+            <p>The Libya intervention was initially called a success — Gaddafi was removed, the immediate massacre was prevented, NATO withdrew. Within two years, it was being called a disaster. The debate about what went wrong, and whether it was inevitable, has directly shaped every subsequent conversation about humanitarian military intervention.</p>
+            <ul class="matters-subpoints">
+              <li>Obama called the Libya intervention his "worst mistake" — specifically the failure to plan for the day after</li>
+              <li>Russia and China cite Libya explicitly when blocking Security Council action in Syria, Myanmar, and elsewhere: "we won't be fooled again by regime-change dressed as protection"</li>
+              <li>The intervention fatally damaged the Responsibility to Protect doctrine by demonstrating that a UNSC-authorised protection mandate could be stretched into regime change</li>
+              <li>Gaddafi's 2003 nuclear disarmament deal — held up as a model of non-proliferation diplomacy — was retroactively read by North Korea and Iran as proof that disarming makes you vulnerable</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEGACY -->
+      <section id="legacy">
+        <h2>Legacy & Debate</h2>
+
+        <p>Gaddafi's legacy is contested in a way that most dictators' legacies are not, because the comparison point — post-Gaddafi Libya — has been so catastrophically bad. This creates an uncomfortable question that serious historians must engage with honestly: is it possible to acknowledge that Gaddafi was a murderous authoritarian while also acknowledging that Libyans were, by certain measurable standards, better off during his rule than during the decade after his fall?</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">What he achieved</div>
+            <ul>
+              <li>Expelled colonial military bases (USA, UK) in 1970 within his first year of power</li>
+              <li>Renegotiated oil revenues dramatically upward, funding genuine welfare improvements</li>
+              <li>Raised literacy from below 20% (1969) to over 90% by 2010</li>
+              <li>Built a subsidised housing and food system that reduced absolute poverty</li>
+              <li>Extended rights to women — education, work, divorce — compared to regional norms</li>
+              <li>Maintained Libyan territorial integrity through 42 years of internal regional tensions</li>
+              <li>Voluntarily surrendered WMD programme in 2003 — a rare act of genuine de-escalation</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">What he destroyed</div>
+            <ul>
+              <li>Eliminated every independent institution — courts, press, civil society, political parties</li>
+              <li>Abu Salim (1996): ~1,200 political prisoners executed in a single afternoon</li>
+              <li>Lockerbie (1988) and UTA 772 (1989): 440 people killed in terrorist bombings</li>
+              <li>Systematically marginalised eastern Libya, creating the grievances that ended him</li>
+              <li>Deliberately kept the military weak to prevent coups — leaving no security force able to maintain order after 2011</li>
+              <li>Looted oil wealth for personal and tribal purposes; left economy entirely oil-dependent</li>
+              <li>Spread weapons and fighters across the Sahel, destabilising West Africa</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legacy-card complex" style="margin-top:1rem">
+          <div class="legacy-label">The Impossible Comparison</div>
+          <ul>
+            <li>Libya's HDI (Human Development Index) in 2010 was the highest in Africa — but under a system with no political freedom whatsoever</li>
+            <li>Post-2011 Libya has seen far more Libyans die in conflict than Gaddafi killed in his worst years — but attributing this entirely to his removal ignores that his system was itself unsustainable</li>
+            <li>Gaddafi's rehabilitation into Western favour in the 2000s shows that the same governments that intervened to remove him were, seven years earlier, happy to do business with him — raising legitimate questions about the consistency of Western humanitarian values</li>
+          </ul>
+        </div>
+
+        <h3>What does he represent?</h3>
+
+        <p>Gaddafi represents a specific and cautionary type of 20th-century figure: the anti-colonial nationalist who becomes, through the slow corruption of unchecked power, the thing he claimed to oppose. He came to power as a liberator from Western domination; he died having handed his country's oil to Western companies while keeping his own people in a state of engineered helplessness. His Green Book promised radical democracy; his Jamahiriya was a hollow state where the only real political actor was himself.</p>
+
+        <p>He is also a reminder that "stability" under a dictator is a kind of debt — paid for by suppressed institutions, accumulated resentments, and the total absence of succession planning. When Gaddafi fell, Libya had nothing to fall back on. The debt came due all at once.</p>
+
+        <div class="pull-quote">
+          <blockquote>"He built a state that could only function with him at the centre. When the centre was removed, there was nothing — not even the ruins of institutions, because the institutions had never been allowed to exist."</blockquote>
+          <cite>— Dirk Vandewalle, <em>A History of Modern Libya</em>, Cambridge University Press (2012)</cite>
+        </div>
+      </section>
+
+      <!-- CONNECTED TOPICS -->
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">Events directly connected to Gaddafi</div>
+          <div class="topics-grid">
+            <a href="context-v4.html" class="topic-card"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauTAgmpsG54Nrx44zBq9E8ULZ277MHKl6Sb1u36uoKg&s=10" alt="The Libyan Civil War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Libyan Civil War</div>
+              <div class="topic-preview">How the uprising began, NATO's intervention, and why Libya failed to rebuild after Gaddafi's fall.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Lockerbie Bombing (1988)</div>
+              <div class="topic-preview">Libyan intelligence officers bombed Pan Am 103 over Scotland, killing 270. The case that turned Gaddafi into a global pariah.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Arab Spring</div>
+              <div class="topic-preview">The wave of 2011 uprisings that finally ended Gaddafi's 42-year rule — and why Libya's outcome was uniquely bad.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The 2012 Mali Coup</div>
+              <div class="topic-preview">How Tuareg fighters who served Gaddafi returned home armed, destabilising an entire country.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">People</div>
+          <div class="topics-grid">
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Khalifa Haftar</div>
+              <div class="topic-preview">A Gaddafi general who defected, spent years in exile with CIA connections, and re-emerged after 2011 to control eastern Libya.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Gamal Abdel Nasser</div>
+              <div class="topic-preview">The Egyptian president who inspired the young Gaddafi — and whose model of Arab nationalist leadership he tried and failed to replicate.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Yevgeny Prigozhin</div>
+              <div class="topic-preview">The Wagner Group founder whose forces filled the power vacuum Gaddafi left behind in Libya and across the Sahel.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Concepts & Regions</div>
+          <div class="topics-grid">
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Responsibility to Protect (R2P)</div>
+              <div class="topic-preview">The UN doctrine used to justify NATO's Libya intervention — and how Libya's aftermath changed the conversation around humanitarian intervention.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag region">Region</div>
+              <div class="topic-name">The Sahel</div>
+              <div class="topic-preview">The region most directly destabilised by Gaddafi's fall — where his weapons and fighters fuelled a decade of jihadist expansion.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Resource Curse</div>
+              <div class="topic-preview">Why oil wealth often produces worse governance — and why Libya is one of the textbook examples.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOURCES -->
+      <section id="sources">
+        <h2>Sources & Further Reading</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">Vandewalle, D. (2012). </span>
+            <span class="src-journal">A History of Modern Libya</span>. Cambridge University Press. (2nd edition)
+            <span class="src-note">The definitive academic history of Libya from independence through the 2011 revolution. Essential on Gaddafi's deliberate institutional hollowing-out and the Jamahiriya system. Vandewalle lived in and studied Libya for decades.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">St John, R.B. (2008). </span>
+            <span class="src-journal">Libya: From Colony to Independence</span>. Oneworld Publications.
+            <span class="src-note">Strong on the colonial period, the monarchy, and the early Gaddafi years. More accessible than Vandewalle for readers new to Libyan history.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Kuperman, A.J. (2013). "A Model Humanitarian Intervention? Reassessing NATO's Libya Campaign." </span>
+            <span class="src-journal">International Security</span>, 38(1), 105–136.
+            <span class="src-note">The most rigorous critical analysis of the intervention — relevant here for its documentation of the nature of the uprising and the counterfactual death toll analysis.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">Human Rights Watch (2012). </span>
+            <span class="src-journal">Death of a Dictator: Bloody Vengeance in Sirte</span>.
+            <span class="src-note">Documents the circumstances of Gaddafi's capture and death, and the reprisals against dark-skinned migrant workers alleged to have been mercenaries. Available free at hrw.org.</span>
+          </li>
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">Gaddafi, M. (1975–1979). </span>
+            <span class="src-journal">The Green Book</span>. Three volumes: Part I (1975), Part II (1978), Part III (1979).
+            <span class="src-note">Primary source. Available online in various translations. Best approached as a document revealing how Gaddafi justified his system to himself — not as serious political theory.</span>
+          </li>
+          <li>
+            <span class="src-num">[6]</span>
+            <span class="src-title">Evans, G. (2020). "Libya 2011: The Real R2P Story." </span>
+            <span class="src-journal">gevans.org</span>.
+            <span class="src-note">The architect of R2P reflects on what the Libya intervention did right and wrong — essential context for understanding how Gaddafi's fall changed international law debates.</span>
+          </li>
+          <li>
+            <span class="src-num">[7]</span>
+            <span class="src-title">Blundy, D. & Lycett, A. (1987). </span>
+            <span class="src-journal">Qaddafi and the Libyan Revolution</span>. Weidenfeld & Nicolson.
+            <span class="src-note">A dated but vivid journalistic account of Gaddafi's early decades — good on his personality and his terrorism-era foreign policy.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem">This is a prototype. <a href="context-v4.html" style="color:var(--purple);text-decoration:none;">Read the full Libya Civil War article →</a></p>
+</footer>
+
+<script>
+  /* ── SEARCH ── */
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement',       desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',    url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                            url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html' },
+    { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',  url: 'context-v4.html' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',  url: 'operation-condor.html' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.',     url: 'augusto-pinochet.html' },
+    { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html' },
+    { type: 'person', title: 'Henry Kissinger',          desc: 'The refugee who became America\'s most powerful and most controversial diplomat.',         url: 'henry-kissinger.html' },
+    { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html' },
+    { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html' },
+    { type: 'person', title: 'Barack Obama',             desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.',  url: 'obama.html' },
+    { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html' },
+    { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html' },
+    { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html' },
+  ];
+  let _searchOpen = false, _focusIdx = -1;
+
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn');
+    const dd  = document.getElementById('searchDropdown');
+    const inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen);
+    dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); }
+    else { inp.value = ''; _focusIdx = -1; }
+  }
+
+  function runSearch(q) {
+    const box = document.getElementById('searchResults');
+    const term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a, i) => `
+      <a class="search-result" href="${a.url}" data-i="${i}">
+        <div class="search-result-top">
+          <span class="topic-type-tag ${a.type}">${a.type}</span>
+          <span class="search-result-title">${a.title}</span>
+        </div>
+        <div class="search-result-desc">${a.desc}</div>
+      </a>`).join('');
+  }
+
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown')  { e.preventDefault(); _focusIdx = Math.min(_focusIdx + 1, items.length - 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); _focusIdx = Math.max(_focusIdx - 1, 0); }
+    else if (e.key === 'Enter' && _focusIdx >= 0) { items[_focusIdx].click(); return; }
+    else if (e.key === 'Escape') { toggleSearch(); return; }
+    items.forEach((r, i) => r.classList.toggle('focused', i === _focusIdx));
+  }
+
+  document.addEventListener('click', e => {
+    if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch();
+  });
+
+  /* ── SCROLL PROGRESS + SIDEBAR ── */
+  window.addEventListener('scroll', () => {
+    const progress = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('progressBar').style.height = Math.min(progress, 100) + '%';
+    updateSidebar();
+  });
+
+  function updateSidebar() {
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.sidebar-nav li');
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 120) current = section.getAttribute('id');
+    });
+    navItems.forEach(item => {
+      const link = item.querySelector('a');
+      item.classList.toggle('active', link && link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  function toggleItem(el) {
+    const wasActive = el.classList.contains('active');
+    document.querySelectorAll('.tl-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) el.classList.add('active');
+  }
+
+  function toggleSave() {
+    const btn = document.getElementById('saveBtn');
+    const toast = document.getElementById('toast');
+    const isSaved = btn.classList.contains('saved');
+    if (!isSaved) {
+      btn.classList.add('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    } else {
+      btn.classList.remove('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;
+    }
+  }
+</script>
+</body>
+</html>
