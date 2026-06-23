@@ -1,0 +1,44 @@
+{
+  "expectations": [
+    {
+      "text": "File is complete valid HTML",
+      "passed": true,
+      "evidence": "Programmatic check on HTML content"
+    },
+    {
+      "text": "Purple used as primary accent throughout",
+      "passed": false,
+      "evidence": "Programmatic check on HTML content"
+    },
+    {
+      "text": "CSS includes all required design system variables",
+      "passed": false,
+      "evidence": "Programmatic check on HTML content"
+    },
+    {
+      "text": "Chicago Boys economic experiment covered with substance",
+      "passed": null,
+      "evidence": "Requires LLM grading"
+    },
+    {
+      "text": "DINA and number of disappeared/killed documented with specific figures",
+      "passed": null,
+      "evidence": "Requires LLM grading"
+    },
+    {
+      "text": "Legacy section presents both economic case FOR and human rights case AGAINST",
+      "passed": null,
+      "evidence": "Requires LLM grading"
+    },
+    {
+      "text": "Ideology or worldview section present with multiple cards (.ideology-card)",
+      "passed": false,
+      "evidence": "Programmatic check on HTML content"
+    },
+    {
+      "text": "Accordion timeline entries present (.tl-item)",
+      "passed": false,
+      "evidence": "Programmatic check on HTML content"
+    }
+  ]
+}

@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Augusto Pinochet — Context</title>
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #0d0d0f;
+      --surface:     #141417;
+      --surface-2:   #1c1c21;
+      --border:      #2a2a32;
+      --accent:      #c0392b;
+      --accent-muted:#7d1a13;
+      --gold:        #c9a227;
+      --gold-muted:  #8a6f1a;
+      --text:        #e2e2e6;
+      --text-muted:  #8a8a9a;
+      --text-dim:    #5a5a6a;
+      --tag-bg:      #1e1e25;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Site Nav ── */
+    .site-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .site-nav .logo {
+      font-family: 'Georgia', serif;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: var(--text);
+      letter-spacing: 0.08em;
+      text-decoration: none;
+    }
+    .site-nav .logo span { color: var(--accent); }
+    .site-nav .breadcrumb {
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      font-family: sans-serif;
+    }
+    .site-nav .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .site-nav .breadcrumb a:hover { color: var(--text); }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(180deg, #1a0a08 0%, var(--bg) 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 4rem 2rem 3rem;
+    }
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 3rem;
+      align-items: start;
+    }
+    .hero-category {
+      font-family: sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.1;
+      font-weight: normal;
+      margin-bottom: 0.5rem;
+      color: #f0f0f4;
+    }
+    .hero-dates {
+      font-family: sans-serif;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .hero-summary {
+      font-size: 1.1rem;
+      color: #c8c8d4;
+      line-height: 1.7;
+      border-left: 3px solid var(--accent-muted);
+      padding-left: 1rem;
+    }
+    .hero-portrait {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .portrait-placeholder {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, #1e1a1a, #2a2020);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: var(--text-dim);
+      font-family: sans-serif;
+      font-size: 0.75rem;
+      text-align: center;
+      padding: 1rem;
+    }
+    .portrait-icon {
+      font-size: 3.5rem;
+      opacity: 0.3;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+    }
+    .tag {
+      background: var(--tag-bg);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 0.25rem 0.65rem;
+      font-family: sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+    }
+
+    /* ── Quick Facts ── */
+    .quick-facts {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.25rem;
+      font-family: sans-serif;
+      font-size: 0.82rem;
+    }
+    .quick-facts h3 {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .fact-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .fact-row:last-child { border-bottom: none; }
+    .fact-label { color: var(--text-dim); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .fact-value { color: var(--text); }
+
+    /* ── Layout ── */
+    .page-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 3rem;
+      align-items: start;
+    }
+    .main-content { min-width: 0; }
+    .sidebar { position: sticky; top: 70px; }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.25rem;
+      font-family: sans-serif;
+      font-size: 0.82rem;
+    }
+    .toc h3 {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 0.85rem;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+    }
+    .toc ol li {
+      counter-increment: toc;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+    }
+    .toc ol li:last-child { border-bottom: none; }
+    .toc ol li::before {
+      content: counter(toc);
+      color: var(--text-dim);
+      font-size: 0.7rem;
+      min-width: 1rem;
+    }
+    .toc a {
+      color: var(--text-muted);
+      text-decoration: none;
+      line-height: 1.3;
+    }
+    .toc a:hover { color: var(--text); }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 3rem;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-num {
+      font-family: sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 1.5rem;
+    }
+    .section h2 {
+      font-size: 1.5rem;
+      font-weight: normal;
+      color: #f0f0f4;
+    }
+
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Callout boxes ── */
+    .callout {
+      background: var(--surface-2);
+      border-left: 3px solid var(--border);
+      border-radius: 0 4px 4px 0;
+      padding: 1rem 1.25rem;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+    }
+    .callout.warning  { border-left-color: var(--accent); }
+    .callout.info     { border-left-color: #2980b9; }
+    .callout.debate   { border-left-color: var(--gold); }
+    .callout-label {
+      font-family: sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .callout.warning .callout-label  { color: var(--accent); }
+    .callout.info    .callout-label  { color: #2980b9; }
+    .callout.debate  .callout-label  { color: var(--gold); }
+
+    /* ── Debate block ── */
+    .debate-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .debate-col {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1rem 1.1rem;
+    }
+    .debate-col h4 {
+      font-family: sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .debate-col.pro h4  { color: var(--gold); }
+    .debate-col.con h4  { color: var(--accent); }
+    .debate-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+    }
+    .debate-col ul li {
+      padding-left: 1rem;
+      position: relative;
+      color: var(--text);
+    }
+    .debate-col ul li::before {
+      position: absolute;
+      left: 0;
+    }
+    .debate-col.pro ul li::before { content: '+'; color: var(--gold-muted); }
+    .debate-col.con ul li::before { content: '−'; color: var(--accent-muted); }
+
+    /* ── Stat pills ── */
+    .stat-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 1.25rem 0;
+    }
+    .stat-pill {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.6rem 1rem;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    .stat-pill .num {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.1;
+    }
+    .stat-pill .lbl {
+      display: block;
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      list-style: none;
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 1px;
+      background: var(--border);
+    }
+    .timeline li {
+      position: relative;
+      padding: 0 0 1.25rem 1.25rem;
+    }
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: -0.3rem;
+      top: 0.55rem;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--bg);
+    }
+    .timeline .t-year {
+      font-family: sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.15rem;
+    }
+    .timeline .t-text {
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    /* ── Pull quote ── */
+    .pull-quote {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 1.25rem 0;
+      margin: 2rem 0;
+      font-size: 1.15rem;
+      color: #c8c8d4;
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .pull-quote cite {
+      display: block;
+      font-style: normal;
+      font-family: sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-dim);
+      margin-top: 0.6rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 2rem;
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+    footer a { color: var(--text-muted); text-decoration: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 700px) {
+      .hero-inner, .page-body { grid-template-columns: 1fr; }
+      .hero-portrait { max-width: 200px; }
+      .hero h1 { font-size: 2.2rem; }
+      .debate-grid { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Nav ── -->
+<nav class="site-nav">
+  <a href="#" class="logo">CON<span>TEXT</span></a>
+  <span class="breadcrumb">
+    <a href="#">People</a> &rsaquo; <a href="#">20th Century</a> &rsaquo; Augusto Pinochet
+  </span>
+</nav>
+
+<!-- ── Hero ── -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-category">Military Dictator &middot; Chile</div>
+      <h1>Augusto Pinochet</h1>
+      <div class="hero-dates">25 November 1915 &ndash; 10 December 2006</div>
+      <p class="hero-summary">
+        General, coup-maker, and President of Chile for seventeen years. Pinochet overthrew
+        a democratically elected socialist government, built a secret police apparatus
+        responsible for thousands of deaths and tens of thousands of acts of torture,
+        and simultaneously unleashed a radical free-market experiment that remade the
+        Chilean economy. His legacy remains one of the most contested in modern history.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Chile</span>
+        <span class="tag">Cold War</span>
+        <span class="tag">Military Dictatorship</span>
+        <span class="tag">Human Rights</span>
+        <span class="tag">Economics</span>
+        <span class="tag">Latin America</span>
+        <span class="tag">1973 Coup</span>
+      </div>
+    </div>
+    <div>
+      <div class="hero-portrait">
+        <div class="portrait-placeholder">
+          <div class="portrait-icon">🎖</div>
+          <div>Augusto Pinochet<br/>General &amp; Head of State<br/>Chile, 1973–1990</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── Body ── -->
+<div class="page-body">
+
+  <!-- Main Content -->
+  <main class="main-content">
+
+    <!-- 1. Military Background -->
+    <section class="section" id="military">
+      <div class="section-header">
+        <span class="section-num">01</span>
+        <h2>The Soldier Before the General</h2>
+      </div>
+
+      <p>
+        Augusto José Ramón Pinochet Ugarte was born in 1915 in Valparaíso, Chile, into a
+        middle-class family with roots in French immigration. He enrolled in the Chilean
+        Military Academy at age seventeen — not out of ideological conviction, but because
+        a military career offered stability and social advancement. He was, by most accounts,
+        an unremarkable cadet.
+      </p>
+      <p>
+        Over the following decades Pinochet climbed the ranks steadily if unspectacularly.
+        He taught military geography, served at various postings across Chile, and acquired
+        a reputation as a competent administrator and loyal institution man rather than a
+        bold tactical thinker. He studied at the U.S. Army School of the Americas in the
+        Panama Canal Zone — a training program that, across this era, schooled many of the
+        officers who would later lead coups across Latin America.
+      </p>
+      <p>
+        By 1968 Pinochet had reached general rank. In 1972, President Salvador Allende
+        appointed him Commander of the Santiago Garrison, and in August 1973 — just weeks
+        before the coup — Allende elevated him to Army Commander-in-Chief. Allende believed
+        Pinochet was constitutionalist in his sympathies. It was a catastrophic
+        misjudgment.
+      </p>
+
+      <div class="callout info">
+        <div class="callout-label">Context</div>
+        The School of the Americas (now WHINSEC) trained over 60,000 Latin American military
+        personnel during the Cold War. Critics called it a "school for dictators"; alumni
+        included participants in coups in Argentina, Bolivia, El Salvador, and Chile.
+        The U.S. maintained that the training was about professionalism and anti-communism.
+      </div>
+    </section>
+
+    <!-- 2. 1973 Coup -->
+    <section class="section" id="coup">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2>September 11, 1973: The Coup Against Allende</h2>
+      </div>
+
+      <p>
+        Salvador Allende had won the 1970 presidential election as the candidate of Popular
+        Unity, a left-wing coalition. He was the world's first democratically elected Marxist
+        head of state, and he immediately began nationalizing copper mines, banks, and large
+        estates. The Nixon administration in Washington, deeply alarmed, authorized the CIA
+        to destabilize the Chilean economy and support coup-plotting within the military.
+        "Make the economy scream," Nixon reportedly instructed his advisers.
+      </p>
+      <p>
+        By mid-1973, Chile was in crisis. Strikes paralyzed the country, inflation ran above
+        300 percent, and the political center had collapsed. Within the military, a coup
+        conspiracy had been building for months. Pinochet — whose precise level of prior
+        involvement remains debated by historians — joined it late and then moved quickly
+        to lead it.
+      </p>
+      <p>
+        On the morning of 11 September 1973, Chilean air force jets bombed the presidential
+        palace, La Moneda, in Santiago. Allende died inside, either by suicide or in the
+        fighting — the forensic evidence now strongly supports suicide. Within hours Pinochet
+        had emerged as the dominant figure of the four-man military junta that seized power,
+        and within weeks he had maneuvered himself into unchallenged control as Supreme
+        Chief of the Nation, later President.
+      </p>
+
+      <div class="pull-quote">
+        "I will not resign. I will not surrender. I will repay the loyalty of the people with
+        my life."
+        <cite>— Salvador Allende, final radio broadcast, 11 September 1973</cite>
+      </div>
+
+      <p>
+        The coup was swift and violent. Thousands of suspected leftists, union leaders,
+        teachers, and political activists were arrested in the days and weeks that followed.
+        The National Stadium in Santiago became a mass detention facility. The repression had
+        begun.
+      </p>
+
+      <div class="callout warning">
+        <div class="callout-label">U.S. Involvement</div>
+        Declassified documents confirm the CIA funded opposition media, encouraged a
+        truckers' strike that hobbled the Chilean economy, and maintained contacts with
+        coup plotters. The exact degree of U.S. foreknowledge of the September 11 coup
+        itself remains disputed. The Church Committee investigations in 1975 brought much
+        of this to light. The U.S. was not the author of the coup, but it helped create
+        conditions that made it possible.
+      </div>
+    </section>
+
+    <!-- 3. DINA and Atrocities -->
+    <section class="section" id="atrocities">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2>DINA, the Disappeared, and Operation Condor</h2>
+      </div>
+
+      <p>
+        The machinery of repression that Pinochet built had a name: DINA — the
+        <em>Dirección de Inteligencia Nacional</em>, the National Intelligence Directorate.
+        Created in 1974 under the command of Colonel Manuel Contreras, DINA functioned as
+        a secret police force that answered directly to Pinochet and operated outside any
+        judicial oversight. Its methods included abduction, torture, and murder.
+      </p>
+
+      <div class="stat-row">
+        <div class="stat-pill">
+          <span class="num">3,200+</span>
+          <span class="lbl">Killed or<br/>Disappeared</span>
+        </div>
+        <div class="stat-pill">
+          <span class="num">~40,000</span>
+          <span class="lbl">Estimated Victims<br/>of Torture</span>
+        </div>
+        <div class="stat-pill">
+          <span class="num">200,000+</span>
+          <span class="lbl">Forced Into<br/>Exile</span>
+        </div>
+        <div class="stat-pill">
+          <span class="num">1,132</span>
+          <span class="lbl">Documented<br/>"Disappeared"</span>
+        </div>
+      </div>
+      <p style="font-family:sans-serif;font-size:0.78rem;color:var(--text-dim);margin-top:-0.5rem;margin-bottom:1.25rem;">
+        Figures from Chile's Rettig Commission (1991) and Valech Commission (2004–2011). Totals continue to be revised.
+      </p>
+
+      <p>
+        DINA ran a network of secret detention centers across Chile. The most infamous was
+        Villa Grimaldi, a house on the outskirts of Santiago where detainees were subjected
+        to electric shock, waterboarding, sexual violence, and prolonged isolation. Many
+        never emerged. Their bodies were dumped at sea, buried in mass graves, or dropped
+        from helicopters.
+      </p>
+      <p>
+        The term <em>los desaparecidos</em> — the disappeared — entered the world's political
+        vocabulary during this era. Families of victims received no information. Official
+        denials were routine. For years, asking too loudly was itself dangerous.
+      </p>
+
+      <h3 style="margin: 1.5rem 0 0.75rem; font-size:1.1rem; color:#d0d0da;">Operation Condor</h3>
+      <p>
+        Pinochet's security apparatus did not stop at Chile's borders. Beginning around 1975,
+        the intelligence services of Chile, Argentina, Uruguay, Paraguay, Bolivia, and Brazil
+        coordinated under a program called Operation Condor to track, abduct, torture, and
+        kill political opponents who had fled abroad. The operation had tacit support from
+        the CIA and was coordinated partly through a U.S. military communications facility
+        in the Panama Canal Zone.
+      </p>
+      <p>
+        Operation Condor reached into Europe. Orlando Letelier, Allende's former foreign
+        minister, was killed by a DINA car bomb in Washington, D.C. in 1976 — the only
+        state-sponsored assassination ever carried out on American soil by a foreign
+        government. His American colleague Ronni Moffitt was also killed. The assassination
+        embarrassed the Ford administration and eventually led to sanctions against Chile,
+        though it had little immediate effect on Pinochet's grip on power.
+      </p>
+
+      <div class="callout warning">
+        <div class="callout-label">Documented Crimes</div>
+        Chile's official truth commissions — the Rettig Commission in 1991 and the Valech
+        Commission beginning in 2004 — documented the scale of what had happened in
+        unprecedented detail. Survivors testified. Perpetrators, in rare cases, were named.
+        The commissions represented a state acknowledgment that the violence was systematic,
+        not the work of rogue actors.
+      </div>
+    </section>
+
+    <!-- 4. Economic Policies -->
+    <section class="section" id="economics">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2>The Chicago Boys and the Economic Experiment</h2>
+      </div>
+
+      <p>
+        Pinochet's dictatorship was unusual among military governments for embracing not
+        just political repression but radical economic reform. Beginning in 1975, he handed
+        economic policy to a group of Chilean technocrats who had been trained at the
+        University of Chicago under the monetarist economist Milton Friedman. They became
+        known as the Chicago Boys.
+      </p>
+      <p>
+        The reforms were sweeping and deliberately shocking. State-owned companies were
+        privatized. Tariff barriers were demolished. Price controls were lifted almost
+        overnight. Government spending was slashed. The pension system was privatized into
+        individual savings accounts — a model that would later be copied (and contested)
+        around the world. The central bank was given independence. Chile, in short, became
+        a live laboratory for free-market economic theory at a scale unprecedented outside
+        academic journals.
+      </p>
+      <p>
+        The immediate results were brutal. Unemployment rose to 20 percent by 1976. A severe
+        banking crisis in 1982–1983 required massive state intervention — ironically, a
+        partial renationalization — and unemployment hit 30 percent at its worst. The poorest
+        Chileans bore the sharpest pain. Real wages fell sharply in the first years.
+      </p>
+      <p>
+        Then, from the mid-1980s onward, growth accelerated. By the time Pinochet left power
+        in 1990, Chile's GDP per capita was higher than it had been under Allende, inflation
+        was under control, and a diversified export economy was taking shape. Some economists
+        credit the structural reforms for growth that continued under democratic governments
+        through the 1990s and 2000s, when Chile became the wealthiest country in Latin
+        America by several measures.
+      </p>
+
+      <div class="callout debate">
+        <div class="callout-label">Note on Timing</div>
+        Chile's copper revenues — the industry Allende nationalized and Pinochet kept
+        state-owned — funded the government throughout the dictatorship. Global copper prices
+        matter enormously to Chile's growth story. Disentangling "what the Chicago Boys
+        did" from "what copper prices did" is genuinely difficult, and both sides of the
+        economic debate sometimes oversimplify this.
+      </div>
+    </section>
+
+    <!-- 5. The Debate -->
+    <section class="section" id="debate">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2>The Honest Debate: Did the Economics Justify Anything?</h2>
+      </div>
+
+      <p>
+        No historical figure generates more heated arguments among economists, political
+        scientists, and historians than Pinochet — precisely because his case seems to force
+        a choice between economic outcomes and moral principles. That framing itself deserves
+        scrutiny, but it is worth laying out what each side actually argues.
+      </p>
+
+      <div class="debate-grid">
+        <div class="debate-col pro">
+          <h4>Arguments Made in His Defense</h4>
+          <ul>
+            <li>Chile's long-run growth, democracy, and poverty reduction under policies he initiated are genuine achievements</li>
+            <li>He restored order after what supporters called a descent toward Cuban-style socialism and economic chaos</li>
+            <li>He eventually held a plebiscite in 1988 and accepted the result when he lost, returning Chile to democracy</li>
+            <li>Chile's independent institutions — central bank, pension system — outlasted his rule and benefited Chileans who came after</li>
+            <li>Cold War context: many anti-communists viewed the coup as choosing a bad outcome over a catastrophic one</li>
+          </ul>
+        </div>
+        <div class="debate-col con">
+          <h4>Arguments Against This Defense</h4>
+          <ul>
+            <li>The economic "miracle" required killing and torturing thousands; the terror kept wages suppressed and unions silenced</li>
+            <li>The 1988 plebiscite was only held because the constitution he imposed required it — he tried to rig it and failed</li>
+            <li>The 1982 banking crisis exposed fundamental fragilities; the recovery required abandoning orthodox Chicago Boy prescriptions</li>
+            <li>Democratic governments after 1990 largely continued the growth — the dictatorship was not necessary for the results</li>
+            <li>Chile's income inequality remained among the highest in the world — growth did not reach everyone equally</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>
+        Milton Friedman visited Chile in 1975 and met with Pinochet. He later faced fierce
+        criticism for lending intellectual prestige to the regime. Friedman's own position
+        was that economic freedom would eventually produce political freedom — that the
+        market and the secret police could not coexist indefinitely. Critics called this
+        reasoning self-serving: the free market experiment was only possible because the
+        workers and unions who might have resisted it had been crushed.
+      </p>
+
+      <div class="pull-quote">
+        "I have never accepted that there is a relationship between the free-market economic
+        system and the political system. Chile is an example of a country with a free-market
+        economy that has had authoritarian politics."
+        <cite>— Milton Friedman, 1975 (paraphrased from interview)</cite>
+      </div>
+
+      <p>
+        A more grounded version of the debate focuses on attribution and counterfactual
+        reasoning. Chile's democratic governments after 1990 inherited a set of institutions
+        and a trade-oriented economy, modified the more extreme elements (notably increasing
+        social spending significantly), and presided over further growth and poverty
+        reduction. Does this mean the Chicago Boys laid the indispensable groundwork, or
+        does it mean that good democratic governance can build prosperity on various
+        foundations? Economists genuinely disagree.
+      </p>
+      <p>
+        What is much less contested: the violence was not an unfortunate side effect that
+        can be cleanly separated from the economics. Wage suppression required crushing
+        unions. Market reforms that hurt workers required neutralizing political opposition.
+        The terror and the economics were, in Chile's case, intertwined.
+      </p>
+    </section>
+
+    <!-- 6. Late-life legal battles -->
+    <section class="section" id="legal">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2>Arrest in London, Evasion in Chile</h2>
+      </div>
+
+      <p>
+        Pinochet's late life was consumed by legal jeopardy he had spent years constructing
+        immunity to avoid. After leaving the presidency in 1990 he took the specially
+        created role of "Senator for Life," which gave him parliamentary immunity from
+        prosecution in Chile. He seemed, at 82, to have escaped accountability entirely.
+      </p>
+      <p>
+        Then, in October 1998, he checked into a London clinic for back surgery. Spanish
+        judge Baltasar Garzón — using the principle of universal jurisdiction, the idea that
+        crimes against humanity can be prosecuted anywhere — issued an international arrest
+        warrant for Pinochet on charges of torture, murder, and genocide. British police
+        arrested him in his hospital room.
+      </p>
+      <p>
+        What followed was eighteen months of legal proceedings that riveted the world and
+        fundamentally reshaped international law. The British House of Lords ruled — in a
+        landmark decision — that a former head of state had no immunity from prosecution
+        for crimes against humanity. Pinochet could, in principle, be extradited to Spain.
+      </p>
+
+      <div class="callout info">
+        <div class="callout-label">Universal Jurisdiction</div>
+        The Pinochet case established a precedent that has since been used in prosecutions
+        around the world. The argument is that some crimes — torture, genocide, crimes
+        against humanity — are so grave that any state may prosecute them regardless of
+        where they occurred. The principle remains controversial: some critics argue it is
+        selectively applied against the weak while powerful states' crimes go unprosecuted.
+      </div>
+
+      <p>
+        In the end, Pinochet was released. British Home Secretary Jack Straw ruled in March
+        2000 that Pinochet was too medically unfit to stand trial. He returned to Chile,
+        where he faced a cascade of Chilean legal cases, stripped one by one of his
+        parliamentary immunity. For the last six years of his life, Pinochet was under
+        indictment or investigation for crimes including tax evasion and the murder of
+        political opponents. He died in December 2006, aged 91, without ever being
+        convicted.
+      </p>
+      <p>
+        His death prompted celebration in some quarters of Chilean society and mourning in
+        others — a precise reflection of the divisions his rule had created and never healed.
+      </p>
+
+      <ul class="timeline">
+        <li>
+          <div class="t-year">1973</div>
+          <div class="t-text">Military coup. Allende dies. Pinochet leads junta.</div>
+        </li>
+        <li>
+          <div class="t-year">1974</div>
+          <div class="t-text">DINA established. Pinochet consolidates power as Supreme Chief.</div>
+        </li>
+        <li>
+          <div class="t-year">1975</div>
+          <div class="t-text">Chicago Boys economic shock therapy begins.</div>
+        </li>
+        <li>
+          <div class="t-year">1976</div>
+          <div class="t-text">Orlando Letelier assassinated in Washington, D.C. by DINA.</div>
+        </li>
+        <li>
+          <div class="t-year">1980</div>
+          <div class="t-text">New constitution ratified via disputed plebiscite, enshrining Pinochet's rule.</div>
+        </li>
+        <li>
+          <div class="t-year">1982–83</div>
+          <div class="t-text">Debt crisis and banking collapse; mass unemployment; state intervention reverses some reforms.</div>
+        </li>
+        <li>
+          <div class="t-year">1988</div>
+          <div class="t-text">Plebiscite on Pinochet's continuation: 56% vote No. He accepts the result.</div>
+        </li>
+        <li>
+          <div class="t-year">1990</div>
+          <div class="t-text">Democracy restored. Patricio Aylwin inaugurated. Rettig Commission established.</div>
+        </li>
+        <li>
+          <div class="t-year">1998</div>
+          <div class="t-text">Arrested in London on Judge Garzón's warrant. International legal battle begins.</div>
+        </li>
+        <li>
+          <div class="t-year">2000</div>
+          <div class="t-text">Released on medical grounds; returns to Chile facing domestic charges.</div>
+        </li>
+        <li>
+          <div class="t-year">2006</div>
+          <div class="t-text">Dies aged 91, under indictment, never convicted.</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 7. Legacy -->
+    <section class="section" id="legacy">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2>What Pinochet Left Behind</h2>
+      </div>
+
+      <p>
+        Pinochet's Chile is a standing provocation in global debates about development,
+        democracy, and human rights. He left behind a country that had been remade in
+        contradictory ways: open, market-oriented, and eventually prosperous — and also
+        fractured, unequal, and haunted by a generation of violence that its institutions
+        were slow to reckon with.
+      </p>
+      <p>
+        The 1980 constitution he imposed remained in place until a new one was drafted
+        in 2022 (and rejected at referendum, illustrating how unresolved Chile's
+        constitutional questions remain). The privatized pension system, once held up as
+        a model worldwide, has faced growing popular anger at delivering inadequate
+        retirement incomes. Many of the economic structures he built remain, modified but
+        not dismantled.
+      </p>
+      <p>
+        In international law, Pinochet's arrest in London proved that no amount of political
+        immunity reliably protects a former dictator from accountability — a lesson that
+        has since been absorbed by leaders from Slobodan Milošević to Omar al-Bashir,
+        however inconsistently that accountability has been applied.
+      </p>
+      <p>
+        In Chile itself, debate about Pinochet has never been resolved because the underlying
+        social conflicts — over inequality, the role of the state, and the meaning of
+        democracy — have never been fully resolved either. He is neither a monster whom
+        everyone agrees to condemn, nor a hero whose achievements outweigh his crimes.
+        He is something harder to process: a figure whose worst actions and whose real
+        effects on his country are both undeniable and genuinely intertwined.
+      </p>
+
+      <div class="callout debate">
+        <div class="callout-label">What History Suggests</div>
+        Serious historians largely agree on the facts: the scale of repression, the
+        U.S. involvement, the economic disruption, and the eventual growth. Where they
+        disagree is on causation and counterfactuals — what would have happened otherwise,
+        and whether the outcomes justify the means. Those are genuinely hard questions.
+        Anyone who finds them easy probably hasn't looked carefully enough.
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <nav class="toc">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#military">The Soldier Before the General</a></li>
+        <li><a href="#coup">September 11, 1973</a></li>
+        <li><a href="#atrocities">DINA, the Disappeared, Condor</a></li>
+        <li><a href="#economics">The Chicago Boys</a></li>
+        <li><a href="#debate">The Honest Debate</a></li>
+        <li><a href="#legal">Arrest in London</a></li>
+        <li><a href="#legacy">What He Left Behind</a></li>
+      </ol>
+    </nav>
+
+    <div style="margin-top:1.25rem;">
+      <div class="quick-facts">
+        <h3>Quick Facts</h3>
+        <div class="fact-row">
+          <span class="fact-label">Born</span>
+          <span class="fact-value">25 Nov 1915, Valparaíso, Chile</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Died</span>
+          <span class="fact-value">10 Dec 2006, Santiago, Chile</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">In Power</span>
+          <span class="fact-value">1973–1990 (17 years)</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Role</span>
+          <span class="fact-value">Army Commander, Junta Leader, President</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Predecessor</span>
+          <span class="fact-value">Salvador Allende (elected)</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Successor</span>
+          <span class="fact-value">Patricio Aylwin (1990)</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Secret Police</span>
+          <span class="fact-value">DINA (1974–1977)</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Arrested</span>
+          <span class="fact-value">London, 1998</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-label">Convicted?</span>
+          <span class="fact-value">No — died before trial</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:1.25rem;">
+      <div class="quick-facts">
+        <h3>Related Topics</h3>
+        <div class="fact-row"><a href="#" style="color:var(--text-muted);text-decoration:none;font-family:sans-serif;font-size:0.82rem;">Salvador Allende</a></div>
+        <div class="fact-row"><a href="#" style="color:var(--text-muted);text-decoration:none;font-family:sans-serif;font-size:0.82rem;">Operation Condor</a></div>
+        <div class="fact-row"><a href="#" style="color:var(--text-muted);text-decoration:none;font-family:sans-serif;font-size:0.82rem;">Milton Friedman</a></div>
+        <div class="fact-row"><a href="#" style="color:var(--text-muted);text-decoration:none;font-family:sans-serif;font-size:0.82rem;">Universal Jurisdiction</a></div>
+        <div class="fact-row"><a href="#" style="color:var(--text-muted);text-decoration:none;font-family:sans-serif;font-size:0.82rem;">The Disappeared</a></div>
+        <div class="fact-row"><a href="#" style="color:var(--text-muted);text-decoration:none;font-family:sans-serif;font-size:0.82rem;">Cold War in Latin America</a></div>
+      </div>
+    </div>
+
+  </aside>
+</div>
+
+<!-- ── Footer ── -->
+<footer>
+  <p>
+    <strong style="color:var(--text-muted);">CON<span style="color:var(--accent);">TEXT</span></strong>
+    &nbsp;&middot;&nbsp;
+    History for people who want to understand it, not just memorize it.
+  </p>
+  <p style="margin-top:0.5rem;">
+    Sources include: Rettig Commission Report (1991) &middot; Valech Commission Reports (2004, 2011) &middot;
+    Peter Kornbluh, <em>The Pinochet File</em> (2003) &middot; Church Committee Reports (1975) &middot;
+    Steve J. Stern, <em>Battling for Hearts and Minds</em> (2006)
+  </p>
+</footer>
+
+</body>
+</html>

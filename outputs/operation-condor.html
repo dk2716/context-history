@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operation Condor — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="event-page">
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Event</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="context-v4.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Events</a><span class="breadcrumb-sep">›</span>
+        <a href="#">South America</a><span class="breadcrumb-sep">›</span>
+        <span>Operation Condor</span>
+      </div>
+      <div class="hero-region-tag">South America · 1975–1983</div>
+      <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+        <div style="flex:1;min-width:0;">
+          <h1 style="margin-top:0;">Operation Condor</h1>
+          <p class="hero-sub">How six South American dictatorships built a secret transnational assassination network — and how much the United States knew, helped, and chose not to stop.</p>
+          <div class="hero-meta">
+            <span>~20 min read</span><span>·</span>
+            <span>10 academic sources</span><span>·</span>
+            <span>Last updated June 2026</span>
+          </div>
+        </div>
+        <div style="flex-shrink:0;">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-G2XVVmYlkMhDwayqqReq7VLvMpX9Q7K-V_Q-CumGjg&s=10" alt="Operation Condor" style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(232,168,56,0.25);display:block;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#figures">Key Figures</a></li>
+        <li><a href="#key-events">Key Events</a></li>
+        <li><a href="#turning-points">Turning Points</a></li>
+        <li><a href="#why-it-matters">Why It Matters Today</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="quick-facts-grid">
+            <div class="qf-item"><div class="qf-label">Active period</div><div class="qf-value">November 1975 – c. 1983 (formal coordination); antecedents from 1973</div></div>
+            <div class="qf-item"><div class="qf-label">Member states</div><div class="qf-value">Chile, Argentina, Uruguay, Paraguay, Bolivia, Brazil — all under military dictatorship</div></div>
+            <div class="qf-item"><div class="qf-label">Death toll</div><div class="qf-value">Estimated 60,000 killed; 400,000+ detained; 30,000+ "disappeared" (contested; figures overlap with each country's own repression)</div></div>
+            <div class="qf-item"><div class="qf-label">Purpose</div><div class="qf-value">Track, abduct, torture, and kill left-wing political opponents — including exiles living in other countries</div></div>
+            <div class="qf-item"><div class="qf-label">Founding</div><div class="qf-value">First formal coordination meeting, Santiago, Chile, November 25, 1975 — hosted by DINA chief Manuel Contreras</div></div>
+            <div class="qf-item"><div class="qf-label">U.S. role</div><div class="qf-value">Declassified documents show CIA and State Department awareness, logistical support, and communications infrastructure (Condortel). Direct operational involvement disputed.</div></div>
+            <div class="qf-item"><div class="qf-label">Most brazen act</div><div class="qf-value">Assassination of former Chilean ambassador Orlando Letelier by car bomb on Embassy Row, Washington D.C., September 21, 1976</div></div>
+            <div class="qf-item"><div class="qf-label">Accountability</div><div class="qf-value">Partial — Contreras convicted in Chile (1995); Argentine junta leaders convicted (1985); Kissinger never charged. Most perpetrators walked free.</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="background">
+        <h2>Background: The Cold War Turns South</h2>
+
+        <p>In September 1973, the Chilean Air Force bombed its own presidential palace. The coup against Salvador Allende — the world's first democratically elected Marxist head of state — was the most dramatic moment in a decade-long transformation of South America. By 1976, every major country on the continent except Venezuela and Colombia was governed by a military junta. These were not coincidental developments. They were the product of a deliberate U.S. Cold War strategy: the belief that communist or socialist governments in Latin America represented an existential threat to American interests, and that military dictatorships — however brutal — were preferable to the alternative.</p>
+
+        <p>The Nixon and Ford administrations, with Henry Kissinger as the dominant figure in foreign policy, had made this calculation explicitly. In Chile's case, Kissinger had authorised covert operations to destabilise Allende's government beginning in 1970 — "make the economy scream," in CIA director Richard Helms's phrase — and had been briefed on the coup planning in advance. When the coup succeeded and the junta began its systematic program of torture and disappearance, Washington offered recognition and support within days. The pattern was similar across the region: the United States funded, trained, and equipped the security forces that would form the backbone of Operation Condor's killing machine.</p>
+
+        <p>What made the 1970s different from earlier Cold War repression in Latin America was coordination. The regimes had a shared enemy — the left, broadly defined, from Marxist guerrillas to social democrats to trade union organisers — and they noticed that their targets moved across borders. A Chilean dissident could flee to Argentina; an Argentine could flee to Uruguay; a Uruguayan could find asylum in Europe. Operation Condor was the institutional answer to this problem: a system that allowed the secret police of one country to operate on the territory of another, effectively making the entire continent — and eventually the world — a killing field.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">1973</div><div class="stat-label">Year of the Chilean coup — the founding trauma that created the political conditions for Condor</div></div>
+          <div class="stat-box"><div class="stat-number">6</div><div class="stat-label">South American dictatorships in the network — every major country south of Colombia by 1976</div></div>
+          <div class="stat-box"><div class="stat-number">60,000</div><div class="stat-label">Estimated deaths attributable to the network — though the exact Condor toll vs. domestic repression is contested</div></div>
+          <div class="stat-box"><div class="stat-number">1976</div><div class="stat-label">Year of the Letelier assassination in Washington D.C. — the most brazen act of state terrorism on American soil since the Civil War</div></div>
+        </div>
+      </section>
+
+      <section id="figures">
+        <h2>Key Figures</h2>
+        <div class="figures-grid">
+          <div class="figure-card">
+            <div class="figure-name">Manuel Contreras</div>
+            <div class="figure-role">Director of DINA — Chile's secret police</div>
+            <p class="figure-desc">The architect of Operation Condor. Contreras built Chile's secret police into the most feared intelligence agency in South America and hosted the November 1975 founding meeting in Santiago. He reported directly to Pinochet. Convicted in 1995 for the Letelier assassination; served prison time but died in 2015 before facing full accountability for Condor's broader crimes.</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-name">Augusto Pinochet</div>
+            <div class="figure-role">Chilean Dictator, 1973–1990</div>
+            <p class="figure-desc">The senior partner and guiding force behind Condor. Pinochet approved Contreras's operations, including international assassinations. Arrested in London in 1998 on a Spanish extradition warrant, he was ultimately returned to Chile on health grounds and died in 2006 having never been convicted of the crimes he ordered.</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-name">Jorge Rafael Videla</div>
+            <div class="figure-role">Argentine Junta Leader, 1976–1981</div>
+            <p class="figure-desc">Led Argentina's "Dirty War" — the most lethal of all Condor's national components, with an estimated 30,000 disappeared. Argentina joined Condor at the March 1976 coup, immediately becoming its most prolific member. Convicted of crimes against humanity in 1985 and again in 2010; died in prison in 2013.</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-name">Henry Kissinger</div>
+            <div class="figure-role">U.S. Secretary of State, 1973–1977</div>
+            <p class="figure-desc">The most contested figure in the Condor story. Declassified documents show that Kissinger received detailed briefings on Condor's assassination plans, including Phase III attacks in Europe, in June 1976 — and failed to issue a clear stop order. A State Department cable from August 1976 shows a belated warning was sent only after the Letelier assassination was already being planned. He was never charged.</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-name">Alfredo Stroessner</div>
+            <div class="figure-role">Paraguayan Dictator, 1954–1989</div>
+            <p class="figure-desc">The longest-serving Condor participant, having ruled Paraguay since 1954. Paraguay's role was primarily as a records repository — the discovery of the "Archives of Terror" in Asunción in 1992, containing detailed Condor documents, became the most important primary source for understanding the network's operations.</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-name">Orlando Letelier</div>
+            <div class="figure-role">Chilean Ambassador; Condor target</div>
+            <p class="figure-desc">Allende's former Defence Minister and Ambassador to the United States, killed by a DINA car bomb on Washington's Embassy Row on September 21, 1976. His American assistant Ronni Moffitt also died. The assassination on U.S. soil prompted an FBI investigation that eventually exposed Condor's international reach — and Contreras's role — for the first time.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="key-events">
+        <h2>Key Events</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">September 1973 – November 1975</div>
+              <div class="tl-title">Building the Infrastructure — How Each Country's Terror Apparatus Formed and Found Each Other</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Operation Condor did not emerge fully formed from a single meeting. Its preconditions were laid over two years of increasingly violent repression in individual countries. In Chile, DINA was created by Decree in June 1974, modelled partly on the East German Stasi but trained with CIA and Brazilian intelligence assistance. In Uruguay, the military had effectively taken power by 1973 and built a surveillance state that, proportionally, disappeared more people per capita than any country on earth. In Argentina, the military's brutal intervention in left-wing politics predated the formal 1976 coup.</p>
+            <p>What connected them was a shared enemy and shared training. The School of the Americas — the U.S. Army training facility in Panama, later relocated to Fort Benning, Georgia — had trained officers from all the future Condor countries in counterinsurgency doctrine, interrogation techniques, and intelligence tradecraft. They knew each other. When they took power, they had a common conceptual framework and personal relationships. Condor formalised what was already an informal network.</p>
+            <div class="tl-sources"><span class="src-chip">McSherry (2005)</span><span class="src-chip">Dinges (2004)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">November 25, 1975</div>
+              <div class="tl-title">The Founding Meeting — Santiago Hosts South America's Assassination Cartel</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>On November 25, 1975, intelligence chiefs from Chile, Argentina, Uruguay, Bolivia, and Paraguay met in Santiago at the invitation of Manuel Contreras. Brazil sent an observer. The meeting produced a formal agreement to coordinate intelligence gathering, share information on political opponents, and — in the network's most lethal innovation — allow each country's security services to operate on another country's territory to "neutralise" (kill or abduct) targets who had fled across borders.</p>
+            <p>The network was structured in three phases. Phase I was intelligence sharing among member states. Phase II allowed security forces to cross borders to abduct or kill opponents in member states. Phase III — the most aggressive — authorised assassinations of exiled opponents anywhere in the world, including in Europe and the United States. Phase III targeted high-profile political figures: former presidents, ambassadors, senior politicians. It was Phase III that would produce the Letelier assassination in Washington.</p>
+            <p>The CIA's involvement in the founding meeting is documented but its depth is disputed. Declassified cables show the agency was briefed on the meeting and later provided Condor members with communications infrastructure — the encrypted system known as "Condortel" — through a U.S. facility in the Panama Canal Zone. The most striking revelation came in 2000 when the CIA itself confirmed that Manuel Contreras, Condor's founding architect, had been a CIA asset between 1974 and 1977 — precisely the years when he was organising the network as "Condor One." The CIA claimed Contreras was not asked about Condor until after the Letelier assassination; the full record will never be known, as the CIA destroyed its file on Contreras in 1991. <span class="src-chip" style="font-size:0.7rem;padding:0.1rem 0.4rem;">Zanchetta (2016)</span></p>
+            <div class="tl-sources"><span class="src-chip">McSherry (2005)</span><span class="src-chip">Kornbluh (2003)</span><span class="src-chip">Dinges (2004)</span><span class="src-chip">Zanchetta (2016)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">June 1976</div>
+              <div class="tl-title">Kissinger Is Briefed — and Fails to Stop Phase III</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>In June 1976, U.S. Ambassador to Paraguay Robert White sent a cable to Washington warning that Condor was planning to expand its assassination campaign to Europe and potentially the United States. The cable reached Secretary of State Henry Kissinger. A State Department response was drafted in June, instructing ambassadors in the Condor countries to warn their host governments that such operations would "create serious political problems" for the United States. Kissinger did not immediately sign off on sending the warning.</p>
+            <p>The delay was fatal. On September 21, 1976, Orlando Letelier was killed on Embassy Row in Washington D.C. The warning cable was finally sent to the Condor countries — on September 20, the day before the assassination. It arrived after the bombers were already in place. Whether the cable's delay was bureaucratic incompetence or deliberate inaction has never been fully resolved. What is documented is that Kissinger had specific, timely warning that Phase III was operational and that no effective action was taken.</p>
+            <p>A further document deepens the picture: on August 3, 1976, assistant secretary of state Harry Shlaudeman sent Kissinger a 14-page memorandum titled "The Third World War and Latin America," which described Operation Condor in detail — its phases, its European operations, and how the member states' siege mentality had expanded the category of "subversive" to include anyone opposing right-wing governments. Shlaudeman noted that Condor's approach was not in U.S. interests, but assessed that Washington's capacity to influence events was limited. No immediate action followed. The Carter administration, despite its rhetorical emphasis on human rights, also failed to develop an active stance against Condor — and in September 1977, President Carter hosted General Pinochet in Washington for the Panama Canal Treaties signing without pressing seriously on human rights.</p>
+            <div class="tl-sources"><span class="src-chip">Kornbluh (2003)</span><span class="src-chip">Zanchetta (2016)</span><span class="src-chip">NSA (declassified, 1999)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">September 21, 1976</div>
+              <div class="tl-title">The Letelier Assassination — State Terror on American Streets</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>At 9:35 a.m. on September 21, 1976, a car bomb detonated on Sheridan Circle in Washington D.C. — one block from the embassies of the United Kingdom, Turkey, and Romania, three blocks from the Greek embassy. The target was Orlando Letelier, Chile's former Ambassador to the United States and Defence Minister under Allende, who had survived a year in Pinochet's concentration camps and was now working with the Institute for Policy Studies and lobbying Congress against the junta. The bomb killed Letelier and his American colleague Ronni Moffitt. Michael Moffitt, Ronni's husband, survived in the back seat.</p>
+            <p>The assassination was the most audacious Phase III operation Condor ever attempted — a political murder on Embassy Row in the capital of its patron state. The FBI's investigation, led by special agent Robert Scherrer, eventually traced the operation back to DINA and directly to Manuel Contreras. Chilean-American DINA agent Michael Townley, who had built the bomb, was ultimately extradited to the United States and testified against his handlers in exchange for a reduced sentence. Contreras and Brigadier Pedro Espinoza were convicted in Chile in 1995 — nineteen years after the murder.</p>
+            <div class="tl-sources"><span class="src-chip">Dinges (2004)</span><span class="src-chip">Kornbluh (2003)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">1992 – Present</div>
+              <div class="tl-title">The Archives of Terror — How a Paraguayan Discovery Blew Open the Secret</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>In December 1992, a Paraguayan judge investigating a dissident's case was led by a tip to a nondescript building in a suburb of Asunción. Inside were nearly four tons of documents: the files of Paraguay's secret police, including detailed records of Condor operations, prisoner transfers between countries, assassination requests, and communications among intelligence services. The "Archive of Terror" (Archivo del Terror) contained the names of 50,000 victims, records of 30,000 killed, and documentation of 412 people murdered in coordinated Condor operations.</p>
+            <p>The documents provided the most comprehensive primary-source confirmation of Condor's network-wide operations and of U.S. involvement. They also fuelled the wave of trials in the 1990s and 2000s: Argentina's CONADEP commission had already documented the Dirty War in 1984, but the Paraguayan archive provided the transnational evidence that allowed charges to cross borders. Italian and French courts — which had the most Condor victims among their citizens — prosecuted cases based partly on the archive's evidence. In 2016, Argentina convicted 15 Condor participants from multiple countries in a landmark transnational trial.</p>
+            <div class="tl-sources"><span class="src-chip">McSherry (2005)</span><span class="src-chip">Martin (2019)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="turning-points">
+        <h2>Turning Points</h2>
+
+        <p>Three moments determined whether Condor would succeed, how long it would last, and whether anyone would be held accountable. In each case, a different outcome was possible — and the road not taken matters for understanding how atrocity systems work and how they end.</p>
+
+        <div class="turning-points">
+          <div class="turning-card">
+            <div class="turning-card-num">Turning Point 1</div>
+            <div class="turning-card-title">Kissinger's Delayed Warning — September 1976</div>
+            <p>If the State Department's warning against Phase III operations had been sent promptly after Kissinger's June 1976 briefing — and if it had been delivered with the credibility of a genuine American red line — the Letelier assassination might not have happened. The warning cable was drafted, held, and finally sent the day before the bombing. It is the single clearest documented moment where American action could have stopped a specific Condor murder. That it didn't exposes the gap between stated U.S. concern and actual U.S. commitment to stopping its allies' worst behaviour.</p>
+          </div>
+          <div class="turning-card">
+            <div class="turning-card-num">Turning Point 2</div>
+            <div class="turning-card-title">The Letelier Case Opens the FBI's Door</div>
+            <p>Condor's greatest strategic error was killing an American citizen (Ronni Moffitt) on American soil. The assassination triggered an FBI investigation that the CIA — which had a relationship with DINA and an institutional interest in protecting it — could not suppress. Robert Scherrer's FBI investigation cracked the case, Michael Townley's extradition and cooperation followed, and the chain of evidence eventually reached Contreras and Pinochet. A murder that was meant to silence Letelier's lobbying instead produced the first documented public exposure of Condor's international operations.</p>
+          </div>
+          <div class="turning-card">
+            <div class="turning-card-num">Turning Point 3</div>
+            <div class="turning-card-title">Argentina's 1985 Junta Trial — Accountability That Mattered</div>
+            <p>Argentina's prosecution of the military junta in 1985 — less than two years after the return of democracy — was the most significant accountability moment in Condor's history. Videla and four other junta members were convicted of murder, torture, and kidnapping. The trial established that even the most powerful members of a Condor government could face domestic justice. It influenced Chile's much slower accountability process and set a precedent that ultimately contributed to Pinochet's 1998 London arrest. Without the Argentine precedent, the architecture of international accountability for Condor crimes might never have developed.</p>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"The documents show that Secretary Kissinger was explicitly informed about Operation Condor's assassination plans in Europe and was given a draft cable to warn the governments. The cable was not sent in time. This is not an inference. It is what the documents say."</blockquote>
+          <cite>— Peter Kornbluh, National Security Archive, on the declassified 1976 State Department cables</cite>
+        </div>
+      </section>
+
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+
+        <p>Operation Condor ended in the early 1980s as military dictatorships across South America gave way to fragile democracies. But its consequences — institutional, legal, and political — are still working themselves out. The network's victims have never been fully accounted for; the perpetrators have never been fully prosecuted; and the U.S. government has never formally reckoned with its role.</p>
+
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>Transitional Justice Is Still Unfinished</h3>
+            <p>Across the Condor countries, accountability has been partial at best. Some perpetrators were prosecuted decades later; many were not. Impunity laws in Chile and Uruguay protected perpetrators for years, and were only overturned through sustained civil society pressure.</p>
+            <ul class="matters-subpoints">
+              <li>Argentina convicted 15 Condor participants from multiple countries in a 2016 transnational trial — the first of its kind in the world</li>
+              <li>Chile's Valech Commission (2004, 2011) documented 40,280 torture survivors — but fewer than 100 people have been imprisoned for the crimes</li>
+              <li>Paraguay's Archive of Terror is preserved and accessible — but no Paraguayan official was ever tried for Condor crimes</li>
+              <li>Brazil's National Truth Commission (2014) documented military abuses but no perpetrators have been prosecuted — a source of ongoing political tension</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The U.S. Role Remains Officially Unacknowledged</h3>
+            <p>The United States has declassified thousands of documents relating to Condor, largely through Freedom of Information Act litigation pursued by the National Security Archive. What those documents reveal has never been subject to formal U.S. congressional inquiry or official acknowledgment.</p>
+            <ul class="matters-subpoints">
+              <li>The CIA's provision of Condortel — the encrypted communications network that linked the member states — is documented but never formally acknowledged</li>
+              <li>Kissinger was called to testify by Chilean and Argentine courts; he declined and no U.S. government compelled his cooperation</li>
+              <li>The State Department's 2020 "Chile Declassification Project" released 30,000 more documents, but without political context or accountability</li>
+              <li>The debate over U.S. complicity vs. "passive awareness" is still alive in academic literature and in the politics of U.S.-Latin America relations</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The Template for Transnational Repression</h3>
+            <p>Condor was the most sophisticated transnational state repression network of the 20th century. Its model — intelligence sharing, rendition across borders, coordinated assassination — has been studied by subsequent authoritarian regimes and security theorists alike.</p>
+            <ul class="matters-subpoints">
+              <li>Freedom House's "Transnational Repression" reports document similar patterns today — Gulf states targeting dissidents in Europe, China pursuing Uyghur exiles, Russia assassinating critics abroad</li>
+              <li>The legal frameworks developed during Condor accountability trials became foundations for the Rome Statute's universal jurisdiction provisions</li>
+              <li>The Letelier case established legal precedent for state liability in transnational assassination — cited in subsequent terrorism litigation in U.S. courts</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The Disappeared and the Question of Memory</h3>
+            <p>An estimated 30,000 people were "disappeared" in Argentina alone — killed secretly and their bodies hidden, so that families could not mourn or bury them. The politics of memory around Condor remain live and contested.</p>
+            <ul class="matters-subpoints">
+              <li>Argentina's Plaza de Mayo mothers — who began marching for their disappeared children in 1977 — continue to march weekly; the organisation remains active</li>
+              <li>Former ESMA detention centre in Buenos Aires (where thousands were tortured and killed) is now a museum of memory; right-wing politicians periodically call for its closure</li>
+              <li>Under Jair Bolsonaro, Brazil's government rehabilitated the reputation of military-era torturers; reversing this is now part of Lula's political agenda</li>
+              <li>Chile's Pinochet nostalgia persists: a 2022 survey found 36% of Chileans viewed the dictatorship positively — a figure that has shifted but not collapsed</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>The core scholarly debate about Operation Condor is not about whether atrocities occurred — the evidence for those is overwhelming and documented in official commissions from multiple countries. The debate is about two related questions: how much did the United States know and enable, and how should we apportion responsibility between the Cold War ideological context and the individual agency of the perpetrators?</p>
+
+        <div class="scholars-row">
+          <div class="scholar-card critical">
+            <div class="scholar-card-name">J. Patrice McSherry</div>
+            <div class="scholar-card-title">Political Scientist, Long Island University — <em>Predatory States</em>, 2005</div>
+            <div class="scholar-card-verdict">Documents U.S. logistical and intelligence support as integral to Condor's operations. The CIA's provision of Condortel amounts to operational co-responsibility, not passive awareness.</div>
+          </div>
+          <div class="scholar-card critical">
+            <div class="scholar-card-name">John Dinges</div>
+            <div class="scholar-card-title">Journalist, Columbia University — <em>The Condor Years</em>, 2004</div>
+            <div class="scholar-card-verdict">Reconstructs the Letelier investigation from primary sources. Documents the specific sequence showing Kissinger was briefed, failed to act, and bears direct responsibility for failing to prevent the Washington assassination.</div>
+          </div>
+          <div class="scholar-card nuanced">
+            <div class="scholar-card-name">Peter Kornbluh</div>
+            <div class="scholar-card-title">National Security Archive — <em>The Pinochet File</em>, 2003</div>
+            <div class="scholar-card-verdict">Primary source work on declassified documents. Distinguishes between U.S. awareness, facilitation, and direction — finding strong evidence of the first two but cautioning against overstating the third without further declassification.</div>
+          </div>
+          <div class="scholar-card nuanced">
+            <div class="scholar-card-name">Francesca Lessa &amp; Lorena Balardini</div>
+            <div class="scholar-card-title">UCL / University of Buenos Aires — <em>International Studies Quarterly</em>, 2024</div>
+            <div class="scholar-card-verdict">The most methodologically rigorous recent study, drawing on trials, archives, and interviews across six countries. Proposes a formal theory of transnational repression cooperation and places Condor in direct comparison with 21st-century cases — Russia, China, Thailand — showing it was a template, not an anomaly.</div>
+          </div>
+        </div>
+
+        <h3>How Much Did the United States Know?</h3>
+
+        <p>The declassified record is now substantial. The CIA was briefed on the November 1975 founding meeting and provided the Condortel communications network. Kissinger received a June 1976 briefing warning that Phase III included planned assassinations in Europe and the United States, and was given a draft cable to warn the relevant governments. The warning was not sent until the day before the Letelier assassination. A 1978 CIA document states that "the CIA had liaison relationships with the security services of all Condor member countries."</p>
+
+        <p>What remains contested is whether this constitutes co-responsibility or passive facilitation. McSherry and Dinges argue that providing infrastructure and withholding warnings amounts to operational complicity — that the distinction between "knowing" and "enabling" dissolves when the enabling is material. More cautious historians note that the declassified record does not show CIA officers directing specific operations or approving specific target lists. The strongest conclusion the evidence supports is that the United States created the conditions for Condor, sustained its member states, was specifically informed of its assassination plans, and chose not to stop it.</p>
+
+        <div class="perspectives">
+          <div class="perspective-card for">
+            <div class="perspective-label">The case for U.S. co-responsibility</div>
+            <ul>
+              <li>CIA provided Condortel — the encrypted communications network — through a U.S. facility in Panama, without which transnational coordination would have been far harder <span class="perspective-attr">(McSherry, 2005)</span></li>
+              <li>Kissinger was specifically briefed on Phase III plans in June 1976; the warning cable was held for three months, arriving the day before the Letelier bombing <span class="perspective-attr">(Dinges, 2004)</span></li>
+              <li>U.S. training of Condor country officers at the School of the Americas included interrogation techniques later documented as torture in Condor detention centres <span class="perspective-attr">(McSherry, 2005)</span></li>
+              <li>Washington provided economic and military aid to all Condor governments while publicly claiming ignorance of their worst abuses <span class="perspective-attr">(Kornbluh, 2003)</span></li>
+              <li>The CIA confirmed in 2000 that Contreras was a CIA asset from 1974–1977, the exact years he ran Condor as "Condor One"; the CIA then destroyed his file in 1991 <span class="perspective-attr">(Zanchetta, 2016)</span></li>
+            </ul>
+          </div>
+          <div class="perspective-card against">
+            <div class="perspective-label">The case for limited U.S. culpability</div>
+            <ul>
+              <li>No declassified document shows CIA officers approving specific Condor assassination targets or directing specific operations <span class="perspective-attr">(Kornbluh, 2003)</span></li>
+              <li>The FBI investigation of the Letelier assassination — which eventually convicted Contreras — was actively supported by the State Department, suggesting genuine U.S. opposition to the murder once committed <span class="perspective-attr">(Dinges, 2004)</span></li>
+              <li>Individual Latin American military officers had domestic political agency; the Cold War framework does not fully explain the specific brutality of each regime's methods <span class="perspective-attr">(Grandin, 2004)</span></li>
+              <li>Further declassification may resolve remaining ambiguities — current conclusions are necessarily provisional <span class="perspective-attr">(Kornbluh, 2003)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <p>The most intellectually honest position is also the most uncomfortable: the United States did not create Operation Condor's killing instinct, but it created the environment in which Condor flourished, sustained the regimes that ran it, provided the infrastructure that connected them, was warned of specific murders in advance, and chose not to use its leverage to stop them. That is a form of complicity that falls short of "ordering the murders" but far exceeds "didn't know."</p>
+
+        <div class="pull-quote">
+          <blockquote>"I don't see why we need to stand by and watch a country go communist due to the irresponsibility of its own people. The issues are much too important for the Chilean voters to be left to decide for themselves."</blockquote>
+          <cite>— Henry Kissinger, National Security Council meeting on Chile, June 27, 1970 — three years before the coup that made Condor possible</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People directly connected</div>
+          <div class="topics-grid">
+            <a href="augusto-pinochet.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Pinochet_de_Civil2.jpg" alt="Augusto Pinochet">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Augusto Pinochet</div>
+              <div class="topic-preview">The senior partner in Condor — his DINA chief Contreras was the network's architect and Pinochet personally approved its international operations.</div>
+            </a>
+            <a href="henry-kissinger.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg" alt="Henry Kissinger">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Henry Kissinger</div>
+              <div class="topic-preview">Briefed in June 1976 on Condor's assassination plans; the warning cable he approved was sent too late. The most contested figure in the U.S. complicity debate.</div>
+            </a>
+            <a href="salvador-allende.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Salvador_Allende%2C_President_of_Chile%2C_gtfy.00154.jpg" alt="Salvador Allende">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Salvador Allende</div>
+              <div class="topic-preview">His 1973 overthrow was Condor's founding trauma — the event that put Pinochet in power and established DINA as the network's lead agency.</div>
+            </a>
+            <a href="richard-nixon.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Richard_M._Nixon%2C_ca._1935_-_1982_-_NARA_-_530679.jpg" alt="Richard Nixon">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Richard Nixon</div>
+              <div class="topic-preview">Authorised the CIA's covert campaign against Allende from 1970 — the beginning of the U.S. involvement that would culminate in Condor.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Related Events</div>
+          <div class="topics-grid">
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Chilean Coup (1973)</div>
+              <div class="topic-preview">The event that created Pinochet's government, established DINA, and provided the organisational template for Condor's founding.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">Argentina's Dirty War (1976–1983)</div>
+              <div class="topic-preview">Condor's most lethal national component — 30,000 disappeared under a junta that joined the network at its 1976 coup.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Argentine Junta Trial (1985)</div>
+              <div class="topic-preview">The landmark accountability process that established the precedent for prosecuting Condor-era crimes and influenced Chile's slower reckoning.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Concepts</div>
+          <div class="topics-grid">
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Enforced Disappearance</div>
+              <div class="topic-preview">Condor perfected the technique of killing without leaving a body — denying families knowledge, grief, and evidence for prosecution.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Universal Jurisdiction</div>
+              <div class="topic-preview">The legal principle that allowed Spanish judge Baltasar Garzón to issue an arrest warrant for Pinochet in 1998 — directly tested by Condor cases.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Transitional Justice</div>
+              <div class="topic-preview">How new democracies reckon with the crimes of their predecessors — South America's Condor cases became the global template for truth commissions and accountability processes.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">Dinges, J. (2004). </span>
+            <span class="src-journal">The Condor Years: How Pinochet and His Allies Brought Terrorism to Three Continents</span>. The New Press.
+            <span class="src-note">The best narrative account of Condor's operations, built from primary sources including the FBI's Letelier investigation files and declassified CIA and State Department cables. Dinges had unique access to Michael Townley (the DINA agent who built the Letelier bomb) and reconstructed the network's internal logic with unusual precision.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">McSherry, J.P. (2005). </span>
+            <span class="src-journal">Predatory States: Operation Condor and Covert War in Latin America</span>. Rowman & Littlefield.
+            <span class="src-note">The most comprehensive academic study of Condor's structure, membership, and U.S. involvement. McSherry argues most strongly for U.S. co-responsibility and documents the CIA's infrastructure support in the most detail. Essential for understanding the network's architecture.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Kornbluh, P. (2003). </span>
+            <span class="src-journal">The Pinochet File: A Declassified Dossier on Atrocity and Accountability</span>. The New Press.
+            <span class="src-note">Primary source collection assembled by the National Security Archive through two decades of FOIA litigation. Includes the key Kissinger briefing cables, the Condortel documentation, and the State Department warning cable. The single most important documentary source on U.S. involvement. Partially available free at nsarchive.gwu.edu.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">Grandin, G. (2004). </span>
+            <span class="src-journal">The Last Colonial Massacre: Latin America in the Cold War</span>. University of Chicago Press.
+            <span class="src-note">Situates Condor within the broader U.S. Cold War policy in Latin America, from Guatemala (1954) through the 1980s. Important for understanding the ideological context that made Condor possible — and for the counterargument that the regimes had agency beyond what Cold War framing allows.</span>
+          </li>
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">CONADEP. (1984). </span>
+            <span class="src-journal">Nunca Más (Never Again): Report of the National Commission on the Disappearance of Persons</span>. Argentina. Available free at nuncamas.org.
+            <span class="src-note">Argentina's landmark truth commission report, published less than two years after the return of democracy. Documents 8,961 disappearances (a documented floor, not a ceiling) with testimony from survivors and the architecture of the detention system. One of the most important human rights documents of the 20th century and freely available online in English and Spanish.</span>
+          </li>
+          <li>
+            <span class="src-num">[6]</span>
+            <span class="src-title">Martin, F. (2019). </span>
+            <span class="src-journal">Crimes Against Humanity at the Boundaries of the Law: The Condor Network</span>. <em>Journal of Latin American Studies</em>, 51(4).
+            <span class="src-note">Academic analysis of the transnational legal mechanisms developed through Condor accountability trials — including the 2016 Argentine Condor trial that convicted participants from multiple countries. Useful for the "what happened next" question on justice.</span>
+          </li>
+          <li>
+            <span class="src-num">[7]</span>
+            <span class="src-title">National Security Archive. (Various years). </span>
+            <span class="src-journal">Chile Documentation Project / Operation Condor Collection</span>. George Washington University. Available free at nsarchive.gwu.edu.
+            <span class="src-note">Ongoing collection of declassified U.S. government documents on Condor, the Chilean coup, and related U.S. policy. The most important freely accessible primary source collection on U.S. involvement. Updated as new declassifications occur.</span>
+          </li>
+          <li>
+            <span class="src-num">[8]</span>
+            <span class="src-title">Comisión Nacional sobre Prisión Política y Tortura (Valech Commission). (2004, 2011). </span>
+            <span class="src-journal">Informe de la Comisión Nacional sobre Prisión Política y Tortura</span>. Chile.
+            <span class="src-note">Chile's torture commission reports, documenting 40,280 survivors of political imprisonment and torture under Pinochet. Together with the earlier Rettig Commission (1991) on killings, these form the official Chilean record of the dictatorship's crimes and the baseline for accountability proceedings.</span>
+          </li>
+          <li>
+            <span class="src-num">[9]</span>
+            <span class="src-title">Lessa, F. &amp; Balardini, L. (2024). No Safe Haven: Operation Condor and Transnational Repression in South America. </span>
+            <span class="src-journal">International Studies Quarterly</span>, 68(2), sqae035. DOI: 10.1093/isq/sqae035.
+            <span class="src-note">The most rigorous recent academic study of Condor as a case of transnational repression, drawing on 85 trial hearings, 105 interviews, over 3,000 archival records from six countries, and a novel dataset (the Transnational Human Rights Violations database). Proposes a demand-and-supply theory of why states cooperate in repression across borders, and situates Condor explicitly alongside modern cases including Russia-Belarus and China-Uyghur repression networks. A landmark piece for understanding Condor's broader significance.</span>
+          </li>
+          <li>
+            <span class="src-num">[10]</span>
+            <span class="src-title">Zanchetta, B. (2016). Between Cold War Imperatives and State-Sponsored Terrorism: The United States and "Operation Condor." </span>
+            <span class="src-journal">Studies in Conflict &amp; Terrorism</span>, 39(12): 1084–1102. DOI: 10.1080/1057610X.2016.1159069.
+            <span class="src-note">A focused study of the U.S. role in Condor using declassified U.S. and UN documents. Contains key revelations: the CIA's 2000 confirmation that Contreras was a CIA asset 1974–1977 (and destroyed his file in 1991); the text of the Shlaudeman memorandum to Kissinger (August 3, 1976) describing all three Condor phases; and documentation of the Carter administration's failure to take action against Condor despite its human rights rhetoric. One of the clearest documentary syntheses of the U.S. knowledge problem.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="context-v4.html" style="color:var(--accent);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement',       desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',    url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                            url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html' },
+    { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',  url: 'context-v4.html' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',  url: 'operation-condor.html' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.',     url: 'augusto-pinochet.html' },
+    { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html' },
+    { type: 'person', title: 'Henry Kissinger',          desc: 'The refugee who became America\'s most powerful and most controversial diplomat.',         url: 'henry-kissinger.html' },
+    { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html' },
+    { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html' },
+    { type: 'person', title: 'Barack Obama',             desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.',  url: 'obama.html' },
+    { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html' },
+    { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html' },
+    { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+    else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+    else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+    else if (e.key==='Escape') { toggleSearch(); return; }
+    items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.height = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+    const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+  });
+  function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+  function toggleSave() {
+    const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+    if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+    else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+  }
+</script>
+</body>
+</html>

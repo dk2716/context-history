@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Augusto Pinochet — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="#">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Leaders & Rulers</a><span class="breadcrumb-sep">›</span>
+        <span>Augusto Pinochet</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar" id="heroAvatar"><img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Pinochet_de_Civil2.jpg" alt="Augusto Pinochet"></div>
+        <div>
+          <div class="hero-region-tag">Chile · Military Dictator</div>
+          <h1>Augusto Pinochet</h1>
+          <p class="hero-sub">The general who overthrew a democratically elected president, ran the most controversial economic experiment in Latin American history, and spent his final years evading justice for 3,000+ deaths.</p>
+          <div class="hero-meta">
+            <span>~18 min read</span><span>·</span>
+            <span>In power: 1973–1990</span><span>·</span>
+            <span>Chile, South America</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins & Rise</a></li>
+        <li><a href="#ideology">Economic Doctrine</a></li>
+        <li><a href="#rule">How He Ruled</a></li>
+        <li><a href="#condor">Operation Condor</a></li>
+        <li><a href="#fall">End of Power</a></li>
+        <li><a href="#legacy">Legacy & Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="quick-facts-grid">
+            <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Augusto José Ramón Pinochet Ugarte</div></div>
+            <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">November 25, 1915 — Valparaíso, Chile</div></div>
+            <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">December 10, 2006 — Santiago, Chile (cardiac failure, under house arrest)</div></div>
+            <div class="qf-item"><div class="qf-label">In power</div><div class="qf-value">September 11, 1973 – March 11, 1990 (16 years)</div></div>
+            <div class="qf-item"><div class="qf-label">Came to power by</div><div class="qf-value">Military coup against President Salvador Allende</div></div>
+            <div class="qf-item"><div class="qf-label">Economic policy</div><div class="qf-value">Free-market "shock therapy" via the Chicago Boys</div></div>
+            <div class="qf-item"><div class="qf-label">Documented deaths</div><div class="qf-value">3,200+ killed or disappeared (Rettig Commission)</div></div>
+            <div class="qf-item"><div class="qf-label">Torture survivors</div><div class="qf-value">~28,000 (Valech Commission, 2004)</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins & Rise to Power</h2>
+        <p>Augusto Pinochet was born into a middle-class family in the port city of Valparaíso in 1915. His path was military from the start: he enrolled in Chile's military academy at 17 and spent the next four decades climbing the ranks. He was not a brilliant officer — by most accounts he was diligent, politically cautious, and unremarkable. His genius, if it can be called that, was for surviving. Where other officers became involved in coups and conspiracies, Pinochet kept his head down and his record clean. That reputation for reliability was what made him attractive to the politicians who would eventually destroy the man he served.</p>
+
+        <p>Salvador Allende — a socialist doctor — had been elected Chile's president in 1970, the first Marxist to reach power through democratic elections in Latin American history. He began nationalising copper mines, banks, and large estates. The United States, under Nixon and Kissinger, was alarmed: CIA documents later declassified show active efforts to destabilise his government, block him economically, and encourage the Chilean military to act. Chile's economy did deteriorate — partly from U.S. pressure, partly from Allende's own policy mistakes — and social tensions rose sharply. By mid-1973, lorry drivers and shopkeepers were striking, and the political centre was collapsing.</p>
+
+        <p>In August 1973, Allende appointed Pinochet commander-in-chief of the army, trusting him as an apolitical professional. The appointment was catastrophic miscalculation. Pinochet had already begun secretly coordinating with the other military branches. On September 11, 1973, the armed forces moved. Chilean air force jets bombed the presidential palace, La Moneda. Allende died inside — either by his own hand or killed in the final assault; the evidence still points to suicide. Pinochet emerged from the coup as the dominant figure in the military junta, and within months had sidelined his co-conspirators to rule effectively alone.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">17</div><div class="stat-label">Age when he enrolled in military academy</div></div>
+          <div class="stat-box"><div class="stat-number">57</div><div class="stat-label">Age at time of 1973 coup</div></div>
+          <div class="stat-box"><div class="stat-number">16</div><div class="stat-label">Years he held power</div></div>
+          <div class="stat-box"><div class="stat-number">1998</div><div class="stat-label">Year of arrest in London — age 82</div></div>
+        </div>
+      </section>
+
+      <section id="ideology">
+        <h2>Economic Doctrine: The Chicago Boys Experiment</h2>
+        <p>Pinochet was not an ideologue by temperament. He was a soldier who wanted order and Chile's institutions to function. But he inherited an economy in crisis and needed a programme. Into that vacuum stepped a group of young Chilean economists who had studied at the University of Chicago under Milton Friedman — men who believed Chile could become a laboratory for free-market transformation of a kind never attempted at that scale in peacetime.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Shock Therapy</div>
+            <p>In 1975, with inflation running at 340%, the Chicago Boys convinced Pinochet to slash government spending by 27% in a single year and lift price controls. The short-term pain was severe: unemployment hit 16% and poverty worsened. Friedman himself visited Santiago and called it a "miracle," a word that proved irresistible to Pinochet's propagandists.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Privatisation</div>
+            <p>State enterprises nationalised under Allende were sold back to private buyers, often at below-market prices. The banking sector was deregulated entirely. Foreign investment was welcomed with minimal restrictions. By the early 1980s Chile had one of the most liberalised economies in the world — on paper.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Pension Reform</div>
+            <p>In 1981, Chile replaced its public pension system with individual investment accounts managed by private companies. This became internationally influential — World Bank economists promoted the Chilean model for decades. Critics note it left many retired Chileans with inadequate pensions and required a government bailout anyway.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">The 1982 Crisis</div>
+            <p>The unregulated banking sector imploded in 1982: eight banks failed, GDP fell 14%, and unemployment hit 26%. Pinochet's government did what free-market doctrine said not to — it bailed out the banks and re-nationalised several. This is the episode Pinochet's defenders most rarely mention when citing the "economic miracle."</p>
+          </div>
+        </div>
+
+        <p>The honest assessment of Pinochet's economics requires separating two questions: did Chile's economy improve under him, and did his policies cause that improvement? Chile's GDP growth from the mid-1980s through the 1990s was genuinely impressive — among the strongest in Latin America. But economists Daron Acemoglu and James Robinson and others have argued that Chile's post-1985 growth was driven more by restored political stability, recovered copper prices, and the end of the debt crisis than by the structural reforms specifically. The reforms were deepened and retained by the democratic governments that followed Pinochet — which suggests they were separable from the dictatorship that introduced them.</p>
+
+        <div class="pull-quote">
+          <blockquote>"The Chilean economy did well, but mainly because Chilean technocrats maintained sensible economic policies. And Pinochet, to his credit, was no Mao or Stalin. But he was still a brutal tyrant."</blockquote>
+          <cite>— Paul Krugman, The New York Times, 2006</cite>
+        </div>
+      </section>
+
+      <section id="rule">
+        <h2>How He Ruled</h2>
+
+        <h3>The DINA: Chile's secret police</h3>
+        <p>Within months of the coup, Pinochet created DINA — Dirección de Inteligencia Nacional — a secret police force that answered directly to him rather than to the junta. It was run by Manuel Contreras, a colonel of remarkable ruthlessness. DINA maintained a network of detention and torture centres across Chile, the most notorious of which was Villa Grimaldi, a confiscated estate on the outskirts of Santiago. Prisoners were systematically tortured using electric shocks, water, beatings, and sexual violence. Many were then killed and their bodies disposed of in the Pacific Ocean or in desert mineshafts.</p>
+
+        <p>DINA's methods were not improvised — they drew on techniques developed at the School of the Americas, a U.S. Army training facility in Panama where Latin American military officers were instructed in counterinsurgency. The CIA had prior knowledge of DINA's activities and maintained a relationship with Contreras throughout the early Pinochet years, a fact established by declassified U.S. documents.</p>
+
+        <div class="callout warning">
+          <div class="callout-label">Human Rights</div>
+          <h4>The Caravan of Death, October 1973</h4>
+          <p>Weeks after the coup, a military helicopter flew a group of army officers — the "Caravan of Death" — from city to city across northern Chile. At each stop, political prisoners who had already surrendered were taken from their cells and executed without trial. At least 75 people were killed in roughly two weeks. Pinochet denied ordering it for decades; declassified documents and court testimony have established his knowledge and approval. The Caravan became the clearest early example of the coup's systematic, not spontaneous, violence.</p>
+        </div>
+
+        <h3>The National Stadium</h3>
+        <p>In the days immediately after the September 11 coup, Chile's national football stadium in Santiago was converted into a mass detention and processing centre. An estimated 40,000 people were held there in the weeks following the coup. Singer and activist Víctor Jara was among those detained; his hands were broken and he was tortured before being shot at least 44 times, his body dumped on a street in Santiago. The stadium became a symbol of the coup's immediate brutality — the before-and-after image of a sporting arena turned prison.</p>
+
+        <h3>Scale of repression</h3>
+        <p>The Rettig Commission — a truth commission established by Pinochet's democratic successor in 1991 — documented 3,197 killings and disappearances attributable to the state. The Valech Commission, reporting in 2004, documented approximately 28,000 survivors of political imprisonment and torture. These are confirmed minimums: the real numbers are likely higher, as many survivors did not come forward and many killings were never formally investigated. The victims were disproportionately trade unionists, teachers, students, community organisers, and members of left-wing parties — people who had done nothing illegal under Chilean law.</p>
+      </section>
+
+      <section id="condor">
+        <h2>Operation Condor: Terror Without Borders</h2>
+        <p>Chile's state terror was not limited to its own borders. In 1975, Pinochet's intelligence chief Contreras met with counterparts from Argentina, Uruguay, Bolivia, Paraguay, and Brazil to create Operation Condor — a coordinated programme for tracking, kidnapping, torturing, and killing political opponents across national boundaries. Condor allowed any participating government to have its exiles hunted down wherever they had fled.</p>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header"><div class="tl-header-left"><div class="tl-date">September 1974</div><div class="tl-title">General Prats Assassinated in Buenos Aires</div></div><div class="tl-chevron">▼</div></div>
+          <div class="tl-body">
+            <p>Carlos Prats — Pinochet's predecessor as army commander and a Allende loyalist who had fled to Argentina — was killed by a DINA car bomb along with his wife in Buenos Aires. Prats had been writing his memoirs, which would have documented the coup's planning in damaging detail. The killing was authorised by Contreras and approved by Pinochet. It was the first significant Condor operation and established the precedent: exile was not safety.</p>
+            <div class="tl-sources"><span class="src-chip">McSherry (2005)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header"><div class="tl-header-left"><div class="tl-date">September 1976</div><div class="tl-title">Letelier Assassinated in Washington, D.C.</div></div><div class="tl-chevron">▼</div></div>
+          <div class="tl-body">
+            <p>Orlando Letelier — Allende's former foreign minister — was killed by a car bomb on Embassy Row in Washington D.C., along with his American colleague Ronni Moffitt. This was arguably the most brazen act of state terrorism ever carried out on U.S. soil by a foreign government. Contreras ordered it; Pinochet authorised it. The FBI investigation eventually confirmed DINA's responsibility. Contreras was later convicted in Chile; Pinochet was shielded by his self-granted immunity until his death.</p>
+            <p>The Letelier assassination eventually poisoned U.S.-Chilean relations even during the Pinochet years — the Carter administration suspended military aid in 1977 partly because of it. It is also the case that establishes, beyond any serious historical doubt, that Pinochet personally authorised assassinations of political opponents in foreign countries, including a U.S. ally's capital.</p>
+            <div class="tl-sources"><span class="src-chip">Kornbluh (2003)</span><span class="src-chip">Declassified CIA</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header"><div class="tl-header-left"><div class="tl-date">1976–1983</div><div class="tl-title">Condor's Reach Across South America</div></div><div class="tl-chevron">▼</div></div>
+          <div class="tl-body">
+            <p>Operation Condor is estimated to have killed between 50,000 and 60,000 people across the participating countries. Argentina's own dirty war — in which 10,000–30,000 people were killed between 1976 and 1983 — operated partly within the Condor framework. Uruguayan, Paraguayan, and Bolivian dissidents were hunted in Argentina, Brazil, and Europe. The operation had at minimum the knowledge of U.S. intelligence, and a State Department cable from 1978 describes an American official advising Condor participants on how to be more discreet — a document that remains deeply contested in its interpretation.</p>
+            <div class="tl-sources"><span class="src-chip">McSherry (2005)</span><span class="src-chip">NSA Archive</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fall">
+        <h2>The End: Plebiscite, Arrest, and Death</h2>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header"><div class="tl-header-left"><div class="tl-date">October 5, 1988</div><div class="tl-title">He Lost the Vote He Designed</div></div><div class="tl-chevron">▼</div></div>
+          <div class="tl-body">
+            <p>Pinochet's 1980 constitution — written under his regime — required a plebiscite in 1988 in which Chileans would vote Yes or No on extending his rule for another eight years. He expected to win. The campaign was tightly controlled, but the opposition was allowed to campaign, and a famous 15-minute television spot — energetic, colourful, forward-looking — captured the public mood. When the votes were counted, 55.99% said No. Pinochet accepted the result, a decision that surprised many and shaped his legacy in complicated ways: he lost, but he held to the constitutional process he had created. Elections followed in 1989 and Pinochet handed power to Patricio Aylwin in March 1990.</p>
+            <div class="tl-sources"><span class="src-chip">Constable & Valenzuela (1991)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header"><div class="tl-header-left"><div class="tl-date">October 16, 1998</div><div class="tl-title">Arrested in London — A Landmark in International Law</div></div><div class="tl-chevron">▼</div></div>
+          <div class="tl-body">
+            <p>Pinochet was in London for back surgery when Spanish judge Baltasar Garzón issued an international arrest warrant for crimes against humanity — including the torture and murder of Spanish citizens in Chile. British police arrested him at his hospital. The case became a global legal landmark: the House of Lords ruled that a former head of state had no immunity from prosecution for torture. Pinochet spent 503 days under house arrest in a Surrey mansion before being released on medical grounds and returned to Chile in March 2000.</p>
+            <p>The London arrest transformed international law. For the first time, a former head of state had been detained in a third country on a universal jurisdiction warrant. It established a precedent that other leaders — including Slobodan Milošević and Charles Taylor — would subsequently face. Whether it constituted justice for Pinochet is another question: he never stood trial, claiming dementia and ill-health, though a 2004 television interview in which he appeared sharp and articulate drew fury from his victims.</p>
+            <div class="tl-sources"><span class="src-chip">Roht-Arriaza (2005)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header"><div class="tl-header-left"><div class="tl-date">December 10, 2006</div><div class="tl-title">Death Under House Arrest, With 300+ Charges Pending</div></div><div class="tl-chevron">▼</div></div>
+          <div class="tl-body">
+            <p>Pinochet died of cardiac failure on December 10, 2006 — Human Rights Day — with over 300 criminal charges pending against him in Chilean courts. Just days before his death, a U.S. Senate investigation revealed that he had secretly maintained accounts at Riggs Bank in Washington, accumulating between $4 million and $8 million in funds — money whose origin was never fully explained. He had spent years claiming poverty to avoid paying reparations to victims. He died unrepentant: in a final statement dictated days before his death, he accepted "political responsibility" for what happened under his government but denied criminal liability and expressed no regret.</p>
+            <div class="tl-sources"><span class="src-chip">Human Rights Watch (2006)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+        <p>Pinochet died in 2006 without standing trial. His 1980 constitution still governs Chile. His economic model — shock therapy, privatisation, pension funds — became the template exported by the IMF and World Bank to dozens of countries across the developing world in the 1980s and 1990s. The arguments about whether his economic results justify, offset, or are simply irrelevant to his human rights record are still being made in Chile — and in every country that inherited his model.</p>
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>His Constitution Still Governs Chile</h3>
+            <p>The 1980 constitution Pinochet imposed by plebiscite — under conditions of censorship, banned opposition, and a state of exception — remained Chile's governing document 44 years later. Two attempts to replace it, in 2022 and 2023, both failed in referendum. The constitution contains provisions — supermajority requirements for constitutional change, protection of private property in education and healthcare, restrictions on state economic activity — that Pinochet's technocrats designed specifically to make future left governments unable to govern as left governments.</p>
+            <ul class="matters-subpoints">
+              <li>The 2022 replacement proposal was defeated 62–38%; the 2023 proposal (a more conservative alternative) was also rejected — leaving the original in force</li>
+              <li>The constitution's pension system — the AFP private savings model — has produced adequate retirement incomes for high earners and inadequate ones for most workers; pension reform has been a central political issue for 15 years</li>
+              <li>Pinochet designed the constitution's amendment thresholds specifically to require right-wing support for any change — entrenching his model against democratic revision</li>
+              <li>Gabriel Boric won the 2021 election on a platform of replacing the constitution; the failure to do so was the defining political fact of his presidency</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The "Chicago Boys" Economic Model — Exported Globally</h3>
+            <p>Pinochet's economic programme — designed by University of Chicago-trained economists who became known as the "Chicago Boys" — became the prototype for IMF structural adjustment programmes applied to over 40 countries in the 1980s and 1990s. Chile was the laboratory; the world was the rollout. The debates about shock therapy, austerity, privatisation, and the relationship between free markets and political freedom that began in Chile are the same debates running through Greece, Argentina, Ghana, and Pakistan today.</p>
+            <ul class="matters-subpoints">
+              <li>The AFP pension model was adopted in over 30 countries after being promoted by the World Bank as the Chilean success story — most have subsequently partially reversed it</li>
+              <li>Milton Friedman's 1975 visit to Chile — and his public support for the economic programme while acknowledging awareness of the repression — became the founding case study in debates about economists' ethical responsibilities</li>
+              <li>The "Chilean miracle" GDP growth figures cited by proponents exclude the 1975 crash (GDP fell 13%) and the 1982 crisis (GDP fell 14%); the average growth rate over the Pinochet period was comparable to neighbouring countries that did not implement shock therapy</li>
+              <li>The structural inequality embedded in Chile's privatised education and healthcare systems is a direct product of Pinochet-era design — and was the primary cause of the mass social uprising in October 2019</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The Pinochet Precedent in International Law</h3>
+            <p>Pinochet's 1998 arrest in London on a Spanish warrant for crimes against humanity was the most significant test of universal jurisdiction principles up to that point. It established that former heads of state do not have permanent immunity for crimes against humanity — and it created a legal framework that has since been used against officials in Rwanda, Yugoslavia, and beyond. His eventual return to Chile without trial also illustrated universal jurisdiction's limits: political will in the state of refuge can still override legal principle.</p>
+            <ul class="matters-subpoints">
+              <li>The House of Lords ruling that Pinochet could be extradited (1998) was the first time a senior British court had ruled that a former head of state had no immunity for torture — a landmark in international human rights law</li>
+              <li>Spain's Baltasar Garzón, who issued the warrant, later used the same universal jurisdiction theory in other cases — and was ultimately disbarred in Spain for it, illustrating the political risks of pursuing powerful defendants</li>
+              <li>The ICC's 2023 arrest warrant for Vladimir Putin — unprecedented for a sitting head of state of a major power — traces its legal lineage partly to the Pinochet precedent</li>
+              <li>Chile's Supreme Court stripped Pinochet of immunity in 2004; he died in 2006 with 300 criminal charges pending, having never stood trial for any of them</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The Memory War — 36% Still View the Dictatorship Positively</h3>
+            <p>A 2022 survey found that 36% of Chileans viewed the Pinochet dictatorship positively — a figure that has declined but not collapsed over the decades since the transition. The persistence of Pinochet nostalgia in Chilean society is not simply ignorance of history; it reflects a genuine social division between those who experienced or identify with the repression and those who experienced or identify with the economic order he created. This memory war is active and political: it shapes elections, constitutional debates, and the parameters of what governments can do.</p>
+            <ul class="matters-subpoints">
+              <li>The Pinochet Foundation maintains archives and promotes a positive account of his government; it operated legally in Chile until court orders restricted some activities</li>
+              <li>During Boric's government, right-wing politicians periodically rehabilitated Pinochet's economic legacy while carefully distancing from the human rights record — a rhetorical split that reflects the electorate's divisions</li>
+              <li>September 11 — the anniversary of the coup — is observed differently in different Chilean communities: as a day of mourning and memory for survivors and their families, as a politically contested date for conservatives</li>
+              <li>The ESMA memory site in Argentina and Chile's Villa Grimaldi Park — former torture centres now preserved as museums — face periodic pressure from political forces who argue that "moving on" requires stopping the memory</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy & Debate</h2>
+        <p>Pinochet's legacy is one of the most genuinely contested in 20th-century history, because it involves two questions that are logically separate but politically entangled: was his economic policy good for Chile, and does a positive economic outcome — if true — offset the killing of 3,000 people and the torture of 28,000? These questions deserve to be examined honestly and separately.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">The case made in his defence</div>
+            <ul>
+              <li>Chile's GDP growth from mid-1980s through 2000s was among Latin America's strongest — the country is now one of the wealthiest in the region</li>
+              <li>He accepted the 1988 plebiscite result and handed power to civilian successors without violence — rare for a Latin American military ruler</li>
+              <li>His structural reforms (trade openness, fiscal discipline, pension privatisation) were retained and built upon by democratic successors, suggesting they had merit independent of his methods</li>
+              <li>Inflation was tamed — from 340% in 1975 to single digits by the mid-1980s</li>
+              <li>Chile avoided the debt crises that devastated most of Latin America in the 1980s</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">The documented record</div>
+            <ul>
+              <li>3,197 people killed or disappeared by the state — teachers, workers, students, none convicted of crimes</li>
+              <li>~28,000 documented survivors of torture (Valech Commission)</li>
+              <li>Personally authorised assassinations on foreign soil, including in Washington D.C.</li>
+              <li>The 1975–76 shock therapy caused a depression — unemployment above 16%, poverty worsened before improving</li>
+              <li>1982 banking collapse (caused by deregulation he championed) required a government bailout contradicting his stated ideology</li>
+              <li>Concealed $4–8M in secret foreign bank accounts while claiming poverty to avoid paying victims' reparations</li>
+              <li>Died with 300+ criminal charges pending, never stood trial, never apologised</li>
+            </ul>
+          </div>
+        </div>
+        <div class="legacy-card complex" style="margin-top:1rem">
+          <div class="legacy-label">Genuinely contested</div>
+          <ul>
+            <li>Economists disagree on whether Chicago Boys reforms caused Chile's growth or merely preceded it — Acemoglu argues institutions matter more than specific policies</li>
+            <li>Democratic governments after 1990 kept market reforms but also built a social safety net Pinochet had dismantled — suggesting the "model" required democracy to function humanely</li>
+            <li>The Allende government was itself destabilised by U.S. economic warfare — how bad Chile's trajectory would have been without the coup is genuinely unknowable</li>
+          </ul>
+        </div>
+
+        <p>The core problem with the "economic success justifies it" argument is not just moral — it's also empirical. Chile's strongest growth came after Pinochet left power, under democratic governments that modified his model significantly. The case that the dictatorship was specifically necessary for the growth is very hard to make. The case that 3,000 dead people is an acceptable price for GDP growth is a moral position, not an economic one, and should be identified as such.</p>
+
+        <div class="pull-quote">
+          <blockquote>"We will never know what kind of country Chile might have been had Salvador Allende been allowed to govern. We know exactly what kind of country Pinochet made it."</blockquote>
+          <cite>— Ariel Dorfman, Chilean author and human rights activist</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People</div>
+          <div class="topics-grid">
+            <a href="#" class="topic-card"><div class="topic-type-tag person">Person</div><div class="topic-name">Salvador Allende</div><div class="topic-preview">The socialist president Pinochet overthrew — and what his government was actually doing.</div></a>
+            <a href="#" class="topic-card"><div class="topic-type-tag person">Person</div><div class="topic-name">Henry Kissinger</div><div class="topic-preview">The U.S. National Security Advisor who helped create the conditions for Pinochet's coup.</div></a>
+            <a href="saddam-hussein.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Saddam_Hussein_in_1998.png" alt="Saddam Hussein"><div class="topic-type-tag person">Person</div><div class="topic-name">Saddam Hussein</div><div class="topic-preview">Another Cold War-era authoritarian whose removal led to catastrophic instability.</div></a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Events & Concepts</div>
+          <div class="topics-grid">
+            <a href="#" class="topic-card"><div class="topic-type-tag event">Event</div><div class="topic-name">Operation Condor</div><div class="topic-preview">The coordinated South American programme for hunting down and killing political opponents across borders.</div></a>
+            <a href="#" class="topic-card"><div class="topic-type-tag concept">Concept</div><div class="topic-name">The Chicago School</div><div class="topic-preview">Milton Friedman's free-market economics — and how it became a laboratory experiment in Chile.</div></a>
+            <a href="#" class="topic-card"><div class="topic-type-tag concept">Concept</div><div class="topic-name">Universal Jurisdiction</div><div class="topic-preview">The legal principle the London arrest established — that some crimes can be prosecuted anywhere.</div></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources & Further Reading</h2>
+        <ul class="sources-list">
+          <li><span class="src-num">[1]</span><span class="src-title">Constable, P. & Valenzuela, A. (1991). </span><span class="src-journal">A Nation of Enemies: Chile Under Pinochet</span>. W.W. Norton.<span class="src-note">The standard English-language history of the Pinochet years — strong on politics, the coup's immediate aftermath, and the opposition.</span></li>
+          <li><span class="src-num">[2]</span><span class="src-title">Kornbluh, P. (2003). </span><span class="src-journal">The Pinochet File: A Declassified Dossier on Atrocity and Accountability</span>. The New Press.<span class="src-note">Based on declassified U.S. government documents; the definitive account of CIA involvement and the Letelier assassination. Available partially free via the National Security Archive.</span></li>
+          <li><span class="src-num">[3]</span><span class="src-title">McSherry, J.P. (2005). </span><span class="src-journal">Predatory States: Operation Condor and Covert War in Latin America</span>. Rowman & Littlefield.<span class="src-note">The most comprehensive account of Operation Condor's structure, reach, and documented operations across South America.</span></li>
+          <li><span class="src-num">[4]</span><span class="src-title">Rettig Commission (1991). </span><span class="src-journal">Report of the Chilean National Commission on Truth and Reconciliation</span>. University of Notre Dame Press.<span class="src-note">The official Chilean truth commission documenting 3,197 killings and disappearances. Available online.</span></li>
+          <li><span class="src-num">[5]</span><span class="src-title">Valech Commission (2004). </span><span class="src-journal">Report on Political Imprisonment and Torture</span>. Government of Chile.<span class="src-note">Documents approximately 28,000 survivors of political imprisonment and torture under Pinochet.</span></li>
+          <li><span class="src-num">[6]</span><span class="src-title">Roht-Arriaza, N. (2005). </span><span class="src-journal">The Pinochet Effect: Transnational Justice in the Age of Human Rights</span>. University of Pennsylvania Press.<span class="src-note">Analysis of the London arrest and its legal legacy for international human rights law.</span></li>
+          <li><span class="src-num">[7]</span><span class="src-title">Acemoglu, D. & Robinson, J.A. (2012). </span><span class="src-journal">Why Nations Fail</span>. Crown Publishers.<span class="src-note">Provides the institutional economics framework for evaluating whether Chile's growth was caused by Pinochet's specific policies or by other factors.</span></li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content synthesised from academic sources listed above.</p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement',       desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',    url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                            url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html' },
+    { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',  url: 'context-v4.html' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',  url: 'operation-condor.html' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.',     url: 'augusto-pinochet.html' },
+    { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html' },
+    { type: 'person', title: 'Henry Kissinger',          desc: 'The refugee who became America\'s most powerful and most controversial diplomat.',         url: 'henry-kissinger.html' },
+    { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html' },
+    { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html' },
+    { type: 'person', title: 'Barack Obama',             desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.',  url: 'obama.html' },
+    { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html' },
+    { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html' },
+    { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html' },
+  ];
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles found.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown') { e.preventDefault(); _focusIdx = Math.min(_focusIdx+1, items.length-1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); _focusIdx = Math.max(_focusIdx-1, 0); }
+    else if (e.key === 'Enter' && _focusIdx >= 0) { items[_focusIdx].click(); return; }
+    else if (e.key === 'Escape') { toggleSearch(); return; }
+    items.forEach((r,i) => r.classList.toggle('focused', i === _focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+
+  window.addEventListener('scroll', () => {
+    const p = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('progressBar').style.height = Math.min(p,100) + '%';
+    updateSidebar();
+  });
+  function updateSidebar() {
+    const sections = document.querySelectorAll('section[id]'), navItems = document.querySelectorAll('.sidebar-nav li');
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    navItems.forEach(item => { const l = item.querySelector('a'); item.classList.toggle('active', l && l.getAttribute('href') === '#' + current); });
+  }
+  function toggleItem(el) {
+    const wasActive = el.classList.contains('active');
+    document.querySelectorAll('.tl-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) el.classList.add('active');
+  }
+  document.addEventListener('DOMContentLoaded', () => { const f = document.querySelector('.tl-item'); if (f) f.classList.add('active'); });
+  function toggleSave() {
+    const btn = document.getElementById('saveBtn'), toast = document.getElementById('toast'), isSaved = btn.classList.contains('saved');
+    if (!isSaved) { btn.classList.add('saved'); btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3000); }
+    else { btn.classList.remove('saved'); btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`; }
+  }
+</script>
+</body>
+</html>

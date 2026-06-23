@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henry Kissinger — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="progressBar"></div>
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+<div class="page-wrap">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="#">Home</a><span class="breadcrumb-sep">›</span><a href="#">People</a><span class="breadcrumb-sep">›</span><a href="#">Diplomats & Strategists</a><span class="breadcrumb-sep">›</span><span>Henry Kissinger</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar" id="heroAvatar"><img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg" alt="Henry Kissinger"></div>
+        <div>
+          <div class="hero-region-tag">United States · National Security Advisor & Secretary of State</div>
+          <h1>Henry Kissinger</h1>
+          <p class="hero-sub">The German-Jewish refugee who became the most powerful American diplomat of the 20th century — and the most controversial, with a Nobel Peace Prize in one hand and responsibility for mass civilian deaths in Cambodia, Chile, and Bangladesh in the other.</p>
+          <div class="hero-meta">
+            <span>~18 min read</span><span>·</span><span>Active: 1969–1977</span><span>·</span><span>United States / Global</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins & Rise</a></li>
+        <li><a href="#doctrine">Realpolitik Doctrine</a></li>
+        <li><a href="#achievements">Major Achievements</a></li>
+        <li><a href="#crimes">The Dark Record</a></li>
+        <li><a href="#later">Later Life</a></li>
+        <li><a href="#legacy">Legacy & Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles and build your reading list.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="quick-facts-grid">
+            <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Heinz Alfred Kissinger</div></div>
+            <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">May 27, 1923 — Fürth, Bavaria, Germany</div></div>
+            <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">November 29, 2023 — Kent, Connecticut (age 100)</div></div>
+            <div class="qf-item"><div class="qf-label">Roles</div><div class="qf-value">National Security Advisor (1969–75), Secretary of State (1973–77)</div></div>
+            <div class="qf-item"><div class="qf-label">Served under</div><div class="qf-value">Richard Nixon and Gerald Ford</div></div>
+            <div class="qf-item"><div class="qf-label">Nobel Peace Prize</div><div class="qf-value">1973 — for Vietnam ceasefire (two committee members resigned in protest)</div></div>
+            <div class="qf-item"><div class="qf-label">Doctrine</div><div class="qf-value">Realpolitik — foreign policy based on national interest, not ideology or morality</div></div>
+            <div class="qf-item"><div class="qf-label">Legacy disputes</div><div class="qf-value">Cambodia bombing, Chile coup, Bangladesh genocide silence, East Timor</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="origins">
+        <h2>From Fürth to the White House</h2>
+        <p>Heinz Kissinger was born in 1923 in Fürth, a town in Bavaria with a large Jewish population. When he was fifteen, the Nazi racial laws had stripped his family of most of their rights: his father, a schoolteacher, had been dismissed from his job, and the family fled to the United States in 1938, arriving with little money and no English. Kissinger later said he barely thought about the experience, but the pattern it set — the outsider who must master the rules of a new system to survive — runs through everything he did in American politics.</p>
+        <p>He was drafted into the U.S. Army during World War II and served as a translator and counterintelligence officer in occupied Germany, earning a Bronze Star. After the war he attended Harvard on the GI Bill, graduating summa cum laude and earning a PhD. His 1954 doctoral thesis — on the post-Napoleonic European order established at the Congress of Vienna — defined his intellectual framework for the rest of his career. The Vienna settlement, in Kissinger's reading, was a model of how competing great powers could create a stable international system through negotiated balance, without requiring shared values or ideological agreement. This became the template for everything he later did.</p>
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">15</div><div class="stat-label">Age when his family fled Nazi Germany</div></div>
+          <div class="stat-box"><div class="stat-number">1954</div><div class="stat-label">PhD from Harvard on the Congress of Vienna</div></div>
+          <div class="stat-box"><div class="stat-number">50</div><div class="stat-label">Age when awarded the Nobel Peace Prize</div></div>
+          <div class="stat-box"><div class="stat-number">100</div><div class="stat-label">Age at death — still consulting for governments</div></div>
+        </div>
+      </section>
+
+      <section id="doctrine">
+        <h2>Realpolitik: The Doctrine That Defined His Career</h2>
+        <p>Kissinger's approach to foreign policy had a name — realpolitik, or "reality politics" — and a core conviction: nations are not governed by morality; they are governed by interests. The job of a statesman is to understand those interests clearly, negotiate from them, and not let sentiment, ideology, or domestic public opinion distort the calculation. This was not original to Kissinger — it describes how most Great Powers have conducted foreign policy throughout history — but he was unusually explicit about it, and unusually effective at implementing it.</p>
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Balance of Power</div>
+            <p>Kissinger believed the goal of U.S. policy should be a stable global order in which no single power could dominate — even if the competing powers were undemocratic. This is why he pursued détente with the Soviet Union and opened relations with Communist China: not because he approved of them, but because a balance of power including them was more stable than a world divided into hostile blocs.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Linkage</div>
+            <p>Kissinger invented what he called "linkage" — the idea that U.S.-Soviet negotiations on one issue (say, arms control) should be explicitly tied to Soviet behaviour on other issues (say, Vietnam or the Middle East). Everything was connected; concessions in one area could be traded for gains in another. Critics said this made policy impossibly complex; Kissinger said it reflected how diplomacy actually worked.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Triangular Diplomacy</div>
+            <p>His greatest strategic innovation was turning the U.S.-China-Soviet Union relationship into a triangle he could manage. By opening to China, he created a situation where both Moscow and Beijing had to worry about the other's relationship with Washington. This gave the United States leverage over both simultaneously — a genuinely elegant piece of strategic architecture.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Secrecy as Method</div>
+            <p>Kissinger operated with extraordinary secrecy — backchannel communications, secret meetings, decisions made without informing Congress or sometimes even the President's own cabinet. The opening to China was entirely negotiated in secret. The Cambodia bombing was conducted covertly for over a year. He justified this as necessary for diplomacy; critics argued it allowed him to act without accountability.</p>
+          </div>
+        </div>
+        <div class="pull-quote">
+          <blockquote>"The illegal we do immediately; the unconstitutional takes a little longer."</blockquote>
+          <cite>— Henry Kissinger, 1975 (documented in State Department transcripts, declassified 2004)</cite>
+        </div>
+      </section>
+
+      <section id="achievements">
+        <h2>The Diplomatic Record: What He Actually Accomplished</h2>
+        <h3>Opening to China, 1971</h3>
+        <p>Kissinger's secret trip to Beijing in July 1971 — conducted under the cover of a stomach ailment while on a visit to Pakistan — was one of the great diplomatic coups of the Cold War. For 22 years, the United States had refused to recognise the People's Republic of China, pretending the government of Taiwan was the legitimate ruler of the Chinese mainland. Kissinger negotiated the terms of Nixon's February 1972 visit, which began normalising relations with the world's most populous country. Strategically, it exploited the Sino-Soviet split — widening the gap between China and the USSR and giving Washington leverage over both. It was elegant, bold, and consequential. It remains the achievement his defenders point to most often, and with justification.</p>
+        <h3>Détente and SALT I, 1972</h3>
+        <p>The Strategic Arms Limitation Talks (SALT I), signed in May 1972, were the first bilateral agreement between the U.S. and Soviet Union to limit nuclear weapons. They didn't end the arms race but they established a framework for negotiation and reduced the risk of accidental escalation. The accompanying Anti-Ballistic Missile Treaty (ABM Treaty) prevented either side from building missile defence systems that would have destabilised the deterrence balance. These were genuine achievements in reducing existential risk.</p>
+        <h3>The Middle East: Shuttle Diplomacy</h3>
+        <p>After the 1973 Yom Kippur War, Kissinger conducted a remarkable series of direct negotiations — flying personally between Jerusalem, Cairo, and Damascus — that produced disengagement agreements between Israel and Egypt and Israel and Syria. This "shuttle diplomacy" was improvisational and exhausting and it worked. Egypt's President Sadat, whom Kissinger cultivated assiduously, eventually signed the Camp David Accords in 1978 (after Kissinger had left office) — a legacy of the relationship Kissinger built. The Arab oil embargo was also ended, partly through his diplomacy, in March 1974.</p>
+      </section>
+
+      <section id="crimes">
+        <h2>The Dark Record: What Realpolitik Costs</h2>
+        <div class="callout warning">
+          <div class="callout-label">Documented Atrocity</div>
+          <h4>Cambodia: The Secret Bombing and Its Consequences</h4>
+          <p>Beginning in March 1969, Kissinger and Nixon authorised a secret bombing campaign against North Vietnamese supply lines in neutral Cambodia — "Operation Menu." Over 14 months, more than 2,700 B-52 sorties dropped approximately 110,000 tons of bombs on Cambodia without congressional authorisation or public knowledge. The bombing was recorded falsely in military documents; military personnel who raised concerns were wiretapped. In 1970, the U.S. extended its ground operations into Cambodia, destabilising the government of Prince Sihanouk. The ensuing chaos contributed to the conditions in which the Khmer Rouge — a genocidal movement that killed 1.5 to 2 million Cambodians — was able to seize power in 1975. A 1979 war crimes tribunal in absentia convicted Kissinger of crimes against humanity in Cambodia; the judgment had no legal force but the factual record it drew on was not seriously disputed.</p>
+        </div>
+        <h3>Chile: Undermining Allende and Enabling Pinochet</h3>
+        <p>Kissinger's role in Chile is thoroughly documented in declassified records. When Salvador Allende won the Chilean presidential election in 1970, Kissinger told Nixon: "I don't see why we need to stand by and watch a country go Communist due to the irresponsibility of its own people." The CIA was authorised to pursue two tracks: a diplomatic campaign to prevent Allende from taking office, and a covert programme (Track II) to encourage a military coup. When the coup came in September 1973 — killing Allende and installing Pinochet — Kissinger's initial response was to speed up recognition of the new regime and, in meetings with Pinochet in 1976, to reassure him that the United States was not concerned about its human rights record. This was several months after the Pinochet regime had assassinated a former Chilean official on the streets of Washington D.C.</p>
+        <h3>Bangladesh: Silence During Genocide</h3>
+        <p>In 1971, the Pakistani military launched a campaign of mass killings in East Pakistan (now Bangladesh) against the Bengali population who had voted for independence. The U.S. Consul General in Dhaka, Archer Blood, sent a cable signed by 20 diplomatic staff — "The Blood Telegram" — accusing the Nixon administration of "moral bankruptcy" and documenting the genocide. Kissinger suppressed it and continued supporting Pakistan, whose government he needed as a conduit for the secret China negotiations. An estimated 300,000 to 3,000,000 Bangladeshis were killed. The range of estimates is enormous; even the lower end represents one of the worst political mass killings of the 20th century. Kissinger's choice to stay silent was not an oversight — he was receiving detailed reports throughout.</p>
+        <h3>East Timor: A Green Light for Invasion</h3>
+        <p>In December 1975, Kissinger and Ford met with Indonesian President Suharto. The following day, Indonesia invaded East Timor, which had just declared independence from Portugal. Declassified documents show that Kissinger and Ford had been informed of the imminent invasion and raised no serious objection — the U.S. was dependent on Indonesian support for strategic bases in the Pacific. Indonesian forces killed an estimated 100,000 to 180,000 Timorese over the following years — roughly a quarter of the population. U.S. arms sales to Indonesia continued.</p>
+      </section>
+
+      <section id="later">
+        <h2>After Government: The Consultant Who Never Retired</h2>
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header"><div class="tl-header-left"><div class="tl-date">1977–2023</div><div class="tl-title">Kissinger Associates: Power as a Private Business</div></div><div class="tl-chevron">▼</div></div>
+          <div class="tl-body"><p>After leaving government in 1977, Kissinger founded Kissinger Associates, a geopolitical consulting firm that charged corporations and governments millions of dollars for access to his contacts and strategic advice. His client list was never fully disclosed. He consulted for major companies doing business in China, for governments navigating U.S. foreign policy, and for successive administrations — including advising George W. Bush on Iraq (where he privately supported the invasion) and, reportedly, Donald Trump. Critics argued the firm created systematic conflicts of interest between his private clients and his public commentary. Kissinger defended it as ordinary practice.</p><div class="tl-sources"><span class="src-chip">Ferguson (2015)</span></div></div>
+        </div>
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header"><div class="tl-header-left"><div class="tl-date">1998–2002</div><div class="tl-title">Legal Jeopardy: The Spanish and French Investigations</div></div><div class="tl-chevron">▼</div></div>
+          <div class="tl-body"><p>In the years after the London arrest of Pinochet (which Kissinger had privately opposed), several countries began investigating Kissinger directly. Spanish judge Baltasar Garzón — who had issued the Pinochet warrant — sought Kissinger's testimony on the killing of Spanish citizens in Chile. French courts summoned him for questioning in 2001. Kissinger cancelled a planned visit to Brazil in 2001 after human rights lawyers filed a complaint. He was never charged, but he began declining to travel to certain countries and reportedly altered his international schedule to avoid jurisdictions where he might face legal proceedings. He never testified in any of these investigations.</p><div class="tl-sources"><span class="src-chip">Hitchens (2001)</span></div></div>
+        </div>
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header"><div class="tl-header-left"><div class="tl-date">November 29, 2023</div><div class="tl-title">Death at 100 — Still Controversial</div></div><div class="tl-chevron">▼</div></div>
+          <div class="tl-body"><p>Kissinger died at his home in Kent, Connecticut, on November 29, 2023, aged 100. Tributes from world leaders and foreign policy establishments around the world were immediate and fulsome; simultaneous condemnations from human rights groups, historians, and survivors in Cambodia, Chile, Bangladesh, and East Timor were equally immediate. The duelling reactions — mourning and condemnation arriving simultaneously within hours of his death — illustrated better than any biography the impossibility of a settled verdict on his life. He had written his own account in numerous books over fifty years. He was never, in his own telling, responsible for harm he had not intended; and unintended harm, in realpolitik, is simply the cost of policy.</p><div class="tl-sources"><span class="src-chip">NYT Obituary, Nov 2023</span></div></div>
+        </div>
+      </section>
+
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+        <p>Kissinger died in November 2023 at 100, outliving most of his victims and most of his critics. But what he built — a doctrine, a set of institutions, and a generation of disciples trained in his method — remains the operating system of American foreign policy. Understanding Kissinger is not a history lesson; it is a guide to understanding how Washington thinks about the world right now.</p>
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>Realpolitik Is Still the Default</h3>
+            <p>Kissinger argued that foreign policy must be based on power and interest, not sentiment or ideology — that stability matters more than justice, and that the United States cannot afford to make enemies of states it needs. That framework, which he called realism but critics called amoralism, remains dominant in American foreign policy establishments today. Every debate about whether to arm Ukraine, sanction China, or confront Saudi Arabia over human rights is, in part, a debate between Kissingerian realism and the liberal internationalism his career helped define.</p>
+            <ul class="matters-subpoints">
+              <li>The US-China relationship he designed in 1972 remains the central framework American policymakers operate within — even as that relationship has fundamentally changed</li>
+              <li>His détente model — engaging adversaries to manage rather than defeat them — underpinned the Iran nuclear deal, the Cuba normalisation, and the Obama-era Russia "reset"</li>
+              <li>The "Kissinger school" of foreign policy — Brent Scowcroft, James Baker, Robert Gates — shaped policy through the end of the Cold War and beyond</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Chile and Operation Condor: Accountability Never Came</h3>
+            <p>Kissinger's role in backing Pinochet's coup and the subsequent Operation Condor — the transnational assassination network that killed thousands across six countries — was never the subject of U.S. official accountability. This is not merely a historical grievance. It defines the terms on which the United States engages with Latin America, and the terms on which Latin American governments engage with questions of U.S. complicity in atrocities.</p>
+            <ul class="matters-subpoints">
+              <li>Chilean and Argentine courts issued summonses for Kissinger's testimony; he refused to appear and no U.S. authority compelled him</li>
+              <li>Declassified State Department cables show Kissinger was briefed on Condor's assassination plans and declined to deter them</li>
+              <li>His death without accountability established a precedent: senior U.S. officials directing covert violence abroad face no legal consequence regardless of what is later declassified</li>
+              <li>The 2020 Chile Declassification Project released 30,000 more documents — but without any official U.S. reckoning with what they contain</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The China Opening and Its Long Shadow</h3>
+            <p>The 1972 opening to China is widely considered Kissinger's greatest strategic achievement. It also created the conditions for China's rise into a peer competitor — a development Kissinger's framework did not anticipate and that his later career was spent, often controversially, trying to manage. His continued contacts with Beijing after leaving office made him one of the most contested figures in the US-China debate of the 2010s and 2020s.</p>
+            <ul class="matters-subpoints">
+              <li>Kissinger visited Beijing more than 100 times over his career, including as recently as 2023 at age 100 — meeting with Xi Jinping when official U.S.-China relations were at their lowest point in decades</li>
+              <li>Critics argued he used his China contacts to benefit business clients, blurring the line between statecraft and commercial interest</li>
+              <li>The Taiwan question — deliberately left ambiguous in the 1972 Shanghai Communiqué — remains the most dangerous unresolved issue in world politics</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The War Criminal Question and International Law</h3>
+            <p>The debate about whether Kissinger was a war criminal — prosecutable under international law for Cambodia, Chile, Bangladesh, and East Timor — was never resolved legally, because the legal mechanisms to prosecute senior U.S. officials do not exist. But the question has become more important, not less, as the International Criminal Court and universal jurisdiction principles have expanded. What Kissinger's impunity established is a precedent for what powerful states' officials can do without consequence.</p>
+            <ul class="matters-subpoints">
+              <li>The Cambodian bombing (Operation Menu, 1969–70): 500,000+ tons of bombs on a neutral country, deliberately concealed from Congress — a constitutional violation that was never prosecuted</li>
+              <li>Christopher Hitchens' 2001 book <em>The Trial of Henry Kissinger</em> laid out a formal legal case; Kissinger's lawyers denied all charges without engaging the substance</li>
+              <li>The ICC can now issue warrants for heads of state and senior officials — but the U.S. has never ratified the Rome Statute, and Kissinger's career was the implicit argument for why</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy & Debate</h2>
+        <p>Henry Kissinger is the central case study in one of the oldest arguments in foreign policy ethics: is it possible to judge a statesman by the same moral standards as an ordinary person? Kissinger argued explicitly that it was not — that statecraft requires accepting responsibility for outcomes others might call crimes in order to achieve stability that saves more lives in aggregate. His critics argued that this reasoning, applied without limits, can justify anything, and that the specific lives he traded away — Cambodian farmers, Chilean trade unionists, Bangladeshi civilians — were always someone else's people, never Americans.</p>
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">Strategic accomplishments</div>
+            <ul>
+              <li>Opening to China — a genuine strategic masterstroke that reshaped Cold War dynamics</li>
+              <li>SALT I and the ABM Treaty — the first meaningful nuclear arms control agreements</li>
+              <li>Détente with the Soviet Union — reduced Cold War tension at its most dangerous point</li>
+              <li>Middle East shuttle diplomacy — produced disengagement agreements and contributed to the eventual Camp David Accords</li>
+              <li>Ended U.S. involvement in Vietnam (though the Paris Accords held for only two years)</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">Documented moral record</div>
+            <ul>
+              <li>Secret Cambodia bombing: 110,000+ tons of bombs on a neutral country without congressional authorisation; contributed to Khmer Rouge rise</li>
+              <li>Chile: actively worked to prevent Allende from taking office; encouraged military coup; reassured Pinochet regime after it had committed assassinations on U.S. soil</li>
+              <li>Bangladesh: received and suppressed detailed reports of genocide; prioritised Pakistan relationship over 300,000+ civilian deaths</li>
+              <li>East Timor: gave Indonesia effective green light to invade; 100,000–180,000 killed</li>
+              <li>Wiretapped his own staff and journalists to identify leak sources</li>
+            </ul>
+          </div>
+        </div>
+        <div class="legacy-card complex" style="margin-top:1rem">
+          <div class="legacy-label">The deeper question</div>
+          <ul>
+            <li>Did his achievements (China, SALT) produce more peace than his failures (Cambodia, Chile) produced death? This is a real calculation that serious historians disagree on</li>
+            <li>Would Nixon's China opening have happened without Kissinger, or with different methods? The opening required secrecy, but did it require supporting a military coup in Chile?</li>
+            <li>His insistence on secrecy prevented democratic oversight — but some diplomatic breakthroughs genuinely require confidentiality. Where is the line?</li>
+          </ul>
+        </div>
+        <div class="pull-quote">
+          <blockquote>"History knows no resting places and no plateaus."</blockquote>
+          <cite>— Henry Kissinger, <em>A World Restored</em> (1957) — his doctoral thesis, written before he entered government; the line captures the restless, amoral logic that defined his entire career</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People</div>
+          <div class="topics-grid">
+            <a href="richard-nixon.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Richard_M._Nixon%2C_ca._1935_-_1982_-_NARA_-_530679.jpg" alt="Richard Nixon"><div class="topic-type-tag person">Person</div><div class="topic-name">Richard Nixon</div><div class="topic-preview">The president who gave Kissinger unprecedented power — and eventually fell to Watergate.</div></a>
+            <a href="augusto-pinochet.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Pinochet_de_Civil2.jpg" alt="Augusto Pinochet"><div class="topic-type-tag person">Person</div><div class="topic-name">Augusto Pinochet</div><div class="topic-preview">The Chilean general Kissinger's policies helped bring to power in 1973.</div></a>
+            <a href="salvador-allende.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Salvador_Allende%2C_President_of_Chile%2C_gtfy.00154.jpg" alt="Salvador Allende"><div class="topic-type-tag person">Person</div><div class="topic-name">Salvador Allende</div><div class="topic-preview">The democratically elected Chilean president Kissinger worked to undermine and overthrow.</div></a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Concepts</div>
+          <div class="topics-grid">
+            <a href="#" class="topic-card"><div class="topic-type-tag concept">Concept</div><div class="topic-name">Realpolitik</div><div class="topic-preview">The doctrine that foreign policy should be based on interests, not ideology — and what it permits.</div></a>
+            <a href="#" class="topic-card"><div class="topic-type-tag concept">Concept</div><div class="topic-name">The Cold War</div><div class="topic-preview">The global ideological contest that framed every decision Kissinger made.</div></a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources & Further Reading</h2>
+        <ul class="sources-list">
+          <li><span class="src-num">[1]</span><span class="src-title">Ferguson, N. (2015). </span><span class="src-journal">Kissinger: Volume I — The Idealist, 1923–1968</span>. Penguin Press.<span class="src-note">The authorised biography — sympathetic but scholarly, drawing on Kissinger's private papers. Volume II covering his time in government remains unpublished as of 2024.</span></li>
+          <li><span class="src-num">[2]</span><span class="src-title">Hitchens, C. (2001). </span><span class="src-journal">The Trial of Henry Kissinger</span>. Verso.<span class="src-note">A prosecutorial account drawing on declassified documents. Polemical in tone but factually grounded; most of the specific documentary claims have not been refuted. Short and accessible.</span></li>
+          <li><span class="src-num">[3]</span><span class="src-title">Suri, J. (2007). </span><span class="src-journal">Henry Kissinger and the American Century</span>. Harvard University Press.<span class="src-note">More balanced academic assessment placing Kissinger in the intellectual context of Cold War strategic thought.</span></li>
+          <li><span class="src-num">[4]</span><span class="src-title">Bass, G. (2013). </span><span class="src-journal">The Blood Telegram: Nixon, Kissinger, and a Forgotten Genocide</span>. Knopf.<span class="src-note">The definitive account of the Bangladesh crisis and Kissinger's decision to suppress diplomatic dissent. Based on declassified documents. Pulitzer finalist.</span></li>
+          <li><span class="src-num">[5]</span><span class="src-title">Kornbluh, P. (2003). </span><span class="src-journal">The Pinochet File</span>. The New Press.<span class="src-note">Includes extensive documentation on U.S. — and specifically Kissinger's — role in Chile. Available partially free via the National Security Archive.</span></li>
+          <li><span class="src-num">[6]</span><span class="src-title">Kissinger, H. (1994). </span><span class="src-journal">Diplomacy</span>. Simon & Schuster.<span class="src-note">Kissinger's own account of the history of diplomacy from Richelieu to the Cold War — essential for understanding his own framework and self-justification.</span></li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+<footer><p>Context — Making history accessible. Content synthesised from academic sources listed above.</p></footer>
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement',       desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',    url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                            url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html' },
+    { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',  url: 'context-v4.html' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',  url: 'operation-condor.html' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.',     url: 'augusto-pinochet.html' },
+    { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html' },
+    { type: 'person', title: 'Henry Kissinger',          desc: 'The refugee who became America\'s most powerful and most controversial diplomat.',         url: 'henry-kissinger.html' },
+    { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html' },
+    { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html' },
+    { type: 'person', title: 'Barack Obama',             desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.',  url: 'obama.html' },
+    { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html' },
+    { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html' },
+    { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html' },
+  ];
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen; btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles found.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown') { e.preventDefault(); _focusIdx = Math.min(_focusIdx+1, items.length-1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); _focusIdx = Math.max(_focusIdx-1, 0); }
+    else if (e.key === 'Enter' && _focusIdx >= 0) { items[_focusIdx].click(); return; }
+    else if (e.key === 'Escape') { toggleSearch(); return; }
+    items.forEach((r,i) => r.classList.toggle('focused', i === _focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.height = Math.min((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100, 100) + '%';
+    const sections = document.querySelectorAll('section[id]'); let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    document.querySelectorAll('.sidebar-nav li').forEach(item => { const l = item.querySelector('a'); item.classList.toggle('active', l && l.getAttribute('href') === '#' + current); });
+  });
+  function toggleItem(el) { const w = el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i => i.classList.remove('active')); if (!w) el.classList.add('active'); }
+  document.addEventListener('DOMContentLoaded', () => { const f = document.querySelector('.tl-item'); if (f) f.classList.add('active'); });
+  function toggleSave() {
+    const btn = document.getElementById('saveBtn'), toast = document.getElementById('toast'), isSaved = btn.classList.contains('saved');
+    if (!isSaved) { btn.classList.add('saved'); btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3000); }
+    else { btn.classList.remove('saved'); btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`; }
+  }
+</script>
+</body>
+</html>

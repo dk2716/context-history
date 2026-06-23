@@ -1,0 +1,146 @@
+{
+  "skill_name": "context-person-page",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Build a Context person page for Saddam Hussein. Cover his rise from a poor village background to seizing power in Iraq, his Ba'athist ideology, how he ruled through fear and patronage, the Iran-Iraq War, the Gulf War, the 2003 invasion, and his execution. Make it honest about both his atrocities (Halabja chemical attack, Anfal campaign) and the chaos that followed his removal. No PDFs — use your knowledge.",
+      "expected_output": "A complete single-file HTML person page for Saddam Hussein matching the Context design system: dark theme, purple accent, hero with avatar, quick facts, sections on origins/ideology/rule/foreign policy/fall/legacy, accordion timeline, legacy grid, connected topics, sources.",
+      "assertions": [
+        {
+          "id": "html_complete",
+          "name": "File is complete valid HTML with DOCTYPE and closing tags",
+          "type": "programmatic"
+        },
+        {
+          "id": "purple_accent",
+          "name": "Uses --purple as primary accent (not amber) for person page",
+          "type": "programmatic"
+        },
+        {
+          "id": "design_system_vars",
+          "name": "CSS includes all required design system variables (--bg, --surface, --accent, --purple, --muted, --text)",
+          "type": "programmatic"
+        },
+        {
+          "id": "required_sections",
+          "name": "Contains all major sections: quick-facts, origins, ideology, legacy, connected topics, sources",
+          "type": "llm"
+        },
+        {
+          "id": "halabja_mentioned",
+          "name": "Halabja chemical attack is mentioned with specific detail",
+          "type": "llm"
+        },
+        {
+          "id": "legacy_grid",
+          "name": "Has a legacy grid with positive, negative, and complex cards",
+          "type": "llm"
+        },
+        {
+          "id": "accordion_timeline",
+          "name": "Includes accordion timeline entries with tl-item class",
+          "type": "programmatic"
+        },
+        {
+          "id": "prose_not_bullets",
+          "name": "Body text sections are written as prose paragraphs, not bullet lists",
+          "type": "llm"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Create a Context person page for Patrice Lumumba — the Congolese independence leader assassinated in 1961. Cover his emergence as a political organiser, his vision for a unified independent Congo, his 67-day prime ministership, the Cold War forces that conspired against him (CIA, Belgian intelligence), and why he became a symbol of anti-colonialism across Africa. Make the legacy section honest about what his assassination prevented us from knowing he might have achieved.",
+      "expected_output": "A complete single-file HTML person page for Patrice Lumumba using the Context design system. Should cover colonial Congo context, rise as political organiser, independence and PM tenure, his fall and assassination, Cold War involvement, and legacy as anti-colonial martyr.",
+      "assertions": [
+        {
+          "id": "html_complete",
+          "name": "File is complete valid HTML with DOCTYPE and closing tags",
+          "type": "programmatic"
+        },
+        {
+          "id": "purple_accent",
+          "name": "Uses --purple as primary accent (person page colour)",
+          "type": "programmatic"
+        },
+        {
+          "id": "design_system_vars",
+          "name": "CSS includes all required design system variables",
+          "type": "programmatic"
+        },
+        {
+          "id": "cia_covered",
+          "name": "CIA and Belgian intelligence roles in assassination are addressed with specificity",
+          "type": "llm"
+        },
+        {
+          "id": "legacy_honest",
+          "name": "Legacy section engages honestly with both what he stood for and the uncertainty of what might have been",
+          "type": "llm"
+        },
+        {
+          "id": "accordion_timeline",
+          "name": "Accordion timeline (.tl-item) present with 3+ entries",
+          "type": "programmatic"
+        },
+        {
+          "id": "quick_facts",
+          "name": "Quick facts box present with biographical details",
+          "type": "programmatic"
+        },
+        {
+          "id": "connected_topics",
+          "name": "Connected topics section with typed cards (person/event/region/concept)",
+          "type": "llm"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Make a person page for Augusto Pinochet for the Context website. I want it to cover his military background, the 1973 coup against Allende, his economic policies (the Chicago Boys experiment), the human rights atrocities (DINA, Operation Condor, the disappeared), his late-life legal battles, and the honest debate about whether Chile's economic development justifies or is even correctly attributed to him. Should be fair — present the arguments people actually make, not a one-sided condemnation.",
+      "expected_output": "A complete Context person page for Pinochet covering the 1973 coup, Chicago Boys economic policy, DINA and Operation Condor atrocities, Pinochet's late-life arrest in London, and a balanced legacy debate. Must use Context dark design system with purple accent.",
+      "assertions": [
+        {
+          "id": "html_complete",
+          "name": "File is complete valid HTML",
+          "type": "programmatic"
+        },
+        {
+          "id": "purple_accent",
+          "name": "Purple used as primary accent throughout",
+          "type": "programmatic"
+        },
+        {
+          "id": "design_system_vars",
+          "name": "CSS includes all required design system variables",
+          "type": "programmatic"
+        },
+        {
+          "id": "chicago_boys",
+          "name": "Chicago Boys economic experiment covered with substance",
+          "type": "llm"
+        },
+        {
+          "id": "atrocities_documented",
+          "name": "DINA and number of disappeared/killed documented with specific figures",
+          "type": "llm"
+        },
+        {
+          "id": "legacy_balanced",
+          "name": "Legacy section presents both the economic case FOR and human rights case AGAINST without false equivalence",
+          "type": "llm"
+        },
+        {
+          "id": "ideology_cards",
+          "name": "Ideology or worldview section present with multiple cards",
+          "type": "programmatic"
+        },
+        {
+          "id": "accordion_timeline",
+          "name": "Accordion timeline entries present",
+          "type": "programmatic"
+        }
+      ]
+    }
+  ]
+}

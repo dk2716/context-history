@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barack Obama — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="context-v4.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">U.S. Presidents</a><span class="breadcrumb-sep">›</span>
+        <span>Barack Obama</span>
+      </div>
+
+      <div class="hero-person-layout">
+        <div class="hero-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg" alt="Barack Obama"></div>
+        <div>
+          <div class="hero-region-tag">United States · 44th President</div>
+          <h1>Barack Obama</h1>
+          <p class="hero-sub">The son of a Kenyan economist and a Kansas anthropologist who became America's first Black president — promising transformation, delivering incremental change, and leaving behind a country more divided than he found it.</p>
+          <div class="hero-meta">
+            <span>~20 min read</span><span>·</span>
+            <span>In office: 2009–2017</span><span>·</span>
+            <span>United States</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#worldview">Worldview</a></li>
+        <li><a href="#presidency">The Presidency</a></li>
+        <li><a href="#foreign-policy">Foreign Policy</a></li>
+        <li><a href="#end-of-term">End of Term</a></li>
+        <li><a href="#why-it-matters">Why It Matters Today</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <!-- QUICK FACTS -->
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="quick-facts-grid">
+            <div class="qf-item">
+              <div class="qf-label">Full name</div>
+              <div class="qf-value">Barack Hussein Obama II</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Born</div>
+              <div class="qf-value">August 4, 1961 — Honolulu, Hawaii</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">In office</div>
+              <div class="qf-value">January 20, 2009 – January 20, 2017 (two terms)</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Came to power by</div>
+              <div class="qf-value">Democratic primary upset over Hillary Clinton; general election victory over John McCain (2008)</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Ideology</div>
+              <div class="qf-value">Pragmatic progressivism · Liberal internationalism · Constitutional incrementalism</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Before presidency</div>
+              <div class="qf-value">Community organiser · Constitutional law lecturer · Illinois State Senator · U.S. Senator (2005–2008)</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Key legislation</div>
+              <div class="qf-value">Affordable Care Act (2010) · Dodd-Frank Act (2010) · American Recovery and Reinvestment Act (2009)</div>
+            </div>
+            <div class="qf-item">
+              <div class="qf-label">Nobel Peace Prize</div>
+              <div class="qf-value">2009 — awarded controversially nine months into his first term</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORIGINS -->
+      <section id="origins">
+        <h2>Origins &amp; Rise to Power</h2>
+
+        <p>Barack Obama's biography is so improbable that it has almost become a cliché — which makes it easy to forget how genuinely strange it was. He was born in 1961 in Hawaii to a white mother from Wichita, Kansas, Ann Dunham, and a Black father from western Kenya, Barack Obama Sr., who had won a scholarship to study economics at the University of Hawaii. His parents separated when he was two and divorced when he was three. His father, whom he met only once more — briefly, at age ten — died in a car accident in Nairobi in 1982. Obama grew up largely with his maternal grandparents in Honolulu.</p>
+
+        <p>He spent ages six to ten in Jakarta, Indonesia, after his mother remarried an Indonesian man, Lolo Soetoro. This gave him an early, formative exposure to a developing country, to Islam as a social backdrop (though he was not raised Muslim), and to poverty in a way that American-born politicians rarely experience. He returned to Hawaii to attend the elite Punahou School on a scholarship, graduating in 1979. He later described his adolescence as a period of identity searching — navigating what it meant to be Black in America while raised primarily by white family members in one of the most racially mixed states in the country.</p>
+
+        <p>He studied at Occidental College, then Columbia University, graduating in 1983 with a degree in political science. He moved to Chicago to work as a community organiser on the South Side — a job that paid almost nothing and introduced him to the mechanics of poverty, inequality, and political neglect at the neighbourhood level. He enrolled at Harvard Law School in 1988, where he became the first Black president of the <em>Harvard Law Review</em> — a distinction that earned him a book deal and national attention while still a student. He graduated magna cum laude in 1991.</p>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-number">47</div>
+            <div class="stat-label">Age when inaugurated — the fifth-youngest president</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">365</div>
+            <div class="stat-label">Days in the U.S. Senate before announcing his presidential run</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">2008</div>
+            <div class="stat-label">Year of election — during the worst financial crisis since 1929</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">53%</div>
+            <div class="stat-label">Popular vote share in 2008 — largest for a Democrat since LBJ in 1964</div>
+          </div>
+        </div>
+
+        <p>Obama returned to Chicago after Harvard, joined a civil rights law firm, and taught constitutional law at the University of Chicago for twelve years. He entered politics through the Illinois State Senate in 1996 and made a failed run for the U.S. House in 2000 — losing badly to the incumbent Bobby Rush. The loss was humiliating but instructive. He won a U.S. Senate seat in 2004 in a landslide, and his keynote address at the Democratic National Convention that year — "There is not a liberal America and a conservative America — there is the United States of America" — made him a national figure overnight. He announced his presidential candidacy in February 2007, after barely two years in the Senate.</p>
+
+        <p>The 2008 primary against Hillary Clinton was one of the most consequential intra-party contests in American history. Obama's campaign ran on small-dollar online fundraising, grassroots organising, and a message of generational change. He won because he opposed the Iraq War from the start — Clinton had voted for it — because his campaign out-organised Clinton in caucus states, and because the financial crisis in September 2008 broke against the incumbent Republican party so completely that almost any Democrat would have won. Obama carried 365 electoral votes against John McCain's 173.</p>
+
+        <div class="callout concept">
+          <div class="callout-label">Context</div>
+          <h4>What Obama inherited: the worst possible starting point</h4>
+          <p>Obama took office on January 20, 2009, with the U.S. economy losing 800,000 jobs a month, the banking system on the verge of collapse, two active wars, and the largest federal deficit in history. The scale of the crisis both defined his presidency and constrained it — almost every major decision of his first two years was shaped by the immediate economic emergency rather than the progressive agenda he had campaigned on. This context is essential for evaluating what he did and did not do.</p>
+        </div>
+      </section>
+
+      <!-- WORLDVIEW -->
+      <section id="worldview">
+        <h2>Worldview: The Pragmatic Progressive</h2>
+
+        <p>Obama's intellectual formation is unusual among presidents. He was a constitutional law scholar before he was a politician, and it shows: his instinct is to look for the boundaries of what is legally possible, weigh competing interests, and seek compromise rather than confrontation. Critics on the left saw this as excessive caution or even cowardice; defenders saw it as sophisticated realism about how power actually works in a divided government. The debate is genuine and unsettled.</p>
+
+        <p>His worldview was shaped by three things: the civil rights tradition (he came of political age when that tradition was already history rather than present struggle), the community organising school of Saul Alinsky and its emphasis on building power incrementally, and the post-Cold War liberal internationalism of figures like Samantha Power and Susan Rice who believed in the capacity of international institutions to constrain state violence. He was also deeply influenced by the reinhold Niebuhr tradition of Christian realism — the idea that moral actors must engage in an imperfect world through imperfect means.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Constitutional Incrementalism</div>
+            <p>Obama believed in working within existing legal and institutional frameworks even when frustrated by them. His background as a constitutional law scholar made him acutely aware of precedent and restraint. This produced careful policymaking — but also, critics argued, a failure to use executive power as aggressively as the moment required.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Liberal Internationalism</div>
+            <p>He believed in multilateral institutions, international law, and American leadership through example rather than unilateral force. The Iran nuclear deal, the Paris Climate Agreement, and the Trans-Pacific Partnership all reflected this worldview. His critics — on both left and right — saw different problems: the left thought he deferred too much to allies; the right thought he naively constrained American power.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Pragmatic Progressivism</div>
+            <p>On domestic policy, Obama was a progressive who accepted half-measures when the alternative was nothing. The Affordable Care Act was built around a Heritage Foundation-designed insurance mandate rather than a single-payer system because he calculated — correctly — that single-payer could not pass the Senate. Whether this pragmatism was wisdom or surrender became the central argument of his presidency.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Post-Partisan Aspiration</div>
+            <p>Obama genuinely believed, at least early in his presidency, that a new kind of politics was possible — one that transcended left-right division through reason and good faith. The Republican leadership's decision to make his failure their primary goal (articulated explicitly by Mitch McConnell) broke this assumption quickly. The post-partisan moment he promised never arrived, and the question of whether it ever could have is one of the most contested in recent American political history.</p>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"I think that I'm a better speechwriter than my speechwriters. I know more about policies on any particular issue than my policy directors. And I'll tell you right now that I'm going to think I'm a better political director than my political director."</blockquote>
+          <cite>— Barack Obama, quoted in <em>The New Yorker</em>, reported by Ryan Lizza, 2008</cite>
+        </div>
+
+        <p>Obama's self-confidence was one of his defining traits — and one of his most contested ones. Supporters saw a disciplined, unflappable leader who maintained strategic clarity under extraordinary pressure. Critics, including many former staffers, described a leader who trusted his own judgment too completely, who was sometimes resistant to advice, and whose cool rationality could shade into emotional distance from the human consequences of his decisions. The drone programme, in particular, revealed a gap between the soaring language of his rhetoric and the clinical machinery of his counterterrorism policy.</p>
+      </section>
+
+      <!-- THE PRESIDENCY -->
+      <section id="presidency">
+        <h2>The Presidency: What He Did</h2>
+
+        <p>Obama's eight years produced a substantial policy record that is consistently underappreciated because it was achieved incrementally, often through unglamorous technical manoeuvring, and because the political atmosphere of his term made it difficult to claim victories without triggering backlash. His two major first-term accomplishments — the economic stimulus and the Affordable Care Act — were both deeply controversial, both significant, and both deeply misunderstood by the public on both sides.</p>
+
+        <h3>The economic rescue</h3>
+
+        <p>The American Recovery and Reinvestment Act, passed in February 2009 — less than a month into his presidency — was a $787 billion package of tax cuts, infrastructure spending, and aid to states. It is now broadly credited by mainstream economists with having prevented the 2008 financial crisis from becoming a second Great Depression: the recession ended in June 2009, six months after Obama took office. But the stimulus was politically toxic almost immediately — the Tea Party movement, which arose in 2009, defined itself partly in opposition to it. Obama's administration made a critical communications error in failing to take visible credit for a policy that was working. The public largely did not know what the Recovery Act had done, and by 2010 the political environment was dominated by anxiety about deficits rather than celebration of avoided depression.</p>
+
+        <h3>The Affordable Care Act</h3>
+
+        <p>The ACA — passed in March 2010 without a single Republican vote — was the most significant expansion of the American social safety net since Medicare in 1965. It extended coverage to approximately 20 million uninsured Americans, prohibited insurers from denying coverage based on pre-existing conditions, and allowed children to stay on parental insurance until age 26. It did not create a public option, let alone single-payer — both were sacrificed in Senate negotiations. The act was built around a mechanism (the individual mandate requiring people to buy insurance or pay a penalty) originally designed by the conservative Heritage Foundation and implemented by Mitt Romney in Massachusetts. The irony of being attacked from the right for a right-wing policy mechanism was not lost on Obama, and it illustrated the degree to which the Republican Party had moved rightward during his presidency.</p>
+
+        <div class="callout warning">
+          <div class="callout-label">Dark Record</div>
+          <h4>The drone programme: 563 strikes, ~800 civilian deaths</h4>
+          <p>Obama dramatically expanded the use of unmanned aerial drones for targeted killings, authorising approximately 563 strikes in Pakistan, Yemen, Somalia, and Afghanistan — ten times more than his predecessor. The Bureau of Investigative Journalism estimated these strikes killed between 384 and 807 civilians. In 2011 Obama authorised the killing of Anwar al-Awlaki, an American citizen and al-Qaeda propagandist, in Yemen — without trial, without charge, and without judicial review. His 16-year-old son was killed in a separate strike two weeks later. The legal basis for killing American citizens by executive order, with no judicial oversight, remains one of the most significant and least resolved constitutional questions of Obama's presidency.</p>
+        </div>
+
+        <h3>The Obama coalition and its limits</h3>
+
+        <p>The 2010 midterm elections were a catastrophe: Democrats lost 63 House seats — the worst midterm result for a sitting president since 1938 — and their Senate majority. Obama governed the second half of his first term and most of his second term against a Republican House and, after 2014, a Republican Senate. His major second-term accomplishments — the Iran nuclear deal, the Paris Climate Agreement, the normalisation of diplomatic relations with Cuba, the Trans-Pacific Partnership — were all achieved through executive action or treaty-like arrangements specifically because he could not pass legislation. Donald Trump reversed all of them within his first year in office, which raised a profound question about the durability of governance-by-executive-order.</p>
+      </section>
+
+      <!-- FOREIGN POLICY -->
+      <section id="foreign-policy">
+        <h2>Foreign Policy</h2>
+
+        <p>Obama came to office explicitly rejecting the unilateralist, militarised foreign policy of the George W. Bush era. His early speeches — including the Cairo address in June 2009 and his Nobel Peace Prize acceptance — were genuine attempts to reset American relationships with the Muslim world and with multilateral institutions. The gap between the aspirations of those early speeches and the actual foreign policy of his eight years is one of the most debated features of his legacy.</p>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">May 2011</div>
+              <div class="tl-title">The Bin Laden Raid</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>On May 1, 2011, U.S. Navy SEALs killed Osama bin Laden at a compound in Abbottabad, Pakistan — 600 metres from Pakistan's main military academy. Obama personally authorised the raid despite significant opposition within his national security team, some of whom favoured a missile strike to reduce risk to the operatives. The decision to send in ground forces was taken specifically so there could be certainty of identification. Bin Laden was shot twice during the raid and buried at sea within 24 hours to prevent his grave becoming a shrine.</p>
+            <p>The Abbottabad raid was a defining moment of Obama's presidency, and a genuine intelligence and operational success. But it also raised questions that were never fully resolved: Pakistan almost certainly knew bin Laden was there — how could he have lived in a large compound 600 metres from a military academy for years without Pakistani intelligence awareness? Obama chose not to publicly confront Pakistan over this, prioritising the working relationship over accountability. It was a characteristic Obama decision: effective in the short term, unresolved in the longer term.</p>
+            <div class="tl-sources"><span class="src-chip">Obama (2020)</span><span class="src-chip">Bergen (2012)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2011</div>
+              <div class="tl-title">Libya: A Contested Intervention</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>When Gaddafi threatened to massacre civilians in Benghazi during the 2011 uprising, Obama authorised U.S. participation in a NATO intervention — but insisted it be led by France and the UK, with the U.S. providing critical intelligence, logistics, and air power from behind. He famously described this as "leading from behind" — a phrase his critics turned into a slogan for American decline but which reflected a deliberate strategy of burden-sharing.</p>
+            <p>Libya became one of the most-cited cases against Obama's foreign policy legacy. The intervention succeeded in its narrow objective — Gaddafi was removed — but produced a decade of civil war, a failed state, and a humanitarian catastrophe. Obama later called the failure to plan for post-Gaddafi Libya "the worst mistake" of his presidency. His critics argued this admitted failure illustrated the limits of humanitarian intervention as a doctrine; his defenders argued the failure was one of execution and allied commitment, not of principle.</p>
+            <div class="tl-sources"><span class="src-chip">Kuperman (2013)</span><span class="src-chip">Goldberg (2016)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2013–2015</div>
+              <div class="tl-title">Syria: The Red Line and Its Aftermath</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>In August 2012, Obama declared that Assad's use of chemical weapons against civilians in Syria would cross a "red line" with "enormous consequences." In August 2013, Assad's forces used sarin gas in the Ghouta suburb of Damascus, killing an estimated 1,400 people. Obama prepared military strikes — then pulled back and accepted a Russian-brokered deal under which Syria would surrender its declared chemical weapons stockpile. He did not strike.</p>
+            <p>The red line episode damaged Obama's credibility internationally more than almost any other single decision. Allies who had relied on the threat of American military force to constrain adversaries were shaken. Vladimir Putin saw it as a sign of weakness and drew his own conclusions about American resolve — conclusions that arguably influenced his calculations in Ukraine the following year. Obama maintained in interviews that avoiding a war in Syria was the right decision and that the chemical weapons deal was a genuine achievement. But the episode illustrated a recurring pattern: the gap between the rhetorical commitments and the willingness to enforce them.</p>
+            <div class="tl-sources"><span class="src-chip">Goldberg (2016)</span><span class="src-chip">Power (2019)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2015</div>
+              <div class="tl-title">The Iran Nuclear Deal (JCPOA)</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>The Joint Comprehensive Plan of Action, concluded in July 2015 after years of negotiations, was Obama's most significant diplomatic achievement. Iran agreed to dismantle much of its nuclear programme — reducing its uranium enrichment capacity by 98%, capping enrichment at 3.67%, and accepting intrusive international inspections — in exchange for the lifting of international sanctions. The deal did not address Iran's ballistic missile programme, its regional activities, or its support for proxy militias. Obama argued these were separate issues that would need separate negotiations; his critics argued this was a fatal flaw.</p>
+            <p>In May 2018, President Trump withdrew the United States from the deal, reimposed sanctions, and launched a "maximum pressure" campaign. Iran responded by progressively exceeding the deal's limits on enrichment. By 2023, Iran was enriching uranium to 60% purity — close to weapons-grade — and had more nuclear material than at any point before the deal. The JCPOA episode is a case study in the vulnerability of executive agreements: because Obama could not get Senate ratification, Trump could undo it with a single memo. Obama's choice of structure was a calculated gamble that his successor would be a Democrat. He lost.</p>
+            <div class="tl-sources"><span class="src-chip">Rhodes (2018)</span><span class="src-chip">Parsi (2017)</span></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- END OF TERM -->
+      <section id="end-of-term">
+        <h2>End of Term: 2016 and the Transition</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">November 2016</div>
+              <div class="tl-title">Trump's Election</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Donald Trump's election on November 8, 2016 was, by any reasonable measure, a repudiation of Obama's legacy — and a personal blow. Trump had built his political career partly on "birtherism," the false claim that Obama was born in Kenya and was therefore ineligible to be president. He had turned this conspiracy theory into a national phenomenon, forcing Obama to release his long-form birth certificate in 2011 in a moment of public humiliation that Obama later said was among the most painful of his presidency.</p>
+            <p>The causes of Clinton's defeat are still debated, but several are clear: the structural electoral college disadvantage for Democrats, the FBI director James Comey's unprecedented public statements about Clinton's email investigation eleven days before the election, Russian interference in the campaign, and the fundamental failure of the Democratic Party to address the economic anxiety of working-class white voters who had been part of Obama's 2008 and 2012 coalitions but defected. Obama won white working-class voters in the Midwest in both elections; Clinton lost them badly. Whether this reflected Obama's personal appeal or a more durable political shift remains contested.</p>
+            <div class="tl-sources"><span class="src-chip">Obama (2020)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">January 2017</div>
+              <div class="tl-title">The Transition and Russian Interference</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>In the final months of his presidency, Obama faced a decision about how aggressively to respond to Russian interference in the 2016 election. The intelligence community had concluded with high confidence that Russia had conducted a systematic influence operation designed to benefit Trump. Obama imposed sanctions and expelled 35 Russian diplomats in December 2016 — but chose not to make the intelligence public before the election, fearing it would appear as partisan interference.</p>
+            <p>This decision has been criticised extensively. Senate Minority Leader Mitch McConnell had privately signalled he would characterise any public disclosure as partisan — and Obama believed him. But many critics argue Obama prioritised the appearance of propriety over the public's right to know about foreign interference in a democratic election. His memoir acknowledges the difficulty of the choice without fully resolving it. The episode illustrates a recurring tension in his presidency: the instinct to play by rules that his opponents had long since abandoned.</p>
+            <div class="tl-sources"><span class="src-chip">Obama (2020)</span><span class="src-chip">Comey (2018)</span></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- WHY IT MATTERS TODAY -->
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+
+        <p>Obama left office with a 60% approval rating — higher than when he entered. He is now consistently ranked among the top ten American presidents by historians. And yet the world he left behind — the reassertion of nationalist populism across the West, the Iran nuclear deal in tatters, Libya in civil war, Syria having used chemical weapons after the red line without serious consequence — raises hard questions about whether the gap between his rhetoric and his results was a failure of execution or something more structural.</p>
+
+        <p>The most important legacy question is this: Obama won two elections running on post-partisan unity and the promise that American politics could be better than its worst impulses. He governed as a competent, scandal-free administrator who expanded healthcare, rescued the economy, and restored American standing in much of the world. And then his successor dismantled most of what he built — not because of any legal flaw in the construction, but because Obama had governed without building a durable political coalition that could protect his achievements. The Democrats lost the House in 2010, the Senate in 2014, the presidency in 2016. The question is whether this was Obama's failure or the inherent fragility of governance in a polarised democracy.</p>
+
+        <div class="callout info">
+          <div class="callout-label">Today's Connection</div>
+          <h4>The executive-order problem: Obama's lesson for every president</h4>
+          <p>Every major Obama achievement that did not pass as legislation — the DACA immigration protection for Dreamers, the Iran nuclear deal, the Paris Climate Agreement, the Cuba normalisation, the Clean Power Plan — was reversed or severely damaged by his successor. This is now the defining structural lesson of modern American governance: executive orders are reversible by the next president on day one. Trump reversed Obama's orders; Biden reversed Trump's; the cycle continues. Obama's presidency proved that in a gridlocked Congress, presidents can only govern durably through legislation — and that in a polarised Senate, major legislation is nearly impossible. This is the trap every president now faces.</p>
+        </div>
+
+        <p>Obama's other lasting legacy is demographic and cultural: he made the presidency legible to a generation of Americans who had never seen someone who looked like them in that office. The psychological weight of that is difficult to quantify but impossible to dismiss. His election was genuinely historic. Whether it was also transformative — whether it changed the underlying structure of American racial politics, or whether Trump's election was, in part, a backlash that revealed those structures to be more durable than Obama's election suggested — is the central unresolved question of his legacy.</p>
+
+      </section>
+
+      <!-- LEGACY -->
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>Obama's legacy is more contested among serious analysts than his approval ratings suggest. The progressive left's case against him — that he bailed out banks while letting homeowners drown, that he expanded mass surveillance and drone warfare, that he deported more undocumented immigrants than any previous president — is factually grounded and deserves engagement. So does the conservative critique that his foreign policy created vacuums filled by adversaries. And so does the mainstream assessment that he was a consequential, scandal-free president who governed with integrity under extraordinary pressure.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">What he achieved</div>
+            <ul>
+              <li>Prevented the 2008 financial crisis from becoming a second Great Depression through the $787bn stimulus</li>
+              <li>ACA: extended healthcare coverage to ~20 million uninsured Americans; pre-existing condition protections still in place as of 2026</li>
+              <li>Ordered and oversaw the killing of Osama bin Laden in May 2011</li>
+              <li>Iran nuclear deal froze and rolled back Iran's nuclear programme for its duration; Iran went from 20% to 3.67% enrichment</li>
+              <li>Paris Climate Agreement: secured international framework for carbon reduction, since rejoined after Trump's withdrawal</li>
+              <li>Dodd-Frank financial reform introduced the most significant banking regulation since the New Deal</li>
+              <li>Left office with 4.7% unemployment, down from 10% at the height of the crisis</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">What he failed to do</div>
+            <ul>
+              <li>Drone programme: ~563 strikes, estimated 384–807 civilian deaths; extrajudicial killing of American citizens without trial</li>
+              <li>Syria red line: declared a threshold, refused to enforce it, permanently damaged U.S. credibility</li>
+              <li>Libya: intervention without post-war planning produced a decade of civil war — his own "worst mistake"</li>
+              <li>No banker prosecuted after the 2008 financial crisis, despite widespread fraud; banks bailed out, homeowners foreclosed on</li>
+              <li>Record deportations: 3 million undocumented immigrants removed — more than any previous president</li>
+              <li>DACA, Paris, Iran deal: all structured as executive actions rather than legislation, making them easily reversed</li>
+              <li>Democrats lost 63 House seats in 2010, the Senate in 2014, the presidency in 2016 — the party was structurally weakened on his watch</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legacy-card complex" style="margin-top:1rem">
+          <div class="legacy-label">The Contested Questions</div>
+          <ul>
+            <li>Did Obama's presidency accelerate or simply reveal the polarisation of American politics? Was Trump the backlash to Obama, or were deeper forces already in motion?</li>
+            <li>Was his pragmatic incrementalism the only possible approach to a hostile Congress — or did the scale of the 2008 crisis demand something more radical, and did he fail to seize a once-in-a-generation opportunity?</li>
+            <li>The ACA was modelled on a Republican proposal. If a Democrat can only pass Republican-designed policy by calling it progressive, what does that reveal about the actual range of political possibility?</li>
+          </ul>
+        </div>
+
+        <p>The fairest assessment is probably this: Obama was an unusually capable and intelligent president who operated under unusually adverse conditions — the worst economic crisis in 80 years, a Republican party that made his defeat its explicit priority, and a Senate structure (the filibuster) that required 60 votes for almost anything significant. Given those constraints, his legislative record was substantial. His foreign policy record was more mixed: competent management of an empire that had already overextended itself, without the strategic vision to fundamentally change its trajectory.</p>
+
+        <p>What remains genuinely troubling — and what distinguishes the serious critique from the partisan one — is the drone programme and the surveillance architecture revealed by Edward Snowden in 2013. Obama expanded both. His defenders argue he constrained and legalised practices that would otherwise have been even more unaccountable. His critics argue he normalised and institutionalised abuses that will outlast him. Both things can be true simultaneously.</p>
+
+        <div class="pull-quote">
+          <blockquote>"The point I was making was not that my grandmother harbors any racial animosity. She doesn't. But she is a typical white person who, if she sees somebody on the street that she doesn't know, there's a reaction in her that doesn't go away, and it comes out in the wrong way."</blockquote>
+          <cite>— Barack Obama, radio interview, March 2008 — a rare moment of unscripted honesty about race that cost him politically and revealed the impossible tightrope he walked</cite>
+        </div>
+
+      </section>
+
+      <!-- CONNECTED TOPICS -->
+      <section id="connected">
+        <h2>Connected Topics</h2>
+
+        <div class="topics-group">
+          <div class="topics-group-label">People directly connected</div>
+          <div class="topics-grid">
+            <a href="henry-kissinger.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg" alt="Henry Kissinger">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Henry Kissinger</div>
+              <div class="topic-preview">Obama studied and partially replicated Kissinger's realpolitik — restraint, multilateralism, and the willingness to deal with adversaries.</div>
+            </a>
+            <a href="richard-nixon.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Richard_M._Nixon%2C_ca._1935_-_1982_-_NARA_-_530679.jpg" alt="Richard Nixon">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Richard Nixon</div>
+              <div class="topic-preview">Nixon opened China; Obama opened Cuba and tried to open Iran. Both pursued détente as an alternative to confrontation.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Hillary Clinton</div>
+              <div class="topic-preview">His Secretary of State and the candidate whose loss in 2016 made Trump's dismantling of his legacy possible.</div>
+            </a>
+            <a href="gaddafi.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg" alt="Muammar Gaddafi">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Muammar Gaddafi</div>
+              <div class="topic-preview">Obama authorised the NATO intervention that removed Gaddafi — and called the failure to plan for what came next his worst mistake.</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="topics-group">
+          <div class="topics-group-label">Events</div>
+          <div class="topics-grid">
+            <a href="context-v4.html" class="topic-card"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauTAgmpsG54Nrx44zBq9E8ULZ277MHKl6Sb1u36uoKg&s=10" alt="The Libyan Civil War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Libyan Civil War</div>
+              <div class="topic-preview">The intervention Obama authorised and the decade of chaos it produced — his most self-criticised foreign policy decision.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The 2008 Financial Crisis</div>
+              <div class="topic-preview">The crisis Obama inherited and the rescue that defined — and constrained — his entire first term.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Arab Spring</div>
+              <div class="topic-preview">The wave of uprisings Obama navigated — supporting some, ignoring others, intervening in Libya, and watching Syria burn.</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="topics-group">
+          <div class="topics-group-label">Concepts</div>
+          <div class="topics-grid">
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Responsibility to Protect (R2P)</div>
+              <div class="topic-preview">The doctrine used to justify the Libya intervention — and how Libya's failure changed the conversation about humanitarian intervention.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">The Filibuster</div>
+              <div class="topic-preview">The Senate rule that required 60 votes for most legislation, making Obama's progressive agenda structurally impossible to fully enact.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Liberal Internationalism</div>
+              <div class="topic-preview">The foreign policy worldview Obama embodied — and which Trump's election represented a decisive popular rejection of.</div>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- SOURCES -->
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">Obama, B. (2020). </span>
+            <span class="src-journal">A Promised Land</span>. Crown Publishers.
+            <span class="src-note">Obama's own account of his 2008 campaign and first term. Exceptionally candid about the gap between his ambitions and political reality — though naturally self-serving on contested decisions. Essential primary source.</span>
+          </li>
+
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">Goldberg, J. (2016). "The Obama Doctrine." </span>
+            <span class="src-journal">The Atlantic</span>, April 2016.
+            <span class="src-note">The most revealing single interview Obama gave about his foreign policy worldview — he discusses Syria, Libya, free-rider allies, and the red line with unusual candour. Free to read at theatlantic.com.</span>
+          </li>
+
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Rhodes, B. (2018). </span>
+            <span class="src-journal">The World As It Is: A Memoir of the Obama White House</span>. Random House.
+            <span class="src-note">The most critical insider account, written by Obama's deputy national security adviser and chief speechwriter. Unusually candid about the gap between the rhetoric and the results, particularly on Syria and the Iran deal.</span>
+          </li>
+
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">Power, S. (2019). </span>
+            <span class="src-journal">The Education of an Idealist</span>. Dey Street Books.
+            <span class="src-note">Obama's UN Ambassador and architect of the R2P doctrine reflects on Libya, Syria, and the limits of humanitarian intervention. Good counterpoint to Rhodes on where the administration went wrong.</span>
+          </li>
+
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">Bureau of Investigative Journalism. (2017). </span>
+            <span class="src-journal">Drone Warfare: Strikes Data</span>. thebureauinvestigates.com.
+            <span class="src-note">The most rigorous independent accounting of U.S. drone strikes under Obama — methodology, strike counts, and civilian casualty estimates. Free to access.</span>
+          </li>
+
+          <li>
+            <span class="src-num">[6]</span>
+            <span class="src-title">Parsi, T. (2017). </span>
+            <span class="src-journal">Losing an Enemy: Obama, Iran, and the Triumph of Diplomacy</span>. Yale University Press.
+            <span class="src-note">The most detailed account of the JCPOA negotiations — based on extensive interviews with negotiators on all sides. Essential for understanding what the deal actually achieved and what it left unresolved.</span>
+          </li>
+
+          <li>
+            <span class="src-num">[7]</span>
+            <span class="src-title">Remnick, D. (2010). </span>
+            <span class="src-journal">The Bridge: The Life and Rise of Barack Obama</span>. Alfred A. Knopf.
+            <span class="src-note">The best biography of Obama through his 2008 election victory. Draws extensively on interviews and primary sources; Remnick is among the most rigorous Obama chroniclers.</span>
+          </li>
+
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="context-v4.html" style="color:var(--purple);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement',       desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',    url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                            url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html' },
+    { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',  url: 'context-v4.html' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',  url: 'operation-condor.html' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.',     url: 'augusto-pinochet.html' },
+    { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html' },
+    { type: 'person', title: 'Henry Kissinger',          desc: 'The refugee who became America\'s most powerful and most controversial diplomat.',         url: 'henry-kissinger.html' },
+    { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html' },
+    { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html' },
+    { type: 'person', title: 'Barack Obama',             desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.',  url: 'obama.html' },
+    { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html' },
+    { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html' },
+    { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn');
+    const dd  = document.getElementById('searchDropdown');
+    const inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen);
+    dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); }
+    else { inp.value = ''; _focusIdx = -1; }
+  }
+
+  function runSearch(q) {
+    const box = document.getElementById('searchResults');
+    const term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a, i) => `
+      <a class="search-result" href="${a.url}" data-i="${i}">
+        <div class="search-result-top">
+          <span class="topic-type-tag ${a.type}">${a.type}</span>
+          <span class="search-result-title">${a.title}</span>
+        </div>
+        <div class="search-result-desc">${a.desc}</div>
+      </a>`).join('');
+  }
+
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown')  { e.preventDefault(); _focusIdx = Math.min(_focusIdx + 1, items.length - 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); _focusIdx = Math.max(_focusIdx - 1, 0); }
+    else if (e.key === 'Enter' && _focusIdx >= 0) { items[_focusIdx].click(); return; }
+    else if (e.key === 'Escape') { toggleSearch(); return; }
+    items.forEach((r, i) => r.classList.toggle('focused', i === _focusIdx));
+  }
+
+  document.addEventListener('click', e => {
+    if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch();
+  });
+
+  window.addEventListener('scroll', () => {
+    const progress = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('progressBar').style.height = Math.min(progress, 100) + '%';
+    updateSidebar();
+  });
+
+  function updateSidebar() {
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.sidebar-nav li');
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 120) current = section.getAttribute('id');
+    });
+    navItems.forEach(item => {
+      const link = item.querySelector('a');
+      item.classList.toggle('active', link && link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  function toggleItem(el) {
+    const wasActive = el.classList.contains('active');
+    document.querySelectorAll('.tl-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) el.classList.add('active');
+  }
+
+  function toggleSave() {
+    const btn = document.getElementById('saveBtn');
+    const toast = document.getElementById('toast');
+    const isSaved = btn.classList.contains('saved');
+    if (!isSaved) {
+      btn.classList.add('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    } else {
+      btn.classList.remove('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;
+    }
+  }
+</script>
+</body>
+</html>

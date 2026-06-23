@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saddam Hussein — Context</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:          #0d0d0f;
+      --surface:     #141418;
+      --surface-2:   #1c1c22;
+      --border:      #2a2a34;
+      --accent:      #c8922a;
+      --accent-dim:  #7a5510;
+      --accent-glow: rgba(200, 146, 42, 0.15);
+      --red:         #c0392b;
+      --red-dim:     rgba(192, 57, 43, 0.15);
+      --text:        #e2e2e8;
+      --text-muted:  #8888a0;
+      --text-faint:  #55555f;
+      --heading:     #f0f0f8;
+      --tag-bg:      #1e1e26;
+      --tag-border:  #363648;
+      --radius:      6px;
+      --max-w:       780px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 17px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Layout ── */
+    .page-wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── Site header ── */
+    .site-header {
+      border-bottom: 1px solid var(--border);
+      padding: 18px 0;
+      margin-bottom: 0;
+    }
+    .site-header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .site-logo {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .site-logo span {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .breadcrumb {
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      color: var(--text-faint);
+      letter-spacing: 0.04em;
+    }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--accent); }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+    .category-label {
+      display: inline-block;
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border: 1px solid var(--accent-dim);
+      border-radius: var(--radius);
+      padding: 4px 10px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Georgia', serif;
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 700;
+      color: var(--heading);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+    .hero-dates {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+      margin-bottom: 24px;
+    }
+    .hero-lede {
+      font-size: 19px;
+      line-height: 1.65;
+      color: #b8b8c8;
+      max-width: 680px;
+      border-left: 3px solid var(--accent);
+      padding-left: 20px;
+    }
+
+    /* ── Meta tags ── */
+    .meta-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 28px;
+    }
+    .tag {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: var(--tag-bg);
+      border: 1px solid var(--tag-border);
+      border-radius: 3px;
+      padding: 3px 9px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Table of Contents ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin-bottom: 48px;
+    }
+    .toc-title {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc-counter;
+      padding: 0;
+    }
+    .toc ol li {
+      counter-increment: toc-counter;
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 5px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .toc ol li:last-child { border-bottom: none; }
+    .toc ol li::before {
+      content: counter(toc-counter, decimal-leading-zero);
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      color: var(--text-faint);
+      flex-shrink: 0;
+      width: 22px;
+    }
+    .toc ol li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-family: 'Arial', sans-serif;
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+    .toc ol li a:hover { color: var(--accent); }
+
+    /* ── Section ── */
+    .section {
+      margin-bottom: 56px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-number {
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
+    .section h2 {
+      font-family: 'Georgia', serif;
+      font-size: clamp(20px, 3.5vw, 26px);
+      font-weight: 700;
+      color: var(--heading);
+      line-height: 1.25;
+    }
+
+    /* ── Prose ── */
+    p { margin-bottom: 18px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Callout boxes ── */
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .callout.atrocity {
+      border-left-color: var(--red);
+      background: var(--red-dim);
+      border-color: rgba(192, 57, 43, 0.3);
+    }
+    .callout-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .callout.atrocity .callout-label { color: #e74c3c; }
+    .callout:not(.atrocity) .callout-label { color: var(--accent); }
+    .callout p {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #c0c0d0;
+      margin: 0;
+    }
+    .callout strong { color: var(--text); }
+
+    /* ── Stat row ── */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .stat-value {
+      font-family: 'Arial', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--accent);
+      display: block;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      color: var(--text-faint);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+      margin: 24px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: var(--border);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 22px;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 8px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent-dim);
+      border: 2px solid var(--accent);
+    }
+    .timeline-year {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+    .timeline-text {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .timeline-text strong { color: var(--text); }
+
+    /* ── Pull quote ── */
+    .pull-quote {
+      margin: 32px 0;
+      padding: 24px 28px;
+      background: var(--surface-2);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      position: relative;
+    }
+    .pull-quote::before {
+      content: '\201C';
+      font-size: 72px;
+      color: var(--accent-dim);
+      font-family: Georgia, serif;
+      line-height: 1;
+      position: absolute;
+      top: 8px;
+      left: 18px;
+      pointer-events: none;
+    }
+    .pull-quote p {
+      font-size: 17px;
+      font-style: italic;
+      color: #c0c0d0;
+      line-height: 1.7;
+      padding-left: 36px;
+      margin: 0 0 10px;
+    }
+    .pull-quote cite {
+      display: block;
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      color: var(--text-faint);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding-left: 36px;
+      font-style: normal;
+    }
+
+    /* ── Footer ── */
+    .page-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 64px;
+      padding-top: 28px;
+    }
+    .footer-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-faint);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .footer-note {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 600px;
+    }
+    .footer-meta {
+      margin-top: 20px;
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      color: var(--text-faint);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 500px) {
+      .stat-row { grid-template-columns: 1fr 1fr; }
+      .hero-lede { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site header -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <div class="site-logo">Context <span>/ History</span></div>
+      <div class="breadcrumb">
+        &nbsp;·&nbsp;
+        <a href="#">People</a>
+        &nbsp;·&nbsp;
+        <a href="#">Middle East</a>
+        &nbsp;·&nbsp;
+        Saddam Hussein
+      </div>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="category-label">Dictators &amp; Tyrants</div>
+      <h1>Saddam Hussein</h1>
+      <div class="hero-dates">28 April 1937 – 30 December 2006</div>
+      <p class="hero-lede">
+        From a mud-brick village near Tikrit to the gilded palaces of Baghdad,
+        Saddam Hussein spent four decades clawing toward absolute power — then
+        spent the rest of his life proving how destructive absolute power can be.
+        His story is one of ambition, cruelty, catastrophic miscalculation, and
+        a chaotic aftermath that still shapes the Middle East today.
+      </p>
+      <div class="meta-tags">
+        <span class="tag">Iraq</span>
+        <span class="tag">Ba'ath Party</span>
+        <span class="tag">Cold War</span>
+        <span class="tag">Iran–Iraq War</span>
+        <span class="tag">Gulf War</span>
+        <span class="tag">2003 Invasion</span>
+        <span class="tag">Anfal Campaign</span>
+        <span class="tag">Halabja</span>
+      </div>
+    </div>
+
+    <!-- Table of Contents -->
+    <nav class="toc" aria-label="Page contents">
+      <div class="toc-title">On this page</div>
+      <ol>
+        <li><a href="#origins">Origins: The Village Boy</a></li>
+        <li><a href="#baath">The Ba'ath Party &amp; the Road to Power</a></li>
+        <li><a href="#seizure">Seizing Total Control (1979)</a></li>
+        <li><a href="#rule">How He Ruled: Fear and Patronage</a></li>
+        <li><a href="#iran-iraq">The Iran–Iraq War (1980–1988)</a></li>
+        <li><a href="#anfal">The Anfal Campaign &amp; Halabja</a></li>
+        <li><a href="#gulf-war">The Gulf War (1990–1991)</a></li>
+        <li><a href="#sanctions">The Sanctions Decade</a></li>
+        <li><a href="#invasion">The 2003 Invasion</a></li>
+        <li><a href="#aftermath">The Chaos That Followed</a></li>
+        <li><a href="#capture">Capture, Trial &amp; Execution</a></li>
+        <li><a href="#legacy">Legacy</a></li>
+      </ol>
+    </nav>
+
+    <!-- 01. Origins -->
+    <section class="section" id="origins">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>Origins: The Village Boy</h2>
+      </div>
+
+      <p>
+        Saddam Hussein Abd al-Majid al-Tikriti was born on 28 April 1937 in
+        <strong>al-Awja</strong>, a poor village on the banks of the Tigris River
+        near the town of <strong>Tikrit</strong>, about 160 kilometres north of
+        Baghdad. His father died — or disappeared, accounts vary — before Saddam
+        was born, and his mother, Sabha, fell into a deep depression. For the first
+        few years of his life, Saddam was raised by his maternal uncle,
+        <strong>Khairallah Tulfah</strong>, a nationalist army officer who filled
+        the boy's head with Arab pride, hatred of Western colonialism, and
+        admiration for strongmen.
+      </p>
+
+      <p>
+        When Saddam eventually returned to his mother, her new husband — his
+        stepfather — treated him harshly. Contemporaries recalled a childhood
+        without shoes, without books, and without safety. He did not attend school
+        until he was about ten years old, which was unusual even by the standards
+        of rural Iraq at the time. The humiliation of starting late, of being
+        older and poorer than other students, seems to have sharpened something
+        cold and acquisitive in him.
+      </p>
+
+      <p>
+        At sixteen, Saddam moved to Baghdad to live with his uncle Khairallah and
+        attend secondary school. The uncle introduced him to Ba'athist circles —
+        a pan-Arab socialist movement then competing fiercely for influence in
+        Iraqi politics. Saddam, large, physically intimidating, and already skilled
+        at projecting menace, found his place among its enforcers.
+      </p>
+
+      <div class="callout">
+        <div class="callout-label">Context</div>
+        <p>
+          Iraq in the 1950s was a constitutional monarchy under King Faisal II,
+          but it was a brittle state — shaped by British colonial borders drawn
+          after World War I, riven by tensions between Sunni Arabs, Shia Arabs,
+          and Kurds, and increasingly inflamed by pan-Arab nationalism sweeping
+          the region after Egypt's Gamal Abdel Nasser nationalised the Suez Canal
+          in 1956. The ground was fertile for anyone who offered strength and
+          certainty.
+        </p>
+      </div>
+    </section>
+
+    <!-- 02. Ba'ath Party -->
+    <section class="section" id="baath">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>The Ba'ath Party &amp; the Road to Power</h2>
+      </div>
+
+      <p>
+        The <strong>Ba'ath Party</strong> ("Ba'ath" means "resurrection" or
+        "renaissance" in Arabic) was founded in Syria in the 1940s. Its ideology
+        blended <strong>Arab nationalism</strong> — the belief that all Arabic-
+        speaking peoples formed one nation artificially divided by colonialism —
+        with <strong>socialism</strong> and secular government. In theory it was
+        progressive; in practice, in both Syria and Iraq, it became a vehicle for
+        one-party dictatorship.
+      </p>
+
+      <p>
+        Saddam joined the party in 1957, aged twenty. He proved himself useful in
+        the way young men often prove themselves useful to revolutionary
+        organisations: violence. In 1959, the Ba'ath Party assigned him to a team
+        that attempted to assassinate Iraq's military ruler, General Abd al-Karim
+        Qasim, in a Baghdad street ambush. The plot failed. Saddam was wounded in
+        the leg — he later claimed he dug out the bullet himself — and fled
+        first to Syria, then to Egypt, where he spent several years studying law
+        in Cairo.
+      </p>
+
+      <p>
+        The exile was formative. In Egypt, Saddam observed how Nasser built a cult
+        of personality, how state media could be weaponised, how fear and admiration
+        could be manufactured simultaneously. He returned to Iraq after the Ba'ath
+        Party successfully seized power in a <strong>1963 coup</strong> that
+        overthrew and executed Qasim. The Ba'athists were ousted again within
+        months, but Saddam had tasted power's proximity.
+      </p>
+
+      <p>
+        He spent time in prison — where, reportedly, he organised the other Ba'athist
+        detainees into a disciplined faction — and in the underground, building
+        the party's internal security apparatus. When the Ba'ath Party seized power
+        again in a <strong>July 1968 coup</strong>, Saddam was thirty-one years old
+        and the second most powerful man in Iraq. His relative by marriage,
+        <strong>Ahmad Hassan al-Bakr</strong>, became president. Saddam became
+        deputy.
+      </p>
+
+      <div class="callout">
+        <div class="callout-label">Key idea</div>
+        <p>
+          Saddam's genius in these years was <strong>institutional</strong>. While
+          al-Bakr was the public face, Saddam systematically took control of the
+          party's security services, the intelligence apparatus, and the military
+          chain of command — building a parallel structure of loyalty that ran
+          through him rather than through the state itself.
+        </p>
+      </div>
+    </section>
+
+    <!-- 03. Seizing Total Control -->
+    <section class="section" id="seizure">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2>Seizing Total Control (1979)</h2>
+      </div>
+
+      <p>
+        By the late 1970s, al-Bakr's health was failing. On <strong>16 July 1979</strong>,
+        Saddam persuaded — or pressured — him to resign. He was now president of
+        Iraq, chairman of the Revolutionary Command Council, prime minister,
+        commander-in-chief of the armed forces, and secretary-general of the Ba'ath
+        Party. Every lever of state ran through his hands.
+      </p>
+
+      <p>
+        He moved immediately to eliminate potential rivals. Five days after taking
+        power, he convened an extraordinary meeting of senior Ba'athists and
+        announced that a Syrian-backed conspiracy had been uncovered within the
+        party's own ranks. As he read out names from a list, security officers
+        escorted each named man from the hall. The remaining delegates, visibly
+        terrified, were then asked to form the firing squads that executed the
+        accused. Saddam made senior party members complicit in the killings —
+        ensuring their silence through shared guilt.
+      </p>
+
+      <div class="stat-row">
+        <div class="stat-card">
+          <span class="stat-value">~500</span>
+          <span class="stat-label">Ba'athists purged in 1979</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">22</span>
+          <span class="stat-label">Senior officials executed</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">42</span>
+          <span class="stat-label">Saddam's age at seizure of power</span>
+        </div>
+      </div>
+
+      <p>
+        The purge was filmed. Saddam wanted the footage to circulate. The message
+        was simple: loyalty was the only currency that had any value, and disloyalty
+        had only one price.
+      </p>
+
+      <div class="pull-quote">
+        <p>
+          "He who doesn't learn from history is doomed to repeat it. I am history.
+          I am the lesson."
+        </p>
+        <cite>— Attributed to Saddam Hussein (widely reported)</cite>
+      </div>
+    </section>
+
+    <!-- 04. How He Ruled -->
+    <section class="section" id="rule">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2>How He Ruled: Fear and Patronage</h2>
+      </div>
+
+      <p>
+        Saddam's system of control rested on two pillars that worked in opposite
+        directions and reinforced each other: <strong>terror</strong> and
+        <strong>reward</strong>.
+      </p>
+
+      <p>
+        The terror apparatus was elaborate. The <strong>Mukhabarat</strong>
+        (general intelligence directorate), the <strong>Amn</strong> (internal
+        security), and the <strong>Istikhbarat</strong> (military intelligence)
+        operated as overlapping, competing bureaucracies of surveillance. Informers
+        were everywhere — neighbours reported on neighbours, children were
+        encouraged to report on parents. Political prisoners were tortured in
+        Abu Ghraib and other facilities. Disappearances were routine. Public
+        execution was not uncommon. Entire families could be punished for the
+        perceived disloyalty of a single member.
+      </p>
+
+      <p>
+        But fear alone cannot sustain a government. Alongside it, Saddam built a
+        genuine system of <strong>patronage</strong> centred on his home region.
+        Tikritis — and especially members of his own tribe, the al-Bu Nasir —
+        were elevated into positions of military command, intelligence leadership,
+        and business privilege. His sons <strong>Uday</strong> and
+        <strong>Qusay</strong> were groomed as princelings. Loyalty to Saddam
+        personally, rather than to Iraq as a state, was the organising principle
+        of Iraqi society.
+      </p>
+
+      <p>
+        For ordinary Iraqis who stayed quiet and out of politics, the 1970s
+        actually brought real improvements. Iraq's nationalisation of its oil
+        industry in 1972, combined with the 1973 oil-price shock, flooded the
+        country with revenue. Saddam invested in <strong>schools, hospitals,
+        electrification, and literacy campaigns</strong>. Iraq briefly became one
+        of the most educated, urbanised societies in the Arab world. UNESCO awarded
+        Iraq a prize for its literacy programmes in 1982. This is part of the
+        historical record, and it matters — it explains why some Iraqis who
+        remember the 1970s feel a complicated nostalgia, even knowing what came
+        after.
+      </p>
+
+      <div class="callout">
+        <div class="callout-label">The personality cult</div>
+        <p>
+          Saddam modelled his self-presentation on a shifting cast of historical
+          heroes. He compared himself to <strong>Nebuchadnezzar</strong>, the
+          ancient Babylonian king who conquered Jerusalem. He posed in Kurdish
+          traditional dress, in military uniform, in a business suit, in peasant
+          clothes. His face appeared on every public building, his voice on every
+          radio station, his image on currency. He wrote novels (published
+          under a pen name). He was simultaneously the father of the nation and
+          its most feared executioner.
+        </p>
+      </div>
+    </section>
+
+    <!-- 05. Iran-Iraq War -->
+    <section class="section" id="iran-iraq">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2>The Iran–Iraq War (1980–1988)</h2>
+      </div>
+
+      <p>
+        In 1979, Iran's <strong>Islamic Revolution</strong> overthrew the
+        Shah and installed Ayatollah Khomeini as supreme leader. For Saddam,
+        this was both a threat and an opportunity. Khomeini — a Shia cleric —
+        was openly calling on Iraq's majority-Shia population to rise up against
+        their Sunni-dominated government. But Iran also looked, briefly, like it
+        might be weak: its military was in disarray after the revolution, and
+        it had been internationally isolated by the American hostage crisis.
+      </p>
+
+      <p>
+        On <strong>22 September 1980</strong>, Iraq invaded Iran. Saddam
+        expected a quick victory. He did not get one. The war became a grinding,
+        catastrophic stalemate — eight years of trench warfare, poison gas, and
+        mass casualties that bore an uncomfortable resemblance to the Western
+        Front of World War I.
+      </p>
+
+      <div class="stat-row">
+        <div class="stat-card">
+          <span class="stat-value">8 yrs</span>
+          <span class="stat-label">Duration of the war</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">~500,000</span>
+          <span class="stat-label">Estimated total dead (both sides)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">1988</span>
+          <span class="stat-label">Year ceasefire agreed</span>
+        </div>
+      </div>
+
+      <p>
+        The international context is important. The United States and most of the
+        West backed Saddam — not because they admired him, but because they feared
+        Khomeini's Islamic revolution spreading further. The Reagan administration
+        provided Iraq with satellite intelligence, financial credit, and
+        <strong>turned a blind eye to Iraq's use of chemical weapons</strong>
+        against Iranian forces. The Soviet Union sold Iraq weapons too. Saddam
+        was, for a time, a useful man to powerful friends.
+      </p>
+
+      <p>
+        The war ended in August 1988 with UN-brokered ceasefire and no territorial
+        gains for either side. Iraq was left with a shattered economy, enormous
+        debt (much of it owed to Kuwait and Saudi Arabia), and a battle-hardened
+        military that had nowhere left to go.
+      </p>
+    </section>
+
+    <!-- 06. Anfal & Halabja -->
+    <section class="section" id="anfal">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2>The Anfal Campaign &amp; Halabja</h2>
+      </div>
+
+      <p>
+        Iraq's <strong>Kurdish population</strong> in the north had long resisted
+        Ba'athist rule. During the Iran–Iraq War, Kurdish militias (the Peshmerga)
+        allied with Iran against Baghdad. Saddam viewed this as unforgivable treason.
+        His response was not military suppression — it was an attempt at
+        <strong>ethnic cleansing</strong>.
+      </p>
+
+      <p>
+        The <strong>Anfal Campaign</strong> ("Anfal" is a Quranic word for spoils
+        of war) was directed by Saddam's cousin and son-in-law,
+        <strong>Ali Hassan al-Majid</strong>, who became notorious as
+        "Chemical Ali." Between February and September 1988, Iraqi forces
+        swept through Kurdish villages in a coordinated campaign of
+        destruction.
+      </p>
+
+      <div class="callout atrocity">
+        <div class="callout-label">Atrocity: The Halabja Chemical Attack — 16–17 March 1988</div>
+        <p>
+          The town of <strong>Halabja</strong>, in Iraqi Kurdistan near the Iranian
+          border, had fallen to Iranian and Kurdish Peshmerga forces. On 16–17 March
+          1988, Iraqi aircraft dropped chemical weapons — including <strong>mustard
+          gas and nerve agents (sarin and possibly VX)</strong> — on the town.
+          The attack killed an estimated <strong>3,200 to 5,000 civilians</strong>
+          immediately, and injured thousands more. It remains the largest chemical
+          weapons attack against a civilian population in history.
+          Survivors described yellow and white clouds drifting through streets
+          where people had been shopping, cooking, and going about their lives.
+          The long-term health consequences — cancers, birth defects, respiratory
+          illness — have persisted for generations.
+        </p>
+      </div>
+
+      <div class="callout atrocity">
+        <div class="callout-label">Atrocity: The Anfal Campaign — 1988</div>
+        <p>
+          Across Iraqi Kurdistan, the Anfal operation destroyed an estimated
+          <strong>2,000–4,000 villages</strong>. Between <strong>50,000 and
+          182,000 Kurds</strong> were killed — estimates vary widely, but
+          the Iraqi government's own documents, recovered after 1991, described
+          mass executions. Men and boys of fighting age were separated from
+          their families and shot in the desert or at purpose-built execution
+          sites. Women, children, and elderly people were transported to
+          detention camps where many died from thirst, heat, and abuse.
+          The campaign has been <strong>recognised as genocide</strong> by
+          several governments and international bodies.
+        </p>
+      </div>
+
+      <p>
+        The Anfal Campaign received relatively little international attention at
+        the time. The world was focused on the Iran–Iraq War's ceasefire, and
+        many Western governments did not want to damage their relationship with
+        Saddam by pressing the issue. This silence is part of the moral accounting
+        that historians must make.
+      </p>
+    </section>
+
+    <!-- 07. Gulf War -->
+    <section class="section" id="gulf-war">
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <h2>The Gulf War (1990–1991)</h2>
+      </div>
+
+      <p>
+        Iraq emerged from the Iran–Iraq War deeply in debt. Saddam was furious that
+        Kuwait — which had lent Iraq money during the war — was now demanding
+        repayment and simultaneously overproducing oil, driving prices down and
+        depriving Iraq of revenue. He also claimed that Kuwait was "slant drilling"
+        into Iraqi oil fields across the border.
+      </p>
+
+      <p>
+        On <strong>2 August 1990</strong>, Iraqi forces invaded and occupied
+        Kuwait. The move shocked the world, including most of Saddam's former
+        patrons. The United States, under President George H.W. Bush, assembled
+        a coalition of 35 nations and spent five months building up forces in
+        Saudi Arabia.
+      </p>
+
+      <p>
+        Saddam misread the situation catastrophically. He believed the US would
+        not risk American casualties for what he characterised as a commercial
+        dispute. He was wrong. On <strong>17 January 1991</strong>, the coalition
+        launched <strong>Operation Desert Storm</strong> — a six-week air campaign
+        followed by a ground offensive so swift it lasted <strong>100 hours</strong>.
+        Iraqi forces collapsed. Kuwait was liberated.
+      </p>
+
+      <div class="callout">
+        <div class="callout-label">Critical decision</div>
+        <p>
+          President Bush chose <strong>not to march on Baghdad</strong>. His
+          administration feared that toppling Saddam would cause Iraq to
+          fragment — handing Iran a strategic victory — and would leave the
+          US occupying a hostile country with no clear exit strategy. Coalition
+          forces stopped at the Iraqi border. This decision would haunt
+          policymakers for the next decade, and its reversal in 2003 would
+          prove them partially right.
+        </p>
+      </div>
+
+      <p>
+        Inside Iraq, the aftermath of the Gulf War was catastrophic. Saddam's
+        defeat triggered simultaneous uprisings by <strong>Shia Arabs in the
+        south</strong> and <strong>Kurds in the north</strong>. Both expected
+        US support; neither received it. Saddam's Republican Guard crushed the
+        Shia uprising with exceptional brutality — mass executions, draining
+        of the southern marshes, destruction of ancient communities. Perhaps
+        <strong>50,000–100,000 Shia civilians were killed</strong>. The Kurds
+        fared slightly better: a Western-enforced no-fly zone in the north gave
+        them a degree of protection and eventually allowed the formation of a
+        de facto Kurdish autonomous region.
+      </p>
+    </section>
+
+    <!-- 08. Sanctions Decade -->
+    <section class="section" id="sanctions">
+      <div class="section-header">
+        <span class="section-number">08</span>
+        <h2>The Sanctions Decade (1991–2003)</h2>
+      </div>
+
+      <p>
+        After the Gulf War, the United Nations imposed comprehensive economic
+        sanctions on Iraq — intended to force Saddam to dismantle his weapons
+        of mass destruction programmes and comply with arms inspectors. Saddam
+        did comply with some demands, and dissembled, delayed, and obstructed
+        others. The stand-off lasted twelve years.
+      </p>
+
+      <p>
+        The sanctions had devastating consequences for ordinary Iraqis. The UN's
+        own estimates suggested that <strong>hundreds of thousands of children
+        died</strong> from preventable illness and malnutrition in the 1990s,
+        as the Iraqi health system — once among the best in the Middle East —
+        collapsed. The <strong>Oil-for-Food Programme</strong>, introduced to
+        allow Iraq to sell oil for humanitarian goods, was riddled with corruption
+        — including by Saddam's own government, which skimmed billions.
+      </p>
+
+      <p>
+        Saddam used the sanctions strategically. He allowed suffering to be visible,
+        directing Western journalists to hospitals and children's wards, building
+        an international narrative in which the West — not his own misrule — was
+        responsible for Iraqi misery. In the Arab world especially, this framing
+        had considerable traction.
+      </p>
+
+      <p>
+        Meanwhile, the question of Iraq's weapons of mass destruction — chemical,
+        biological, and potentially nuclear — remained unresolved. Saddam had
+        genuinely possessed and used chemical weapons. He had pursued nuclear
+        weapons before the Gulf War. UN inspectors dismantled much of these
+        programmes during the 1990s, but Saddam's deliberate ambiguity about
+        what remained was, in retrospect, a fatal miscalculation: he wanted to
+        appear more dangerous than he was, to deter Iran and regional rivals.
+        Instead, he convinced the United States that he actually was dangerous.
+      </p>
+    </section>
+
+    <!-- 09. 2003 Invasion -->
+    <section class="section" id="invasion">
+      <div class="section-header">
+        <span class="section-number">09</span>
+        <h2>The 2003 Invasion</h2>
+      </div>
+
+      <p>
+        The attacks of <strong>11 September 2001</strong> transformed the
+        political environment in Washington. The Bush administration — already
+        focused on Iraq — began building a case for military action.
+        The argument rested on three claims: that Iraq possessed weapons of mass
+        destruction in violation of UN resolutions; that Saddam's government had
+        links to al-Qaeda; and that removing Saddam would be a catalyst for
+        democratic change across the Middle East.
+      </p>
+
+      <p>
+        The first claim was the central one. On <strong>5 February 2003</strong>,
+        US Secretary of State Colin Powell presented intelligence to the UN
+        Security Council purporting to show active Iraqi WMD programmes. The
+        presentation was meticulous and compelling. It was also, as subsequent
+        investigation showed, <strong>largely wrong</strong>. The intelligence
+        had been assembled under political pressure and overstated what was
+        actually known.
+      </p>
+
+      <p>
+        On <strong>20 March 2003</strong>, a US-led coalition — primarily American
+        and British, with smaller contributions from other nations — invaded Iraq
+        without UN Security Council authorisation. The military campaign was
+        brief: Baghdad fell on <strong>9 April 2003</strong>, famously marked by
+        the televised toppling of a large statue of Saddam in Firdos Square. Saddam
+        himself fled and disappeared.
+      </p>
+
+      <div class="callout">
+        <div class="callout-label">No WMD</div>
+        <p>
+          Subsequent searches by US-led inspection teams found
+          <strong>no active weapons of mass destruction programmes</strong>
+          in Iraq. The stockpiles that had been assumed to exist did not exist.
+          Whatever had remained after the Gulf War had been destroyed in the
+          1990s — but Saddam had never clearly admitted this, maintaining
+          deliberate ambiguity. The intelligence failure (and the political
+          pressure applied to intelligence agencies) remains one of the most
+          consequential in modern history.
+        </p>
+      </div>
+    </section>
+
+    <!-- 10. Chaos That Followed -->
+    <section class="section" id="aftermath">
+      <div class="section-header">
+        <span class="section-number">10</span>
+        <h2>The Chaos That Followed</h2>
+      </div>
+
+      <p>
+        The US and its allies had planned the invasion in detail. They had planned
+        the aftermath almost not at all.
+      </p>
+
+      <p>
+        Within weeks of Baghdad's fall, the decision by US administrator
+        <strong>L. Paul Bremer</strong> to <strong>dissolve the Iraqi Army</strong>
+        and <strong>ban senior Ba'athists from public life</strong> (de-Ba'athification)
+        put hundreds of thousands of armed, trained, humiliated men out of work
+        with no income and no future. Many of them became the backbone of the
+        insurgency that followed.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2003–2004</div>
+          <div class="timeline-text"><strong>Insurgency begins.</strong> Sunni armed groups, former Ba'athists, and foreign jihadists attack coalition forces and Iraqi civilians. Abu Ghraib prison abuse scandal damages US credibility internationally.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2005–2006</div>
+          <div class="timeline-text"><strong>Sectarian civil war erupts.</strong> The bombing of the Shia al-Askari mosque in Samarra (February 2006) triggers massive Sunni–Shia violence. Death squads operate openly. Tens of thousands of civilians are killed.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2006–2008</div>
+          <div class="timeline-text"><strong>The surge.</strong> A US troop increase combined with the "Anbar Awakening" — Sunni tribal leaders turning against al-Qaeda in Iraq — temporarily reduces violence.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2011</div>
+          <div class="timeline-text"><strong>US withdrawal.</strong> American combat forces leave Iraq. The government of Nouri al-Maliki is widely seen as sectarian, favouring Shia factions and marginalising Sunnis.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2013–2017</div>
+          <div class="timeline-text"><strong>ISIS rises and is defeated.</strong> The Islamic State of Iraq and Syria (ISIS/ISIL/Daesh), growing partly from al-Qaeda in Iraq, seizes vast territory including Mosul. A second US military intervention, Iraqi army rebuilding, and Kurdish Peshmerga eventually defeat ISIS — but at enormous cost.</div>
+        </div>
+      </div>
+
+      <p>
+        The total death toll from the 2003 invasion and subsequent conflict is
+        contested and haunting. Estimates of Iraqi civilian deaths range from
+        <strong>100,000 to over 600,000</strong>, depending on the methodology
+        used. Millions were displaced. Iraq's Christian community, one of the
+        oldest in the world, was largely destroyed. The country's infrastructure,
+        historical sites, and social fabric suffered damage that will take
+        generations to repair.
+      </p>
+
+      <div class="callout">
+        <div class="callout-label">A difficult question</div>
+        <p>
+          Was Iraq better or worse after Saddam? This is a genuine moral question,
+          not a simple one. Saddam was undeniably a genocidal dictator. But the
+          chaos that followed his removal killed enormous numbers of people,
+          produced ISIS, and left Iraq weaker and more fragmented than before.
+          Acknowledging both truths simultaneously — that Saddam was monstrous,
+          and that the invasion made things worse — is harder than picking a side,
+          but it is the only honest position.
+        </p>
+      </div>
+    </section>
+
+    <!-- 11. Capture, Trial, Execution -->
+    <section class="section" id="capture">
+      <div class="section-header">
+        <span class="section-number">11</span>
+        <h2>Capture, Trial &amp; Execution</h2>
+      </div>
+
+      <p>
+        For months after the fall of Baghdad, Saddam evaded capture. His location
+        remained unknown despite a massive US manhunt and a $25 million bounty
+        on his head. On <strong>13 December 2003</strong>, acting on a tip,
+        US forces found him hiding in a small underground hole — a
+        "spider hole" — on a farm near his hometown of <strong>Tikrit</strong>.
+        He was dishevelled, with a long beard, and surrendered without resistance.
+      </p>
+
+      <p>
+        The sight of him — humbled, dirty, submissive — was broadcast around the
+        world. It was a deliberate contrast to the image he had spent a lifetime
+        constructing.
+      </p>
+
+      <p>
+        Saddam was handed over to the Iraqi interim government and tried by the
+        <strong>Iraqi Special Tribunal</strong>. The trial focused first on the
+        1982 massacre of 148 Shia men and boys from the town of
+        <strong>Dujail</strong>, following a failed assassination attempt against
+        Saddam there. He was convicted of crimes against humanity and sentenced
+        to death. The Anfal campaign — the graver charge of genocide against the
+        Kurds — had not yet been reached in the proceedings when the sentence
+        was carried out.
+      </p>
+
+      <p>
+        On <strong>30 December 2006</strong>, the first day of the Muslim festival
+        of Eid al-Adha, Saddam Hussein was hanged in a former military intelligence
+        building in Baghdad. Witnesses filmed the execution on mobile phones. The
+        footage — which showed some of those present taunting Saddam as he stood
+        with the noose around his neck — was leaked and spread rapidly online.
+        His manner in his final moments was calm and composed. He died reciting
+        Islamic prayers.
+      </p>
+    </section>
+
+    <!-- 12. Legacy -->
+    <section class="section" id="legacy">
+      <div class="section-header">
+        <span class="section-number">12</span>
+        <h2>Legacy</h2>
+      </div>
+
+      <p>
+        Saddam Hussein's legacy resists simple summary, which is precisely why
+        it is worth studying carefully.
+      </p>
+
+      <p>
+        He was a <strong>mass murderer</strong>. The Halabja chemical attack, the
+        Anfal campaign, the Dujail massacre, the suppression of the 1991 Shia
+        uprising, the systematic torture and disappearance of political opponents —
+        these are documented, evidenced, and cannot be softened by any other
+        consideration.
+      </p>
+
+      <p>
+        He was also a <strong>moderniser</strong>, in the authoritarian mould:
+        he built schools, electrified villages, and for a brief period in the
+        1970s, raised Iraqi living standards significantly. These achievements
+        do not cancel the atrocities; they coexist with them as part of a
+        complete picture.
+      </p>
+
+      <p>
+        He was a <strong>profound strategic incompetent</strong>. He launched two
+        catastrophic wars — against Iran and against Kuwait — that achieved nothing,
+        exhausted his country, and ultimately invited the invasion that killed him.
+        His insistence on maintaining ambiguity about weapons he no longer possessed
+        was perhaps the most self-destructive gamble in modern political history.
+      </p>
+
+      <p>
+        His removal from power was followed by chaos that cost more Iraqi lives
+        than his worst individual atrocities, though not more than the sum of them.
+        The lesson some draw is that brutal stability is preferable to liberal
+        intervention; others draw the opposite lesson — that such stability was
+        always a fiction built on mass graves. Both positions are worth examining
+        rather than simply asserting.
+      </p>
+
+      <p>
+        What is not in dispute: Iraq in 2006, when Saddam was executed, was a
+        country in the middle of a sectarian civil war. Iraq in 2026 is a
+        functioning but fragile state, still shaped by every decision he made
+        and every decision made after him. Understanding Saddam Hussein means
+        understanding how personal ambition, ideology, regional conflict, and
+        superpower interest can combine to destroy millions of lives — and
+        how removing a tyrant, without a serious plan for what comes next,
+        can destroy millions more.
+      </p>
+
+      <div class="callout">
+        <div class="callout-label">The honest reckoning</div>
+        <p>
+          History does not require you to choose between condemning Saddam and
+          condemning the 2003 invasion. Both can be — and by any serious accounting,
+          both should be — condemned. The suffering of Iraqis under Saddam was real.
+          The suffering of Iraqis after Saddam was also real. Holding both truths
+          at once is what honest history demands.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="footer-label">About this page</div>
+      <p class="footer-note">
+        This page is part of <strong>Context</strong>, a history resource for
+        young readers. We aim to present people, events, and ideas with honesty
+        and appropriate nuance — including both the crimes of those in power and
+        the failures of those who sought to remove them. No simplification
+        that produces a lie is worth making.
+      </p>
+      <div class="footer-meta">
+        Saddam Hussein &nbsp;·&nbsp; Ba'ath Iraq &nbsp;·&nbsp; 1937–2006
+        &nbsp;·&nbsp; Context History
+      </div>
+    </footer>
+
+  </div><!-- /page-wrap -->
+</body>
+</html>

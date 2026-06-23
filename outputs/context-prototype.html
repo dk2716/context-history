@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Context — The Libyan Civil War</title>
+  <style>
+    :root {
+      --bg: #0e0e10;
+      --surface: #18181c;
+      --surface2: #222228;
+      --border: #2e2e36;
+      --accent: #e8a838;
+      --accent2: #c4392d;
+      --text: #f0efe8;
+      --muted: #8a8a96;
+      --green: #3dba7e;
+      --blue: #4a9eff;
+      --purple: #9b7fe8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', serif;
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: rgba(14,14,16,0.92);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: 'Georgia', serif;
+      font-size: 1.4rem;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+
+    .logo span { color: var(--text); font-weight: 300; }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      font-family: sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .nav-links li { cursor: pointer; transition: color 0.2s; }
+    .nav-links li:hover { color: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 3rem 3rem 2.5rem;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(14,14,16,0.2) 0%, rgba(14,14,16,0.85) 70%, var(--bg) 100%),
+        linear-gradient(135deg, #1a0a00 0%, #0e1a2a 50%, #0a0e1a 100%);
+      z-index: 0;
+    }
+
+    /* desert/Libya-ish texture layer */
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse 600px 300px at 70% 40%, rgba(232,168,56,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 400px at 20% 60%, rgba(196,57,45,0.08) 0%, transparent 70%);
+    }
+
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
+
+    .hero-tag {
+      display: inline-block;
+      font-family: sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      font-weight: normal;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-family: sans-serif;
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-family: sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .difficulty {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      display: grid;
+      grid-template-columns: 1fr min(700px, 100%) 1fr;
+      padding: 0 1rem;
+    }
+
+    .page > * { grid-column: 2; }
+
+    /* ── INTRO CARD ── */
+    .intro-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2.5rem 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .intro-card h2 {
+      font-size: 1rem;
+      font-family: sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .intro-card p {
+      font-size: 0.95rem;
+      color: #c8c7c0;
+    }
+
+    .quick-facts { border-left: 1px solid var(--border); padding-left: 2rem; }
+
+    .fact-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+      font-family: sans-serif;
+      font-size: 0.85rem;
+    }
+
+    .fact-row:last-child { border-bottom: none; }
+    .fact-label { color: var(--muted); }
+    .fact-value { font-weight: 600; }
+
+    /* ── SECTION HEADER ── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin: 2.5rem 0 1.5rem;
+    }
+
+    .section-header h2 {
+      font-size: 1.4rem;
+      font-weight: normal;
+    }
+
+    .section-header .line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── TIMELINE ── */
+    .timeline { position: relative; padding-left: 2rem; }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent) 0%, var(--accent2) 60%, transparent 100%);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+    }
+
+    .tl-dot {
+      position: absolute;
+      left: -2.45rem;
+      top: 1.1rem;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      background: var(--bg);
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .tl-item.active .tl-dot,
+    .tl-item:hover .tl-dot {
+      background: var(--accent);
+      transform: scale(1.3);
+    }
+
+    .tl-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 0.9rem 1.2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .tl-item:hover .tl-header,
+    .tl-item.active .tl-header {
+      border-color: var(--accent);
+      background: var(--surface2);
+    }
+
+    .tl-year {
+      font-family: sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 40px;
+      letter-spacing: 0.05em;
+    }
+
+    .tl-title {
+      font-size: 1rem;
+      font-weight: normal;
+      flex: 1;
+    }
+
+    .tl-arrow {
+      color: var(--muted);
+      font-size: 0.8rem;
+      transition: transform 0.25s;
+    }
+
+    .tl-item.active .tl-arrow { transform: rotate(90deg); }
+
+    .tl-body {
+      display: none;
+      padding: 1rem 1.2rem 1.2rem;
+      background: var(--surface2);
+      border: 1px solid var(--accent);
+      border-top: none;
+      border-radius: 0 0 8px 8px;
+      font-size: 0.93rem;
+      color: #c8c7c0;
+      line-height: 1.75;
+    }
+
+    .tl-item.active .tl-body { display: block; }
+
+    .tl-source {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-family: sans-serif;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    /* ── CALLOUT BOXES ── */
+    .matters-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .matters-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .matters-card:hover { border-color: var(--muted); }
+
+    .matters-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+    }
+
+    .matters-card.red::before { background: var(--accent2); }
+    .matters-card.blue::before { background: var(--blue); }
+    .matters-card.green::before { background: var(--green); }
+    .matters-card.purple::before { background: var(--purple); }
+
+    .matters-icon {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .matters-card h3 {
+      font-family: sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .matters-card.red h3 { color: #e8675e; }
+    .matters-card.blue h3 { color: var(--blue); }
+    .matters-card.green h3 { color: var(--green); }
+    .matters-card.purple h3 { color: var(--purple); }
+
+    .matters-card p {
+      font-size: 0.88rem;
+      color: #b0aead;
+      line-height: 1.65;
+    }
+
+    .matters-badge {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-family: sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .red .matters-badge { background: rgba(196,57,45,0.2); color: #e8675e; }
+    .blue .matters-badge { background: rgba(74,158,255,0.15); color: var(--blue); }
+    .green .matters-badge { background: rgba(61,186,126,0.15); color: var(--green); }
+    .purple .matters-badge { background: rgba(155,127,232,0.15); color: var(--purple); }
+
+    /* ── KEY FIGURE ── */
+    .figure-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 1rem;
+      display: flex;
+      gap: 1.4rem;
+      align-items: flex-start;
+    }
+
+    .figure-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    .figure-info h3 {
+      font-family: sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .figure-role {
+      font-family: sans-serif;
+      font-size: 0.75rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    .figure-info p {
+      font-size: 0.88rem;
+      color: #b0aead;
+      line-height: 1.65;
+    }
+
+    /* ── SOURCES ── */
+    .sources-section {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 0 3rem;
+      margin-top: 1rem;
+    }
+
+    .sources-section h2 {
+      font-family: sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .source-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .source-item {
+      font-family: sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+      display: flex;
+      gap: 0.75rem;
+      align-items: baseline;
+    }
+
+    .source-num {
+      color: var(--accent);
+      font-weight: 700;
+      min-width: 20px;
+    }
+
+    /* ── EXPLORE MORE ── */
+    .explore-section {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0 3rem;
+    }
+
+    .explore-section h2 {
+      font-family: sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .explore-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .explore-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.1rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .explore-card:hover { border-color: var(--muted); }
+
+    .explore-region {
+      font-family: sans-serif;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .explore-card h3 {
+      font-size: 0.88rem;
+      font-weight: normal;
+      color: var(--text);
+    }
+
+    /* ── STICKY PROGRESS ── */
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 2px;
+      background: var(--accent);
+      z-index: 200;
+      transition: width 0.1s;
+      width: 0%;
+    }
+
+    @media (max-width: 640px) {
+      .intro-card { grid-template-columns: 1fr; }
+      .quick-facts { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 1.5rem; }
+      .matters-grid { grid-template-columns: 1fr; }
+      .explore-grid { grid-template-columns: 1fr 1fr; }
+      .hero { padding: 2rem 1.2rem 2rem; }
+      .page { padding: 0 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">CONTEXT<span> — history that matters</span></div>
+  <ul class="nav-links">
+    <li>Topics</li>
+    <li>Regions</li>
+    <li>Timeline</li>
+    <li>About</li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-tag">Middle East &amp; North Africa</div>
+    <h1>Gaddafi, the <em>Arab Spring</em>,<br>and Why Libya Still Burns</h1>
+    <p class="hero-sub">How one man's 42-year grip on a desert nation created a power vacuum the world is still trying to fill.</p>
+    <div class="hero-meta">
+      <span class="difficulty"><span class="dot"></span> Beginner-friendly</span>
+      <span>~8 min read</span>
+      <span>4 academic sources</span>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE CONTENT -->
+<main class="page">
+
+  <!-- INTRO CARD -->
+  <div class="intro-card">
+    <div class="intro-text">
+      <h2>The one-paragraph version</h2>
+      <p>Libya was ruled by a dictator named Muammar Gaddafi for 42 years. In 2011, inspired by uprisings across the Arab world, Libyans rebelled. With NATO's help, Gaddafi was overthrown and killed. But instead of democracy, Libya collapsed into chaos — two rival governments, dozens of armed militias, and no functioning state. That chaos still matters: it's why hundreds of thousands of migrants cross Libya to reach Europe, why terrorist groups flourish nearby, and why Russia and Turkey are now fighting a proxy war there.</p>
+    </div>
+    <div class="quick-facts">
+      <h2>Quick facts</h2>
+      <div class="fact-row"><span class="fact-label">Location</span><span class="fact-value">North Africa</span></div>
+      <div class="fact-row"><span class="fact-label">Gaddafi ruled</span><span class="fact-value">1969–2011</span></div>
+      <div class="fact-row"><span class="fact-label">Civil War began</span><span class="fact-value">Feb 2011</span></div>
+      <div class="fact-row"><span class="fact-label">Death toll</span><span class="fact-value">~25,000–30,000</span></div>
+      <div class="fact-row"><span class="fact-label">Still ongoing?</span><span class="fact-value" style="color:var(--accent2)">Yes</span></div>
+    </div>
+  </div>
+
+  <!-- KEY FIGURES -->
+  <div class="section-header">
+    <h2>Key figures</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="figure-card">
+    <div class="figure-avatar">🎖️</div>
+    <div class="figure-info">
+      <h3>Muammar Gaddafi</h3>
+      <div class="figure-role">DICTATOR · IN POWER 1969–2011</div>
+      <p>A 27-year-old army officer who overthrew Libya's king in a 1969 coup. He funded terrorist groups, including the IRA and the Lockerbie bombers, making Libya a pariah state. But he also used oil money to build schools, hospitals, and housing — meaning many Libyans genuinely mourned him. His brutal crackdown on 2011 protesters triggered the NATO intervention that ended his rule.</p>
+    </div>
+  </div>
+
+  <div class="figure-card">
+    <div class="figure-avatar">⚖️</div>
+    <div class="figure-info">
+      <h3>The National Transitional Council (NTC)</h3>
+      <div class="figure-role">REBEL GOVERNMENT · FORMED 2011</div>
+      <p>A coalition of lawyers, ex-ministers, and defecting army officers who formed the rebel government in Benghazi. Recognised by Western nations as the legitimate government of Libya, they received NATO air support. But after Gaddafi's fall, they struggled to disarm the dozens of militia groups that had actually fought the war — setting the stage for years of instability.</p>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE TIMELINE -->
+  <div class="section-header">
+    <h2>What happened, step by step</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="timeline" id="timeline">
+
+    <div class="tl-item" onclick="toggleItem(this)">
+      <div class="tl-dot"></div>
+      <div class="tl-header">
+        <span class="tl-year">1969</span>
+        <span class="tl-title">Gaddafi seizes power in a bloodless coup</span>
+        <span class="tl-arrow">▶</span>
+      </div>
+      <div class="tl-body">
+        A group of young military officers, calling themselves the "Free Officers Movement," topple King Idris while he's abroad for medical treatment. Gaddafi, just 27, becomes the face of the revolution. He immediately nationalises Libya's oil, expels US and British military bases, and frames himself as a pan-Arab nationalist hero. For a generation of Libyans, he is genuinely popular.
+        <br><br>
+        <span class="tl-source">📚 Vandewalle, D. (2012). <em>A History of Modern Libya</em>. Cambridge University Press.</span>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggleItem(this)">
+      <div class="tl-dot"></div>
+      <div class="tl-header">
+        <span class="tl-year">1970s–2000s</span>
+        <span class="tl-title">42 years of oil, terror, and repression</span>
+        <span class="tl-arrow">▶</span>
+      </div>
+      <div class="tl-body">
+        Gaddafi builds a bizarre political system he calls the "Jamahiriya" — rule by the masses — but in practice it is brutal authoritarianism. Critics are executed on live television. He funds the IRA in Ireland, Palestinian militant groups, and the bombers who blow up Pan Am Flight 103 over Lockerbie, Scotland in 1988 (270 dead). International sanctions cripple the country for decades. Yet oil wealth funds free healthcare, education, and subsidised housing — creating a complicated legacy.
+        <br><br>
+        <span class="tl-source">📚 St John, R. B. (2011). <em>Libya: From Colony to Revolution</em>. Oneworld Publications.</span>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggleItem(this)">
+      <div class="tl-dot"></div>
+      <div class="tl-header">
+        <span class="tl-year">Jan 2011</span>
+        <span class="tl-title">The Arab Spring arrives in Libya</span>
+        <span class="tl-arrow">▶</span>
+      </div>
+      <div class="tl-body">
+        Tunisia's dictator has just been toppled by street protests. Egypt's Hosni Mubarak is on the brink. Inspired, Libyans in Benghazi (the eastern city that always resented Gaddafi) take to the streets. Gaddafi's response is immediate and savage: security forces open fire on protesters. His son Saif al-Islam appears on state TV and warns of a civil war that will see "rivers of blood." The rebellion explodes.
+        <br><br>
+        <span class="tl-source">📚 Pack, J. (Ed.) (2013). <em>The 2011 Libyan Uprisings and the Struggle for the Post-Qadhafi Future</em>. Palgrave Macmillan.</span>
+      </div>
+    </div>
+
+    <div class="tl-item active" onclick="toggleItem(this)">
+      <div class="tl-dot"></div>
+      <div class="tl-header">
+        <span class="tl-year">Mar 2011</span>
+        <span class="tl-title">NATO intervenes — air strikes begin</span>
+        <span class="tl-arrow">▶</span>
+      </div>
+      <div class="tl-body">
+        The UN Security Council authorises a "no-fly zone" to protect civilians. NATO interprets this broadly, launching air strikes against Gaddafi's forces. France, the UK, and the US lead the campaign. Critics argue NATO crossed a line from protecting civilians to actively helping rebels win the war. Gaddafi's military — armed with Soviet-era tanks but no air power — crumbles. Rebel militias, each loyal to different towns and commanders, sweep westward.
+        <br><br>
+        <span class="tl-source">📚 Chivvis, C.S. (2014). <em>Toppling Qaddafi: Libya and the Limits of Liberal Intervention</em>. Cambridge University Press.</span>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggleItem(this)">
+      <div class="tl-dot"></div>
+      <div class="tl-header">
+        <span class="tl-year">Oct 2011</span>
+        <span class="tl-title">Gaddafi captured and killed by a mob</span>
+        <span class="tl-arrow">▶</span>
+      </div>
+      <div class="tl-body">
+        Gaddafi is found hiding in a drainage pipe near his hometown of Sirte. He is beaten, shot, and his body displayed for days. His death is filmed on mobile phones and broadcast worldwide. Western leaders celebrate. But with Gaddafi gone, there is no plan — no post-war government structure, no deal to disarm the militias, and no functioning institutions. The vacuum is immediate and catastrophic.
+        <br><br>
+        <span class="tl-source">📚 Pack, J. (Ed.) (2013). <em>The 2011 Libyan Uprisings and the Struggle for the Post-Qadhafi Future</em>. Palgrave Macmillan.</span>
+      </div>
+    </div>
+
+    <div class="tl-item" onclick="toggleItem(this)">
+      <div class="tl-dot"></div>
+      <div class="tl-header">
+        <span class="tl-year">2014–now</span>
+        <span class="tl-title">Two governments, dozens of militias — ongoing civil war</span>
+        <span class="tl-arrow">▶</span>
+      </div>
+      <div class="tl-body">
+        Libya splits into two competing governments: one in Tripoli (backed by Turkey and Qatar) and one in the east (backed by Russia, the UAE, and Egypt). A warlord named Khalifa Haftar leads a military campaign to control the country. ISIS seizes the city of Sirte in 2015. Slave markets for migrants are discovered in 2017. By the 2020s, there is still no unified government, and foreign mercenaries from Russia's Wagner Group operate openly on Libyan soil.
+        <br><br>
+        <span class="tl-source">📚 Vandewalle, D. (2012). <em>A History of Modern Libya</em>. Cambridge University Press.</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WHY IT MATTERS TODAY -->
+  <div class="section-header" style="margin-top:3rem;">
+    <h2>Why this matters today</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="matters-grid">
+
+    <div class="matters-card red">
+      <div class="matters-icon">🚢</div>
+      <h3>Europe's migration crisis</h3>
+      <p>Libya is the main departure point for migrants crossing the Mediterranean to Europe. With no functioning coast guard or border control, smuggling networks thrive. Over 20,000 people have drowned making the crossing since 2014. This fuelled the rise of far-right parties across Europe who campaigned on migration.</p>
+      <span class="matters-badge">Ongoing</span>
+    </div>
+
+    <div class="matters-card blue">
+      <div class="matters-icon">🪖</div>
+      <h3>The rise of ISIS &amp; Sahel terrorism</h3>
+      <p>When Gaddafi fell, his enormous weapons stockpiles — guns, missiles, explosives — were looted by militias and smuggled across the Sahara. These weapons armed jihadist groups across Mali, Niger, and Chad. ISIS established a Libyan branch. The terrorist insurgency now destabilising West Africa traces directly back to 2011.</p>
+      <span class="matters-badge">Expanding</span>
+    </div>
+
+    <div class="matters-card green">
+      <div class="matters-icon">🛢️</div>
+      <h3>Global oil &amp; energy prices</h3>
+      <p>Libya holds Africa's largest proven oil reserves. Before 2011, it exported 1.6 million barrels per day. Civil war has repeatedly shut down oil fields and terminals, contributing to global price spikes. Every time militias fight over an oil terminal, it sends ripples through petrol prices worldwide.</p>
+      <span class="matters-badge">Economic</span>
+    </div>
+
+    <div class="matters-card purple">
+      <div class="matters-icon">🌍</div>
+      <h3>A proxy war for global powers</h3>
+      <p>Libya is now a chessboard where Russia, Turkey, the UAE, Egypt, and France all back different factions. Russia's Wagner Group uses Libya as a base for broader African operations. Turkey uses it to project influence into the Mediterranean. What looks like a local conflict is actually a Cold War-style great power competition playing out in the desert.</p>
+      <span class="matters-badge">Geopolitical</span>
+    </div>
+
+  </div>
+
+  <!-- SOURCES -->
+  <div class="sources-section">
+    <h2>Academic sources</h2>
+    <div class="source-list">
+      <div class="source-item"><span class="source-num">1</span><span>Vandewalle, D. (2012). <em>A History of Modern Libya</em> (2nd ed.). Cambridge University Press.</span></div>
+      <div class="source-item"><span class="source-num">2</span><span>St John, R. B. (2011). <em>Libya: From Colony to Revolution</em>. Oneworld Publications.</span></div>
+      <div class="source-item"><span class="source-num">3</span><span>Pack, J. (Ed.) (2013). <em>The 2011 Libyan Uprisings and the Struggle for the Post-Qadhafi Future</em>. Palgrave Macmillan.</span></div>
+      <div class="source-item"><span class="source-num">4</span><span>Chivvis, C. S. (2014). <em>Toppling Qaddafi: Libya and the Limits of Liberal Intervention</em>. Cambridge University Press.</span></div>
+    </div>
+  </div>
+
+  <!-- EXPLORE MORE -->
+  <div class="explore-section">
+    <h2>Explore more topics</h2>
+    <div class="explore-grid">
+      <div class="explore-card">
+        <div class="explore-region">Middle East</div>
+        <h3>The Syrian Civil War &amp; the Refugee Crisis</h3>
+      </div>
+      <div class="explore-card">
+        <div class="explore-region">West Africa</div>
+        <h3>The Wagner Group &amp; Mali's Coup</h3>
+      </div>
+      <div class="explore-card">
+        <div class="explore-region">Global</div>
+        <h3>The Arab Spring: What Worked, What Didn't</h3>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script>
+  // Toggle timeline items
+  function toggleItem(el) {
+    const wasActive = el.classList.contains('active');
+    document.querySelectorAll('.tl-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) el.classList.add('active');
+  }
+
+  // Reading progress bar
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = (scrollTop / docHeight) * 100;
+    document.getElementById('progressBar').style.height = progress + '%';
+  });
+</script>
+</body>
+</html>

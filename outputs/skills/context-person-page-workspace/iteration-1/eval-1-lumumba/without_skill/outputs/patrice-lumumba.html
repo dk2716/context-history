@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patrice Lumumba — Context</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #0d0f14;
+      --surface:      #161a23;
+      --surface-2:    #1e2330;
+      --border:       #2a3045;
+      --accent:       #e8a020;
+      --accent-dim:   #a06a0a;
+      --text:         #d6dae6;
+      --text-muted:   #7a8099;
+      --text-heading: #f0f2f7;
+      --red:          #c84040;
+      --green:        #3a9e6a;
+      --blue:         #3a72c8;
+      --tag-bg:       #1e2a1a;
+      --tag-color:    #5db87a;
+      --font-sans:    'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:    'Courier New', monospace;
+      --max-w:        780px;
+      --radius:       6px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Top nav strip ── */
+    .site-nav {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .site-nav .logo {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-right: 1rem;
+    }
+    .site-nav a { color: var(--text-muted); text-decoration: none; }
+    .site-nav a:hover { color: var(--text); }
+    .site-nav .sep { color: var(--border); }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(160deg, #111620 0%, #0d0f14 60%);
+      border-bottom: 1px solid var(--border);
+      padding: 3.5rem 1.5rem 2.5rem;
+    }
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+    .category-tag {
+      display: inline-block;
+      background: var(--tag-bg);
+      color: var(--tag-color);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.7rem;
+      border-radius: 99px;
+      border: 1px solid #2a4030;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      color: var(--text-heading);
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
+    .hero .subtitle {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-bottom: 1.8rem;
+    }
+    .hero .lede {
+      font-size: 1.15rem;
+      color: var(--text);
+      max-width: 660px;
+      line-height: 1.7;
+      border-left: 3px solid var(--accent);
+      padding-left: 1.2rem;
+    }
+
+    /* ── Vitals bar ── */
+    .vitals {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 1.4rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .vital { display: flex; flex-direction: column; gap: 0.2rem; }
+    .vital-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .vital-value {
+      font-size: 0.95rem;
+      color: var(--text-heading);
+      font-weight: 500;
+    }
+
+    /* ── Main layout ── */
+    .main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
+
+    /* ── Sections ── */
+    .section { margin-bottom: 3.5rem; }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      margin-bottom: 1.2rem;
+    }
+    .section-label .num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-dim);
+      font-family: var(--font-mono);
+    }
+    .section-label h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      letter-spacing: -0.01em;
+    }
+    .section-divider {
+      height: 1px;
+      background: var(--border);
+      margin-bottom: 1.4rem;
+    }
+
+    p { margin-bottom: 1.1rem; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Pull quote ── */
+    .pull-quote {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 1.4rem 1.6rem;
+      margin: 2rem 0;
+    }
+    .pull-quote p {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--text-heading);
+      line-height: 1.65;
+      margin-bottom: 0.7rem;
+    }
+    .pull-quote .attribution {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    /* ── Timeline ── */
+    .timeline { position: relative; margin: 1.5rem 0; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 4.2rem;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .tl-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.6rem;
+      position: relative;
+    }
+    .tl-date {
+      min-width: 4.2rem;
+      text-align: right;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--accent);
+      padding-top: 0.15rem;
+      flex-shrink: 0;
+    }
+    .tl-dot {
+      position: absolute;
+      left: 4.2rem;
+      top: 0.4rem;
+      width: 9px;
+      height: 9px;
+      background: var(--accent);
+      border-radius: 50%;
+      transform: translateX(-4px);
+      flex-shrink: 0;
+    }
+    .tl-dot.red { background: var(--red); }
+    .tl-content {
+      padding-left: 1.2rem;
+      padding-bottom: 0.4rem;
+    }
+    .tl-content strong {
+      display: block;
+      color: var(--text-heading);
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+    .tl-content p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ── Callout box ── */
+    .callout {
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.3rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .callout-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+    .callout p {
+      font-size: 0.92rem;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+
+    /* ── Players grid ── */
+    .players {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .player-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.2rem;
+    }
+    .player-card .player-name {
+      font-weight: 700;
+      color: var(--text-heading);
+      font-size: 0.92rem;
+      margin-bottom: 0.3rem;
+    }
+    .player-card .player-role {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .player-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── Legacy honest box ── */
+    .legacy-honest {
+      background: #0f1a14;
+      border: 1px solid #2a4030;
+      border-radius: var(--radius);
+      padding: 1.5rem 1.7rem;
+      margin: 2rem 0;
+    }
+    .legacy-honest .lh-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.9rem;
+    }
+    .legacy-honest p {
+      font-size: 0.93rem;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── Key terms ── */
+    .key-terms {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.8rem;
+      margin: 1.5rem 0;
+    }
+    .term {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.9rem 1rem;
+    }
+    .term dt {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.3rem;
+    }
+    .term dd {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── Footer ── */
+    .page-footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero { padding: 2.5rem 1rem 2rem; }
+      .vitals { padding: 1.2rem 1rem; gap: 1.2rem; }
+      .main { padding: 2rem 1rem 4rem; }
+      .timeline::before { left: 3.5rem; }
+      .tl-date { min-width: 3.5rem; font-size: 0.72rem; }
+      .tl-dot { left: 3.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Site nav -->
+  <nav class="site-nav">
+    <span class="logo">Context</span>
+    <a href="#">History</a>
+    <span class="sep">/</span>
+    <a href="#">Africa</a>
+    <span class="sep">/</span>
+    <span>Patrice Lumumba</span>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="category-tag">Person &middot; Africa &middot; 20th Century</span>
+      <h1>Patrice Lumumba</h1>
+      <p class="subtitle">1925 – 1961 &nbsp;&middot;&nbsp; Prime Minister of the Congo &nbsp;&middot;&nbsp; Pan-Africanist</p>
+      <p class="lede">
+        Patrice Lumumba rose from a post office clerk in the Belgian Congo to become his country's first elected prime minister — and one of the most electrifying political voices Africa had ever heard. He held power for 67 days. Then the Cold War killed him.
+      </p>
+    </div>
+  </header>
+
+  <!-- Vitals -->
+  <div class="vitals">
+    <div class="vital">
+      <span class="vital-label">Born</span>
+      <span class="vital-value">2 July 1925</span>
+    </div>
+    <div class="vital">
+      <span class="vital-label">Birthplace</span>
+      <span class="vital-value">Onalua, Belgian Congo</span>
+    </div>
+    <div class="vital">
+      <span class="vital-label">Died</span>
+      <span class="vital-value">17 January 1961 (age 35)</span>
+    </div>
+    <div class="vital">
+      <span class="vital-label">Time in power</span>
+      <span class="vital-value">67 days</span>
+    </div>
+    <div class="vital">
+      <span class="vital-label">Role</span>
+      <span class="vital-value">1st Prime Minister, Republic of Congo</span>
+    </div>
+    <div class="vital">
+      <span class="vital-label">Party</span>
+      <span class="vital-value">Mouvement National Congolais (MNC)</span>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main class="main">
+
+    <!-- Section 1: Origins -->
+    <section class="section">
+      <div class="section-label">
+        <span class="num">01</span>
+        <h2>From Village to Organiser</h2>
+      </div>
+      <div class="section-divider"></div>
+
+      <p>
+        Patrice Émery Lumumba was born in 1925 in a small village in Kasai Province, in the heart of what was then the Belgian Congo — one of the most brutally exploited territories in all of colonial Africa. His people, the Tetela, were a minority group, and Lumumba grew up knowing what it meant to be on the outside of power.
+      </p>
+      <p>
+        He was educated at missionary schools run by Catholics and then Protestants, which was typical for Congolese who showed academic promise. What was not typical was what he did with that education. While most of his contemporaries found modest clerical work and kept their heads down, Lumumba read voraciously — newspapers, political pamphlets, anything he could find. He began writing articles for local papers under his own name, which was an act of unusual boldness for a colonised person in the 1950s.
+      </p>
+      <p>
+        He settled in Léopoldville (now Kinshasa) and then Stanleyville (now Kisangani), working as a postal clerk and later a brewery sales manager. But his real work was elsewhere. He joined mutual-aid societies, debating clubs, and — crucially — the Amicale des Postiers, a postal workers' association. These were the spaces where Congolese people could gather, talk, and slowly begin to imagine something different.
+      </p>
+      <p>
+        In 1958, Lumumba attended the All-African Peoples' Conference in Accra, Ghana. It was a turning point. He met Kwame Nkrumah, who had just led Ghana to independence — the first sub-Saharan African country to achieve it. He heard speeches about Pan-Africanism: the idea that African peoples, whatever their ethnicity or colonial border, shared a common struggle and a common future. He came home transformed. Within months, he had founded the Mouvement National Congolais — the MNC — the Congo's first genuinely national political party.
+      </p>
+
+      <div class="callout">
+        <div class="callout-title">What made the MNC different</div>
+        <p>
+          Most Congolese political movements of the late 1950s were organised along ethnic or regional lines — they represented one group's interests against another's. Lumumba deliberately built the MNC to cross those lines. He wanted a party that any Congolese person, regardless of where they came from, could belong to. In a country with over 200 ethnic groups and a colonial administration that had spent decades playing them against each other, this was a radical act.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 2: Vision -->
+    <section class="section">
+      <div class="section-label">
+        <span class="num">02</span>
+        <h2>A Vision for Unified Independence</h2>
+      </div>
+      <div class="section-divider"></div>
+
+      <p>
+        What Lumumba wanted for the Congo was not modest. He wanted full, immediate independence from Belgium — not a slow handover managed by the colonisers on their own terms, but a genuine transfer of power to the Congolese people themselves. He wanted a united country: one Congo, not a collection of regions divided by ethnicity or controlled by foreign mining interests. And he wanted that country to take its own path — not to swap Belgian masters for American or Soviet ones.
+      </p>
+
+      <div class="pull-quote">
+        <p>"We are not alone. Africa, Asia, and the free and liberated peoples from all corners of the world will always be found at the side of the Congolese."</p>
+        <span class="attribution">— Patrice Lumumba, Independence Day speech, 30 June 1960</span>
+      </div>
+
+      <p>
+        His Independence Day speech in June 1960 became famous — and infamous in the eyes of the Belgians — precisely because it named what colonialism had actually done. While King Baudouin of Belgium gave a speech praising the "genius" of King Leopold II (under whose rule millions of Congolese had been murdered, enslaved, and mutilated), Lumumba responded with the unvarnished truth. He described the "humiliations," "insults," and "blows" that Congolese people had endured. He named the inequality, the forced labour, the racism. No one had expected him to say any of this. It was not in the programme.
+      </p>
+      <p>
+        That speech is one reason Lumumba is still remembered. It was a moment when a colonised person stood up in front of the coloniser and refused to perform gratitude. For young people across Africa who heard about it, the effect was electric.
+      </p>
+      <p>
+        His economic vision was equally clear-eyed. The Congo was fabulously wealthy in natural resources — copper, cobalt, uranium, diamonds, rubber — and almost none of that wealth had ever reached Congolese people. Lumumba wanted to change that. He was not a communist; his political thinking was rooted in African nationalism more than Marxist ideology. But he was willing to accept help from wherever it came, including the Soviet Union if necessary, and that terrified the West.
+      </p>
+    </section>
+
+    <!-- Section 3: 67 days -->
+    <section class="section">
+      <div class="section-label">
+        <span class="num">03</span>
+        <h2>67 Days in Power</h2>
+      </div>
+      <div class="section-divider"></div>
+
+      <p>
+        The Congo became independent on 30 June 1960. Lumumba's MNC had won the most seats in the May elections — not a majority, but the largest single bloc — and after weeks of negotiations, he became Prime Minister. He was 34 years old.
+      </p>
+      <p>
+        The country he inherited was a disaster waiting to happen, by design. Belgium had ruled the Congo for 75 years while systematically preventing Congolese people from gaining the skills to run it. At independence, there were fewer than 30 university graduates in a country of 15 million. There were no Congolese army officers — only Belgian ones. There were no Congolese doctors, engineers, or senior civil servants. The colonisers had left an education gap so large it was almost impossible to fill overnight.
+      </p>
+      <p>
+        Within two weeks, the crisis began. The army mutinied — soldiers who had been taking orders from Belgian officers refused to continue doing so. Then, on 11 July 1960, the mineral-rich Katanga province declared independence, led by Moïse Tshombe, with direct support and funding from Belgian mining companies and the Belgian government. The secession was a naked attempt to keep Congo's most valuable territory — where the uranium used in the American atomic bombs had come from — out of Congolese control.
+      </p>
+      <p>
+        Lumumba appealed to the United Nations for help suppressing the Katanga secession. The UN sent troops — but refused to use them to restore Katangese territory to Congolese government control. It was a betrayal that left him furious, and it pushed him toward the Soviet Union, which offered military aircraft and advisors. That decision sealed his fate in the eyes of Washington.
+      </p>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <span class="tl-date">May 1960</span>
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <strong>Elections</strong>
+            <p>The MNC wins the most seats in the Congo's first democratic election. Coalition negotiations begin.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">30 Jun</span>
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <strong>Independence Day</strong>
+            <p>Lumumba's unscripted speech naming colonial violence electrifies African audiences and alarms Western governments.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">5 Jul</span>
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <strong>Army mutiny</strong>
+            <p>Congolese soldiers revolt against Belgian officers. Order collapses in the capital.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">11 Jul</span>
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <strong>Katanga secedes</strong>
+            <p>Moïse Tshombe, backed by Belgian business and government, declares Katanga independent — keeping its mines out of Lumumba's reach.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">14 Jul</span>
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <strong>UN arrives — and refuses to act</strong>
+            <p>UN forces deploy but decline to move against Katanga, leaving Lumumba without the military support he urgently needs.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">5 Sep</span>
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <strong>Dismissed — unconstitutionally</strong>
+            <p>President Kasavubu, with US backing, dismisses Lumumba as prime minister. The dismissal violates the constitution; Lumumba tries to resist.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">14 Sep</span>
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <strong>Military coup</strong>
+            <p>Army Colonel Joseph Mobutu — later a decades-long US client dictator — seizes power, backed by the CIA.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">1 Dec</span>
+          <div class="tl-dot red"></div>
+          <div class="tl-content">
+            <strong>Arrested</strong>
+            <p>Lumumba is captured while trying to travel to Stanleyville, where his supporters control the government. He is beaten in front of journalists.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">17 Jan 1961</span>
+          <div class="tl-dot red"></div>
+          <div class="tl-content">
+            <strong>Assassinated</strong>
+            <p>Lumumba is executed by firing squad in Katanga, in the presence of Belgian officers. He is 35 years old.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Cold War -->
+    <section class="section">
+      <div class="section-label">
+        <span class="num">04</span>
+        <h2>The Cold War Conspiracy</h2>
+      </div>
+      <div class="section-divider"></div>
+
+      <p>
+        Lumumba was not simply removed from power. He was hunted, captured, tortured, and killed through a conspiracy that involved multiple governments — most significantly the United States and Belgium — acting in coordination with Congolese political rivals.
+      </p>
+      <p>
+        The United States saw the Congo through a single lens: the Cold War. Africa's largest country, sitting on uranium deposits, cobalt, and copper, could not be allowed to drift toward the Soviet Union. It did not matter that Lumumba was not actually a communist — what mattered was that he was unpredictable, that he had accepted Soviet aid, and that he refused to take American instructions. That was enough.
+      </p>
+
+      <div class="players">
+        <div class="player-card">
+          <div class="player-name">CIA Director Allen Dulles</div>
+          <div class="player-role">United States</div>
+          <p>Authorised covert operations to remove Lumumba. Declassified documents show the CIA considered poisoning him. Described Lumumba as a threat comparable to Soviet expansion in Cuba.</p>
+        </div>
+        <div class="player-card">
+          <div class="player-name">Dwight D. Eisenhower</div>
+          <div class="player-role">US President</div>
+          <p>Approved the CIA's anti-Lumumba operations. A 1960 National Security Council meeting recorded his desire to see Lumumba "eliminated." The exact meaning was later disputed — the outcome was not.</p>
+        </div>
+        <div class="player-card">
+          <div class="player-name">Belgian Government</div>
+          <div class="player-role">Former coloniser</div>
+          <p>Provided direct support to the Katanga secession and to the Congolese officers who held Lumumba after his capture. Belgian officers were present at his execution. Belgium formally apologised in 2002.</p>
+        </div>
+        <div class="player-card">
+          <div class="player-name">Moïse Tshombe</div>
+          <div class="player-role">Katanga secessionist</div>
+          <p>Led the Belgian-backed breakaway state of Katanga. Ordered Lumumba's transfer to Katanga — a death sentence — and oversaw the execution. He was a Congolese man doing the West's work.</p>
+        </div>
+        <div class="player-card">
+          <div class="player-name">Joseph Mobutu</div>
+          <div class="player-role">Army Colonel / Future dictator</div>
+          <p>Led the military coup that ended Lumumba's government. Would go on — with US support — to rule the Congo as a kleptocratic dictatorship for 32 years, renaming it Zaire.</p>
+        </div>
+        <div class="player-card">
+          <div class="player-name">Joseph Kasavubu</div>
+          <div class="player-role">Congolese President</div>
+          <p>Dismissed Lumumba as Prime Minister in an unconstitutional move. A political rival who represented a regional, ethnically-based politics that Lumumba's nationalism threatened.</p>
+        </div>
+      </div>
+
+      <p>
+        The mechanics of the assassination were squalid. After his arrest in December 1960, Lumumba was held under brutal conditions, beaten, and transferred between prisons. On 17 January 1961, he was flown to Katanga with two ministers, Okito and Mpolo. That night, all three were taken into the bush and shot by a firing squad that included Katangese soldiers and at least two Belgian officers. The bodies were buried, then exhumed and dissolved in sulphuric acid. One Belgian officer kept a tooth as a trophy. It was returned to Lumumba's family in 2022 — more than 60 years later — and given a state funeral in the Democratic Republic of Congo.
+      </p>
+
+      <div class="callout">
+        <div class="callout-title">What the documents confirmed</div>
+        <p>
+          For decades, the full story was pieced together from witness accounts and leaked cables. Then, over the following years, declassified CIA and Belgian government documents confirmed what many had suspected: both governments were actively involved in plans to remove or eliminate Lumumba. A 2001 Belgian parliamentary inquiry officially concluded that Belgium bore "moral responsibility" for his death. In 2013, the US Senate Intelligence Committee released documents confirming the CIA's role in plotting against him. A Belgian investigation in 2023 went further, describing direct Belgian complicity in the assassination itself.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section 5: Symbol -->
+    <section class="section">
+      <div class="section-label">
+        <span class="num">05</span>
+        <h2>Symbol of Anti-Colonialism</h2>
+      </div>
+      <div class="section-divider"></div>
+
+      <p>
+        The speed with which Lumumba became a martyr — within months of his death — tells you something about what he had represented to people watching from across the continent and beyond. His murder was announced on 13 February 1961. Within days, protests erupted outside Belgian and American embassies from Cairo to New Delhi to Moscow. African students in European cities demonstrated in the streets. At the United Nations in New York, African and Asian delegates walked out of sessions in fury.
+      </p>
+      <p>
+        What Lumumba represented was not just Congolese independence but something larger: the idea that colonised people could govern themselves without bowing to the former masters or choosing sides in a Cold War that had nothing to do with their interests. His insistence that the Congo would be non-aligned — neither a Western client nor a Soviet satellite — was exactly what both superpowers found threatening, and exactly what newly independent nations across Asia and Africa were trying to achieve.
+      </p>
+      <p>
+        His name became a kind of shorthand. In the years after his death, liberation movements from Angola to Mozambique to Zimbabwe invoked him. Poets wrote about him — Aimé Césaire, the Martinican poet, wrote a play about his death. Soviet authorities named a university in Moscow after him — the Patrice Lumumba Peoples' Friendship University — which trained thousands of students from Africa, Asia, and Latin America (an ideological move, certainly, but one that also educated real people from the Global South). In Cuba, Che Guevara cited him. In the United States, Malcolm X cited him. He became a symbol that outlasted the specifics of his politics.
+      </p>
+
+      <div class="pull-quote">
+        <p>"Lumumba will be avenged... his name will be the battle cry of a new Africa against colonialism."</p>
+        <span class="attribution">— Kwame Nkrumah, 1961</span>
+      </div>
+
+      <p>
+        Part of what gave his symbolism such power was the manner of his death. He was killed not in battle, not by the distant violence of oppression, but by a direct conspiracy in which Western governments, a former colonial power, and local collaborators all played clearly documented roles. It was, in a sense, colonialism caught in the act — not pretending to civilise, but simply protecting its economic interests through murder. For anyone who had doubted that colonial powers would use violence to maintain their grip even after formal independence, Lumumba's assassination was proof.
+      </p>
+    </section>
+
+    <!-- Section 6: Legacy -->
+    <section class="section">
+      <div class="section-label">
+        <span class="num">06</span>
+        <h2>Legacy — And What We Cannot Know</h2>
+      </div>
+      <div class="section-divider"></div>
+
+      <p>
+        Lumumba's legacy is real and documented: he inspired generations of African and Global South leaders, his name is attached to institutions across the world, and his assassination became one of the clearest examples of Western interference in African political self-determination. The democratic Republic of Congo held a state funeral for his tooth in 2022. He is on the Congolese currency. Streets across Africa bear his name.
+      </p>
+      <p>
+        But there is another part of the legacy that is harder to reckon with, and it demands honesty: we genuinely do not know what Lumumba would have done with power over time. He was in office for 67 days. That is not enough time to judge anyone.
+      </p>
+
+      <div class="legacy-honest">
+        <div class="lh-title">An honest reckoning</div>
+        <p>
+          When we talk about Lumumba's legacy, it is tempting to write him as a perfect hero — a man of unblemished vision cut down before he could build a just and united Congo. The truth is that we simply cannot know if that's what would have happened. Other African independence leaders who survived and held power for decades — including some who were equally inspiring in opposition — became authoritarian, corrupt, or ineffective. History is full of promising figures who did not age well into power.
+        </p>
+        <p>
+          What we can say is that Lumumba had a coherent vision of what a unified, non-aligned Congo could look like. His insistence on national unity across ethnic lines, on Congolese ownership of Congolese resources, and on genuine self-determination was principled and rare. Whether he could have held that coalition together against the enormous pressures bearing down on a newly independent, resource-rich country in the middle of the Cold War — that we cannot know.
+        </p>
+        <p>
+          What followed his death offers a grim contrast. Mobutu, the CIA's man, ruled for 32 years and looted the country so comprehensively that it became one of the poorest nations on earth despite its extraordinary mineral wealth. The eastern Congo has seen almost continuous armed conflict for decades. The cobalt that powers the world's smartphones is still mined under conditions that would be recognisable to workers under Belgian rule. None of this is simply Lumumba's absence — it is the result of the specific choices made by those who removed him, and those who supported his removal. But it does mean that the version of the Congo that might have been under his leadership never got to fail or succeed on its own terms. It was ended before it could begin.
+        </p>
+        <p>
+          That is the heart of the tragedy. Not a saint erased, but a possibility closed — and closed deliberately, by people who had the power to choose differently and chose not to.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key terms -->
+    <section class="section">
+      <div class="section-label">
+        <span class="num">07</span>
+        <h2>Key Terms</h2>
+      </div>
+      <div class="section-divider"></div>
+      <dl class="key-terms">
+        <div class="term">
+          <dt>Pan-Africanism</dt>
+          <dd>The political idea that people of African descent share common interests and should work together across national borders.</dd>
+        </div>
+        <div class="term">
+          <dt>Non-alignment</dt>
+          <dd>A foreign policy position refusing to formally side with either the US or Soviet bloc during the Cold War.</dd>
+        </div>
+        <div class="term">
+          <dt>Secession</dt>
+          <dd>When a region breaks away from a country to form its own separate state — Katanga's secession was the first crisis Lumumba faced.</dd>
+        </div>
+        <div class="term">
+          <dt>Cold War</dt>
+          <dd>The political and military rivalry between the US and Soviet Union (roughly 1947–1991) that shaped — and distorted — politics across the entire developing world.</dd>
+        </div>
+        <div class="term">
+          <dt>Covert operation</dt>
+          <dd>A secret government action designed to influence events in another country, typically conducted so the sponsoring government can deny involvement.</dd>
+        </div>
+        <div class="term">
+          <dt>Decolonisation</dt>
+          <dd>The process by which colonised countries gained formal independence from European powers, mostly between the 1940s and 1970s.</dd>
+        </div>
+      </dl>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    Context &mdash; History for curious readers &mdash; Patrice Lumumba (1925&ndash;1961)
+  </footer>
+
+</body>
+</html>

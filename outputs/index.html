@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Context — History, explained. Connected to today.</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <a href="#browse" style="font-family:sans-serif;font-size:0.8rem;color:var(--muted);text-decoration:none;padding:0.4rem 0.85rem;border:1px solid rgba(255,255,255,0.1);border-radius:6px;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(255,255,255,0.25)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">Browse all →</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="home-hero">
+  <div class="home-logo">Context</div>
+  <p class="home-tagline">History, explained. Connected to today.</p>
+  <div class="home-search-wrap">
+    <input class="home-search-input" id="homeSearch" type="text" placeholder="Search people, events, concepts…" oninput="homeRunSearch(this.value)" onkeydown="homeSearchKeydown(event)" autocomplete="off" spellcheck="false">
+    <svg class="home-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    <div class="home-search-results search-results" id="homeSearchResults"></div>
+  </div>
+  <p style="font-family:sans-serif;font-size:0.8rem;color:rgba(138,138,150,0.6);">
+    12 people &nbsp;·&nbsp; 4 events &nbsp;·&nbsp; 4 concepts &nbsp;·&nbsp; growing weekly
+  </p>
+</div>
+
+<!-- ── FEATURED STORY ── -->
+<div class="featured-section">
+  <div class="featured-label">Featured stories</div>
+
+  <a class="featured-card" id="featuredCard" href="#">
+    <div class="featured-card-body">
+      <span class="featured-card-type"></span>
+      <div class="featured-card-title" id="featuredTitle"></div>
+      <div class="featured-card-desc" id="featuredDesc"></div>
+      <div class="featured-card-cta">Read the full story <span>→</span></div>
+    </div>
+    <img class="featured-card-img" id="featuredImg" src="" alt="">
+  </a>
+
+  <div class="featured-dots" id="featuredDots"></div>
+</div>
+
+<!-- ── BROWSE ── -->
+<div class="browse-section" id="browse">
+  <div class="browse-header">
+    <div class="browse-title">Browse by category</div>
+  </div>
+  <div class="browse-category-tabs">
+    <button class="browse-tab active people" onclick="switchTab('people', this)">People</button>
+    <button class="browse-tab" onclick="switchTab('events', this)">Events</button>
+    <button class="browse-tab" onclick="switchTab('concepts', this)">Concepts</button>
+  </div>
+
+  <!-- People -->
+  <div class="browse-grid" id="tab-people">
+    <a class="entry-card" href="gaddafi.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg" alt="Muammar Gaddafi">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Muammar Gaddafi</div>
+        <div class="entry-card-desc">The Bedouin goat-herder who seized power at 27 and held it for 42 years.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="augusto-pinochet.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Pinochet_de_Civil2.jpg" alt="Augusto Pinochet">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Augusto Pinochet</div>
+        <div class="entry-card-desc">The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="saddam-hussein.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Saddam_Hussein_in_1998.png" alt="Saddam Hussein">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Saddam Hussein</div>
+        <div class="entry-card-desc">The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="henry-kissinger.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg" alt="Henry Kissinger">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Henry Kissinger</div>
+        <div class="entry-card-desc">The refugee who became America's most powerful and most controversial diplomat.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="salvador-allende.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/7/72/Salvador_Allende%2C_President_of_Chile%2C_gtfy.00154.jpg" alt="Salvador Allende">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Salvador Allende</div>
+        <div class="entry-card-desc">The first democratically elected Marxist president — overthrown and killed in 1973.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="richard-nixon.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Richard_M._Nixon%2C_ca._1935_-_1982_-_NARA_-_530679.jpg" alt="Richard Nixon">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Richard Nixon</div>
+        <div class="entry-card-desc">The president who opened China, deepened Vietnam, and resigned over Watergate.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="obama.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg" alt="Barack Obama">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Barack Obama</div>
+        <div class="entry-card-desc">America's first Black president — who promised transformation and left a country more divided.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="gamal-abdel-nasser.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg" alt="Gamal Abdel Nasser">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Gamal Abdel Nasser</div>
+        <div class="entry-card-desc">The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="george-w-bush.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png" alt="George W. Bush">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">George W. Bush</div>
+        <div class="entry-card-desc">The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="anwar-sadat.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg" alt="Anwar Sadat">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Anwar Sadat</div>
+        <div class="entry-card-desc">The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="khalifa-haftar.html">
+      <img class="entry-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHWI8HDb8HXi6LQ8L0CdBt1rgNHNMVVcXwVxat7YVG-w&s=10" alt="Khalifa Haftar">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Khalifa Haftar</div>
+        <div class="entry-card-desc">The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="ayatollah-khomeini.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg" alt="Ayatollah Khomeini">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Ayatollah Khomeini</div>
+        <div class="entry-card-desc">The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Events -->
+  <div class="browse-grid" id="tab-events" style="display:none;">
+    <a class="entry-card" href="1973-arab-israeli-war.html">
+      <img class="entry-card-thumb" src="https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1" alt="The 1973 Arab-Israeli War">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag event">Event</span></div>
+        <div class="entry-card-name">The 1973 Arab-Israeli War</div>
+        <div class="entry-card-desc">Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="iran-iraq-war.html">
+      <img class="entry-card-thumb" src="https://www.atlanticcouncil.org/wp-content/uploads/2018/08/IraqiMinister_Feature.jpg" alt="The Iran-Iraq War">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag event">Event</span></div>
+        <div class="entry-card-name">The Iran-Iraq War</div>
+        <div class="entry-card-desc">Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="context-v4.html">
+      <img class="entry-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauTAgmpsG54Nrx44zBq9E8ULZ277MHKl6Sb1u36uoKg&s=10" alt="The Libyan Civil War">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag event">Event</span></div>
+        <div class="entry-card-name">The Libyan Civil War</div>
+        <div class="entry-card-desc">How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="operation-condor.html">
+      <img class="entry-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-G2XVVmYlkMhDwayqqReq7VLvMpX9Q7K-V_Q-CumGjg&s=10" alt="Operation Condor">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag event">Event</span></div>
+        <div class="entry-card-name">Operation Condor</div>
+        <div class="entry-card-desc">How six South American dictatorships built a secret transnational assassination network.</div>
+      </div>
+    </a>
+  </div>
+
+  <!-- Concepts -->
+  <div class="browse-grid" id="tab-concepts" style="display:none;">
+    <a class="entry-card" href="non-aligned-movement.html">
+      <img class="entry-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgm8e0OwqbxHQvfi0I13N97m2NerBXhQHNhaFm8MzgJQ&s=10" alt="The Non-Aligned Movement">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag concept">Concept</span></div>
+        <div class="entry-card-name">The Non-Aligned Movement</div>
+        <div class="entry-card-desc">The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="responsibility-to-protect.html">
+      <img class="entry-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN64RcrqCtuQHaO9sY3UWxc-6G74E_aXlnE2nYkVLGPA&s=10" alt="The Responsibility to Protect">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag concept">Concept</span></div>
+        <div class="entry-card-name">The Responsibility to Protect</div>
+        <div class="entry-card-desc">The idea that sovereignty is not a shield — and what happens when the world tries to enforce that.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="baathism.html">
+      <img class="entry-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRleA1omBJ8JkTf_Zg3OF6_aUJp9jqhhoyqmPMs967xRg&s=10" alt="Ba'athism">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag concept">Concept</span></div>
+        <div class="entry-card-name">Ba'athism</div>
+        <div class="entry-card-desc">The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="democratic-socialism.html">
+      <img class="entry-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGiAgJ1oUaATfCo_fIkoaqtwxvdhbNv9EAs7f7lhqKxA&s" alt="Democratic Socialism">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag concept">Concept</span></div>
+        <div class="entry-card-name">Democratic Socialism</div>
+        <div class="entry-card-desc">The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.</div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<!-- ── MISSION ── -->
+<div class="mission-section">
+  <div>
+    <div class="mission-eyebrow">Why Context exists</div>
+    <h2 class="mission-heading">You keep hearing the same names and events — and never quite getting the full story.</h2>
+    <div class="mission-body">
+      <p>When a news story mentions Kissinger, Pinochet, or the Responsibility to Protect, it assumes you already know the background. Context gives you that background — not as a dry encyclopedia entry, but as a real explanation of what happened, why it mattered, and what it still means today.</p>
+      <p>Every article pulls from multiple academic sources, names the contested evidence, and connects historical events to the world you're actually living in. Think of it as the conversation a great history teacher would have with you — if you had one on hand at 11pm.</p>
+    </div>
+  </div>
+  <div class="mission-pillars">
+    <div class="mission-pillar">
+      <div class="mission-pillar-title">Multi-source</div>
+      <p>Every claim is attributed. Every contested figure is flagged. We cite the historians, not just the Wikipedia summary of what they said.</p>
+    </div>
+    <div class="mission-pillar" style="border-left-color:var(--accent);">
+      <div class="mission-pillar-title" style="color:var(--accent);">Connected to today</div>
+      <p>Each article ends with a "Why It Matters Today" section — not because history repeats itself, but because the same decisions, dynamics, and power structures keep resurfacing.</p>
+    </div>
+    <div class="mission-pillar" style="border-left-color:var(--green);">
+      <div class="mission-pillar-title" style="color:var(--green);">Honest about complexity</div>
+      <p>We don't flatten contested history into simple heroes and villains. The Legacy & Debate section in every article reflects what serious scholars actually argue about — not just what's comfortable.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources.</p>
+</footer>
+
+<script>
+const CONTEXT_ARTICLES = [
+  { type: 'concept', title: 'Democratic Socialism', desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGiAgJ1oUaATfCo_fIkoaqtwxvdhbNv9EAs7f7lhqKxA&s' },
+  { type: 'event',   title: 'The 1973 Arab-Israeli War', desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html', img: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+  { type: 'event',   title: 'The Iran-Iraq War', desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', img: 'https://www.atlanticcouncil.org/wp-content/uploads/2018/08/IraqiMinister_Feature.jpg' },
+  { type: 'concept', title: "Ba'athism", desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRleA1omBJ8JkTf_Zg3OF6_aUJp9jqhhoyqmPMs967xRg&s=10' },
+  { type: 'person',  title: 'Khalifa Haftar', desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHWI8HDb8HXi6LQ8L0CdBt1rgNHNMVVcXwVxat7YVG-w&s=10' },
+  { type: 'concept', title: 'The Non-Aligned Movement', desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgm8e0OwqbxHQvfi0I13N97m2NerBXhQHNhaFm8MzgJQ&s=10' },
+  { type: 'person',  title: 'Anwar Sadat', desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+  { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN64RcrqCtuQHaO9sY3UWxc-6G74E_aXlnE2nYkVLGPA&s=10' },
+  { type: 'event',   title: 'The Libyan Civil War', desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'context-v4.html', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauTAgmpsG54Nrx44zBq9E8ULZ277MHKl6Sb1u36uoKg&s=10' },
+  { type: 'event',   title: 'Operation Condor', desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-G2XVVmYlkMhDwayqqReq7VLvMpX9Q7K-V_Q-CumGjg&s=10' },
+  { type: 'person',  title: 'Muammar Gaddafi', desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+  { type: 'person',  title: 'Augusto Pinochet', desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html', img: 'https://upload.wikimedia.org/wikipedia/commons/b/ba/Pinochet_de_Civil2.jpg' },
+  { type: 'person',  title: 'Saddam Hussein', desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', img: 'https://upload.wikimedia.org/wikipedia/commons/9/9a/Saddam_Hussein_in_1998.png' },
+  { type: 'person',  title: 'Henry Kissinger', desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html', img: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+  { type: 'person',  title: 'Salvador Allende', desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', img: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Salvador_Allende%2C_President_of_Chile%2C_gtfy.00154.jpg' },
+  { type: 'person',  title: 'Richard Nixon', desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', img: 'https://upload.wikimedia.org/wikipedia/commons/3/39/Richard_M._Nixon%2C_ca._1935_-_1982_-_NARA_-_530679.jpg' },
+  { type: 'person',  title: 'Barack Obama', desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+  { type: 'person',  title: 'Gamal Abdel Nasser', desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+  { type: 'person',  title: 'George W. Bush', desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png' },
+  { type: 'person',  title: 'Ayatollah Khomeini', desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+];
+
+// Rotating featured story
+const FEATURED = [
+  CONTEXT_ARTICLES.find(a => a.url === '1973-arab-israeli-war.html'),
+  CONTEXT_ARTICLES.find(a => a.url === 'operation-condor.html'),
+  CONTEXT_ARTICLES.find(a => a.url === 'democratic-socialism.html'),
+  CONTEXT_ARTICLES.find(a => a.url === 'iran-iraq-war.html'),
+].filter(Boolean);
+let featIdx = 0;
+
+function renderFeatured(idx) {
+  const f = FEATURED[idx];
+  document.getElementById('featuredCard').href = f.url;
+  document.getElementById('featuredTitle').textContent = f.title;
+  document.getElementById('featuredDesc').textContent = f.desc;
+  document.getElementById('featuredImg').src = f.img;
+  document.getElementById('featuredImg').alt = f.title;
+  const typeEl = document.querySelector('.featured-card-type');
+  typeEl.innerHTML = `<span class="topic-type-tag ${f.type}">${f.type}</span>`;
+  document.querySelectorAll('.featured-dot').forEach((d, i) => d.classList.toggle('active', i === idx));
+}
+
+function buildDots() {
+  const container = document.getElementById('featuredDots');
+  FEATURED.forEach((_, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'featured-dot' + (i === 0 ? ' active' : '');
+    btn.onclick = () => { clearInterval(rotateTimer); featIdx = i; renderFeatured(i); rotateTimer = setInterval(rotateFeatured, 5000); };
+    container.appendChild(btn);
+  });
+}
+
+function rotateFeatured() {
+  featIdx = (featIdx + 1) % FEATURED.length;
+  renderFeatured(featIdx);
+}
+
+buildDots();
+renderFeatured(0);
+let rotateTimer = setInterval(rotateFeatured, 5000);
+
+// Tab switching
+function switchTab(name, btn) {
+  ['people','events','concepts'].forEach(t => {
+    document.getElementById('tab-' + t).style.display = t === name ? 'grid' : 'none';
+  });
+  document.querySelectorAll('.browse-tab').forEach(b => {
+    b.classList.remove('active','people','events','concepts');
+  });
+  btn.classList.add('active', name);
+}
+
+// Homepage search
+let _hIdx = -1;
+function homeRunSearch(q) {
+  const box = document.getElementById('homeSearchResults');
+  const term = q.trim().toLowerCase();
+  if (!term) { box.classList.remove('open'); return; }
+  const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+  const hits = CONTEXT_ARTICLES
+    .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+    .sort((a, b) => sc(b.title) - sc(a.title));
+  _hIdx = -1;
+  if (!hits.length) {
+    box.innerHTML = '<div class="search-empty">No articles found.</div>';
+  } else {
+    box.innerHTML = hits.map((a, i) =>
+      `<a class="search-result" href="${a.url}" data-i="${i}">
+        <div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span>
+        <span class="search-result-title">${a.title}</span></div>
+        <div class="search-result-desc">${a.desc}</div></a>`
+    ).join('');
+  }
+  box.classList.add('open');
+}
+function homeSearchKeydown(e) {
+  const items = document.querySelectorAll('#homeSearchResults .search-result');
+  if (e.key === 'ArrowDown') { e.preventDefault(); _hIdx = Math.min(_hIdx + 1, items.length - 1); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); _hIdx = Math.max(_hIdx - 1, 0); }
+  else if (e.key === 'Enter' && _hIdx >= 0) { items[_hIdx].click(); return; }
+  else if (e.key === 'Escape') { document.getElementById('homeSearchResults').classList.remove('open'); return; }
+  items.forEach((r, i) => r.classList.toggle('focused', i === _hIdx));
+}
+document.addEventListener('click', e => {
+  if (!document.querySelector('.home-search-wrap').contains(e.target))
+    document.getElementById('homeSearchResults').classList.remove('open');
+});
+
+// Scroll progress
+window.addEventListener('scroll', () => {
+  document.getElementById('progressBar').style.height =
+    Math.min((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100, 100) + '%';
+});
+</script>
+</body>
+</html>

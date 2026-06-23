@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalifa Haftar — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">North Africa</a><span class="breadcrumb-sep">›</span>
+        <span>Khalifa Haftar</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHWI8HDb8HXi6LQ8L0CdBt1rgNHNMVVcXwVxat7YVG-w&s=10" alt="Khalifa Haftar" style="width:120px;height:120px;object-fit:cover;border-radius:10px;display:block;">
+        </div>
+        <div class="hero-content">
+          <div class="hero-region-tag">Person</div>
+          <h1>Khalifa Haftar</h1>
+          <div class="hero-native">خليفة حفتر</div>
+          <p class="hero-sub">The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.</p>
+          <div class="hero-meta">
+            <span>~15 min read</span><span>·</span>
+            <span>b. 1943</span><span>·</span>
+            <span>Libya</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#doctrine">Military Doctrine</a></li>
+        <li><a href="#campaigns">Key Campaigns</a></li>
+        <li><a href="#rule">Control &amp; Methods</a></li>
+        <li><a href="#late-career">Where He Stands Now</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="quick-facts-grid">
+            <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Khalifa Belqasim Haftar (also rendered Hifter in U.S. documents)</div></div>
+            <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">November 7, 1943, Ajdabiya, Libya (then under Italian colonial rule)</div></div>
+            <div class="qf-item"><div class="qf-label">Status</div><div class="qf-value">Alive; Commander-in-Chief of the Libyan National Army (LNA), effective ruler of eastern and southern Libya</div></div>
+            <div class="qf-item"><div class="qf-label">Military rank</div><div class="qf-value">Field Marshal — a title he awarded himself in 2016, unrecognised by any international body</div></div>
+            <div class="qf-item"><div class="qf-label">Career arc</div><div class="qf-value">Gaddafi-era army officer → captured and abandoned in Chad → CIA-linked exile in Virginia (1990–2011) → Libyan revolution commander → LNA warlord (2014–present)</div></div>
+            <div class="qf-item"><div class="qf-label">Ideology</div><div class="qf-value">Arab nationalist; secular authoritarian; professes anti-Islamism; in practice a pragmatic power-accumulator with shifting alliances</div></div>
+            <div class="qf-item"><div class="qf-label">Backers</div><div class="qf-value">UAE, Egypt, Russia (Wagner Group); France (tacitly); Saudi Arabia; previously the United States</div></div>
+            <div class="qf-item"><div class="qf-label">U.S. citizenship</div><div class="qf-value">Held U.S. citizenship during his Virginia exile years; status contested and murky after his return to Libya</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Rise</h2>
+
+        <p>Khalifa Haftar was born in 1943 in Ajdabiya, a provincial town in the Cyrenaica region of eastern Libya — then still under Italian colonial rule, soon to become a British protectorate, and eventually part of the independent Kingdom of Libya under King Idris. He came from a tribal background connected to the Firjan, a clan of the broader Awagir tribal confederation. It was an unremarkable origin by any measure, and Haftar himself left few traces in the historical record until he became a military officer in the Libya that Muammar Gaddafi had just seized by coup in 1969.</p>
+
+        <p>Haftar rose through the Libyan military under Gaddafi's patronage in the 1970s, trained in the Soviet Union at Frunze Military Academy — one of the USSR's elite war colleges — and became a trusted officer in Gaddafi's inner circle. The defining event of his early career was the Libya-Chad War of the 1980s, fought over the Aouzou Strip, a mineral-rich border region Libya claimed. Haftar commanded Libyan forces in Chad. In 1987, those forces were routed by Chad's French-backed army at the Battle of Ouadi Doum, and Haftar was captured along with approximately 700 of his men. Gaddafi, humiliated, denied that Haftar or his troops even existed — leaving them to rot in Chadian detention. The betrayal was complete and personal.</p>
+
+        <p>What happened next remains one of the more extraordinary episodes in modern Libyan history. The CIA, which had been running covert operations against Gaddafi since the early 1980s, arranged for Haftar and his captured men to be airlifted to Zaire (now the Democratic Republic of Congo), where they were retrained and reconstituted as an opposition force. By 1990, the U.S. had resettled Haftar in Falls Church, Virginia, where he lived quietly — U.S. citizenship reportedly in hand — for the better part of two decades, available to the CIA as an asset and waiting for Gaddafi to fall. The wait was long. It ended in 2011.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">1987</div><div class="stat-label">Year Haftar was captured in Chad — and abandoned by Gaddafi, the betrayal that shaped everything that followed</div></div>
+          <div class="stat-box"><div class="stat-number">~20</div><div class="stat-label">Years spent in exile in Falls Church, Virginia, before returning to Libya in 2011 after Gaddafi's fall</div></div>
+          <div class="stat-box"><div class="stat-number">2014</div><div class="stat-label">Year Haftar launched "Operation Dignity," beginning his military campaign for control of Libya</div></div>
+          <div class="stat-box"><div class="stat-number">14+</div><div class="stat-label">Months besieging Tripoli (April 2019 – June 2020) before being repelled with Turkish military intervention</div></div>
+        </div>
+      </section>
+
+      <section id="doctrine">
+        <h2>Military Doctrine</h2>
+
+        <p>Haftar is not an ideologue in any coherent sense — he has borrowed and discarded frameworks as his circumstances have required. But his operating style and worldview have been consistent enough to identify. He is a military authoritarian who believes Libya's problems are caused by political Islam, and that the solution is a strong army led by himself. His model is explicitly Egypt's Abdel Fattah el-Sisi, who overthrew the elected Muslim Brotherhood government in Cairo in 2013 and whose relationship with Haftar has been close and mutually reinforcing ever since.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Anti-Islamism as Organising Principle</div>
+            <p>Haftar frames every military and political action through the lens of fighting "terrorism" — a category he applies broadly to include not just jihadist groups but any Islamist political party, armed faction, or rival militia that opposes him. This framing has been useful: it allowed him to present his campaign for personal power as a counter-terrorism operation to Western audiences who were predisposed to sympathise. It also provided cover for attacks on civilian targets and rival armed groups that had no meaningful jihadist connections.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">The Sisi Model</div>
+            <p>El-Sisi's 2013 coup in Egypt — in which the military overthrew an elected government on the grounds that it was dominated by Islamists — gave Haftar both a practical model and a powerful sponsor. Egypt under el-Sisi has been one of Haftar's most consistent supporters, providing weapons, air support, logistics, and diplomatic cover. Haftar has made no secret of his admiration for el-Sisi's approach: strong military authority, suppression of political Islam, and the subordination of civilian institutions to military command.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Superpower Court</div>
+            <p>Haftar has been extraordinarily effective at cultivating great-power backers simultaneously, often playing them against each other. He has received weapons from the UAE in violation of UN arms embargoes; worked with Russian Wagner Group mercenaries on the ground; courted France to neutralise European Union condemnation; maintained contact with the United States even after Washington's Libya policy shifted against him. The pattern is familiar to students of Cold War non-alignment: extract support from multiple patrons while maintaining enough autonomy to switch allegiances when convenient.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Oil as Strategic Target</div>
+            <p>Haftar has consistently weaponised Libya's oil infrastructure — seizing ports, blockading exports, and using the country's energy revenues as both a source of funding and a bargaining chip. In January 2020, LNA forces blockaded all of Libya's major oil export terminals, costing the internationally recognised government billions in revenue and bringing oil production to near zero. The blockade lasted nine months. The move demonstrated Haftar's understanding that in Libya, control of oil is control of power — and that economic warfare is as effective as military warfare.</p>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"We are not a militia. We are the national army, and we will liberate all of Libya from the terrorists."</blockquote>
+          <cite>— Khalifa Haftar, speaking to reporters, 2016</cite>
+        </div>
+      </section>
+
+      <section id="campaigns">
+        <h2>Key Campaigns</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">February 2011</div>
+              <div class="tl-title">Return from Virginia — Haftar Rejoins the Revolution, Marginally</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>When protests erupted against Gaddafi in February 2011 and quickly turned into armed rebellion, Haftar flew back to Libya after nearly two decades in the United States. He landed in Benghazi, introduced himself to the National Transitional Council (NTC) as an experienced military commander, and was given a nominal role in the rebel military. In practice, his return was underwhelming. The rebel fighters who had organically taken up arms against Gaddafi were suspicious of a man who had spent twenty years in Virginia; his command authority was disputed; and the war's outcome was ultimately decided by NATO airpower rather than ground commanders in any case.</p>
+            <p>When Gaddafi was captured and killed in October 2011, Haftar was a secondary figure in a decentralised revolution. He had not led the fight, had not built a loyal force, and had not accumulated the kind of battlefield credibility that the dozens of competing armed factions now wielding real power in Libya possessed. For the next two years, he was a frustrated presence on the margins of Libyan politics — waiting for his moment and watching the country descend into fragmentation.</p>
+            <div class="tl-sources"><span class="src-chip">Pack (2021)</span><span class="src-chip">Wehrey (2018)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">May 2014</div>
+              <div class="tl-title">Operation Dignity — Haftar Declares War on the Islamists and the Elected Parliament Simultaneously</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>On May 16, 2014, Haftar appeared on television in military uniform and declared "Operation Dignity" — a campaign to purge Islamist militias from Benghazi and eastern Libya. His forces, drawn from remnants of the old Gaddafi-era military and allied tribal fighters, attacked militia strongholds in Benghazi. He simultaneously called for the suspension of the General National Congress (GNC), the elected but deeply dysfunctional Libyan parliament in Tripoli. He framed the parliament as controlled by Islamists — a contestable claim but one that resonated with a significant portion of the Libyan population exhausted by three years of militia chaos.</p>
+            <p>The declaration was dramatic but initially militarily marginal. Haftar's forces were outgunned by the entrenched militias and his political support was fragmented. What transformed Operation Dignity from a coup attempt into a viable military campaign was external support: the UAE began air operations from Egyptian bases in August 2014, striking militia positions in Tripoli — without UN Security Council authorisation and without informing the United States until after the fact. Egypt provided weapons and logistics. With Gulf funding and Egyptian cooperation, Haftar's campaign gained traction. The country formally split: a Tobruk-based parliament and government backed Haftar; a Tripoli-based government backed by Islamist militias opposed him.</p>
+            <div class="tl-sources"><span class="src-chip">Wehrey (2018)</span><span class="src-chip">Lacher (2020)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2016–2018</div>
+              <div class="tl-title">Benghazi and the South — Consolidating the East, Expanding to Oil Fields</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>After two years of grinding urban warfare, LNA forces cleared Benghazi of armed opposition by late 2017. The battle for Benghazi was brutal: entire city districts were flattened, thousands of civilians killed or displaced, and the city's pre-war population of one million reduced by roughly a third. Amnesty International and the UN documented war crimes by LNA-affiliated forces, including summary executions of prisoners, the use of landmines in residential areas, and the desecration of bodies. Haftar declared victory and posed for photographs in the rubble.</p>
+            <p>By 2018, Haftar's forces had extended their control over most of Libya's oil crescent — the coastal arc where the country's major oil facilities are concentrated — and were pushing into the Fezzan region in Libya's vast southern interior. The southern campaign involved complex negotiations with and coercion of the Tebu, Tuareg, and Arab tribal confederations that controlled the desert routes. Haftar consolidated the east and south not through administrative governance — the areas he controlled remained poorly governed and economically dysfunctional — but through military dominance and tribal patronage networks. He awarded himself the rank of Field Marshal in 2016.</p>
+            <div class="tl-sources"><span class="src-chip">Amnesty International (2018)</span><span class="src-chip">Lacher (2020)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">April 2019 – June 2020</div>
+              <div class="tl-title">The Tripoli Offensive — 14 Months of Siege, Then Repulsion by Turkey</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>On April 4, 2019 — the day UN Secretary-General António Guterres landed in Tripoli for a peace visit — Haftar launched a surprise offensive on the Libyan capital. His forces advanced rapidly to Tripoli's southern suburbs, coming within a few kilometres of the city centre before the front lines stabilised into a grinding siege. The offensive was a strategic gamble: Haftar expected the GNA (Government of National Accord, the UN-recognised government in Tripoli) to collapse quickly, as many of its militia defenders were unreliable. The gamble failed. The city held.</p>
+            <p>For fourteen months, LNA forces shelled Tripoli's southern suburbs. UAE drones operating from Libyan and Sudanese air bases conducted hundreds of strikes in support of LNA ground forces. Russia's Wagner Group deployed an estimated 1,200 mercenaries, including snipers, mine-laying specialists, and operators of advanced air defence systems. The UN arms embargo was violated so openly by so many parties that the UN itself described it as "a joke." In January 2020, Turkey deployed troops and military hardware in support of the GNA — and the military balance shifted. Turkish drones proved decisive against Wagner's anti-aircraft systems; LNA supply lines were disrupted; and in June 2020, Haftar's forces retreated from Tripoli's outskirts entirely. The siege had failed.</p>
+            <div class="tl-sources"><span class="src-chip">UN Panel of Experts (2021)</span><span class="src-chip">Lacher (2020)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="rule">
+        <h2>Control &amp; Methods</h2>
+
+        <h3>A Military Administration, Not a State</h3>
+        <p>In the territory he controls — eastern Libya and much of the south — Haftar has not built a functioning state. He has built a military administration. The Libyan National Army controls territory through force and patronage rather than through public services, legal institutions, or democratic accountability. Courts function erratically; civil administration is subordinate to military command; armed groups nominally affiliated with the LNA operate with significant autonomy and engage in predatory behaviour — extortion, smuggling, kidnapping — that the LNA leadership either cannot or will not stop. Foreign policy observers have noted that the areas under Haftar's control have seen less political violence than the chaotic Tripoli-based west in some periods, but this relative stability is the stability of military occupation rather than legitimate governance.</p>
+
+        <h3>The Wagner Factor</h3>
+        <p>Russia's deployment of Wagner Group mercenaries alongside LNA forces beginning in 2019 marked a significant escalation of Russian involvement in Libya. Wagner operators provided advanced skills — particularly in air defence, mine-laying, and sniping — that the LNA lacked. They also provided Moscow with leverage: Russian bases and access rights in eastern Libya, a foothold on NATO's southern flank that Russia had not had since Gaddafi's fall. Haftar has neither confirmed nor denied Wagner's presence, maintaining a useful ambiguity about the extent of Russian involvement in his campaign.</p>
+
+        <h3>Torture, Disappearances, and Extrajudicial Killings</h3>
+        <div class="callout warning">
+          <div class="callout-label">Documented abuses</div>
+          <h4>The Tarhuna Massacre and Systematic Detention</h4>
+          <p>When LNA-affiliated forces retreated from Tarhuna, a town south of Tripoli, in June 2020, investigators discovered mass graves containing at least 106 bodies — civilians and combatants, including women and children. The killings were attributed primarily to the Kaniyat militia, which had fought alongside the LNA during the Tripoli offensive. UN investigators found evidence that the killings had been systematic and deliberate. Separately, the UN and Amnesty International documented widespread torture and ill-treatment in LNA detention facilities in eastern Libya, the enforced disappearance of political opponents and journalists, and the extrajudicial execution of prisoners — including a widely circulated video appearing to show LNA-affiliated fighters executing a man in the desert.</p>
+        </div>
+
+        <h3>Instrumentalising Migration</h3>
+        <p>Control over Libya's coastline has given Haftar — like Gaddafi before him — leverage over European governments desperate to stop irregular migration across the Mediterranean. LNA-affiliated coast guard units operating in areas under Haftar's nominal control have been documented by UN investigators intercepting migrant boats and returning migrants to detention facilities where they face extortion, torture, and sale to traffickers. This has not prevented European governments, particularly Italy and France, from maintaining working relationships with Haftar's administration — the implicit logic being that cooperation on migration is worth overlooking human rights abuses.</p>
+      </section>
+
+      <section id="late-career">
+        <h2>Where He Stands Now</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2020–present</div>
+              <div class="tl-title">Stalemate and Entrenched Power — Haftar Controls the East, Tripoli Holds</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>The failure of the Tripoli offensive in June 2020 produced a ceasefire and a de facto partition of Libya: the internationally recognised Government of National Unity (GNU) in Tripoli controls the west; Haftar's LNA controls the east and south, including most of the oil infrastructure. A UN-mediated political process produced a transitional government and an agreed framework for elections, but those elections have been repeatedly postponed — partly because Haftar himself registered as a presidential candidate in 2021, raising questions about whether a military commander could run for civilian office while maintaining command of an armed force.</p>
+            <p>Haftar remains one of the most powerful individuals in Libya and shows no sign of voluntarily relinquishing that power. He has survived the fall of his Gaddafi patron, two decades of CIA-assisted exile, a failed siege, and multiple ceasefire negotiations. His ability to persist despite serial setbacks is itself a kind of political achievement — testament to both his personal tenacity and the fragmented, externally manipulated character of Libyan politics that has allowed no single actor to consolidate power nationally. At 80-plus years old, he is increasingly a figure of the transitional period, but his institutional creation — the LNA — will outlast whatever happens to him personally.</p>
+            <div class="tl-sources"><span class="src-chip">UN Panel of Experts (2021)</span><span class="src-chip">Pack (2021)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+        <p>Haftar is not a historical figure. He is a current one. As of 2026 he remains the dominant military force in eastern Libya — controlling the oil crescent, backed by Russia and the UAE, undefeated and unaccountable. Libya is the site of one of the world's active conflicts, and understanding Haftar is inseparable from understanding why the conflict has not ended and why several major powers prefer it that way.</p>
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>Libya's Civil War Has No End in Sight</h3>
+            <p>The 2020 UN-brokered ceasefire between Haftar's LNA and the Tripoli-based GNU stopped the active fighting but resolved nothing structural. Haftar controls the east and the oil fields; a rival authority controls the west and the capital. Neither can win; neither can lose; neither has incentive to genuinely negotiate. The UN Special Mission to Libya has gone through multiple envoys without producing a political settlement. Libya has not held a national election since 2014.</p>
+            <ul class="matters-subpoints">
+              <li>The December 2021 presidential elections — which Haftar had registered to contest — were postponed indefinitely after disputes over candidate eligibility; no rescheduling has succeeded</li>
+              <li>Oil revenues, Libya's primary resource, flow through the National Oil Corporation — but who controls those revenues depends on which faction controls which fields at any given moment</li>
+              <li>Eastern Libya under Haftar's LNA operates under military governance with no functioning civilian institutions — a 10-year state of exception that has normalised arbitrary detention and extrajudicial killing</li>
+              <li>The GNU in Tripoli has its own accountability problems — it relies on militias with competing interests that frequently clash, making Tripoli itself ungoverned in any meaningful sense</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Russia's African Footprint — Libya as the Template</h3>
+            <p>Haftar was the first major test of Russia's Africa strategy using the Wagner Group as a proxy force. Beginning around 2019, Wagner fighters, drones, and air defence systems backed his LNA — providing military capability that nearly allowed him to take Tripoli in 2019–2020. When Wagner collapsed after Prigozhin's death in 2023, its Libya operations were absorbed into Russian state structures. Libya became the model Russia then replicated in Mali, the Central African Republic, Sudan, Niger, and Burkina Faso.</p>
+            <ul class="matters-subpoints">
+              <li>Russia established air bases at al-Jufra and Brak al-Shati in Haftar-controlled territory — its first permanent military presence in Africa</li>
+              <li>An estimated 1,200–2,000 Wagner personnel were operating in Libya at peak deployment; their replacement by "Africa Corps" (Russian state-controlled successor) continued the mission</li>
+              <li>The Libya model — back a warlord with air power, drones, and mercenaries in exchange for basing rights and natural resource access — is now Russia's standard operating procedure on the continent</li>
+              <li>Turkey's intervention on the GNU side (2019–20) turned Libya into a direct Russia-Turkey proxy confrontation — a geopolitical dynamic that was then replicated in Syria and beyond</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>UAE, Egypt, and the Authoritarian Alignment</h3>
+            <p>Haftar's backers reveal the geopolitical logic of his project. The UAE and Egypt both support him not because they want a stable Libya but because they want to prevent an Islamist-aligned government from taking root on Egypt's western border and in a country that controls Mediterranean migration routes. This is the same logic that drives their support for authoritarian consolidation in Sudan, Tunisia, and elsewhere — and Libya is the clearest case study in how Gulf money and Egyptian military cooperation operate to produce these outcomes.</p>
+            <ul class="matters-subpoints">
+              <li>The UAE provided Haftar with armed drones (Wing Loong II) — their most significant military support to a non-state actor — in violation of the UN arms embargo</li>
+              <li>Egypt conducted airstrikes in support of Haftar's 2014 and 2019 offensives, also in violation of the arms embargo, without significant international consequence</li>
+              <li>France's support for Haftar — despite being a NATO ally of the pro-GNU Italian government — reflected French competition with Italy for economic influence in Libya and French counter-terrorism priorities in the Sahel</li>
+              <li>The UN Panel of Experts documented arms embargo violations by the UAE, Jordan, Turkey, Russia, and others — all without triggering Security Council action because the same states sit on the Council</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Migration, Europe, and the Humanitarian Cost</h3>
+            <p>Haftar's control of eastern Libya — and the GNU's reliance on western militias — has produced a migration detention system that the UN has described as amounting to crimes against humanity. Migrants crossing from sub-Saharan Africa toward the Mediterranean are routinely detained in facilities where torture, sexual violence, forced labour, and extortion are documented and systematic. Europe's response has been to fund the Libyan Coast Guard — which returns migrants to these facilities — in exchange for reduced crossing numbers.</p>
+            <ul class="matters-subpoints">
+              <li>An estimated 600,000–700,000 migrants were held in Libyan detention facilities at various points; the UN has documented systematic torture and sexual violence as standard practice</li>
+              <li>The EU-Libya Memorandum of Understanding (2017, renewed) pays Libyan authorities to intercept migrants at sea and return them to detention — a policy EU courts and the European Parliament have questioned as violating non-refoulement obligations</li>
+              <li>Haftar's forces control the southern border crossings where migrants from Niger, Chad, and Sudan enter Libya — giving him direct economic interest in migration flows as a source of both labour and extortion revenue</li>
+              <li>Dead migrants recovered in the Mediterranean are disproportionately from the Libyan route; the IOM estimates over 20,000 people have died attempting the crossing since 2014</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>Haftar is a figure it is difficult to assess fairly because his story is unfinished. He has not fallen; he has not prevailed; he has simply persisted. The historical verdict on him will depend heavily on how Libya's conflict resolves — if it resolves. What can be said now is that he has been the most important single military actor in the country since 2014, that his campaign has prolonged Libya's civil war rather than ended it, and that the documented abuses committed by his forces have been severe.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">What his supporters argue</div>
+            <ul>
+              <li>He cleared Benghazi of jihadist armed groups (Ansar al-Sharia, ISIS affiliates) who had made the city ungovernable — a genuine security achievement whatever his methods</li>
+              <li>He provided a framework of military order in eastern Libya when the alternative was the chaotic militia fragmentation that had consumed the west</li>
+              <li>His anti-Islamist line, whatever its cynical uses, reflects a genuine constituency in Libya and the broader Arab world that fears political Islam's consequences</li>
+              <li>He has maintained control over most of Libya's oil infrastructure — which, whatever one thinks of him, has prevented catastrophic economic collapse</li>
+              <li>He restored a semblance of functioning institutions in Benghazi after years of near-total breakdown</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">What the evidence shows</div>
+            <ul>
+              <li>The Tripoli offensive (2019–2020) killed over 1,000 civilians and displaced 150,000 — catastrophic harm imposed on Libya's capital for a strategic gamble that failed</li>
+              <li>Mass graves at Tarhuna and systematic torture in LNA detention facilities are documented by UN investigators and Amnesty International — war crimes by any legal standard</li>
+              <li>He has consistently sabotaged international peace processes when they did not guarantee him personal power — the 2021 election registration was widely seen as a spoiler tactic</li>
+              <li>He prolonged rather than ended Libya's civil war; the 2014 Operation Dignity escalated a bad situation into a decade-long catastrophe</li>
+              <li>His claim to represent a "national army" against "terrorists" has served to legitimate attacks on rival armed groups with no meaningful jihadist connections</li>
+              <li>The areas he controls are not well-governed; they are militarily controlled, with predatory militias operating under LNA cover</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legacy-card complex" style="margin-top:1.25rem;">
+          <div class="legacy-label">What remains genuinely contested</div>
+          <ul>
+            <li>Was the Tripoli offensive a rational military calculation that nearly succeeded, or a catastrophic overreach that proves Haftar never had the political support to govern all of Libya?</li>
+            <li>Is the LNA a genuine national institution that will outlive Haftar's personal ambitions — or a personalised force that will fragment when he goes?</li>
+            <li>Did external backers (UAE, Egypt, Russia, France) primarily enable Haftar's ambitions, or did Haftar cleverly instrumentalise them? Who is using whom?</li>
+            <li>Is a future Libyan political settlement possible that includes Haftar — or does national reconciliation require his removal or marginalisation?</li>
+          </ul>
+        </div>
+
+        <p>The most honest assessment of Haftar is that he is a product of Libya's failure — not its cause. The fragmented, militia-dominated Libya that emerged from Gaddafi's fall created conditions in which a figure like Haftar — militarily experienced, externally connected, personally ruthless, and strategically patient — could carve out and hold territory. In a Libya with functioning state institutions, he would have been a retired general with a complicated past. In the Libya that actually exists, he is the most powerful man in half the country.</p>
+
+        <div class="pull-quote">
+          <blockquote>"He is not a warlord in the traditional sense. He is something more modern and more dangerous — a military commander with a diplomatic network, a media strategy, and international patrons who find him useful enough to protect."</blockquote>
+          <cite>— Frederic Wehrey, <em>The Burning Shores</em> (2018)</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People directly connected</div>
+          <div class="topics-grid">
+            <a href="gaddafi.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg" alt="Muammar Gaddafi">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Muammar Gaddafi</div>
+              <div class="topic-preview">Haftar's original patron, who gave him command in Chad and then abandoned him there — the defining betrayal of Haftar's early career.</div>
+            </a>
+            <a href="gamal-abdel-nasser.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg" alt="Gamal Abdel Nasser">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Gamal Abdel Nasser</div>
+              <div class="topic-preview">The Arab nationalist template Gaddafi worshipped and Haftar implicitly invokes — the soldier-as-national-saviour model that both men have tried to reproduce.</div>
+            </a>
+            <a href="henry-kissinger.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg" alt="Henry Kissinger">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Henry Kissinger</div>
+              <div class="topic-preview">Architect of the U.S. covert operations against Gaddafi that ultimately produced Haftar's CIA-assisted exile and transformation into an American asset.</div>
+            </a>
+            <a href="barack-obama.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg" alt="Barack Obama">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Barack Obama</div>
+              <div class="topic-preview">The U.S. president who authorised the NATO intervention that ended Gaddafi — and whose administration then failed to prevent the power vacuum that made Haftar possible.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Events &amp; Concepts</div>
+          <div class="topics-grid">
+            <a href="context-v4.html" class="topic-card"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauTAgmpsG54Nrx44zBq9E8ULZ277MHKl6Sb1u36uoKg&s=10" alt="The Libyan Civil War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Libyan Civil War</div>
+              <div class="topic-preview">Haftar is the central military figure of Libya's post-2014 civil war — his Operation Dignity split the country and his Tripoli offensive kept it at war for a decade.</div>
+            </a>
+            <a href="responsibility-to-protect.html" class="topic-card"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN64RcrqCtuQHaO9sY3UWxc-6G74E_aXlnE2nYkVLGPA&s=10" alt="The Responsibility to Protect">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">The Responsibility to Protect</div>
+              <div class="topic-preview">The R2P doctrine justified the NATO intervention that removed Gaddafi — and the chaos that produced Haftar is one of the most-cited arguments against humanitarian intervention.</div>
+            </a>
+            <a href="operation-condor.html" class="topic-card"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-G2XVVmYlkMhDwayqqReq7VLvMpX9Q7K-V_Q-CumGjg&s=10" alt="Operation Condor">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">Operation Condor</div>
+              <div class="topic-preview">Like the CIA's Latin American network, Haftar's CIA relationship illustrates how U.S. intelligence services cultivate foreign military assets whose later actions become deeply problematic.</div>
+            </a>
+            <a href="non-aligned-movement.html" class="topic-card"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgm8e0OwqbxHQvfi0I13N97m2NerBXhQHNhaFm8MzgJQ&s=10" alt="The Non-Aligned Movement">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">The Non-Aligned Movement</div>
+              <div class="topic-preview">Gaddafi's Libya was a vocal NAM participant — Haftar's Libya has become a theatre for great-power competition, the exact dynamic NAM was designed to resist.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">Wehrey, F. (2018). </span>
+            <span class="src-journal">The Burning Shores: Inside the Battle for the New Libya</span>. Farrar, Straus and Giroux.
+            <span class="src-note">The essential English-language account of Libya's post-Gaddafi trajectory by a Carnegie Endowment senior fellow with extensive on-the-ground access. Wehrey's analysis of Haftar's rise and the failure of international state-building is balanced and rigorously sourced — the starting point for any serious study of modern Libya.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">Lacher, W. (2020). </span>
+            <span class="src-journal">Libya's Fragmentation: Structure and Process in Violent Conflict</span>. I.B. Tauris.
+            <span class="src-note">The most analytically rigorous study of Libya's armed factions and the political economy of the civil war. Lacher's thesis — that Libya's violence is produced by structural factors rather than individual actors — provides a useful counterweight to any analysis that over-focuses on Haftar as a driver of events.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Pack, J. (ed.) (2021). </span>
+            <span class="src-journal">Libya and the Global Enduring Disorder</span>. Hurst Publishers.
+            <span class="src-note">A multi-author analysis of Libya's conflict in its international context, with strong chapters on the role of external actors (UAE, Russia, Turkey, France) in enabling and sustaining Haftar's campaign. Essential for understanding how Haftar has managed his patron relationships.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">UN Panel of Experts on Libya (2021). </span>
+            <span class="src-journal">Final Report to the UN Security Council</span>. United Nations document S/2021/229.
+            <span class="src-note">The UN Panel of Experts has produced detailed annual reports on Libya since 2011, documenting arms embargo violations, human rights abuses, and the activities of specific factions. The 2021 report is particularly detailed on the Tarhuna mass graves, Wagner Group activities, and UAE/Turkish arms violations. Freely available at the UN website.</span>
+          </li>
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">Amnesty International (2018). </span>
+            <span class="src-journal">Death, Despair and Displacement: Benghazi's Civilians Caught in the Conflict</span>. Amnesty International.
+            <span class="src-note">Documents systematic violations by LNA forces during the Benghazi campaign, including extrajudicial executions, torture in detention facilities, and the forced displacement of civilian populations. Freely accessible at amnesty.org. The most detailed human rights account of the Benghazi campaign specifically.</span>
+          </li>
+          <li>
+            <span class="src-num">[6]</span>
+            <span class="src-title">Chivers, C.J. &amp; Schmitt, E. (2014). </span>
+            <span class="src-journal">New York Times</span>, "In Scramble for Libya, U.S. Found Itself Outpaced and Outgunned."
+            <span class="src-note">Investigative reporting on Haftar's CIA connections and the U.S. role in supporting his 1980s opposition movement. One of the few detailed journalistic accounts of Haftar's Virginia years and his relationship with U.S. intelligence. Freely accessible.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="index.html" style="color:var(--purple);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement',        desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',       url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',                    desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                               url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect',   desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.',        url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Libyan Civil War',            desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',                                                  url: 'context-v4.html' },
+    { type: 'event',   title: 'Operation Condor',                desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',                url: 'operation-condor.html' },
+    { type: 'person',  title: 'Muammar Gaddafi',                 desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',                                                             url: 'gaddafi.html' },
+    { type: 'person',  title: 'Augusto Pinochet',                desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.",                                                    url: 'augusto-pinochet.html' },
+    { type: 'person',  title: 'Saddam Hussein',                  desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',                                                 url: 'saddam-hussein.html' },
+    { type: 'person',  title: 'Henry Kissinger',                 desc: "The refugee who became America's most powerful and most controversial diplomat.",                                                       url: 'henry-kissinger.html' },
+    { type: 'person',  title: 'Salvador Allende',                desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',                                                  url: 'salvador-allende.html' },
+    { type: 'person',  title: 'Richard Nixon',                   desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',                                                       url: 'richard-nixon.html' },
+    { type: 'person',  title: 'Barack Obama',                    desc: "America's first Black president — who promised transformation and left a country more divided.",                                       url: 'obama.html' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',              desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',                            url: 'gamal-abdel-nasser.html' },
+    { type: 'person',  title: 'George W. Bush',                  desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',                                        url: 'george-w-bush.html' },
+    { type: 'person',  title: 'Ayatollah Khomeini',              desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.",                                    url: 'ayatollah-khomeini.html' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+    else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+    else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+    else if (e.key==='Escape') { toggleSearch(); return; }
+    items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.height = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+    const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+  });
+  function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+  function toggleSave() {
+    const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+    if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+    else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+  }
+</script>
+</body>
+</html>

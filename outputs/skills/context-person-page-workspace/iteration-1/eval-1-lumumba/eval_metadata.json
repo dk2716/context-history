@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "eval_name": "patrice-lumumba",
+  "prompt": "Create a Context person page for Patrice Lumumba — the Congolese independence leader assassinated in 1961. Cover his emergence as a political organiser, his vision for a unified independent Congo, his 67-day prime ministership, the Cold War forces that conspired against him (CIA, Belgian intelligence), and why he became a symbol of anti-colonialism across Africa. Make the legacy section honest about what his assassination prevented us from knowing he might have achieved.",
+  "assertions": [
+    {"id": "html_complete", "name": "File is complete valid HTML with DOCTYPE and closing tags", "type": "programmatic"},
+    {"id": "purple_accent", "name": "Uses --purple as primary accent (person page colour)", "type": "programmatic"},
+    {"id": "design_system_vars", "name": "CSS includes all required design system variables", "type": "programmatic"},
+    {"id": "cia_covered", "name": "CIA and Belgian intelligence roles in assassination are addressed with specificity", "type": "llm"},
+    {"id": "legacy_honest", "name": "Legacy section engages honestly with the uncertainty of what might have been", "type": "llm"},
+    {"id": "accordion_timeline", "name": "Accordion timeline (.tl-item) present with 3+ entries", "type": "programmatic"},
+    {"id": "quick_facts", "name": "Quick facts box present with biographical details", "type": "programmatic"},
+    {"id": "connected_topics", "name": "Connected topics section with typed cards", "type": "llm"}
+  ]
+}

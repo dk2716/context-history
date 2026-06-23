@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- STEP 1: Change this title -->
+<title>PERSON NAME — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+       STEP 2: Fill in name, photo, dates, hook
+  ════════════════════════════════════════════ -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="context-v4.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <!-- STEP 2a: Update category e.g. "Leaders & Rulers", "Diplomats", "Revolutionaries" -->
+        <a href="#">CATEGORY</a><span class="breadcrumb-sep">›</span>
+        <span>PERSON NAME</span>
+      </div>
+
+      <div class="hero-person-layout">
+
+        <!-- STEP 2b: Replace the emoji with an <img> once you have a photo URL:
+             <div class="hero-avatar"><img src="WIKIMEDIA_URL" alt="PERSON NAME"></div>
+             Or keep the emoji as a placeholder. Pick one that fits:
+             🪖 military   👑 monarch   ✊ revolutionary   🎓 intellectual   🏛️ politician   ⚖️ leader -->
+        <div class="hero-avatar">🏛️</div>
+
+        <div>
+          <!-- STEP 2c: e.g. "Chile · Military Dictator" or "USA · Secretary of State" -->
+          <div class="hero-region-tag">COUNTRY · ROLE</div>
+
+          <h1>PERSON NAME</h1>
+
+          <!-- STEP 2d: Name in native script + birth/death dates. Remove if English name only. -->
+          <p class="hero-native">NATIVE SCRIPT NAME &nbsp;·&nbsp; b. YYYY, CITY — d. YYYY, CITY</p>
+
+          <!-- STEP 2e: One punchy sentence. Who were they, why do they matter? -->
+          <p class="hero-sub">ONE-SENTENCE HOOK that captures why this person is historically significant and why a reader should care.</p>
+
+          <div class="hero-meta">
+            <!-- STEP 2f: Estimate read time (roughly 200 wpm). Update country/era. -->
+            <span>~XX min read</span><span>·</span>
+            <span>Active: YYYY–YYYY</span><span>·</span>
+            <span>COUNTRY / REGION</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+
+    <!-- ═══════════════════════════════════════════
+         SIDEBAR
+         STEP 3: Update section links to match your sections below
+    ════════════════════════════════════════════ -->
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#ideology">Ideology</a></li>
+        <li><a href="#rule">How They Ruled</a></li>
+        <!-- STEP 3a: Add/rename sections as needed -->
+        <li><a href="#domain">DOMAIN SECTION</a></li>
+        <li><a href="#fall">The Fall</a></li>
+        <li><a href="#why-it-matters">Why It Matters Today</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <!-- ═══════════════════════════════════════════
+           SECTION 1: QUICK FACTS
+           STEP 4: Fill in 6–8 key biographical facts
+      ════════════════════════════════════════════ -->
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="quick-facts-grid">
+
+            <div class="qf-item">
+              <div class="qf-label">Full name</div>
+              <div class="qf-value">FULL LEGAL NAME</div>
+            </div>
+
+            <div class="qf-item">
+              <div class="qf-label">Born</div>
+              <div class="qf-value">DATE — CITY, COUNTRY</div>
+            </div>
+
+            <div class="qf-item">
+              <div class="qf-label">Died</div>
+              <!-- Or: "b. YEAR — still alive" -->
+              <div class="qf-value">DATE — CITY (CAUSE / CIRCUMSTANCES)</div>
+            </div>
+
+            <div class="qf-item">
+              <div class="qf-label">In power / Active</div>
+              <div class="qf-value">YEAR – YEAR (X years)</div>
+            </div>
+
+            <div class="qf-item">
+              <div class="qf-label">Came to power by</div>
+              <div class="qf-value">Election / Coup / Appointment / Revolution…</div>
+            </div>
+
+            <div class="qf-item">
+              <div class="qf-label">Ideology</div>
+              <div class="qf-value">IDEOLOGY · IDEOLOGY · IDEOLOGY</div>
+            </div>
+
+            <!-- Add or remove qf-items as needed -->
+            <div class="qf-item">
+              <div class="qf-label">KEY FACT LABEL</div>
+              <div class="qf-value">KEY FACT VALUE</div>
+            </div>
+
+            <div class="qf-item">
+              <div class="qf-label">KEY FACT LABEL</div>
+              <div class="qf-value">KEY FACT VALUE</div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           SECTION 2: ORIGINS & RISE
+           STEP 5: 3–4 paragraphs. Background, class/tribe,
+           formative experiences, path to power.
+           Include a stat-row of 3–4 significant numbers.
+      ════════════════════════════════════════════ -->
+      <section id="origins">
+        <h2>Origins &amp; Rise to Power</h2>
+
+        <p>PARAGRAPH 1 — Early life. Where were they born? What class, tribe, or background? What shaped their worldview early on?</p>
+
+        <p>PARAGRAPH 2 — Education and formative influences. Who did they admire? What experiences radicalised or politicised them?</p>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-number">XX</div>
+            <div class="stat-label">LABEL (e.g. "Age when they rose to power")</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">YYYY</div>
+            <div class="stat-label">LABEL (e.g. "Year of first major act")</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">XX</div>
+            <div class="stat-label">LABEL (e.g. "Years in exile before return")</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">YYYY</div>
+            <div class="stat-label">LABEL (e.g. "Year they seized power")</div>
+          </div>
+        </div>
+
+        <p>PARAGRAPH 3 — The path to power. What specific events, alliances, or circumstances enabled their rise? Be concrete.</p>
+
+        <!-- Optional: add a .callout.concept here to explain essential context a reader needs -->
+        <!--
+        <div class="callout concept">
+          <div class="callout-label">Context</div>
+          <h4>CONTEXT HEADING</h4>
+          <p>Background the reader needs to understand this section.</p>
+        </div>
+        -->
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           SECTION 3: IDEOLOGY / WORLDVIEW / DOCTRINE
+           STEP 6: 4 ideology cards + at least one pull quote.
+           Rename h2 to fit the person:
+           "The Green Book" / "Realpolitik" / "Ba'athist Vision" / "Military Doctrine" etc.
+      ════════════════════════════════════════════ -->
+      <section id="ideology">
+        <h2>IDEOLOGY SECTION TITLE</h2>
+
+        <p>INTRO PARAGRAPH — What was the core of this person's worldview? Why did it appeal to people at the time? What made it distinctive?</p>
+
+        <div class="ideology-grid">
+
+          <div class="ideology-card">
+            <div class="ideology-card-title">PILLAR ONE</div>
+            <p>2–3 sentences explaining this aspect of their ideology. Be specific — what did they actually believe, and what did that mean in practice?</p>
+          </div>
+
+          <div class="ideology-card">
+            <div class="ideology-card-title">PILLAR TWO</div>
+            <p>2–3 sentences. What policy or approach did this pillar produce?</p>
+          </div>
+
+          <div class="ideology-card">
+            <div class="ideology-card-title">PILLAR THREE</div>
+            <p>2–3 sentences. Include tensions or contradictions where they existed.</p>
+          </div>
+
+          <div class="ideology-card">
+            <div class="ideology-card-title">PILLAR FOUR</div>
+            <p>2–3 sentences. How did this shape their decisions or the system they built?</p>
+          </div>
+
+        </div>
+
+        <!-- Pull quote — use an actual quote from the person or a close observer -->
+        <div class="pull-quote">
+          <blockquote>"DIRECT QUOTE that captures something essential about their worldview or methods."</blockquote>
+          <cite>— PERSON NAME, <em>SOURCE TITLE</em>, YEAR [or: cited in AUTHOR, YEAR]</cite>
+        </div>
+
+        <p>FOLLOW-UP PARAGRAPH — What was the gap between what this ideology promised and what it actually produced? Why did it appeal, and who opposed it?</p>
+
+        <!-- Optional: amber callout for "Why This Matters" -->
+        <!--
+        <div class="callout amber">
+          <div class="callout-label">Why This Matters</div>
+          <h4>HEADING</h4>
+          <p>A paragraph explaining the lasting structural consequence of their ideology or system.</p>
+        </div>
+        -->
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           SECTION 4: HOW THEY RULED / ACTED / OPERATED
+           STEP 7: 3–5 sub-sections (h3). Cover control
+           mechanisms, key decisions, human rights record.
+           Must include at least one .callout.warning.
+      ════════════════════════════════════════════ -->
+      <section id="rule">
+        <h2>How They Ruled</h2>
+
+        <p>INTRO — How did they maintain power? What was distinctive about their methods?</p>
+
+        <h3>SUB-SECTION ONE (e.g. "Economic Control" / "The Security Apparatus")</h3>
+        <p>PARAGRAPH. Be specific — what did this look like in practice? Numbers, names, dates.</p>
+
+        <h3>SUB-SECTION TWO</h3>
+        <p>PARAGRAPH.</p>
+
+        <!-- The darkest documented act — required -->
+        <div class="callout warning">
+          <div class="callout-label">Human Rights</div>
+          <h4>ATROCITY / ABUSE HEADING</h4>
+          <p>Specific, documented account of the worst act. Include: who was targeted, how many, when, where, what happened to the perpetrators. Avoid vague language — "approximately X people" not "many people."</p>
+        </div>
+
+        <h3>SUB-SECTION THREE</h3>
+        <p>PARAGRAPH.</p>
+
+        <!-- Optional pull quote -->
+        <!--
+        <div class="pull-quote">
+          <blockquote>"QUOTE about their personality or methods from a contemporaneous observer."</blockquote>
+          <cite>— SOURCE, <em>BOOK</em>, YEAR</cite>
+        </div>
+        -->
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           SECTION 5: DOMAIN-SPECIFIC SECTION
+           STEP 8: This section adapts to who the person is.
+           Rename the id and h2:
+           - Political leader → "Foreign Policy" or "Wars & Conflicts"
+           - Military figure → "Key Campaigns"
+           - Intellectual → "Major Works & Ideas"
+           - Diplomat → "Major Negotiations"
+           Use the accordion timeline for sequences of events.
+      ════════════════════════════════════════════ -->
+      <section id="domain">
+        <h2>DOMAIN SECTION TITLE (e.g. "Foreign Policy" / "The Wars" / "Major Negotiations")</h2>
+
+        <p>INTRO PARAGRAPH for this section.</p>
+
+        <!-- Accordion timeline — 3–5 entries -->
+        <!-- The first .tl-item gets class="tl-item active" to open by default -->
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">MONTH YYYY</div>
+              <div class="tl-title">EVENT OR DECISION TITLE</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>PARAGRAPH 1 — What happened? Be specific.</p>
+            <p>PARAGRAPH 2 — Why did it happen? What were the causes and consequences?</p>
+            <div class="tl-sources">
+              <span class="src-chip">Author (Year)</span>
+              <span class="src-chip">Author (Year)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">YYYY–YYYY</div>
+              <div class="tl-title">SECOND EVENT TITLE</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>PARAGRAPH 1.</p>
+            <p>PARAGRAPH 2.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Author (Year)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">YYYY</div>
+              <div class="tl-title">THIRD EVENT TITLE</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>PARAGRAPH 1.</p>
+            <p>PARAGRAPH 2.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Author (Year)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more tl-items as needed -->
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           SECTION 6: THE FALL / LATE CAREER / END
+           STEP 9: What ended their story? 1–3 accordion
+           entries. Be specific about the how, where, and what
+           they said or did at the end.
+      ════════════════════════════════════════════ -->
+      <section id="fall">
+        <h2>The Fall</h2>
+        <!-- Or: "Late Career", "Disgrace", "Exile", "Death" — whatever fits -->
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">YYYY</div>
+              <div class="tl-title">BEGINNING OF THE END</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>PARAGRAPH — What first destabilised their position?</p>
+            <div class="tl-sources"><span class="src-chip">Author (Year)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">YYYY</div>
+              <div class="tl-title">THE MOMENT OF COLLAPSE</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>PARAGRAPH — Specific account of how they lost power, were removed, died, or resigned.</p>
+            <p>PARAGRAPH — What did they say or do at the end? The manner of ending often reveals something important.</p>
+            <div class="tl-sources"><span class="src-chip">Author (Year)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">YYYY–present</div>
+              <div class="tl-title">AFTERMATH</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>PARAGRAPH — What happened after? Their legacy in the immediate aftermath. Trials, exile, rehabilitation, death.</p>
+            <div class="tl-sources"><span class="src-chip">Author (Year)</span></div>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           SECTION 7: WHY IT MATTERS TODAY
+           STEP 10: This section is unique to Context.
+           1–3 paragraphs connecting their story to something
+           happening RIGHT NOW. Be specific — name the
+           country, the conflict, the pattern.
+      ════════════════════════════════════════════ -->
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+
+        <p>PARAGRAPH 1 — What current event, conflict, or pattern does their story illuminate? Don't be vague. Name specifics: a country, a leader, a policy debate happening in CURRENT_YEAR.</p>
+
+        <p>PARAGRAPH 2 — What lesson does their story offer? What mistake does it warn against? What model — good or bad — does it provide?</p>
+
+        <div class="callout info">
+          <div class="callout-label">Today's Connection</div>
+          <h4>SPECIFIC PRESENT-DAY PARALLEL</h4>
+          <p>One concrete, specific connection between this person's story and a current event or pattern. Name the place, the leader, the policy. Avoid generalities.</p>
+        </div>
+
+        <p>PARAGRAPH 3 — Optional closing thought. What should a reader take away that they couldn't have gotten from a Wikipedia summary?</p>
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           SECTION 8: LEGACY & DEBATE
+           STEP 11: positive/negative legacy cards + complex card
+           + 1–2 paragraphs of prose synthesis + closing pull quote.
+      ════════════════════════════════════════════ -->
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>INTRO PARAGRAPH — What is the central tension in how historians and the public remember this person? What makes their legacy genuinely contested?</p>
+
+        <div class="legacy-grid">
+
+          <div class="legacy-card positive">
+            <div class="legacy-label">What they achieved</div>
+            <ul>
+              <li>ACHIEVEMENT 1 — Be specific. Include numbers or outcomes where possible.</li>
+              <li>ACHIEVEMENT 2</li>
+              <li>ACHIEVEMENT 3</li>
+              <li>ACHIEVEMENT 4</li>
+              <li>ACHIEVEMENT 5</li>
+            </ul>
+          </div>
+
+          <div class="legacy-card negative">
+            <div class="legacy-label">What they destroyed</div>
+            <ul>
+              <li>HARM 1 — Include specific counts or documented evidence.</li>
+              <li>HARM 2</li>
+              <li>HARM 3</li>
+              <li>HARM 4</li>
+              <li>HARM 5</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Complex / contested card — goes below the grid -->
+        <div class="legacy-card complex" style="margin-top:1rem">
+          <div class="legacy-label">The Contested Questions</div>
+          <ul>
+            <li>CONTESTED POINT 1 — Something genuinely debated by serious historians.</li>
+            <li>CONTESTED POINT 2 — A comparison that is uncomfortable but honest.</li>
+            <li>CONTESTED POINT 3 — A case where the conventional narrative may be too simple.</li>
+          </ul>
+        </div>
+
+        <p>SYNTHESIS PARAGRAPH — Don't just let the cards do the work. Write 1–2 paragraphs engaging with the real historical debate. What do serious historians disagree on? What would a thoughtful person on each "side" say?</p>
+
+        <!-- Closing pull quote — capture the essential tension -->
+        <div class="pull-quote">
+          <blockquote>"A QUOTE that captures something essential about their legacy or the debate around them — from a historian, journalist, or the person themselves."</blockquote>
+          <cite>— AUTHOR, <em>BOOK OR ARTICLE</em>, YEAR</cite>
+        </div>
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           SECTION 9: CONNECTED TOPICS
+           STEP 12: Link to related pages. Group into
+           People, Events, Concepts/Regions.
+           Update href values as new pages are built.
+      ════════════════════════════════════════════ -->
+      <section id="connected">
+        <h2>Connected Topics</h2>
+
+        <div class="topics-group">
+          <div class="topics-group-label">People</div>
+          <div class="topics-grid">
+
+            <a href="#" class="topic-card">
+              <!-- Change href to actual filename once the page exists, e.g. "gaddafi.html" -->
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">PERSON NAME</div>
+              <div class="topic-preview">One sentence on why they're connected to this person.</div>
+            </a>
+
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">PERSON NAME</div>
+              <div class="topic-preview">One sentence preview.</div>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="topics-group">
+          <div class="topics-group-label">Events</div>
+          <div class="topics-grid">
+
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">EVENT NAME</div>
+              <div class="topic-preview">One sentence preview.</div>
+            </a>
+
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">EVENT NAME</div>
+              <div class="topic-preview">One sentence preview.</div>
+            </a>
+
+          </div>
+        </div>
+
+        <div class="topics-group">
+          <div class="topics-group-label">Concepts &amp; Regions</div>
+          <div class="topics-grid">
+
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">CONCEPT NAME</div>
+              <div class="topic-preview">One sentence preview.</div>
+            </a>
+
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag region">Region</div>
+              <div class="topic-name">REGION NAME</div>
+              <div class="topic-preview">One sentence preview.</div>
+            </a>
+
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- ═══════════════════════════════════════════
+           SECTION 10: SOURCES
+           STEP 13: List your sources. Numbered, with src-num
+           chips. Include: author, year, title, publisher,
+           + italic note on what the source contributes.
+      ════════════════════════════════════════════ -->
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">AUTHOR LAST, FIRST (YEAR). </span>
+            <span class="src-journal">BOOK / ARTICLE TITLE</span>. PUBLISHER.
+            <span class="src-note">What this source contributes and whether it's free to access online.</span>
+          </li>
+
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">AUTHOR LAST, FIRST (YEAR). "ARTICLE TITLE." </span>
+            <span class="src-journal">JOURNAL NAME</span>, VOL(ISSUE), PAGE–PAGE.
+            <span class="src-note">What this source contributes.</span>
+          </li>
+
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">ORGANISATION (YEAR). </span>
+            <span class="src-journal">REPORT TITLE</span>.
+            <span class="src-note">What this source contributes. Available free at [URL].</span>
+          </li>
+
+          <!-- Add more sources as needed -->
+
+        </ul>
+      </section>
+
+    </article>
+  </div><!-- /.outer -->
+</div><!-- /.page-wrap -->
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="context-v4.html" style="color:var(--purple);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  /* ── SEARCH ──
+     STEP 14: Add this new page to CONTEXT_ARTICLES, then
+     paste the updated array into ALL other person pages too.
+     Format: { type: 'person', title: 'NAME', desc: 'ONE SENTENCE', url: 'filename.html' }
+  */
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html' },
+    { type: 'concept', title: 'The Non-Aligned Movement',       desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',    url: 'non-aligned-movement.html' },
+    { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                            url: 'anwar-sadat.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html' },
+    { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html' },
+    { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',  url: 'context-v4.html' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',  url: 'operation-condor.html' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.',     url: 'augusto-pinochet.html' },
+    { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html' },
+    { type: 'person', title: 'Henry Kissinger',          desc: 'The refugee who became America\'s most powerful and most controversial diplomat.',         url: 'henry-kissinger.html' },
+    { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html' },
+    { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html' },
+    { type: 'person', title: 'Barack Obama',             desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.',  url: 'obama.html' },
+    { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html' },
+    { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html' },
+    { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn');
+    const dd  = document.getElementById('searchDropdown');
+    const inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen);
+    dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); }
+    else { inp.value = ''; _focusIdx = -1; }
+  }
+
+  function runSearch(q) {
+    const box = document.getElementById('searchResults');
+    const term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a, i) => `
+      <a class="search-result" href="${a.url}" data-i="${i}">
+        <div class="search-result-top">
+          <span class="topic-type-tag ${a.type}">${a.type}</span>
+          <span class="search-result-title">${a.title}</span>
+        </div>
+        <div class="search-result-desc">${a.desc}</div>
+      </a>`).join('');
+  }
+
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown')  { e.preventDefault(); _focusIdx = Math.min(_focusIdx + 1, items.length - 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); _focusIdx = Math.max(_focusIdx - 1, 0); }
+    else if (e.key === 'Enter' && _focusIdx >= 0) { items[_focusIdx].click(); return; }
+    else if (e.key === 'Escape') { toggleSearch(); return; }
+    items.forEach((r, i) => r.classList.toggle('focused', i === _focusIdx));
+  }
+
+  document.addEventListener('click', e => {
+    if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch();
+  });
+
+  /* ── SCROLL PROGRESS + SIDEBAR ── */
+  window.addEventListener('scroll', () => {
+    const progress = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('progressBar').style.height = Math.min(progress, 100) + '%';
+    updateSidebar();
+  });
+
+  function updateSidebar() {
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.sidebar-nav li');
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 120) current = section.getAttribute('id');
+    });
+    navItems.forEach(item => {
+      const link = item.querySelector('a');
+      item.classList.toggle('active', link && link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  /* ── ACCORDION ── */
+  function toggleItem(el) {
+    const wasActive = el.classList.contains('active');
+    document.querySelectorAll('.tl-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) el.classList.add('active');
+  }
+
+  /* ── SAVE BUTTON ── */
+  function toggleSave() {
+    const btn = document.getElementById('saveBtn');
+    const toast = document.getElementById('toast');
+    const isSaved = btn.classList.contains('saved');
+    if (!isSaved) {
+      btn.classList.add('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    } else {
+      btn.classList.remove('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;
+    }
+  }
+</script>
+</body>
+</html>
