@@ -415,7 +415,7 @@
               <span class="topic-type-tag person">person</span>
               <div class="topic-name">Saddam Hussein</div>
               <div class="topic-preview">The Ba'athist dictator whose overthrow in 2003 created the conditions in Iraq from which al-Qaeda in Iraq — the predecessor of ISIS — emerged to enter Syria.</div>
-              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png" alt="Saddam"></div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Saddam_Hussein_in_1998.png" alt="Saddam"></div>
             </a>
           </div>
         </div>
@@ -427,7 +427,7 @@
               <span class="topic-type-tag event">event</span>
               <div class="topic-name">The Arab Spring</div>
               <div class="topic-preview">The regional wave of uprisings that reached Syria in March 2011 — and that Assad chose to answer with tanks while Egypt, Tunisia, and Libya answered differently.</div>
-              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg" alt="Arab Spring"></div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Tahrir_Square_Rally.jpg/960px-Tahrir_Square_Rally.jpg" alt="Arab Spring"></div>
             </a>
             <a href="halabja-chemical-attack.html" class="topic-card">
               <span class="topic-type-tag event">event</span>
@@ -439,13 +439,13 @@
               <span class="topic-type-tag concept">concept</span>
               <div class="topic-name">The Responsibility to Protect</div>
               <div class="topic-preview">Syria is the case study that most severely tested and damaged the R2P norm — Russia's Security Council veto made every attempt at enforcement legally impossible.</div>
-              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="R2P"></div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN64RcrqCtuQHaO9sY3UWxc-6G74E_aXlnE2nYkVLGPA&s=10" alt="R2P"></div>
             </a>
             <a href="baathism.html" class="topic-card">
               <span class="topic-type-tag concept">concept</span>
               <div class="topic-name">Ba'athism</div>
               <div class="topic-preview">The Arab nationalist ideology that brought the Assad dynasty to power in 1970 — and whose final collapse came with Assad's flight from Damascus in December 2024.</div>
-              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png" alt="Ba'athism"></div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRleA1omBJ8JkTf_Zg3OF6_aUJp9jqhhoyqmPMs967xRg&s=10" alt="Ba'athism"></div>
             </a>
           </div>
         </div>
@@ -495,6 +495,8 @@
 
 <script>
   const CONTEXT_ARTICLES = [
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
     { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
     { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
     { type: 'person',  title: 'Bashar al-Assad',          desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
@@ -556,7 +558,7 @@
       .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
       .sort((a, b) => sc(b.title) - sc(a.title));
     _focusIdx = -1;
-    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles found.</div>'; return; }
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
     box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
   }
   function searchKeydown(e) {
