@@ -84,8 +84,7 @@
       <section id="quick-facts">
         <div class="quick-facts">
           <div class="quick-facts-label">Quick Facts</div>
-          <div class="quick-facts-grid">
-            <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Ruhollah Musavi Khomeini</div></div>
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Ruhollah Musavi Khomeini</div></div>
             <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">September 24, 1902 — Khomein, Iran</div></div>
             <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">June 3, 1989 — Tehran, of cancer. State funeral drew 10 million people.</div></div>
             <div class="qf-item"><div class="qf-label">In power</div><div class="qf-value">February 1979 – June 1989 (10 years as Supreme Leader)</div></div>
@@ -93,7 +92,6 @@
             <div class="qf-item"><div class="qf-label">Ideology</div><div class="qf-value">Velayat-e Faqih (clerical governance) · Political Islam · Anti-imperialism</div></div>
             <div class="qf-item"><div class="qf-label">Key decisions</div><div class="qf-value">Overthrew the Shah · Endorsed hostage crisis · Accepted Iran-Iraq War ceasefire · Issued Salman Rushdie fatwa · Mass executions of 1988</div></div>
             <div class="qf-item"><div class="qf-label">Legacy institution</div><div class="qf-value">The Islamic Republic of Iran — the world's first modern theocracy, still governed by his constitutional framework</div></div>
-          </div>
         </div>
       </section>
 
@@ -377,20 +375,10 @@
         <div class="topics-group">
           <div class="topics-group-label">Events &amp; Concepts</div>
           <div class="topics-grid">
-            <a href="#" class="topic-card">
-              <div class="topic-type-tag event">Event</div>
-              <div class="topic-name">The Iran Hostage Crisis (1979–1981)</div>
-              <div class="topic-preview">444 days, 52 American diplomats, one presidential election decided — the crisis that set the template for U.S.-Iran confrontation.</div>
-            </a>
-            <a href="#" class="topic-card">
+            <a href="iran-iraq-war.html" class="topic-card"><img class="topic-card-thumb" src="https://www.atlanticcouncil.org/wp-content/uploads/2018/08/IraqiMinister_Feature.jpg" alt="The Iran-Iraq War (1980–1988)">
               <div class="topic-type-tag event">Event</div>
               <div class="topic-name">The Iran-Iraq War (1980–1988)</div>
               <div class="topic-preview">The deadliest interstate war since Korea — fought with chemical weapons, funded by Arab states and the West, and ended inconclusively after half a million deaths.</div>
-            </a>
-            <a href="#" class="topic-card">
-              <div class="topic-type-tag concept">Concept</div>
-              <div class="topic-name">Velayat-e Faqih</div>
-              <div class="topic-preview">Khomeini's theory of clerical governance — the constitutional foundation of the Islamic Republic and the principle that places the Supreme Leader above elected government.</div>
             </a>
           </div>
         </div>
@@ -478,6 +466,8 @@
     { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html' },
     { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html' },
     { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html' },
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
   ];
 
   let _searchOpen = false, _focusIdx = -1;
@@ -495,7 +485,7 @@
       .sort((a, b) => sc(b.title) - sc(a.title));
     _focusIdx = -1;
     if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
-    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
   }
   function searchKeydown(e) {
     const items = document.querySelectorAll('.search-result');

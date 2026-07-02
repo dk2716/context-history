@@ -63,8 +63,7 @@
       <section id="quick-facts">
         <div class="quick-facts">
           <div class="quick-facts-label">Quick Facts</div>
-          <div class="quick-facts-grid">
-            <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Salvador Guillermo Allende Gossens</div></div>
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Salvador Guillermo Allende Gossens</div></div>
             <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">June 26, 1908 — Valparaíso, Chile</div></div>
             <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">September 11, 1973 — La Moneda Palace, Santiago (during coup)</div></div>
             <div class="qf-item"><div class="qf-label">In power</div><div class="qf-value">November 3, 1970 – September 11, 1973 (1,007 days)</div></div>
@@ -72,7 +71,6 @@
             <div class="qf-item"><div class="qf-label">Election victory</div><div class="qf-value">36.3% of vote, 1970 — plurality (3-way race); confirmed by Congress</div></div>
             <div class="qf-item"><div class="qf-label">Coalition</div><div class="qf-value">Unidad Popular (Popular Unity) — coalition of socialist, communist, and radical parties</div></div>
             <div class="qf-item"><div class="qf-label">Cause of death</div><div class="qf-value">Suicide by gunshot during the military assault on La Moneda (confirmed by forensic evidence, 2011)</div></div>
-          </div>
         </div>
       </section>
 
@@ -252,8 +250,7 @@
         <div class="topics-group">
           <div class="topics-group-label">Concepts & Events</div>
           <div class="topics-grid">
-            <a href="#" class="topic-card"><div class="topic-type-tag event">Event</div><div class="topic-name">The 1973 Chilean Coup</div><div class="topic-preview">September 11, 1973 — what happened, who was involved, and what followed.</div></a>
-            <a href="#" class="topic-card"><div class="topic-type-tag concept">Concept</div><div class="topic-name">Democratic Socialism</div><div class="topic-preview">The idea that socialist transformation can be achieved through elections rather than revolution — and the obstacles it faces.</div></a>
+            <a href="democratic-socialism.html" class="topic-card"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGiAgJ1oUaATfCo_fIkoaqtwxvdhbNv9EAs7f7lhqKxA&s" alt="Democratic Socialism"><div class="topic-type-tag concept">Concept</div><div class="topic-name">Democratic Socialism</div><div class="topic-preview">The idea that socialist transformation can be achieved through elections rather than revolution — and the obstacles it faces.</div></a>
           </div>
         </div>
       </section>
@@ -297,6 +294,8 @@
     { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html' },
     { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html' },
     { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html' },
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
   ];
   let _searchOpen = false, _focusIdx = -1;
   function toggleSearch() {
@@ -311,8 +310,8 @@
       .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
       .sort((a, b) => sc(b.title) - sc(a.title));
     _focusIdx = -1;
-    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles found.</div>'; return; }
-    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
   }
   function searchKeydown(e) {
     const items = document.querySelectorAll('.search-result');

@@ -86,8 +86,7 @@
       <section id="quick-facts">
         <div class="quick-facts">
           <div class="quick-facts-label">Quick Facts</div>
-          <div class="quick-facts-grid">
-            <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Muhammad Anwar el-Sadat</div></div>
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Muhammad Anwar el-Sadat</div></div>
             <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">December 25, 1918, Mit Abu al-Kum, Egypt (then under British occupation)</div></div>
             <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">October 6, 1981, Cairo — assassinated by members of Egyptian Islamic Jihad during a military parade</div></div>
             <div class="qf-item"><div class="qf-label">In power</div><div class="qf-value">October 15, 1970 – October 6, 1981</div></div>
@@ -95,7 +94,6 @@
             <div class="qf-item"><div class="qf-label">Ideology</div><div class="qf-value">Arab nationalism (early); pragmatic realism; economic liberalisation (Infitah); increasingly authoritarian late in rule</div></div>
             <div class="qf-item"><div class="qf-label">Key achievement</div><div class="qf-value">Camp David Accords (1978) — secured return of Sinai from Israel in exchange for full peace and normalisation</div></div>
             <div class="qf-item"><div class="qf-label">Nobel Peace Prize</div><div class="qf-value">1978, shared with Israeli Prime Minister Menachem Begin</div></div>
-          </div>
         </div>
       </section>
 
@@ -387,15 +385,10 @@
               <div class="topic-name">The Responsibility to Protect</div>
               <div class="topic-preview">The international humanitarian framework that emerged from the failures Sadat's era produced — including the rise of state-sponsored Islamist violence.</div>
             </a>
-            <a href="#" class="topic-card">
+            <a href="1973-arab-israeli-war.html" class="topic-card"><img class="topic-card-thumb" src="https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1" alt="The 1973 Yom Kippur War">
               <div class="topic-type-tag event">Event</div>
               <div class="topic-name">The 1973 Yom Kippur War</div>
               <div class="topic-preview">The war Sadat launched not to win militarily but to create the conditions for the peace he knew Israel would never negotiate without military pressure.</div>
-            </a>
-            <a href="#" class="topic-card">
-              <div class="topic-type-tag event">Event</div>
-              <div class="topic-name">The Camp David Accords (1978)</div>
-              <div class="topic-preview">The thirteen-day negotiation that produced the Egypt-Israel peace treaty — and a Palestinian autonomy framework that was never implemented.</div>
             </a>
           </div>
         </div>
@@ -474,6 +467,8 @@
     { type: 'person',  title: 'Gamal Abdel Nasser',             desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',                         url: 'gamal-abdel-nasser.html' },
     { type: 'person',  title: 'George W. Bush',                  desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',                                     url: 'george-w-bush.html' },
     { type: 'person',  title: 'Ayatollah Khomeini',              desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.",                                 url: 'ayatollah-khomeini.html' },
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
   ];
 
   let _searchOpen = false, _focusIdx = -1;
@@ -491,7 +486,7 @@
       .sort((a, b) => sc(b.title) - sc(a.title));
     _focusIdx = -1;
     if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
-    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
   }
   function searchKeydown(e) {
     const items = document.querySelectorAll('.search-result');

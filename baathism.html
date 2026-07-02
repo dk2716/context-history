@@ -370,7 +370,7 @@
             <div class="topic-name">Gamal Abdel Nasser</div>
             <div class="topic-preview">Ba'athism's great rival in pan-Arab nationalism — Nasser's Egypt and Ba'athist Syria briefly merged, then separated in mutual recrimination.</div>
           </a>
-          <a class="topic-card" href="khalifa-haftar.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHWI8HDb8HXi6LQ8L0CdBt1rgNHNMVVcXwVxat7YVG-w&s=10" alt="Khalifa Haftar">
+          <a class="topic-card" href="khalifa-haftar.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg" alt="Khalifa Haftar">
             <span class="topic-type-tag person">Person</span>
             <div class="topic-name">Khalifa Haftar</div>
             <div class="topic-preview">A product of the Arab nationalist military culture Ba'athism represented — a general who served Gaddafi's pan-Arab project before defecting.</div>
@@ -391,7 +391,7 @@
             <div class="topic-name">The Iran-Iraq War</div>
             <div class="topic-preview">Saddam's Ba'athist Iraq versus Khomeini's Islamic Republic — eight years of industrialised slaughter that neither side won.</div>
           </a>
-          <a class="topic-card" href="context-v4.html"><img class="topic-card-thumb" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTauTAgmpsG54Nrx44zBq9E8ULZ277MHKl6Sb1u36uoKg&s=10" alt="The Libyan Civil War">
+          <a class="topic-card" href="libyan-civil-war.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg" alt="The Libyan Civil War">
             <span class="topic-type-tag event">Event</span>
             <div class="topic-name">The Libyan Civil War</div>
             <div class="topic-preview">Gaddafi's pan-Arab nationalist Libya — Ba'athism's closest ideological cousin — fell in 2011 and produced a decade of chaos.</div>
@@ -461,6 +461,8 @@
     { type: 'person',  title: 'Gamal Abdel Nasser',            desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',                                  url: 'gamal-abdel-nasser.html' },
     { type: 'person',  title: 'George W. Bush',                desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',                                              url: 'george-w-bush.html' },
     { type: 'person',  title: 'Ayatollah Khomeini',            desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.",                                          url: 'ayatollah-khomeini.html' },
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
   ];
 
   let _searchOpen = false, _focusIdx = -1;
@@ -478,7 +480,7 @@
       .sort((a, b) => sc(b.title) - sc(a.title));
     _focusIdx = -1;
     if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
-    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
   }
   function searchKey(e) {
     const results = document.querySelectorAll('.search-result');

@@ -400,42 +400,12 @@
           </div>
         </div>
         <div class="topics-group">
-          <div class="topics-group-label">Related Events</div>
-          <div class="topics-grid">
-            <a href="#" class="topic-card">
-              <div class="topic-type-tag event">Event</div>
-              <div class="topic-name">The Chilean Coup (1973)</div>
-              <div class="topic-preview">The event that created Pinochet's government, established DINA, and provided the organisational template for Condor's founding.</div>
-            </a>
-            <a href="#" class="topic-card">
-              <div class="topic-type-tag event">Event</div>
-              <div class="topic-name">Argentina's Dirty War (1976–1983)</div>
-              <div class="topic-preview">Condor's most lethal national component — 30,000 disappeared under a junta that joined the network at its 1976 coup.</div>
-            </a>
-            <a href="#" class="topic-card">
-              <div class="topic-type-tag event">Event</div>
-              <div class="topic-name">The Argentine Junta Trial (1985)</div>
-              <div class="topic-preview">The landmark accountability process that established the precedent for prosecuting Condor-era crimes and influenced Chile's slower reckoning.</div>
-            </a>
-          </div>
-        </div>
-        <div class="topics-group">
           <div class="topics-group-label">Concepts</div>
           <div class="topics-grid">
             <a href="#" class="topic-card">
               <div class="topic-type-tag concept">Concept</div>
-              <div class="topic-name">Enforced Disappearance</div>
-              <div class="topic-preview">Condor perfected the technique of killing without leaving a body — denying families knowledge, grief, and evidence for prosecution.</div>
-            </a>
-            <a href="#" class="topic-card">
-              <div class="topic-type-tag concept">Concept</div>
               <div class="topic-name">Universal Jurisdiction</div>
               <div class="topic-preview">The legal principle that allowed Spanish judge Baltasar Garzón to issue an arrest warrant for Pinochet in 1998 — directly tested by Condor cases.</div>
-            </a>
-            <a href="#" class="topic-card">
-              <div class="topic-type-tag concept">Concept</div>
-              <div class="topic-name">Transitional Justice</div>
-              <div class="topic-preview">How new democracies reckon with the crimes of their predecessors — South America's Condor cases became the global template for truth commissions and accountability processes.</div>
             </a>
           </div>
         </div>
@@ -541,6 +511,8 @@
     { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html' },
     { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html' },
     { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html' },
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
   ];
 
   let _searchOpen = false, _focusIdx = -1;
@@ -558,7 +530,7 @@
       .sort((a, b) => sc(b.title) - sc(a.title));
     _focusIdx = -1;
     if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
-    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
   }
   function searchKeydown(e) {
     const items = document.querySelectorAll('.search-result');
