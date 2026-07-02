@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abu Bakr al-Baghdadi — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Middle East</a><span class="breadcrumb-sep">›</span>
+        <span>Abu Bakr al-Baghdadi</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg" alt="Abu Bakr al-Baghdadi" style="width:120px;height:120px;object-fit:cover;border-radius:10px;display:block;">
+        </div>
+        <div class="hero-content">
+          <div class="hero-region-tag">Person</div>
+          <h1>Abu Bakr al-Baghdadi</h1>
+          <div class="hero-native">أبو بكر البغدادي</div>
+          <p class="hero-sub">The obscure Iraqi religious scholar, radicalised in a U.S. detention camp, who rebuilt a shattered insurgency into the first jihadist group in history to declare and govern a caliphate.</p>
+          <div class="hero-meta">
+            <span>~18 min read</span><span>·</span>
+            <span>1971–2019</span><span>·</span>
+            <span>Iraq</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#doctrine">Ideology &amp; Doctrine</a></li>
+        <li><a href="#campaigns">Campaigns &amp; Rule</a></li>
+        <li><a href="#late-career">Late Career</a></li>
+        <li><a href="#why-it-matters">Why It Matters Today</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Ibrahim Awwad Ibrahim Ali al-Badri al-Samarrai (also known as Dr. Ibrahim, Abu Du'a, and Caliph Ibrahim)</div></div>
+          <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">c. July 1971, Samarra, Iraq</div></div>
+          <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">October 26, 2019, near Barisha, Idlib province, Syria — detonated a suicide vest during a U.S. special forces raid</div></div>
+          <div class="qf-item"><div class="qf-label">Title</div><div class="qf-value">Self-declared caliph of the Islamic State ("Caliph Ibrahim"), June 2014 – October 2019</div></div>
+          <div class="qf-item"><div class="qf-label">Education</div><div class="qf-value">PhD in Islamic studies (Quranic recitation/tajwid), Saddam University for Islamic Studies, Baghdad</div></div>
+          <div class="qf-item"><div class="qf-label">Career arc</div><div class="qf-value">Obscure religious scholar and mosque preacher → Camp Bucca detainee (2004) → Islamic State of Iraq commander → leader of ISI (2010) → founder and caliph of the Islamic State (2013–2019)</div></div>
+          <div class="qf-item"><div class="qf-label">Ideology</div><div class="qf-value">Salafi-jihadist; takfiri; claimed direct descent from the Quraysh tribe of the Prophet Muhammad to legitimise his caliphal claim</div></div>
+          <div class="qf-item"><div class="qf-label">Bounty</div><div class="qf-value">$25 million U.S. reward for information leading to his capture — equal to the bounty once placed on Osama bin Laden</div></div>
+        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Rise</h2>
+
+        <p>Ibrahim Awwad Ibrahim Ali al-Badri al-Samarrai was born around July 1971 in Samarra, a mid-sized city north of Baghdad that would later, in February 2006, become infamous as the site of the al-Askari shrine bombing that helped ignite Iraq's sectarian civil war. He came from a family with religious credentials — some relatives were prayer leaders — and by most accounts was a shy, unremarkable, and intensely religious young man with a passion for Quranic recitation. He earned a doctorate in Islamic studies, specialising in tajwid (the rules of Quranic recitation), from the Saddam University for Islamic Studies in Baghdad, and by the early 2000s was a low-profile preacher and part-time cleric, not yet associated with any militant movement.</p>
+
+        <p>The 2003 U.S. invasion of Iraq transformed him, as it transformed hundreds of thousands of other Iraqi Sunnis. Accounts differ on exactly when he turned to militancy — some place it before the invasion, most place it shortly after — but by 2004 he had joined an insurgent faction and was detained by U.S. forces at Camp Bucca, the sprawling detention facility in southern Iraq that would later be described by former camp commanders as an unintentional "pressure cooker" and networking ground for the Iraqi insurgency's future leadership. Baghdadi was held for roughly ten months in 2004 before being released, having been assessed by his captors — a judgment now regarded as one of the most consequential intelligence failures of the Iraq War — as a low-level threat.</p>
+
+        <p>Inside Bucca, Baghdadi built relationships with former Ba'athist military and intelligence officers who had lost everything in the U.S.-ordered de-Ba'athification purge — men with no prior interest in jihadism who nonetheless possessed exactly the organisational, logistical, and tradecraft skills a future insurgency would need. He emerged from detention not as a fighter but as a credentialed religious scholar with a growing network of contacts across the fragmented Sunni insurgency, and rose steadily through the Islamic State of Iraq's religious and judicial committees over the following years — a role that kept him relatively insulated from the U.S.-Iraqi decapitation strikes that devastated the group's operational leadership between 2007 and 2010.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">2004</div><div class="stat-label">Year Baghdadi was detained at Camp Bucca — and released after roughly ten months, having been judged low-risk</div></div>
+          <div class="stat-box"><div class="stat-number">2010</div><div class="stat-label">Year he took command of the Islamic State of Iraq, after a U.S.-Iraqi raid killed its top two leaders</div></div>
+          <div class="stat-box"><div class="stat-number">2014</div><div class="stat-label">Year he declared himself caliph, days after his forces seized Mosul, Iraq's second-largest city</div></div>
+          <div class="stat-box"><div class="stat-number">5</div><div class="stat-label">Years he evaded capture as the world's most wanted man before dying in a U.S. raid in October 2019</div></div>
+        </div>
+      </section>
+
+      <section id="doctrine">
+        <h2>Ideology &amp; Doctrine</h2>
+
+        <p>Baghdadi was not an original theologian in the way some accounts of the Islamic State suggest; his significance lay in his willingness to act on doctrines that even al-Qaeda's leadership regarded as reckless, and in his genealogical claim — asserted, not independently verified — to descent from the Quraysh, the Prophet Muhammad's tribe, a traditional requirement for a legitimate caliph. Combined with his academic religious credentials, this gave him a claim to religious authority that no prior modern jihadist leader, including bin Laden, had been able to make.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Restoring the Caliphate</div>
+            <p>Baghdadi's central doctrinal claim was that the modern nation-state system dividing the Muslim world was illegitimate, and that it was a binding religious obligation (fard al-'ayn) for Muslims to support and, where able, emigrate to a restored caliphate. His June 29, 2014 declaration — "Caliph Ibrahim" — was the first time since the Ottoman caliphate's abolition in 1924 that a group claimed to have both re-established the office and possessed the territory and population to make the claim credible, however briefly.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Takfir as Strategy</div>
+            <p>Baghdadi's Islamic State applied takfir — the practice of declaring other Muslims apostates — far more expansively than al-Qaeda's central leadership judged wise, extending it to Shia Muslims en masse, to Sunni tribes that resisted the group, and eventually to rival jihadist factions including al-Qaeda's own Syrian affiliate. This wide application of takfir functioned as both theological justification and strategic tool: it framed the group's brutal violence against fellow Muslims as religiously mandated rather than merely tactical.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Apocalyptic Urgency</div>
+            <p>Under Baghdadi, the Islamic State's propaganda leaned heavily on apocalyptic prophecy — particularly the belief that a final battle between Muslim and "Roman" (Western) armies would occur at Dabiq, a small town in northern Syria referenced in a hadith. This apocalyptic framing, documented extensively by researchers of the group's ideology, gave the caliphate project an urgency distinct from al-Qaeda's more patient, generational strategy, and helps explain the group's willingness to provoke direct confrontation with the United States and its allies rather than avoid it.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Break with al-Qaeda</div>
+            <p>Baghdadi's 2013 unilateral declaration merging his Iraqi and Syrian operations under the ISIS banner, rejected by al-Qaeda's Syrian affiliate and by Ayman al-Zawahiri himself, was as much a doctrinal rupture as an organisational one. Where al-Qaeda's central leadership favoured a long-term strategy of building popular support before declaring a state, Baghdadi insisted the caliphate should be declared immediately upon acquiring sufficient territory — a disagreement that produced the first open, violent war between two major jihadist organisations.</p>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"O Muslims everywhere, whoever is capable of performing hijrah [emigration] to the Islamic State, then let him do so, because hijrah to the land of Islam is obligatory."</blockquote>
+          <cite>— Abu Bakr al-Baghdadi, audio address, July 2014</cite>
+        </div>
+      </section>
+
+      <section id="campaigns">
+        <h2>Campaigns &amp; Rule</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">May 2010</div>
+              <div class="tl-title">Taking Command of a Shattered Organisation</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Baghdadi was named leader of the Islamic State of Iraq in May 2010, weeks after a joint U.S.-Iraqi raid near Tikrit killed his two predecessors, Abu Omar al-Baghdadi and Abu Ayyub al-Masri. He inherited an organisation that controlled no territory and had lost roughly 80 percent of its senior leadership over the preceding years. Working closely with Haji Bakr, a former Iraqi air defence intelligence colonel, Baghdadi restructured the group around former Ba'athist officers rather than religious volunteers, prioritising discipline, secrecy, and operational security over the charisma-driven model that had defined Zarqawi's era. Few outside observers at the time believed the group had a future.</p>
+            <div class="tl-sources"><span class="src-chip">Hashim (2014)</span><span class="src-chip">Weiss &amp; Hassan (2015)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2011–2013</div>
+              <div class="tl-title">Exploiting Syria and Breaking with al-Qaeda</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>As the Syrian uprising against Bashar al-Assad escalated into civil war from 2011, Baghdadi dispatched operatives across the border to found Jabhat al-Nusra as a Syrian franchise, providing funding, fighters, and expertise. In April 2013, without consulting al-Nusra's leadership or al-Qaeda's central command, Baghdadi announced that al-Nusra was merely a branch of his organisation and declared the merged entity the "Islamic State of Iraq and Syria" (ISIS). Al-Nusra's leader rejected the merger and pledged loyalty directly to al-Qaeda; Ayman al-Zawahiri sided with al-Nusra and ordered Baghdadi to confine his operations to Iraq. Baghdadi refused. By February 2014, al-Qaeda had formally disowned ISIS — the first public schism in the group's history, and one Baghdadi had provoked deliberately.</p>
+            <div class="tl-sources"><span class="src-chip">Gerges (2016)</span><span class="src-chip">Hashim (2014)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">June 2014</div>
+              <div class="tl-title">Mosul Falls, and Baghdadi Declares Himself Caliph</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>On June 10, 2014, a force of a few thousand ISIS fighters overran Mosul, defeating a nominally 30,000-strong Iraqi garrison and seizing enormous quantities of abandoned American military equipment. On June 29, spokesman Abu Muhammad al-Adnani announced the restoration of the caliphate and Baghdadi's assumption of the title "Caliph Ibrahim." On July 4, 2014, Baghdadi made his only confirmed public appearance as caliph, delivering a Friday sermon from the pulpit of Mosul's Great Mosque of al-Nuri — footage that was filmed and distributed globally, the first and last time the world saw him address a crowd in person. He would spend the rest of his life almost entirely in hiding, communicating only through audio recordings.</p>
+            <div class="tl-sources"><span class="src-chip">Hashim (2014)</span><span class="src-chip">UN Human Rights Council (2016)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2014–2017</div>
+              <div class="tl-title">Ruling the Caliphate from the Shadows</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>As caliph, Baghdadi presided — nominally — over a functioning bureaucratic state covering millions of people, built largely on the administrative framework Haji Bakr had designed before being killed by Syrian rebels in January 2014. Baghdadi himself was rarely seen and exercised authority mainly through a small inner council (shura) and delegated regional governors (wilayat). Under his nominal authority, the group carried out the genocidal campaign against the Yazidi minority at Sinjar in August 2014, publicised the beheading of Western hostages including journalists James Foley and Steven Sotloff, and inspired or directed terrorist attacks across Europe, including the November 2015 Paris attacks that killed 130 people. Baghdadi was reportedly wounded in a March 2015 coalition airstrike, after which he delegated day-to-day operations more heavily while remaining the group's ultimate religious and political authority.</p>
+            <div class="tl-sources"><span class="src-chip">Weiss &amp; Hassan (2015)</span><span class="src-chip">McCants (2015)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="late-career">
+        <h2>Late Career</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2017–2019</div>
+              <div class="tl-title">Fugitive Caliph — Territorial Collapse and Death</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>As the U.S.-led coalition and its local partners retook Mosul (July 2017) and Raqqa (October 2017), Baghdadi disappeared from public communication for extended periods, fuelling repeated — and repeatedly false — reports of his death. He resurfaced in an April 2019 video, his first confirmed video appearance since the 2014 Mosul sermon, acknowledging the loss of Baghouz, the group's final territorial holdout, which fell to the Syrian Democratic Forces that March. The video was widely read as an attempt to reassure a demoralised movement that its leader, and its cause, survived the loss of the caliphate's physical territory.</p>
+            <p>Baghdadi spent his final months moving between safehouses in Idlib province, an area controlled by rival jihadist and rebel factions rather than his own forces — a measure of how far the Islamic State's fortunes had fallen. On October 26, 2019, U.S. special operations forces, acting on intelligence reportedly obtained from a captured Islamic State operative, raided a compound near the village of Barisha. Cornered in a dead-end tunnel with three of his children, Baghdadi detonated a suicide vest, killing himself and the children. President Donald Trump announced his death the following day. DNA testing confirmed his identity.</p>
+            <div class="tl-sources"><span class="src-chip">U.S. Department of Defense (2019)</span><span class="src-chip">Evaluation of ISIS's Threats (2023)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+        <p>Baghdadi has been dead since 2019, and his successors have been comparatively obscure, short-lived, and operationally diminished. But the organisation he built, the doctrine he articulated, and the precedent he set continue to shape jihadist movements and counterterrorism policy worldwide.</p>
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>The Caliphate Precedent Outlived the Caliphate</h3>
+            <p>Baghdadi proved that a jihadist organisation could seize, hold, and administer significant territory — a demonstration effect that continues to inform the ambitions of Islamic State affiliates from the Sahel to Afghanistan, even though none has since matched the scale of Baghdadi's 2014–2017 caliphate.</p>
+            <ul class="matters-subpoints">
+              <li>ISIS-Khorasan in Afghanistan and Islamic State Sahel Province both explicitly model their propaganda and governance ambitions on Baghdadi's original caliphate project</li>
+              <li>Researchers studying jihadist recruitment continue to find that the memory of the 2014–2017 caliphate remains a powerful recruitment narrative even after its territorial defeat</li>
+              <li>Baghdadi's genealogical claim to Qurayshi descent set a template other aspiring jihadist leaders have since tried, unsuccessfully, to replicate</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>His Successors Have Been Weak — By Design and by Necessity</h3>
+            <p>Both of Baghdadi's confirmed successors, Abu Ibrahim al-Hashimi al-Qurashi and Abu al-Hasan al-Hashimi al-Qurashi, were killed within a year or two of assuming leadership and were far less publicly visible than Baghdadi — a reflection of the group's post-territorial security posture and its diminished ability to project a single charismatic figurehead.</p>
+            <ul class="matters-subpoints">
+              <li>Al-Qurashi was killed in a U.S. raid in February 2022, in Idlib province, within roughly a mile of where Baghdadi died in 2019</li>
+              <li>The group has deliberately reduced the public profile of its top leadership since Baghdadi's death, prioritising operational security over the propaganda value of a visible caliph</li>
+              <li>This has arguably weakened the group's global brand even as its regional affiliates have grown more lethal in absolute terms</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Camp Bucca's Lesson Still Shapes Detention Policy</h3>
+            <p>Baghdadi's own radicalisation inside a U.S. detention facility remains one of the most frequently cited cautionary examples in debates over how mass detention without adequate deradicalisation programming can incubate rather than neutralise extremism — a lesson directly applied, imperfectly, to the tens of thousands of Islamic State-linked detainees now held in Syrian camps like al-Hol.</p>
+            <ul class="matters-subpoints">
+              <li>U.S. and allied officials have repeatedly cited the Camp Bucca precedent when warning about the risks of leaving al-Hol's population undocumented and unrepatriated</li>
+              <li>Former Camp Bucca commanders have given extensive public testimony, since Baghdadi's rise, explicitly linking detention conditions to his radicalisation</li>
+              <li>The debate over whether to prosecute, repatriate, or indefinitely detain former Islamic State-linked individuals remains unresolved across dozens of countries</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>A Case Study in Underestimating an Adversary</h3>
+            <p>U.S. officials, including President Obama, notably described the group as a "JV team" in January 2014, months before it seized Mosul and declared a caliphate — a misjudgment now taught widely in intelligence and military education as a case study in the dangers of static threat assessment and mirror-imaging an adversary's ambitions.</p>
+            <ul class="matters-subpoints">
+              <li>The scale of the intelligence failure around both Baghdadi's 2004 release from Camp Bucca and the 2014 Mosul offensive is studied extensively in post-mortems of U.S. Iraq policy</li>
+              <li>Baghdadi's low public profile before 2014 meant Western intelligence agencies had comparatively thin biographical data on the man who would become the world's most wanted terrorist</li>
+              <li>His death in 2019 was itself nearly derailed by intelligence and operational uncertainty, illustrating how difficult tracking a deliberately low-visibility leader proved even after five years of dedicated effort</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>Assessing Baghdadi is complicated by how little verified biographical material exists about him relative to his historical significance — a deliberate consequence of the operational secrecy he maintained throughout his decade in militant leadership. What is not disputed is the scale of what he built and destroyed: a functioning proto-state that displaced millions, killed tens of thousands, and triggered a five-year international war, before collapsing entirely within his own lifetime.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">What is acknowledged even by critics</div>
+            <ul>
+              <li>Baghdadi achieved what no prior jihadist leader, including bin Laden, had managed — the capture and functional administration of a state-sized territory with millions of subjects</li>
+              <li>His organisational reforms after 2010, integrating former Ba'athist officers, transformed a nearly defeated insurgency into the best-resourced and most territorially successful jihadist group in modern history</li>
+              <li>His restraint in public appearances and communications — appearing on video only twice in five years as caliph — demonstrated an unusually disciplined approach to operational security that extended his survival well beyond most analysts' expectations</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">What the evidence shows</div>
+            <ul>
+              <li>Under his nominal authority, the Islamic State committed genocide against the Yazidi minority, according to determinations by the UN and multiple national governments</li>
+              <li>The group's public executions, sexual slavery, and mass killings of civilians and prisoners are extensively documented by the UN, Amnesty International, and numerous independent investigations</li>
+              <li>His unilateral 2013 merger declaration and subsequent break with al-Qaeda is widely judged by historians to have needlessly fractured the global jihadist movement while triggering a war his organisation could not ultimately win</li>
+              <li>His decision to declare a caliphate immediately, rather than build a durable local base first — the strategy al-Qaeda's leadership had favoured — is credited by several historians with accelerating both the group's early gains and its eventual comprehensive defeat</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legacy-card complex" style="margin-top:1.25rem;">
+          <div class="legacy-label">What remains genuinely contested</div>
+          <ul>
+            <li>Was Baghdadi a genuine ideological true believer, or a pragmatic organisational tactician who used religious doctrine instrumentally to justify strategic decisions? Scholars remain divided.</li>
+            <li>How much of the Islamic State's operational success should be attributed to Baghdadi personally, versus to Haji Bakr's organisational design and the broader pool of former Ba'athist officers he recruited?</li>
+            <li>Was his 2004 release from Camp Bucca an avoidable intelligence failure, or an inevitable consequence of processing tens of thousands of detainees with limited resources?</li>
+            <li>Did his apocalyptic religious framing reflect sincere belief, or calculated propaganda designed to motivate foreign recruits? Graeme Wood and Fawaz Gerges represent the two poles of this ongoing debate.</li>
+          </ul>
+        </div>
+
+        <p>The most defensible assessment of Baghdadi is that he was neither a lone ideological visionary nor merely a administrator executing someone else's design, but a leader whose specific combination of religious credentialing, operational patience, and willingness to act on doctrines other jihadists considered premature allowed a nearly defeated insurgency to become, briefly, a functioning state. That state's collapse was as total as its rise was sudden — and Baghdadi did not survive to see what, if anything, would be built from its remains.</p>
+
+        <div class="pull-quote">
+          <blockquote>"Baghdadi's genius, such as it was, lay not in theology but in timing — he declared a state the moment he had one to declare, when every other jihadist leader in history had waited."</blockquote>
+          <cite>— Fawaz A. Gerges, <em>ISIS: A History</em> (2016)</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People directly connected</div>
+          <div class="topics-grid">
+            <a href="saddam-hussein.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png" alt="Saddam Hussein">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Saddam Hussein</div>
+              <div class="topic-preview">The Ba'athist military and intelligence officers his regime trained — cast out by de-Ba'athification after his fall — became the organisational backbone Baghdadi built the Islamic State around.</div>
+            </a>
+            <a href="george-w-bush.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png" alt="George W. Bush">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">George W. Bush</div>
+              <div class="topic-preview">The invasion he ordered in 2003 led directly to Baghdadi's detention at Camp Bucca, where his radicalisation and militant networking began.</div>
+            </a>
+            <a href="ayatollah-khomeini.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg" alt="Ayatollah Khomeini">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Ayatollah Khomeini</div>
+              <div class="topic-preview">The Shia Islamic Republic Khomeini founded was the sectarian counterpoint against which Baghdadi's takfiri anti-Shia doctrine was explicitly defined.</div>
+            </a>
+            <a class="topic-card" href="khalifa-haftar.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg" alt="Khalifa Haftar">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Khalifa Haftar</div>
+              <div class="topic-preview">Haftar's "Operation Dignity" in Libya was framed explicitly as a fight against Islamist militias, including Islamic State affiliates that briefly held territory in Sirte during Baghdadi's caliphate.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Events &amp; Concepts</div>
+          <div class="topics-grid">
+            <a href="isis-islamic-state.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png" alt="ISIS / The Islamic State">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">ISIS / The Islamic State</div>
+              <div class="topic-preview">The organisation Baghdadi rebuilt from near-collapse and declared a caliphate over — its rise, governance, and territorial defeat are the defining story of his life.</div>
+            </a>
+            <a href="syrian-civil-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png" alt="The Syrian Civil War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Syrian Civil War</div>
+              <div class="topic-preview">The ungoverned territory this war produced after 2011 was the space in which Baghdadi rebuilt his organisation from an Iraqi insurgency into a transnational caliphate.</div>
+            </a>
+            <a href="iraq-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg" alt="The Iraq War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Iraq War</div>
+              <div class="topic-preview">The 2003 invasion, de-Ba'athification, and Camp Bucca detention system together produced the specific conditions that radicalised and networked Baghdadi.</div>
+            </a>
+            <a href="baathism.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png" alt="Ba'athism">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Ba'athism</div>
+              <div class="topic-preview">The collapse of secular Ba'athist rule in Iraq released the trained military officers Baghdadi and Haji Bakr recruited to build the Islamic State's governing apparatus.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">Hashim, A. S. (2014). </span>
+            <span class="src-journal">"The Islamic State: From al-Qaeda Affiliate to Caliphate," Middle East Policy, Vol. XXI, No. 4</span>.
+            <span class="src-note">The most detailed academic account of Baghdadi's organisational rebuilding of ISI after 2010, with particular attention to his integration of former Ba'athist officers into the group's command structure.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">Gerges, F. A. (2016). </span>
+            <span class="src-journal">ISIS: A History</span>. Princeton University Press.
+            <span class="src-note">A comprehensive academic biography of the organisation Baghdadi led, situating his rise within the broader collapse of state authority in Iraq and Syria. Essential context for his decision-making.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Weiss, M. &amp; Hassan, H. (2015). </span>
+            <span class="src-journal">ISIS: Inside the Army of Terror</span>. Regan Arts.
+            <span class="src-note">Draws on interviews with defectors who worked directly under Baghdadi, offering some of the most detailed available insider accounts of his leadership style and internal decision-making.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">McCants, W. (2015). </span>
+            <span class="src-journal">The ISIS Apocalypse: The History, Strategy, and Doomsday Vision of the Islamic State</span>. St. Martin's Press.
+            <span class="src-note">The definitive account of the apocalyptic theology that shaped Baghdadi's strategic urgency in declaring the caliphate, based on close reading of the group's own religious texts and propaganda.</span>
+          </li>
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">Wood, G. (2015). </span>
+            <span class="src-journal">"What ISIS Really Wants," The Atlantic, March 2015</span>.
+            <span class="src-note">The most widely debated analysis of the sincerity of Baghdadi's and the group's theological claims. Essential for understanding the ongoing scholarly dispute over ideology versus opportunism.</span>
+          </li>
+          <li>
+            <span class="src-num">[6]</span>
+            <span class="src-title">U.S. Department of Defense (2019). </span>
+            <span class="src-journal">Statements and briefings on Operation Kayla Mueller, October 2019</span>.
+            <span class="src-note">The official U.S. government account of the raid that killed Baghdadi, including the intelligence process that led to his location. Freely available via defense.gov.</span>
+          </li>
+          <li>
+            <span class="src-num">[7]</span>
+            <span class="src-title">United Nations Human Rights Council (2016). </span>
+            <span class="src-journal">"They Came to Destroy": ISIS Crimes Against the Yazidis, UN document A/HRC/32/CRP.2</span>.
+            <span class="src-note">The formal UN documentation of the genocide committed against the Yazidi minority under Baghdadi's nominal authority as caliph. Freely available at ohchr.org.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="index.html" style="color:var(--purple);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html', thumb: 'https://www.atlanticcouncil.org/wp-content/uploads/2018/08/IraqiMinister_Feature.jpg' },
+    { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Khalifa Haftar',                desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',                url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',      desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',             url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                                   url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.',              url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'event',   title: 'The Libyan Civil War',          desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',                                                        url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',              desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',                      url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',               desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',                                                                   url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',              desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.",                                                         url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',                desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',                                                       url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',               desc: "The refugee who became America's most powerful and most controversial diplomat.",                                                             url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',              desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',                                                        url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',                 desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',                                                             url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                  desc: "America's first Black president — who promised transformation and left a country more divided.",                                             url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',            desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',                                  url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',                desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',                                              url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',            desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.",                                          url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+    else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+    else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+    else if (e.key==='Escape') { toggleSearch(); return; }
+    items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.height = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+    const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+  });
+  function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('#quick-facts, #campaigns, #late-career').forEach(()=>{});
+  });
+  function toggleSave() {
+    const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+    if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+    else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+  }
+</script>
+</body>
+</html>
