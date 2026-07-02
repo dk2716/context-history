@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdel Fattah el-Sisi — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type person">Person</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>People</span><span class="breadcrumb-sep">›</span>
+      <span>Egypt · Military Leaders</span><span class="breadcrumb-sep">›</span>
+      <span>Abdel Fattah el-Sisi</span>
+    </div>
+    <div class="hero-person-layout">
+      <div class="hero-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg" alt="Abdel Fattah el-Sisi"></div>
+      <div>
+        <span class="nav-topic-type person" style="margin-bottom:0.5rem;display:inline-block;">Person</span>
+        <h1>Abdel Fattah el-Sisi</h1>
+        <div style="font-size:1rem;color:var(--muted);margin-bottom:0.5rem;font-family:sans-serif;">عبد الفتاح السيسي</div>
+        <p class="hero-sub">The general who overthrew Egypt's first democratically elected president, then ordered the bloodiest crackdown in modern Egyptian history — and has ruled ever since by building a security state that scholars describe as more repressive than anything Mubarak attempted.</p>
+        <div class="hero-meta">
+          <span>~13 min read</span><span>·</span>
+          <span>5 academic sources</span><span>·</span>
+          <span>Last updated June 2026</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav">
+      <li><a href="#facts">Quick Facts</a></li>
+      <li><a href="#origins">Origins &amp; Rise</a></li>
+      <li><a href="#worldview">Worldview</a></li>
+      <li><a href="#rule">How He Rules</a></li>
+      <li><a href="#coup">The Coup &amp; Rabaa</a></li>
+      <li><a href="#egypt">Egypt Under Sisi</a></li>
+      <li><a href="#legacy">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <article>
+
+    <section id="facts">
+      <div class="quick-facts">
+        <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Abdel Fattah Said Hussein Khalil el-Sisi</div></div>
+        <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">November 19, 1954 · Cairo, Egypt</div></div>
+        <div class="qf-item"><div class="qf-label">In power</div><div class="qf-value">President: June 2014–present · Defense Minister: August 2012–2014</div></div>
+        <div class="qf-item"><div class="qf-label">Path to power</div><div class="qf-value">Military coup against elected President Mohamed Morsi, July 3, 2013</div></div>
+        <div class="qf-item"><div class="qf-label">Background</div><div class="qf-value">Career military officer; Commander of Military Intelligence, 2010–2012</div></div>
+        <div class="qf-item"><div class="qf-label">Notable act</div><div class="qf-value">Ordered dispersal of Rabaa sit-in, August 14, 2013 — at least 817 killed in one day</div></div>
+        <div class="qf-item"><div class="qf-label">Ideology</div><div class="qf-value">Military-led secular nationalism; anti-Islamism; strong-state developmentalism</div></div>
+        <div class="qf-item"><div class="qf-label">Term extended</div><div class="qf-value">2019 constitutional amendments allow him to remain in power until at least 2030</div></div>
+      </div>
+    </section>
+
+    <section id="origins">
+      <h2>Origins &amp; Rise</h2>
+      <p>Abdel Fattah el-Sisi was born in November 1954 in Cairo's Gamaleya district — a working-class neighborhood in Islamic Cairo, close to Al-Azhar mosque. His family background was conservative and religious by Egyptian standards but not Islamist; his great-aunt was a member of the Muslim Brotherhood's women's wing in the 1940s, a biographical detail he has carefully avoided discussing. He entered the Egyptian Military Academy in the mid-1970s — the standard path for ambitious Egyptian men of his class — and graduated in 1977. Nothing in his early career suggested a future that would make him one of the most consequential figures in post-independence Egyptian history.</p>
+
+      <p>His career was steady rather than spectacular, moving through the standard progression of Egyptian military ranks. The critical inflection point came in 2006, when he attended the United States Army War College in Carlisle, Pennsylvania. His classified thesis, obtained and reported on years later, was titled "Democracy in the Middle East." It argued that democracy was compatible with Islam but that it needed to be developed organically within Arab societies, not imposed from outside — a position that reads less like a brief for liberal politics than like an argument for patient, state-managed political development. His American classmates described him as professional and courteous; none apparently identified him as someone building toward anything unusual.</p>
+
+      <p>In 2010, Mubarak appointed him head of military intelligence — a position with significant visibility and influence over Egypt's domestic security picture. When the Arab Spring toppled Mubarak in February 2011 and the Supreme Council of the Armed Forces took over, Sisi was part of the inner military establishment navigating the transition. After Mohamed Morsi and the Muslim Brotherhood won Egypt's first competitive presidential election in June 2012, Morsi appointed Sisi as Defense Minister in August of the same year — a move Morsi apparently calculated would bring the military establishment into alliance with his presidency. He miscalculated badly.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">2010</div><div class="stat-label">Year Sisi became Head of Military Intelligence, giving him visibility into Egypt's security picture ahead of the Arab Spring</div></div>
+        <div class="stat-box"><div class="stat-number">8 months</div><div class="stat-label">Time between Morsi appointing Sisi Defense Minister and Sisi removing Morsi — one of history's faster betrayals</div></div>
+        <div class="stat-box"><div class="stat-number">96.9%</div><div class="stat-label">Vote share Sisi received in his 2014 presidential election — a figure that communicated information about the election rather than his actual support</div></div>
+        <div class="stat-box"><div class="stat-number">2030</div><div class="stat-label">Earliest date Sisi could leave power under 2019 constitutional amendments, which reset his term counter</div></div>
+      </div>
+    </section>
+
+    <section id="worldview">
+      <h2>Worldview &amp; Ideology</h2>
+      <div class="ideology-grid">
+        <div class="ideology-card">
+          <div class="ideology-card-title">Stability Above All</div>
+          <p>Sisi's worldview begins and ends with order. He represents a strand of Egyptian military thinking that views political instability — of any kind, from any direction — as Egypt's existential threat. The Muslim Brotherhood's year in power was, in this framework, not merely bad governance but an existential threat to the Egyptian state itself. His repeated use of the phrase "the state" as something precious and fragile that must be defended frames all political opposition as inherently dangerous, whether Islamist, liberal, or leftist.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Secular Nationalism — Egyptian, Not Arab</div>
+          <p>Unlike Nasser, Sisi has little interest in pan-Arab ideology or regional leadership ambitions beyond what serves Egyptian security interests. He is Egyptian-first in a way that Nasser, whose identity was bound up with the Arab world's transformation, never quite was. He has maintained security cooperation with Israel over Gaza, normalized relations with Gulf monarchies that are ideologically far removed from Egyptian military nationalism, and has shown no interest in ideological projects beyond Egyptian state power.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">The Military as the Nation</div>
+          <p>In Sisi's Egypt, the military is not merely a guarantor of security — it is the most legitimate institution in the state, the carrier of Egyptian national identity, and the proper arbiter of political questions that civilians cannot be trusted to resolve. This is a worldview common across the Egyptian officer corps, and it explains why Sisi has expanded military involvement in the civilian economy: construction, food production, consumer goods, infrastructure. Scholars estimate the military controls 25-40% of the Egyptian economy, though exact figures are deliberately opaque.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Counterterrorism as Governance</div>
+          <p>After Rabaa, Sisi framed almost all political opposition as either terrorism or foreign interference. The Muslim Brotherhood was designated a terrorist organisation in December 2013. Journalists, human rights lawyers, civil society activists, and political opponents have been prosecuted under anti-terrorism statutes. This securitization of politics — treating dissent as a national security threat — is the defining feature of his governance and has been documented extensively by Amnesty International and Human Rights Watch.</p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"You can't be naive about Egypt. We either confront terrorism or we don't. There is no middle."</blockquote>
+        <cite>— Abdel Fattah el-Sisi, 2014 — a formulation that has been applied with consistent expansiveness, classifying an ever-wider range of opponents as "terrorists."</cite>
+      </div>
+    </section>
+
+    <section id="rule">
+      <h2>How He Rules</h2>
+      <p>Sisi's Egypt is what political scientists call a fully consolidated authoritarian state — one where the formal institutions of democracy (elections, parliament, courts) continue to exist but have been systematically hollowed out. What changed after 2013 was not only the removal of the Brotherhood but the targeting of every organised political force in Egyptian society, including the secular liberals who had cheered the coup against Morsi.</p>
+
+      <h3>Mass Imprisonment</h3>
+      <p>The scale of political detention in Egypt under Sisi is without precedent in the country's modern history. Human rights organisations estimate between 60,000 and 100,000 political prisoners, including journalists, bloggers, lawyers, academics, and politicians across the political spectrum. The conditions of pre-trial detention have been documented to include prolonged solitary confinement, torture, and denial of medical care. Josua and Edel's 2021 research in <em>Mediterranean Politics</em> explicitly describes Egypt as "under the grip of a military dictatorship more repressive than ever under Mubarak" — a strong claim given Mubarak's own record. The Political Terror Scale data they cite shows Egypt's repression level jumped sharply from 2013 and remained at elevated levels through 2018.</p>
+
+      <div class="callout warning">
+        <div class="callout-label">Documented Atrocity</div>
+        <h4>The Rabaa al-Adawiya Massacre — August 14, 2013</h4>
+        <p>Egyptian security forces dispersed two sit-in protests by supporters of ousted President Mohamed Morsi — at Rabaa al-Adawiya Square and al-Nahda Square in Cairo. Human Rights Watch's detailed investigation, "All According to Plan" (2014), documented at least 817 deaths at Rabaa alone over approximately ten hours; the true figure is likely higher. Security forces used armoured vehicles, snipers, and tear gas; medical personnel were prevented from reaching the wounded. HRW described it as "one of the world's largest killings of demonstrators in a single day in recent history." Sisi has never expressed regret for the operation. Egypt's government designated the deaths as a necessary counterterrorism operation.</p>
+      </div>
+
+      <h3>Control of Media and Civil Society</h3>
+      <p>Egyptian authorities have systematically dismantled independent media. Dozens of news websites have been blocked; journalists from Al Jazeera and independent Egyptian outlets were imprisoned on terrorism charges; social media monitoring has been expanded. The 2019 constitutional amendments gave Sisi control over senior judicial appointments, eliminating one of the last institutional checks on executive power. Universities, as the Scholars at Risk network has documented, have been subjected to quasi-military oversight — academics self-censor or emigrate.</p>
+
+      <h3>Economic Programme: Megaprojects and IMF Deals</h3>
+      <p>Sisi has pursued an ambitious programme of large-scale infrastructure projects — most prominently, a new administrative capital being built from scratch in the desert east of Cairo, projected to cost $58 billion and designed to house government ministries and the presidential palace. A second Suez Canal lane was inaugurated with enormous fanfare in August 2015. These projects, combined with an IMF deal in 2016 worth $12 billion that required devaluation of the Egyptian pound and subsidy cuts, generated real hardship for ordinary Egyptians while creating business for military-owned construction firms. Economic growth has improved on paper, but the gains have not been widely distributed and subsidy cuts have been severe.</p>
+    </section>
+
+    <section id="coup">
+      <h2>The Coup and Rabaa</h2>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">JUNE–JUNE 2012</div>
+            <div class="tl-title">Morsi Elected — The Brotherhood in Power</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Mohamed Morsi of the Muslim Brotherhood won Egypt's first genuinely competitive presidential election in June 2012 with 51.7% of the vote — a margin that reflected deep ambivalence rather than enthusiasm, since many Egyptians voted for him primarily to prevent the election of Ahmed Shafik, Mubarak's last prime minister. Morsi's presidency was troubled from the start: he issued a constitutional declaration in November 2012 placing presidential decisions above judicial review, triggering massive protests; the economy continued to deteriorate; and he proved unable to manage either the military establishment or the fractured political opposition.</p>
+          <p>Morsi's appointment of Sisi as Defense Minister in August 2012 — alongside the retirement of Field Marshal Tantawi, who had led the post-Mubarak military council — was intended to demonstrate civilian control of the military. It proved to be the opposite: Sisi used his position to plan the removal of the president who had appointed him.</p>
+          <div class="tl-sources"><span class="src-chip">Kirkpatrick (2018)</span><span class="src-chip">Ketchley (2017)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">JUNE–JULY 2013</div>
+            <div class="tl-title">Tamarod, Mass Protests, and the Coup</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>In spring 2013, a petition campaign called Tamarod ("Rebellion") emerged, claiming to gather signatures demanding early presidential elections. The campaign was later revealed to have had significant funding and organisational support from Egyptian security services — though it also reflected genuine popular discontent. By late June 2013, large protests against Morsi were taking place across Egypt; some estimates claimed millions in the streets, though the figures were disputed. On July 3, 2013, Sisi appeared on television flanked by the heads of Al-Azhar, the Coptic Church, and key political leaders to announce Morsi's removal and suspension of the constitution. It was a coup, though Egyptian authorities and their international supporters avoided using the word — because the US foreign aid law required cutting military assistance to governments that came to power through a military coup against a democratically elected president.</p>
+          <p>The Obama administration's response was notably ambivalent. The US did not immediately cut aid; Secretary of State Kerry spoke of the military "restoring democracy." Kirkpatrick's account from inside the US Embassy in Cairo describes a deliberate choice by American officials to avoid confronting the reality of what had happened. Gulf states — particularly Saudi Arabia, the UAE, and Kuwait — were far less equivocal: they immediately pledged $12 billion in aid to the new Egyptian government, replacing US economic leverage overnight.</p>
+          <div class="tl-sources"><span class="src-chip">Kirkpatrick (2018)</span><span class="src-chip">Josua & Edel (2021)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">AUGUST 14, 2013</div>
+            <div class="tl-title">Rabaa — The Massacre That Defined His Rule</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>After the coup, Brotherhood supporters organised a sit-in at Rabaa al-Adawiya Square in the Nasr City district of Cairo, insisting on Morsi's reinstatement. A smaller sit-in occupied al-Nahda Square near Cairo University. For six weeks the two camps faced off, with the interim government issuing ultimatums and the protesters refusing to leave. On the morning of August 14, 2013, security forces moved in with armoured bulldozers, live ammunition, and snipers on surrounding rooftops. The operation lasted approximately ten hours.</p>
+          <p>Human Rights Watch's detailed forensic investigation, drawing on hundreds of witness accounts, satellite imagery, and video evidence, documented at least 817 deaths at Rabaa — making it one of the largest mass killings of protesters recorded in a single day in recent history, comparable in scale to Tiananmen Square and the 1988 Halabja chemical attack. Bodies were found with gunshot wounds to the head and chest. A makeshift field hospital was specifically targeted. The surrounding streets were set alight after the main square was cleared. An estimated 43 people were killed at al-Nahda Square simultaneously. HRW concluded that "Egyptian security forces and military committed serious violations of international human rights law, some of which may amount to crimes against humanity."</p>
+          <p>The massacre was presented to Egyptian audiences — and to significant parts of the Egyptian public — as a necessary security operation against armed terrorists. This framing succeeded domestically to a degree that shocked outside observers. Edel and Josua's research specifically identified the Rabaa aftermath as a case study in how autocrats frame mass killings through securitization — "Autocrats often frame dissenters as enemies of the state, as was the case in Egypt when Muslim Brotherhood supporters were massacred after the 2013 coup."</p>
+          <div class="tl-sources"><span class="src-chip">Human Rights Watch (2014)</span><span class="src-chip">Josua & Edel (2021)</span><span class="src-chip">Kirkpatrick (2018)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">MAY 2014 & 2019</div>
+            <div class="tl-title">Elections, Reelection, and Constitutional Power Grab</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>In the presidential elections of May 2014, Sisi received 96.9% of the vote on a turnout of 47.5% — low enough that authorities had to extend voting by a day and reportedly urge Egyptians to come out in an embarrassing public reminder that even managed elections require some minimal participation. His only opponent, Hamdeen Sabahi, received 3.1%. In 2018, Sisi was reelected with 97.1%; his main potential rival, former general Sami Anan, was arrested after announcing his candidacy.</p>
+          <p>The 2019 constitutional amendments were the most consequential consolidation of Sisi's power. They extended the presidential term from four to six years, reset his term counter (allowing him to remain president until at least 2030), gave the president the power to appoint senior judges, and formally codified the military's role as "guardian" of Egyptian democracy — a phrase that would be comic if its implications weren't serious. The amendments passed a referendum with 88.8% approval, a result that reflected the absence of any meaningful opposition campaign rather than genuine consensus.</p>
+          <div class="tl-sources"><span class="src-chip">Kirkpatrick (2018)</span><span class="src-chip">Josua & Edel (2021)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="egypt">
+      <h2>Egypt Under Sisi</h2>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">2014–PRESENT</div>
+            <div class="tl-title">The Sinai Insurgency — A Real Security Problem Alongside Political Repression</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Sisi's most legitimate security challenge has been the Sinai Peninsula, where an ISIS affiliate — Wilayat Sinai, formerly Ansar Beit al-Maqdis — has conducted sustained guerrilla operations against Egyptian security forces and, periodically, civilians. The group was responsible for the bombing of Metrojet Flight 9268 in October 2015, killing all 224 people aboard, and the November 2017 attack on the Al-Rawda mosque in North Sinai that killed 311 worshippers. The Egyptian military's counterinsurgency operations in Sinai have themselves been accused of serious abuses — forced displacement of North Sinai villages, destruction of homes, and documented torture of detainees — creating a cycle in which heavy-handed tactics have compounded rather than resolved the insurgency.</p>
+          <div class="tl-sources"><span class="src-chip">Human Rights Watch (2019)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">FEBRUARY 2016</div>
+            <div class="tl-title">The Giulio Regeni Case — A Signal to the World</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Giulio Regeni was an Italian PhD candidate at Cambridge University researching independent trade unions in Egypt. He disappeared on January 25, 2016 — the fifth anniversary of the Egyptian Revolution. His body was found on February 3 in a ditch along the Cairo-Alexandria highway, bearing signs of systematic torture over multiple days. Egyptian authorities initially attributed his death to a car accident, then to criminal gangs. Italian investigators, working with Italian prosecutors over the following years, produced evidence pointing to Egyptian security services as responsible. The case produced a significant diplomatic crisis between Egypt and Italy and served, as Josua and Edel noted in their research, as a chilling signal to researchers worldwide: a Western PhD student with a Cambridge affiliation studying something as relatively benign as trade unions could be kidnapped and killed with impunity.</p>
+          <div class="tl-sources"><span class="src-chip">Josua & Edel (2021)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">JUNE 2019</div>
+            <div class="tl-title">Morsi Dies in Custody</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Mohamed Morsi, Egypt's first elected president, died during a court session on June 17, 2019, after collapsing in the defendant's dock. He had spent six years in pre-trial detention, much of it in conditions that UN human rights experts described as "enforced disappearance" in a secret prison. He had been denied adequate medical care for diabetes and liver disease despite documented deterioration. A UN statement called for an independent investigation into what it termed a "cruel, inhuman and degrading treatment" case. The Egyptian government described his death as a heart attack and held no independent investigation. He was buried in a prison cemetery without his family present at the burial.</p>
+          <div class="tl-sources"><span class="src-chip">UN Human Rights Office (2019)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="legacy">
+      <h2>Legacy &amp; Debate</h2>
+      <p>Sisi is a deeply polarising figure for reasons that go beyond ordinary political disagreement. The core contested question is whether what he represents is a necessary corrective to a catastrophic democratic experiment, or whether it is a comprehensive destruction of the political space that Egyptians created in 2011 — one that has left Egypt with higher repression, greater military dominance of the economy, and no path toward political development.</p>
+
+      <div class="legacy-grid">
+        <div class="legacy-card positive">
+          <div class="legacy-label">Arguments Made in his Favour</div>
+          <ul>
+            <li>Prevented Egypt from experiencing the kind of state collapse that followed the Arab Spring in Libya, Syria, and Yemen</li>
+            <li>Maintained basic security and economic functioning in a country of 105 million people under severe external pressures</li>
+            <li>Built real infrastructure — the New Administrative Capital, Suez Canal expansion, road network — that represents genuine development investment</li>
+            <li>Managed the Sinai insurgency without complete loss of territorial control, unlike what happened to the Libyan and Yemeni states</li>
+            <li>Maintained the Egypt-Israel peace and the Camp David framework, stabilising the most important bilateral relationship in Arab-Israeli relations</li>
+          </ul>
+        </div>
+        <div class="legacy-card negative">
+          <div class="legacy-label">Arguments Against his Record</div>
+          <ul>
+            <li>The Rabaa massacre — at least 817 killed in a single day — is one of the largest mass killings of protesters in recent history and has never been investigated</li>
+            <li>An estimated 60,000–100,000 political prisoners, including journalists, academics, lawyers, and secular democrats</li>
+            <li>Egypt's repression score on the Political Terror Scale reached levels higher than any point under Mubarak's 30-year rule</li>
+            <li>The military's economic dominance has deepened inequality and produced projects (the New Capital) that serve military-class interests more than ordinary Egyptians</li>
+            <li>Systematic destruction of civil society, independent media, and political opposition has left Egypt with no viable path to peaceful political change</li>
+            <li>The Giulio Regeni murder and the death of Morsi in custody represent a complete absence of accountability even to diplomatic partners</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="legacy-card complex" style="margin-top:1.25rem;">
+        <div class="legacy-label">The Genuinely Contested Question</div>
+        <ul>
+          <li>Was Morsi's Muslim Brotherhood government actually a threat to Egyptian democracy — or was the coup a military intervention against a government it found politically inconvenient?</li>
+          <li>Comparative cases suggest that electoral Islamist governments can be peacefully alternated in power (Tunisia 2014, Turkey) — but Egypt was also not Tunisia or Turkey</li>
+          <li>The Gulf states' immediate $12 billion pledge to Sisi suggests his coup was partly a regional counterrevolution against the Brotherhood model, not purely an Egyptian security calculation</li>
+        </ul>
+      </div>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">David Kirkpatrick</div>
+          <div class="scholar-card-title">New York Times Cairo Bureau Chief · <em>Into the Hands of the Soldiers</em> (2018)</div>
+          <div class="scholar-card-verdict">Kirkpatrick's account — written by someone with extraordinary access to both the US Embassy and Egyptian political circles — is the most detailed narrative account of how the coup was planned, executed, and enabled by regional and international actors who knew what was happening. He is damning about US complicity and the deliberate choice to avoid the word "coup." Essential reading and widely available.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Maria Josua &amp; Mirjam Edel</div>
+          <div class="scholar-card-title">GIGA Institute / Tübingen · <em>Mediterranean Politics</em> (2021)</div>
+          <div class="scholar-card-verdict">Their framework of "counterrevolutionary upscaling of repression" is the most precise academic characterisation of what happened in Egypt after 2013. Their data from the Political Terror Scale shows Egypt's repression reaching levels without precedent in the post-WWII period. They document how Egypt became the leading case study in how authoritarian governments learn from, and coordinate with, each other to suppress protest movements — including the Saudi-UAE funding that made Sisi's repression financially viable. Open access.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Neil Ketchley</div>
+          <div class="scholar-card-title">Oxford · <em>Egypt in a Time of Revolution</em> (2017)</div>
+          <div class="scholar-card-verdict">Ketchley's account focuses on the contentious politics of the revolutionary period itself — the strategic choices made by protesters, the military's calculations, and the spatial dynamics of how Tahrir Square functioned as a political arena. He is careful to show how protests evolved and adapted under pressure, and his account of how the military maintained its institutional coherence through both Mubarak's fall and the Morsi period illuminates why Sisi was able to consolidate power so quickly. Available in academic libraries.</div>
+        </div>
+      </div>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">The pro-stability argument</div>
+          <ul>
+            <li>The Brotherhood's one year in power produced constitutional overreach, economic mismanagement, and political polarisation <span class="perspective-attr">— standard coup justification</span></li>
+            <li>Egypt's size (105 million people) and strategic position make its stability an international public good <span class="perspective-attr">— Gulf state donors</span></li>
+            <li>Sisi has maintained basic services and economic growth that the post-Arab Spring regimes in Libya and Yemen could not <span class="perspective-attr">— IMF assessments</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">The human rights argument</div>
+          <ul>
+            <li>The Rabaa massacre was planned in advance and carried out by forces acting under Sisi's direct command — it was not excessive force by individual officers <span class="perspective-attr">— Human Rights Watch (2014)</span></li>
+            <li>Political repression has continued to escalate years after any security justification related to the Brotherhood's removal <span class="perspective-attr">— Josua & Edel (2021)</span></li>
+            <li>Economic gains from military-owned construction projects primarily benefit the military class rather than ordinary Egyptians <span class="perspective-attr">— Abul-Magd (2016)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"Egypt is under the grip of a military dictatorship more repressive than ever under Mubarak."</blockquote>
+        <cite>— Maria Josua & Mirjam Edel, <em>Mediterranean Politics</em> (2021) — an assessment grounded in the Political Terror Scale's quantitative tracking of physical integrity rights violations from 1976 to the present.</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Egyptian leaders Sisi is defined against</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="gamal-abdel-nasser.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg" alt="Gamal Abdel Nasser">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Gamal Abdel Nasser</div>
+            <div class="topic-preview">Sisi presents himself as continuing Nasser's tradition of military-led Egyptian nationalism — critics note the comparison flatters Sisi, since Nasser at least had genuine mass legitimacy.</div>
+          </a>
+          <a class="topic-card" href="anwar-sadat.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg" alt="Anwar Sadat">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Anwar Sadat</div>
+            <div class="topic-preview">Sisi has maintained Sadat's peace with Israel and his anti-Brotherhood stance — but without Sadat's willingness to take political risks or explain himself to the Egyptian public.</div>
+          </a>
+          <a class="topic-card" href="obama.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg" alt="Barack Obama">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Barack Obama</div>
+            <div class="topic-preview">The Obama administration's deliberate ambiguity about whether Morsi's removal was a "coup" — avoiding the legal trigger that would have cut US military aid — was the original international enablement of Sisi's rule.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Events and concepts that define Sisi's context</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="arab-spring.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Tahrir_Square_Rally.jpg/960px-Tahrir_Square_Rally.jpg" alt="The Arab Spring">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Arab Spring</div>
+            <div class="topic-preview">Sisi both emerged from the Arab Spring (as a beneficiary of the military's role in Mubarak's removal) and personifies its failure — he is the counter-revolution made flesh.</div>
+          </a>
+          <a class="topic-card" href="responsibility-to-protect.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="The Responsibility to Protect">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">The Responsibility to Protect</div>
+            <div class="topic-preview">The R2P norm invoked for Libya was conspicuously absent for Egypt — Rabaa's 817 dead in one day exceeded the civilian casualty rates that triggered NATO's intervention in Libya, without any international military response.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Kirkpatrick, D. D. (2018). <em>Into the Hands of the Soldiers: Freedom and Chaos in Egypt and the Middle East.</em></span>
+          <span class="src-journal"> Viking.</span>
+          <span class="src-note">The definitive journalistic account of Egypt from 2011 to 2018, written by the New York Times Cairo bureau chief. Kirkpatrick had extraordinary access to American diplomats, Egyptian officials, and opposition figures. His account of the coup's planning and the US response is unmatched for detail and frankness. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Ketchley, N. (2017). <em>Egypt in a Time of Revolution: Contentious Politics and the Arab Spring.</em></span>
+          <span class="src-journal"> Cambridge University Press.</span>
+          <span class="src-note">The best academic account of Egyptian contentious politics from 2011 through 2013. Ketchley uses fine-grained protest data and field research to explain how the military navigated both Mubarak's fall and the subsequent period. Available in academic libraries.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Human Rights Watch. (2014). <em>All According to Plan: The Rab'a Massacre and Mass Killings of Protesters in Egypt.</em></span>
+          <span class="src-journal"> Human Rights Watch.</span>
+          <span class="src-note">The forensic investigation of the Rabaa massacre, documenting at least 817 deaths and concluding that the operation was planned in advance rather than a spontaneous escalation. Based on hundreds of witness interviews, satellite imagery, and video evidence. Freely available at hrw.org.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Josua, M., & Edel, M. (2021). The Arab uprisings and the return of repression. <em>Mediterranean Politics,</em> 26(5), 586–611.</span>
+          <span class="src-journal"> DOI: 10.1080/13629395.2021.1889298</span>
+          <span class="src-note">The most rigorous comparative assessment of repression trajectories across Arab states after 2011. Their framework for "counterrevolutionary upscaling of repression" directly characterises Egypt under Sisi, and their Political Terror Scale data quantifies the unprecedented rise in state violence. Open access.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Abul-Magd, Z. (2017). <em>Militarizing the Nation: The Army, Business, and Revolution in Egypt.</em></span>
+          <span class="src-journal"> Columbia University Press.</span>
+          <span class="src-note">The most thorough account of the Egyptian military's economic empire — how military-owned enterprises expanded across the consumer economy, construction sector, and public utilities, creating the institutional foundation for Sisi's political dominance. Available in academic libraries.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div><!-- /.outer -->
+</div><!-- /.page-wrap -->
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',            desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',            desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',         desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'concept', title: 'Realpolitik',             desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person',  title: 'Tony Blair',              desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Colin Powell',            desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Dick Cheney',             desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',   title: 'The Iraq War',            desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'concept', title: 'Democratic Socialism',    desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War', desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',       desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",               desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Khalifa Haftar',          desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement', desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',             desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'event',   title: 'The Libyan Civil War',    desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',        desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',          desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',         desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',        desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',           desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',            desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',          desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',      desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn=document.getElementById('searchIconBtn'),dd=document.getElementById('searchDropdown'),inp=document.getElementById('searchInput');
+  _searchOpen=!_searchOpen; btn.classList.toggle('active',_searchOpen); dd.classList.toggle('open',_searchOpen);
+  if(_searchOpen){inp.focus();runSearch('');}else{inp.value='';_focusIdx=-1;}
+}
+function runSearch(q) {
+  const box=document.getElementById('searchResults'),term=q.trim().toLowerCase();
+  const seen=new Set();
+  const all=CONTEXT_ARTICLES.filter(a=>{if(seen.has(a.url))return false;seen.add(a.url);return true;});
+  const hits=term===''?all:all.filter(a=>a.title.toLowerCase().includes(term)||a.desc.toLowerCase().includes(term)||a.type.includes(term));
+  _focusIdx=-1;
+  if(!hits.length){box.innerHTML='<div class="search-empty">No articles yet — more coming soon.</div>';return;}
+  box.innerHTML=hits.map((a,i)=>`<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb?`<img src="${a.thumb}" style="width:28px;height:28px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-right:6px;">`:''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='ArrowDown'){e.preventDefault();_focusIdx=Math.min(_focusIdx+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();_focusIdx=Math.max(_focusIdx-1,0);}
+  else if(e.key==='Enter'&&_focusIdx>=0){items[_focusIdx].click();return;}
+  else if(e.key==='Escape'){toggleSearch();return;}
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click',e=>{if(_searchOpen&&!document.querySelector('.search-wrap').contains(e.target))toggleSearch();});
+window.addEventListener('scroll',()=>{
+  document.getElementById('progressBar').style.width=Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'),navItems=document.querySelectorAll('.sidebar-nav li');let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el){const w=el.classList.contains('active');document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active'));if(!w)el.classList.add('active');}
+function toggleSave(){
+  const btn=document.getElementById('saveBtn'),toast=document.getElementById('toast'),isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

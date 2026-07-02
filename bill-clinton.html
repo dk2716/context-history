@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bill Clinton — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>People</span><span class="breadcrumb-sep">›</span>
+      <span>U.S. Presidents</span><span class="breadcrumb-sep">›</span>
+      <span>Bill Clinton</span>
+    </div>
+    <div class="hero-person-layout">
+      <div class="hero-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg" alt="Bill Clinton"></div>
+      <div>
+        <div class="hero-region-tag">United States · 42nd President</div>
+        <h1>Bill Clinton</h1>
+        <p class="hero-sub">The Arkansas governor who charmed his way to the White House, presided over America's longest peacetime economic boom, and became only the second president in history to be impeached — undone not by his enemies but by his own choices.</p>
+        <div class="hero-meta">
+          <span>~16 min read</span><span>·</span>
+          <span>Active: 1979–2001</span><span>·</span>
+          <span>United States</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav">
+      <li><a href="#quick-facts">Quick Facts</a></li>
+      <li><a href="#origins">Origins &amp; Rise</a></li>
+      <li><a href="#domestic">Domestic Policy</a></li>
+      <li><a href="#foreign">Foreign Policy</a></li>
+      <li><a href="#scandal">The Scandal &amp; Impeachment</a></li>
+      <li><a href="#legacy">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <article>
+
+    <section id="quick-facts">
+      <div class="quick-facts">
+        <div class="quick-facts-label">Quick Facts</div>
+        
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">William Jefferson Clinton (born William Jefferson Blythe III)</div></div>
+          <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">August 19, 1946 — Hope, Arkansas</div></div>
+          <div class="qf-item"><div class="qf-label">Education</div><div class="qf-value">Georgetown University (BS) · Oxford University (Rhodes Scholar) · Yale Law School (JD)</div></div>
+          <div class="qf-item"><div class="qf-label">Before president</div><div class="qf-value">Arkansas Attorney General (1977–79) · Governor of Arkansas (1979–81, 1983–92)</div></div>
+          <div class="qf-item"><div class="qf-label">Presidency</div><div class="qf-value">42nd President of the United States, January 20, 1993 – January 20, 2001</div></div>
+          <div class="qf-item"><div class="qf-label">Party</div><div class="qf-value">Democrat; co-founded the Democratic Leadership Council (centrist "New Democrat" wing)</div></div>
+          <div class="qf-item"><div class="qf-label">Spouse</div><div class="qf-value">Hillary Rodham Clinton (married 1975)</div></div>
+          <div class="qf-item"><div class="qf-label">Impeachment</div><div class="qf-value">Impeached by the House December 19, 1998 (perjury and obstruction of justice); acquitted by the Senate February 12, 1999</div></div>
+          <div class="qf-item"><div class="qf-label">Key ideology</div><div class="qf-value">Third Way / New Democrat — market economics plus social investment; fiscal conservatism combined with cultural liberalism</div></div>      </div>
+    </section>
+
+    <section id="origins">
+      <h2>Origins &amp; Rise</h2>
+      <p>Bill Clinton was born into poverty in Hope, Arkansas, in 1946, three months after his father died in a car crash. His mother, Virginia, was a nurse; his stepfather, Roger Clinton, was an alcoholic who beat his wife. Clinton's childhood in Hot Springs — a small Arkansas city with a complicated relationship with gambling, organized crime, and political patronage — gave him an intuitive understanding of people who struggled, and an equally intuitive capacity to compartmentalize his personal life from his public one. Both would define his career.</p>
+
+      <p>At 16, he shook hands with John F. Kennedy at the White House as part of Boys Nation, an image that has been reproduced so often it risks cliché — but the encounter was apparently genuine in its impact. Clinton went to Georgetown, won a Rhodes Scholarship to Oxford, then completed a law degree at Yale, where he met Hillary Rodham. He returned to Arkansas to teach law and immediately ran for Congress in 1974, losing narrowly. He became state Attorney General in 1976, Governor at 32 in 1978 — the youngest governor in the country — then lost re-election in 1980 after a perceived arrogance in office, won it back in 1982 with a famous personal apology campaign, and held it until 1992.</p>
+
+      <p>His path to the 1992 Democratic nomination was improbable. He was little-known nationally; his campaign was nearly derailed before it began by allegations of a twelve-year extramarital affair with Gennifer Flowers, and by questions about how he had avoided the Vietnam draft. He and Hillary appeared together on 60 Minutes in January 1992 in what became one of the most studied interviews in American political history — he acknowledged "wrongdoing" in his marriage without admitting anything specific, she pointedly refused to be seen as "some little woman standing by my man like Tammy Wynette." It worked. He was dubbed "the Comeback Kid" after a second-place finish in New Hampshire and never looked back.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">32</div><div class="stat-label">Age when first elected Governor of Arkansas — youngest in the country at the time</div></div>
+        <div class="stat-box"><div class="stat-number">370</div><div class="stat-label">Electoral votes in 1992, defeating incumbent President George H.W. Bush</div></div>
+        <div class="stat-box"><div class="stat-number">22.7M</div><div class="stat-label">Jobs created during Clinton's eight years — highest for any two-term president</div></div>
+        <div class="stat-box"><div class="stat-number">$236bn</div><div class="stat-label">Federal budget surplus in fiscal year 2000 — first surplus in 30 years</div></div>
+      </div>
+    </section>
+
+    <section id="domestic">
+      <h2>Domestic Policy</h2>
+      <p>Clinton came to office promising a "New Democrat" approach — rejecting what he characterised as the failed liberalism of Mondale and Dukakis, embracing free markets and fiscal discipline while preserving a social safety net. The approach, also called the "Third Way" (shared with Tony Blair's New Labour in Britain), was premised on the idea that Democrats had lost working-class voters by appearing hostile to business and soft on crime. Clinton's solution: beat Republicans on their own terrain.</p>
+
+      <p>The strategy produced some genuine achievements and some lasting controversies. His 1993 budget — passed without a single Republican vote — raised taxes on high earners and combined with an economic boom to produce four consecutive budget surpluses by the end of his term. The Family and Medical Leave Act, passed in his first weeks, gave Americans the right to unpaid leave for family emergencies. The earned income tax credit was substantially expanded, lifting millions of working-poor families above the poverty line. The Children's Health Insurance Program (CHIP), created in 1997, insured millions of children whose families earned too much for Medicaid but too little for private insurance.</p>
+
+      <div class="callout warning">
+        <div class="callout-label">Most Contested Legacy</div>
+        <h4>The 1994 Crime Bill</h4>
+        <p>The Violent Crime Control and Law Enforcement Act of 1994 was the largest crime bill in American history. It added 100,000 police officers, funded prison construction, expanded the death penalty, and included a "three strikes" provision mandating life imprisonment for a third violent felony. It also included the Violence Against Women Act. Supporters credit it with contributing to a dramatic crime decline in the late 1990s. Critics — including many in the Congressional Black Caucus who eventually voted for it — argue it fuelled mass incarceration that fell disproportionately on Black and Latino communities. By 2015, Clinton himself was acknowledging that "we overshot the mark."</p>
+      </div>
+
+      <p>NAFTA — the North American Free Trade Agreement, signed by George H.W. Bush and ratified by Clinton in 1993 — was the signature trade achievement of his presidency and its most divisive domestic legacy. Clinton argued it would create jobs on both sides of the border, lower prices for consumers, and tie Mexico more tightly to democratic norms. Critics, including labour unions and the left of his own party, warned it would accelerate the movement of manufacturing jobs to lower-wage Mexico. Both were partly right: consumer prices fell, and US exports to Mexico grew substantially. But an estimated 700,000–900,000 American manufacturing jobs moved south. In the Rust Belt communities that later voted for Donald Trump in 2016, NAFTA became shorthand for Clinton-era economic policies that benefited educated professionals at the expense of factory workers.</p>
+
+      <p>Welfare reform — the Personal Responsibility and Work Opportunity Reconciliation Act of 1996 — was Clinton's most contested domestic action. He had promised to "end welfare as we know it" and did: the law replaced guaranteed federal welfare payments with block grants to states, imposed work requirements, and set a five-year lifetime limit on benefits. Three senior officials in the Department of Health and Human Services resigned in protest. Clinton's defenders argue the reform reduced poverty and dependency in a period of economic growth. Critics argue it removed a safety net without replacing it, leaving the poorest families — particularly children — exposed when the next recession hit. In 2001, it did.</p>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1993</div>
+            <div class="tl-title">Healthcare Reform Fails — The First Major Defeat</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Clinton's first major legislative initiative was universal healthcare — a plan developed in a task force led by Hillary Clinton that proposed a system of managed competition through regional health alliances. It was complex to the point of incomprehensibility, ran to 1,342 pages, and was immediately attacked by the insurance industry in the famous "Harry and Louise" television campaign, which portrayed it as government takeover of medicine. The bill never reached a floor vote in either chamber. Its failure left Democrats without a major legislative victory in their first two years and contributed to the catastrophic 1994 midterm elections, in which Republicans gained 54 House seats — the largest midterm swing in 40 years — and took control of both chambers.</p>
+          <p>The healthcare defeat defined Clinton's subsequent governing style: smaller, targeted proposals rather than comprehensive reform. "The era of big government is over," he declared in his 1996 State of the Union address — a line that infuriated the left of his party and was celebrated by the centre as shrewd repositioning. Healthcare reform would wait until Barack Obama's 2010 Affordable Care Act.</p>
+          <div class="tl-sources"><span class="src-chip">Harris (2005)</span><span class="src-chip">Branch (2009)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1994–2000</div>
+            <div class="tl-title">The Dot-Com Boom — Prosperity Without Purpose?</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The Clinton years produced the longest peacetime economic expansion in American history — 116 consecutive months of GDP growth from March 1991 to March 2001. Unemployment fell from 7.3% to 3.9%. Poverty rates declined. The federal government ran surpluses for four straight years. The median household income rose. These are real numbers representing real improvements in real people's lives.</p>
+          <p>The harder question is how much of this was Clinton's doing. The technology revolution — the commercialisation of the internet — drove much of the growth, and would likely have occurred regardless of who was president. The Federal Reserve's management of monetary policy under Alan Greenspan played a central role. And the boom contained the seeds of subsequent busts: the deregulation of financial derivatives under the Commodity Futures Modernization Act of 2000 (which Clinton signed) removed safeguards that would have limited the 2008 financial crisis. Clinton presided over prosperity; the extent to which he caused it, rather than managed it, is genuinely contested.</p>
+          <div class="tl-sources"><span class="src-chip">Klein (2002)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="foreign">
+      <h2>Foreign Policy</h2>
+      <p>Clinton came to office focused on domestic economic renewal — "It's the economy, stupid" was his campaign's internal motto. Foreign policy was largely delegated. The results were mixed: genuine successes in Northern Ireland and the Balkans; a catastrophic failure in Rwanda; and a series of half-measures on terrorism that did not disrupt al-Qaeda before September 11.</p>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1994</div>
+            <div class="tl-title">Rwanda — The Failure Clinton Most Regrets</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>In 100 days between April and July 1994, approximately 800,000 Rwandan Tutsis and moderate Hutus were murdered — roughly 8,000 people per day, mostly with machetes, by their neighbours. The Clinton administration knew what was happening within days. Romeo Dallaire, the UN force commander in Rwanda, sent urgent requests for permission to intervene and was told to stand down. The administration deliberately avoided using the word "genocide" in official communications — because the Genocide Convention would have required a response.</p>
+          <p>Clinton's public explanation was that the administration did not understand the speed and scale of what was happening. Internal documents declassified since suggest the understanding was clearer than admitted. The administration was still reeling from the "Black Hawk Down" disaster in Somalia in October 1993, in which 18 US soldiers were killed, and had no appetite for another African intervention. Clinton himself has said Rwanda was the decision he most regrets, and visited the country in 1998 to apologise publicly. Whether a US intervention could have saved significant numbers of lives — and at what cost — is genuinely disputed by military historians.</p>
+          <div class="tl-sources"><span class="src-chip">Harris (2005)</span><span class="src-chip">Branch (2009)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1995–1999</div>
+            <div class="tl-title">Bosnia and Kosovo — Reluctant Intervention, Eventual Success</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>In Bosnia, Clinton inherited a war that had been burning since 1992 and a European response that had failed to stop systematic ethnic cleansing. His administration intervened effectively — eventually. The 1995 Dayton Accords, brokered by US special envoy Richard Holbrooke after NATO airstrikes forced Serb compliance, ended the Bosnian War and have held for thirty years. Critics argue the US should have intervened three years earlier; defenders say domestic political constraints made that impossible.</p>
+          <p>Kosovo in 1999 was Clinton's most aggressive foreign policy action. When Serbian forces under Milosevic began systematic ethnic cleansing of Kosovar Albanians, Clinton launched a 78-day NATO air campaign — without UN Security Council authorisation (Russia would have vetoed). Milosevic capitulated; Kosovo was placed under UN administration. The Kosovo intervention became the template for the "humanitarian intervention" doctrine and the forerunner of the Responsibility to Protect. It was controversial in its legal basis and contested in its consequences, but it stopped an ongoing atrocity. Tony Blair was Clinton's closest partner in pushing for the intervention.</p>
+          <div class="tl-sources"><span class="src-chip">Harris (2005)</span><span class="src-chip">Maraniss (1995)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1993–2000</div>
+            <div class="tl-title">Terrorism — The Missed Opportunities</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Al-Qaeda attacked the US repeatedly during Clinton's presidency: the World Trade Center bombing in February 1993, the Khobar Towers bombing in Saudi Arabia in 1996, the simultaneous bombings of US embassies in Kenya and Tanzania in 1998 (killing 224 people), and the bombing of the USS Cole in October 2000 (killing 17 sailors). The administration's responses — missile strikes on al-Qaeda training camps in Afghanistan and a pharmaceutical factory in Sudan in 1998 — were dismissed by critics as insufficient and by late-night comedians as "wagging the dog" (distracting from the Lewinsky scandal).</p>
+          <p>The 9/11 Commission found that both the Clinton and Bush administrations had failed to treat al-Qaeda as a sufficient priority. Clinton's defenders argue he tried harder than is remembered — the 1998 missile strikes, the "Millennium Plot" disruption — and was hampered by Congressional opposition to aggressive counter-terrorism funding. His critics note that bin Laden had been expelled from Sudan in 1996 and could have been killed or captured on multiple occasions, and that the decision not to act reflected a failure of strategic will rather than a lack of opportunity. The question of what could realistically have been done differently remains contested.</p>
+          <div class="tl-sources"><span class="src-chip">Harris (2005)</span><span class="src-chip">Branch (2009)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="scandal">
+      <h2>The Scandal &amp; Impeachment</h2>
+      <p>The defining event of Clinton's second term was not a policy decision but a personal one. In January 1998, special prosecutor Kenneth Starr — originally appointed to investigate the Whitewater real estate dealings — revealed that he had evidence of a sexual relationship between Clinton and Monica Lewinsky, a 22-year-old White House intern. Clinton had denied the relationship under oath in a civil deposition in the Paula Jones sexual harassment case. The lie — not the relationship — triggered impeachment.</p>
+
+      <div class="callout warning">
+        <div class="callout-label">The Specific Charges</div>
+        <h4>What Clinton Was Impeached For</h4>
+        <p>Clinton was impeached on two articles: perjury before a grand jury (denying a sexual relationship with Lewinsky while under oath) and obstruction of justice (encouraging Lewinsky to file a false affidavit and discussing a cover story with his aide). He was not impeached for the sexual relationship itself, which was not illegal. The House vote was largely along party lines. In the Senate trial, the perjury article failed 45-55, and the obstruction article failed 50-50 — well short of the two-thirds required for removal. Clinton remained in office.</p>
+      </div>
+
+      <p>The impeachment produced one of the most severe partisan splits in American history and left a legacy that remains raw. Republicans argued — credibly — that perjury and obstruction of justice were serious crimes regardless of the underlying subject matter, and that a president who lied under oath had undermined the rule of law. Democrats argued — also credibly — that the investigation had been a politically motivated fishing expedition that spent $70 million to find what amounted to an extramarital affair, and that Republicans who had themselves committed infidelities were using the process as a weapon. Both arguments contained genuine substance.</p>
+
+      <p>Clinton's public handling of the crisis — his August 1998 televised address in which he admitted the relationship but attacked Starr rather than genuinely apologising — was widely regarded as a political mistake that extended the scandal. His approval ratings paradoxically rose during the impeachment, reflecting public distaste for the process, but his moral authority and his ability to govern in his final two years were substantially damaged. The affair and its cover-up also overshadowed genuine foreign policy achievements in Northern Ireland and the Middle East — and handed his enemies a tool that has been wielded against Democrats for a generation.</p>
+    </section>
+
+    <section id="legacy">
+      <h2>Legacy &amp; Debate</h2>
+      <p>Bill Clinton's legacy is among the most genuinely contested in modern American political history — contested not just between left and right but within the Democratic Party itself. A generation of progressives who came of age after 2008 have revisited his presidency with considerably less charity than the contemporaries who re-elected him by 8 points in 1996.</p>
+
+      <div class="legacy-grid">
+        <div class="legacy-card positive">
+          <div class="legacy-label">What He Got Right</div>
+          <ul>
+            <li>22.7 million jobs created; lowest unemployment in thirty years</li>
+            <li>First federal budget surpluses since 1969; $236bn surplus in FY2000</li>
+            <li>CHIP insured millions of previously uninsured children</li>
+            <li>Dayton Accords ended the Bosnian War; Kosovo stopped ethnic cleansing</li>
+            <li>Northern Ireland peace process — the Good Friday Agreement of 1998</li>
+            <li>FMLA gave workers the right to unpaid family leave</li>
+            <li>Expanded earned income tax credit, lifting millions out of poverty</li>
+          </ul>
+        </div>
+        <div class="legacy-card negative">
+          <div class="legacy-label">What He Got Wrong</div>
+          <ul>
+            <li>Rwanda — deliberate inaction during genocide that killed ~800,000</li>
+            <li>Crime Bill — contributed to mass incarceration that fell on Black communities</li>
+            <li>NAFTA — accelerated deindustrialisation of the American Midwest</li>
+            <li>Welfare reform — removed safety net without adequate replacement</li>
+            <li>Financial deregulation — Gramm-Leach-Bliley (1999) helped set conditions for 2008 crisis</li>
+            <li>Don't Ask Don't Tell — compromise that institutionalised discrimination</li>
+            <li>Failed to disrupt al-Qaeda before 9/11</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legacy-card complex" style="margin-top:1.25rem;">
+        <div class="legacy-label">Genuinely Contested</div>
+        <ul>
+          <li>"Triangulation" — shrewd adaptation to political reality, or abandonment of Democratic Party principles?</li>
+          <li>The impeachment — politically motivated persecution, or legitimate enforcement of rule of law?</li>
+          <li>The economic boom — Clinton's achievement, or technological revolution he happened to preside over?</li>
+          <li>Don't Ask Don't Tell — the best achievable at the time, or an unnecessary compromise that could have been fought?</li>
+          <li>The Oslo Process — genuine path toward Middle East peace, or fatally flawed from the start?</li>
+        </ul>
+      </div>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Joe Klein</div>
+          <div class="scholar-card-title">Time Magazine · <em>The Natural: The Misunderstood Presidency of Bill Clinton</em> (2002)</div>
+          <div class="scholar-card-verdict">Klein argues Clinton was a genuinely gifted politician whose presidency produced real results — economic growth, successful foreign interventions, welfare reform that worked — and whose legacy has been unfairly defined by a scandal that reflected a personal failing, not a policy failure. He was, in Klein's phrase, a "natural" politician squandering a natural talent.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Ta-Nehisi Coates and critics from the left</div>
+          <div class="scholar-card-title">The Atlantic and broader progressive scholarship (2010s)</div>
+          <div class="scholar-card-verdict">The post-2010 progressive reassessment argues that Clinton's "Third Way" was a capitulation to Reaganism that locked in financial deregulation, mass incarceration, and punitive welfare policy under a Democratic brand. The economic growth of the 1990s concealed structural damage that became visible in 2008 and after. Clinton's personal charisma masked a governing philosophy indistinguishable from moderate Republicanism.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">John Harris</div>
+          <div class="scholar-card-title">Washington Post · <em>The Survivor: Bill Clinton in the White House</em> (2005)</div>
+          <div class="scholar-card-verdict">The most balanced account — documents both the real achievements and the self-inflicted wounds with equal seriousness. Harris's Clinton is a man of extraordinary political intelligence and ordinary self-destructive weaknesses, who frequently sabotaged the very agenda he was trying to advance. The question is not whether Clinton was talented but whether he was disciplined enough to fully convert that talent into lasting policy change.</div>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"I did have a relationship with Miss Lewinsky that was not appropriate. In fact, it was wrong. It constituted a critical lapse in judgment and a personal failure on my part for which I am solely and completely responsible."</blockquote>
+        <cite>— Bill Clinton, televised address, August 17, 1998 — then pivoting immediately to attack Kenneth Starr</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People directly connected</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="hillary-clinton.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg" alt="Hillary Clinton">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Hillary Clinton</div>
+            <div class="topic-preview">Partner, co-architect of the political strategy, and the person who arguably held the Clinton brand together through its most damaging moments — before building her own career.</div>
+          </a>
+          <a class="topic-card" href="tony-blair.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg" alt="Tony Blair">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Tony Blair</div>
+            <div class="topic-preview">Clinton's closest international partner — the co-architect of the "Third Way" in Britain, and the driving force behind the Kosovo intervention Clinton eventually supported.</div>
+          </a>
+          <a class="topic-card" href="george-w-bush.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png" alt="George W. Bush">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">George W. Bush</div>
+            <div class="topic-preview">Clinton's successor, who inherited both the counter-terrorism briefings Clinton had left and the al-Qaeda threat Clinton had failed to neutralise.</div>
+          </a>
+          <a class="topic-card" href="obama.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg" alt="Barack Obama">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Barack Obama</div>
+            <div class="topic-preview">The Democrat who completed what Clinton started on healthcare — and whose 2008 primary victory over Hillary Clinton represented a direct repudiation of the Clinton brand by Democratic voters.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Related events and concepts</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="gulf-war.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg" alt="The Gulf War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Gulf War</div>
+            <div class="topic-preview">Clinton inherited the post-Gulf War containment strategy for Iraq — the sanctions regime and no-fly zones that consumed US policy for his entire presidency.</div>
+          </a>
+          <a class="topic-card" href="responsibility-to-protect.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="The Responsibility to Protect">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">The Responsibility to Protect</div>
+            <div class="topic-preview">The Kosovo intervention — conducted without UN authorisation — was the most direct precursor to the R2P doctrine that was formalised at the 2005 UN World Summit.</div>
+          </a>
+          <a class="topic-card" href="realpolitik.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Realpolitik</div>
+            <div class="topic-preview">Clinton's foreign policy combined idealist rhetoric (democracy promotion, humanitarian intervention) with unsentimental calculations — nowhere more visible than in the decision not to act in Rwanda.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Klein, J. (2002). <em>The Natural: The Misunderstood Presidency of Bill Clinton.</em></span>
+          <span class="src-journal"> Doubleday.</span>
+          <span class="src-note">A sympathetic but not uncritical account from a journalist who covered Clinton closely. Best for understanding the political logic of triangulation and the genuine achievements of the Clinton years. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Harris, J.F. (2005). <em>The Survivor: Bill Clinton in the White House.</em></span>
+          <span class="src-journal"> Random House.</span>
+          <span class="src-note">The most balanced and thoroughly reported single-volume account of the Clinton presidency. Based on extensive interviews with senior officials. Particularly strong on the political crises and the decision-making process. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Branch, T. (2009). <em>The Clinton Tapes: Wrestling History with the President.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">Historian Taylor Branch recorded 79 private conversations with Clinton throughout his presidency. Provides unparalleled access to Clinton's own thinking on Rwanda, Kosovo, impeachment, and domestic policy. Essential primary-source material. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Toobin, J. (1999). <em>A Vast Conspiracy: The Real Story of the Sex Scandal That Nearly Brought Down a President.</em></span>
+          <span class="src-journal"> Random House.</span>
+          <span class="src-note">The definitive account of the Lewinsky scandal, the Starr investigation, and the impeachment. Largely sympathetic to Clinton's perspective but scrupulously documented. Covers the legal arguments and political machinations in detail. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Maraniss, D. (1995). <em>First in His Class: The Biography of Bill Clinton.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">The best biography of Clinton's life through his 1992 election, based on hundreds of interviews in Arkansas and elsewhere. Essential for understanding his character, his political instincts, and the formative experiences that shaped him. Widely available.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div><!-- /.outer -->
+</div><!-- /.page-wrap -->
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik',            desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person',  title: 'Tony Blair',             desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Colin Powell',           desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Dick Cheney',            desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',   title: 'The Iraq War',           desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'concept', title: 'Democratic Socialism',   desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War', desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',      desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",              desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Khalifa Haftar',         desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement', desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',            desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'event',   title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',       desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',        desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',       desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',         desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',        desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',       desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',          desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',           desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',     desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',         desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',     desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn=document.getElementById('searchIconBtn'),dd=document.getElementById('searchDropdown'),inp=document.getElementById('searchInput');
+  _searchOpen=!_searchOpen; btn.classList.toggle('active',_searchOpen); dd.classList.toggle('open',_searchOpen);
+  if(_searchOpen){inp.focus();runSearch('');}else{inp.value='';_focusIdx=-1;}
+}
+function runSearch(q) {
+  const box=document.getElementById('searchResults'),term=q.trim().toLowerCase();
+  const seen=new Set();
+  const all=CONTEXT_ARTICLES.filter(a=>{if(seen.has(a.url))return false;seen.add(a.url);return true;});
+  const hits=term===''?all:all.filter(a=>a.title.toLowerCase().includes(term)||a.desc.toLowerCase().includes(term)||a.type.includes(term));
+  _focusIdx=-1;
+  if(!hits.length){box.innerHTML='<div class="search-empty">No articles yet — more coming soon.</div>';return;}
+  box.innerHTML=hits.map((a,i)=>`<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb?`<img src="${a.thumb}" style="width:28px;height:28px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-right:6px;">`:''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='ArrowDown'){e.preventDefault();_focusIdx=Math.min(_focusIdx+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();_focusIdx=Math.max(_focusIdx-1,0);}
+  else if(e.key==='Enter'&&_focusIdx>=0){items[_focusIdx].click();return;}
+  else if(e.key==='Escape'){toggleSearch();return;}
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click',e=>{if(_searchOpen&&!document.getElementById('searchWrap').contains(e.target))toggleSearch();});
+window.addEventListener('scroll',()=>{
+  document.getElementById('progressBar').style.width=Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'),navItems=document.querySelectorAll('.sidebar-nav li');let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el){const w=el.classList.contains('active');document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active'));if(!w)el.classList.add('active');}
+function toggleSave(){
+  const btn=document.getElementById('saveBtn'),toast=document.getElementById('toast'),isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Angolan Civil War — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="event-page">
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type event">Event</span>
+    <button id="saveBtn" class="save-btn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+        <polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>
+      </svg>
+      Save article
+    </button>
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+      <div id="searchDropdown" class="search-dropdown">
+        <input id="searchInput" class="search-input" placeholder="Search articles…"
+          oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>Events</span><span class="breadcrumb-sep">›</span>
+      <span>Africa</span><span class="breadcrumb-sep">›</span>
+      <span>The Angolan Civil War</span>
+    </div>
+    <div class="hero-region-tag">Southern Africa · 1975–2002</div>
+    <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+      <div style="flex:1;min-width:0;">
+        <h1 style="margin-top:0;">The Angolan Civil War</h1>
+        <p class="hero-sub">For twenty-seven years, two liberation movements fought for a country that had barely finished freeing itself from one empire before becoming a battlefield for two more.</p>
+        <div class="hero-meta">
+          <span>~14 min read</span><span>·</span>
+          <span>6 academic sources</span><span>·</span>
+          <span>Last updated June 2026</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg" alt="The Angolan Civil War"
+          style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(232,168,56,0.25);display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Body -->
+<div class="outer">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-label">On this page</div>
+    <ul class="sidebar-nav">
+      <li><a href="#facts">Quick Facts</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#figures">Key Figures</a></li>
+      <li><a href="#timeline">Key Events</a></li>
+      <li><a href="#turning">Turning Points</a></li>
+      <li><a href="#matters">Why It Matters</a></li>
+      <li><a href="#debate">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <article>
+
+    <!-- Quick Facts -->
+    <section id="facts">
+      <div class="quick-facts">
+        <div class="quick-facts-label">Quick Facts</div>
+        <div class="qf-item"><div class="qf-label">Duration</div><div class="qf-value">1975–2002 (27 years)</div></div>
+        <div class="qf-item"><div class="qf-label">Location</div><div class="qf-value">Republic of Angola, Southern Africa</div></div>
+        <div class="qf-item"><div class="qf-label">Main Parties</div><div class="qf-value">MPLA (government) vs. UNITA (rebels)</div></div>
+        <div class="qf-item"><div class="qf-label">External Backers</div><div class="qf-value">Cuba &amp; USSR (MPLA) / South Africa &amp; USA (UNITA)</div></div>
+        <div class="qf-item"><div class="qf-label">Death Toll</div><div class="qf-value">~500,000–800,000 (contested)</div></div>
+        <div class="qf-item"><div class="qf-label">Displaced</div><div class="qf-value">~4 million</div></div>
+        <div class="qf-item"><div class="qf-label">Outcome</div><div class="qf-value">MPLA military victory; Luena Memorandum (April 4, 2002)</div></div>
+        <div class="qf-item"><div class="qf-label">Key Trigger</div><div class="qf-value">Three liberation movements failed to share power at Portuguese withdrawal, November 1975</div></div>
+        <div class="qf-item"><div class="qf-label">War Economy</div><div class="qf-value">MPLA: Cabinda oil / UNITA: conflict diamonds</div></div>
+        <div class="qf-item"><div class="qf-label">Current Status</div><div class="qf-value">MPLA governs; UNITA is legal opposition; landmine clearance ongoing</div></div>
+      </div>
+
+      <div class="stats-grid" style="margin-top:1.5rem;">
+        <div class="stat-card">
+          <div class="stat-card-value">27</div>
+          <div class="stat-card-label">Years of war</div>
+          <div class="stat-card-sub">Longest civil war in Africa</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-value">50,000</div>
+          <div class="stat-card-label">Cuban troops deployed</div>
+          <div class="stat-card-sub">Peak, mid-1980s</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-value">$3.7B</div>
+          <div class="stat-card-label">UNITA diamond revenue</div>
+          <div class="stat-card-sub">Estimated 1992–2001</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-value">82%</div>
+          <div class="stat-card-label">MPLA vote, 2008 elections</div>
+          <div class="stat-card-sub">First post-war vote</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background -->
+    <section id="background">
+      <h2>Background</h2>
+      <p>Portugal held Angola for four hundred years, from 1575 to 1975, and left with almost nothing in order. When the April 1974 Carnation Revolution toppled Lisbon's dictatorship, the new government scrambled to exit its African colonies as fast as possible. The Alvor Agreement of January 1975 gave Angola's three main liberation movements — the MPLA, FNLA, and UNITA — just ten months to form a transitional government before independence on November 11, 1975. Within weeks, the arrangement had collapsed into open fighting in Luanda's streets.</p>
+
+      <p>The three movements had never been natural allies. The <strong>MPLA</strong> (Movimento Popular de Libertação de Angola) was founded in 1956 and drew its base from the capital's educated urban class — mestiços, assimilados, and workers who had been absorbed into Portuguese civic life. It was Marxist-Leninist in orientation, Soviet and Cuban in its backers, and commanded Luanda when independence arrived. The <strong>FNLA</strong> (Frente Nacional de Libertação de Angola), led by Holden Roberto, was rooted in the Bakongo people of northern Angola and had CIA backing through Zaire's Mobutu Sese Seko, Roberto's brother-in-law. The <strong>UNITA</strong> (União Nacional para a Independência Total de Angola), led by Jonas Savimbi, drew its core from the Ovimbundu — Angola's largest ethnic group — in the central highlands, and had begun as a Maoist insurgency before pivoting to South African and American support.</p>
+
+      <p>By October 1975, both South African forces and Cuban combat troops were on Angolan soil. Pretoria sent armoured columns north to back UNITA and the FNLA; Havana launched Operation Carlota, airlifting thousands of soldiers to shore up the MPLA. The Cold War had landed in sub-Saharan Africa with full force. When the Portuguese flag finally came down in Luanda on November 11, there was no unified Angolan government to raise its own — just an MPLA declaration of a People's Republic and the opening shots of what would become one of the longest and most destructive civil wars of the twentieth century. <span class="src-chip">Pearce (2012)</span></p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">1575</div><div class="stat-label">Year Portuguese colonisation began</div></div>
+        <div class="stat-box"><div class="stat-number">1961</div><div class="stat-label">Start of anti-colonial armed struggle</div></div>
+        <div class="stat-box"><div class="stat-number">3</div><div class="stat-label">Liberation movements fighting at independence</div></div>
+        <div class="stat-box"><div class="stat-number">1975</div><div class="stat-label">Independence and immediate civil war</div></div>
+      </div>
+    </section>
+
+    <!-- Key Figures -->
+    <section id="figures">
+      <h2>Key Figures</h2>
+      <div class="figures-grid">
+        <div class="figure-card">
+          <div class="figure-name">Agostinho Neto</div>
+          <div class="figure-role">MPLA President, 1975–1979</div>
+          <div class="figure-desc">A poet and physician who led the MPLA from its founding until his death from cancer in Moscow in 1979. Neto steered Angola into a Soviet alliance and survived a near-revolt within his own movement in 1977 (the "Nitistas" purge). His death handed power to Eduardo dos Santos, who would rule for 38 years.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Eduardo dos Santos</div>
+          <div class="figure-role">MPLA President, 1979–2017</div>
+          <div class="figure-desc">A Soviet-trained petroleum engineer who consolidated MPLA rule through oil wealth and military might. Dos Santos presided over the end of the war and Angola's post-2002 oil boom, but his government became synonymous with kleptocracy — his daughter Isabel became one of Africa's richest people by controlling state assets.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Jonas Savimbi</div>
+          <div class="figure-role">UNITA Founder and Leader, 1966–2002</div>
+          <div class="figure-desc">The most charismatic African guerrilla leader of the Cold War era — and one of the most destructive. A brilliant strategist educated in Switzerland, Savimbi cultivated alliances with Mao's China, apartheid South Africa, and Reagan's America. He rejected the 1992 election results he had agreed to, resuming a war that cost hundreds of thousands of lives. He was killed in combat on February 22, 2002, near the town of Lucusse. <span class="src-chip">Pearce (2012)</span></div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Fidel Castro</div>
+          <div class="figure-role">Cuban Leader; MPLA patron</div>
+          <div class="figure-desc">Cuba's intervention in Angola — up to 50,000 troops at its peak — was the largest overseas military operation in Cuban history. Castro described it as internationalist solidarity against apartheid colonialism; critics called it Soviet proxy warfare. Cuban advisors trained and fought alongside MPLA forces from 1975 until 1991.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">P.W. Botha</div>
+          <div class="figure-role">South African Prime Minister, 1978–1984</div>
+          <div class="figure-desc">Under Botha, South Africa conducted repeated large-scale military incursions into Angola — ostensibly to suppress SWAPO, the Namibian liberation movement using Angola as a base, but simultaneously to sustain UNITA. The 1987–88 Battle of Cuito Cuanavale became the largest armoured battle in Africa since World War II and fatally damaged South Africa's military credibility.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Chester Crocker</div>
+          <div class="figure-role">US Assistant Secretary of State for African Affairs, 1981–1989</div>
+          <div class="figure-desc">The architect of "constructive engagement" — the Reagan administration's policy of pressuring South Africa through diplomatic engagement rather than sanctions, while simultaneously increasing CIA support for UNITA. Crocker eventually brokered the 1988 New York Accords linking Cuban withdrawal from Angola to Namibian independence, his most lasting achievement. Rarely appears in popular accounts of the war.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline">
+      <h2>Key Events</h2>
+      <div class="timeline">
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">October–November 1975</div>
+              <div class="tl-title">Three Armies, One Independence Day</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>By September 1975, the Alvor Agreement was dead. MPLA, FNLA, and UNITA were fighting openly across Angola, and both the Soviet Union and the United States had begun funnelling weapons to their respective clients. South Africa launched Operation Savannah on October 14, sending armoured columns north from Namibia to support UNITA and the collapsing FNLA advance on Luanda.</p>
+            <p>Cuba's response was immediate and decisive. Operation Carlota — named for a nineteenth-century Cuban slave rebel — airlifted the first Cuban troops to Luanda on November 7. Within weeks, Cuban forces and MPLA fighters had halted the South African advance at Ebo and Quifangondo. When independence arrived on November 11, MPLA held Luanda and declared the People's Republic of Angola; UNITA and the FNLA declared a rival government in Huambo. The world had to choose which to recognise. <span class="src-chip">Pearce (2012)</span></p>
+            <p>The Organisation of African Unity recognised the MPLA government in early 1976, largely because of the apartheid stigma attached to South Africa's intervention. The United States, blocked by the Clark Amendment (passed December 1975), could no longer fund the FNLA or UNITA openly. South Africa withdrew. The FNLA collapsed. UNITA retreated to the southeastern bush.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Pearce (2012)</span>
+              <span class="src-chip">Birmingham (2015)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">1976–1985</div>
+              <div class="tl-title">Two States in One Country</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>After the FNLA's collapse, Angola's war became a straight fight between the MPLA government and UNITA. But calling it a guerrilla war understates what each side actually was. Both movements functioned as proto-states, providing services, administering territory, and building loyalties that went far beyond simple military coercion. <span class="src-chip">Pearce (2012)</span></p>
+            <p>The MPLA governed the cities and the oil-rich Cabinda enclave, funnelling petroleum revenue into the military and selective urban development. Paradoxically, the American oil company Gulf Oil (later Chevron) continued paying royalties to the MPLA government even as the CIA funnelled weapons to UNITA — one of the Cold War's stranger ironies. The MPLA formalised its Marxist-Leninist identity at its 1977 Congress, though an internal power struggle that same year — the "Nitistas" coup attempt — killed an estimated 15,000 to 80,000 people in internal purges.</p>
+            <p>UNITA controlled vast swaths of southeastern Angola from its headquarters at Jamba, in Cuando Cubango province. Savimbi built what observers described as a remarkably complete bush society — hospitals, schools, radio stations, a justice system, farms. It was coercive and authoritarian, but it was functional. South Africa supplied weapons across the Namibian border; after 1985, the CIA resumed covert support under the Reagan Doctrine. UNITA's finances rested on artisanal diamond mining in the northeast, a revenue stream that would eventually fund one of the war's most destructive phases. <span class="src-chip">Pearce (2012)</span></p>
+            <div class="tl-sources">
+              <span class="src-chip">Pearce (2012)</span>
+              <span class="src-chip">Global Witness (1998)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">1987–1988</div>
+              <div class="tl-title">The Battle of Cuito Cuanavale</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>In 1987, the MPLA launched a major offensive — Operation Saludando Octubre — to destroy UNITA's southeastern strongholds. SADF (South African Defence Force) troops intervened in force, and the war escalated into the largest conventional battle in sub-Saharan African history. Across the Lomba River and around the town of Cuito Cuanavale, thousands of troops, Soviet advisors, Cuban regulars, MiG fighters, and South African Olifant tanks fought for months.</p>
+            <p>The strategic result is still contested. South Africa claimed a defensive victory; Cuba and the MPLA claimed they had repelled an invasion. What is clear is that South Africa took unacceptable casualties and recognised it could not sustain the war politically at home — the white electorate was growing tired of body bags from a distant conflict. Nelson Mandela later called Cuito Cuanavale "a turning point in the liberation of our continent from the scourge of apartheid." <span class="src-chip">Birmingham (2015)</span></p>
+            <p>The battle's aftermath drove the negotiating table. In December 1988, South Africa, Cuba, and the MPLA government signed the New York Accords at the United Nations. Cuba would withdraw its forces by 1991; South Africa would leave Angola and grant Namibia independence. UNITA was not a party to the agreement, but without South African support it was severely weakened.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Birmingham (2015)</span>
+              <span class="src-chip">Crocker (1992)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">September–November 1992</div>
+              <div class="tl-title">The Election That Ended Peace</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>The Bicesse Accords of May 1991 produced a ceasefire and a UN-supervised transition to multiparty democracy. After sixteen years of war, Angola held its first free election on September 29–30, 1992. International observers declared the vote free and fair. The MPLA won 54% of the parliamentary vote; in the presidential race, dos Santos took 49% against Savimbi's 40%, not enough to avoid a runoff.</p>
+            <p>Savimbi refused to accept the results. UNITA accused the MPLA of fraud — claims the UN monitoring mission found unsupported — and began redeploying its fighters, who had never been fully demobilised as required by Bicesse. On October 31, 1992, UNITA gunmen launched the "Halloween Massacre," killing MPLA ministers, police officers, and MPLA-aligned civilians in Luanda. The MPLA responded in kind, massacring UNITA members across the capital. <span class="src-chip">Pearce (2012)</span></p>
+            <p>The war resumed with a ferocity that dwarfed everything before it. UNITA now had UN-condemned "conflict diamonds" funding it — buying weapons through Zaire and Togo — while the MPLA had oil money and a government's international legitimacy. The next phase of the war killed more people in a shorter time than all the previous years combined.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Pearce (2012)</span>
+              <span class="src-chip">UN Security Council (1993)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">1993–2002</div>
+              <div class="tl-title">Diamonds, Oil, and the War's Final Phase</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>The post-1992 war produced some of the worst humanitarian disasters in modern African history. The Battle of Huambo (January–March 1993) — a three-month urban siege of Angola's second city — killed an estimated 10,000 people, mostly civilians. The UN Security Council imposed arms and oil sanctions on UNITA in 1993, though they were routinely circumvented through neighbouring countries. The Lusaka Protocol of 1994 produced another fragile ceasefire that UNITA never fully honoured.</p>
+            <p>Global Witness's 1998 report <em>A Rough Trade</em> exposed how UNITA was financing its resurgence: through the sale of diamonds mined by forced labour in territory it controlled, estimated to have generated $3.7 billion between 1992 and 2001. The report triggered the Kimberley Process — the international certification scheme for conflict diamonds, launched in 2003. Meanwhile, MPLA oil revenues from Cabinda funded a sustained military buildup. <span class="src-chip">Global Witness (1998)</span></p>
+            <p>In 1998, the MPLA launched a coordinated military offensive that systematically dismantled UNITA's conventional military capacity. The army tracked Savimbi using satellite intelligence reportedly assisted by American and British firms — a bitter irony given Washington's earlier support. On February 22, 2002, government forces ambushed Savimbi near Lucusse in Moxico province. He was shot multiple times and died at the scene. With its charismatic founder dead, UNITA's military collapsed within weeks. The Luena Memorandum, signed April 4, 2002, ended the war.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Global Witness (1998)</span>
+              <span class="src-chip">Pearce (2012)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2002–Present</div>
+              <div class="tl-title">Peace Without Democracy</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>UNITA transformed from an armed movement into an opposition political party, but the process was deeply asymmetric. The MPLA had the state, the oil revenues, and the international community's recognition. UNITA had the memory of thirty years of war and a constituency traumatised by its own leadership. The 2008 elections — the first since 1992 — produced an MPLA landslide of 82%, including an astonishing performance in Huambo, UNITA's historic heartland. <span class="src-chip">Pearce (2012)</span></p>
+            <p>Scholars have described the post-war settlement as "illiberal peacebuilding" — a peace structured around the MPLA's political and economic dominance rather than genuine democratisation. The party and state remained effectively indistinguishable; oil revenues sustained a system of patronage that made competitive politics difficult. Eduardo dos Santos ruled until 2017, when he was succeeded by João Lourenço, who has pursued limited anti-corruption measures — including targeting dos Santos's own children — but the MPLA's structural dominance has not fundamentally changed. <span class="src-chip">Péclard (2025)</span></p>
+            <p>Angola today is simultaneously a petro-state rich enough to have hosted the Africa Cup of Nations and a country where millions lack clean water. Landmine clearance — Angola has one of the world's worst landmine legacies — continues in rural areas. UNITA competes in elections and wins municipal seats, but remains far from power. The war is over; the wounds are not.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Péclard (2025)</span>
+              <span class="src-chip">Pearce (2012)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Turning Points -->
+    <section id="turning">
+      <h2>Turning Points</h2>
+      <div class="turning-points">
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 1</div>
+          <div class="turning-card-title">Cuba's Decision to Intervene (October 1975)</div>
+          <p>When South Africa's armoured columns moved north toward Luanda in October 1975, Castro decided to deploy combat troops rather than just advisors. Had Cuba not intervened, the FNLA–South African force would likely have captured Luanda before independence day, installing a pro-Western government and fundamentally altering the war's trajectory. The intervention made Angola a Cuban ally for sixteen years and turned Havana into the MPLA's indispensable protector.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 2</div>
+          <div class="turning-card-title">Savimbi Rejects the 1992 Election Results</div>
+          <p>International observers certified the September 1992 elections as free and fair. Savimbi had more democratic legitimacy to contest the result through legal means than through war — UNITA controlled significant territory and a parliamentary bloc. His decision to resume fighting instead triggered the most destructive phase of the entire conflict, killed hundreds of thousands of people, and ultimately destroyed UNITA's moral credibility with much of the international community.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 3</div>
+          <div class="turning-card-title">Global Witness Exposes Conflict Diamonds (1998)</div>
+          <p>The 1998 <em>A Rough Trade</em> report by Global Witness was the first systematic documentation of how diamond revenues sustained UNITA's war machine. The report triggered a cascade of UN sanctions tightening, international diamond industry pressure, and ultimately the Kimberley Process. It also reframed the war internationally — from a Cold War proxy conflict to a resource-driven atrocity — isolating UNITA politically at a moment when its military capacity was already declining.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 4</div>
+          <div class="turning-card-title">Savimbi's Death (February 22, 2002)</div>
+          <p>UNITA had survived thirty-six years entirely around one man's personality. When FAA forces killed Savimbi in Moxico province, there was no succession plan, no ideological framework that could outlast him, no structure that could mobilise fighters without him. UNITA's military collapsed within six weeks. The Luena Memorandum followed in April. The war that Savimbi had personally chosen to restart in 1992 ended only with his death.</p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"UNITA and the MPLA were not simply ethnic armies or Cold War proxies. They were state-building projects, each seeking to monopolise the legitimate use of force across the same territory, and each building the institutions — including coercive ones — that states require."</blockquote>
+        <cite>— Justin Pearce, <em>Political Identity and Conflict in Central Angola, 1975–2002</em> (2012)</cite>
+      </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section id="matters">
+      <h2>Why It Matters Today</h2>
+      <p>The Angolan Civil War's legacies reach far beyond Angola's borders. It shaped global norms around conflict resources, produced one of history's most studied examples of Cold War proxy warfare, and left a political settlement that defines African "peace" in ways scholars still contest.</p>
+
+      <div class="matters-grid">
+        <div class="matters-card">
+          <h3>The Kimberley Process Was Born Here</h3>
+          <p>UNITA's diamond revenues didn't just fund one war — they produced the global framework for certifying conflict-free diamonds. The Kimberley Process Certification Scheme, launched in 2003, emerged directly from Angola and Sierra Leone's experience. Though critics argue the scheme has significant loopholes, it represented the first major international effort to link resource sales to conflict accountability.</p>
+          <ul class="matters-subpoints">
+            <li>Over 80 countries now participate in the Kimberley Process</li>
+            <li>Angola became a certification scheme member in 2003</li>
+            <li>The scheme is credited with reducing conflict diamond trade from ~4% to under 1% of global supply</li>
+            <li>Critics note it covers only diamonds, not gold, coltan, or other conflict minerals</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Angola as a Model of Illiberal Peacebuilding</h3>
+          <p>Angola's post-war trajectory — where peace arrived through military victory rather than political negotiation, and the victor consolidated authoritarian dominance through oil wealth — has become a reference point in peacebuilding literature. It illustrates how "negative peace" (absence of fighting) and "positive peace" (justice, democratisation) can diverge dramatically.</p>
+          <ul class="matters-subpoints">
+            <li>MPLA has governed Angola continuously since 1975 without interruption</li>
+            <li>Angola ranked among the world's most corrupt states for decades (Transparency International)</li>
+            <li>João Lourenço's post-2017 anti-corruption drive has been partial and selective</li>
+            <li>UNITA now holds significant parliamentary seats but faces structural disadvantages</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Cuba's African Legacy Remains Contested</h3>
+          <p>Cuba's intervention in Angola — the largest overseas military operation in Cuban history — is remembered very differently depending on where you stand. For South Africa's liberation movement and Namibia, Cuban troops were the force that stopped apartheid's northward expansion. For Cold Warriors, it was Soviet adventurism by proxy. The intervention shaped Cuba's international identity for generations.</p>
+          <ul class="matters-subpoints">
+            <li>An estimated 2,000+ Cuban soldiers were killed in Angola</li>
+            <li>Namibia achieved independence in 1990, directly linked to the New York Accords</li>
+            <li>Angola and Cuba maintain strong diplomatic and economic ties today</li>
+            <li>Castro cited Angola as evidence of Cuba's internationalist principles</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Angola's Oil Wealth and Resource Governance</h3>
+          <p>Angola is one of Africa's largest oil producers, and the management of that wealth — primarily through the state oil company Sonangol — has become a case study in petro-state pathology. The dos Santos family's extraction of oil revenues into private accounts, exposed through the "Luanda Leaks" investigation (2020), showed how conflict-era resource capture patterns can persist long after the guns fall silent.</p>
+          <ul class="matters-subpoints">
+            <li>Angola produces approximately 1.1 million barrels of oil per day</li>
+            <li>Oil accounts for ~95% of export revenues</li>
+            <li>"Luanda Leaks" (2020) exposed Isabel dos Santos's $2+ billion extraction from state assets</li>
+            <li>Angola joined OPEC in 2007 (though suspended membership in 2023 over quota disputes)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legacy & Debate -->
+    <section id="debate">
+      <h2>Legacy &amp; Debate</h2>
+      <p>The Angolan Civil War resists simple moral frameworks. It was a genuine anti-colonial struggle that became a Cold War proxy conflict that became a resource war — and at each stage, the original liberation ideals became harder to locate. The central scholarly argument is not about whether the war was bad (it was catastrophically so) but about how to assign responsibility: between external powers who fuelled it and internal actors who chose it.</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Justin Pearce</div>
+          <div class="scholar-card-title">University of Cambridge — <em>Political Identity and Conflict in Central Angola, 1975–2002</em> (2012)</div>
+          <div class="scholar-card-verdict">Pearce resists reducing either the MPLA or UNITA to Cold War puppets or ethnic armies. Both were state-building projects with genuine social bases; loyalties were mutable and context-dependent rather than fixed by ethnicity. The war's violence was produced by the logic of two competing sovereignty claims in the same space.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Global Witness</div>
+          <div class="scholar-card-title">— <em>A Rough Trade</em> (1998) / <em>All the Presidents' Men</em> (2002)</div>
+          <div class="scholar-card-verdict">The most damning indictment of UNITA's post-1992 war: it was financed by forced-labour diamond mining and sustained through deliberate evasion of international sanctions. The report also implicates Western diamond buyers and African transit states. Neither UNITA's grievances nor Cold War dynamics excuse what it became after 1992.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Didier Péclard</div>
+          <div class="scholar-card-title">University of Geneva — <em>UNITA and the Legacies of Defeat</em> (2025)</div>
+          <div class="scholar-card-verdict">Péclard examines what happened to UNITA after the war — its difficult transformation into a legitimate opposition party and what this reveals about Angola's peace settlement. The MPLA's dominance is not just a product of military victory but of a political economy of oil that makes genuine competition structurally difficult. "Illiberal peacebuilding" captures how peace and authoritarianism coexist.</div>
+        </div>
+      </div>
+
+      <h3>Was UNITA a Legitimate Movement or a Terrorist Organisation?</h3>
+      <p>The hardest interpretive question about the war is whether UNITA ever had legitimate grievances that justified its methods, or whether Savimbi's movement was simply a vehicle for his personal ambition sustained by apartheid South Africa and American Cold Warriors. The honest answer is that both things were true at different times. In the 1970s and into the 1980s, UNITA administered territory, provided services, and represented a real constituency — the Ovimbundu — who had legitimate complaints about Luanda's remote, Creole-dominated MPLA elite. <span class="src-chip">Pearce (2012)</span></p>
+
+      <p>By the 1990s, that case had become much harder to make. UNITA's rejection of the 1992 elections — which it had agreed to and which international observers certified — stripped it of democratic legitimacy. The post-1992 war targeted civilians systematically, used forced mining labour, and deliberately besieged cities to produce famine. Whatever UNITA had once been, what it became after 1992 is difficult to defend by any standard. <span class="src-chip">Pearce (2012)</span> <span class="src-chip">Global Witness (1998)</span></p>
+
+      <p>The MPLA, in turn, is rarely subjected to equivalent scrutiny for its pre-1975 and early post-independence repression. The 1977 Nitistas purge — in which an estimated 15,000 to 80,000 people may have been killed in political violence — has been documented only partially, and the MPLA government has not allowed systematic historical investigation. The post-war political settlement, as Péclard notes, involves a deliberate management of this history: UNITA's crimes are acknowledged; the MPLA's early violence is not. <span class="src-chip">Péclard (2025)</span></p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">The Case for UNITA's Original Legitimacy</div>
+          <ul>
+            <li>Represented the Ovimbundu, Angola's largest ethnic group, genuinely excluded from MPLA power<span class="perspective-attr">Pearce (2012)</span></li>
+            <li>Built functioning social institutions at Jamba — hospitals, schools, courts — without external support<span class="perspective-attr">Pearce (2012)</span></li>
+            <li>The MPLA's one-party state (1975–1991) was authoritarian; UNITA's demand for elections was not illegitimate<span class="perspective-attr">Birmingham (2015)</span></li>
+            <li>South African and American support, while cynical, did not automatically invalidate UNITA's domestic social base</li>
+            <li>Post-war UNITA has functioned as a legal opposition, suggesting a genuine political identity beyond armed struggle<span class="perspective-attr">Péclard (2025)</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">The Case Against UNITA's Post-1992 War</div>
+          <ul>
+            <li>Rejected internationally monitored elections it had agreed to without credible evidence of fraud<span class="perspective-attr">UN Security Council (1993)</span></li>
+            <li>Financed the post-1992 war through forced-labour diamond mining — a war crime<span class="perspective-attr">Global Witness (1998)</span></li>
+            <li>Deliberately besieged Kuito and Malanje, producing famine as a weapon; an estimated 1,000 people per day died at peak<span class="perspective-attr">Global Witness (2002)</span></li>
+            <li>Violated the Lusaka Protocol (1994) before the ink was dry, resuming full warfare by 1998</li>
+            <li>Savimbi had opponents within UNITA killed, including family members, suggesting personal despotism rather than political conviction<span class="perspective-attr">Pearce (2012)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p>The external powers do not escape scrutiny either. The United States backed UNITA through the CIA even after it became clear that the post-1992 war was a human catastrophe. Cuba's intervention, whatever its ideological framing, extended a war that might otherwise have ended sooner. South Africa used Angola to fight its Namibia proxy war with total disregard for Angolan lives. The consensus among historians is that Angola's civil war was prolonged and intensified by external interference — but that Angolan leaders, above all Savimbi, bore the primary moral responsibility for the choices they made. <span class="src-chip">Birmingham (2015)</span></p>
+
+      <div class="pull-quote">
+        <blockquote>"The peace that came to Angola in 2002 was not a negotiated settlement between equals but a victory of one belligerent over another. Understanding what kind of peace that produces — and for whom — is the central challenge of Angola's post-war history."</blockquote>
+        <cite>— Didier Péclard, <em>UNITA and the Legacies of Defeat</em> (2025)</cite>
+      </div>
+    </section>
+
+    <!-- Connected Topics -->
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People directly connected</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="henry-kissinger.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg" alt="Henry Kissinger">
+            <span class="topic-type-tag person">person</span>
+            <div class="topic-name">Henry Kissinger</div>
+            <div class="topic-preview">As Secretary of State, Kissinger authorised the initial CIA covert programme supporting UNITA and FNLA in 1975, framing Angola as a Cold War test case.</div>
+          </a>
+          <a class="topic-card" href="richard-nixon.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png" alt="Richard Nixon">
+            <span class="topic-type-tag person">person</span>
+            <div class="topic-name">Richard Nixon</div>
+            <div class="topic-preview">Nixon's Cold War framework and intelligence apparatus laid the groundwork for US involvement in Angola even before independence.</div>
+          </a>
+          <a class="topic-card" href="obama.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg" alt="Barack Obama">
+            <span class="topic-type-tag person">person</span>
+            <div class="topic-name">Barack Obama</div>
+            <div class="topic-preview">Obama's administration normalised US–Angola relations, lifting Cold War-era restrictions as Angola emerged as a major oil supplier.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Related Events</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="operation-condor.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Operation_Condor_participants.svg/960px-Operation_Condor_participants.svg.png" alt="Operation Condor">
+            <span class="topic-type-tag event">event</span>
+            <div class="topic-name">Operation Condor</div>
+            <div class="topic-preview">A contemporaneous Cold War proxy campaign, showing how US anti-communist strategy played out across multiple continents simultaneously in the 1970s.</div>
+          </a>
+          <a class="topic-card" href="northern-mali-conflict.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg" alt="Northern Mali Conflict">
+            <span class="topic-type-tag event">event</span>
+            <div class="topic-name">The Northern Mali Conflict</div>
+            <div class="topic-preview">A parallel African conflict where fragmented liberation movements, resource politics, and external military intervention produced a similarly intractable situation.</div>
+          </a>
+          <a class="topic-card" href="libyan-civil-war.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg" alt="The Libyan Civil War">
+            <span class="topic-type-tag event">event</span>
+            <div class="topic-name">The Libyan Civil War</div>
+            <div class="topic-preview">Like Angola, Libya's post-revolution civil war featured competing factions backed by external powers and fuelled by resource revenues.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Key Concepts</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="resource-curse.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg" alt="The Resource Curse">
+            <span class="topic-type-tag concept">concept</span>
+            <div class="topic-name">The Resource Curse</div>
+            <div class="topic-preview">Angola is one of the defining case studies of the resource curse: oil wealth sustained the MPLA's authoritarian consolidation while diamonds funded UNITA's destructive war.</div>
+          </a>
+          <a class="topic-card" href="realpolitik.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik">
+            <span class="topic-type-tag concept">concept</span>
+            <div class="topic-name">Realpolitik</div>
+            <div class="topic-preview">The Angola conflict illustrated realpolitik in its starkest form: the US backed UNITA while American oil companies paid the MPLA, and Cuba fought apartheid South Africa for Soviet strategic interests.</div>
+          </a>
+          <a class="topic-card" href="responsibility-to-protect.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="Responsibility to Protect">
+            <span class="topic-type-tag concept">concept</span>
+            <div class="topic-name">Responsibility to Protect</div>
+            <div class="topic-preview">The international community's near-total non-intervention in Angola's post-1992 humanitarian catastrophe helped motivate the R2P doctrine developed in the early 2000s.</div>
+          </a>
+          <a class="topic-card" href="non-aligned-movement.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg" alt="Non-Aligned Movement">
+            <span class="topic-type-tag concept">concept</span>
+            <div class="topic-name">The Non-Aligned Movement</div>
+            <div class="topic-preview">Angola's Cold War alignment with the Soviet bloc — despite early MPLA rhetoric about African socialism — illustrates the limits of non-alignment once superpower proxies took hold.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sources -->
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Pearce, Justin. <em>Political Identity and Conflict in Central Angola, 1975–2002.</em></span>
+          <span class="src-journal"> Cambridge University Press, 2015.</span>
+          <span class="src-note">The most rigorous scholarly account of how identity — rather than fixed ethnicity — shaped loyalties in the war. Pearce conducted extensive fieldwork in Huambo and Bié provinces. Essential for understanding UNITA's social base and the MPLA's relationship with the urban periphery. Available via academic libraries.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Péclard, Didier. <em>UNITA and the Legacies of Defeat: Post-War Reconstruction and Political Transformation in Angola.</em></span>
+          <span class="src-journal"> African Affairs, 2025.</span>
+          <span class="src-note">Examines UNITA's transformation into a legal opposition party after 2002 and the structural challenges of competing against an MPLA that remains fused with the state. Introduces the concept of "illiberal peacebuilding" as applied to Angola's settlement. The most up-to-date scholarly treatment of the post-war political economy.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Birmingham, David. <em>A Short History of Modern Angola.</em></span>
+          <span class="src-journal"> Hurst, 2015.</span>
+          <span class="src-note">A concise and authoritative overview by one of the foremost historians of Angola. Covers the colonial period through the post-war era with particular attention to the international dimensions of the conflict. Accessible without specialist background.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Global Witness. <em>A Rough Trade: The Role of Companies and Governments in the Angolan Conflict.</em></span>
+          <span class="src-journal"> Global Witness, 1998.</span>
+          <span class="src-note">The landmark investigative report that first documented UNITA's diamond financing and helped trigger the Kimberley Process. Freely available on the Global Witness website. Essential primary documentation for the war economy.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Crocker, Chester A. <em>High Noon in Southern Africa: Making Peace in a Rough Neighborhood.</em></span>
+          <span class="src-journal"> W.W. Norton, 1992.</span>
+          <span class="src-note">The memoir of the US official who brokered the 1988 New York Accords. Indispensable for understanding American policy logic and the Cuito Cuanavale endgame, though written from a State Department perspective with obvious blind spots about UNITA.</span>
+        </li>
+        <li>
+          <span class="src-num">6</span>
+          <span class="src-title">UN Security Council. <em>Report of the Panel of Experts on Angola (Fowler Report).</em></span>
+          <span class="src-journal"> United Nations, 2000.</span>
+          <span class="src-note">The UN sanctions committee investigation that named specific governments, companies, and individuals facilitating UNITA's sanctions violations. Caused considerable diplomatic controversy upon release and led to tightened sanctions enforcement. Freely available through the UN documentation system.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div>
+</div>
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack',  desc: 'Saddam Hussein\'s 1988 poison gas attack on a Kurdish city, the largest chemical weapons attack against a civilian population in history.',  url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',           desc: 'Why oil-rich and mineral-rich countries so often end up poorer, less democratic, and more violent than their neighbours.',  url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'The Arab Spring',              desc: 'The wave of uprisings that swept the Arab world in 2011, toppling four governments and igniting civil wars that still burn today.',  url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',         desc: 'The Egyptian general who led the 2013 coup against the country\'s first elected president and has ruled ever since.',  url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'event',   title: 'The Suez Crisis',              desc: 'The 1956 confrontation that ended British and French dominance in the Middle East and announced the arrival of the American-Soviet bipolar world.',  url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',                  desc: 'The movement that dreamed of uniting Arab nations into a single political bloc — and the reasons it failed.',  url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'September 11, 2001',           desc: 'The Al-Qaeda attacks that killed 2,977 people and launched two decades of American wars across the Middle East and Central Asia.',  url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',                    desc: 'The 1972 break-in and cover-up that destroyed a presidency and permanently changed how Americans think about government power.',  url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',                 desc: 'The 1991 US-led coalition war that reversed Iraq\'s invasion of Kuwait and set the template for post-Cold War military intervention.',  url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',                 desc: 'The 42nd US President who presided over the 1990s boom, signed NAFTA, and left office under the shadow of impeachment.',  url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',              desc: 'Senator, Secretary of State, and two-time presidential candidate who became the first woman nominated for president by a major US party.',  url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik',                  desc: 'The doctrine that states should act on calculated self-interest rather than ideology or morality — and what happens when they do.',  url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person',  title: 'Tony Blair',                   desc: 'The British Prime Minister who modernised Labour, won three elections, and staked his legacy on the Iraq War.',  url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Colin Powell',                 desc: 'The four-star general and Secretary of State who presented the case for Iraq\'s WMDs to the UN — a speech he later called a blot on his record.',  url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Dick Cheney',                  desc: 'The most powerful Vice President in US history, architect of the War on Terror\'s most controversial policies.',  url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',   title: 'The Iraq War',                 desc: 'The 2003 US-led invasion that toppled Saddam Hussein, found no weapons of mass destruction, and unleashed sectarian conflict that reshaped the Middle East.',  url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'concept', title: 'Democratic Socialism',         desc: 'The political tradition that wants economic equality through democratic means rather than revolution — and what distinguishes it from both liberalism and communism.',  url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',    desc: 'The surprise attack that nearly destroyed Israel, triggered the oil embargo that shocked Western economies, and ultimately led to the first Arab-Israeli peace treaty.',  url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',            desc: 'The eight-year war that killed up to a million people, introduced chemical weapons to modern warfare, and ended with neither side gaining anything.',  url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                    desc: 'The pan-Arab nationalist ideology that took power in Iraq and Syria — and what it actually looked like when it governed.',  url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Khalifa Haftar',               desc: 'The Libyan general who fought in Angola for Gaddafi, defected to the CIA, and returned decades later to lead the assault on Tripoli.',  url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',     desc: 'The Cold War coalition of countries that refused to align with either the US or Soviet blocs — and why it largely failed.',  url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                  desc: 'The Egyptian president who crossed the Suez Canal in 1973, flew to Jerusalem in 1977, and was assassinated in 1981.',  url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The UN doctrine that says sovereignty is not a shield against atrocities — and the debates over when the world has an obligation to intervene.',  url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'event',   title: 'The Libyan Civil War',         desc: 'The 2011 NATO-backed uprising that toppled Gaddafi and left Libya divided between rival governments and militias ever since.',  url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',             desc: 'The US-backed campaign of political repression across six South American dictatorships in the 1970s and 80s.',  url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',              desc: 'The Libyan dictator who ruled for 42 years, funded terrorism, tried to build pan-African unity, and was killed by the revolution he had spent his life suppressing.',  url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',             desc: 'The Chilean general who overthrew a democratic government in 1973 and ruled through torture and disappearances for seventeen years.',  url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',               desc: 'The Iraqi dictator whose invasions of Iran and Kuwait, and whose brutal domestic repression, defined Middle Eastern politics for three decades.',  url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',              desc: 'The architect of American realpolitik whose decisions shaped wars and coups from Vietnam to Chile to Angola.',  url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',             desc: 'The Chilean socialist president whose democratic election and violent overthrow became a defining moment of Cold War Latin America.',  url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',                desc: 'The president who opened China, bombed Cambodia, and became the only American president to resign from office.',  url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                 desc: 'America\'s 44th president, whose election broke a historic barrier and whose presidency grappled with the legacy of the wars he inherited.',  url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',           desc: 'The Egyptian leader who nationalised the Suez Canal, championed pan-Arabism, and defined anti-colonial politics for a generation.',  url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',               desc: 'The US president who responded to 9/11 with the War on Terror, invaded Afghanistan and Iraq, and left office with his legacy in ruins.',  url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',           desc: 'The cleric who led Iran\'s 1979 Islamic Revolution and built a theocratic state that remains one of the world\'s most influential — and controversial — political experiments.',  url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+  _searchOpen = !_searchOpen;
+  btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+  if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+}
+function runSearch(q) {
+  const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+  const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES.filter(a =>
+    a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term));
+  _focusIdx = -1;
+  if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+  box.innerHTML = hits.map((a,i) =>
+    `<a class="search-result" href="${a.url}" data-i="${i}">
+       <div class="search-result-top">${a.thumb?`<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">`:''}<span class="topic-type-tag ${a.type}">${a.type}</span>
+       <span class="search-result-title">${a.title}</span></div>
+       <div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items = document.querySelectorAll('.search-result');
+  if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+  else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+  else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+  else if (e.key==='Escape') { toggleSearch(); return; }
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click', e => { if (_searchOpen && !document.querySelector('.search-wrap').contains(e.target)) toggleSearch(); });
+window.addEventListener('scroll', () => {
+  document.getElementById('progressBar').style.width = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+function toggleSave() {
+  const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

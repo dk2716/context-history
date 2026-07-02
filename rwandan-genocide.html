@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Rwandan Genocide – Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="event-page">
+
+<div id="progressBar" style="position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:9999;width:0%;transition:width 0.1s;"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type">Event</span>
+    <div id="searchWrap" style="position:relative;display:inline-block;">
+      <button id="searchIconBtn" onclick="toggleSearch()" style="background:none;border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:0.35rem 0.7rem;cursor:pointer;color:var(--muted);font-size:0.78rem;display:flex;align-items:center;gap:0.4rem;">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Search
+      </button>
+      <div id="searchDropdown" class="search-dropdown">
+        <input id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off">
+        <div id="searchResults"></div>
+      </div>
+    </div>
+    <button id="saveBtn" onclick="toggleSave()" class="save-btn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="context-v4.html">Home</a><span class="breadcrumb-sep">›</span>
+      <a href="#">Events</a><span class="breadcrumb-sep">›</span>
+      <a href="#">Africa</a><span class="breadcrumb-sep">›</span>
+      <span>The Rwandan Genocide</span>
+    </div>
+    <div class="hero-region-tag">Central Africa · April–July 1994</div>
+    <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+      <div style="flex:1;min-width:0;">
+        <h1 style="margin-top:0;">The Rwandan Genocide</h1>
+        <p class="hero-sub">In 100 days, an estimated 800,000 Tutsi and moderate Hutu were systematically killed by a government that had spent years planning it — while the United Nations, the United States, and Belgium watched and did nothing.</p>
+        <div class="hero-meta">
+          <span>~30 min read</span><span>·</span>
+          <span>5 academic sources</span><span>·</span>
+          <span>Last updated July 2026</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg" alt="Nyamata Genocide Memorial, Rwanda"
+          style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(232,168,56,0.25);display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav" id="sidebarNav">
+      <li><a href="#quick-facts">Quick Facts</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#key-figures">Key Figures</a></li>
+      <li><a href="#key-events">Key Events</a></li>
+      <li><a href="#turning-points">Turning Points</a></li>
+      <li><a href="#matters">Why It Matters Today</a></li>
+      <li><a href="#legacy">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <main>
+
+    <section id="quick-facts">
+      <div class="quick-facts">
+        <div class="quick-facts-label">Quick Facts</div>
+        <div class="qf-item"><div class="qf-label">Date</div><div class="qf-value">April 7 – mid-July 1994 (~100 days)</div></div>
+        <div class="qf-item"><div class="qf-label">Location</div><div class="qf-value">Rwanda, Central Africa</div></div>
+        <div class="qf-item"><div class="qf-label">Perpetrators</div><div class="qf-value">Rwandan government (FAR), Interahamwe militia, civilian participants</div></div>
+        <div class="qf-item"><div class="qf-label">Primary targets</div><div class="qf-value">Tutsi (ethnic minority); moderate Hutu politicians</div></div>
+        <div class="qf-item"><div class="qf-label">Death toll</div><div class="qf-value">~800,000 (OAU est.); 600,000 Tutsi + 200,000 Hutu reprisals (McNamee 2018) — precise figures disputed</div></div>
+        <div class="qf-item"><div class="qf-label">Displaced</div><div class="qf-value">~2 million refugees fled to Zaïre, Tanzania, Burundi</div></div>
+        <div class="qf-item"><div class="qf-label">Ended by</div><div class="qf-value">RPF military victory; Tutsi-led government formed July 19, 1994</div></div>
+        <div class="qf-item"><div class="qf-label">Key trigger</div><div class="qf-value">Assassination of President Habyarimana, April 6, 1994</div></div>
+        <div class="qf-item"><div class="qf-label">International failure</div><div class="qf-value">UNAMIR reduced from 2,500 to 270 troops; US refused to use the word "genocide"</div></div>
+        <div class="qf-item"><div class="qf-label">Accountability</div><div class="qf-value">ICTR convicted 61 individuals; gacaca courts processed ~1.9 million cases</div></div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-card-label">Population 1994</div><div class="stat-card-value">~8 million</div><div class="stat-card-sub">One of Africa's most densely populated countries</div></div>
+        <div class="stat-card"><div class="stat-card-label">Days of killing</div><div class="stat-card-value">~100</div><div class="stat-card-sub">Faster kill rate than the Holocaust</div></div>
+        <div class="stat-card"><div class="stat-card-label">UNAMIR force at peak</div><div class="stat-card-value">2,500</div><div class="stat-card-sub">Reduced to 270 during genocide</div></div>
+        <div class="stat-card"><div class="stat-card-label">ICTR convictions</div><div class="stat-card-value">61</div><div class="stat-card-sub">Including heads of government and media</div></div>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>Background</h2>
+      <p>The seeds of the genocide were planted not in ancient tribal rivalry but in a colonial laboratory. Belgium, which administered Rwanda-Urundi as a League of Nations mandate from 1916, arrived with a theory: the "Hamitic hypothesis," which held that the Tutsi — taller, lighter-skinned, historically pastoralist — were a separate, superior race of Nilotic origin, while the Hutu were Bantu farmers of inferior stock. Belgian administrators used this pseudo-scientific racism to restructure Rwandan society, reserving education, church positions, and administrative jobs almost exclusively for Tutsi. <span class="src-chip">OAU 2001</span> <span class="src-chip">Schimmel 2020</span></p>
+
+      <p>In 1933, Belgium introduced identity cards that hardcoded ethnicity into every Rwandan's legal existence. If a family owned ten or more cattle, they were registered Tutsi; fewer cattle, Hutu; potters and blacksmiths, Twa. These distinctions, which had previously been somewhat fluid — families could move between categories through marriage or wealth — became permanent and fatal. The identity cards would be used at roadblocks in 1994 to sort the living from those marked for death. <span class="src-chip">OAU 2001</span></p>
+
+      <p>The revolution that upended this hierarchy began in 1959, not 1994. As Rwandan independence approached, Hutu political movements rose against Tutsi dominance, with Belgian encouragement that had now reversed — Brussels, calculating that Hutu majorities would be easier to manage, switched sides. In the violence of 1959–1962, tens of thousands of Tutsi were killed and more than 100,000 fled into exile in Uganda, Burundi, Zaïre, and elsewhere. The First Republic (1962–1973) under Grégoire Kayibanda institutionalised anti-Tutsi discrimination; periodic massacres punctuated the decade. <span class="src-chip">OAU 2001</span></p>
+
+      <p>Juvénal Habyarimana came to power in a coup in 1973 and built a single-party state under the MRND party. For the first decade, his government maintained relative stability while maintaining Tutsi exclusion from the military and government. By the late 1980s, economic collapse and structural adjustment pressures were destabilising the regime. The children of the 1959 exiles — now grown up in Ugandan refugee camps, many having fought in Yoweri Museveni's guerrilla war — had organised into the Rwandan Patriotic Front. On October 1, 1990, the RPF invaded from Uganda. The civil war that followed would set the stage for everything that came after. <span class="src-chip">OAU 2001</span> <span class="src-chip">Sarty 2004</span></p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">1933</div><div class="stat-label">Year Belgium issued mandatory ethnic identity cards</div></div>
+        <div class="stat-box"><div class="stat-number">100,000+</div><div class="stat-label">Tutsi exiled after 1959–62 revolution</div></div>
+        <div class="stat-box"><div class="stat-number">1990</div><div class="stat-label">RPF invasion from Uganda launched October 1</div></div>
+        <div class="stat-box"><div class="stat-number">450,000</div><div class="stat-label">People resettled under paysannat scheme 1960–70s</div></div>
+      </div>
+    </section>
+
+    <section id="key-figures">
+      <h2>Key Figures</h2>
+      <div class="figures-grid">
+        <div class="figure-card">
+          <div class="figure-name">Juvénal Habyarimana</div>
+          <div class="figure-role">President of Rwanda, 1973–1994</div>
+          <div class="figure-desc">The Hutu general who ruled Rwanda for 21 years. His assassination on April 6, 1994 — his plane shot down over Kigali airport — was the trigger the genocide planners had been waiting for. Whether hardline Hutu Power extremists or the RPF fired the missile remains disputed and politically charged; the OAU inquiry concluded the question was ultimately less important than who exploited the opportunity.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Théoneste Bagosora</div>
+          <div class="figure-role">Colonel, Army Chief of Staff</div>
+          <div class="figure-desc">The military architect of the genocide. Within hours of Habyarimana's death, Bagosora convened the crisis committee that bypassed the constitutional succession and activated the Interahamwe militia. He had declared in 1992 that he was "preparing for the apocalypse." The ICTR convicted him of genocide and crimes against humanity; he died in Mali in 2021.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Roméo Dallaire</div>
+          <div class="figure-role">Force Commander, UNAMIR</div>
+          <div class="figure-desc">The Canadian general commanding UN peacekeeping forces in Rwanda. On January 11, 1994 — nearly three months before the genocide — Dallaire sent his famous "genocide fax" to UN headquarters in New York, warning that a Hutu informant had revealed plans for systematic Tutsi extermination and the location of weapons caches. His superiors ordered him to stand down and notify the Rwandan government. He spent decades suffering PTSD and writing to explain what adequate resources could have stopped. <span class="src-chip">OAU 2001</span> <span class="src-chip">Sarty 2004</span></div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Paul Kagame</div>
+          <div class="figure-role">RPF Military Commander; President since 2000</div>
+          <div class="figure-desc">The Tutsi military commander whose RPF forces ended the genocide by capturing Kigali in mid-July 1994. Kagame grew up in exile in Uganda and rose through Museveni's NRA. His forces are credited with stopping the killing but also accused of reprisal killings of Hutu civilians during and after the advance. As Rwanda's president, he has built a remarkable economic development record alongside a tight grip on political dissent.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Ferdinand Nahimana</div>
+          <div class="figure-role">Founder, Radio Mille Collines (RTLM)</div>
+          <div class="figure-desc">The academic who turned Rwanda's radio waves into a killing machine. RTLM broadcast 24 hours of "hate radio," calling Tutsi "inyenzi" (cockroaches) and "inzoka" (snakes), broadcasting roadblock locations, naming individuals to be killed, and providing real-time guidance to militia. Nahimana was convicted by the ICTR of genocide and incitement — the first conviction for genocide-by-media since Nuremberg. <span class="src-chip">Schimmel 2020</span></div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Madeleine Albright</div>
+          <div class="figure-role">US Ambassador to the UN, 1993–1997</div>
+          <div class="figure-desc">The American diplomat who blocked UNSC action during the genocide. The Clinton administration — still reeling from Somalia — issued talking points instructing officials not to call events "genocide" since doing so would trigger legal obligations under the 1948 Genocide Convention. Albright later called the decision the greatest regret of her career. The US also lobbied to reduce UNAMIR rather than reinforce it. <span class="src-chip">OAU 2001</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="key-events">
+      <h2>Key Events</h2>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">October 1990 – August 1993</div>
+            <div class="tl-title">The RPF Invasion and the Road to Arusha</div>
+          </div>
+          <div class="tl-chevron">▾</div>
+        </div>
+        <div class="tl-body">
+          <p>On October 1, 1990, approximately 2,500 RPF fighters crossed into Rwanda from Uganda, most of them children of the 1959 exiles who had grown up stateless in refugee camps. The invasion would have succeeded quickly — the Rwandan army was weak — had France and Belgium not intervened militarily to prop up Habyarimana's government. French forces would remain in Rwanda, training the Forces Armées Rwandaises (FAR) and later supplying weapons, until and even during the genocide itself. <span class="src-chip">Sarty 2004</span> <span class="src-chip">OAU 2001</span></p>
+          <p>The RPF invasion triggered waves of anti-Tutsi violence inside Rwanda. In October 1990 alone, the government arrested 8,000 to 10,000 Tutsi and Hutu opponents. Massacres of Tutsi communities — in Bugesera, Gisenyi, and elsewhere — became regular occurrences from 1990 to 1993. Extremists within the government, centred around Habyarimana's wife's family (the "akazu" or "little house"), concluded that the solution to Rwanda's problem was the elimination of Tutsi as a group, not a political settlement. They began distributing machetes in bulk — 581,000 machetes were imported in 1993 alone.</p>
+          <p>Under international pressure, the warring parties signed the Arusha Accords on August 4, 1993. The accords established a broad-based transitional government, power-sharing between MRND and the RPF, and integration of RPF fighters into the Rwandan army. A UN peacekeeping force — UNAMIR — was authorised to oversee implementation. But the Hutu Power extremists within the government had no intention of implementing the accords. They viewed them as surrender and accelerated their preparations for a "final solution."</p>
+          <div class="tl-sources"><span class="src-chip">OAU 2001</span><span class="src-chip">Sarty 2004</span><span class="src-chip">Schimmel 2020</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">January 11, 1994</div>
+            <div class="tl-title">The Genocide Fax That the UN Ignored</div>
+          </div>
+          <div class="tl-chevron">▾</div>
+        </div>
+        <div class="tl-body">
+          <p>General Roméo Dallaire's "genocide fax" to UN headquarters in New York is one of the most consequential documents in modern peacekeeping history — and one of the most consequentially ignored. Dallaire had received information from a high-level Rwandan government informant who revealed that the Interahamwe militia was registering all Tutsi in Kigali, that weapons were being cached, and that the plan was systematic: kill 1,000 Tutsi every 20 minutes. The informant offered to lead Dallaire to the weapon caches. <span class="src-chip">OAU 2001</span> <span class="src-chip">Sarty 2004</span></p>
+          <p>Dallaire asked for permission to conduct arms raids immediately. The reply from UN headquarters, drafted by the Department of Peacekeeping Operations under Kofi Annan, was unequivocal: do not act. His mandate did not permit offensive operations. Share the information with Habyarimana's government. Dallaire was stunned — sharing information about a conspiracy with the government that was running it was obviously futile. He obeyed. The caches remained undiscovered. The training continued. The killing started almost exactly three months later, on schedule.</p>
+          <div class="tl-sources"><span class="src-chip">OAU 2001</span><span class="src-chip">Sarty 2004</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">April 6–8, 1994</div>
+            <div class="tl-title">The Plane Goes Down; the Killing Begins</div>
+          </div>
+          <div class="tl-chevron">▾</div>
+        </div>
+        <div class="tl-body">
+          <p>At 8:20 pm on April 6, 1994, President Habyarimana's plane was shot down on its approach to Kigali airport. Habyarimana had been returning from Tanzania, where he had been pressured to commit to implementing the Arusha Accords. He and Burundian President Cyprien Ntaryamira, along with their delegations, were killed. Within hours, roadblocks appeared across Kigali. Presidential Guard units fanned out with lists of names. The Interahamwe went house to house.</p>
+          <p>The first victims were not random. The planners began with moderate Hutu politicians who might have opposed the killing — Prime Minister Agathe Uwilingiyimana was murdered early in the morning of April 7, along with the ten Belgian UN peacekeepers sent to protect her. Their killers castrated and dismembered the soldiers. The murder of the Belgian troops was deliberate: the genocide planners knew that Belgium would withdraw its forces (as it had from Somalia after the Mogadishu disaster), reducing the UN presence to ineffectiveness. The calculation proved correct. Belgium evacuated its troops and lobbied the UN Security Council to reduce UNAMIR from 2,500 to 270 troops. <span class="src-chip">OAU 2001</span> <span class="src-chip">Sarty 2004</span></p>
+          <p>RTLM radio broadcast continuously: "The grave is only half full. Who will help us fill it?" It named people, listed addresses, celebrated killings, and directed listeners to where Tutsi were sheltering. The genocide proceeded at approximately 8,000 murders per day — a pace that exceeded even the Holocaust in efficiency of killing per unit time. <span class="src-chip">Schimmel 2020</span></p>
+          <div class="tl-sources"><span class="src-chip">OAU 2001</span><span class="src-chip">Schimmel 2020</span><span class="src-chip">Sarty 2004</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">April – June 1994</div>
+            <div class="tl-title">One Hundred Days: The Mechanics of Mass Murder</div>
+          </div>
+          <div class="tl-chevron">▾</div>
+        </div>
+        <div class="tl-body">
+          <p>The genocide was not a spontaneous popular uprising. It was a bureaucratically organised operation involving the state, the church, local officials, police, and ordinary citizens mobilised through fear, ideology, and in some cases material incentive. Prefects, burgomasters, and sector councillors supervised killing operations in their jurisdictions. Tutsi were hunted in churches — where tens of thousands had sought refuge in previous violence and believed they would be safe — and were massacred there by the thousands. The Nyamata church massacre alone killed approximately 10,000 people. <span class="src-chip">OAU 2001</span></p>
+          <p>Rape was used systematically as a weapon of genocide. Women and girls were raped, often by men they knew, sometimes in front of their families. HIV-positive men were deliberately chosen as rapists — a form of prolonged killing by infection. Mutilation was common. Schimmel (2020) estimates that between 250,000 and 500,000 women were raped during the genocide. More than 300,000 survivors remain alive today, most without adequate psychological, medical, or financial support.</p>
+          <p>A striking and underappreciated dimension of the genocide's geography was the disproportionate participation of settlers in "paysannats" — resettlement schemes established by the Habyarimana government in frontier areas previously dominated by Tutsi. McNamee (2018) demonstrates quantitatively that villages with paysannat communities had approximately 155 more Category 1 and 2 genocide prosecutions than comparable villages without them. The paysannat settlers, who had received land allocations in formerly Tutsi-dominated areas, feared — not unreasonably given the RPF's 1990 invasion — that an RPF victory would reverse those allocations. Their participation in the genocide was, at least in part, a materially motivated defence of property, not simply ethnic hatred. This finding accounts for roughly 10% of all genocide prosecutions. <span class="src-chip">McNamee 2018</span></p>
+          <div class="tl-sources"><span class="src-chip">OAU 2001</span><span class="src-chip">Schimmel 2020</span><span class="src-chip">McNamee 2018</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">April – July 1994</div>
+            <div class="tl-title">The World Watches: France, the US, and the UN Fail</div>
+          </div>
+          <div class="tl-chevron">▾</div>
+        </div>
+        <div class="tl-body">
+          <p>As the killing accelerated, the international response was a study in deliberate inaction. The Clinton administration — advised by National Security Council staffer Richard Clarke, among others — issued guidance that US officials should avoid the word "genocide" because its use under international law might obligate the United States to act. State Department spokeswoman Christine Shelley notoriously distinguished between "genocide" and "acts of genocide" at a press conference in May. Dallaire later wrote that if he had received 5,000 properly equipped troops, he could have stopped the genocide. <span class="src-chip">OAU 2001</span> <span class="src-chip">Sarty 2004</span></p>
+          <p>France's role was more actively damaging. The Mitterrand government had trained, armed, and funded the FAR throughout the civil war. French forces were present in Rwanda and continued to supply weapons to the genocidal government even after April 6. When France eventually intervened militarily in June 1994 — "Operation Turquoise," authorised by the UN Security Council — it created a "safe zone" in the southwest that, critics argued, allowed génocidaires to escape into Zaïre rather than preventing their activities. The OAU's 2001 inquiry concluded that France bore "significant" responsibility for the genocide. <span class="src-chip">OAU 2001</span> <span class="src-chip">Schimmel 2020</span></p>
+          <p>Dallaire, commanding what remained of UNAMIR, sheltered approximately 30,000 people in compounds and safe zones — a moral achievement amid catastrophic institutional failure. The RPF advance from the north, militarily successful throughout April and May, ultimately ended the genocide when its forces captured Kigali on July 4 and declared a ceasefire on July 18. By then, somewhere between 500,000 and 800,000 people were dead. <span class="src-chip">Sarty 2004</span></p>
+          <div class="tl-sources"><span class="src-chip">OAU 2001</span><span class="src-chip">Sarty 2004</span><span class="src-chip">Schimmel 2020</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">November 1994 – 2015</div>
+            <div class="tl-title">Accountability: The ICTR and Gacaca Courts</div>
+          </div>
+          <div class="tl-chevron">▾</div>
+        </div>
+        <div class="tl-body">
+          <p>The International Criminal Tribunal for Rwanda, established by UN Security Council Resolution 955 in November 1994, was the first international tribunal since Nuremberg to convict someone of genocide. Over two decades, the ICTR convicted 61 individuals, including heads of government, military commanders, and Ferdinand Nahimana of RTLM — the first conviction for genocide-by-media since the Nuremberg Media Trial. The tribunal's work established significant precedents in international criminal law, including the doctrine that systematic rape constitutes a weapon of genocide. <span class="src-chip">Upadhyay &amp; Mehrotra 2021</span></p>
+          <p>Rwanda's most remarkable innovation in accountability was the gacaca ("grass") court system — a revived traditional community justice mechanism adapted to handle the approximately 1.9 million genocide cases that overwhelmed the formal justice system. Community courts convened across the country, presided over by locally elected judges, to hear cases ranging from Category 1 (planners and killers) to Category 3 (property crimes). By 2012, approximately 1.2 million trials had been completed. Critics noted that gacaca courts convicted at very high rates and were sometimes used to settle personal scores; supporters argued that no alternative existed for processing crimes at such scale.</p>
+          <p>Upadhyay and Mehrotra (2021) argue that the international community's response to Rwanda — both the failure before and during, and the ICTR after — transformed the normative landscape of international law. The genocide accelerated the development of the Responsibility to Protect doctrine (formally adopted at the 2005 World Summit) and forced a reckoning with whether state sovereignty could immunise governments from international accountability for crimes against their own populations.</p>
+          <div class="tl-sources"><span class="src-chip">Upadhyay &amp; Mehrotra 2021</span><span class="src-chip">OAU 2001</span></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="turning-points">
+      <h2>Turning Points</h2>
+      <div class="turning-points">
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 1</div>
+          <div class="turning-card-title">The Decision Not to Act on the Genocide Fax (January 11, 1994)</div>
+          <p>When Dallaire sent his warning to UN headquarters on January 11, he gave the international community its clearest advance notice of what was coming. The decision by DPKO — under Kofi Annan's leadership — to order Dallaire to stand down rather than raid the weapons caches was not inevitable: the mandate could have been reinterpreted, the Security Council could have been convened, targeted arms raids could have disrupted the preparations. Instead, the machinery of planning continued unimpeded. This was the moment the genocide most clearly could have been prevented. <span class="src-chip">OAU 2001</span></p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 2</div>
+          <div class="turning-card-title">Belgium's Withdrawal and the UNSC Vote to Reduce UNAMIR (April 21, 1994)</div>
+          <p>Fifteen days after the genocide began — and long after it was already clear that mass atrocities were underway — the UN Security Council voted not to reinforce UNAMIR but to reduce it from 2,500 troops to 270. Belgium's decision to withdraw after the murder of its ten peacekeepers was understandable but calculable in advance: the genocide planners had deliberately targeted the Belgian troops precisely to trigger this response. The US and UK supported the reduction. Dallaire estimated that a force of 5,000 well-equipped troops could have stopped the killing. The Security Council offered 270. <span class="src-chip">Sarty 2004</span></p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 3</div>
+          <div class="turning-card-title">The Arusha Accords' Implementation Failure (August 1993 – April 1994)</div>
+          <p>The Arusha Accords were the genocide planners' worst nightmare — a genuine power-sharing agreement that would have included the RPF in government and ended the war. Rather than implement them, the Hutu Power extremists within Habyarimana's inner circle used the eight months between signing and the president's assassination to import machetes, train the Interahamwe, and finalise the killing lists. Whether Habyarimana himself intended to implement or sabotage the accords is disputed; what is clear is that those around him ensured they never came into force. <span class="src-chip">OAU 2001</span> <span class="src-chip">Schimmel 2020</span></p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 4</div>
+          <div class="turning-card-title">France's Decision to Support Habyarimana Throughout the Civil War</div>
+          <p>Had France not intervened militarily in 1990 to repel the RPF invasion — deploying troops to Kigali within 48 hours, providing intelligence and tactical training to the FAR — the civil war would have ended quickly, probably with a negotiated settlement before the extremist planning could mature. France's Françafrique policy, which prioritised maintaining Francophone African allies regardless of their governance, led Paris to arm and train the very forces that carried out the genocide. The OAU inquiry called France's involvement "incriminating." <span class="src-chip">OAU 2001</span> <span class="src-chip">Sarty 2004</span></p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"If I had been given 5,000 troops and could have put them in the field by April 7, I firmly believe I could have stopped the killing in Kigali and eventually the rest of the country."</blockquote>
+        <cite>— General Roméo Dallaire, UNAMIR Force Commander, quoted in Sarty (2004)</cite>
+      </div>
+    </section>
+
+    <section id="matters">
+      <h2>Why It Matters Today</h2>
+      <p>The Rwandan genocide is not a closed chapter. It reshaped international law, transformed how the UN approaches peacekeeping, and created a post-conflict state that is simultaneously a development miracle and a political paradox. Its most immediate regional legacy — two million Hutu refugees in Zaïre, including many génocidaires — destabilised central Africa for decades and contributed to the deadliest conflict since World War II: the Congo Wars.</p>
+
+      <div class="matters-grid">
+        <div class="matters-card">
+          <h3>The Congo Wars as Rwanda's Direct Legacy</h3>
+          <p>When Rwanda's RPF-led army and its allies invaded Zaïre in 1996 to destroy génocidaire camps, they triggered a cascade that overthrew Mobutu, ignited two Congo Wars, and killed an estimated 5–6 million people between 1996 and 2003. Rwanda's military presence in eastern DRC — officially denied, widely documented — continues today. The genocide created the regional power vacuum and the security logic that made this violence possible.</p>
+          <ul class="matters-subpoints">
+            <li>Ex-FAR and Interahamwe regrouped in Zaïre, attacking Rwanda from 1994 onward</li>
+            <li>First Congo War (1996–97) drove out Mobutu; Second Congo War (1998–2003) involved nine countries</li>
+            <li>M23 rebel group in eastern DRC, backed by Rwanda, still active in 2026</li>
+            <li>ICC and UN have documented Rwandan military support for armed groups in DRC</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Responsibility to Protect Doctrine Emerged Here</h3>
+          <p>The UN's "Responsibility to Protect" (R2P) doctrine — adopted unanimously at the 2005 World Summit — was directly inspired by the failure in Rwanda. R2P holds that sovereignty does not protect governments that commit genocide, war crimes, or crimes against humanity against their own people. The doctrine was used to authorise NATO's 2011 Libya intervention. But Rwanda also showed the gap between principle and action: R2P has not prevented mass atrocities in Syria, Yemen, or Darfur.</p>
+          <ul class="matters-subpoints">
+            <li>R2P adopted by all 193 UN member states at 2005 World Summit</li>
+            <li>First invoked for Darfur (2006), then Libya (2011)</li>
+            <li>Critics argue it has been selectively applied and manipulated for geopolitical ends</li>
+            <li>Syria tested R2P's limits: Security Council veto paralysed action for years</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Rwanda's Economic Miracle and Democratic Deficit</h3>
+          <p>Under President Paul Kagame, Rwanda has achieved one of Africa's most remarkable development trajectories: GDP per capita has risen from under $200 in 1994 to over $900 in 2024, universal health insurance covers over 90% of the population, and Kigali is frequently cited as Africa's cleanest and safest city. But freedom of speech, press freedom, and political opposition are tightly curtailed. Critics, journalists, and opponents of Kagame have been assassinated abroad and harassed at home.</p>
+          <ul class="matters-subpoints">
+            <li>GDP growth averaged 7–8% annually for two decades</li>
+            <li>Rwanda ranks 12th globally in the World Bank's Ease of Doing Business index (2020)</li>
+            <li>Press freedom ranking: 139 of 180 countries (RSF 2024)</li>
+            <li>Multiple opposition figures have died in suspicious circumstances outside Rwanda</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Justice for Survivors Remains Incomplete</h3>
+          <p>More than 300,000 genocide survivors — mostly women who were raped, widows, and orphans — remain alive in Rwanda with inadequate reparative support. The gacaca courts were wound down in 2012, but the FDLR (Forces Démocratiques de Libération du Rwanda), a rebel group descended from the original Interahamwe, still operates in eastern DRC. Several high-profile suspects remain at large. And survivors continue to face the perpetrators and their families in the same communities.</p>
+          <ul class="matters-subpoints">
+            <li>FDLR still active in DRC, estimated 1,500–3,000 fighters as of 2024</li>
+            <li>Félicien Kabuga — RTLM financier — arrested in France in 2020 after 26 years</li>
+            <li>Augustin Bizimana, indicted génocidaire, died in the DRC in 2021</li>
+            <li>IRDP reports most survivors live below the poverty line, ineligible for reparations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="legacy">
+      <h2>Legacy &amp; Debate</h2>
+
+      <p>The Rwandan genocide has generated an enormous scholarly literature, and most of its central facts are no longer contested. But several important debates continue — about causation, about what could have been prevented, about who bears responsibility, and about how to understand the relationship between the colonial past and the killing fields of 1994.</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Philip Gourevitch</div>
+          <div class="scholar-card-title"><em>We Wish to Inform You That Tomorrow We Will Be Killed with Our Families</em> (1998)</div>
+          <div class="scholar-card-verdict">Argues the genocide was a deliberate, planned political project — not ancient tribal hatred — and that the international community's failure was a choice, not an accident.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Mahmood Mamdani</div>
+          <div class="scholar-card-title"><em>When Victims Become Killers</em> (2001), Columbia University</div>
+          <div class="scholar-card-verdict">Argues that post-genocide Rwanda's justice framework has racialised the categories of "perpetrator" (Hutu) and "victim" (Tutsi) in ways that reproduce the colonial logic it claims to have rejected.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Scott Straus</div>
+          <div class="scholar-card-title"><em>The Order of Genocide</em> (2006), University of Wisconsin</div>
+          <div class="scholar-card-verdict">Through interviews with convicted génocidaires, argues that most ordinary participants were not ideological extremists but were responding to local authority, fear, and conformity — complicating narratives of pure top-down planning.</div>
+        </div>
+      </div>
+
+      <h3>Was the Genocide "Preventable" — and If So, by Whom?</h3>
+
+      <p>The OAU's independent inquiry (2001), chaired by former Botswana president Ketumile Masire, concluded the genocide was "preventable" at multiple stages. The inquiry identified the January 11 fax episode, the Belgian withdrawal, and the UNSC's decision to reduce UNAMIR as key moments where different choices could have altered the outcome. Sarty's (2004) review of Dallaire's memoir underscores the military argument: a competent force of 5,000 could have stopped the Interahamwe. The counter-argument — that no major power had the political will to deploy such a force in an obscure African country after Somalia — is probably correct as a political prediction, but does not address the moral question of whether the failure was justified.</p>
+
+      <p>France's responsibility is the most contested issue in the genocide's historiography. The OAU inquiry was categorical about French culpability; a French parliamentary inquiry in 1998 was more equivocal; a Rwandan government inquiry in 2007 accused France of direct complicity, including participation in roadblocks. French President Macron acknowledged in 2021 that France had borne "an overwhelming responsibility" in the genocide, though he stopped short of calling it complicity. The debate continues to strain French-Rwandan relations.</p>
+
+      <p>McNamee's (2018) quantitative work on paysannat settlers introduces a dimension that complicates both the top-down planning narrative and the pure ethnic-hatred account. If a substantial minority of perpetrators were motivated partly by material interests — specifically, fear of land expropriation — this has implications for how we understand the genocide's causes and how we design justice responses. Property restitution, not just criminal accountability, may be part of what sustainable peace requires. <span class="src-chip">McNamee 2018</span></p>
+
+      <p>Schimmel (2020) draws attention to the survivors — particularly women — whose needs have been inadequately addressed in both the justice and reconciliation frameworks. Gacaca courts, whatever their merits, did not address the specific harms of mass rape: the children born of rape, the HIV infections, the psychological trauma, and the stigma. Thirty years later, this constituency remains largely invisible in international discussions that focus on the remarkable Rwanda development story. <span class="src-chip">Schimmel 2020</span></p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">Arguments for Stronger International Accountability</div>
+          <ul>
+            <li>The genocide fax of January 11 gave clear advance warning; inaction was a choice <span class="perspective-attr">OAU 2001</span></li>
+            <li>UNAMIR had the mandate and physical capacity to disrupt early killing if authorised <span class="perspective-attr">Sarty 2004</span></li>
+            <li>The word "genocide" was deliberately avoided to prevent legal obligations from triggering <span class="perspective-attr">OAU 2001</span></li>
+            <li>France actively prolonged the war that enabled extremist planning to mature <span class="perspective-attr">OAU 2001</span></li>
+            <li>RTLM's incitement was documented in real time; jamming was discussed and rejected <span class="perspective-attr">Schimmel 2020</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">Arguments That International Intervention Had Limits</div>
+          <ul>
+            <li>After Mogadishu (October 1993), no major Western power would commit ground troops to Africa</li>
+            <li>The Security Council was divided; both US and UK actively opposed reinforcement</li>
+            <li>Speed of killing (100 days) may have outpaced any possible diplomatic mobilisation</li>
+            <li>Post-genocide Rwanda's stability arguably demonstrates that Rwandans resolved their own crisis</li>
+            <li>Intervention doctrine risks being applied selectively based on strategic interests, not humanitarian need</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"The genocide in Rwanda was not the product of ancient hatreds. It was the product of modern politics — specifically, of a government that decided its survival required the elimination of a group of its citizens."</blockquote>
+        <cite>— OAU International Panel, <em>Rwanda: The Preventable Genocide</em> (2001)</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People Directly Connected</div>
+        <div class="topics-grid">
+          <a href="bill-clinton.html" class="topic-card">
+            <span class="topic-type-tag person">person</span>
+            <div class="topic-name">Bill Clinton</div>
+            <div class="topic-preview">Clinton's decision not to intervene — and his explicit refusal to use the word "genocide" — haunted the remainder of his presidency. He later called it his greatest regret.</div>
+            <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg" alt="Bill Clinton"></div>
+          </a>
+          <a href="hillary-clinton.html" class="topic-card">
+            <span class="topic-type-tag person">person</span>
+            <div class="topic-name">Hillary Clinton</div>
+            <div class="topic-preview">As First Lady during 1994, Hillary Clinton was party to the administration's deliberate avoidance of the genocide label — a failure she later acknowledged as indefensible.</div>
+            <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg" alt="Hillary Clinton"></div>
+          </a>
+          <a href="northern-mali-conflict.html" class="topic-card">
+            <span class="topic-type-tag event">event</span>
+            <div class="topic-name">The Northern Mali Conflict</div>
+            <div class="topic-preview">Like Rwanda, the Mali conflict illustrates the intersection of colonial legacies, armed group dynamics, and chronic international failure to prevent mass atrocities in Africa.</div>
+            <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg" alt="Northern Mali Conflict"></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Related Events</div>
+        <div class="topics-grid">
+          <a href="angola-civil-war.html" class="topic-card">
+            <span class="topic-type-tag event">event</span>
+            <div class="topic-name">The Angolan Civil War</div>
+            <div class="topic-preview">Another post-colonial African conflict in which Cold War great powers fuelled mass atrocities with weapons and proxy support — illustrating how external intervention enables internal violence.</div>
+            <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg" alt="Angola Civil War"></div>
+          </a>
+          <a href="september-11.html" class="topic-card">
+            <span class="topic-type-tag event">event</span>
+            <div class="topic-name">September 11, 2001</div>
+            <div class="topic-preview">The US response to 9/11 — willingness to commit massive resources abroad — contrasts starkly with its inaction during the Rwandan genocide seven years earlier, revealing how strategic interest shapes humanitarian response.</div>
+            <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg" alt="September 11"></div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Concepts</div>
+        <div class="topics-grid">
+          <a href="responsibility-to-protect.html" class="topic-card">
+            <span class="topic-type-tag concept">concept</span>
+            <div class="topic-name">Responsibility to Protect</div>
+            <div class="topic-preview">Rwanda is the foundational case for R2P — the doctrine emerged directly from the international community's failure to act on genocide, adopted at the 2005 World Summit.</div>
+            <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="Responsibility to Protect"></div>
+          </a>
+          <a href="realpolitik.html" class="topic-card">
+            <span class="topic-type-tag concept">concept</span>
+            <div class="topic-name">Realpolitik</div>
+            <div class="topic-preview">The decisions of the US, France, and Belgium during the genocide are textbook examples of how great powers calculate strategic interest over humanitarian obligation.</div>
+            <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik"></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Organisation of African Unity (OAU) International Panel of Eminent Personalities.</span>
+          <span class="src-journal"> <em>Rwanda: The Preventable Genocide.</em> OAU, 2001. Chaired by Sir Ketumile Masire.</span>
+          <span class="src-note">The most comprehensive independent inquiry into the genocide's causes and the international community's failure. 24 chapters cover everything from colonial origins to ICTR proceedings. Available at the African Union website. This source is the primary basis for the political and institutional failure narrative in this article.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Schimmel, Noam.</span>
+          <span class="src-journal"> "What Caused the Rwandan Genocide against the Tutsi?" <em>Peace Review</em> 32, no. 3 (2020): 292–301.</span>
+          <span class="src-note">A concise analytical synthesis arguing the genocide was a planned political project, not spontaneous. Draws on scholarship on Belgian colonialism, French complicity, media incitement, and the experience of female survivors. Freely accessible through most university libraries; also available as a pre-print.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">McNamee, Lachlan.</span>
+          <span class="src-journal"> "Mass Resettlement and Political Violence: Evidence from Rwanda." <em>World Politics</em> 70, no. 4 (2018): 595–644.</span>
+          <span class="src-note">A landmark quantitative study linking the post-independence paysannat resettlement scheme to participation in the genocide. Uses prosecution data to demonstrate that settlers' material stake in protecting land allocations helps explain approximately 10% of all genocide perpetration. Challenges purely ethnic-ideology accounts. Available through Cambridge University Press.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Sarty, Roger.</span>
+          <span class="src-journal"> Review of Roméo Dallaire, <em>Shake Hands with the Devil: The Failure of Humanity in Rwanda.</em> <em>International Journal</em> 59, no. 2 (Spring 2004): 519–522.</span>
+          <span class="src-note">A concise critical review of Dallaire's memoirs that confirms the key facts about UNAMIR's underpowering, the genocide fax episode, and the deliberate withdrawal of Belgian forces. Useful as a corroborating secondary synthesis for the military/peacekeeping dimensions.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Upadhyay, Shishir Kumar, and Aniket Mehrotra.</span>
+          <span class="src-journal"> Review essay on post-genocide accountability scholarship. <em>Asian Journal of International Law</em> (2021).</span>
+          <span class="src-note">Surveys legal scholarship on the UNSC's failure to act, the argument that the "Do Not Intervene" position violated international law, and the ICTR's legacy for international criminal justice. Particularly useful on the Nahimana media prosecution and the development of genocide law. Available through Cambridge University Press.</span>
+        </li>
+      </ol>
+    </section>
+
+  </main>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list</div>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin',         desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',           desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',            desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',                desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',            desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',       desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',  desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.', url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',       desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.', url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX on a Kurdish town of 80,000, killing an estimated 5,000 in hours.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',          desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',                   desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',                desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — and planted the seeds of a costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',                desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',             desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik',                 desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person',  title: 'Tony Blair',                  desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Colin Powell',                desc: 'The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.', url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Dick Cheney',                 desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',   title: 'The Iraq War',                desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'person',  title: 'Khalifa Haftar',              desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',    desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                 desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'Democratic Socialism',         desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',   desc: 'Sadat\'s surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.', url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',           desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                   desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'event',   title: 'The Libyan Civil War',        desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',            desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',             desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',            desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.', url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',              desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',             desc: 'The refugee who became America\'s most powerful and most controversial diplomat.', url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',            desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',               desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.', url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',          desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',              desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',          desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.', url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles found.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+    else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+    else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+    else if (e.key==='Escape') { toggleSearch(); return; }
+    items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.width = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+    const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+  });
+  function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+  function toggleSave() {
+    const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+    if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+    else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Northern Mali Conflict — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="event-page">
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type event">Event</span>
+    <button id="saveBtn" class="save-btn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+        <polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/>
+      </svg>
+      Save article
+    </button>
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+      <div id="searchDropdown" class="search-dropdown">
+        <input id="searchInput" class="search-input" placeholder="Search articles…"
+          oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off">
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>Events</span><span class="breadcrumb-sep">›</span>
+      <span>Africa</span><span class="breadcrumb-sep">›</span>
+      <span>The Northern Mali Conflict</span>
+    </div>
+    <div class="hero-region-tag">West Africa / Sahel · 2012–Present</div>
+    <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+      <div style="flex:1;min-width:0;">
+        <h1 style="margin-top:0;">The Northern Mali Conflict</h1>
+        <p class="hero-sub">A sixty-year Tuareg independence struggle merged with jihadist expansion, a military coup, and a French intervention — producing a war that never truly ended and a state that barely exists in half its territory.</p>
+        <div class="hero-meta">
+          <span>~15 min read</span><span>·</span>
+          <span>4 academic sources</span><span>·</span>
+          <span>Last updated June 2026</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg" alt="The Northern Mali Conflict"
+          style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(232,168,56,0.25);display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Body -->
+<div class="outer">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-label">On this page</div>
+    <ul class="sidebar-nav">
+      <li><a href="#facts">Quick Facts</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#figures">Key Figures</a></li>
+      <li><a href="#timeline">Key Events</a></li>
+      <li><a href="#turning">Turning Points</a></li>
+      <li><a href="#matters">Why It Matters</a></li>
+      <li><a href="#debate">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <article>
+
+    <!-- Quick Facts -->
+    <section id="facts">
+      <div class="quick-facts">
+        <div class="quick-facts-label">Quick Facts</div>
+        <div class="qf-item"><div class="qf-label">Started</div><div class="qf-value">January 2012 (armed phase); roots in 1960 independence</div></div>
+        <div class="qf-item"><div class="qf-label">Current Status</div><div class="qf-value">Ongoing — war never ended</div></div>
+        <div class="qf-item"><div class="qf-label">Location</div><div class="qf-value">Northern Mali (Azawad region); spreading across Sahel</div></div>
+        <div class="qf-item"><div class="qf-label">Main Parties</div><div class="qf-value">Malian military, Tuareg movements (MNLA/CMA), JNIM, ISGS, Wagner/Mali junta</div></div>
+        <div class="qf-item"><div class="qf-label">Key External Actors</div><div class="qf-value">France (Operation Serval/Barkhane, 2013–2022), UN (MINUSMA, 2013–2023), Russia/Wagner (2021–present)</div></div>
+        <div class="qf-item"><div class="qf-label">Death Toll</div><div class="qf-value">30,000+ since 2012 (civilians, military, jihadist fighters)</div></div>
+        <div class="qf-item"><div class="qf-label">Displaced</div><div class="qf-value">~350,000 internally displaced; 140,000+ refugees in neighbouring countries</div></div>
+        <div class="qf-item"><div class="qf-label">Coups</div><div class="qf-value">2012, 2020, 2021 — three in nine years</div></div>
+        <div class="qf-item"><div class="qf-label">Tuareg Uprisings</div><div class="qf-value">4 before 2012: 1963–64, 1990–96, 2007–09, 2012</div></div>
+        <div class="qf-item"><div class="qf-label">Governing Body</div><div class="qf-value">Military junta (CNSP/CNT) under Assimi Goïta since 2021</div></div>
+      </div>
+
+      <div class="callout amber" style="margin-top:1.5rem;">
+        <div class="callout-label">Still happening</div>
+        <h4>This conflict has not ended</h4>
+        <p>Unlike many events on this site, the Northern Mali Conflict is ongoing. The Malian government does not control roughly two-thirds of the country's territory. Jihadist groups conduct attacks weekly. A military junta has replaced an elected government and expelled French forces and the UN peacekeeping mission. The situation described in this article continues to develop.</p>
+      </div>
+
+      <div class="stats-grid" style="margin-top:1.5rem;">
+        <div class="stat-card">
+          <div class="stat-card-value">60+</div>
+          <div class="stat-card-label">Years of Tuareg grievances</div>
+          <div class="stat-card-sub">Since independence in 1960</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-value">$100M</div>
+          <div class="stat-card-label">AQIM kidnap revenues</div>
+          <div class="stat-card-sub">Estimated 2003–2012</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-value">2/3</div>
+          <div class="stat-card-label">Of Mali outside state control</div>
+          <div class="stat-card-sub">Northern and central regions</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-value">3</div>
+          <div class="stat-card-label">Military coups since 2012</div>
+          <div class="stat-card-sub">2012, 2020, 2021</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Background -->
+    <section id="background">
+      <h2>Background</h2>
+      <p>When France drew its West African borders in the late nineteenth century, it cut across the Sahara without much attention to who already lived there. The Tuareg — a Berber-speaking, nomadic people who had traded, raided, and governed the central Sahara for centuries — found themselves divided between what would eventually become Mali, Niger, Algeria, Burkina Faso, and Libya. When those countries gained independence, the Tuareg gained very little. The new governments in Bamako and Niamey were dominated by sedentary, southern populations; the Saharan north was distant, poor, and governed almost entirely by neglect. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></p>
+
+      <p>Mali achieved independence from France in September 1960. Within three years, Tuareg in the northern Kidal region had launched the first of what would become four armed uprisings against Bamako. The 1963–64 revolt was crushed militarily. The 1990–96 rebellion ended with a peace agreement (the National Pact) that promised northern autonomy but was poorly implemented. The 2007–09 uprising — the Tuareg Alliance rebellion — was suppressed with Algerian mediation. Each time, the pattern was the same: armed revolt, negotiated peace, failed implementation, accumulated grievance. By 2012, the north's structural marginalization had produced a political culture in which armed rebellion was the only language Bamako reliably heard. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></p>
+
+      <p>Into this volatile situation came two forces that transformed a familiar regional conflict into something far more dangerous. The first was AQIM — Al-Qaeda in the Islamic Maghreb — which had been operating across the Sahel since the early 2000s, financing itself primarily through kidnapping European tourists and aid workers (an estimated $100 million in ransom payments between 2003 and 2012). AQIM embedded itself in northern Mali through strategic marriages into Tuareg families, social service provision — food distribution, basic medical care, dispute resolution — and careful cultivation of local networks that exploited the same state absence that fuelled Tuareg grievances. The second transforming force was the collapse of Libya in 2011. When Gaddafi fell, his stockpiles of weapons — including heavy weapons and surface-to-air missiles — flooded across the Sahara, and thousands of Tuareg who had served as mercenaries in his army returned to Mali armed and battle-hardened. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">1960</div><div class="stat-label">Mali independence from France</div></div>
+        <div class="stat-box"><div class="stat-number">4</div><div class="stat-label">Tuareg uprisings before 2012</div></div>
+        <div class="stat-box"><div class="stat-number">2003</div><div class="stat-label">AQIM begins Sahel kidnapping operations</div></div>
+        <div class="stat-box"><div class="stat-number">2011</div><div class="stat-label">Libya's collapse floods Sahara with weapons</div></div>
+      </div>
+    </section>
+
+    <!-- Key Figures -->
+    <section id="figures">
+      <h2>Key Figures</h2>
+      <div class="figures-grid">
+        <div class="figure-card">
+          <div class="figure-name">Iyad Ag Ghaly</div>
+          <div class="figure-role">Founder, Ansar Dine; Leader, JNIM</div>
+          <div class="figure-desc">The most consequential individual in the Northern Mali conflict — and one of the least understood internationally. Ag Ghaly is himself a Tuareg from the Ifoghas clan of Kidal, who led Tuareg rebellions in the 1990s before radicalising toward Salafist Islam in the 2000s, reportedly influenced by Pakistani Tablighi Jamaat missionaries. His movement, Ansar Dine, provided jihadist legitimacy and AQIM connections to the 2012 rebellion; he later became the founding emir of JNIM, the dominant jihadist coalition, in 2017. He remains at large. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Moussa Ag Assarid</div>
+          <div class="figure-role">MNLA Spokesperson</div>
+          <div class="figure-desc">The public face of the secular Tuareg independence movement, the MNLA (Mouvement National pour la Libération de l'Azawad). Ag Assarid, based partly in France, articulated the Tuareg case for an independent Azawad to international audiences, arguing that sixty years of marginalisation under Bamako justified self-determination. He represents the nationalist strand of the conflict that jihadists ultimately overshadowed.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Amadou Sanogo</div>
+          <div class="figure-role">Coup leader, March 2012</div>
+          <div class="figure-desc">A relatively junior army captain who led the coup that toppled President Amadou Toumani Touré on March 21–22, 2012, claiming the civilian government had mishandled the northern insurgency. The coup backfired spectacularly: instead of strengthening the military's hand, it created a power vacuum in Bamako that accelerated the fall of the north. Sanogo was later charged with complicity in murder and political detentions; his case dragged through Mali's courts for years.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">François Hollande</div>
+          <div class="figure-role">French President, 2012–2017</div>
+          <div class="figure-desc">The French president who authorised Operation Serval in January 2013 after jihadist forces crossed the line between north and south and began advancing toward Bamako. The intervention was broadly welcomed at the time — even by critics of French neo-colonialism in Africa — but the subsequent ten-year mission (Operation Barkhane) became deeply controversial, stretching French resources and ultimately being expelled by the very juntas it had helped protect.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Assimi Goïta</div>
+          <div class="figure-role">Military junta leader; President since 2021</div>
+          <div class="figure-desc">The colonel who led Mali's 2020 coup (ousting President Ibrahim Boubacar Keïta) and the 2021 coup (ousting the transitional president), making him Mali's dominant political figure. Goïta expelled French forces and the UN peacekeeping mission MINUSMA, invited Russian Wagner Group fighters, and has shown no credible timeline for returning to civilian rule. Under his government, jihadist attacks have increased rather than decreased.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Abdelmalek Droukdel</div>
+          <div class="figure-role">AQIM emir; killed 2020</div>
+          <div class="figure-desc">The Algerian leader of AQIM who directed the group's Sahel expansion from the early 2000s until he was killed by French special forces in northern Mali in June 2020. Droukdel oversaw the kidnapping-for-ransom strategy that financed AQIM's growth, the alliance with Tuareg movements, and the 2012 advance across northern Mali. His death — though celebrated by counterterrorism officials — did not significantly weaken JNIM's operational capacity. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline">
+      <h2>Key Events</h2>
+      <div class="timeline">
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">January–April 2012</div>
+              <div class="tl-title">The MNLA Uprising and the Fall of the North</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>On January 17, 2012, the MNLA launched coordinated attacks on Malian army positions in the north, beginning with the garrison at Ménaka. The movement had been formed just months earlier from returning Tuareg fighters from Libya and veterans of the 2007–09 uprising, and was formally committed to a secular, independent state of Azawad — the Tuareg name for northern Mali. Their advance was rapid; the Malian army, poorly paid and poorly equipped, struggled to respond. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></p>
+            <p>The MNLA fought alongside Ansar Dine, Iyad Ag Ghaly's Islamist movement, and elements of AQIM and MUJAO (Movement for Unity and Jihad in West Africa). The alliance was uneasy from the start — the MNLA wanted a secular Tuareg state; Ansar Dine wanted Islamic law — but both wanted Bamako out of the north. On March 21–22, before the north had fully fallen, army captain Amadou Sanogo staged a coup in Bamako, claiming the civilian government was mismanaging the war. The coup produced exactly the opposite of its stated aims: the capital's political chaos created the vacuum that allowed the north to fall within days.</p>
+            <p>By April 1, 2012, the MNLA and its jihadist allies controlled Kidal, Gao, and Timbuktu — the three main northern cities. On April 6, the MNLA declared the independence of Azawad. No country recognised the declaration. Within weeks, the alliance fractured, and jihadists began pushing the MNLA out of the towns it had captured. The Islamist tail was now wagging the Tuareg dog. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></p>
+            <div class="tl-sources">
+              <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">April–December 2012</div>
+              <div class="tl-title">Jihadists Impose Sharia Across the North</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>After pushing the secular MNLA out of Gao and Timbuktu, Ansar Dine and MUJAO established Islamist governance across northern Mali. In Timbuktu — a UNESCO World Heritage site and a city of enormous Islamic scholarly heritage — jihadists imposed strict Sharia law: music and smoking banned, women required to veil, shrines of Muslim saints destroyed as idolatry. Over the following months, armed groups systematically demolished fourteen of Timbuktu's sixteen ancient mausoleums. The International Criminal Court later convicted Ahmad al-Faqi al-Mahdi for these destructions — the first ICC conviction for cultural heritage crimes.</p>
+            <p>The jihadists consolidated social control through a combination of coercion and co-optation. AQIM and its affiliates had spent years building local networks through strategic marriages into Tuareg and Arab families, provision of food and medicine in areas where the Malian state had provided nothing, and control of smuggling routes carrying cigarettes, drugs, and weapons across the Sahara. When they took formal control of northern cities, they were not purely external invaders — they had cultivated genuine local networks, however coercive. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></p>
+            <p>In Bamako, political paralysis continued. The coup government was internationally isolated; ECOWAS (the West African regional bloc) imposed sanctions; a transitional civilian government was nominally installed but the military retained real power. The Malian army could not mount an effective counteroffensive. By the end of 2012, the situation was deteriorating: jihadist fighters began probing positions south of the Niger River, threatening a push toward the capital.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span>
+              <span class="src-chip">ICC (2016)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">January 2013</div>
+              <div class="tl-title">France Intervenes: Operation Serval</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>On January 10, 2013, jihadist columns crossed the line at Konna, the last major town before the southern heartland, and began advancing toward Bamako. Mali's transitional government requested French military intervention the same day. French President François Hollande authorised Operation Serval within hours — a decision that would have been unthinkable in most foreign policy contexts but which Hollande framed as stopping "terrorist" seizure of a sovereign UN member state.</p>
+            <p>French airstrikes and rapid deployment of ground forces halted the jihadist advance almost immediately. French and Malian troops, supported by Chadian forces, then conducted a series of offensives retaking Gao (January 26), Timbuktu (January 28), and Kidal (January 30). Hollande visited Bamako on February 2 to scenes of euphoric public celebration; France was, for a moment, celebrated as a liberator across Mali. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></p>
+            <p>Operation Serval achieved its primary objective of preventing jihadists from seizing southern Mali, but it could not achieve what would have required: destroying JNIM's dispersed networks across a desert territory the size of France. The jihadists melted back into the Sahara and began a sustained insurgency of ambushes, IEDs, and attacks on French, UN, and Malian targets. The "French intervention" that was supposed to last weeks became Operation Barkhane — a nine-year mission that ended not in victory but in French expulsion by a junta that came to power partly through anti-French sentiment.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2013–2020</div>
+              <div class="tl-title">Fragmentation, MINUSMA, and the Algiers Accord</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>The United Nations deployed MINUSMA (Mission Multidimensionnelle Intégrée des Nations Unies pour la Stabilisation du Mali) in July 2013 — one of the most dangerous peacekeeping missions in UN history. MINUSMA ultimately lost 306 personnel to hostile action over its ten-year mandate, making it the deadliest UN peacekeeping mission of the modern era. The mission was mandated to support the peace process and protect civilians, but lacked the mandate and resources for the offensive counterterrorism operations that the situation arguably required.</p>
+            <p>In 2015, under Algerian mediation, the Malian government and Tuareg armed groups signed the Algiers Accord — a peace agreement that promised northern autonomy, Tuareg integration into the national army, and development investment in the north. Implementation was slow, incomplete, and eventually abandoned. JNIM (Jama'at Nusrat al-Islam wal-Muslimin) was formed in 2017, merging AQIM's Sahara branch, Ansar Dine, al-Mourabitoun, and the Macina Liberation Front into a single coordinated jihadist coalition. A rival group, ISGS (the Islamic State in the Greater Sahara, ISIS-affiliated), operated in the Liptako-Gourma tri-border area of Mali, Niger, and Burkina Faso. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></p>
+            <p>As the security situation deteriorated and French forces sustained casualties without visible progress, anti-French sentiment grew in Mali. Protests accused France of prolonging instability for neo-colonial reasons. Russian social media disinformation campaigns amplified these narratives. Ibrahim Boubacar Keïta (IBK), elected president in 2013 and re-elected in 2018, faced massive street protests in 2020 over corruption and economic mismanagement. On August 18, 2020, the military deposed him.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span>
+              <span class="src-chip">UN DPKO (2023)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2020–Present</div>
+              <div class="tl-title">Juntas, Wagner, and a Fracturing State</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>Mali's 2020 coup brought Colonel Assimi Goïta to power. A second coup in May 2021 consolidated his control further after he ousted the transitional government. The junta — formally the CNSP (National Committee for the Salvation of the People) — suspended the transition timeline, expelled French Ambassador Joël Meyer, and in 2022 formally ended Operation Barkhane, requiring France to withdraw its forces after nine years. The junta also ended MINUSMA's mandate in June 2023, with the UN mission completing its withdrawal by the end of the year.</p>
+            <p>In place of French and UN forces, the junta brought in the Wagner Group — Russian private military contractors who had also deployed in Central African Republic, Libya, Sudan, and Mozambique. Wagner fighters have been documented committing serious human rights abuses in Mali, including a massacre of an estimated 500 civilians at Moura in March 2022. The junta denied the abuses and the Russian government denied Wagner involvement. UN investigators and Human Rights Watch documented the killings extensively. <span class="src-chip">Human Rights Watch (2022)</span></p>
+            <p>Today, the situation is arguably worse than when France intervened in 2013. JNIM and ISGS continue to expand southward, attacking markets, villages, and UN convoys. The Tuareg factions, who had nominally aligned with the Algiers Accord, declared a rupture with the agreement in 2023 and resumed fighting Malian army positions. Mali under its junta is internationally isolated from its West African neighbours (ECOWAS imposed sanctions; Mali, Burkina Faso, and Niger formed the Alliance of Sahel States in defiance of regional institutions) and dependent on Russian military support. The state does not control its own territory. The war that began in 2012 has never ended.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Human Rights Watch (2022)</span>
+              <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Turning Points -->
+    <section id="turning">
+      <h2>Turning Points</h2>
+      <div class="turning-points">
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 1</div>
+          <div class="turning-card-title">The March 2012 Coup That Opened the North</div>
+          <p>Captain Sanogo staged his coup in Bamako just as the north was about to fall, claiming the civilian government had mishandled the war. The coup produced the opposite of its intention: political paralysis in Bamako accelerated the military's collapse in the north, and Kidal, Gao, and Timbuktu fell within days. Had the civilian government remained intact, it might have negotiated a diplomatic solution with the MNLA — which, at that point, still controlled the rebellion — before the jihadists displaced it.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 2</div>
+          <div class="turning-card-title">Jihadists Displace the MNLA from Northern Cities</div>
+          <p>After April 2012, MUJAO and Ansar Dine pushed the secular MNLA out of Gao and Timbuktu, taking sole control of northern governance. This was the moment the conflict changed character fundamentally — from a territorial dispute between a national government and an ethnic autonomy movement into a jihadist territorial project. Had the MNLA retained control of the north, a negotiated settlement with Bamako along the lines of the Tuareg National Pact was at least conceivable. With jihadists in control, it was not.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 3</div>
+          <div class="turning-card-title">France's Decision to Stay After Serval (2013)</div>
+          <p>Operation Serval succeeded in its original objective within weeks. The decision to transition to the longer-term Operation Barkhane — a sustained counterterrorism presence across five Sahel countries — proved strategically problematic. France became responsible for a security situation it could not resolve, and the multi-year presence generated anti-French sentiment that the junta successfully mobilised for domestic political support. A faster exit after Serval, with more resources directed at Malian army capacity-building, might have produced a different outcome.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 4</div>
+          <div class="turning-card-title">The Juntas Expel France and the UN (2022–2023)</div>
+          <p>When the junta expelled French forces in 2022 and MINUSMA in 2023, it removed the two main external constraints on both jihadist expansion and its own behaviour. The Wagner Group that replaced French forces had neither the training, the mandate, nor the political accountability of Western forces. The MINUSMA withdrawal removed the main mechanism for civilian protection and peace process monitoring. Both decisions were made by an unelected military government; neither was obviously reversible.</p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"The Tuareg rebellions were not simply ethnic conflicts or terrorist enterprises. They were the product of a structural failure of the Malian state to extend effective governance, services, or legitimacy to its northern territories in six decades of independence."</blockquote>
+        <cite>— Paradela-López &amp; Jima-González, <em>Resource Mobilization, Jihadist Networks and the Northern Mali Conflict</em> (2024)</cite>
+      </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section id="matters">
+      <h2>Why It Matters Today</h2>
+      <p>The Northern Mali Conflict is not an isolated regional crisis. It is the most visible example of a broader Sahel collapse that is reshaping West African politics, refugee flows, European migration policy, and global counterterrorism strategy.</p>
+
+      <div class="matters-grid">
+        <div class="matters-card">
+          <h3>The Sahel Has Become a Jihadist Expansion Zone</h3>
+          <p>JNIM and ISGS have expanded well beyond northern Mali into central Mali, Burkina Faso, and Niger — countries that have also experienced military coups and are struggling to contain jihadist insurgencies. The broader "Sahel crisis" is now the world's fastest-growing jihadist conflict zone by territorial control and civilian deaths.</p>
+          <ul class="matters-subpoints">
+            <li>JNIM's territory has expanded significantly south of its 2012 origin in northern Mali</li>
+            <li>Burkina Faso lost two elected governments to coups (2022) amid jihadist expansion</li>
+            <li>Niger experienced a coup in 2023; its new junta also expelled French forces</li>
+            <li>The Alliance of Sahel States (Mali, Burkina Faso, Niger) is pursuing Russian alignment</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Tuareg Question Has No Answer</h3>
+          <p>Sixty years after independence, the Malian state has not resolved the fundamental question of how northern communities are governed. Each time a peace agreement has been reached — 1992, 2006, 2015 — it has failed to produce genuine autonomy or development. The 2023 breakdown of the Algiers Accord means the conflict between Tuareg movements and the Malian state is again active.</p>
+          <ul class="matters-subpoints">
+            <li>Tuareg armed factions declared the Algiers Accord null in 2023 and resumed attacks</li>
+            <li>Kidal, the historic Tuareg stronghold, was retaken by Malian army and Wagner forces in 2023</li>
+            <li>Tuareg refugees have fled to Niger and Algeria</li>
+            <li>No political negotiation process is currently underway</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Wagner's Africa Template</h3>
+          <p>Mali became one of the most studied deployments of the Wagner Group before its partial reorganisation following the death of Yevgeny Prigozhin in 2023. Wagner's model — offering security services to African juntas in exchange for mining concessions and political influence — has been replicated across the continent. The Moura massacre and subsequent impunity illustrated the accountability vacuum that comes with Russian private military contracting.</p>
+          <ul class="matters-subpoints">
+            <li>Wagner reportedly received gold mining concessions in exchange for security services</li>
+            <li>The Moura massacre (March 2022) killed an estimated 500 civilians; no prosecutions followed</li>
+            <li>Wagner's African operations were partially absorbed into the Russian military after Prigozhin's death</li>
+            <li>France and the EU have designated Wagner's activities in Africa as destabilising</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Migration and European Politics</h3>
+          <p>The displacement produced by the Sahel conflict — and the broader instability it fuels — is one of the main drivers of trans-Saharan migration toward Europe. The collapse of Sahel security arrangements has contributed to European political pressure on migration, with direct effects on EU–Africa relations and European domestic politics.</p>
+          <ul class="matters-subpoints">
+            <li>An estimated 140,000+ Malians remain refugees in neighbouring countries</li>
+            <li>Sahel instability is a significant driver of migration through Libya to Europe</li>
+            <li>EU military training missions in the Sahel have been suspended or ended</li>
+            <li>Migration from West Africa is a contested issue in multiple European elections</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Legacy & Debate -->
+    <section id="debate">
+      <h2>Legacy &amp; Debate</h2>
+      <p>The Northern Mali Conflict challenges almost every framework commonly used to explain African conflicts. It is not simply an ethnic conflict (Tuareg vs. southern Malians), not simply a jihadist insurgency (secular nationalist movements were involved before and alongside Islamist ones), and not simply a failure of French military strategy (it was a failure long before France arrived). The core scholarly debate is about causation: which factor was primary — state failure, jihadist ideology, resource competition, or external intervention?</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Paradela-López &amp; Jima-González</div>
+          <div class="scholar-card-title">— <em>Resource Mobilization, Jihadist Networks and the Northern Mali Conflict</em> (2024)</div>
+          <div class="scholar-card-verdict">Apply Resource Mobilization Theory to explain jihadist expansion: groups like AQIM and Ansar Dine succeeded not because of pure ideology but because they mobilised local resources — finances (kidnapping), social capital (marriages, services), and networks (smuggling routes) — in a space where the state had mobilised nothing. Ideology was a tool of recruitment; resource control was the mechanism of power.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Human Rights Watch / UN Experts</div>
+          <div class="scholar-card-title">— Various reports, 2012–2023</div>
+          <div class="scholar-card-verdict">Documentation of systematic abuses by all parties — including Malian army, Wagner contractors, jihadist groups, and Tuareg factions — shows that the conflict produces civilian harm regardless of which actor controls territory. The junta's post-2020 claim that Russian partnership would improve security is contradicted by documented evidence that civilian deaths increased under Wagner's presence.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Bruce Whitehouse</div>
+          <div class="scholar-card-title">Lehigh University — Research on Malian politics and identity</div>
+          <div class="scholar-card-verdict">The anti-French sentiment that drove the juntas' political legitimacy is not manufactured; it reflects genuine resentment of French dominance that long predates the conflict. But the juntas have exploited legitimate grievances to insulate themselves from accountability. Mali's political crisis is as much about the failure of democratic governance as about security.</div>
+        </div>
+      </div>
+
+      <h3>Was the Tuareg Independence Claim Legitimate?</h3>
+      <p>The most contested political question about the 2012 crisis is whether the MNLA's declaration of Azawad independence had any claim to international legitimacy. The Tuareg case is structurally similar to other secessionist movements that have received varying degrees of international sympathy: a distinct ethnic group with a coherent territorial claim, subjected to sixty years of marginalisation by a centralised post-colonial state that drew borders cutting across their traditional territory. The parallels with the Kurdish case in Iraq, the South Sudanese case, and the Western Saharan case are not accidental. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></p>
+
+      <p>The counter-argument — made by the African Union, ECOWAS, and virtually every UN member state — rests on the principle of territorial integrity: African borders, however arbitrarily drawn, cannot be renegotiated through armed force without opening a Pandora's box of secessionism across the continent's 54 states. This principle has been applied consistently in Africa in ways it has not always been applied elsewhere, and African leaders are generally sincere in their concern that recognising one secessionist movement creates precedents they cannot manage.</p>
+
+      <p>The practical reality is that neither the jihadist takeover of the MNLA's revolt nor the international community's refusal to engage seriously with Tuareg political claims has produced stability. Every peace agreement has failed. The argument that only greater autonomy — whether within Mali or in some form of confederal arrangement — can address the structural roots of the conflict is made by some scholars and is taken seriously by none of the actors currently in power. <span class="src-chip">Paradela-López &amp; Jima-González (2024)</span></p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">The Tuareg Perspective: Legitimate Autonomy Struggle</div>
+          <ul>
+            <li>Four uprisings since 1960 reflect genuine structural marginalisation, not manufactured grievance<span class="perspective-attr">Paradela-López (2024)</span></li>
+            <li>The Malian state has never meaningfully implemented any of its peace agreements with northern communities<span class="perspective-attr">Paradela-López (2024)</span></li>
+            <li>Azawad's territory and population are distinct enough to support a meaningful autonomy claim comparable to recognised cases elsewhere</li>
+            <li>MNLA was a secular, nationalist movement — the jihadist takeover was a hijacking of the original uprising, not its character</li>
+            <li>The Algiers Accord (2015) was signed in good faith and repeatedly violated by Bamako rather than solely by armed groups</li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">The Bamako Perspective: Sovereignty and Territorial Integrity</div>
+          <ul>
+            <li>Armed rebellion against a democratic government — however imperfect — cannot be the mechanism for resolving political grievances in international law</li>
+            <li>The MNLA's alliance with jihadist groups from the outset undermines its claim to be a purely nationalist movement</li>
+            <li>Azawad independence would set precedents across the Sahel affecting multiple states' territorial integrity</li>
+            <li>The Malian state has limited capacity but has attempted multiple peace processes; the failures are shared<span class="perspective-attr">Whitehouse</span></li>
+            <li>Jihadist actors who drove the conflict have no political legitimacy under any framework, including Tuareg ones</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>The conflict also reveals a fundamental tension in international counterterrorism strategy. France spent nine years and significant blood and treasure in the Sahel; the result was not stability but the creation of anti-French sentiment that a series of juntas exploited for domestic legitimacy. The lesson — that military counterterrorism without political solutions addressing state legitimacy does not work — was understood by analysts from the beginning and ignored by policy-makers throughout. The Sahel today is more unstable than in 2012.</p>
+
+      <div class="pull-quote">
+        <blockquote>"The jihadist groups that dominate northern Mali did not appear from outside. They grew in the gap between what the Malian state promised and what it delivered — and in that gap they built schools, hospitals, and courts, while offering a moral framework that spoke to communities the state had ignored."</blockquote>
+        <cite>— Paradela-López &amp; Jima-González, <em>Resource Mobilization, Jihadist Networks and the Northern Mali Conflict</em> (2024)</cite>
+      </div>
+    </section>
+
+    <!-- Connected Topics -->
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People directly connected</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="gaddafi.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg" alt="Muammar Gaddafi">
+            <span class="topic-type-tag person">person</span>
+            <div class="topic-name">Muammar Gaddafi</div>
+            <div class="topic-preview">Gaddafi employed thousands of Tuareg mercenaries in his military. His 2011 fall released them — armed — back into northern Mali, directly triggering the 2012 uprising.</div>
+          </a>
+          <a class="topic-card" href="khalifa-haftar.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg" alt="Khalifa Haftar">
+            <span class="topic-type-tag person">person</span>
+            <div class="topic-name">Khalifa Haftar</div>
+            <div class="topic-preview">Haftar's role in Libya's instability contributed to the weapons and fighter flows that destabilised northern Mali after 2011.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Related Events</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="libyan-civil-war.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg" alt="The Libyan Civil War">
+            <span class="topic-type-tag event">event</span>
+            <div class="topic-name">The Libyan Civil War</div>
+            <div class="topic-preview">Libya's post-Gaddafi collapse was the proximate trigger for the 2012 Mali crisis: weapons flooded south and Tuareg fighters returned armed from Gaddafi's forces.</div>
+          </a>
+          <a class="topic-card" href="arab-spring.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Tahrir_Square_Rally.jpg/960px-Tahrir_Square_Rally.jpg" alt="The Arab Spring">
+            <span class="topic-type-tag event">event</span>
+            <div class="topic-name">The Arab Spring</div>
+            <div class="topic-preview">The Arab Spring toppled Gaddafi, whose fall was the direct precursor to the 2012 Mali crisis, illustrating how regional upheaval creates cascading instability across borders.</div>
+          </a>
+          <a class="topic-card" href="angola-civil-war.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg" alt="The Angolan Civil War">
+            <span class="topic-type-tag event">event</span>
+            <div class="topic-name">The Angolan Civil War</div>
+            <div class="topic-preview">Angola and Mali both illustrate how colonial border-drawing, Cold War and post-Cold War external intervention, and state weakness combine to produce decades-long internal conflicts.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Key Concepts</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="responsibility-to-protect.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="Responsibility to Protect">
+            <span class="topic-type-tag concept">concept</span>
+            <div class="topic-name">Responsibility to Protect</div>
+            <div class="topic-preview">France's 2013 intervention was framed partly in R2P terms; the subsequent junta's expulsion of UN peacekeepers shows the limits of R2P doctrine when host states reject it.</div>
+          </a>
+          <a class="topic-card" href="realpolitik.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik">
+            <span class="topic-type-tag concept">concept</span>
+            <div class="topic-name">Realpolitik</div>
+            <div class="topic-preview">Russia's Wagner deployment in Mali — offering security in exchange for mining rights and political influence — is realpolitik applied to the African security vacuum left by France's withdrawal.</div>
+          </a>
+          <a class="topic-card" href="non-aligned-movement.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg" alt="Non-Aligned Movement">
+            <span class="topic-type-tag concept">concept</span>
+            <div class="topic-name">The Non-Aligned Movement</div>
+            <div class="topic-preview">Mali's shift from a French security partner to a Russian-backed junta illustrates how African states continue to navigate between competing external powers — the modern form of non-alignment.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sources -->
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Paradela-López, Mikel, and Ainhoa Jima-González. <em>Resource Mobilization, Jihadist Networks and the Northern Mali Conflict, 2012–2015.</em></span>
+          <span class="src-journal"> Journal of African Security Studies, 2024.</span>
+          <span class="src-note">Applies Resource Mobilization Theory to explain how AQIM, Ansar Dine, and MUJAO built the social infrastructure — financial, social, and network capital — that enabled their 2012 takeover. Argues that ideological appeal alone cannot explain jihadist success without understanding resource strategies. The primary academic source for this article's analysis of jihadist expansion mechanisms.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Lecocq, Baz, et al. <em>One Hippopotamus and Eight Blind Analysts: A Multivocal Analysis of the 2012 Political Crisis in the Divide Republic of Mali.</em></span>
+          <span class="src-journal"> Review of African Political Economy, 2013.</span>
+          <span class="src-note">A landmark multi-author analysis of the 2012 crisis written by eight Africanist scholars, deliberately including Malian and regional voices. Shows how the crisis looked different from Bamako, from Kidal, from Paris, and from Sahel capitals — an essential corrective to single-narrative accounts. Freely available online.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Human Rights Watch. <em>Mass Atrocities in Moura, Mali: Army and Wagner Group Crimes in March 2022.</em></span>
+          <span class="src-journal"> Human Rights Watch, 2022.</span>
+          <span class="src-note">The most comprehensive investigation of the Moura massacre, drawing on survivor testimony, satellite imagery, and leaked communications. Documents the killing of an estimated 500 civilians and the near-total impunity that followed. Freely available at hrw.org.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">UN Department of Peace Operations. <em>MINUSMA Fact Sheet and Mission Reports.</em></span>
+          <span class="src-journal"> United Nations, 2013–2023.</span>
+          <span class="src-note">The authoritative primary source on MINUSMA's decade-long mission — its mandate, casualty figures, operational challenges, and eventual withdrawal. Freely available through the UN documentation system. Essential for understanding the peacekeeping dimension of the conflict and why the mission was ultimately expelled.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div>
+</div>
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack',  desc: 'Saddam Hussein\'s 1988 poison gas attack on a Kurdish city, the largest chemical weapons attack against a civilian population in history.',  url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',           desc: 'Why oil-rich and mineral-rich countries so often end up poorer, less democratic, and more violent than their neighbours.',  url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'The Arab Spring',              desc: 'The wave of uprisings that swept the Arab world in 2011, toppling four governments and igniting civil wars that still burn today.',  url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',         desc: 'The Egyptian general who led the 2013 coup against the country\'s first elected president and has ruled ever since.',  url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'event',   title: 'The Suez Crisis',              desc: 'The 1956 confrontation that ended British and French dominance in the Middle East and announced the arrival of the American-Soviet bipolar world.',  url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',                  desc: 'The movement that dreamed of uniting Arab nations into a single political bloc — and the reasons it failed.',  url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'September 11, 2001',           desc: 'The Al-Qaeda attacks that killed 2,977 people and launched two decades of American wars across the Middle East and Central Asia.',  url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',                    desc: 'The 1972 break-in and cover-up that destroyed a presidency and permanently changed how Americans think about government power.',  url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',                 desc: 'The 1991 US-led coalition war that reversed Iraq\'s invasion of Kuwait and set the template for post-Cold War military intervention.',  url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',                 desc: 'The 42nd US President who presided over the 1990s boom, signed NAFTA, and left office under the shadow of impeachment.',  url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',              desc: 'Senator, Secretary of State, and two-time presidential candidate who became the first woman nominated for president by a major US party.',  url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik',                  desc: 'The doctrine that states should act on calculated self-interest rather than ideology or morality — and what happens when they do.',  url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person',  title: 'Tony Blair',                   desc: 'The British Prime Minister who modernised Labour, won three elections, and staked his legacy on the Iraq War.',  url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Colin Powell',                 desc: 'The four-star general and Secretary of State who presented the case for Iraq\'s WMDs to the UN — a speech he later called a blot on his record.',  url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Dick Cheney',                  desc: 'The most powerful Vice President in US history, architect of the War on Terror\'s most controversial policies.',  url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',   title: 'The Iraq War',                 desc: 'The 2003 US-led invasion that toppled Saddam Hussein, found no weapons of mass destruction, and unleashed sectarian conflict that reshaped the Middle East.',  url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'concept', title: 'Democratic Socialism',         desc: 'The political tradition that wants economic equality through democratic means rather than revolution — and what distinguishes it from both liberalism and communism.',  url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',    desc: 'The surprise attack that nearly destroyed Israel, triggered the oil embargo that shocked Western economies, and ultimately led to the first Arab-Israeli peace treaty.',  url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',            desc: 'The eight-year war that killed up to a million people, introduced chemical weapons to modern warfare, and ended with neither side gaining anything.',  url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                    desc: 'The pan-Arab nationalist ideology that took power in Iraq and Syria — and what it actually looked like when it governed.',  url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Khalifa Haftar',               desc: 'The Libyan general who fought in Angola for Gaddafi, defected to the CIA, and returned decades later to lead the assault on Tripoli.',  url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',     desc: 'The Cold War coalition of countries that refused to align with either the US or Soviet blocs — and why it largely failed.',  url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                  desc: 'The Egyptian president who crossed the Suez Canal in 1973, flew to Jerusalem in 1977, and was assassinated in 1981.',  url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The UN doctrine that says sovereignty is not a shield against atrocities — and the debates over when the world has an obligation to intervene.',  url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'event',   title: 'The Libyan Civil War',         desc: 'The 2011 NATO-backed uprising that toppled Gaddafi and left Libya divided between rival governments and militias ever since.',  url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',             desc: 'The US-backed campaign of political repression across six South American dictatorships in the 1970s and 80s.',  url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',              desc: 'The Libyan dictator who ruled for 42 years, funded terrorism, tried to build pan-African unity, and was killed by the revolution he had spent his life suppressing.',  url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',             desc: 'The Chilean general who overthrew a democratic government in 1973 and ruled through torture and disappearances for seventeen years.',  url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',               desc: 'The Iraqi dictator whose invasions of Iran and Kuwait, and whose brutal domestic repression, defined Middle Eastern politics for three decades.',  url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',              desc: 'The architect of American realpolitik whose decisions shaped wars and coups from Vietnam to Chile to Angola.',  url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',             desc: 'The Chilean socialist president whose democratic election and violent overthrow became a defining moment of Cold War Latin America.',  url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',                desc: 'The president who opened China, bombed Cambodia, and became the only American president to resign from office.',  url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                 desc: 'America\'s 44th president, whose election broke a historic barrier and whose presidency grappled with the legacy of the wars he inherited.',  url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',           desc: 'The Egyptian leader who nationalised the Suez Canal, championed pan-Arabism, and defined anti-colonial politics for a generation.',  url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',               desc: 'The US president who responded to 9/11 with the War on Terror, invaded Afghanistan and Iraq, and left office with his legacy in ruins.',  url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',           desc: 'The cleric who led Iran\'s 1979 Islamic Revolution and built a theocratic state that remains one of the world\'s most influential — and controversial — political experiments.',  url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+  _searchOpen = !_searchOpen;
+  btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+  if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+}
+function runSearch(q) {
+  const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+  const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES.filter(a =>
+    a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term));
+  _focusIdx = -1;
+  if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+  box.innerHTML = hits.map((a,i) =>
+    `<a class="search-result" href="${a.url}" data-i="${i}">
+       <div class="search-result-top">${a.thumb?`<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">`:''}<span class="topic-type-tag ${a.type}">${a.type}</span>
+       <span class="search-result-title">${a.title}</span></div>
+       <div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items = document.querySelectorAll('.search-result');
+  if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+  else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+  else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+  else if (e.key==='Escape') { toggleSearch(); return; }
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click', e => { if (_searchOpen && !document.querySelector('.search-wrap').contains(e.target)) toggleSearch(); });
+window.addEventListener('scroll', () => {
+  document.getElementById('progressBar').style.width = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+function toggleSave() {
+  const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

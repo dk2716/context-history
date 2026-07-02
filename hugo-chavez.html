@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hugo Chávez — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>People</span><span class="breadcrumb-sep">›</span>
+      <span>Latin America</span><span class="breadcrumb-sep">›</span>
+      <span>Hugo Chávez</span>
+    </div>
+    <div class="hero-person-layout">
+      <div class="hero-avatar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg" alt="Hugo Chávez" style="width:120px;height:120px;object-fit:cover;border-radius:10px;display:block;">
+      </div>
+      <div class="hero-content">
+        <div class="hero-region-tag">Person</div>
+        <h1>Hugo Chávez</h1>
+        <div class="hero-native">Hugo Rafael Chávez Frías</div>
+        <p class="hero-sub">The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela's oil wealth into a revolution — and a dependency.</p>
+        <div class="hero-meta">
+          <span>~16 min read</span><span>·</span>
+          <span>1954–2013</span><span>·</span>
+          <span>Venezuela</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav" id="sidebarNav">
+      <li><a href="#quick-facts">Quick Facts</a></li>
+      <li><a href="#origins">Origins &amp; Rise</a></li>
+      <li><a href="#ideology">Ideology &amp; Vision</a></li>
+      <li><a href="#rule">How He Ruled</a></li>
+      <li><a href="#foreign-policy">Foreign Policy</a></li>
+      <li><a href="#fall">Death &amp; Succession</a></li>
+      <li><a href="#legacy">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+    <div class="sidebar-cta">
+      <strong>Track your reading</strong>
+      Save articles, build a reading list, and see what you've covered.
+      <a href="#" class="sidebar-cta-btn">Create free account →</a>
+    </div>
+  </aside>
+
+  <article>
+
+    <section id="quick-facts">
+      <h2>Quick Facts</h2>
+      <div class="quick-facts">
+        <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Hugo Rafael Chávez Frías</div></div>
+        <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">July 28, 1954 — Sabaneta, Barinas, Venezuela</div></div>
+        <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">March 5, 2013 — Caracas, Venezuela (cancer)</div></div>
+        <div class="qf-item"><div class="qf-label">In office</div><div class="qf-value">February 2, 1999 – March 5, 2013</div></div>
+        <div class="qf-item"><div class="qf-label">Came to power</div><div class="qf-value">Elected December 1998 with 56% of the vote, after failed coup in 1992</div></div>
+        <div class="qf-item"><div class="qf-label">Ideology</div><div class="qf-value">Bolivarianism, 21st Century Socialism, anti-imperialism</div></div>
+        <div class="qf-item"><div class="qf-label">Key act</div><div class="qf-value">New constitution (1999), nationalisation of PDVSA (2003), social Misiones funded by oil</div></div>
+        <div class="qf-item"><div class="qf-label">Successor</div><div class="qf-value">Nicolás Maduro (2013–2026); removed from office January 3, 2026, seized by U.S. military</div></div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-card-value">96.2%</div><div class="stat-card-label">Venezuela's export revenue from oil at peak Chávez era</div></div>
+        <div class="stat-card"><div class="stat-card-value">3.2M</div><div class="stat-card-label">Venezuelans who learned to read in the first literacy mission (2003–2005)</div></div>
+        <div class="stat-card"><div class="stat-card-value">~$1T</div><div class="stat-card-label">Oil revenues managed by Chávez government over 14 years</div></div>
+        <div class="stat-card"><div class="stat-card-value">47hrs</div><div class="stat-card-label">Duration of the April 2002 coup before he was returned to power</div></div>
+      </div>
+    </section>
+
+    <section id="origins">
+      <h2>Origins &amp; Rise</h2>
+      <p>Hugo Chávez grew up poor in the Venezuelan llanos — the flat, hot cattle country of Barinas state, far from the oil wealth and beach clubs of Caracas. His parents were schoolteachers who struggled to feed their six children; Hugo and his brother Adán were raised largely by their grandmother, Rosa Inés, who fed them fruit from mango trees and told them stories about their great-great-grandfather, the nineteenth-century peasant guerrilla Pedro Pérez Delgado. This ancestor, known as "Maisanta," became a totemic figure for Chávez — the idea that revolutionary resistance ran in the blood.</p>
+
+      <p>He entered the Venezuelan Military Academy in 1971, where he found baseball more compelling than geopolitics, eventually training as a paratrooper. The army gave him an education — he devoured Bolívar, Marx, and the dependency theorists — and it gave him an institution. By the 1980s, he had founded a secret cell within the officer corps called the MBR-200: the Movimiento Bolivariano Revolucionario, named for Simón Bolívar and the bicentenary of independence. Venezuela's civilian politicians, he believed, had stolen the republic and delivered its oil wealth to a corrupt oligarchy. The democratic façade, the Pact of Punto Fijo that had rotated power between two parties since 1958, was a lie.</p>
+
+      <p>On February 4, 1992, Chávez led a coup attempt against President Carlos Andrés Pérez. It failed catastrophically: military units elsewhere in the country did not rise as planned, and Chávez was arrested. He was given two minutes of airtime to call on his comrades to stand down. Instead of broadcasting defeat, he turned those two minutes into a launching pad. He said the objectives had not been achieved "por ahora" — for now. Two words. The phrase was heard across Venezuela and transformed him overnight from a failed putschist into a charismatic symbol of opposition to a system that most Venezuelans had already given up on.</p>
+
+      <p>Pérez was impeached in 1993 on corruption charges. Chávez served two years in prison and was pardoned in 1994. He immediately began campaigning for the presidency — the same state power he had tried to seize by force. He won the December 1998 election with 56.2% of the vote against a fractured, discredited establishment. He was 44 years old.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">1992</div><div class="stat-label">Year of failed coup that made him famous</div></div>
+        <div class="stat-box"><div class="stat-number">56.2%</div><div class="stat-label">Share of vote in 1998 election</div></div>
+        <div class="stat-box"><div class="stat-number">2 yrs</div><div class="stat-label">Prison sentence before pardon</div></div>
+        <div class="stat-box"><div class="stat-number">44</div><div class="stat-label">Age when he took office in 1999</div></div>
+      </div>
+    </section>
+
+    <section id="ideology">
+      <h2>Ideology &amp; Vision</h2>
+      <p>Chávez was not a systematic thinker, but he was a powerful synthesiser. He pulled from Simón Bolívar's 19th-century dream of Latin American unity, from Marx's critique of capital, from Fidel Castro's anti-imperialism, and from the liberation theology circulating through Latin American Catholicism. He called the result "Bolivarianism" — later "21st Century Socialism" — and he never fully defined it, which was partly the point. It was a feeling as much as a programme: Venezuela's resources belong to the Venezuelan people, and the United States has spent a century stealing them.</p>
+
+      <div class="ideology-grid">
+        <div class="ideology-card">
+          <div class="ideology-card-title">Anti-Imperialism</div>
+          <p>Chávez framed virtually every policy through the lens of resistance to U.S. hegemony. Washington was "El Imperio" — the Empire — and every act of domestic reform was simultaneously an act of geopolitical defiance. Calling George W. Bush "the Devil" at the UN in 2006 was theatre, but it was also a serious foreign policy statement about the post-9/11 world order.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Bolivarian Unity</div>
+          <p>Chávez idolised Simón Bolívar, who had liberated much of South America from Spanish rule in the early 19th century, and blamed a "Balkanisation" imposed by the U.S. and oligarchs for preventing the continent from becoming a single, powerful bloc. ALBA, his regional alliance, was an attempt to revive that dream on a socialist footing.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Participatory Democracy</div>
+          <p>Chávez was genuinely elected and repeatedly re-elected, and he believed his majority gave him the legitimacy to fundamentally restructure the state. His 1999 constitution created community councils, referenda, and mechanisms for direct popular participation. Critics argued these structures gradually displaced independent institutions rather than supplementing them.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Oil as Liberation</div>
+          <p>"El petróleo es nuestro" — the oil is ours. Chávez saw PDVSA, the state oil company, as the instrument through which Venezuela could finally benefit from its own resources, rather than seeing profits extracted by foreign multinationals and domestic elites. Nationalising control of PDVSA in 2003, after a management strike nearly crippled the economy, was the central economic act of his presidency.</p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"I am not a candidate of the established order. I am a candidate for change, for a profound transformation of Venezuelan society."</blockquote>
+        <cite>Hugo Chávez, 1998 election campaign</cite>
+      </div>
+    </section>
+
+    <section id="rule">
+      <h2>How He Ruled</h2>
+      <p>Chávez governed through a combination of democratic legitimacy, charismatic dominance, institutional reengineering, and selective repression. He won presidential elections in 1998, 2000, and 2012 — and survived a recall referendum in 2004 with 59% of the vote. These were real elections, observed by international monitors. But over time, the rules changed in ways that made it progressively harder to lose them.</p>
+
+      <p>The 1999 constitution was his first and most lasting institutional act. Drafted by a constituent assembly dominated by his allies, it expanded executive powers, extended the presidential term, and created a new unicameral legislature. It also created an independent Supreme Court, but Chávez filled it with loyalists after opposition judges resisted him. The same pattern applied to the National Electoral Council, the attorney general's office, and the military. Institutions that checked executive power were reformed; those that served it were empowered.</p>
+
+      <p>The Misiones — social missions — were the most popular expression of his government. Mission Robinson (literacy), Mission Barrio Adentro (healthcare, with Cuban doctors), Mission Ribas (secondary education), Mission Mercal (subsidised food markets): these programmes channelled oil revenue directly to Venezuela's poorest communities, many of which had never seen a doctor or owned a government-issued ID. Poverty rates fell sharply in the 2000s. Life expectancy rose. Infant mortality dropped. These were real gains, and they explain why Chávez's approval ratings remained high in the barrios even as they collapsed among the middle class.</p>
+
+      <p>The darker side was less discussed but systematically documented. Independent media were squeezed out through licence revocations, regulatory harassment, and libel suits — RCTV, Venezuela's oldest broadcaster, had its licence revoked in 2007. The government's media apparatus, by contrast, expanded massively: Chávez's weekly television programme "Aló Presidente" ran for up to eight hours and was mandatory viewing for state employees. Business figures who backed the 2002 coup were prosecuted; opposition politicians faced spurious criminal charges. By the end of his presidency, Freedom House had downgraded Venezuela from "Partly Free" to "Not Free."</p>
+
+      <div class="callout warning">
+        <div class="callout-label">⚠ Documented Abuse</div>
+        <h4>The RCTV Closure and Press Freedom</h4>
+        <p>In May 2007, the government declined to renew the broadcast licence of RCTV, Venezuela's most-watched television channel, which had supported the 2002 coup. The move was widely condemned by press freedom organisations including Reporters Without Borders and the Committee to Protect Journalists as retaliatory censorship. Chávez replaced the channel's signal with a state network. By 2013, of the major national television channels, all but one were government-aligned or had self-censored into neutrality.</p>
+      </div>
+    </section>
+
+    <section id="foreign-policy">
+      <h2>Foreign Policy</h2>
+      <p>Chávez made Venezuela's foreign policy a projection of his personality and ideology. He built alliances with every government Washington opposed — Cuba, Iran, Belarus, Libya under Gaddafi, Russia — and cultivated them ostentatiously, as much to irritate Washington as to serve Venezuelan interests. Whether this constituted a coherent strategy or expensive provocation was debated among scholars and diplomats for over a decade.</p>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">2001–2004</div>
+            <div class="tl-title">The ALBA Project: Building a Counter-Bloc</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>In December 2001, Chávez proposed the Bolivarian Alternative for the Americas (ALBA) as a direct counter to the U.S.-backed Free Trade Area of the Americas (FTAA). Cuba joined in 2004; Bolivia, Ecuador, Nicaragua, and several Caribbean states followed. ALBA was built around Venezuelan oil subsidies — Petrocaribe, launched in 2005, provided oil to Caribbean states at preferential rates in exchange for goods and services rather than hard currency.</p>
+          <p>This was both genuine solidarity and strategic client-building. Cuba sent tens of thousands of doctors and teachers to Venezuela; in return it received deeply discounted oil that became the lifeline of its economy. Bolivia's Evo Morales nationalised his country's gas industry the same year he joined ALBA, with Chávez's vocal support. Critics argued Chávez was buying influence with borrowed oil money; supporters argued he was building the first genuine alternative to U.S.-dominated hemispheric institutions since the Cold War.</p>
+          <div class="tl-sources"><span class="src-chip">Ellner (2008)</span><span class="src-chip">Wilpert (2007)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">April 2002</div>
+            <div class="tl-title">The Coup That Lasted 47 Hours</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>On April 11, 2002, military officers allied with business and media interests arrested Chávez and declared the constitution dissolved. Pedro Carmona, head of the Venezuelan business federation, was installed as interim president and immediately abolished the National Assembly and the Supreme Court. The Bush administration initially appeared to welcome the coup, with a spokesman stating that Chávez had brought it on himself.</p>
+          <p>Within 47 hours, the coup collapsed. Chávez loyalists in the military refused to recognise the new government; hundreds of thousands of barrio residents descended on Caracas demanding his return; and the Presidential Guard retook the Miraflores palace. Chávez was returned from military detention on April 13. The episode hardened his anti-Americanism and accelerated his consolidation of the military. Declassified U.S. documents later showed American officials had advance knowledge of coup-plotting, though the degree of active support remained disputed.</p>
+          <div class="tl-sources"><span class="src-chip">Golinger (2006)</span><span class="src-chip">U.S. State Dept. docs (2002)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">2003</div>
+            <div class="tl-title">The PDVSA Strike and Oil Recapture</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>From December 2002 to February 2003, opposition leaders and PDVSA management launched a general strike aimed at forcing Chávez from office. Oil production collapsed from 3 million barrels per day to under 200,000. The economy contracted by 27% in the first quarter of 2003.</p>
+          <p>Chávez broke the strike by firing 18,000 PDVSA employees — nearly half the company's workforce — and replacing them with loyalists. From that point, PDVSA became not just an oil company but an instrument of social policy. Revenues were routed directly to the Misiones, bypassing the finance ministry. Critics argued this destroyed PDVSA's technical capacity and sowed the seeds of the later collapse; supporters argued it finally made Venezuelan oil serve Venezuelans. Both were correct.</p>
+          <div class="tl-sources"><span class="src-chip">Corrales &amp; Penfold (2011)</span><span class="src-chip">Mommer (2003)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">2006</div>
+            <div class="tl-title">"The Devil" Speech at the UN</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>On September 20, 2006, one day after George W. Bush addressed the UN General Assembly, Chávez took the same podium and told the assembled world leaders: "Yesterday, the Devil came here. Right here. And it smells of sulphur still today." He crossed himself. The room erupted. His approval ratings jumped in Venezuela. Washington recalled its ambassador for consultations.</p>
+          <p>The speech was theatre, but it was also a precise articulation of Chávez's foreign policy doctrine: the United States was not a flawed democracy but an empire, and naming it as such was an act of liberation. He recommended Noam Chomsky's "Hegemony or Survival" to the assembly — the book immediately topped bestseller lists worldwide. Whether this approach served Venezuelan interests or simply satisfied Chávez's appetite for confrontation was a question his foreign ministry rarely got to answer.</p>
+          <div class="tl-sources"><span class="src-chip">Smilde (2011)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">2007–2012</div>
+            <div class="tl-title">Oil Wealth, FARC Links, and Regional Friction</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Documents recovered from FARC computers seized in a Colombian military raid in 2008 showed Chávez had provided the guerrilla group with at least $300 million. Venezuela denied the documents' authenticity. Relations with Colombia oscillated between rupture and détente — Chávez briefly closed the border in 2010 before a rapprochement under new Colombian president Juan Manuel Santos.</p>
+          <p>By 2012, oil revenues were at record highs and Chávez was funding nearly a dozen allied governments. But the model was already fracturing. PDVSA's production had plateaued, debt was rising, and the social programmes were increasingly financed by borrowing rather than surplus. The architecture of Bolivarian socialism was structurally dependent on oil prices staying above $100 per barrel — a vulnerability that would prove fatal for his successor.</p>
+          <div class="tl-sources"><span class="src-chip">Corrales &amp; Penfold (2011)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="fall">
+      <h2>Death &amp; Succession</h2>
+      <p>In June 2011, Chávez announced from Cuba that he had been treated for a cancerous tumour — a disease he discussed in public with extraordinary intimacy, referencing God, suffering, and his own mortality in his characteristically rambling style. He underwent multiple surgeries and chemotherapy across 2011 and 2012, refusing to appoint a formal deputy or plan a transition.</p>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">October 2012</div>
+            <div class="tl-title">His Last Election</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Chávez won the October 2012 presidential election against opposition candidate Henrique Capriles with 55.1% of the vote — a reduced but still comfortable margin. It was his fourth presidential victory. He was visibly ill during the campaign, thinner and without his characteristic energy. His doctors said they were confident he would recover. He did not.</p>
+          <p>Before leaving for a final round of treatment in Cuba in December 2012, Chávez publicly asked Venezuelans to support Nicolás Maduro if he could not return — a de facto endorsement that had no constitutional basis but carried enormous weight. It was the closest thing to a succession plan he ever offered. He died on March 5, 2013, of respiratory failure linked to his cancer. He was 58 years old.</p>
+          <div class="tl-sources"><span class="src-chip">Neuman (2013, NYT)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">March–April 2013</div>
+            <div class="tl-title">The Maduro Succession</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Nicolás Maduro, Chávez's foreign minister and chosen successor, won a snap presidential election in April 2013 by fewer than 1.5 percentage points — the narrowest margin in Venezuelan democratic history. The result was disputed by the opposition, and independent observers noted irregularities, but the electoral council certified Maduro's victory.</p>
+          <p>What followed was the unravelling of everything Chávez had built. Oil prices collapsed after 2014. PDVSA's technical degradation meant Venezuela couldn't even benefit from the prices it did receive. Hyperinflation set in, medicine disappeared from hospitals, and three million Venezuelans emigrated by 2019. Maduro blamed U.S. sanctions; economists pointed to structural problems inherited from the Chávez era — the monochromatic oil dependency, the price controls that destroyed private agriculture, and the debt accumulated during the Misiones boom.</p>
+          <p>On January 3, 2026, Maduro was forcibly removed from office and seized by the U.S. military — an extraordinary act of extraterritorial intervention that brought the Bolivarian project to an end through the same kind of external force Chávez had spent his entire political life warning about. For supporters of Chávez's legacy, the manner of Maduro's removal vindicated everything Chávez had said about American imperialism in Latin America. For critics, it was the final confirmation that the institutional degradation of the Chávez years had left Venezuela with no internal mechanism — no courts, no legislature, no civil society — capable of producing a democratic transition on its own terms.</p>
+          <div class="tl-sources"><span class="src-chip">Corrales (2020)</span><span class="src-chip">Hausmann &amp; Rodríguez (2014)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="legacy">
+      <h2>Legacy &amp; Debate</h2>
+      <p>Few 21st-century leaders divide historians and economists as sharply as Hugo Chávez. The same fourteen-year presidency that produced the sharpest reduction in Venezuelan poverty since the 1970s also produced the institutional erosion that made the post-2013 catastrophe possible. Whether the gains were real, sustainable, or real but unsustainable — and who bears responsibility for what came after — drives a genuine scholarly argument that has not resolved.</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Steve Ellner</div>
+          <div class="scholar-card-title">Universidad de Oriente, Venezuela — <em>Rethinking Venezuelan Politics</em> (2008)</div>
+          <div class="scholar-card-verdict">Argues Chávez represented a genuine mass political transformation that empowered historically excluded populations. The social missions were not mere clientelism but structural investments in human capital. The institutions he built were imperfect but real.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Moisés Naím &amp; Francisco Toro</div>
+          <div class="scholar-card-title">Carnegie Endowment / Venezuelan commentators — multiple works</div>
+          <div class="scholar-card-verdict">Argue Chávez deliberately hollowed out independent institutions — judiciary, press, civil society — to create a system of competitive authoritarianism in which elections existed but accountability did not. The humanitarian crisis under Maduro was not an accident but the logical conclusion of the model.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Javier Corrales &amp; Michael Penfold</div>
+          <div class="scholar-card-title">Amherst College / CAF — <em>Dragon in the Tropics</em> (2011)</div>
+          <div class="scholar-card-verdict">Frame Chávez as a "competitive authoritarian" — genuinely popular, genuinely elected, but systematically dismantling the guardrails that would have constrained him. The social gains were real; so was the institutional damage. The question is whether the two were separable.</div>
+        </div>
+      </div>
+
+      <h3>Did the Misiones Actually Work?</h3>
+      <p>The social missions are the most contested element of Chávez's record, and the argument has become genuinely technical. Poverty did fall: Venezuela's poverty rate dropped from 49% in 1999 to 27% by 2007, according to government data, with the sharpest declines between 2003 and 2007 when oil prices were rising fast. Independent economists broadly confirm the direction, if not always the magnitude. Life expectancy rose from 72.4 to 74.4 years between 1999 and 2011. Infant mortality fell from 21 to 13.4 per thousand live births. These numbers are real.</p>
+      <p>The debate is about mechanism and durability. Critics argue the gains were almost entirely a function of oil prices — that when crude went from $10 per barrel in 1998 to over $100 after 2007, any government would have seen poverty fall. The missions created parallel service structures (Cuban doctors in barrios) rather than reforming the broken public hospital system — and when oil money dried up, those parallel structures collapsed too. Defenders respond that even if the gains were oil-dependent, they were used to build genuine human capacity: a literate population, immunised children, and three million Venezuelans with identity documents they had never had before.</p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">The Progressive Case</div>
+          <ul>
+            <li>Poverty rate halved in a decade — 49% to 27% between 1999 and 2007 <span class="perspective-attr">ECLAC data</span></li>
+            <li>Venezuela led Latin America in reducing inequality (Gini) during 2003–2008 <span class="perspective-attr">World Bank</span></li>
+            <li>Barrio Adentro placed doctors in communities that had never had healthcare access <span class="perspective-attr">PAHO report</span></li>
+            <li>3.2 million adults gained literacy through Mission Robinson <span class="perspective-attr">Venezuelan govt / UNESCO</span></li>
+            <li>Survived a U.S.-supported coup in 2002 and continued to win free elections <span class="perspective-attr">Carter Center observations</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">The Critical Case</div>
+          <ul>
+            <li>PDVSA's production capacity fell from 3.5M to under 2.5M bbl/day during his presidency despite $1T in revenues <span class="perspective-attr">Hausmann &amp; Rodríguez (2014)</span></li>
+            <li>Freedom House downgraded Venezuela from "Partly Free" to "Not Free" by 2012 <span class="perspective-attr">Freedom House</span></li>
+            <li>RCTV closure and press harassment left no independent national broadcast media <span class="perspective-attr">CPJ, RSF</span></li>
+            <li>Supreme Court packed with loyalists after 2004 re-election; judicial independence effectively ended <span class="perspective-attr">HRW</span></li>
+            <li>Economic policy (price controls, currency controls) destroyed domestic agricultural and industrial production <span class="perspective-attr">Corrales &amp; Penfold (2011)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p>The fairest synthesis is probably this: Chávez delivered real material gains to real people who had been ignored for generations, and those gains were partly genuine and partly ephemeral — oil-funded parallel structures rather than reformed institutions. The institutional damage — to the judiciary, the press, the military's independence, the culture of public accountability — was also real, and it was structural. Maduro inherited both the gains and the damage. When oil prices collapsed, the gains evaporated and the damage remained. A counterfactual Venezuela without Chávez's institutional erosion might have absorbed the oil price shock. The Venezuela he actually built could not.</p>
+
+      <div class="pull-quote">
+        <blockquote>"He was not a dictator in the Latin American tradition of men who take power by force and kill their opponents en masse. He was something newer and more complicated: a leader who was genuinely loved by the poor, genuinely elected by the majority, and who genuinely dismantled the institutions that might have survived him."</blockquote>
+        <cite>Javier Corrales, Amherst College</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People directly connected</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="gaddafi.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg" alt="Muammar Gaddafi">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Muammar Gaddafi</div>
+            <div class="topic-preview">Fellow anti-American petro-state leader and Chávez ally; their deaths within two years of each other marked the end of an era of populist oil nationalism.</div>
+          </a>
+          <a class="topic-card" href="henry-kissinger.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg" alt="Henry Kissinger">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Henry Kissinger</div>
+            <div class="topic-preview">The architect of U.S. interventionism in Latin America; Chávez viewed Kissinger's Cold War record — including Chile 1973 — as the template for what Washington was trying to do in Venezuela.</div>
+          </a>
+          <a class="topic-card" href="salvador-allende.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Salvador_Allende%2C_President_of_Chile%2C_gtfy.00154.jpg" alt="Salvador Allende">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Salvador Allende</div>
+            <div class="topic-preview">The democratic socialist Chilean president overthrown in 1973; Chávez held him up as proof that Washington would destroy any Latin American left government it could not control, and as the martyr his own project was meant to avenge.</div>
+          </a>
+          <a class="topic-card" href="richard-nixon.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png" alt="Richard Nixon">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Richard Nixon</div>
+            <div class="topic-preview">Nixon's approval of the 1973 Chilean coup was the founding text of Chávez's worldview; the lesson was that the U.S. would always side with capital against any Latin American socialist government.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Related Events</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="operation-condor.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Operation_Condor_participants.svg/960px-Operation_Condor_participants.svg.png" alt="Operation Condor">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">Operation Condor</div>
+            <div class="topic-preview">The U.S.-backed transnational assassination network that killed leftists across South America in the 1970s — the historical backdrop against which Chávez understood every U.S. action toward Venezuela.</div>
+          </a>
+          <a class="topic-card" href="angola-civil-war.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg" alt="The Angolan Civil War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Angolan Civil War</div>
+            <div class="topic-preview">Cuba's military intervention in Angola was a formative episode in the Castro-Chávez relationship; Chávez's alliance with Havana drew directly on the solidarity Cuba had shown the Global South during the Cold War.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Key Concepts</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="democratic-socialism.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg" alt="Democratic Socialism">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Democratic Socialism</div>
+            <div class="topic-preview">Chávez's "21st Century Socialism" was the most ambitious attempt since Allende to build a socialist economy through electoral means — and its collapse reignited every debate about whether the two can coexist.</div>
+          </a>
+          <a class="topic-card" href="resource-curse.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg" alt="The Resource Curse">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">The Resource Curse</div>
+            <div class="topic-preview">Venezuela is the most dramatic modern case study: a country with the world's largest proven oil reserves that became dependent on oil for 96% of export revenue, then collapsed when prices fell. Chávez's policies accelerated the dependency even as they distributed its profits.</div>
+          </a>
+          <a class="topic-card" href="realpolitik.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Realpolitik</div>
+            <div class="topic-preview">Chávez rhetorically rejected realpolitik in favour of solidarity and ideology, but his use of Petrocaribe — oil discounts as instruments of political influence — was a textbook example of exactly that doctrine.</div>
+          </a>
+          <a class="topic-card" href="non-aligned-movement.html">
+            <img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg" alt="The Non-Aligned Movement">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">The Non-Aligned Movement</div>
+            <div class="topic-preview">Chávez positioned ALBA as a successor to the Non-Aligned Movement's original spirit — a genuine third way outside U.S. hegemony — though critics noted his bloc was no less ideologically aligned than those it opposed.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Steve Ellner, <em>Rethinking Venezuelan Politics: Class, Conflict and the Chávez Phenomenon</em></span> — <span class="src-journal">Lynne Rienner Publishers, 2008</span><br>
+          <em class="src-note">A sympathetic but serious academic treatment of Chávez's political coalitions and the social base of Bolivarianism. Ellner argues the movement represented a genuine rupture with Venezuela's Puntofijista order rather than mere populism.</em>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Javier Corrales &amp; Michael Penfold, <em>Dragon in the Tropics: Hugo Chávez and the Political Economy of Revolution in Venezuela</em></span> — <span class="src-journal">Brookings Institution Press, 2011</span><br>
+          <em class="src-note">The most rigorous political economy analysis of the Chávez era. Corrales and Penfold develop the "competitive authoritarian" framework that has since become the standard academic term for hybrid regimes like Chávez's. Freely available through university libraries.</em>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Gregory Wilpert, <em>Changing Venezuela by Taking Power: The History and Policies of the Chávez Government</em></span> — <span class="src-journal">Verso, 2007</span><br>
+          <em class="src-note">Written by an American journalist who lived in Venezuela for a decade, this is the most detailed account of Chávez's domestic policies — the missions, the land reform, the constitutional changes. More sympathetic than most English-language accounts.</em>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Eva Golinger, <em>The Chávez Code: Cracking U.S. Intervention in Venezuela</em></span> — <span class="src-journal">Olive Branch Press, 2006</span><br>
+          <em class="src-note">Uses declassified U.S. documents to detail American funding of Venezuelan opposition groups before and after the 2002 coup. Golinger is a Chávez partisan, so the framing requires scrutiny, but the documents themselves are primary sources worth reading.</em>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Ricardo Hausmann &amp; Francisco Rodríguez (eds.), <em>Venezuela Before Chávez: Anatomy of an Economic Collapse</em></span> — <span class="src-journal">Penn State University Press, 2014</span><br>
+          <em class="src-note">A collection of economic analyses arguing that Venezuela's structural weaknesses — oil dependency, weak institutions, low private investment — predated Chávez but were deepened by his policies. Essential counterweight to accounts focused solely on U.S. sanctions.</em>
+        </li>
+        <li>
+          <span class="src-num">6</span>
+          <span class="src-title">David Smilde &amp; Daniel Hellinger (eds.), <em>Venezuela's Bolivarian Democracy: Participation, Politics, and Culture under Chávez</em></span> — <span class="src-journal">Duke University Press, 2011</span><br>
+          <em class="src-note">A multi-author volume examining the cultural and participatory dimensions of Bolivarianism — the community councils, the barrio mobilisations, the new forms of popular politics that Chávez's government both cultivated and instrumentalised.</em>
+        </li>
+        <li>
+          <span class="src-num">7</span>
+          <span class="src-title">Human Rights Watch, <em>A Decade Under Chávez: Political Intolerance and Lost Opportunities for Advancing Human Rights in Venezuela</em></span> — <span class="src-journal">Human Rights Watch, 2008</span><br>
+          <em class="src-note">Documents judicial packing, media restrictions, and political discrimination during the first decade of Chávez's rule. Freely available at hrw.org. Provides the human rights record that sympathetic accounts of the Misiones often omit.</em>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div><!-- outer -->
+</div><!-- page-wrap -->
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'The Arab Spring',             desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',        desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'event',   title: 'The Suez Crisis',             desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',                 desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'September 11, 2001',          desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',                   desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',                desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',                desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',             desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik',                 desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person',  title: 'Tony Blair',                  desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Colin Powell',                desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Dick Cheney',                 desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',   title: 'The Iraq War',                desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'concept', title: 'Democratic Socialism',        desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',   desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',           desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                   desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Khalifa Haftar',              desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',    desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                 desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'event',   title: 'The Libyan Civil War',        desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',            desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',             desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',            desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',              desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',             desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',            desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',               desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',          desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',              desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',          desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn=document.getElementById('searchIconBtn'),dd=document.getElementById('searchDropdown'),inp=document.getElementById('searchInput');
+  _searchOpen=!_searchOpen; btn.classList.toggle('active',_searchOpen); dd.classList.toggle('open',_searchOpen);
+  if(_searchOpen){inp.focus();runSearch('');}else{inp.value='';_focusIdx=-1;}
+}
+function runSearch(q) {
+  const box=document.getElementById('searchResults'),term=q.trim().toLowerCase();
+  const seen=new Set();
+  const all=CONTEXT_ARTICLES.filter(a=>{if(seen.has(a.url))return false;seen.add(a.url);return true;});
+  const hits=term===''?all:all.filter(a=>a.title.toLowerCase().includes(term)||a.desc.toLowerCase().includes(term)||a.type.includes(term));
+  _focusIdx=-1;
+  if(!hits.length){box.innerHTML='<div class="search-empty">No articles yet — more coming soon.</div>';return;}
+  box.innerHTML=hits.map((a,i)=>`<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb?`<img src="${a.thumb}" style="width:28px;height:28px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-right:6px;">`:''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='ArrowDown'){e.preventDefault();_focusIdx=Math.min(_focusIdx+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();_focusIdx=Math.max(_focusIdx-1,0);}
+  else if(e.key==='Enter'&&_focusIdx>=0){items[_focusIdx].click();return;}
+  else if(e.key==='Escape'){toggleSearch();return;}
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click', e => { if (_searchOpen && !document.querySelector('.search-wrap').contains(e.target)) toggleSearch(); });
+window.addEventListener('scroll', () => {
+  document.getElementById('progressBar').style.width = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+function toggleSave() {
+  const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

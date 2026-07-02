@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wagner Group — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="concept-page">
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Concept</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Concepts</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Security &amp; Conflict</a><span class="breadcrumb-sep">›</span>
+        <span>The Wagner Group</span>
+      </div>
+      <div class="hero-region-tag">Russian Paramilitary · Founded 2014 · Succeeded by Africa Corps 2023</div>
+      <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+        <div style="flex:1;min-width:0;">
+          <h1 style="margin-top:0;">The Wagner Group</h1>
+          <p class="hero-sub">The GRU-backed private army that fought on three continents, recruited convicts from Russian prisons, massacred civilians in Mali, and briefly seized a major Russian city — before its commander died in a suspicious plane crash and the Kremlin absorbed what remained.</p>
+          <div class="hero-meta">
+            <span>~22 min read</span><span>·</span>
+            <span>5 academic sources</span><span>·</span>
+            <span>Last updated June 2026</span>
+          </div>
+        </div>
+        <div style="flex-shrink:0;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png" alt="Wagner Group fighters in Belarus"
+            style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(61,186,126,0.25);display:block;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#what-is">What Is Wagner?</a></li>
+        <li><a href="#origins">Origins &amp; Structure</a></li>
+        <li><a href="#pillars">The Wagner Model</a></li>
+        <li><a href="#operations">Operations</a></li>
+        <li><a href="#mutiny">The Mutiny</a></li>
+        <li><a href="#africa-corps">Africa Corps</a></li>
+        <li><a href="#matters">Why It Matters</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="what-is">
+        <h2>What Is the Wagner Group?</h2>
+
+        <p>The Wagner Group was Russia's most consequential private military company — a force that, at its peak, deployed roughly 50,000 fighters across Ukraine, Syria, Libya, the Central African Republic, Sudan, Mali, Burkina Faso, and Niger. It was founded in the shadows of Russia's 2014 annexation of Crimea, financed by Kremlin-linked caterer Yevgeny Prigozhin, commanded by former GRU colonel Dmitry Utkin, and connected to Russian military intelligence in ways that the Russian government spent nearly a decade denying. Its legal status was paradoxical: private military companies are explicitly illegal under Articles 208 and 359 of the Russian Criminal Code, yet Wagner operated with Russian state aircraft, intelligence support, and billions in state contracts. It only formally registered — as "PMC Wagner Center" — in December 2022, eight years after its founding.</p>
+
+        <p>But calling Wagner a "private military company" undersells what it was. Academic scholars have proposed more precise framings: Pokalova calls it a "quasi-state agent of influence," arguing that Wagner operated not merely as a military contractor but as a complete foreign policy package — combining security services, resource extraction, election meddling, diplomatic brokering, and information operations into a single deployable system. Marten describes it as a "semi-state security force." Dörfler frames the arrangement as a "PMC–state relation" of mutual dependence rather than simple hierarchy. What all these framings share is the recognition that Wagner was neither a true private actor nor a standard state military — it occupied a deliberately constructed grey zone that served Russian geopolitical interests precisely because it was deniable. <span class="src-chip">Dörfler (2025)</span><span class="src-chip">Pokalova (2026)</span></p>
+
+        <p>On June 23–24, 2023, Wagner's fighters seized Rostov-on-Don and advanced to within 200 kilometres of Moscow in an armed mutiny against the Russian military leadership — the most serious domestic challenge to Vladimir Putin's authority in more than two decades. The mutiny ended with Prigozhin in exile in Belarus. Sixty-three days later, his plane crashed in Tver Oblast. All ten aboard were killed. What Wagner was doing ceased; what Wagner had built continued — absorbed, rebranded, and redistributed. The successor organisation, Africa Corps, now operates with 70–80% Wagner personnel under closer Ministry of Defence supervision.</p>
+
+        <div class="callout concept">
+          <div class="callout-label">The Legal Paradox</div>
+          <h4>How a banned organisation fought on three continents</h4>
+          <p>Russia's criminal code has prohibited mercenary activity since 1996. Yet Wagner recruited openly in Russian cities, trained at facilities in the Krasnodar region, flew on Russian military transport aircraft, and received confirmed state payments of at least $940 million in its first year of full operations in Ukraine. The solution was creative accounting of sovereignty: Putin, when asked directly in September 2022, confirmed the payments but insisted Wagner was a "private company" — simultaneously acknowledging and distancing in the same sentence.</p>
+        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Structure</h2>
+
+        <p>Wagner's roots run into the GRU — Russia's military intelligence directorate — and specifically into earlier attempts to build a deniable special operations capacity. The Slavonic Corps, a short-lived PMC that deployed disastrously to Syria in 2013, provided the institutional lesson: a private force needed better organisation, better funding, and a leadership structure that could actually command in the field. Dmitry Utkin provided the command structure. A former Spetsnaz officer and GRU colonel with SS tattoos and a callsign — "Wagner," after Richard Wagner, the composer Adolf Hitler admired — Utkin had served in the Moran Security Group and had the combat experience and GRU connections the project needed. Yevgeny Prigozhin provided the money and the political access. <span class="src-chip">Dörfler (2025)</span></p>
+
+        <p>Wagner's first deployment was Crimea in early 2014, where its fighters served as the "little green men" who helped secure the peninsula before the formal annexation. From there it moved to the Donbas, then Syria, then Africa. The funding model evolved in parallel: in Russia and Ukraine, it was sustained largely by Prigozhin's Concord Catering contracts — billions in state payments for military canteen and school lunch services, which Prigozhin recycled into operational costs. In Africa, a complementary model emerged: Wagner would provide security services to governments in exchange for mineral concessions. Gold in Sudan and the CAR; oil in Libya; diamonds in the CAR. Putin later confirmed total Wagner financing of approximately $940 million in the first year of the full Ukraine invasion, and outside analysts have estimated cumulative revenues since 2011 at up to $20 billion. <span class="src-chip">Dörfler (2025)</span><span class="src-chip">Pokalova (2026)</span></p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">2014</div><div class="stat-label">First deployment (Crimea)</div></div>
+          <div class="stat-box"><div class="stat-number">50,000</div><div class="stat-label">Peak fighters in Ukraine (10k contractors + 40k convicts)</div></div>
+          <div class="stat-box"><div class="stat-number">$940M</div><div class="stat-label">Confirmed state payment (Ukraine, year one)</div></div>
+          <div class="stat-box"><div class="stat-number">8</div><div class="stat-label">African countries with documented Wagner presence</div></div>
+        </div>
+      </section>
+
+      <section id="pillars">
+        <h2>The Wagner Model: Four Interlocking Functions</h2>
+
+        <p>Wagner was effective because it combined four capabilities that conventional state actors struggle to deploy simultaneously and deniably. Each reinforced the others — the security arm enabled the resource extraction; the information operations created political conditions for invitations; the quasi-diplomatic function provided cover and contracts. Understanding the model explains both Wagner's reach and its limits.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Military &amp; Security</div>
+            <p>Ground combat operations, presidential guard training, counter-insurgency, and direct assault. In Ukraine, attritional urban warfare at Bakhmut. In Africa, helicopter-borne assaults, oil field seizure, and embedded combat. Wagner compensated for small numbers (~5,000 maximum in any single African theatre) by leveraging Russian air power — an arrangement that broke down catastrophically at the 2018 Battle of Khasham in Syria, when ~200 Wagner fighters were killed without air cover.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Resource Extraction</div>
+            <p>Front companies — Lobaye Invest and Sewa Security Services in the CAR; M Invest and Meroe Gold in Sudan; unnamed entities in Libya — held mining concessions as payment for security services. Gold, diamonds, and oil extracted in conflict zones were sold through channels that circumvented international sanctions. The U.S. Treasury designated Wagner a "significant transnational criminal organisation" in January 2023 partly for this reason.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Information Operations</div>
+            <p>Prigozhin also ran the Internet Research Agency, the Saint Petersburg "troll farm" that interfered in the 2016 U.S. presidential election. In Africa, the same infrastructure drove social media disinformation campaigns targeting French military presence in Mali, supporting anti-French sentiment that eventually led to France's expulsion and Wagner's invitation in. Wagner also operated Lengo Songo radio in the CAR and social media campaigns across five African countries.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Quasi-Diplomatic Brokering</div>
+            <p>Wagner served as a peace broker in the CAR, with Prigozhin personally brokering the Khartoum Agreement (February 6, 2019) between the government and fourteen armed factions — burnishing Russia's image as a peace-maker on the continent while securing diamond and gold concessions. Wagner's Valery Zakharov served as national security advisor to President Touadera; Wagner operatives helped remove CAR's presidential term limits. The line between security contractor and kingmaker was deliberately blurred.</p>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <div class="callout-label">Human Rights Record</div>
+          <h4>Documented atrocities across multiple theatres</h4>
+          <p>Human Rights Watch documented beatings, torture, and summary executions in the CAR. The March 2022 Moura massacre in Mali — a five-day operation in which Wagner and Malian forces arrived by helicopter and killed approximately 500 civilians — is the single largest documented atrocity. In Libya, Wagner was accused of using chemical weapons, planting landmines in civilian areas, and killing civilians. In Sudan, Wagner ran anti-democratic disinformation campaigns to suppress pro-democracy movements. Academic analysis found that 71% of all Wagner involvement in Mali was associated with incidents of civilian targeting. The U.S. Treasury designated Wagner as a "significant transnational criminal organization" in January 2023.</p>
+        </div>
+      </section>
+
+      <section id="operations">
+        <h2>Operations: The Deployments in Detail</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2014–2021 · Ukraine &amp; Syria</div>
+              <div class="tl-title">The First Years: Eastern Europe and the Levant</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>Wagner's career began in the Donbas in 2014, supporting separatist forces in eastern Ukraine following the annexation of Crimea — a deployment that gave it combat experience, established its relationship with GRU logistics, and allowed it to recruit from existing special operations networks. From 2015, it was simultaneously operating in Syria, where Russian Khmeimim Air Base served as its unofficial headquarters and Russian air power served as the force multiplier that made small numbers viable. At its Syrian peak, approximately 2,500 Wagner fighters operated in the country. <span class="src-chip">Spearin (2026)</span></p>
+            <p>The defining moment of the Syrian deployment was the Battle of Khasham on February 7, 2018. A column of approximately 500 Wagner fighters and Syrian allies advanced on the Conoco oil field in Deir ez-Zor without air coordination — and were met by U.S. airstrikes and artillery. Up to 200 Wagner fighters died. The Russian government denied any Russian nationals were involved; families received no notification. The battle exposed the model's Achilles heel: Wagner without Russian air cover was conventional light infantry that could be destroyed by a technologically superior opponent. <span class="src-chip">Spearin (2026)</span></p>
+            <div class="tl-sources"><span class="src-chip">Dörfler (2025)</span><span class="src-chip">Spearin (2026)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2018–Ongoing · Libya</div>
+              <div class="tl-title">Libya: Oil Fields, Unmarked Jets, and the Haftar Alliance</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>Wagner arrived in Libya in October 2018, deploying between 800 and 2,000 fighters to support Khalifa Haftar's Libyan National Army against the UN-recognised Government of National Accord. The deployment featured direct combat — participation in the April 2019 Tripoli offensive — as well as resource seizure: by mid-2020, Wagner controlled the Sharara oil field and several others. Russia supplied at least 13 unmarked MiG-29A and Su-24 jets to Haftar's forces from bases at Sirte, al-Jufra, and Brak al-Shati. <span class="src-chip">Pokalova (2026)</span><span class="src-chip">Spearin (2026)</span></p>
+            <p>Wagner was also implicated in election meddling — operating an influence campaign around Saif al-Islam Gaddafi's political rehabilitation — and in what the EU characterised as grave violations of human rights, including the suspected use of chemical weapons, the planting of landmines in civilian areas of Tripoli, and the killing of civilians. Prigozhin was personally sanctioned by the EU in 2020 for these activities. Russian-backed forces were also confronted by Turkish-operated TB2 Bayraktar drones, which destroyed several Russian-supplied jets — demonstrating the limits of the air superiority model. <span class="src-chip">Pokalova (2026)</span></p>
+            <div class="tl-sources"><span class="src-chip">Pokalova (2026)</span><span class="src-chip">Spearin (2026)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2018–Ongoing · Central African Republic</div>
+              <div class="tl-title">CAR: Diamonds, Presidential Guards, and the Khartoum Deal</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>The Central African Republic became Wagner's most complete expression of its integrated model. Arriving in 2018, Wagner established Sewa Security Services to provide the presidential guard and combat training for CAR army units; Lobaye Invest to hold diamond and gold mining concessions; and the Lengo Songo radio station to broadcast pro-Russian and pro-government content. A Russian national, Valery Zakharov, became President Touadera's national security advisor. Wagner advisors helped Touadera navigate the process of removing term limits — a constitutional change that, without Wagner's protection, he may not have survived to implement. <span class="src-chip">Pokalova (2026)</span></p>
+            <p>The reported number of Wagner fighters in the CAR varied enormously — between 800 and 5,000 across different periods — partly reflecting the rotation cycle and partly the difficulty of distinguishing Wagner operatives from other Russian nationals present in the country. Human Rights Watch documented systematic abuses: beatings, torture, and summary executions of civilians suspected of rebel ties. Prigozhin negotiated the Khartoum Agreement in February 2019, brokering peace between the government and fourteen armed groups — a deal that bought time for the government while consolidating Wagner's position as an indispensable actor. Three Russian journalists who travelled to the CAR to investigate Wagner's activities were ambushed and killed in July 2018. <span class="src-chip">Pokalova (2026)</span></p>
+            <div class="tl-sources"><span class="src-chip">Pokalova (2026)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2017–Ongoing · Sudan</div>
+              <div class="tl-title">Sudan: Gold Mining and Disinformation Against Democracy</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>Wagner arrived in Sudan in 2017, earlier than most other African deployments, through the front companies M Invest and Meroe Gold. The Jebel Amer goldfield became a significant extraction site. Wagner's political function in Sudan evolved in an unusual direction: as pro-democracy protests grew against President Omar al-Bashir in 2018–2019, Wagner ran social media disinformation campaigns deploying simultaneously anti-Islamic, pro-Israeli, and pro-LGBT narratives — content calibrated not for its ideological coherence but for its capacity to fragment and discredit the opposition. Anti-riot equipment was supplied to the Bashir government. <span class="src-chip">Pokalova (2026)</span></p>
+            <p>After Bashir fell in April 2019, Wagner pivoted to supporting General Mohamed Hamdan Dagalo ("Hemeti"), commander of the Rapid Support Forces paramilitary — and reportedly supported the October 2021 coup that brought the military to power. The Sudan case illustrates the model's adaptability: Wagner did not need any particular government to succeed; it needed instability and access to the extractive economy to continue operating.</p>
+            <div class="tl-sources"><span class="src-chip">Pokalova (2026)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">December 2021–Ongoing · Mali</div>
+              <div class="tl-title">Mali: The Moura Massacre and the Expulsion of France</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>Wagner's arrival in Mali in December 2021 was the culmination of an information operations campaign. Prigozhin's networks had spent months amplifying anti-French sentiment on social media, spreading disinformation about French military conduct, and building narratives that positioned France as a neo-colonial power and Russia as a genuine partner. By the time the Malian junta formally ended Operation Barkhane and invited Wagner in, the political conditions had been manufactured in advance. An estimated 1,000 Wagner fighters deployed; their equipment included Mi-8 and Mi-35P attack helicopters, Su-25 ground attack aircraft, L-39 jets, and Orlan-10 surveillance drones. <span class="src-chip">Spearin (2026)</span><span class="src-chip">Pokalova (2026)</span></p>
+            <p>The March 2022 Moura massacre remains the clearest evidence of Wagner's operational approach to civilian populations. Over five days, beginning March 27, 2022, Wagner and Malian armed forces conducted an assault on the town of Moura in the Mopti region, arriving by helicopter and conducting house-to-house searches that became executions. Approximately 500 civilians were killed. The UN and multiple human rights organisations documented the massacre; the Malian government denied it; Russia called the accusations "Russophobic." Academic analysis found that 71% of all conflict incidents involving Wagner in Mali were associated with civilian targeting — a figure that suggests the targeting was not incidental but structural. <span class="src-chip">Pokalova (2026)</span><span class="src-chip">Spearin (2026)</span></p>
+            <p>The tactical vulnerability exposed in Syria resurfaced in Mali. In July 2024, an ambush at Tinzaouaten killed 84 Wagner fighters and 47 Malian soldiers — the largest single loss for Wagner-affiliated forces since Ukraine. The ambush was conducted by CSP-DPA and JNIM forces who had positioned the convoy beyond UAV range, then attacked during a sandstorm that limited aerial reconnaissance and response. "Operation Revenge" followed, with aerial bombardment of suspected rebel positions. The exchange illustrated the persistence of the structural problem: in environments where air supremacy could not be maintained, Wagner's ground forces remained vulnerable. <span class="src-chip">Spearin (2026)</span></p>
+            <div class="tl-sources"><span class="src-chip">Spearin (2026)</span><span class="src-chip">Pokalova (2026)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">February 2022–June 2023 · Ukraine</div>
+              <div class="tl-title">Ukraine: Bakhmut, Prison Recruits, and the Breaking Point</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>Russia's full-scale invasion of Ukraine in February 2022 transformed Wagner's scale. The group was tasked with some of the most demanding fighting — particularly around Bakhmut, the site of an attritional urban battle lasting most of 2022 and into 2023. To sustain the effort, Prigozhin launched a systematic prison recruitment programme, personally visiting penal colonies across Russia to offer convicts sentence commutation in exchange for six months of service. At peak, roughly 40,000 of Wagner's approximately 50,000 Ukrainian fighters were former convicts. Monthly operational costs exceeded $100 million. Putin confirmed state payments of approximately $940 million in the first year of the invasion alone. <span class="src-chip">Dörfler (2025)</span></p>
+            <p>It was in Ukraine that Prigozhin began the public campaign against the military establishment that ultimately led to the mutiny. Via Telegram — where his channel had millions of followers — he accused Defence Minister Sergei Shoigu and Chief of the General Staff Valery Gerasimov of withholding ammunition, refusing coordination, and leaving Wagner fighters to die unnecessarily. He posted videos from active fighting positions, sometimes standing beside corpses, cataloguing what he described as institutional sabotage. The accusations were specific and credible enough to be widely believed. They were also unprecedented: no figure in Putin's system had attacked senior Kremlin-aligned officials so publicly and for so long without consequence. The consequence, when it came, was the mutiny. <span class="src-chip">Dörfler (2025)</span></p>
+            <div class="tl-sources"><span class="src-chip">Dörfler (2025)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mutiny">
+        <h2>The Mutiny: June 23–24, 2023</h2>
+
+        <p>The immediate trigger was a Ministry of Defence directive, issued June 23, 2023, requiring all volunteer formations to sign contracts subordinating themselves to MoD command by July 1. For Prigozhin, this was the formalisation of the attempt to destroy Wagner as an independent entity. He had been predicting it publicly for months. That evening, he announced on Telegram that Wagner had been attacked by Russian military forces — a claim disputed but unverifiable in real time — and declared an "armed march for justice."</p>
+
+        <p>By the morning of June 24, Wagner had seized Rostov-on-Don, home of the Southern Military District command, without significant resistance. Russian generals went to negotiate; Prigozhin filmed the meetings. An armoured column began moving north along the M4 highway toward Moscow. Helicopters and fighter jets — including some that Wagner itself shot down — were deployed to slow the advance. The column reached approximately 200 kilometres from Moscow. Then it stopped. <span class="src-chip">Dörfler (2025)</span></p>
+
+        <p>Belarusian President Alexander Lukashenko, who had his own relationships with both Prigozhin and Putin, brokered the settlement. Terms: Prigozhin to Belarus; criminal charges against mutiny participants dropped; Wagner fighters who had joined would not be prosecuted. Putin addressed the nation, calling the mutiny a "betrayal" and a "stab in the back," but agreed to the deal. The rebellion had lasted thirty-six hours. It was the most serious challenge to Putin's authority in two decades, and its sudden resolution raised as many questions as it answered. One theory that circulated in the aftermath — never confirmed but also never definitively denied — held that Russian security services threatened the lives of Prigozhin's family in Moscow while the column was still advancing, presenting him with a personal cost that had nothing to do with the military chess position. Prigozhin's own stated explanation was simpler: he stopped to avoid Russian bloodshed. <span class="src-chip">Dörfler (2025)</span></p>
+
+        <div class="pull-quote">
+          <blockquote>"We are going to march for justice. A small group of military commanders betrayed their country. They won't get away with it."</blockquote>
+          <cite>— Yevgeny Prigozhin, Telegram channel, June 23, 2023</cite>
+        </div>
+
+        <p>In the aftermath, the Kremlin moved to disaggregate Wagner's forces. General Andrei Troshev — a senior Wagner commander — was appointed to integrate portions of the force into MoD structures. Other elements remained in limbo. African operations continued without interruption: the Russian foreign ministry and MoD quickly reassured governments in Mali, the CAR, and Libya that commitments remained intact. Prigozhin himself appeared in Minsk, then made a brief, unexpected appearance in Africa. Then, on August 23, 2023 — exactly two months after the mutiny — his plane went down near Tver. Dmitry Utkin, Wagner's military commander, died alongside him. All ten passengers were killed. Moscow confirmed the deaths after DNA testing. The investigation that followed has produced no public findings.</p>
+      </section>
+
+      <section id="africa-corps">
+        <h2>After Prigozhin: Africa Corps</h2>
+
+        <p>The death of Prigozhin did not end Wagner's African operations. It ended Prigozhin. The successor organisation that emerged at the end of 2023 — variously called Africa Corps, the African Corps, or the Corps — retained between 70% and 80% of Wagner's personnel in African theatres, according to a Reuters investigation published in June 2025. The modus operandi was unchanged: security services, resource extraction, information operations, quasi-diplomatic positioning. The branding changed; the business model did not. <span class="src-chip">Spearin (2026)</span><span class="src-chip">Stanyard (2025)</span></p>
+
+        <p>What changed was the accountability structure. Africa Corps operates under closer Ministry of Defence supervision, without the personal empire-building that Prigozhin brought to every deployment. The GI-TOC policy research organisation described Africa Corps as a "holding company" — a structure that continued Wagner's goals and strategies while bringing them formally into the Russian state apparatus. Some former Wagner commanders gained official MoD positions; others run nominally independent operations that serve the same function. <span class="src-chip">Stanyard (2025)</span></p>
+
+        <div class="callout info">
+          <div class="callout-label">Continuity</div>
+          <h4>What Africa Corps retained from Wagner</h4>
+          <p>According to GI-TOC reporting (2025), Africa Corps retained: the same deployment footprint (Mali, CAR, Sudan, Libya, Niger, Burkina Faso, Mozambique); the same resource extraction concessions and front companies; the same information operations infrastructure; the same relationships with host governments; and 70–80% of the same personnel. The transition was less a transformation than a corporate restructuring — the Kremlin absorbed the subsidiary after the founder died.</p>
+        </div>
+      </section>
+
+      <section id="matters">
+        <h2>Why It Matters Today</h2>
+
+        <p>The Wagner Group changed how states think about the privatisation of violence. Its model has been studied, imitated, and adapted. The questions it raises — about accountability, international law, and the future of conflict in weak states — are not academic.</p>
+
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>The PMC Template: Other States Are Watching</h3>
+            <p>Wagner demonstrated that a state can project military force across multiple continents, absorb casualties without domestic political cost, extract resources to partially self-finance operations, and maintain plausible deniability — all simultaneously. Turkey, the UAE, and Saudi Arabia have each expanded their own paramilitary contractor relationships in the years since Wagner's peak operations. China's academic military community debated explicitly whether a "Wagner with Chinese characteristics" was desirable; the consensus was cautious but the question was genuine.</p>
+            <ul class="matters-subpoints">
+              <li>China's Belt and Road Initiative and Wagner's chaos-exploitation were seen as strategically incompatible — but the PMC model itself attracted serious study</li>
+              <li>Turkey's deployment of Syrian fighters in Libya, Azerbaijan, and elsewhere follows a broadly similar template</li>
+              <li>Gulf states have used Sudanese mercenaries in Yemen through similar contractor arrangements</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>African Security Architecture Has Been Reshaped</h3>
+            <p>Wagner's presence in the Sahel accelerated the collapse of French security architecture that had defined West African politics since decolonisation. France was expelled from Mali, Burkina Faso, and Niger in rapid succession between 2021 and 2023. The security situations in all three countries deteriorated after Wagner's arrival — by Wagner's own metrics, jihadist insurgencies were not defeated but displaced. The Sahel's security problems are now more severe and the international response architecture more fragmented than at any point since independence.</p>
+            <ul class="matters-subpoints">
+              <li>JNIM and ISGS remain active across the Sahel despite — or accelerated by — Wagner's presence</li>
+              <li>The Tinzaouaten ambush (July 2024) showed that jihadi groups adapted their tactics to exploit Wagner's aerial dependency</li>
+              <li>Civilian protection has worsened: independent monitoring shows rising civilian casualties since Wagner deployments began</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Russia's Relationship with Private Violence</h3>
+            <p>Wagner showed that the Russian state can outsource violence while maintaining deniability and absorbing the productive assets of that violence when convenient. The Africa Corps succession demonstrates that the model outlives the entrepreneur. Russia has not abandoned the PMC approach — it has institutionalised it. The question for international law is how to deter and sanction arrangements explicitly designed to evade the legal frameworks that govern state use of force.</p>
+            <ul class="matters-subpoints">
+              <li>The U.S. Treasury's designation of Wagner as a "transnational criminal organisation" (January 2023) had limited operational effect on African deployments</li>
+              <li>International humanitarian law struggles to hold PMCs accountable when the state formally denies responsibility</li>
+              <li>Wagner personnel who committed atrocities in Mali, Libya, and the CAR have faced no international legal accountability</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Resource Extraction and Conflict Economies</h3>
+            <p>Wagner's African model was, at its core, a conflict economy: violence and instability created the conditions under which resource extraction could occur outside normal regulatory frameworks. Gold, diamonds, and timber left African conflict zones through channels that bypassed sanctions, royalties, and environmental oversight. The GI-TOC documented "industrial-scale" smuggling from the CAR. The revenues sustained the operations that sustained the instability that sustained the revenues — a self-reinforcing loop that Africa Corps has inherited.</p>
+            <ul class="matters-subpoints">
+              <li>CAR: Lobaye Invest diamond and gold operations continued under Africa Corps management through 2025</li>
+              <li>Sudan: the Jebel Amer goldfield extraction continued through the 2023–2025 civil war</li>
+              <li>Mali: gold exploration and extraction agreements signed under Wagner are now managed by Africa Corps</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>The scholarly argument about Wagner centres on a fundamental question: was it a private actor that the Russian state used, or a state instrument that wore private clothing? The answer matters because it determines how we understand accountability, how we assess Russia's foreign policy, and how we think about the future of the PMC model.</p>
+
+        <div class="scholars-row">
+          <div class="scholar-card pro">
+            <div class="scholar-card-name">Thomas Dörfler</div>
+            <div class="scholar-card-title">Politische Vierteljahresschrift, 2025</div>
+            <div class="scholar-card-verdict">Wagner was always embedded in PMC–state relations of mutual dependence — Prigozhin needed state contracts; the Kremlin needed deniability. Neither was in control in any simple sense.</div>
+          </div>
+          <div class="scholar-card critical">
+            <div class="scholar-card-name">Elena Pokalova</div>
+            <div class="scholar-card-title">Studies in Conflict &amp; Terrorism, 2026</div>
+            <div class="scholar-card-verdict">Wagner was a quasi-state agent of influence — the "PMC" label fundamentally undersells what it was. It functioned as a complete foreign policy instrument, combining military, economic, diplomatic, and informational tools in a single deployable package.</div>
+          </div>
+          <div class="scholar-card nuanced">
+            <div class="scholar-card-name">Christopher Spearin</div>
+            <div class="scholar-card-title">Defence Studies, 2026</div>
+            <div class="scholar-card-verdict">Wagner's exceptional character lay in its access to Russian air power and state logistics — without that, it was conventional infantry. Understanding Wagner requires understanding the specific Russian military capabilities that made it viable.</div>
+          </div>
+        </div>
+
+        <p>The most contested question is whether the June 2023 mutiny was a genuine political challenge to Putin or a bargaining move within an internal power struggle. Dörfler notes that the mutiny's swift resolution and Prigozhin's subsequent survival for sixty-three days (before the plane crash) suggests the relationship was more complex than a simple loyalty/betrayal binary. If Prigozhin had genuinely threatened the regime, he would likely not have lived to reach Minsk. If he had merely been negotiating within the system, the plane crash becomes even more politically significant: it suggests the Kremlin concluded the deal had served its purpose and Prigozhin was now a liability.</p>
+
+        <p>Pokalova's framing of Wagner as a quasi-state agent also raises the question of what its success in Africa reveals about Russian foreign policy goals. The Sahel deployments were not, on any measurable security metric, successful: insurgencies continued, civilian casualties increased, and the states that invited Wagner in remain deeply unstable. But if the goal was presence, resource access, and the displacement of French and Western influence — Wagner succeeded on all three counts. The ambiguity is deliberate: Russia can claim credit for the geopolitical wins while denying responsibility for the atrocities.</p>
+
+        <div class="perspectives">
+          <div class="perspective-card for">
+            <div class="perspective-label">The Case for Wagner's Strategic Effectiveness</div>
+            <ul>
+              <li>Sustained Russian influence across eight African countries at minimal conventional military cost <span class="perspective-attr">Dörfler (2025)</span></li>
+              <li>Expelled French military presence from Mali, Burkina Faso, and Niger — a major Western diplomatic reversal <span class="perspective-attr">Pokalova (2026)</span></li>
+              <li>Secured resource extraction agreements generating significant revenue to offset operational costs <span class="perspective-attr">Stanyard (2025)</span></li>
+              <li>Demonstrated that a PMC can absorb state-scale casualties without domestic political accountability <span class="perspective-attr">Dörfler (2025)</span></li>
+              <li>Model survived Prigozhin's death and was successfully absorbed into the Russian state apparatus <span class="perspective-attr">Spearin (2026)</span></li>
+            </ul>
+          </div>
+          <div class="perspective-card against">
+            <div class="perspective-label">The Case Against: What Wagner Actually Produced</div>
+            <ul>
+              <li>Sahel security deteriorated in every country where Wagner deployed; no insurgency was defeated <span class="perspective-attr">Stanyard (2025)</span></li>
+              <li>Moura massacre and other atrocities generated international condemnation and UN investigations <span class="perspective-attr">Pokalova (2026)</span></li>
+              <li>The mutiny revealed catastrophic misalignment between Prigozhin's interests and state interests <span class="perspective-attr">Dörfler (2025)</span></li>
+              <li>Tinzaouaten ambush showed that adversaries rapidly learned to counter Wagner's aerial dependency <span class="perspective-attr">Spearin (2026)</span></li>
+              <li>Long-term consequences: deeper instability, more civilian suffering, and entrenched criminal extraction economies <span class="perspective-attr">Stanyard (2025)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <p>The weight of the evidence suggests that Wagner was simultaneously a success and a catastrophe — depending entirely on whose interests you measure against. For Russia's geopolitical position in Africa, it succeeded. For the populations of Mali, the CAR, Libya, and Sudan, the consequences were devastating and ongoing. For Prigozhin, it ended in a plane crash over Tver. And for the Kremlin, it produced a lesson: the PMC model works, but the PMC commander must be expendable.</p>
+
+        <div class="pull-quote">
+          <blockquote>"Wagner is not just a private military company — it is Russia's quasi-state agent of influence. The term 'PMC' understates what it does and how it operates."</blockquote>
+          <cite>— Elena Pokalova, Studies in Conflict &amp; Terrorism, 2026</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+
+        <div class="topics-group">
+          <div class="topics-group-label">People at the Centre</div>
+          <div class="topics-grid">
+            <a href="yevgeny-prigozhin.html" class="topic-card">
+              <span class="topic-type-tag person">person</span>
+              <div class="topic-name">Yevgeny Prigozhin</div>
+              <div class="topic-preview">Wagner's financier, propagandist, and public face — the convicted criminal who built the group and led the mutiny that ended his life.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg" alt="Yevgeny Prigozhin" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center top;"></div>
+            </a>
+            <a href="khalifa-haftar.html" class="topic-card">
+              <span class="topic-type-tag person">person</span>
+              <div class="topic-name">Khalifa Haftar</div>
+              <div class="topic-preview">The Libyan field marshal whose forces Wagner supported from 2018 — Wagner's most significant African partnership and most exposed intervention.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg" alt="Khalifa Haftar" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="topics-group">
+          <div class="topics-group-label">Conflicts Where Wagner Operated</div>
+          <div class="topics-grid">
+            <a href="libyan-civil-war.html" class="topic-card">
+              <span class="topic-type-tag event">event</span>
+              <div class="topic-name">The Libyan Civil War</div>
+              <div class="topic-preview">Wagner's first major African deployment — where it seized oil fields, flew unmarked jets, and supported Haftar's push for Tripoli.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg" alt="Libyan Civil War" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+            <a href="northern-mali-conflict.html" class="topic-card">
+              <span class="topic-type-tag event">event</span>
+              <div class="topic-name">The Northern Mali Conflict</div>
+              <div class="topic-preview">Where Wagner's arrival followed its own disinformation campaign expelling France — and where its fighters participated in the Moura massacre.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg" alt="Mali conflict" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+            <a href="angola-civil-war.html" class="topic-card">
+              <span class="topic-type-tag event">event</span>
+              <div class="topic-name">The Angolan Civil War</div>
+              <div class="topic-preview">An earlier Cold War-era precedent for great-power proxy warfare in Africa — the template Wagner's operations consciously departed from.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg" alt="Angolan Civil War" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="topics-group">
+          <div class="topics-group-label">Concepts &amp; Frameworks</div>
+          <div class="topics-grid">
+            <a href="realpolitik.html" class="topic-card">
+              <span class="topic-type-tag concept">concept</span>
+              <div class="topic-name">Realpolitik</div>
+              <div class="topic-preview">The doctrine that states pursue interest above morality — the intellectual framework Moscow invoked whenever Wagner's atrocities were raised.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+            <a href="resource-curse.html" class="topic-card">
+              <span class="topic-type-tag concept">concept</span>
+              <div class="topic-name">The Resource Curse</div>
+              <div class="topic-preview">The economic phenomenon Wagner systematically exploited — fragile states exchanging mineral concessions for security guarantees that deepened dependency.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg" alt="Resource Curse" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+            <a href="responsibility-to-protect.html" class="topic-card">
+              <span class="topic-type-tag concept">concept</span>
+              <div class="topic-name">The Responsibility to Protect</div>
+              <div class="topic-preview">The international norm that Wagner's operations systematically violated — and which Russia used its UN Security Council veto to shield from enforcement.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="R2P" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources</h2>
+        <ol class="sources-list">
+          <li>
+            <span class="src-num">1</span>
+            <span class="src-title">Dörfler, T. (2025). "The Wagner Group, Yevgeny Prigozhin, and PMC–State Relations in Russian Foreign Policy."</span>
+            <span class="src-journal">Politische Vierteljahresschrift.</span>
+            <span class="src-note"><em>The most detailed academic analysis of Wagner's origins, financing structure, GRU linkages, Ukrainian operations (including prison recruitment figures), and the June 2023 mutiny. Central source for PMC–state relations framework. Institutional access likely required.</em></span>
+          </li>
+          <li>
+            <span class="src-num">2</span>
+            <span class="src-title">Spearin, C. (2026). "Airpower and Wagner Group's expeditionary operations: exploring the 'exceptionality'."</span>
+            <span class="src-journal">Defence Studies.</span>
+            <span class="src-note"><em>Analysis of Wagner's relationship with Russian air power — Syria, Libya, CAR, Mali — including specific aircraft types, the Battle of Khasham casualties, the Moura massacre aerial component, and the Tinzaouaten ambush. Provides structural explanation for Wagner's tactical vulnerabilities. Institutional access likely required.</em></span>
+          </li>
+          <li>
+            <span class="src-num">3</span>
+            <span class="src-title">Pokalova, E. (2026). "The Wagner Group in Africa: Russia's Quasi-State Agent of Influence."</span>
+            <span class="src-journal">Studies in Conflict &amp; Terrorism.</span>
+            <span class="src-note"><em>Country-by-country case studies (Libya, CAR, Sudan, Mali) with detailed evidence on resource extraction arrangements, information operations, human rights violations, diplomatic brokering, and the "quasi-state agent" conceptual framework. Most comprehensive source on African operations. Institutional access likely required.</em></span>
+          </li>
+          <li>
+            <span class="src-num">4</span>
+            <span class="src-title">Yablokov, I. &amp; Poliakoff, J. (2026). "From 'Putin's Chef' to Rebel Warlord: Yevgeny Prigozhin, Media Power, and the Art of Political Survival in Russia."</span>
+            <span class="src-journal">Russian Politics, 11, 181–209.</span>
+            <span class="src-note"><em>Focuses on Prigozhin's identity as a media operator — the construction of Patriot Media Group from the IRA troll factory, the viral videos with dead soldiers, the Nuzhin sledgehammer video, the 36-hour mutiny duration, the family threats theory, and the WSJ Patrushev attribution. Provides a media-power framework for understanding how Prigozhin challenged the state from within its own grammar of authority. Institutional access likely required.</em></span>
+          </li>
+          <li>
+            <span class="src-num">5</span>
+            <span class="src-title">Stanyard, J. (2025). "Mercenaries and illicit markets: Russia's Africa Corps and the business of conflict."</span>
+            <span class="src-journal">Global Initiative Against Transnational Organized Crime (GI-TOC).</span>
+            <span class="src-note"><em>Policy report on Africa Corps as Wagner's successor — key finding that 70–80% of Wagner personnel continue under Africa Corps; documentation of industrial-scale resource smuggling; recommendations for diplomatic and sanctions responses. Freely available at globalinitiative.net.</em></span>
+          </li>
+        </ol>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list</div>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',             desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.', url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.', url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'person',  title: 'Khalifa Haftar',         desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement', desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',            desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'Democratic Socialism',   desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War', desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',      desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",              desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.', url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person', title: 'Saddam Hussein',          desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person', title: 'Henry Kissinger',         desc: 'The refugee who became America\'s most powerful and most controversial diplomat.', url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person', title: 'Salvador Allende',        desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person', title: 'Richard Nixon',           desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person', title: 'Barack Obama',            desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.', url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person', title: 'Gamal Abdel Nasser',     desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person', title: 'George W. Bush',          desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person', title: 'Ayatollah Khomeini',      desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.', url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles found.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown') { e.preventDefault(); _focusIdx = Math.min(_focusIdx + 1, items.length - 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); _focusIdx = Math.max(_focusIdx - 1, 0); }
+    else if (e.key === 'Enter' && _focusIdx >= 0) { items[_focusIdx].click(); return; }
+    else if (e.key === 'Escape') { toggleSearch(); return; }
+    items.forEach((r, i) => r.classList.toggle('focused', i === _focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.width = Math.min((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100, 100) + '%';
+    const sections = document.querySelectorAll('section[id]'), navItems = document.querySelectorAll('.sidebar-nav li');
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    navItems.forEach(item => { const link = item.querySelector('a'); item.classList.toggle('active', link && link.getAttribute('href') === '#' + current); });
+  });
+
+  function toggleItem(el) {
+    const wasActive = el.classList.contains('active');
+    document.querySelectorAll('.tl-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) el.classList.add('active');
+  }
+
+  function toggleSave() {
+    const btn = document.getElementById('saveBtn'), toast = document.getElementById('toast'), isSaved = btn.classList.contains('saved');
+    if (!isSaved) {
+      btn.classList.add('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;
+      toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3000);
+    } else {
+      btn.classList.remove('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;
+    }
+  }
+</script>
+</body>
+</html>

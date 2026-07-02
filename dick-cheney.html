@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dick Cheney — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">U.S. Officials</a><span class="breadcrumb-sep">›</span>
+        <span>Dick Cheney</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg" alt="Dick Cheney"></div>
+        <div>
+          <div class="hero-region-tag">United States · 46th Vice President</div>
+          <h1>Dick Cheney</h1>
+          <p class="hero-sub">The most powerful vice president in American history — a Wyoming conservative who spent four decades accumulating institutional power, drove the decision to invade Iraq, and built the legal architecture for a "War on Terror" that included waterboarding and warrantless surveillance.</p>
+          <div class="hero-meta">
+            <span>~17 min read</span><span>·</span>
+            <span>Active: 1969–2009</span><span>·</span>
+            <span>United States</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#worldview">Worldview &amp; Ideology</a></li>
+        <li><a href="#road-to-iraq">Driving the Iraq War</a></li>
+        <li><a href="#interrogation">Enhanced Interrogation &amp; Abu Ghraib</a></li>
+        <li><a href="#late-vp">Late VP Years</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          
+            <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Richard Bruce Cheney</div></div>
+            <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">January 30, 1941 — Lincoln, Nebraska (grew up in Casper, Wyoming)</div></div>
+            <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">November 3, 2025 — McLean, Virginia (age 84)</div></div>
+            <div class="qf-item"><div class="qf-label">Education</div><div class="qf-value">Yale University (dropped out twice) · University of Wyoming (BA and MA, Political Science)</div></div>
+            <div class="qf-item"><div class="qf-label">Vietnam draft</div><div class="qf-value">Five deferments — "I had other priorities in the '60s than military service"</div></div>
+            <div class="qf-item"><div class="qf-label">Government career</div><div class="qf-value">White House Chief of Staff (Ford, 1975–77) · Wyoming Congressman (1979–89) · House Minority Whip · Secretary of Defense (1989–93) · Vice President (2001–09)</div></div>
+            <div class="qf-item"><div class="qf-label">Private sector</div><div class="qf-value">CEO, Halliburton (1995–2000) — received $36M severance package when he left to run for VP</div></div>
+            <div class="qf-item"><div class="qf-label">Key ideological positions</div><div class="qf-value">Unitary executive theory · Neoconservatism · PNAC signatory · "One Percent Doctrine" on terrorism</div></div>        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Rise to Power</h2>
+
+        <p>Richard Cheney grew up in Casper, Wyoming — oil country, politically conservative, far from the centres of American power. He was a high school football star and a solid student, but he failed out of Yale University twice in the early 1960s, eventually completing his undergraduate and graduate education in political science at the University of Wyoming. The Yale experience — dropping out of an elite institution — left a mark. Cheney spent much of his career cultivating a persona of no-nonsense Wyoming pragmatism that stood in pointed contrast to the Ivy League backgrounds of many of the officials around him. The contrast was partly real, partly constructed.</p>
+
+        <p>He obtained five deferments from the Vietnam War draft between 1963 and 1966, the last of which came when his wife Lynne became pregnant with their first child. Asked about this in a 1989 confirmation hearing for Secretary of Defense, he said: "I had other priorities in the '60s than military service." It was a statement of fact presented without apology, and it became one of the most quoted lines associated with him — particularly given that he would later be the primary driver of decisions sending hundreds of thousands of Americans to war in two countries.</p>
+
+        <p>His entry into politics came through a fellowship with the Office of Economic Opportunity in 1969, where he worked under Donald Rumsfeld — the relationship that would define both men's subsequent careers. When Rumsfeld became Ford's White House Chief of Staff in 1974, Cheney came with him as deputy. When Rumsfeld moved to the Defense Department in 1975, Cheney became Chief of Staff himself, at age 34, managing the White House under a president trying to restore credibility after Watergate. He served one term in Congress from Wyoming (1979–89), rising to House Minority Whip — the most powerful Republican leadership position in the House. He was then confirmed as Secretary of Defense under George H.W. Bush, where he oversaw the military's reduction after the Cold War and its dramatic deployment in the Gulf War.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">5</div><div class="stat-label">Draft deferments during the Vietnam War era, 1963–1966</div></div>
+          <div class="stat-box"><div class="stat-number">34</div><div class="stat-label">Cheney's age when he became Ford's White House Chief of Staff — one of the youngest ever</div></div>
+          <div class="stat-box"><div class="stat-number">1998</div><div class="stat-label">Year Cheney signed the PNAC letter calling for regime change in Iraq — three years before becoming VP</div></div>
+          <div class="stat-box"><div class="stat-number">5</div><div class="stat-label">Heart attacks, 1978–2010; heart transplant in 2012 at age 71</div></div>
+        </div>
+      </section>
+
+      <section id="worldview">
+        <h2>Worldview &amp; Ideology</h2>
+
+        <p>Cheney's worldview is not easily reduced to a single ideology, but several consistent principles ran through his four decades in government. He believed in an exceptionally powerful executive branch, was deeply skeptical of congressional oversight and freedom of information, thought the US military should be used proactively to shape the international order rather than reactively to defend against threats, and regarded the post-Watergate, post-Vietnam limits on presidential power as a dangerous overcorrection that had weakened America.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Unitary Executive Theory</div>
+            <p>Cheney believed the president's power as Commander-in-Chief was nearly unlimited in wartime — that Congress and the courts could not meaningfully constrain executive action in national security matters. This theory underpinned the legal memos authorizing "enhanced interrogation," warrantless surveillance, and the indefinite detention of "unlawful combatants" without trial.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">The One Percent Doctrine</div>
+            <p>Journalist Ron Suskind documented Cheney's operating principle: if there was even a one percent chance that a threat to the United States was real, it had to be treated as a certainty. The doctrine justified extraordinary preventive action against low-probability but high-consequence threats — and it made the accumulation of power easier to justify than its restraint.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Neoconservatism</div>
+            <p>Cheney signed the 1998 PNAC (Project for the New American Century) letter to President Clinton arguing that removing Saddam Hussein by force was necessary to protect American interests in the Middle East. This was three years before 9/11. The letter's other signatories included Donald Rumsfeld, Paul Wolfowitz, and Elliott Abrams — virtually the entire senior foreign policy team of the Bush administration that took office in 2001.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Institutional Secrecy</div>
+            <p>Cheney was obsessive about protecting executive privilege. He refused to disclose the members of his 2001 National Energy Task Force to Congress or the courts. He conducted much of his most sensitive business through his Chief of Staff Scooter Libby, who was convicted of perjury and obstruction in the investigation into the outing of CIA officer Valerie Plame. Cheney's influence operated largely in the space between official decisions and official records.</p>
+          </div>
+        </div>
+
+        <p>What distinguishes Cheney from most ideologues is the degree to which he combined firm convictions with bureaucratic expertise. He knew how Washington worked — which offices to control, which deputies to place where, which information flows to monitor — in a way that most politicians and even most cabinet officials do not. His influence over the Bush administration's first term was structural as much as rhetorical: he shaped the choices Bush was given, the people appointed to carry them out, and the information that reached the Oval Office.</p>
+
+        <div class="pull-quote">
+          <blockquote>"I think it's important for a vice president to play a strong, active role in the policymaking process. It just gets you into more and more things. And as long as you have a close relationship with the President and the President trusts your judgement, you can make a real contribution."</blockquote>
+          <cite>— Dick Cheney, reflecting on his approach to the vice presidency</cite>
+        </div>
+      </section>
+
+      <section id="road-to-iraq">
+        <h2>Driving the Iraq War</h2>
+
+        <p>On September 11, 2001, Cheney was evacuated from his West Wing office to the Presidential Emergency Operations Center — a bunker beneath the East Wing of the White House. He spent much of the following months in "undisclosed locations," a phrase that became both security policy and political symbol. The immediate response to the attacks — the invasion of Afghanistan, the creation of the Department of Homeland Security, the Patriot Act — had wide support. The pivot to Iraq was Cheney's specific contribution.</p>
+
+        <p>Within hours of the September 11 attacks, according to multiple accounts, Cheney and his advisers were already asking whether Iraq was involved. There was no evidence that it was. The 9/11 Commission's 2004 report found no "collaborative operational relationship" between Iraq and al-Qaeda. But Cheney continued to assert such a link in public statements throughout 2002 and 2003 — most notably in a September 2003 interview on NBC's Meet the Press, after the invasion, when he said it was "pretty well confirmed" that September 11 hijacker Mohamed Atta had met with an Iraqi intelligence official in Prague. The claim was based on a single intelligence report that the CIA had assessed as unconfirmed; the 9/11 Commission subsequently concluded the meeting had probably not occurred.</p>
+
+        <p>Cheney was also the most aggressive voice arguing that Saddam Hussein was reconstituting his nuclear programme. In a series of speeches in August 2002, he went beyond what the CIA's current assessments supported — asserting that there was "no doubt" Saddam had weapons of mass destruction and was "amassing" them "to use against our friends, against our allies and against us." The CIA's analysis at the time expressed significant uncertainty about the nuclear programme. Cheney's public assertions were understood within the intelligence community as pressure to harden those assessments. <span class="src-chip">Zinn (2016)</span></p>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">AUGUST 26, 2002</div>
+              <div class="tl-title">"There Is No Doubt": The VFW Speech</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>In a speech to the Veterans of Foreign Wars in Nashville, Cheney delivered the most aggressive public case for the Iraq War yet made by a senior administration official. "There is no doubt that Saddam Hussein now has weapons of mass destruction," he stated. "There is no doubt he is amassing them to use against our friends, against our allies, and against us." He dismissed weapons inspections as futile: "A return of inspectors would provide no assurance whatsoever of his compliance with UN resolutions."</p>
+            <p>The speech alarmed CIA Director George Tenet, who felt it went well beyond what the intelligence supported. It alarmed Colin Powell, who felt Cheney was making it impossible to build a credible diplomatic case at the UN. It alarmed Brent Scowcroft, who had served as National Security Advisor under both Ford and George H.W. Bush and who published an op-ed titled "Don't Attack Saddam" three days later in the Wall Street Journal. None of these reactions changed Cheney's position.</p>
+            <div class="tl-sources"><span class="src-chip">Woodward, Plan of Attack (2004)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">MARCH–MAY 2003</div>
+              <div class="tl-title">Invasion and De-Baathification: Cheney's Policy Wins</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>When the invasion began on March 20, 2003, Cheney's preferred approach had triumphed over the alternatives: no large international coalition (France and Germany refused to join), no second UN resolution, a relatively small invasion force (Rumsfeld's "transformation" doctrine), and a plan built on the assumption that Iraqis would welcome US forces as liberators and that the existing state structures would be left in place.</p>
+            <p>The Coalition Provisional Authority, established after Baghdad fell, issued two orders in May 2003 that reversed the latter assumption dramatically. CPA Order 1 removed the top four tiers of Ba'ath Party members from all government positions — dismissing 30,000 to 50,000 people overnight. CPA Order 2 dissolved the entire Iraqi military, putting 400,000 trained soldiers out of work simultaneously. The CIA station chief in Baghdad warned CPA Administrator Paul Bremer that 30,000 to 50,000 Baathists would "go underground by sundown." His warning proved accurate. <span class="src-chip">Zinn (2016)</span></p>
+            <div class="tl-sources"><span class="src-chip">Zinn (2016)</span><span class="src-chip">CFR Backgrounder (2005)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">MAY 23, 2003</div>
+              <div class="tl-title">CPA Order 2: 400,000 Soldiers Dismissed</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>CPA Order 2 dissolved the entire Iraqi military — including the Republican Guard, the Navy, and the Air Force — effective immediately, along with the entire intelligence apparatus. All officers at the rank of colonel and above were classified as "Senior Party Members" and were barred from future government employment, regardless of their actual involvement with the Ba'ath Party. The order affected roughly 400,000 military personnel and 100,000 intelligence service members. <span class="src-chip">CFR Backgrounder (2005)</span></p>
+            <p>Franklin C. Miller at the National Security Council warned that it was "dangerous to put 300,000 men on the street with guns, without jobs." Research on ISIS leadership has found that approximately 8 of 13 top ISIS leaders were former Iraqi military officers dismissed under CPA Order 2. The order was issued by Bremer, but was consistent with the neoconservative framework promoted by Cheney's office — which regarded the entire Ba'athist state structure as irredeemably contaminated and wanted to start from scratch. <span class="src-chip">Zinn (2016)</span></p>
+            <div class="tl-sources"><span class="src-chip">Zinn (2016)</span><span class="src-chip">CFR Backgrounder (2005)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="interrogation">
+        <h2>Enhanced Interrogation &amp; Abu Ghraib</h2>
+
+        <p>The Abu Ghraib photographs — published in April 2004, showing members of the 372nd Military Police Company abusing, sexually humiliating, and torturing Iraqi detainees between October and December 2003 — produced a political and moral crisis for the Bush administration. The army's own investigation, the Taguba Report, found "systemic and illegal abuse" and concluded that military intelligence and CIA officers had "actively requested" that MP guards help "set physical and mental conditions for favorable interrogation." The International Committee of the Red Cross, in a February 2004 confidential report, found that abuse was "tantamount to torture" and was "widespread." <span class="src-chip">AJIL (2004)</span></p>
+
+        <p>The policy framework that produced Abu Ghraib was built by the Office of the Vice President and the Department of Defense, not by accident but by deliberate legal architecture. In the weeks after September 11, Cheney's counsel David Addington and White House Counsel Alberto Gonzales developed a set of legal theories holding that the President's authority as Commander-in-Chief could override statutory prohibitions on torture and that the Geneva Conventions did not apply to "unlawful combatants." These theories were formalised in a series of memos from John Yoo and Jay Bybee at the Justice Department's Office of Legal Counsel in 2002 — the "Torture Memos." <span class="src-chip">AJIL (2004)</span></p>
+
+        <div class="callout warning">
+          <div class="callout-label">Key Document</div>
+          <h4>The April 2003 DoD Working Group Report</h4>
+          <p>On April 14, 2003, a DoD working group — whose recommendations were developed under the authority of Rumsfeld's department, with Cheney's office closely involved — delivered a report on interrogation techniques for use at Guantanamo. It concluded that the Convention Against Torture applied, but identified narrow exceptions and asserted that the Commander-in-Chief's constitutional authority overrode criminal statutes prohibiting torture. Secretary Rumsfeld approved 24 interrogation techniques on April 16, 2003 that went beyond what the Army Field Manual permitted. The Taguba Report found these authorizations contributed to the conditions that produced Abu Ghraib. <span class="src-chip">AJIL (2004)</span></p>
+        </div>
+
+        <p>Cheney was the most visible and persistent defender of "enhanced interrogation" both within the administration and, after leaving office, in public. He argued that waterboarding — a technique that simulates drowning and that US law courts had previously treated as torture — was not torture, was effective, and had saved American lives. "I would do it again in a minute," he told Fox News in 2014. The Senate Intelligence Committee's 2014 report on the CIA's detention and interrogation programme — a 6,700-page study whose 500-page executive summary was publicly released — concluded that enhanced interrogation techniques were "not an effective means of acquiring intelligence," that the CIA had repeatedly misled Congress about the programme's scope and results, and that the programme produced far less actionable intelligence than the CIA had claimed. Cheney rejected the committee's findings. <span class="src-chip">AJIL (2004)</span></p>
+
+        <p>The EBSCO Research Starters analysis of Abu Ghraib contextualises the scandal within a broader pattern: the photographs created a "chasm" between US forces and the Iraqi public, caused "real and deep damage" to American standing in the Muslim world (as UN Secretary-General Kofi Annan said on May 13, 2004), and significantly complicated the administration's ability to argue that the invasion was about liberation rather than dominance. Seven soldiers from the 372nd MP Company were charged; ultimately 17 service members were dishonorably discharged. None of the senior officials whose policy decisions created the interrogation framework were charged with any offence. <span class="src-chip">EBSCO (2019)</span></p>
+      </section>
+
+      <section id="late-vp">
+        <h2>Late VP Years: Plame, the Hunting Accident &amp; the End</h2>
+
+        <p>In July 2003, former ambassador Joseph Wilson published an op-ed in the New York Times arguing that the administration had exaggerated evidence that Iraq was seeking uranium from Niger — evidence that had appeared in Bush's 2003 State of the Union address. Someone in the administration then leaked to journalist Robert Novak that Wilson's wife, Valerie Plame, was an undercover CIA officer. Outing an undercover officer was a potential federal crime. The investigation that followed led to the conviction of Cheney's Chief of Staff, Scooter Libby, for perjury and obstruction. Libby was sentenced to 30 months in prison; Bush commuted the sentence. Cheney pushed for a full pardon, which Bush refused to grant. Trump pardoned Libby in 2018.</p>
+
+        <p>On February 11, 2006, Cheney shot Harry Whittington — a 78-year-old Texas attorney and hunting companion — in the face, neck, and chest during a quail hunt on a Texas ranch. Whittington was hospitalised and survived, though pellet shot near his heart later caused a minor heart attack. The incident's handling — Cheney's office did not notify the White House press corps for nearly 24 hours, and the ranch owner informed a local newspaper before the Secret Service informed the press secretary — provided a near-perfect illustration of Cheney's relationship to transparency and accountability.</p>
+
+        <p>By 2007 and 2008, Cheney's influence within the administration had waned somewhat as Bush sought to rehabilitate his foreign policy legacy by engaging diplomatically with Iran and North Korea — approaches Cheney strongly opposed. Their relationship ended on a sour note when Bush, in his final weeks in office, refused Cheney's sustained lobbying campaign for a presidential pardon for Scooter Libby. Cheney later said it was the one act of the Bush presidency he found "very disappointing."</p>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>Dick Cheney's legacy is among the most contested in American political history, and the terms of the debate have shifted significantly over time. In his own era, he was understood by supporters as the indispensable architect of a strong post-9/11 national security response; by critics as the manipulative bureaucratic operator who pushed an unnecessary war and authorised a torture programme. Since Trump's rise — which split the Republican Party — the question of Cheney's legacy has taken on a new dimension: his daughter Liz Cheney's leadership of the House January 6th Committee, and Dick Cheney's own 2022 video endorsing his daughter and stating that "there has never been a greater threat to our republic" than Trump, placed the Cheneys, improbably, as defenders of democratic norms against the party they had served for decades.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">What Supporters Argue</div>
+            <ul>
+              <li>No second large-scale terrorist attack on US soil after September 11 — Cheney's defenders attribute this partly to the aggressive security measures he championed</li>
+              <li>The Gulf War (1991), conducted under his oversight as Defense Secretary, was one of the most successfully executed US military operations of the modern era</li>
+              <li>Cheney was consistent across decades in his view of what US national security required — he did not shift positions for political convenience</li>
+              <li>His daughter Liz Cheney's leadership on January 6th accountability represented a form of institutional courage that contrasted with most Republicans</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">What Critics Argue</div>
+            <ul>
+              <li>Iraq War: pushed the invasion on false intelligence, misrepresented the Iraq-al-Qaeda connection publicly for years after it was disproven</li>
+              <li>CPA Orders 1 and 2: the de-Baathification policy created the conditions for the insurgency and provided much of the leadership of ISIS <span class="src-chip">Zinn (2016)</span></li>
+              <li>Authorised "enhanced interrogation" framework that the Senate Intelligence Committee found was ineffective, misleading to Congress, and caused lasting damage to US standing <span class="src-chip">AJIL (2004)</span></li>
+              <li>Halliburton's KBR subsidiary received over $10 billion in Iraq reconstruction contracts after Cheney left the company to become VP — an unresolved conflict of interest</li>
+              <li>Warrantless surveillance programme: the NSA programme authorised after 9/11, bypassing the FISA court, was later found by a federal judge to be illegal</li>
+              <li>Five draft deferments while publicly championing military action that others' children were sent to fight</li>
+            </ul>
+          </div>
+        </div>
+        <div class="legacy-card complex" style="margin-top:1rem">
+          <div class="legacy-label">Contested Points</div>
+          <ul>
+            <li>Was Cheney ideologically driven or primarily motivated by institutional power? His defenders say he had genuine convictions about American security; critics note his views consistently served to expand executive power and benefit the industries he had led.</li>
+            <li>The "ticking time bomb" argument for enhanced interrogation — that extreme measures were justified to prevent imminent mass casualty attacks — is philosophically contested. The Senate report found the specific techniques used were not effective in practice, but the moral argument is distinct from the empirical one.</li>
+            <li>Cheney's post-2016 positioning as a defender of democratic norms against Trump has led some to argue that his institutional conservatism — his genuine belief in constitutional order, even expansively interpreted — was distinct from Trumpian authoritarianism. Others regard this as a distinction without a practical difference.</li>
+          </ul>
+        </div>
+
+        <div class="scholars-row">
+          <div class="scholar-card critical">
+            <div class="scholar-card-name">Barton Gellman</div>
+            <div class="scholar-card-title">Washington Post · <em>Angler: The Cheney Vice Presidency</em> (2008)</div>
+            <div class="scholar-card-verdict">Gellman's Pulitzer Prize-winning investigation found Cheney operated an "alternative government" within the executive branch, routing around normal interagency processes. He describes how Cheney and Addington built the legal architecture for expanded executive power systematically, and how Cheney's influence depended on controlling information flows to Bush rather than on transparent deliberation.</div>
+          </div>
+          <div class="scholar-card nuanced">
+            <div class="scholar-card-name">Ron Suskind</div>
+            <div class="scholar-card-title"><em>The One Percent Doctrine</em> (2006)</div>
+            <div class="scholar-card-verdict">Suskind documents Cheney's operating framework seriously rather than simply dismissing it. The One Percent Doctrine reflects a genuine — if extreme — response to the post-9/11 threat environment, and Cheney's framework had internal logic even where Suskind finds it dangerous. Understanding why intelligent people accepted it matters as much as understanding why it was wrong.</div>
+          </div>
+          <div class="scholar-card pro">
+            <div class="scholar-card-name">Liz Cheney</div>
+            <div class="scholar-card-title">Former Wyoming Congresswoman; daughter</div>
+            <div class="scholar-card-verdict">Argues her father made decisions based on genuine beliefs about American security, in the specific post-9/11 context where another attack seemed imminent. The policy disagreements can be had; what cannot be disputed, she argues, is the sincerity of the threat assessment from which everything followed.</div>
+          </div>
+        </div>
+
+        <div class="perspectives">
+          <div class="perspective-card for">
+            <div class="perspective-label">The Case For Cheney</div>
+            <ul>
+              <li>The post-9/11 security environment was genuinely unprecedented — the administration did not know what further attacks were coming, or how soon. The One Percent Doctrine was a defensible response to catastrophic uncertainty. <span class="perspective-attr">Suskind, 2006</span></li>
+              <li>Saddam Hussein had used chemical weapons against civilians in 1988, had invaded Kuwait in 1990, and had deceived weapons inspectors throughout the 1990s. The intelligence failure was a collective failure across Western agencies, not a Cheney fabrication. <span class="perspective-attr">Senate Intelligence Committee, 2004</span></li>
+              <li>The Gulf War (1991) demonstrated Cheney's capacity for disciplined, strategically coherent military planning — a track record that gave his Iraq assessments surface credibility they may not have deserved. <span class="perspective-attr">Woodward, 2004</span></li>
+            </ul>
+          </div>
+          <div class="perspective-card against">
+            <div class="perspective-label">The Case Against Cheney</div>
+            <ul>
+              <li>Cheney asserted an Iraq-9/11 connection publicly for years after the 9/11 Commission concluded it did not exist — a sustained campaign of public misinformation. <span class="perspective-attr">9/11 Commission Report, 2004</span></li>
+              <li>De-Baathification policies created the insurgency and provided ISIS with much of its leadership — consequences that were warned against and proceeded regardless. <span class="perspective-attr">Zinn (2016)</span></li>
+              <li>The Senate Intelligence Committee found the enhanced interrogation programme was not effective, misled Congress, and damaged US standing — yet Cheney continues to defend it without engagement with these findings. <span class="perspective-attr">Senate Intelligence Committee, 2014</span></li>
+              <li>The legal architecture built by Cheney's office — unitary executive theory, commander-in-chief authority over criminal statutes — set precedents that have outlasted the specific policies it was used to justify. <span class="perspective-attr">Gellman, 2008</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"If I had to do it over again, I would do it in a minute."</blockquote>
+          <cite>— Dick Cheney, Fox News Sunday, December 2014, defending the CIA's enhanced interrogation programme</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People Directly Connected</div>
+          <div class="topics-grid">
+            <a href="george-w-bush.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png" alt="George W. Bush">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">George W. Bush</div>
+              <div class="topic-preview">The president who gave Cheney unprecedented vice-presidential authority — and whose administration Cheney shaped from within more than any VP in US history.</div>
+            </a>
+            <a href="colin-powell.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG" alt="Colin Powell">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Colin Powell</div>
+              <div class="topic-preview">The Secretary of State who argued for diplomacy and inspections — and who was consistently outmanoeuvred by Cheney's network in the internal debates over Iraq.</div>
+            </a>
+            <a href="tony-blair.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg" alt="Tony Blair">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Tony Blair</div>
+              <div class="topic-preview">The British prime minister who aligned with the Cheney-Bush position on Iraq over the objections of much of his own Cabinet and a majority of the British public.</div>
+            </a>
+            <a href="saddam-hussein.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Saddam_Hussein_in_1998.png" alt="Saddam Hussein">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Saddam Hussein</div>
+              <div class="topic-preview">The Iraqi dictator Cheney had been arguing should be removed since 1998 — three years before September 11 provided the political opening to do it.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Related Events</div>
+          <div class="topics-grid">
+            <a href="iraq-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg" alt="The Iraq War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Iraq War</div>
+              <div class="topic-preview">The war Cheney drove — whose post-invasion consequences directly reflected the policies his office promoted and the warnings his office dismissed.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">Zinn, A. (2016). Consequences of Iraqi De-Baathification. </span>
+            <span class="src-journal">Cornell International Affairs Review</span>, Vol. IX, No. 2.
+            <span class="src-note">Peer-reviewed analysis of CPA Orders 1 and 2 — the specific scale of dismissals (30,000–50,000 civil servants; 400,000 military), the warnings that were given and ignored, and the link between former Iraqi officers and ISIS leadership composition. Draws on primary sources including CIA station chief testimony and NSC records.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">American Journal of International Law. (2004). U.S. Abuse of Iraqi Detainees at Abu Ghraib Prison. </span>
+            <span class="src-journal">American Journal of International Law</span>, Vol. 98, No. 3, pp. 591–596.
+            <span class="src-note">Legal analysis under the Geneva Conventions and Convention Against Torture, documenting the Taguba Report findings, the DoD working group's April 2003 recommendations, and Rumsfeld's interrogation authorization. Provides the institutional context for the legal framework Cheney's office built.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Council on Foreign Relations. (2005). Iraq: Debaathification. </span>
+            <span class="src-journal">CFR Backgrounders</span>.
+            <span class="src-note">Policy backgrounder detailing the scope and implementation of CPA Orders 1 and 2, the partial rehabilitation process under the Iraqi Governing Council, and assessments from experts including CRS analyst Kenneth Katzman on how dismissed commanders became insurgency leaders. Archived; freely available.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">EBSCO Research Starters. (2019). Abu Ghraib Torture Scandal. </span>
+            <span class="src-journal">EBSCO Information Services</span>.
+            <span class="src-note">Overview of the Abu Ghraib scandal's political and cultural impact, the Taguba investigation, the prosecutions of the 372nd MP Company, and the lasting damage to US credibility and its relationship with the Arab and Muslim world.</span>
+          </li>
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">Gellman, B. (2008). </span>
+            <span class="src-journal">Angler: The Cheney Vice Presidency</span>. Penguin Press.
+            <span class="src-note">The most detailed investigative account of Cheney's vice presidency, based on hundreds of interviews and document review. Pulitzer Prize-winning journalist Barton Gellman documents Cheney's control of information flows, his legal architecture for enhanced interrogation and surveillance, and his methods for operating around normal interagency processes.</span>
+          </li>
+          <li>
+            <span class="src-num">[6]</span>
+            <span class="src-title">Senate Select Committee on Intelligence. (2014). </span>
+            <span class="src-journal">Committee Study of the Central Intelligence Agency's Detention and Interrogation Programme</span> (executive summary). U.S. Senate.
+            <span class="src-note">The 500-page publicly released summary of a 6,700-page classified study. Concluded enhanced interrogation was not effective, that the CIA misled Congress about the programme's scope and results, and that the programme caused lasting damage to US standing. Free online. Cheney publicly disputed its findings.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="index.html" style="color:var(--purple);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',       desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',    url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                            url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',  url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',  url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.",     url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person', title: 'Henry Kissinger',          desc: "The refugee who became America's most powerful and most controversial diplomat.",         url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person', title: 'Barack Obama',             desc: "America's first Black president — who promised transformation, delivered incremental change, and left a country more divided.",  url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person', title: 'Ayatollah Khomeini',       desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.",  url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+    else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+    else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+    else if (e.key==='Escape') { toggleSearch(); return; }
+    items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.width = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+    const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+  });
+  function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+  function toggleSave() {
+    const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+    if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+    else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+  }
+</script>
+
+</body>
+</html>

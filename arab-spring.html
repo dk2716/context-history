@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Arab Spring — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="event-page">
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type event">Event</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>Events</span><span class="breadcrumb-sep">›</span>
+      <span>Middle East &amp; North Africa</span><span class="breadcrumb-sep">›</span>
+      <span>The Arab Spring</span>
+    </div>
+    <div class="hero-region-tag">Arab World · December 2010 – 2013</div>
+    <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+      <div style="flex:1;min-width:0;">
+        <h1 style="margin-top:0;">The Arab Spring</h1>
+        <p class="hero-sub">A wave of popular uprisings that swept the Arab world in 2011, toppled four governments, and produced a counter-revolution so ferocious that scholars now describe the period that followed as a new apex of repression in modern Arab history.</p>
+        <div class="hero-meta">
+          <span>~20 min read</span><span>·</span>
+          <span>6 academic sources</span><span>·</span>
+          <span>Last updated June 2026</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Tahrir_Square_Rally.jpg/960px-Tahrir_Square_Rally.jpg" alt="The Arab Spring"
+          style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(232,168,56,0.25);display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav">
+      <li><a href="#facts">Quick Facts</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#figures">Key Figures</a></li>
+      <li><a href="#events">Key Events</a></li>
+      <li><a href="#diffusion">How It Spread</a></li>
+      <li><a href="#turning">Turning Points</a></li>
+      <li><a href="#outcomes">Country Outcomes</a></li>
+      <li><a href="#repression">The Counter-Revolution</a></li>
+      <li><a href="#matters">Why It Matters</a></li>
+      <li><a href="#legacy">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <article>
+
+    <section id="facts">
+      <div class="quick-facts">
+        <div class="qf-item"><div class="qf-label">Trigger</div><div class="qf-value">Mohamed Bouazizi's self-immolation, Sidi Bouzid, Tunisia — December 17, 2010</div></div>
+        <div class="qf-item"><div class="qf-label">Duration</div><div class="qf-value">Wave: December 2010 – late 2013 · Long aftermath: ongoing</div></div>
+        <div class="qf-item"><div class="qf-label">Region affected</div><div class="qf-value">18+ countries in the Arab world; mass protests in at least 12</div></div>
+        <div class="qf-item"><div class="qf-label">Governments overthrown</div><div class="qf-value">4 — Tunisia, Egypt, Libya, Yemen (though Libya and Yemen became civil wars)</div></div>
+        <div class="qf-item"><div class="qf-label">Civil wars ignited</div><div class="qf-value">3 — Libya (2011–ongoing), Syria (2011–ongoing), Yemen (2014–ongoing)</div></div>
+        <div class="qf-item"><div class="qf-label">Death toll</div><div class="qf-value">500,000+ in Syria alone by 2021; 377,000+ in Yemen by 2021; tens of thousands across other countries</div></div>
+        <div class="qf-item"><div class="qf-label">Displaced</div><div class="qf-value">Syria: 13 million (half the pre-war population) — the largest refugee crisis since World War II</div></div>
+        <div class="qf-item"><div class="qf-label">Democratic outcomes</div><div class="qf-value">One — Tunisia (2011–2021), before President Kais Saied's self-coup in July 2021 ended it</div></div>
+        <div class="qf-item"><div class="qf-label">Key slogan</div><div class="qf-value">"The people want to overthrow the regime" (Arabic: <em>Al-shaʻb yurīd isqāṭ al-niẓām</em>)</div></div>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>Background</h2>
+      <p>By December 2010, the Arab world had been living under the same set of authoritarian governments for a generation. Hosni Mubarak had ruled Egypt for 29 years. Zine El Abidine Ben Ali had ruled Tunisia for 23 years. Muammar Gaddafi had ruled Libya for 41 years. Hafez al-Assad had handed Syria to his son Bashar like a family business. Ali Abdullah Saleh had governed Yemen for three decades. These were not simply long-serving governments: they were kleptocratic systems that had hollowed out their economies, bought off their militaries, and built security services whose primary purpose was the suppression of political life. The median age of the Arab world was around 25 years old — which meant that most people in these countries had never known any other government, and the only economy most young Arabs had experienced was a stagnant one in which connections to power mattered far more than education or talent.</p>
+
+      <p>Youth unemployment across the Middle East and North Africa averaged 25-30% — roughly double the global average — and higher in practice given how official statistics were calculated. Egypt's official youth unemployment was around 25%, but surveys suggested the real figure was higher and that a significant portion of young graduates were underemployed in jobs far below their qualifications. Tunisia's educated classes had long experienced the particular frustration of a university system that expanded rapidly in the 1990s and 2000s, producing graduates for whom no jobs existed. The structural pressure this created was visible for years before 2010; what changed was the trigger.</p>
+
+      <p>Three factors made 2011 different from earlier moments of Arab frustration. First, Al Jazeera — the Qatari satellite channel launched in 1996 — had spent fifteen years building a genuinely pan-Arab public sphere, covering Arab news in a way that state-run channels would not. By 2011 it was the dominant TV news source across the Arab world, capable of broadcasting protest footage from Tunis or Cairo within minutes. Second, social media — Facebook, Twitter, and YouTube — had penetrated Arab urban populations sufficiently to enable coordination that bypassed state media control. Egypt had approximately five million Facebook users by January 2011; Tunisia had proportionally higher internet penetration for its population size. Third, and most importantly, Tunisia happened first — and when the Tunisian protesters succeeded in driving Ben Ali to flee the country on January 14, 2011, they demonstrated something that had not been demonstrated in living memory: that an Arab dictator could actually be removed by popular pressure. The demonstration effect, as political scientists call it, was immediate and electrifying.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">25–30%</div><div class="stat-label">Youth unemployment across MENA — roughly double the global average — the structural pressure underlying 2011</div></div>
+        <div class="stat-box"><div class="stat-number">4</div><div class="stat-label">Long-serving Arab governments overthrown in the 2011 wave: Tunisia, Egypt, Libya, Yemen</div></div>
+        <div class="stat-box"><div class="stat-number">Dec 17, 2010</div><div class="stat-label">The date Mohamed Bouazizi set himself on fire in Sidi Bouzid, Tunisia — igniting protests that spread across 18+ countries</div></div>
+        <div class="stat-box"><div class="stat-number">18 days</div><div class="stat-label">Duration of Tahrir Square protests before Mubarak resigned — the fastest fall of any Arab leader in 2011</div></div>
+      </div>
+    </section>
+
+    <section id="figures">
+      <h2>Key Figures</h2>
+      <div class="figures-grid">
+        <div class="figure-card">
+          <div class="figure-name">Mohamed Bouazizi</div>
+          <div class="figure-role">Street vendor · Tunisia · The Trigger</div>
+          <div class="figure-desc">A 26-year-old fruit and vegetable vendor in Sidi Bouzid who had been supporting his widowed mother and six siblings from his cart since he was a child. On December 17, 2010, a municipal inspector confiscated his scales and reportedly slapped him. After being humiliated at the governor's office when he tried to complain, he poured fuel over himself and set himself alight in front of the building. His act of protest — against petty corruption, humiliation, and the impossibility of dignified livelihood — was filmed and uploaded to the internet. He died of his injuries on January 4, 2011.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Zine El Abidine Ben Ali</div>
+          <div class="figure-role">President of Tunisia, 1987–2011</div>
+          <div class="figure-desc">A former general and interior minister who seized power in a bloodless coup in 1987. His Tunisia was the Arab world's most economically developed police state — relatively high per-capita income, high female literacy, moderate Islam — but also thoroughly repressive, with a network of informants and torture centres. Protests reached Tunis on January 13, 2011; he fled to Saudi Arabia the following day. He died in exile in Jeddah in 2019, never tried for crimes committed during his rule.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Hosni Mubarak</div>
+          <div class="figure-role">President of Egypt, 1981–2011</div>
+          <div class="figure-desc">Air force commander who succeeded Anwar Sadat after Sadat's assassination. He governed Egypt for thirty years with a combination of US aid, emergency law in place continuously since 1981, and a security apparatus — the Interior Ministry's State Security Investigations — that penetrated every layer of Egyptian society. Protests in Tahrir Square began January 25, 2011. On February 2, regime supporters attacked protesters on horseback and camelback — the "Battle of the Camel" — in a scene broadcast live by Al Jazeera. He resigned on February 11 after the army made clear it would not massacre the protesters. He died in 2020.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Wael Ghonim</div>
+          <div class="figure-role">Google executive and Tahrir organiser · Egypt</div>
+          <div class="figure-desc">A Google marketing executive in the Gulf who created the Facebook page "We Are All Khaled Said" after a young Alexandrian man named Khaled Said was beaten to death by police in June 2010. The page attracted hundreds of thousands of followers and became one of the primary online organising tools for the January 25 protests. Ghonim was detained by Egyptian security services for twelve days; his release and tearful television interview on February 7 reinvigorated a protest movement that had been faltering. He later grew disillusioned with Egyptian politics after the military's counter-revolution.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Muammar Gaddafi</div>
+          <div class="figure-role">Leader of Libya, 1969–2011</div>
+          <div class="figure-desc">The most eccentric and unpredictable of the Arab dictators to face the 2011 uprisings. Unlike Ben Ali and Mubarak, Gaddafi chose immediate, unrestrained violence — declaring that he would "cleanse Libya house by house" and "hunt down protesters like rats." This language, broadcast internationally, provided the immediate justification for UN Security Council Resolution 1973 and NATO's subsequent military intervention. He was captured hiding in a drainage pipe near Sirte on October 20, 2011, and executed on the spot by rebel fighters. His death opened a vacuum that Libya has not filled since.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Bashar al-Assad</div>
+          <div class="figure-role">President of Syria, 2000–present</div>
+          <div class="figure-desc">An ophthalmologist who became president on his father Hafez's death because his intended-heir brother Basel died in a car accident in 1994. The Syrian uprising began in March 2011 in the southern city of Daraa, sparked by the arrest and torture of teenagers who had written anti-government graffiti. Assad's decision — made within weeks — to use live fire on protesters rather than offer meaningful concessions converted a protest movement into an armed insurgency and then a multi-sided civil war. Over 500,000 people died. Assad survived, backed by Russian airpower and Iranian militias.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">King Hamad bin Isa Al Khalifa</div>
+          <div class="figure-role">King of Bahrain · The Suppressed Uprising</div>
+          <div class="figure-desc">The Sunni monarch of a majority-Shia country where protests in Pearl Roundabout, Manama, reached extraordinary scale — some estimates suggest a quarter of the entire Bahraini population protested at some point in February-March 2011, making it, as Josua and Edel note, "arguably the largest per capita protests in human history." He survived because Saudi Arabia and the UAE sent tanks across the causeway on March 14, 2011, crushing the uprising. The Pearl Roundabout — the focal point of protests — was physically demolished to remove the symbol.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Barack Obama &amp; Hillary Clinton</div>
+          <div class="figure-role">US President and Secretary of State, 2009–2013</div>
+          <div class="figure-desc">The Obama administration's response to the Arab Spring was shaped by genuine ambivalence: torn between strategic alliances with the threatened governments and stated commitments to democratic values. Obama eventually called for Ben Ali and Mubarak to step down, supported the NATO intervention in Libya (while "leading from behind"), and applied verbal pressure on Assad without providing decisive support to the Syrian opposition. Clinton's State Department was more actively engaged in early democracy promotion. Their cautious management of the uprisings — and later failure to prevent the counter-revolution in Egypt — defined a foreign policy legacy contested ever since.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <h2>Key Events</h2>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">DECEMBER 17, 2010 – JANUARY 14, 2011</div>
+            <div class="tl-title">Tunisia: The Spark That Lit the Region</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Mohamed Bouazizi's self-immolation on December 17, 2010 in Sidi Bouzid was not the first act of protest suicide in the Arab world — but it was the first whose video footage spread instantly on social media, captured Al Jazeera's attention, and triggered protests that escalated rather than being contained. Within days of his act, protests were spreading from Sidi Bouzid — a provincial agricultural town with high unemployment — toward Tunis. Ben Ali's security forces killed protesters; more protests followed; the killings were broadcast. The cycle of protest, repression, and intensification unfolded over four weeks.</p>
+          <p>What made Tunisia special was the particular weakness of Ben Ali's position. The Tunisian military, unlike Egypt's army with its vast business interests, had no stake in the regime's survival. When Ben Ali asked the military chief to order soldiers to fire on protesters, he refused. With his security apparatus declining to massacre citizens in the streets, Ben Ali had no instrument for restoring order — and on January 14, 2011, he boarded a plane to Saudi Arabia. He was the first Arab dictator in forty years to be overthrown by his own population. Magee and Massoud's quantitative research on protest diffusion specifically identifies Tunisia's success as the key "demonstration effect" that made the subsequent regional wave possible — it showed other Arab populations that removal of a dictator by protest was not just theoretically conceivable but practically achievable.</p>
+          <div class="tl-sources"><span class="src-chip">Magee & Massoud (2022)</span><span class="src-chip">Lynch (2012)</span><span class="src-chip">Gelvin (2012)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">JANUARY 25 – FEBRUARY 11, 2011</div>
+            <div class="tl-title">Egypt: Tahrir Square and the Fall of Mubarak</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Protests in Egypt began on January 25, 2011 — a date deliberately chosen because it was National Police Day, a holiday marking a 1952 battle against British forces that Egyptians now used sardonically to highlight the brutality of their own police. The "We Are All Khaled Said" Facebook page and other online networks had been building for months; Wael Ghonim and other activists had planned a National Day of Revolt for January 25. When it came, hundreds of thousands turned out in Tahrir Square ("Liberation Square") in Cairo and in cities across the country. The government's response — shutting down the internet on January 27, then mobile phone networks — made no difference. Protesters were already in the streets; the internet shutdown may even have encouraged people who did not know about the protests online to go see what was happening in person.</p>
+          <p>The critical moment came on February 2 — the "Battle of the Camel" — when regime-organised thugs, some on horseback and camelback, attacked protesters in Tahrir Square in a scene broadcast live internationally. Rather than intimidating protesters into leaving, the images galvanised domestic and international opinion. Mubarak's army watched but did not intervene to stop the attack, and crucially did not fire on protesters. On February 11, Omar Suleiman, Mubarak's intelligence chief, appeared on Egyptian state television to announce Mubarak's resignation. Tahrir Square erupted; the images of Egyptian celebration swept the region.</p>
+          <p>Magee and Massoud's research specifically identifies Egypt as the "pivotal state" in protest diffusion — the country whose success was most influential in spreading the protest wave to others. Egypt was not just larger than Tunisia; its geographical and political centrality to the Arab world gave its revolution a resonance that Tunisia's, despite coming first, could not replicate. Their quantitative model found that Egypt's success was the single strongest predictor of protest activity elsewhere in the Arab League in the weeks that followed.</p>
+          <div class="tl-sources"><span class="src-chip">Magee & Massoud (2022)</span><span class="src-chip">Lynch (2012)</span><span class="src-chip">Josua & Edel (2021)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">FEBRUARY 14 – MARCH 14, 2011</div>
+            <div class="tl-title">Bahrain: The Uprising That Was Crushed by Foreign Tanks</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Protests in Bahrain began on February 14, 2011 — a day chosen to mark the tenth anniversary of a pro-democracy referendum and constitution. The Pearl Roundabout in the capital Manama became Bahrain's Tahrir Square: a focal point for protests that, according to Josua and Edel's research, at their peak involved approximately one in four Bahraini citizens — a per capita turnout that they describe as "arguably the largest per capita protests in human history." The protesters were predominantly Shia (Bahrain's majority), demanding political reform in a state ruled by a Sunni royal family backed by Gulf neighbours deeply hostile to Shia political mobilisation of any kind.</p>
+          <p>The Bahraini government initially made limited concessions, then reversed course. On February 17, security forces moved into Pearl Roundabout at night, killing and wounding protesters — a crackdown that produced international condemnation and even larger protests. On March 14, 2011, the critical moment arrived: a Saudi-led Gulf Cooperation Council force of approximately 1,500 troops crossed the causeway connecting Saudi Arabia to Bahrain. This intervention — the Saudi-led GCC intervention in Bahrain — is identified by multiple scholars as the beginning of the Arab counter-revolution. The protests were crushed. Bahrain declared martial law. Pearl Roundabout was demolished and replaced with a highway interchange so that the physical symbol of protest could not be reoccupied. Several thousand people were arrested; hundreds tortured; medical personnel who treated wounded protesters were prosecuted. A Bahraini Formula One grand prix continued as scheduled in April.</p>
+          <p>Josua and Edel classify Bahrain, alongside Egypt, as a case of "counterrevolutionary upscaling of repression" — where the initial uprising was met with qualitatively and quantitatively greater state violence than had been applied before 2011. Their Freedom of the Net data shows Bahrain's internet freedom score worsening from 62 to 71 in the years following the uprising, reflecting the systematic expansion of digital surveillance and repression.</p>
+          <div class="tl-sources"><span class="src-chip">Josua & Edel (2021)</span><span class="src-chip">Magee & Massoud (2022)</span><span class="src-chip">Lynch (2012)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">FEBRUARY 17 – OCTOBER 20, 2011</div>
+            <div class="tl-title">Libya: NATO Intervention and Gaddafi's Death</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Libya's uprising began in Benghazi on February 17, 2011 — triggered partly by the arrest of a human rights lawyer named Fathi Terbil who represented families of the 1,200 prisoners massacred in Abu Salim prison in 1996. Unlike Tunisia and Egypt, where the military's decision not to fire on crowds was decisive, Gaddafi's security apparatus and African mercenary forces immediately used live fire, aircraft, and heavy weapons against protesters. Gaddafi himself gave speeches promising to "cleanse Libya house by house" and hunt protesters "like rats" — extraordinary language that was immediately broadcast internationally.</p>
+          <p>The Libyan situation produced the most consequential international intervention of the Arab Spring. On March 17, 2011, the UN Security Council passed Resolution 1973, authorising a no-fly zone and "all necessary measures" to protect civilians. France, the UK, and the United States — with NATO coordination and Arab League support — launched airstrikes on Libyan government forces on March 19. The intervention's stated purpose was civilian protection under the Responsibility to Protect doctrine; its actual effect was to provide air cover for the rebel advance. Gaddafi was captured hiding in a drainage pipe near his hometown of Sirte on October 20, 2011, and executed by rebel fighters on the spot. The video of his death was widely circulated. Libya had no functioning national government with any meaningful territorial authority after that point. The civil war that followed has continued, in various forms, ever since. Magee and Massoud's quantitative research shows that Libya's protest surge in early 2011 followed specifically from its strong bilateral trade relationships with Tunisia (its largest Arab League trading partner) and Egypt (its second largest) — geographical proximity alone did not explain the diffusion.</p>
+          <div class="tl-sources"><span class="src-chip">Magee & Massoud (2022)</span><span class="src-chip">Josua & Edel (2021)</span><span class="src-chip">Lynch (2012)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">MARCH 15, 2011 – PRESENT</div>
+            <div class="tl-title">Syria: Graffiti, Daraa, and the Civil War That Consumed a Country</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The Syrian uprising began in the southern city of Daraa in mid-March 2011, sparked by an incident that crystallises everything about how Assad's government worked: security forces arrested, detained, and tortured a group of teenagers — some as young as ten years old — for writing anti-government graffiti on a school wall. The children were the "children of Daraa." Their detention produced local protests. Security forces fired on protesters, killing several. The killings produced larger protests. Within weeks protests were spreading across Syria.</p>
+          <p>The critical decision was Assad's. In the first weeks, there were signals from within his own government that meaningful political concessions — lifting emergency law, releasing political prisoners, holding local elections — might contain the protests. Assad announced some reforms but simultaneously expanded the use of security forces against protesters. The key question — whether the protests could have been satisfied by genuine reform — is one historians have debated since. What is clear is that Assad chose escalating force, and that this choice, within weeks, converted a protest movement into an armed insurgency as communities who had seen relatives killed began to arm themselves for self-defence.</p>
+          <p>The Syrian civil war became the Arab Spring's worst catastrophe. Russia and Iran intervened to sustain Assad; Turkey, Gulf states, and eventually the US backed various opposition groups; ISIS exploited the vacuum to seize large territories in Syria and Iraq from 2013-2014 onwards; Kurdish forces established autonomous control over the northeast. By 2021, estimates of deaths in Syria exceeded 500,000. Thirteen million Syrians — more than half the pre-war population — had fled their homes; 6.6 million became refugees abroad, the largest refugee population from a single conflict since World War II. Josua and Edel classify Syria as one of three cases of "repression during violent internationalized conflicts" — alongside Libya and Yemen — where state repression triggered civil war and the security apparatus itself split between loyalists and defectors.</p>
+          <div class="tl-sources"><span class="src-chip">Josua & Edel (2021)</span><span class="src-chip">Lynch (2012)</span><span class="src-chip">Gelvin (2012)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">JUNE 2012 – JULY 2013</div>
+            <div class="tl-title">Egypt's Democratic Interlude — and the Counter-Revolution</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Egypt held its first competitive presidential elections in June 2012. Mohamed Morsi of the Muslim Brotherhood won with 51.7% — a narrow majority that reflected deep ambivalence, since many liberal and secular Egyptians voted for him primarily to block the election of Ahmed Shafik, Mubarak's last prime minister. Morsi's troubled one-year presidency is the pivot of everything that followed in Egypt. He issued a constitutional declaration in November 2012 placing his decisions above judicial review — triggering mass protests from the liberals who had supported his election. The economy continued to deteriorate. His government proved unable to manage either the military establishment or the fractured political opposition.</p>
+          <p>On July 3, 2013, Defense Minister Abdel Fattah el-Sisi — appointed by Morsi eight months earlier — announced Morsi's removal and the suspension of the constitution. Gulf states immediately pledged $12 billion to the new government. On August 14, 2013, security forces dispersed sit-in protests by Brotherhood supporters at Rabaa al-Adawiya Square and al-Nahda Square; at least 817 people were killed at Rabaa alone in approximately ten hours, in what Human Rights Watch documented as one of the largest single-day killings of protesters in modern history. Josua and Edel's quantitative data shows Egyptian repression levels rising sharply from 2013 and remaining at levels higher than any point in the Mubarak years through 2018 and beyond. This counter-revolution effectively ended Egypt's democratic experiment. Steven Heydemann's 2013 prediction — that Arab authoritarianism would become "darker, more repressive, more sectarian, and even more deeply resistant to democratization than in the past" — proved accurate.</p>
+          <div class="tl-sources"><span class="src-chip">Josua & Edel (2021)</span><span class="src-chip">Human Rights Watch (2014)</span><span class="src-chip">Lynch (2012)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">2011 – 2014</div>
+            <div class="tl-title">Monarchies and the "Readjusted Repression" — Jordan, Morocco, Gulf States</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Arab monarchies faced the 2011 wave very differently from republics. Jordan, Morocco, Kuwait, Oman, and Saudi Arabia all experienced protests — some substantial — but none saw a government fall. Josua and Edel classify these states as the "readjusted repression" category: they responded to the uprisings with a mix of limited political concessions, increased welfare spending, and expanded legal frameworks for repression. Morocco's King Mohammed VI announced constitutional reforms in 2011 that devolved some formal powers, successfully splitting the protest coalition by giving reformist elites something to work with while maintaining effective royal control. Jordan's King Abdullah similarly reshuffled governments and made concessions while ultimately maintaining the monarchy's paramount position.</p>
+          <p>Saudi Arabia, the Gulf's hegemon, took a harder line. The domestic Arab Spring in Saudi Arabia was managed through welfare largesse — a $130 billion social spending package announced in February 2011 — combined with a pre-emptive crackdown on any organised political activity. Riyadh's deeper intervention was regional: funding Bahrain's crackdown, supporting Egypt's counter-revolution under Sisi, and ultimately intervening militarily in Yemen in 2015 against Houthi forces who had displaced the Saudi-backed government. Saudi Arabia's Freedom of the Net score worsened from 70 to 73 over this period, reflecting expanded digital repression infrastructure.</p>
+          <div class="tl-sources"><span class="src-chip">Josua & Edel (2021)</span><span class="src-chip">Gelvin (2012)</span></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="diffusion">
+      <h2>How It Spread: The Science of Protest Contagion</h2>
+      <p>The Arab Spring was the first large-scale protest wave to be studied in real time using digital data, and the research that resulted fundamentally changed how political scientists understand how revolutions spread. The most rigorous quantitative analysis — published by Magee and Massoud in <em>International Interactions</em> in 2022, using weekly protest data across all Arab League countries from 2010 to 2012 — produced findings that challenge common assumptions about how political uprisings diffuse.</p>
+
+      <div class="callout info">
+        <div class="callout-label">Research Finding</div>
+        <h4>Geography did not drive diffusion — trade did</h4>
+        <p>Magee and Massoud's statistical model found that sharing a land border with a country experiencing protests did NOT significantly increase protest activity. What did matter was bilateral trade: countries with stronger trade links to protesting countries were more likely to see domestic protests increase. This suggests that the shared economic networks and information flows that accompany trade relationships are more important channels for protest diffusion than simple geographic proximity. Internet access also significantly enhanced the diffusion effect, consistent with the role of Al Jazeera and social media in creating a shared Arab public sphere.</p>
+      </div>
+
+      <p>The short-run finding was striking: a 1% increase in protests in other Arab League countries in a given week predicted a 0.4% increase in domestic protests the following week. But the longer-run picture was more complex. Over three weeks, only certain types of events in other countries sustained protest waves: specifically, protests that led to government concessions or reforms spread sustainably, while protests that were violently suppressed in other countries actually reduced protest activity elsewhere. Magee and Massoud estimated that a 1% increase in repression in one Arab country predicted a 1.1% decrease in protests in other Arab countries over the following three weeks.</p>
+
+      <p>This finding — that repression is "contagious" across borders in the opposite direction from protest — has a straightforward interpretation that Magee and Massoud develop through a Prisoner's Dilemma framework. For authoritarian governments, repression poses a structural dilemma: it raises protests domestically (by enraging citizens) but reduces protests in other countries (by demonstrating that protest is futile and dangerous). This creates an incentive for authoritarian governments to coordinate their repressive strategies — if one country's visible crackdown demoralises protesters in neighbouring countries, all authoritarian governments benefit from any single government's repression. This precisely describes the logic of the Saudi-led GCC intervention in Bahrain in March 2011: Saudi Arabia and the UAE benefited regionally from demonstrating that the protest wave had limits. Magee and Massoud quote an account from US Secretary of Defense Robert Gates, who reported that Saudi Prince Salman had told the King that Arab rulers "had erred by showing weakness" in Tunisia and Egypt — precisely the Prisoner's Dilemma logic their statistical model identifies.</p>
+
+      <div class="callout amber">
+        <div class="callout-label">Shared Slogans and the Making of a Movement</div>
+        <p>One of the distinctive features of the Arab Spring was the adoption of shared slogans across the region. "The people want to overthrow the regime" (<em>Al-shaʻb yurīd isqāṭ al-niẓām</em>) spread from Tunisia to Egypt to Bahrain to Syria to Yemen — the same Arabic phrase, chanted in the same meter, connecting protests that were otherwise responding to entirely different national contexts. "Dégage" (French for "Get out!") from Tunisia; "Irhal" (Arabic for "Leave!") in Egypt; "Karameh" ("Dignity") as a common theme. Al Jazeera's coverage and social media sharing meant that protesters in Cairo knew instantly what slogans were being chanted in Tunis, and deliberately adopted and adapted them.</p>
+      </div>
+    </section>
+
+    <section id="turning">
+      <h2>Turning Points</h2>
+      <div class="turning-points">
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 1</div>
+          <div class="turning-card-title">The Tunisian Military Refused to Fire</div>
+          <p>When Ben Ali ordered the military chief to use deadly force against protesters in January 2011, he refused. This single decision — by a military institution that, unlike Egypt's army, had no economic empire of its own to protect — ended the Tunisian regime. Had the Tunisian military obeyed, the Arab Spring might never have begun; the "demonstration effect" of Tunisia's success depended entirely on the fact that it succeeded. The lesson authoritarian leaders drew was the opposite: ensure military loyalty through privileged business interests, never let the military become professionally autonomous.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 2</div>
+          <div class="turning-card-title">Saudi Arabia Sends Tanks to Bahrain — March 14, 2011</div>
+          <p>Multiple scholars identify the Saudi-led GCC military intervention in Bahrain as the moment the Arab counter-revolution began. By physically crushing the largest per-capita uprising in Arab history through foreign military force, the Gulf monarchies demonstrated that the protest wave had limits — and that authoritarian governments were capable of collective action in their own defence. Magee and Massoud's statistical model confirms that this was the moment regional protest diffusion began to slow. Had the international community applied the same pressure to Bahrain as it was simultaneously applying to Libya, the Arab Spring's trajectory might have been entirely different.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 3</div>
+          <div class="turning-card-title">Assad Chooses Force in Syria — March-April 2011</div>
+          <p>In the first weeks of the Syrian uprising, Assad faced a genuine choice: meaningful political reform (lifting emergency law, releasing prisoners, tolerating a political opposition) or escalating security force deployment. His government briefly discussed reform options. Assad chose force. This decision, made within weeks of the protests beginning in Daraa, was the decision that converted what might have been a containable political crisis into an armed insurgency and then a catastrophic civil war. The 500,000 deaths and 13 million displaced people that followed are the consequences of that single choice.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 4</div>
+          <div class="turning-card-title">Egypt's Sisi Coup Closes the Democratic Opening — July 3, 2013</div>
+          <p>When Sisi removed Morsi and the security forces subsequently massacred Rabaa sit-in protesters, it marked more than Egypt's return to military rule. Egypt was the Arab Spring's most watched country — the most populous Arab state, the traditional centre of Arab political culture. Its counter-revolution, financed by Gulf petrodollars and tacitly accepted by Washington, sent a clear signal to every Arab government that remained: the international community would ultimately accept a return to authoritarian order. The Sisi coup confirmed Heydemann's prediction that Arab authoritarianism would emerge from the Arab Spring darker and more repressive than before.</p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"Arab authoritarianism is likely to become darker, more repressive, more sectarian, and even more deeply resistant to democratization than in the past."</blockquote>
+        <cite>— Steven Heydemann, <em>Resilient Authoritarianism</em> (2013) — a prediction made in the middle of the Arab Spring that proved comprehensively accurate, as documented by subsequent Political Terror Scale data showing unprecedented regional repression levels from 2013 onward.</cite>
+      </div>
+    </section>
+
+    <section id="outcomes">
+      <h2>Country-by-Country Outcomes</h2>
+      <p>Josua and Edel's analytical framework — derived from Political Terror Scale data across MENA from 2010 to 2020 — classifies the Arab Spring's political outcomes into four distinct trajectories based on the type of government response. Their framework is the most rigorous comparative account of why the same protest wave produced such radically different results in different countries.</p>
+
+      <div class="ideology-grid">
+        <div class="ideology-card">
+          <div class="ideology-card-title">Reduced Repression — Tunisia Only</div>
+          <p>Tunisia is the Arab Spring's sole democratic success story. The Jasmine Revolution produced a genuine democratic transition: a new constitution in 2014, competitive elections, a peaceful transfer of power when the Islamist Ennahda party lost the 2014 elections. Three structural factors distinguished Tunisia: the military had no economic interests in the regime's survival and chose professional neutrality; civil society was stronger than anywhere else in the Arab world (particularly the UGTT labour union, which brokered the 2013 National Dialogue that prevented Tunisia sliding into civil war); and Tunisian Islam was more pluralist and socially moderate. Even Tunisia's success proved temporary: President Kais Saied suspended parliament in July 2021, concentrating executive power in what many scholars classify as a soft coup. By 2022 Tunisia's democratic gains had largely been reversed.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Counterrevolutionary Upscaling — Egypt &amp; Bahrain</div>
+          <p>Egypt and Bahrain are the clearest cases of counter-revolutionary upscaling: both experienced significant uprisings that were subsequently met with levels of repression higher than anything seen before 2011. Egypt under Sisi has been classified by Josua and Edel as "more repressive than ever under Mubarak" — a remarkable claim given Mubarak's 30-year record. Bahrain, crushed with Saudi help, saw political life reduced to a level not seen since the 1980s. In both cases, the uprising actually worsened political conditions for the populations that rose up — the opposite of the outcome protesters had sought.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Violent Internationalized Conflict — Libya, Syria, Yemen</div>
+          <p>In Libya, Syria, and Yemen, the uprising triggered civil wars in which state security apparatus split between government loyalists and defectors, external powers intervened on multiple sides, and the conflict became self-sustaining even after the original protest movement was overwhelmed by armed violence. Each produced humanitarian catastrophes on an enormous scale. Libya remains ungoverned. Syria's Assad regime survives over a destroyed country with Iranian and Russian backing. Yemen's war — precipitated by Houthi forces exploiting the political vacuum and the subsequent Saudi-led military intervention — produced over 377,000 deaths by 2021 and the world's largest humanitarian crisis by several measures.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Readjusted Repression — Monarchies</div>
+          <p>Arab monarchies managed 2011 through a combination of welfare spending increases, limited constitutional reforms, and expanded repressive capacity. Jordan and Morocco offered cosmetic constitutionalism. Saudi Arabia spent $130 billion on social programmes while crushing any political organisation. The GCC states generally used oil revenues to buy off discontent while upgrading their surveillance infrastructure. Josua and Edel's Freedom of the Net data shows consistent deterioration in digital freedom across these states from 2011 onward, reflecting the deliberate expansion of internet censorship, social media monitoring, and digital surveillance — including the infrastructure later used to track Jamal Khashoggi before his 2018 murder.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="repression">
+      <h2>The Counter-Revolution and the Return of Repression</h2>
+      <p>Josua and Edel's 2021 research article — one of the most important quantitative assessments of what the Arab Spring actually produced — draws on Political Terror Scale data to demonstrate that repression across the Arab world reached levels in 2013-2018 that were unprecedented in the post-WWII period. Their finding is unambiguous: by every available measure, the Arab Spring made political conditions worse for most people in the Arab world, not better. The PTS data shows a sharp jump in regional repression in 2013 (the year of Egypt's counter-revolution and the deepening of the Syria civil war), a peak in 2015 (coinciding with the Saudi intervention in Yemen), and sustained elevated levels through 2018.</p>
+
+      <div class="callout warning">
+        <div class="callout-label">Documented Pattern</div>
+        <h4>Digital Repression as the New Normal</h4>
+        <p>Josua and Edel document a systematic pattern of "digital repression" expanding across the Arab world after 2011 — states using digital technologies not just to monitor citizens but to actively persecute and eliminate opponents. Freedom of the Net scores (where higher scores = less freedom) worsened significantly across the region: Egypt deteriorated from 54 to 72; Bahrain from 62 to 71; Saudi Arabia from 70 to 73. The Giulio Regeni case — the Italian PhD student tortured and killed in Egypt in February 2016 while studying independent trade unions — illustrates the new reality: even a Cambridge-affiliated foreign researcher studying something as relatively benign as labour organisation could be surveilled, kidnapped, and killed, with no serious international consequence for the Egyptian government responsible.</p>
+      </div>
+
+      <p>The authoritarian learning that followed 2011 was not just about repression tactics. Josua and Edel identify a significant increase in what they call "transnational repression" — security services from multiple Arab states collaborating to pursue dissidents across borders, extending their reach into diaspora communities in Europe and North America. The murder of Saudi journalist Jamal Khashoggi in the Saudi consulate in Istanbul in October 2018 — using digital surveillance including Pegasus spyware to track his communications in the weeks preceding his death — is the most internationally visible example of this pattern, but not the only one.</p>
+
+      <p>The Muslim Brotherhood's designation as a terrorist organisation by Egypt, Saudi Arabia, and the UAE after 2013 is another dimension of this picture. Josua and Edel document how the "terrorist" frame was applied with ever-expanding scope: initially confined to the Brotherhood, it was progressively extended to include secular human rights organisations, journalists, lawyers, and academics. This is what they mean by "eliminating" repression (as distinct from "constraining" or "incapacitating") — removing opponents from political life permanently, either through long-term imprisonment, forced exile, or death.</p>
+    </section>
+
+    <section id="matters">
+      <h2>Why It Matters Today</h2>
+      <p>The Arab Spring's consequences are not historical — they are present. The humanitarian catastrophes in Syria and Yemen continue as of 2026. The counter-revolution in Egypt has produced a security state that scholars describe as historically unprecedented in its repressiveness. And the structural conditions that produced the 2011 uprisings — youth unemployment, demographic pressure, political stagnation — have in most cases worsened rather than improved.</p>
+
+      <div class="matters-grid">
+        <div class="matters-card">
+          <h3>The Syrian and Yemeni Catastrophes Continue</h3>
+          <p>Syria and Yemen remain among the world's worst humanitarian crises. Syria's civil war — which the Assad regime survives thanks to Russian airpower and Iranian militias — has left the country in ruins; reconstruction costs have been estimated at over $400 billion. The international community's failure to protect Syrian civilians, despite invoking the Responsibility to Protect, has comprehensively discredited R2P as an operational norm. Yemen's war has produced over 21 million people in need of humanitarian assistance and a cholera crisis of historic scale.</p>
+          <ul class="matters-subpoints">
+            <li>Syria: 500,000+ deaths, 6.6 million external refugees, largest refugee crisis since WWII</li>
+            <li>Yemen: 377,000+ deaths by 2021; 21 million people requiring humanitarian assistance</li>
+            <li>Both conflicts remain active, with no political resolution in sight as of 2026</li>
+            <li>ISIS, which emerged from the Syrian vacuum, committed genocide against Yazidis and sparked terror attacks across Europe</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Egypt's Unprecedented Repression Shapes the Arab Model</h3>
+          <p>Egypt under Sisi is not merely a return to pre-2011 authoritarianism — it is something quantitatively and qualitatively more severe, documented by Josua and Edel through Political Terror Scale data showing levels of state violence without precedent in the post-WWII Egyptian record. Egypt's model — military-led secular authoritarianism, Gulf-funded, tacitly accepted by Western partners — has become the template for what Arab authoritarianism looks like in the post-Arab-Spring era.</p>
+          <ul class="matters-subpoints">
+            <li>60,000–100,000 estimated political prisoners; Amnesty and HRW document systematic torture</li>
+            <li>Giulio Regeni's unsolved murder illustrates limits of international accountability</li>
+            <li>Mohamed Morsi — Egypt's first elected president — died in custody in 2019 without medical care</li>
+            <li>2019 constitutional amendments extend Sisi's possible rule to 2030 and give him judicial appointment power</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Counter-Revolution Set the Terms for a Generation</h3>
+          <p>The Arab Spring and its aftermath have shaped the political consciousness of an entire generation of Arabs. For many young people in the Arab world who participated in 2011, the experience of hope followed by violent crushing has produced a specific political disillusionment — not apathy, exactly, but a strategic calculation that organised political activity against Arab governments produces only worse repression. This calculus, identified in Josua and Edel's research as confirmed by the statistical relationship between repression and subsequent protest levels, has altered political behaviour across the region in ways that will persist for years.</p>
+          <ul class="matters-subpoints">
+            <li>Second wave of Arab protests (2018-2020) in Algeria, Sudan, Lebanon, Iraq — same structural conditions, different tactics learned from 2011</li>
+            <li>Sudan's 2019 uprising succeeded in removing Omar al-Bashir, then was reversed by a 2021 military coup</li>
+            <li>Lebanese protests of 2019 produced no government change; economic collapse deepened</li>
+            <li>The lesson Arab governments drew from 2011 — coordinate, fund each other, upgrade surveillance — remains operative</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Tunisia's Reversal Shows Democracy Is Not Self-Sustaining</h3>
+          <p>Tunisia's democratic experiment — the sole success story of the Arab Spring — lasted approximately a decade. President Kais Saied suspended parliament in July 2021 and assumed emergency powers, concentrating authority in the presidency in a move many scholars classify as a soft coup. By 2023 Tunisia had a new constitution that significantly weakened parliamentary oversight, and the country's Freedom House score had declined substantially. The message is uncomfortable: even the most favourable conditions the Arab Spring produced for democratic transition were insufficient to embed democracy against the pressure of economic crisis and political polarisation.</p>
+          <ul class="matters-subpoints">
+            <li>Tunisia's 2021 "coup within the constitution" demonstrates that democratic consolidation requires sustained economic performance</li>
+            <li>UGTT labour union — the institution credited with saving Tunisian democracy in 2013 — was unable to prevent Saied's power grab</li>
+            <li>Tunisia's economic difficulties (inflation, debt, unemployment) were the immediate context for Saied's move</li>
+            <li>The one Arab Spring success story makes the regional counter-revolution's completeness even starker</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="legacy">
+      <h2>Legacy &amp; Debate</h2>
+      <p>Fifteen years after the first protest in Sidi Bouzid, the central historical question about the Arab Spring is not whether it "succeeded" — it did not, with one partial and ultimately reversed exception — but why it failed so comprehensively and what that failure tells us about the conditions for democratic politics in the Arab world. The scholarly arguments that matter are about structural conditions, agency, and international responsibility.</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Marc Lynch</div>
+          <div class="scholar-card-title">George Washington University · <em>The Arab Uprising: The Unfinished Revolutions of the New Middle East</em> (2012)</div>
+          <div class="scholar-card-verdict">Lynch's account — written during the uprising itself — argues that 2011 represented a genuine revolutionary moment whose outcomes were not predetermined. His emphasis on the role of media, particularly Al Jazeera, in creating a shared Arab public sphere helps explain how protest spread so rapidly across such diverse national contexts. He emphasises agency and contingency: the Arab Spring's failure was not inevitable but resulted from specific choices — by Arab governments, by external powers, by opposition movements — any of which could plausibly have gone differently. His subsequent work has engaged honestly with the disappointment of the counter-revolution.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Maria Josua &amp; Mirjam Edel</div>
+          <div class="scholar-card-title">GIGA Institute / Tübingen · <em>Mediterranean Politics</em> (2021)</div>
+          <div class="scholar-card-verdict">Josua and Edel's research provides the most rigorous empirical case for the Arab Spring as a counter-revolutionary disaster. Their Political Terror Scale data shows that by 2021, every Arab country except Tunisia was more repressive than before 2011 — and Tunisia's gains had since been reversed. Their typology of four repressive trajectories is the best analytical framework for comparing outcomes across the region. They are particularly important on the mechanisms of "counterrevolutionary learning": how governments shared repressive technology, coordinated strategies, and used the "terrorist" frame to eliminate not just Islamist opposition but the entire spectrum of civil society. Open access; essential reading. DOI: 10.1080/13629395.2021.1889298</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Sean Magee &amp; Tarek Masoud</div>
+          <div class="scholar-card-title">Harvard / International Interactions (2022)</div>
+          <div class="scholar-card-verdict">Magee and Massoud's quantitative analysis of protest diffusion provides the most rigorous evidence on how the Arab Spring spread and why it spread where it did — and why repression in one country dampened protests elsewhere. Their finding that trade relationships, not geography, drove diffusion is counterintuitive and important. Their Prisoner's Dilemma framework for understanding why authoritarian governments coordinated repression is the most analytically precise explanation for the GCC intervention in Bahrain and the Gulf states' funding of the Egyptian counter-revolution. Open access. DOI: 10.1080/03050629.2022.2138007</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">James Gelvin</div>
+          <div class="scholar-card-title">UCLA · <em>The Arab Uprisings: What Everyone Needs to Know</em> (2012, Oxford)</div>
+          <div class="scholar-card-verdict">Gelvin's accessible overview is the best single introductory account of the structural conditions that produced 2011 — youth unemployment, demographic pressure, neoliberal economic reforms that widened inequality while dismantling state welfare, and the particular vulnerabilities of republican "presidents for life" systems versus hereditary monarchies. His comparison of why republics fell and monarchies survived is particularly useful: monarchies could credibly claim to be above the corruption of the state, offer legitimate channels for reform, and deploy ethnic or religious legitimacy in ways that ageing secular nationalist republicans simply could not. Widely available and accessible.</div>
+        </div>
+      </div>
+
+      <h3>The Core Contested Questions</h3>
+      <p>The first contested question is whether the Arab Spring's failure was structural or contingent. The structural argument — associated with scholars like Stepan and Linz on democratic transition theory — holds that the Arab world lacked the preconditions for successful democratic consolidation: a politically independent civil society, a professional military without partisan interests, a bourgeoisie capable of sustaining democratic culture, and constitutional traditions that could give democratic institutions legitimacy. On this reading, 2011 failed because the structural conditions for success were absent, and the uprisings could only ever have produced what they produced — brief openings before reverting to authoritarian equilibria.</p>
+
+      <p>The contingency argument holds that Tunisia's success (however temporary) demonstrates that structural determinism is wrong: given the right combination of institutional actors, civil society organisations, and willingness to compromise, democratic transition was achievable in at least one Arab country. What failed in Egypt, Bahrain, Libya, Syria, and Yemen was not structural destiny but specific choices by specific actors — military chiefs, Gulf monarchs, Assad, the Obama administration — that could plausibly have gone differently. The defeat of the Arab Spring was not inevitable; it was decided.</p>
+
+      <p>The second contested question is about the role of political Islam. The Muslim Brotherhood's one year in Egyptian power, and the strong performance of Islamist parties in Tunisia's first elections, produced intense international anxiety about whether democratic processes in the Arab world would simply elect governments hostile to liberalism and Western interests. The debate — whether political Islamist parties can be trusted as democratic actors, or whether their electoral participation is instrumental (using democracy to achieve power before dismantling it) — was shaped by a Morsi presidency that gave genuine ammunition to both sides of the argument. What is clear from the Egyptian case is that the answer the military and its Gulf sponsors chose — disqualifying Islamist political participation through a massacre — produced something comprehensively worse than the Brotherhood government had been or was likely to become.</p>
+
+      <p>The third contested question is about external responsibility. The Obama administration's equivocal response to Egypt's counter-revolution — deliberately avoiding the legal determination that Morsi's removal was a "coup" in order to preserve military aid — and the Gulf states' rapid financial support for Sisi represent the specific international choices that enabled the counter-revolution's financial survival. Whether stronger international pressure could have sustained Egypt's democratic opening is genuinely uncertain; what is not uncertain is that the United States and European Union made specific choices to prioritise stability over accountability that made the counter-revolution considerably easier.</p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">The structural case: why it could only have ended this way</div>
+          <ul>
+            <li>Arab militaries with large economic empires (Egypt) had structural interests in preventing democratic control of the state <span class="perspective-attr">— Abul-Magd (2017)</span></li>
+            <li>Civil societies in most Arab countries were too weak — atomised under decades of authoritarian rule — to sustain organised democratic pressure <span class="perspective-attr">— Brumberg (2014)</span></li>
+            <li>The monarchical legitimacy advantage meant Gulf states could offer reform within a framework of continuity that republican dictators could not credibly replicate <span class="perspective-attr">— Gelvin (2012)</span></li>
+            <li>Oil wealth gave Gulf monarchies the financial capacity to fund counter-revolutions in neighbouring states, creating a structural bias toward authoritarian restoration <span class="perspective-attr">— Josua & Edel (2021)</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">The contingency case: how it could have gone differently</div>
+          <ul>
+            <li>Tunisia succeeded in the same regional environment — demonstrating that structural conditions, while important, were not determinative <span class="perspective-attr">— Stepan (2012)</span></li>
+            <li>The US refusal to apply the "coup" determination to Egypt removed critical international leverage at the decisive moment <span class="perspective-attr">— Kirkpatrick (2018)</span></li>
+            <li>Morsi's constitutional overreach in November 2012 alienated liberal allies who might otherwise have defended his presidency against the military — a political mistake, not a structural destiny <span class="perspective-attr">— Ketchley (2017)</span></li>
+            <li>Assad's choice to use force against Daraa protesters in March 2011, rather than offer reforms being discussed internally, was a decision that converted protest into civil war <span class="perspective-attr">— Lynch (2012)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"A 1% increase in protest behavior in other Arab League countries during the prior week predicts a 0.4% increase in domestic protests the following week. But a 1% increase in repression in other Arab League countries predicts a 1.1% decrease in protests in the home country three weeks later."</blockquote>
+        <cite>— Magee & Massoud, <em>International Interactions</em> (2022) — the statistical signature of authoritarian solidarity: when one government represses, its neighbours' citizens become less likely to protest, creating a collective incentive for the coordination that produced the Arab counter-revolution.</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People at the centre of the Arab Spring</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="abdel-fattah-el-sisi.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg" alt="Abdel Fattah el-Sisi">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Abdel Fattah el-Sisi</div>
+            <div class="topic-preview">The general who overthrew Egypt's first elected president in 2013 and ordered the Rabaa massacre — the defining counter-revolutionary figure who reversed the Arab Spring's most important democratic opening.</div>
+          </a>
+          <a class="topic-card" href="gaddafi.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg" alt="Muammar Gaddafi">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Muammar Gaddafi</div>
+            <div class="topic-preview">His promise to hunt protesters "like rats" directly triggered UN Resolution 1973 and NATO intervention — he was killed by rebel fighters in October 2011, leaving Libya without a functioning government ever since.</div>
+          </a>
+          <a class="topic-card" href="obama.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg" alt="Barack Obama">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Barack Obama</div>
+            <div class="topic-preview">His administration's "leading from behind" on Libya and deliberate avoidance of calling Morsi's removal a "coup" represent the defining American choices of the Arab Spring — both widely criticised.</div>
+          </a>
+          <a class="topic-card" href="gamal-abdel-nasser.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg" alt="Gamal Abdel Nasser">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Gamal Abdel Nasser</div>
+            <div class="topic-preview">The failure of Nasser's Arab nationalist project — and the exhaustion of the secular pan-Arab state model it produced — was the long structural context for 2011; the youth who took to the streets in Tahrir had no living memory of Nasser but lived in the ruins of his political inheritance.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Events before and after</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="libyan-civil-war.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg" alt="The Libyan Civil War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Libyan Civil War</div>
+            <div class="topic-preview">The direct consequence of Gaddafi's fall in 2011 — Libya has been in a state of civil war or political fragmentation ever since, with multiple governments and foreign military interventions competing for control of the country.</div>
+          </a>
+          <a class="topic-card" href="suez-crisis.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg" alt="The Suez Crisis">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Suez Crisis</div>
+            <div class="topic-preview">The last great wave of Arab mass political mobilisation before 2011 — the comparison illuminates how profoundly different the two moments were: Suez was about postcolonial dignity and Arab unity; 2011 was about internal governance, corruption, and economic exclusion.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Concepts essential to understanding 2011</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="pan-arabism.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg" alt="Pan-Arabism">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Pan-Arabism</div>
+            <div class="topic-preview">The pan-Arab ideology that had justified the secular nationalist governments of Nasser and his successors was exhausted by 2011 — the protesters were not demanding pan-Arab unity but domestic accountability, marking a fundamental shift in Arab political imagination.</div>
+          </a>
+          <a class="topic-card" href="responsibility-to-protect.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="The Responsibility to Protect">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">The Responsibility to Protect</div>
+            <div class="topic-preview">Invoked for Libya, ignored for Bahrain, and comprehensively discredited by Syria — the Arab Spring was the definitive test of R2P as an operational international norm, and the results were not flattering.</div>
+          </a>
+          <a class="topic-card" href="baathism.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png" alt="Ba'athism">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Ba'athism</div>
+            <div class="topic-preview">The Ba'athist state in Syria — with its deep security-service penetration, its sectarian military command structure, and its total identification of regime survival with state survival — was specifically designed to survive exactly the kind of challenge the 2011 uprising represented, at whatever cost.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Josua, M., & Edel, M. (2021). The Arab uprisings and the return of repression. <em>Mediterranean Politics,</em> 26(5), 586–611.</span>
+          <span class="src-journal"> DOI: 10.1080/13629395.2021.1889298</span>
+          <span class="src-note">The definitive quantitative account of what the Arab Spring produced in terms of repression across the Arab world. Their four-category typology (reduced repression, counterrevolutionary upscaling, violent internationalized conflict, readjusted repression) is the best analytical framework for comparing outcomes across the region. They draw on Political Terror Scale data and Freedom of the Net scores to demonstrate that by every available measure, the Arab Spring produced worse political conditions for most Arab populations. Open access.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Magee, S., & Massoud, T. (2022). Diffusion of protests in the Arab Spring. <em>International Interactions,</em> 48(6), 1144–1169.</span>
+          <span class="src-journal"> DOI: 10.1080/03050629.2022.2138007</span>
+          <span class="src-note">The most rigorous quantitative analysis of how the Arab Spring spread. Their key findings — that trade relationships drove diffusion more than geographic proximity, that repression in one country suppressed protests in others, and that authoritarian governments had strong Prisoner's Dilemma incentives to coordinate repression — are foundational to understanding the counter-revolution's success. Available open access.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Lynch, M. (2012). <em>The Arab Uprising: The Unfinished Revolutions of the New Middle East.</em></span>
+          <span class="src-journal"> PublicAffairs.</span>
+          <span class="src-note">Written during the uprising itself by one of the leading academic experts on Arab media and politics, this remains the best narrative and analytical account of the Arab Spring's first phase. Lynch's emphasis on Al Jazeera's role in creating a pan-Arab public sphere is particularly valuable. He has written significant subsequent work revising and extending his analysis in light of the counter-revolution. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Gelvin, J. L. (2012). <em>The Arab Uprisings: What Everyone Needs to Know.</em></span>
+          <span class="src-journal"> Oxford University Press.</span>
+          <span class="src-note">The most accessible single-volume introduction to the structural conditions that produced 2011 and the country-by-country outcomes. Gelvin's comparison of why republics fell and monarchies survived is particularly useful, as is his account of the neoliberal economic reforms that widened inequality across the region in the decade before 2011. Widely available and suitable for readers without a background in Middle East politics.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Human Rights Watch. (2014). <em>All According to Plan: The Rab'a Massacre and Mass Killings of Protesters in Egypt.</em></span>
+          <span class="src-journal"> Human Rights Watch.</span>
+          <span class="src-note">The forensic investigation of the Rabaa al-Adawiya massacre of August 14, 2013, documenting at least 817 deaths over approximately ten hours and concluding the operation was planned in advance. Based on hundreds of witness interviews, satellite imagery, and video evidence. Freely available at hrw.org. The most important single document for understanding what the Egyptian counter-revolution actually did.</span>
+        </li>
+        <li>
+          <span class="src-num">6</span>
+          <span class="src-title">Kirkpatrick, D. D. (2018). <em>Into the Hands of the Soldiers: Freedom and Chaos in Egypt and the Middle East.</em></span>
+          <span class="src-journal"> Viking.</span>
+          <span class="src-note">The New York Times Cairo bureau chief's account of Egypt from 2011 through the Sisi counter-revolution, with extraordinary access to American diplomats, Egyptian officials, and opposition figures. His account of the US Embassy's deliberate avoidance of the word "coup" and the Gulf states' financial enablement of Sisi is essential reading for anyone trying to understand how the international community enabled the Arab counter-revolution. Widely available.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div><!-- /.outer -->
+</div><!-- /.page-wrap -->
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',            desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',            desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',         desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'concept', title: 'Realpolitik',             desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person',  title: 'Tony Blair',              desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Colin Powell',            desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Dick Cheney',             desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',   title: 'The Iraq War',            desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'concept', title: 'Democratic Socialism',    desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War', desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',       desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",               desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Khalifa Haftar',          desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement', desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',             desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'event',   title: 'The Libyan Civil War',    desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',        desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',          desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',         desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',        desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',           desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',            desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',          desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',      desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn=document.getElementById('searchIconBtn'),dd=document.getElementById('searchDropdown'),inp=document.getElementById('searchInput');
+  _searchOpen=!_searchOpen; btn.classList.toggle('active',_searchOpen); dd.classList.toggle('open',_searchOpen);
+  if(_searchOpen){inp.focus();runSearch('');}else{inp.value='';_focusIdx=-1;}
+}
+function runSearch(q) {
+  const box=document.getElementById('searchResults'),term=q.trim().toLowerCase();
+  const seen=new Set();
+  const all=CONTEXT_ARTICLES.filter(a=>{if(seen.has(a.url))return false;seen.add(a.url);return true;});
+  const hits=term===''?all:all.filter(a=>a.title.toLowerCase().includes(term)||a.desc.toLowerCase().includes(term)||a.type.includes(term));
+  _focusIdx=-1;
+  if(!hits.length){box.innerHTML='<div class="search-empty">No articles yet — more coming soon.</div>';return;}
+  box.innerHTML=hits.map((a,i)=>`<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb?`<img src="${a.thumb}" style="width:28px;height:28px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-right:6px;">`:''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='ArrowDown'){e.preventDefault();_focusIdx=Math.min(_focusIdx+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();_focusIdx=Math.max(_focusIdx-1,0);}
+  else if(e.key==='Enter'&&_focusIdx>=0){items[_focusIdx].click();return;}
+  else if(e.key==='Escape'){toggleSearch();return;}
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click',e=>{if(_searchOpen&&!document.querySelector('.search-wrap').contains(e.target))toggleSearch();});
+window.addEventListener('scroll',()=>{
+  document.getElementById('progressBar').style.width=Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'),navItems=document.querySelectorAll('.sidebar-nav li');let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el){const w=el.classList.contains('active');document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active'));if(!w)el.classList.add('active');}
+function toggleSave(){
+  const btn=document.getElementById('saveBtn'),toast=document.getElementById('toast'),isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

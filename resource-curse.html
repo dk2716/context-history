@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Resource Curse — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="concept-page">
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type concept">Concept</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>Concepts</span><span class="breadcrumb-sep">›</span>
+      <span>Political Economy</span><span class="breadcrumb-sep">›</span>
+      <span>The Resource Curse</span>
+    </div>
+    <div class="hero-region-tag">Political Economy · Coined 1993 · Auty</div>
+    <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+      <div style="flex:1;min-width:0;">
+        <h1 style="margin-top:0;">The Resource Curse</h1>
+        <p class="hero-sub">The paradox at the heart of petrostates: countries with vast oil and mineral wealth often end up poorer, more authoritarian, and more prone to civil war than countries with nothing — and economists have spent thirty years arguing about whether the curse is real, why it happens, and how to escape it.</p>
+        <div class="hero-meta">
+          <span>~13 min read</span><span>·</span>
+          <span>6 academic sources</span><span>·</span>
+          <span>Last updated June 2026</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg" alt="The Resource Curse"
+          style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(61,186,126,0.25);display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav">
+      <li><a href="#what">What Is It?</a></li>
+      <li><a href="#origins">Origins</a></li>
+      <li><a href="#mechanisms">Mechanisms</a></li>
+      <li><a href="#cases">Case Studies</a></li>
+      <li><a href="#matters">Why It Matters</a></li>
+      <li><a href="#legacy">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <article>
+
+    <section id="what">
+      <h2>What Is the Resource Curse?</h2>
+      <p>In 1993 the British economist Richard Auty noticed something counterintuitive in the development data: the countries that had discovered large oil and mineral deposits in the 1970s should have been using that windfall to industrialise and develop. Instead, they had stagnated. Countries like Nigeria, Venezuela, and Zambia had grown more slowly than comparable resource-poor countries like South Korea and Taiwan. Auty named this pattern the "resource curse" — the idea that natural resource wealth, far from being an advantage, tends to undermine economic development and political institutions.</p>
+
+      <p>The term stuck because it captured something that felt intuitively right to development economists who had watched the 1970s oil booms curdle into the debt crises and authoritarian entrenchment of the 1980s and 1990s. But "the resource curse" is actually a shorthand for several distinct arguments that need to be separated. The economic version — that oil wealth creates distorted, undiversified economies — is sometimes called "Dutch Disease." The political version — that oil revenue allows rulers to buy off citizens and avoid accountability — is the "rentier state" thesis. The conflict version — that valuable resources create incentives for armed groups to capture them — is Paul Collier's "conflict trap." These three arguments are related but not identical, and the evidence for each is different.</p>
+
+      <p>What all three share is a single underlying insight: <em>how</em> a country's economy works shapes what <em>kind</em> of politics it produces. In resource-rich states, the dominant economic relationship is between the government (which controls the resource) and foreign oil companies (which extract it) — not between a government and its taxpaying, working citizens. When governments don't need to tax their populations, the theory goes, they don't need their populations' consent. The social contract dissolves, along with accountability.</p>
+
+      <div class="callout concept">
+        <div class="callout-label">Key Distinction</div>
+        <h4>The Resource Curse ≠ Being Naturally Wealthy</h4>
+        <p>The "curse" doesn't apply to all natural resources. It tends to be strongest for point-source resources — oil, gas, diamonds, copper — that can be extracted from a small number of locations by a small number of companies and whose revenues flow directly to the state. Diffuse resources like agricultural land, which require millions of people to work and generate income distributed across society, tend not to produce the same political pathologies. Norway has vast oil wealth and is a flourishing democracy. Botswana has diamonds and is relatively well-governed. The curse is probabilistic, not deterministic — it describes a tendency, not a fate.</p>
+      </div>
+    </section>
+
+    <section id="origins">
+      <h2>Origins &amp; Development</h2>
+      <p>The intellectual roots of the resource curse go back to the 1977 observation by Dutch economists about what happened to the Netherlands after the discovery of North Sea natural gas in 1959. As gas revenues flooded in, the Dutch guilder strengthened, making Dutch manufactured exports more expensive and less competitive. Manufacturing declined as energy boomed. Economists named this "Dutch Disease" — the pattern where a commodity boom crowds out other productive sectors of the economy by pushing up the exchange rate and wages, leaving the country more dependent on the commodity when the boom ends.</p>
+
+      <p>For two decades Dutch Disease was considered primarily an economic curiosity — a problem of macroeconomic adjustment, not a political or developmental catastrophe. What changed in the 1990s was the availability of cross-country data that allowed economists to run systematic comparisons. Jeffrey Sachs and Andrew Warner's landmark 1995 paper — "Natural Resource Abundance and Economic Growth" — provided the first rigorous statistical demonstration that resource-abundant countries had grown more slowly than resource-poor countries between 1970 and 1990, controlling for other variables. The paper was enormously influential: it transformed the resource curse from an anecdote about the Netherlands into a global empirical claim.</p>
+
+      <p>The political dimension was added most influentially by Hossein Mahdavy, who in 1970 coined the term "rentier state" to describe Iran under the Shah — a state whose revenues came from oil rents paid by foreign companies rather than from taxing its own citizens. Hazem Beblawi and Giacomo Luciani later elaborated the theory in the 1980s: in rentier states, governments distribute oil rents as subsidies, patronage, and public employment, creating a population that is dependent on the state rather than the state being dependent on the population. Without taxation, citizens have less reason to organise and demand accountability. The "no taxation, no representation" logic of Western democratic development runs in reverse: no taxation, no representation.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">1977</div><div class="stat-label">Dutch Disease first named — Dutch economists describe what North Sea gas did to Dutch manufacturing</div></div>
+        <div class="stat-box"><div class="stat-number">1993</div><div class="stat-label">Richard Auty coins "resource curse" in his book <em>Sustaining Development in Mineral Economies</em></div></div>
+        <div class="stat-box"><div class="stat-number">1995</div><div class="stat-label">Sachs &amp; Warner statistical paper — first large-N cross-country demonstration of the curse</div></div>
+        <div class="stat-box"><div class="stat-number">2011</div><div class="stat-label">Haber &amp; Menaldo publish major challenge arguing the statistical relationship is spurious</div></div>
+      </div>
+    </section>
+
+    <section id="mechanisms">
+      <h2>The Four Mechanisms</h2>
+      <div class="ideology-grid">
+        <div class="ideology-card">
+          <div class="ideology-card-title">Dutch Disease — The Economic Mechanism</div>
+          <p>When a country discovers oil, two things happen to its exchange rate and wages: they rise. This makes everything else the country produces — textiles, manufactured goods, food exports — more expensive for foreign buyers. Sectors that might have been competitive withers. When the oil eventually runs out (or the price drops), the country is left with an economy that has lost the industries it would otherwise have built, no diversified tax base, and a population whose skills and infrastructure are oriented around a single extractive sector that is shrinking. Venezuela's oil curse followed almost exactly this script between 1970 and 2010.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">The Rentier State — The Political Mechanism</div>
+          <p>In a normal state, the government taxes its citizens to fund itself, and citizens (eventually) demand accountability in exchange for those taxes. In a rentier state, the relationship runs backward: oil revenues let the government fund itself from abroad, then distribute that money as subsidies, public jobs, and patronage to citizens who are thereby dependent on the government. The incentive for citizens to organise, pay attention to public finances, or hold rulers accountable is reduced — there's less at stake from the tax side, and less capacity on the civil society side. Michael Ross's systematic analysis in <em>The Oil Curse</em> (2012) showed that oil-rich states are measurably less democratic and more autocratic than otherwise-comparable oil-poor states.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">The Conflict Trap — The Violence Mechanism</div>
+          <p>Paul Collier and Anke Hoeffler's research found that primary commodity exports dramatically increase the probability of civil war — a 1999 paper estimated that a country where primary commodity exports are 26% of GDP has a 23% chance of experiencing civil war in any five-year period, compared with 0.5% for a country with no primary commodity exports. The intuition is that "lootable" resources — oil wells, diamond mines, drug crops that can be taxed or seized — give armed groups something worth fighting for. Sierra Leone's diamond wars, Angola's oil-funded MPLA vs. UNITA conflict, South Sudan's oil-driven civil war: all follow this pattern.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Volatility — The Macroeconomic Mechanism</div>
+          <p>Commodity prices are more volatile than the prices of manufactured goods. An oil-dependent state's government revenues swing dramatically with global price cycles — flush during booms, suddenly squeezed during busts. This volatility is toxic for long-term investment, infrastructure planning, and institutional development. Governments tend to expand spending during booms (as political pressure to distribute the windfall is intense) and then struggle to cut it during busts (as those who benefited from expanded spending resist cuts). The result is a procyclical fiscal policy that amplifies boom-bust cycles rather than smoothing them, leaving countries more exposed to international commodity price shocks than diversified economies.</p>
+        </div>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-label">Common Misunderstanding</div>
+        <h4>The Curse Isn't About Lack of Money — It's About What the Money Does to Institutions</h4>
+        <p>The resource curse is not simply about corruption or mismanagement of funds. Even when oil revenues are not stolen, they can weaken institutions: by reducing the need for taxation (which drives state capacity-building), by allowing governments to repress or buy off political opposition without needing popular legitimacy, and by creating enclave economies where oil companies operate alongside populations that have little connection to the resource wealth. Norway avoided the curse not primarily because its oil fund is managed honestly, but because Norway had strong pre-existing institutions before oil was discovered — a point that matters enormously for what "solutions" to the resource curse are actually possible.</p>
+      </div>
+    </section>
+
+    <section id="cases">
+      <h2>The Resource Curse in Practice</h2>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">NIGERIA — 1960s TO PRESENT</div>
+            <div class="tl-title">Africa's Oil Giant: Wealth Without Development</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Nigeria is the textbook resource curse case. At independence in 1960 it had a diversified agricultural economy — palm oil, cocoa, groundnuts, and cotton were its major exports. The oil boom of the 1970s changed everything: oil revenues flooded in and the Nigerian naira appreciated, destroying the competitiveness of agricultural exports in almost exactly the Dutch Disease pattern. By 1980, oil accounted for over 90% of export revenues and 80% of government revenues. Agriculture, which had employed most Nigerians and generated much of the pre-oil GDP, had been crowded out.</p>
+          <p>The political consequences were equally severe. Oil revenues financed military governments and, after the return to civilian rule in 1999, a system of patronage politics in which control of the federal government — and thus control of oil revenue distribution — was the prize that drove political competition. The Niger Delta, where the oil is actually extracted, has seen some of the worst outcomes: Shell and other companies' operations have caused extensive environmental damage (oil spills, gas flaring), while local communities have seen negligible economic benefits. Armed groups in the Delta — the Movement for the Emancipation of the Niger Delta, among others — have periodically disrupted production through sabotage, embodying both the conflict-trap and the inequality dynamics the resource curse predicts. Nigeria has earned over $1 trillion in oil revenues since the 1970s; its GDP per capita today is lower in real terms than in the 1970s.</p>
+          <div class="tl-sources"><span class="src-chip">Ross (2012)</span><span class="src-chip">Collier (2007)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">VENEZUELA — 1970s TO PRESENT</div>
+            <div class="tl-title">The Petrostate That Destroyed Itself</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Venezuela sits atop the world's largest proven oil reserves (overtaking Saudi Arabia in 2011), yet it has experienced arguably the most spectacular socioeconomic collapse of any country not at war in the twenty-first century. The pattern was set decades before Chávez: the 1970s oil boom produced massive government spending, industrial policy driven by oil rents, and an exchange rate so strong that Venezuelan agriculture and manufacturing became uncompetitive. When oil prices collapsed in the 1980s, Venezuela entered a decade of economic contraction and political crisis that culminated in the near-revolution of the 1989 Caracazo, when price riots killed hundreds.</p>
+          <p>Hugo Chávez came to power in 1999 on the promise of using oil revenues to directly benefit Venezuela's poor — and he did, through health, education, and food subsidy programmes ("misiones") that reduced poverty dramatically during the 2000s oil boom. But these programmes were financed entirely by oil revenues, not by the diversification that might have built a sustainable economic base. When oil prices collapsed after 2014, the revenue to fund them vanished, and the economy contracted by over 75% between 2013 and 2021 — one of the worst economic contractions in modern history outside of wartime. Over seven million Venezuelans have fled the country since 2015, constituting one of the largest displacement crises in the Western Hemisphere. The resource curse's trajectory — boom, political dysfunction, bust, collapse — could not be more clearly illustrated.</p>
+          <div class="tl-sources"><span class="src-chip">Ross (2012)</span><span class="src-chip">Sachs &amp; Warner (1995)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">NORWAY — 1969 TO PRESENT</div>
+            <div class="tl-title">The Exception That Proves the Rule</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Norway discovered oil in the North Sea in 1969 and is consistently cited as proof that the resource curse can be escaped. The Norwegian state oil company Equinor (formerly Statoil) is majority state-owned. The Government Pension Fund Global — established in 1990 to invest oil revenues for future generations — is the world's largest sovereign wealth fund, currently holding assets of over $1.7 trillion. Norway has maintained its strong democratic institutions, generous welfare state, and diversified economy throughout the oil era. It is, by most measures, one of the best-governed countries in the world.</p>
+          <p>The problem with using Norway as a template is that the explanation for Norway's success is circular for countries trying to avoid the curse: Norway avoided the resource curse largely because it had strong institutions, social trust, and democratic governance <em>before</em> it discovered oil. The question for countries that discover oil without those pre-existing institutions is: how do you build them in an environment where oil revenues are undermining the conditions under which they would normally develop? Scholars like Michael Ross argue that Norway-style success is possible when oil wealth arrives after democratic consolidation but not before. For countries like Angola or South Sudan, the sequencing was reversed — institutions were weak when oil was discovered, and the revenues made them weaker. Norway isn't so much a model as a lucky timing case.</p>
+          <div class="tl-sources"><span class="src-chip">Ross (2012)</span><span class="src-chip">Haber &amp; Menaldo (2011)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">BOTSWANA — 1966 TO PRESENT</div>
+            <div class="tl-title">Diamonds Without the Curse — A Contested Success</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Botswana is the other frequently cited "exception" to the resource curse: one of the world's poorest countries at independence in 1966, it discovered massive diamond deposits shortly afterward and has since achieved some of the highest sustained economic growth rates in the world. The state diamond company Debswana — a 50/50 joint venture between the government and De Beers — has generated revenues that funded health, education, and infrastructure. Botswana is relatively democratic by regional standards and has avoided the violent conflict that afflicts so many resource-rich African states.</p>
+          <p>The Botswana case is contested, however. Critics note that Botswana's success has been almost entirely dependent on diamond revenue — the diversification that would normally indicate genuine economic development has not occurred — and that HIV/AIDS, which killed a disproportionate share of the working-age population, leaves the long-term sustainability of the model uncertain. Others point out that Botswana's success depended on decisions made at independence to invest diamond revenues in public goods rather than patronage — decisions that reflected both the particular character of the Tswana political tradition and the choices of individual leaders, neither of which is easily replicable. Botswana is perhaps best understood not as a template for escaping the resource curse but as evidence that the curse is not deterministic — that it can be avoided under specific institutional and political conditions.</p>
+          <div class="tl-sources"><span class="src-chip">Collier (2007)</span><span class="src-chip">Ross (2012)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">IRAQ &amp; LIBYA — 1960s TO PRESENT</div>
+            <div class="tl-title">Rentier States, Authoritarianism, and the Arab Petrostate</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The Arab petrostates are the rentier state thesis's core empirical territory. Both Iraq under Saddam Hussein and Libya under Gaddafi illustrate the political mechanism most clearly: oil revenues funded massive state patronage networks, subsidised food and fuel, and military and security apparatus expansion, while simultaneously allowing rulers to repress political opposition without needing to negotiate with a tax-paying citizenry. In both countries, the political economy that oil created made governments simultaneously less accountable to their populations and more capable of violent repression.</p>
+          <p>Gaddafi's Libya is particularly instructive. Oil revenues made possible both the Jamahiriya's patronage distribution (free housing, subsidised education, generous public employment) and its foreign adventurism (funding insurgencies across Africa and the Middle East). The complete absence of non-oil economic development meant that when Gaddafi fell in 2011, there were no functioning institutions capable of managing a democratic transition. Libya's post-Gaddafi collapse into civil war followed almost exactly the pattern that resource curse theory predicts: oil revenues had sustained a repressive but economically functional state, and removing the repression without building the non-oil institutions first produced not democracy but chaos. The oil fields then became the prize that drove the civil war's violence, adding the conflict-trap dynamic to the institutional-collapse dynamic.</p>
+          <div class="tl-sources"><span class="src-chip">Ross (2012)</span><span class="src-chip">Beblawi &amp; Luciani (1987)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">ANGOLA &amp; SOUTH SUDAN — 1970s TO PRESENT</div>
+            <div class="tl-title">Oil and Civil War: The Conflict Trap in Action</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Angola's civil war (1975–2002) is the archetypal resource-fuelled conflict: the MPLA government controlled the offshore oil revenues that funded its war effort, while UNITA rebel forces controlled diamond revenues in the east. Both sides had self-sustaining financial models for continued warfare, which is one reason the conflict lasted 27 years after independence and killed over 500,000 people. The resources didn't cause the conflict — the underlying political dispute between the MPLA and UNITA predated oil and diamond dependency — but they made it dramatically more durable by giving both sides the means to continue fighting independent of popular support or territorial control.</p>
+          <p>South Sudan's story is more recent and more tragic: it achieved independence in 2011 with 75% of Sudan's oil revenues but almost no other functioning state institutions, and descended into civil war in 2013 as rival political and ethnic factions fought for control of the oil revenues. Collier's prediction — that countries where primary commodity exports are a high share of GDP face dramatically elevated civil war risk — was borne out almost exactly. South Sudan now ranks consistently among the worst humanitarian situations in the world, its oil revenues having funded militias and government forces rather than the hospitals and schools a country with no civil service, no roads, and no educational infrastructure desperately needed.</p>
+          <div class="tl-sources"><span class="src-chip">Collier (2007)</span><span class="src-chip">Ross (2012)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="matters">
+      <h2>Why It Matters Today</h2>
+      <div class="matters-grid">
+        <div class="matters-card">
+          <h3>The Energy Transition Will Create New Resource Curse Risks</h3>
+          <p>The shift away from fossil fuels and toward electric vehicles and renewable energy is driving massive demand for lithium, cobalt, nickel, copper, and rare earth elements — the materials in batteries, solar panels, and wind turbines. Many of the countries with the largest reserves of these "green minerals" — the Democratic Republic of Congo (cobalt), Chile and Bolivia (lithium), Indonesia (nickel) — are the same countries where resource curse dynamics have historically been most severe. Whether the twenty-first century green energy transition reproduces the oil curse in new materials, or whether improved international governance frameworks can prevent it, is one of the defining development questions of the coming decades.</p>
+          <ul class="matters-subpoints">
+            <li>The DRC supplies roughly 70% of global cobalt — extracted partly by child labour in artisanal mines, with revenues flowing disproportionately to armed groups</li>
+            <li>Bolivia, Chile, and Argentina — the "Lithium Triangle" — hold over 50% of known global lithium reserves; all three have experienced political instability partly driven by competition over lithium policy</li>
+            <li>Transparency initiatives like the Extractive Industries Transparency Initiative (EITI) exist but rely on voluntary participation and have limited enforcement</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Gulf State Diversification — A Test Case for Escape</h3>
+          <p>Saudi Arabia's Vision 2030, the UAE's economic diversification, and Qatar's investment-based development model represent the most ambitious state-level attempts to escape the resource curse while still holding the oil revenues that would otherwise drive it. These projects are building non-oil industries (tourism, tech, manufacturing), investing oil revenues in global assets, and attempting to build institutions before the oil runs out. Whether they succeed will provide the most important real-world test of whether authoritarian petrostates can execute the institutional transformation the resource curse theory says is necessary.</p>
+          <ul class="matters-subpoints">
+            <li>Saudi Arabia: non-oil GDP grew 4.6% in 2023, but the economy remains 40%+ dependent on hydrocarbons and the state on oil revenues</li>
+            <li>The UAE's diversification — Dubai especially — is the most advanced, with tourism, logistics, and finance driving growth; Abu Dhabi remains heavily oil-dependent</li>
+            <li>Qatar's sovereign wealth fund (Qatar Investment Authority) holds approximately $450 billion in global assets — an attempt to convert oil into permanent wealth</li>
+            <li>None of these transitions has yet demonstrated a path to democratic accountability — all are authoritarian systems using oil revenues to delay rather than enable political opening</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Transparency and Revenue Management Debate</h3>
+          <p>A generation of international development policy has been dedicated to the proposition that the resource curse can be cured through transparency, better revenue management, and improved governance frameworks. The Extractive Industries Transparency Initiative, the Natural Resource Charter, IMF technical assistance programmes, and international anti-corruption law all rest on this assumption. The evidence is mixed: transparency has improved in some cases, and a few countries have improved their management of resource revenues. But the structural dynamics of the rentier state — that governments with non-tax revenues have less incentive to be accountable — are not easily resolved by disclosure requirements.</p>
+          <ul class="matters-subpoints">
+            <li>The EITI now has 57 implementing countries; academic evidence on its effectiveness is mixed — it improves information but doesn't necessarily change political incentives</li>
+            <li>Chad's oil pipeline deal with the World Bank in 2003 — a pioneering revenue management experiment — collapsed by 2006 when the government diverted oil revenues away from agreed poverty reduction spending</li>
+            <li>The UK Unexplained Wealth Orders and the US Foreign Corrupt Practices Act target the supply side (corrupt payments) but have limited ability to address the demand side (resource rents creating incentives for corruption)</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Geopolitical Competition Over Resource-Rich Failed States</h3>
+          <p>Libya, South Sudan, the Sahel's mineral belt, and the DRC's mining regions are all simultaneously suffering from resource curse dynamics and serving as the terrain for great-power competition — between the US, China, France, Russia, and Gulf states — that is partly driven by resource interests. China's resource-for-infrastructure deals across Africa, Russia's Wagner Group presence in gold- and uranium-producing Sahel states, and French reluctance to lose access to uranium in Niger: these are all expressions of how the resource curse is not merely a domestic problem for resource-rich states but a structural driver of international competition and intervention.</p>
+          <ul class="matters-subpoints">
+            <li>China holds over $150 billion in mineral extraction deals across Africa, secured primarily through infrastructure financing rather than cash payments — a new form of resource extraction that bypasses some traditional corruption channels while creating others</li>
+            <li>Russia's Wagner Group (now Africa Corps) has been paid partly in mining concessions in Mali, the Central African Republic, and Sudan</li>
+            <li>Niger's 2023 military coup was partly driven by grievances over uranium revenue distribution — France extracted uranium from Niger for decades at below-market prices under Areva contracts</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="legacy">
+      <h2>Legacy &amp; Debate</h2>
+      <p>The resource curse became one of the dominant frameworks in development economics and political science during the 1990s and 2000s, generating hundreds of papers, dozens of books, and substantial policy influence. Then, in the 2010s, a serious empirical challenge emerged. Stephen Haber and Victor Menaldo's 2011 paper — "Do Natural Resources Fuel Authoritarianism?" — argued that the statistical relationship between resource wealth and authoritarianism was an artefact of the data and methods used. When you look at countries' trajectories over time rather than across countries at a single moment, they argued, you find that oil wealth doesn't make countries more authoritarian — countries that were already authoritarian tended to discover oil, and countries that were already democratic tended to stay democratic regardless of what happened to their oil reserves.</p>
+
+      <p>This methodological debate — cross-sectional correlation vs. within-country longitudinal analysis — is technical, but the stakes are high. If Haber and Menaldo are right, the resource curse is largely a statistical illusion generated by the fact that poor, badly-governed countries were more likely to be explored for oil in the 1960s and 1970s. If Ross, Sachs, Warner, and Collier are right, the curse is real and the policy implications (sovereign wealth funds, transparency requirements, international governance frameworks) are urgent.</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Jeffrey Sachs &amp; Andrew Warner</div>
+          <div class="scholar-card-title">Harvard / "Natural Resource Abundance and Economic Growth" (1995)</div>
+          <div class="scholar-card-verdict">The foundational statistical paper establishing the resource curse as an empirical fact. Sachs and Warner showed that between 1970 and 1990, countries with high ratios of natural resource exports to GDP grew more slowly than resource-poor countries, controlling for initial income, investment rates, trade policy, and other variables. Their results were robust across multiple specifications and initiated the modern literature on the resource curse. The paper has been cited thousands of times and remains the empirical starting point for the debate. Freely available at NBER (nber.org/papers/w5398).</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Stephen Haber &amp; Victor Menaldo</div>
+          <div class="scholar-card-title">Stanford / "Do Natural Resources Fuel Authoritarianism?" (2011, APSR)</div>
+          <div class="scholar-card-verdict">The most important challenge to the resource curse thesis. Haber and Menaldo re-ran the analysis using within-country time-series variation rather than cross-country comparisons and found no evidence that increases in resource dependence caused declines in democracy. Their argument: the cross-sectional correlation between oil and authoritarianism reflects historical sorting (authoritarian states happened to get oil wealth) rather than causation. The paper generated extensive responses from Ross and others and remains the methodological crux of the debate. Widely available through JSTOR and academic libraries.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Michael L. Ross</div>
+          <div class="scholar-card-title">UCLA / <em>The Oil Curse: How Petroleum Wealth Shapes the Development of Nations</em> (2012, Princeton)</div>
+          <div class="scholar-card-verdict">The most comprehensive book-length treatment of the resource curse, specifically focused on oil. Ross responds directly to Haber and Menaldo's challenge, defending the causal argument with improved data and methods. He distinguishes between different types of oil wealth (onshore vs. offshore, nationalised vs. foreign-owned) and shows that oil's effects on democracy are conditional on institutional context. His most controversial finding: oil wealth specifically disadvantages women's political and economic empowerment by suppressing labour market participation. Essential reading; widely available.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Paul Collier</div>
+          <div class="scholar-card-title">Oxford / <em>The Bottom Billion</em> (2007) and <em>Plundered Planet</em> (2010)</div>
+          <div class="scholar-card-verdict">Collier's "conflict trap" argument focuses on the relationship between primary commodity dependence and civil war risk, rather than authoritarianism. His empirical work (with Anke Hoeffler) established that countries where primary commodity exports are a large share of GDP have dramatically elevated civil war risks — and that this effect works through the "feasibility" of rebellion (valuable resources give armed groups something to fight for and a way to finance the fight) rather than grievance. His policy prescriptions — international commodity revenue certification, anti-money-laundering laws targeting stolen resource revenues — are more market-friendly than other resource curse scholars. Widely available.</div>
+        </div>
+      </div>
+
+      <h3>The Central Contested Question: Does Oil Cause Authoritarianism, or Do Authoritarian States Get Oil?</h3>
+      <p>The methodological debate between Ross and Haber/Menaldo reduces to a single question: is the observed correlation between oil wealth and authoritarianism a causal relationship (oil makes countries less democratic) or a selection effect (countries that were already badly governed happened to have oil deposits discovered)? This matters enormously for policy: if the curse is causal, the case for sovereign wealth funds, transparency requirements, and international governance frameworks is strong. If it's a selection effect, those interventions are treating a symptom that won't respond to the treatment.</p>
+
+      <p>The current state of the scholarly debate, as of the mid-2020s, is that most specialists believe some version of the resource curse is real — particularly the political-economy version — but that its effects are conditional on prior institutional context. Oil doesn't automatically make countries autocratic, but it does give autocratic governments tools and incentives that make them harder to dislodge. Ross's conditional argument — that the curse operates through specific mechanisms that can in principle be interrupted — has more policy traction than either Sachs and Warner's unconditional curse claim or Haber and Menaldo's no-curse claim.</p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">The resource curse is a real causal relationship</div>
+          <ul>
+            <li>Cross-country statistical evidence consistently shows resource-rich countries growing more slowly and being less democratic <span class="perspective-attr">— Sachs &amp; Warner (1995), Ross (2012)</span></li>
+            <li>The mechanisms are theoretically coherent: Dutch Disease, rentier state dynamics, and conflict-trap incentives are all independently plausible <span class="perspective-attr">— Collier (2007), Mahdavy (1970)</span></li>
+            <li>Case studies like Nigeria, Venezuela, and Libya fit the predicted trajectory extremely closely <span class="perspective-attr">— Ross (2012)</span></li>
+            <li>The oil-and-women finding — that oil suppresses women's political and economic participation — holds up across multiple specifications <span class="perspective-attr">— Ross (2008, 2012)</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">The statistical evidence is weaker than claimed</div>
+          <ul>
+            <li>Within-country time-series analysis shows no consistent evidence that oil revenues cause democratic decline <span class="perspective-attr">— Haber &amp; Menaldo (2011)</span></li>
+            <li>Countries like Norway, Botswana, and the UAE complicate any deterministic version of the curse <span class="perspective-attr">— multiple scholars</span></li>
+            <li>The Sachs-Warner measure (primary commodity exports as share of GDP) conflates different types of resource wealth with very different effects <span class="perspective-attr">— Brunnschweiler &amp; Bulte (2008)</span></li>
+            <li>Post-2000 evidence suggests some resource-rich countries have improved governance — the "curse" may be weakening as international transparency standards improve <span class="perspective-attr">— Haber &amp; Menaldo (2011)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"Oil wealth tends to make authoritarian governments more durable and democratic governments more fragile... Yet oil is not destiny. Countries can escape the oil curse through good policies and good luck — but mostly through the difficult work of building institutions that are capable of managing resource revenues in the public interest."</blockquote>
+        <cite>— Michael L. Ross, <em>The Oil Curse: How Petroleum Wealth Shapes the Development of Nations</em> (2012), Princeton University Press — synthesising three decades of research into a conditional but real relationship between oil wealth and political dysfunction.</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+      <div class="topics-group">
+        <div class="topics-group-label">People whose stories illustrate the resource curse</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="gaddafi.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg" alt="Muammar Gaddafi">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Muammar Gaddafi</div>
+            <div class="topic-preview">Libya's oil revenues made Gaddafi's rule possible — financing both the patronage network that maintained his support and the repression apparatus that crushed his opponents. When he fell, there was no non-oil economy or functioning institution to manage the transition.</div>
+          </a>
+          <a class="topic-card" href="saddam-hussein.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Saddam_Hussein_in_1998.png" alt="Saddam Hussein">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Saddam Hussein</div>
+            <div class="topic-preview">Iraqi oil revenues funded Saddam's enormous military, his patronage networks, and his weapons programmes — a classic rentier state in which oil decoupled the government from any need for popular consent.</div>
+          </a>
+        </div>
+      </div>
+      <div class="topics-group">
+        <div class="topics-group-label">Related events</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="libyan-civil-war.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg" alt="The Libyan Civil War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Libyan Civil War</div>
+            <div class="topic-preview">Libya's post-Gaddafi collapse is a near-perfect illustration of the resource curse's political mechanism: oil had maintained state functions without building state institutions, and when the oil-funded repression ended, the institutions needed for democratic governance did not exist.</div>
+          </a>
+          <a class="topic-card" href="arab-spring.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Tahrir_Square_Rally.jpg/960px-Tahrir_Square_Rally.jpg" alt="The Arab Spring">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Arab Spring</div>
+            <div class="topic-preview">The contrast between how rentier monarchies (Saudi Arabia, Bahrain, UAE) survived the Arab Spring and how more complex oil states like Libya fared illustrates how the resource curse shapes political durability and transition outcomes.</div>
+          </a>
+        </div>
+      </div>
+      <div class="topics-group">
+        <div class="topics-group-label">Related concepts</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="pan-arabism.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg" alt="Pan-Arabism">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Pan-Arabism</div>
+            <div class="topic-preview">Arab nationalist ideology became intertwined with oil politics after the 1973 oil embargo — the resource curse and the politics of Arab nationalism mutually reinforced the authoritarian, rentier-state model that has defined the region ever since.</div>
+          </a>
+          <a class="topic-card" href="realpolitik.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Realpolitik</div>
+            <div class="topic-preview">The strategic logic of realpolitik is one reason the resource curse persists: great powers consistently subordinate governance concerns to resource access, propping up resource-curse states because they need the oil and the strategic relationships that come with it.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Sachs, J. D., &amp; Warner, A. M. (1995). Natural Resource Abundance and Economic Growth.</span>
+          <span class="src-journal"> NBER Working Paper No. 5398.</span>
+          <span class="src-note">The foundational statistical paper establishing the resource curse as an empirical claim, showing slower growth among resource-abundant countries between 1970 and 1990. Freely available at nber.org/papers/w5398 — essential starting point for the literature.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Ross, M. L. (2012). <em>The Oil Curse: How Petroleum Wealth Shapes the Development of Nations.</em></span>
+          <span class="src-journal"> Princeton University Press.</span>
+          <span class="src-note">The most comprehensive academic monograph on oil and political development. Ross defends and refines the resource curse thesis against Haber and Menaldo's challenge, distinguishes between different types of oil wealth, and advances the oil-and-women finding. Available in academic libraries and widely cited.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Collier, P. (2007). <em>The Bottom Billion: Why the Poorest Countries Are Failing and What Can Be Done About It.</em></span>
+          <span class="src-journal"> Oxford University Press.</span>
+          <span class="src-note">Collier's accessible presentation of his conflict-trap research, including the relationship between primary commodity dependence and civil war risk. More policy-oriented than the academic papers, and widely available in bookstores and libraries — a good entry point for non-specialist readers.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Haber, S., &amp; Menaldo, V. (2011). Do Natural Resources Fuel Authoritarianism? A Reappraisal of the Resource Curse.</span>
+          <span class="src-journal"> American Political Science Review, 105(1), 1–26.</span>
+          <span class="src-note">The most important empirical challenge to the resource curse thesis, using within-country longitudinal analysis to argue that oil wealth does not cause democratic decline. Essential reading for understanding the current state of the debate. Available through JSTOR and academic libraries.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Beblawi, H., &amp; Luciani, G. (Eds.). (1987). <em>The Rentier State.</em></span>
+          <span class="src-journal"> Croom Helm.</span>
+          <span class="src-note">The foundational edited volume articulating the rentier state thesis — the political-economy argument that oil revenues allow governments to dispense with popular consent. Still the key theoretical reference for understanding why oil wealth undermines accountability. Available in academic libraries.</span>
+        </li>
+        <li>
+          <span class="src-num">6</span>
+          <span class="src-title">Auty, R. M. (1993). <em>Sustaining Development in Mineral Economies: The Resource Curse Thesis.</em></span>
+          <span class="src-journal"> Routledge.</span>
+          <span class="src-note">The book that coined the term "resource curse" — Auty's comparative analysis of mineral-exporting developing countries. More accessible than the statistical literature; provides the foundational taxonomy of resource curse mechanisms. Available in academic libraries.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div>
+</div>
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'event',   title: 'The Arab Spring',             desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',        desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'event',   title: 'The Suez Crisis',             desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',                 desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'September 11, 2001',          desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',                   desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',                desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',                desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',             desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik',                 desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person',  title: 'Tony Blair',                  desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Colin Powell',                desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Dick Cheney',                 desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',   title: 'The Iraq War',                desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'concept', title: 'Democratic Socialism',        desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',   desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',           desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                   desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Khalifa Haftar',              desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',    desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                 desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'event',   title: 'The Libyan Civil War',        desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',            desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',             desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',            desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',              desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',             desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',            desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',               desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',          desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',              desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',          desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn=document.getElementById('searchIconBtn'),dd=document.getElementById('searchDropdown'),inp=document.getElementById('searchInput');
+  _searchOpen=!_searchOpen; btn.classList.toggle('active',_searchOpen); dd.classList.toggle('open',_searchOpen);
+  if(_searchOpen){inp.focus();runSearch('');}else{inp.value='';_focusIdx=-1;}
+}
+function runSearch(q) {
+  const box=document.getElementById('searchResults'),term=q.trim().toLowerCase();
+  const seen=new Set();
+  const all=CONTEXT_ARTICLES.filter(a=>{if(seen.has(a.url))return false;seen.add(a.url);return true;});
+  const hits=term===''?all:all.filter(a=>a.title.toLowerCase().includes(term)||a.desc.toLowerCase().includes(term)||a.type.includes(term));
+  _focusIdx=-1;
+  if(!hits.length){box.innerHTML='<div class="search-empty">No articles yet — more coming soon.</div>';return;}
+  box.innerHTML=hits.map((a,i)=>`<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb?`<img src="${a.thumb}" style="width:28px;height:28px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-right:6px;">`:''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='ArrowDown'){e.preventDefault();_focusIdx=Math.min(_focusIdx+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();_focusIdx=Math.max(_focusIdx-1,0);}
+  else if(e.key==='Enter'&&_focusIdx>=0){items[_focusIdx].click();return;}
+  else if(e.key==='Escape'){toggleSearch();return;}
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click',e=>{if(_searchOpen&&!document.querySelector('.search-wrap').contains(e.target))toggleSearch();});
+window.addEventListener('scroll',()=>{
+  document.getElementById('progressBar').style.width=Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'),navItems=document.querySelectorAll('.sidebar-nav li');let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el){const w=el.classList.contains('active');document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active'));if(!w)el.classList.add('active');}
+function toggleSave(){
+  const btn=document.getElementById('saveBtn'),toast=document.getElementById('toast'),isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

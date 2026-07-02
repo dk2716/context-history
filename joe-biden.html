@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joe Biden — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">U.S. Presidents</a><span class="breadcrumb-sep">›</span>
+        <span>Joe Biden</span>
+      </div>
+
+      <div class="hero-person-layout">
+        <div class="hero-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg" alt="Joe Biden"></div>
+        <div>
+          <div class="hero-region-tag">United States · 46th President</div>
+          <h1>Joe Biden</h1>
+          <p class="hero-sub">The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77, passed the most significant climate legislation in American history — and then stepped aside to save his party from himself.</p>
+          <div class="hero-meta">
+            <span>~22 min read</span><span>·</span>
+            <span>In office: 2021–2025</span><span>·</span>
+            <span>United States</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#worldview">Worldview</a></li>
+        <li><a href="#presidency">The Presidency</a></li>
+        <li><a href="#foreign-policy">Foreign Policy</a></li>
+        <li><a href="#departure">The Departure</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <!-- QUICK FACTS -->
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+
+          <div class="qf-item">
+            <div class="qf-label">Full name</div>
+            <div class="qf-value">Joseph Robinette Biden Jr.</div>
+          </div>
+          <div class="qf-item">
+            <div class="qf-label">Born</div>
+            <div class="qf-value">November 20, 1942 — Scranton, Pennsylvania</div>
+          </div>
+          <div class="qf-item">
+            <div class="qf-label">U.S. Senator</div>
+            <div class="qf-value">January 3, 1973 – January 15, 2009 · Delaware · 36 years</div>
+          </div>
+          <div class="qf-item">
+            <div class="qf-label">Vice President</div>
+            <div class="qf-value">January 20, 2009 – January 20, 2017 · Under Barack Obama</div>
+          </div>
+          <div class="qf-item">
+            <div class="qf-label">Presidency</div>
+            <div class="qf-value">January 20, 2021 – January 20, 2025 · One term</div>
+          </div>
+          <div class="qf-item">
+            <div class="qf-label">Came to power by</div>
+            <div class="qf-value">Democratic primary victory over Bernie Sanders and others; general election over Donald Trump (2020), winning 306 electoral votes and 81.2 million popular votes — the most in American history</div>
+          </div>
+          <div class="qf-item">
+            <div class="qf-label">Ideology</div>
+            <div class="qf-value">Moderate liberal · Foreign policy institutionalism · Alliance multilateralism · Pragmatic incrementalism</div>
+          </div>
+          <div class="qf-item">
+            <div class="qf-label">Key legislation</div>
+            <div class="qf-value">American Rescue Plan (2021) · Infrastructure Investment and Jobs Act (2021) · CHIPS and Science Act (2022) · Inflation Reduction Act (2022)</div>
+          </div>
+          <div class="qf-item">
+            <div class="qf-label">Personal tragedies</div>
+            <div class="qf-value">Wife Neilia and daughter Naomi killed in a car crash (December 1972); son Beau Biden died of brain cancer (May 2015)</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ORIGINS -->
+      <section id="origins">
+        <h2>Origins &amp; Rise</h2>
+
+        <p>Joe Biden was born in Scranton, Pennsylvania, in November 1942, into a family that had slipped from middle-class comfort into financial strain. His father, Joseph Biden Sr., worked through a series of jobs — used cars, heating oil, janitorial supplies — before the family moved to Claymont, Delaware, when Joe was ten. The Scranton working-class identity never left him: he invoked it so consistently throughout his career that it became a political brand. Whether that brand was authentic or performance was an argument his opponents never tired of making, and one that he never fully escaped.</p>
+
+        <p>He graduated from the University of Delaware in 1965 and from Syracuse University College of Law in 1968, finishing in the lower third of his class. He was admitted to the Delaware bar and practiced briefly before entering politics. His student deferments during the Vietnam War — later described by his office as the result of a childhood asthma condition — would become a recurring point of attack, though he was never charged with wrongdoing. At 27, he ran for a Senate seat from Delaware against a two-term Republican incumbent, J. Caleb Boggs. Almost nobody expected him to win. He won.</p>
+
+        <p>Biden was 29 years old on Election Day 1972 — just old enough to meet the constitutional minimum of 30 by the time he was to be sworn in. He campaigned on opposition to the Vietnam War and an instinctive appeal to working-class Catholic voters. The victory was significant enough that it made national news. Then, three weeks after the election, on December 18, 1972, his wife Neilia and their one-year-old daughter Naomi were killed when a tractor-trailer struck their station wagon near Wilmington. Their sons Beau and Hunter survived with serious injuries. Biden was sworn in at his sons' hospital bedsides.</p>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-number">29</div>
+            <div class="stat-label">Age on Election Day 1972 — one of the youngest senators ever elected</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">36</div>
+            <div class="stat-label">Years in the Senate — 1973 to 2009</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">1988</div>
+            <div class="stat-label">First presidential run — ended in plagiarism scandal within months</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">81.2M</div>
+            <div class="stat-label">Popular votes in 2020 — the most ever cast for a presidential candidate</div>
+          </div>
+        </div>
+
+        <p>Biden considered resigning from the Senate after the accident but was persuaded to stay by Senate Majority Leader Mike Mansfield. He began commuting daily from Wilmington to Washington by Amtrak — a habit that lasted his entire Senate career and that became one of his most recognisable political symbols, along with his aviator sunglasses and his unpolished, sometimes garbled speechmaking. He remarried in 1977, to Jill Jacobs, an English teacher who later earned a doctoral degree in educational leadership and was known throughout his presidency as Dr. Jill Biden.</p>
+
+        <p>His Senate career spanned three and a half decades, the Cold War, Watergate, the Reagan revolution, the Gulf War, the Clinton years, September 11, and the Iraq War. He chaired the Senate Foreign Relations Committee and the Senate Judiciary Committee, and his two most consequential senatorial moments were arguably his worst: his handling of the 1991 Anita Hill hearings, in which he allowed Republican members to savage Hill while questioning Clarence Thomas's fitness for the Supreme Court only gently, and his 1994 Crime Bill, which contributed to a mass incarceration explosion that fell disproportionately on Black communities and that became a major liability during his 2020 campaign. He ran for president in 1988 and withdrew after it emerged he had plagiarised a speech by a British Labour politician, Neil Kinnock. He ran again in 2008, withdrew early in the primary, and was selected as Barack Obama's running mate.</p>
+
+        <div class="callout concept">
+          <div class="callout-label">Context</div>
+          <h4>The Anita Hill hearings: a wound that never fully healed</h4>
+          <p>In October 1991, Biden chaired the Senate Judiciary Committee hearings on Clarence Thomas's nomination to the Supreme Court. Anita Hill, a law professor who had worked under Thomas, testified that he had sexually harassed her. Biden did not call three other women who had reported similar conduct with Thomas. His questioning of Hill was widely seen as insufficient, and his management of the hearings was viewed by critics as enabling Thomas's confirmation. Biden later apologised — in 2019, during his presidential campaign — but Hill herself said the apology did not go far enough. The episode was a genuine failure of leadership that Biden never fully escaped.</p>
+        </div>
+
+        <p>As vice president from 2009 to 2017, Biden was given the Iraq portfolio — overseeing the withdrawal of combat troops — and became a reliable, sometimes loose-lipped spokesperson for the Obama administration. He was deeply involved in the American Recovery and Reinvestment Act, the president's foreign policy deliberations, and the push for same-sex marriage rights. He announced his own support for same-sex marriage in May 2012, slightly ahead of Obama — a semi-accidental move that forced the president's hand and accelerated the administration's public shift on the issue.</p>
+
+        <p>Biden's son Beau, the Attorney General of Delaware and a figure widely seen as a future political star, died of glioblastoma — an aggressive brain cancer — on May 30, 2015. Biden has said that the grief from Beau's death made him decide not to run in 2016, though he has also been candid that he was not certain he would have won the primary against Hillary Clinton. He announced his third presidential campaign in April 2019, framing it explicitly as a fight for "the soul of America" against Donald Trump. He won the 2020 Democratic primary after a series of early setbacks — a fourth-place finish in Iowa, a fifth-place finish in New Hampshire — and a decisive victory in the South Carolina primary, which proved to be the turning point. He was inaugurated on January 20, 2021, at 78 years old, the oldest person ever to assume the American presidency.</p>
+      </section>
+
+      <!-- WORLDVIEW -->
+      <section id="worldview">
+        <h2>Worldview: The Institutionalist</h2>
+
+        <p>Biden is not, and never pretended to be, an ideologue. His political formation was the Senate — an institution that rewards coalition-building, compromise, and the cultivation of personal relationships across party lines. He was shaped by senators like Mike Mansfield, Hubert Humphrey, and Daniel Patrick Moynihan; by the foreign policy establishment of the Cold War era; and by a Catholic social justice tradition that emphasised care for the working class without demanding systemic transformation. He read the politics of his coalition carefully and moved his positions accordingly — on crime, on busing, on same-sex marriage — which his supporters called realism and his critics called opportunism.</p>
+
+        <p>The deepest consistency in Biden's worldview is not ideological but institutional: a belief that democracies depend on norms and alliances and that both must be actively maintained. His first foreign policy act as president was to re-enter the Paris Climate Agreement; his second was to cancel American withdrawal from the World Health Organisation. Both took effect on Day One. His approach to Russia's invasion of Ukraine — assembling and sustaining a large coalition of allies, calibrating weapons deliveries to avoid escalation, insisting on Ukrainian agency — was methodical institutionalism in action. His critics argued it was too slow and cautious; his defenders argued it held NATO together under the most serious threat to the alliance since its founding.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Alliance Multilateralism</div>
+            <p>Biden believed the post-1945 order of alliances, international institutions, and shared rules was not just a diplomatic convenience but a structural guarantee of stability. His self-described foreign policy goal — "America is back" — was a direct repudiation of Trump's transactional unilateralism. He spent heavily in early months rebuilding relationships with NATO, the EU, South Korea, and Japan that had frayed under his predecessor.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Empathy as Political Method</div>
+            <p>Biden's most singular political trait was his ability to project sincere personal grief. His losses — Neilia, Naomi, Beau — gave him a credibility on suffering that few American politicians have possessed. He used it deliberately, meeting regularly with Gold Star families, veterans, and cancer patients. Critics accused him of weaponising his grief; supporters saw in it a genuine form of democratic leadership.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Middle-Class Economics</div>
+            <p>Biden's domestic economic philosophy was shaped by a consistent belief that working families had been left behind by both the Reagan revolution and the globalisation of the 1990s. His legislative agenda — the Infrastructure Act, the CHIPS Act, the Inflation Reduction Act — represented the most significant investment in American industrial and climate policy since the New Deal. He described this as "building from the middle out, not the top down."</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Limits of American Power</div>
+            <p>By the time he reached the presidency, Biden had developed a sceptical view of what American military force could achieve. His decision to withdraw from Afghanistan drew explicitly on his own experience watching the war drag on without producing the conditions that would justify an indefinite presence. As Laurel Miller (2021) observed, Biden asked "can we" rather than "should we" — and answered candidly that America had reached the limits of what it could plausibly accomplish.</p>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"Don't tell me what you value. Show me your budget, and I'll tell you what you value."</blockquote>
+          <cite>— Joe Biden, a phrase he used repeatedly throughout his career, including in his 2022 State of the Union address</cite>
+        </div>
+
+        <p>Biden's relationship with the progressive wing of his party was always tense and transactional. He was not a transformationalist; he did not believe the system was broken, only that it had been temporarily hijacked. His agenda was ambitious by the standards of recent Democratic presidents but stopped well short of what his party's left flank demanded. He rejected Medicare for All, declined to abolish the Senate filibuster, and opposed the "defund the police" movement even as it defined the summer of 2020. His willingness to use executive action — student debt relief, climate regulations — was significant but always constrained by a lawyer's awareness of what the courts would tolerate.</p>
+      </section>
+
+      <!-- THE PRESIDENCY -->
+      <section id="presidency">
+        <h2>The Presidency: The Legislative Record</h2>
+
+        <p>Biden entered office on January 20, 2021, with the United States recording approximately 3,000 COVID deaths per day, the Capitol still processing the aftermath of the January 6 insurrection two weeks earlier, and a Senate split 50-50 between parties. The constraints were severe. What his administration accomplished within them was more substantial than his presidency is often given credit for.</p>
+
+        <h3>COVID and the American Rescue Plan</h3>
+
+        <p>The American Rescue Plan, signed on March 11, 2021, was a $1.9 trillion COVID relief package — the largest single economic intervention in American history up to that point. It funded vaccine distribution, extended enhanced unemployment benefits, sent $1,400 stimulus checks to most Americans, dramatically expanded the child tax credit (temporarily reducing child poverty by around 30%), and provided fiscal relief to state and local governments that had been running deficits through the pandemic. It passed with zero Republican votes, through the budget reconciliation process. Biden oversaw the distribution of 200 million COVID vaccine doses in his first 100 days — double the goal he set on inauguration day.</p>
+
+        <p>The inflation that followed was the central domestic political problem of his presidency. Consumer prices rose at their fastest rate in 40 years through 2022, peaking at around 9% annual inflation in June 2022. Whether this was primarily caused by the American Rescue Plan's spending, by global supply chain disruptions, by Russia's invasion of Ukraine driving up energy prices, or by some combination of all three remains a genuine economic argument. Biden and his advisors initially described the inflation as "transitory" — a prediction that proved embarrassingly wrong. The political cost was severe: by late 2021, his approval rating had dropped below 45% and never recovered.</p>
+
+        <h3>The legislative hat trick</h3>
+
+        <p>What makes Biden's domestic legislative record historically significant is that he passed three major infrastructure, industrial, and climate bills in a 12-month window. The Infrastructure Investment and Jobs Act (November 2021, $1.2 trillion), the CHIPS and Science Act (August 2022, $280 billion), and the Inflation Reduction Act (August 2022, $369 billion) collectively represented the largest American investment in physical infrastructure since Eisenhower's interstate highway system, the largest investment in domestic semiconductor manufacturing in American history, and the largest climate legislation ever signed. The Inflation Reduction Act alone was projected to reduce American greenhouse gas emissions by approximately 40% below 2005 levels by 2030 — still short of the Paris Agreement targets but far beyond any previous legislative commitment.</p>
+
+        <div class="callout info">
+          <div class="callout-label">Historical context</div>
+          <h4>Why the "hat trick" matters</h4>
+          <p>Presidents generally pass major legislation in their first two years, before midterm losses reduce their congressional leverage. Biden passed all three bills in that window — the Infrastructure Act with bipartisan votes (19 Republican senators, 13 Republican House members), the CHIPS Act with significant bipartisan support, and the IRA through reconciliation by the slimmest possible margin. Comparable bursts of legislative productivity in modern American history are rare: Johnson's Great Society (1964-65), Reagan's tax cuts (1981), and Obama's ACA + stimulus (2009-10).</p>
+        </div>
+
+        <h3>The limits of success</h3>
+
+        <p>Biden failed on several major priorities. Build Back Better — a $3.5 trillion social spending package covering universal pre-K, paid family leave, expanded Medicare benefits, and housing — was negotiated down by Senator Joe Manchin of West Virginia and ultimately died. Voting rights legislation was blocked by the filibuster. Immigration reform produced no major legislation. His administration's handling of the southern border became one of his most consistent political vulnerabilities, with illegal crossings reaching record levels through 2023 before executive action in mid-2024 reduced them significantly. His June 2023 executive order on asylum — restricting claims in ways that advocacy groups said violated domestic and international law — illustrated the tension between his institutionalist instincts and the political necessity of toughening enforcement.</p>
+
+        <div class="callout warning">
+          <div class="callout-label">Controversy</div>
+          <h4>Hunter Biden and the family financial questions</h4>
+          <p>Biden's son Hunter Biden pleaded guilty in September 2023 to federal tax charges and was convicted in June 2024 on federal gun charges — becoming the first child of a sitting president to be convicted of a crime. Biden initially said he would not pardon Hunter, then on December 1, 2024 — weeks before leaving office — granted his son a sweeping preemptive pardon covering any crimes he may have committed between January 2014 and December 2024. Biden also pardoned his brother James Biden for any federal crimes over the same period. Critics called the pardons a betrayal of his stated commitment to the rule of law; supporters argued the prosecutions were politically motivated. The episode damaged his legacy on institutional integrity.</p>
+        </div>
+      </section>
+
+      <!-- FOREIGN POLICY -->
+      <section id="foreign-policy">
+        <h2>Foreign Policy</h2>
+
+        <p>Biden was arguably the most experienced foreign policy president in modern American history. He had served on the Senate Foreign Relations Committee for most of his career, chaired it twice, and had visited virtually every major U.S. ally and adversary multiple times. His foreign policy team — Secretary of State Antony Blinken, National Security Advisor Jake Sullivan, Deputy National Security Advisor Jon Finer — were experienced institutionalists who shared his worldview. The foreign policy record of his four years was defined by three events: the withdrawal from Afghanistan, the Russian invasion of Ukraine, and the Gaza war.</p>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">April–August 2021</div>
+              <div class="tl-title">Afghanistan: The End of a Twenty-Year War</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>On April 14, 2021, Biden announced that all U.S. troops would leave Afghanistan by September 11 — the twentieth anniversary of the attacks that had started the war. The deadline was later moved to August 31. The decision was Biden's own, taken against the advice of most of his military commanders, who recommended keeping a small residual force of 2,500 troops. Biden's reasoning, as Laurel Miller (2021) has analysed in detail, was a kind of strategic realism: he concluded that the conditions for U.S. success — a stable Afghan government capable of defending itself — were not achievable within any reasonable period at any affordable cost. He framed the central question as "can we" rather than "should we." His conclusion was that the United States had reached the limits of what it could plausibly accomplish. <span class="src-chip">Miller (2021)</span></p>
+            <p>The decision was also partly constrained by inheritance. Trump's administration had signed a deal with the Taliban in Doha in February 2020, promising a full withdrawal by May 1, 2021, in exchange for Taliban counter-terrorism commitments. The deal had been agreed without the Afghan government's participation. Biden inherited an agreement that had already, as Miller put it, "exhausted the leverage argument" — the idea that keeping troops as a bargaining chip could produce better conditions. The leverage had already been traded away. <span class="src-chip">Miller (2021)</span></p>
+            <p>What Biden did not anticipate, and what his administration consistently underestimated, was the speed of the Afghan government's collapse. Kabul fell on August 15, 2021 — two weeks before the withdrawal deadline — as Afghan security forces, demoralised by years of corruption, inadequate support, and the knowledge that American air cover was ending, dissolved almost overnight. The images from Kabul's Hamid Karzai International Airport — Afghans crowding the tarmac, clinging to C-17 fuselages as they departed — were among the most damaging of his presidency. On August 26, an ISIS-K suicide bomber detonated at Abbey Gate, killing 13 American service members and approximately 170 Afghan civilians. Biden stuck to the August 31 deadline despite calls from allies for an extension. He accepted, as Miller described it, that a Taliban return to power was an "undesirable but tolerable outcome" for the United States. <span class="src-chip">Miller (2021)</span></p>
+            <p>The political cost was immediate and lasting. Biden's approval rating dropped roughly 10 points through August and September 2021 and never fully recovered. The military, intelligence, and foreign policy establishment were sharply critical — not so much of the decision to withdraw, which many agreed was correct, but of the execution and particularly of the failure to accelerate the evacuation of Afghan allies before the deadline. Approximately 120,000 people were evacuated in the final two weeks; tens of thousands of Afghans who had worked with U.S. forces were left behind.</p>
+            <div class="tl-sources"><span class="src-chip">Miller (2021)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">February 2022 – January 2025</div>
+              <div class="tl-title">Ukraine: Assembling the Coalition</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>On February 24, 2022, Russia launched a full-scale invasion of Ukraine. The Biden administration had spent the preceding weeks publicly warning allies — and the Ukrainian government, which was sceptical — that an invasion was coming, sharing intelligence assessments with unusual transparency in an effort to pre-empt Russian denial and strengthen the coalition's resolve. The response to the invasion was the most significant accomplishment of Biden's foreign policy: within days the U.S. had coordinated sweeping financial sanctions on Russia, the exclusion of major Russian banks from SWIFT, the freezing of approximately $300 billion in Russian central bank assets held in Western accounts, and the beginning of a sustained military assistance programme to Ukraine.</p>
+            <p>The Biden approach to Ukraine was deliberate and calibrated. Each major weapons system — Stingers, Javelins, HIMARS multiple-rocket systems, Abrams tanks, F-16s — was debated carefully before authorisation, with the White House consistently weighing Ukraine's military needs against the risk of NATO escalation with a nuclear power. Critics, including many Ukrainian officials, argued this caution cost lives and prolonged the war unnecessarily; Biden's team argued it maintained Western unity and avoided the risk of direct NATO-Russia conflict. The coalition he assembled — pulling in European governments that had been reluctant to confront Russia, securing Swedish and Finnish membership in NATO, coordinating weapons deliveries across dozens of countries — was a genuine organisational achievement.</p>
+            <p>Biden secured approximately $175 billion in U.S. assistance to Ukraine through January 2025, though the final package required a months-long congressional battle in late 2023 and early 2024. The war was still ongoing when he left office, with Russian forces having made incremental gains in eastern Ukraine but failing to achieve any of their major operational objectives.</p>
+            <div class="tl-sources"><span class="src-chip">Training data</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">October 2023 – January 2025</div>
+              <div class="tl-title">Gaza: The War That Defined His Final Year</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>On October 7, 2023, Hamas launched a surprise attack from Gaza into southern Israel, killing approximately 1,200 Israelis — the worst single-day killing of Jews since the Holocaust — and taking roughly 250 hostages. Biden's immediate response was categorical support for Israel's right to self-defence: he flew to Tel Aviv within days and embraced Israeli Prime Minister Benjamin Netanyahu publicly. The gesture was politically and symbolically important in the immediate aftermath; it would become a significant liability over the following year.</p>
+            <p>Israel's military campaign in Gaza — which the Israeli government described as aimed at destroying Hamas's military and governing capacity — produced a humanitarian catastrophe on a scale that made it increasingly difficult for Biden to sustain uncritical support. By early 2024, the Palestinian death toll had exceeded 25,000 and was rising; UN agencies warned of famine conditions in northern Gaza; and footage of civilian casualties was producing mass protests across American university campuses and in cities around the world. Biden's calls for civilian protection and "humanitarian pauses" were publicly ignored by Netanyahu. His administration paused a single weapons shipment — of 1,800-pound bombs — in May 2024, after months of internal pressure from Democratic officials and administration staff. The pause was limited and temporary.</p>
+            <p>The Gaza war drove a significant portion of Arab-American and young Democratic voters away from Biden — a factor that became directly relevant to his 2024 electoral calculations. Michigan, with a large Arab-American population, produced a significant "uncommitted" primary vote in February 2024 as a direct protest. Biden's handling of Gaza became a central argument in the wider debate about whether he could win a general election in November 2024 — and the debate about whether he should step aside.</p>
+            <div class="tl-sources"><span class="src-chip">Training data</span></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- THE DEPARTURE -->
+      <section id="departure">
+        <h2>The Departure</h2>
+
+        <p>The question of Biden's age — he was 78 when he took office and would have been 86 at the end of a second term — had been present from the beginning of his presidency but became politically acute through 2023 and early 2024. A Department of Justice special counsel's report in February 2024, investigating Biden's handling of classified documents, characterised him as a "well-meaning, elderly man with a poor memory" — a description that was widely criticised as inappropriate for a prosecutorial document but that captured a widespread private anxiety within the Democratic Party.</p>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">June 27, 2024</div>
+              <div class="tl-title">The CNN Debate: A Pivotal 90 Minutes</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>The debate against Donald Trump on June 27, 2024 — the earliest general election presidential debate in American history — was a political catastrophe. Biden appeared confused at several points, lost his train of thought repeatedly, spoke in a near-whisper at times, and failed to land any of the attacks on Trump's record that his campaign had prepared. Trump, who had made dozens of false statements during the debate, emerged looking stronger by contrast simply because he was more alert.</p>
+            <p>The reaction from the Democratic Party was unlike anything in modern American political history. Within 48 hours, major donors were calling privately for Biden to step aside. By July, sitting Democratic senators and House members — initially one or two, then a steady stream — began publicly urging him to withdraw. The White House pushed back aggressively, insisting the debate was a "bad night" and pointing to Biden's full legislative record. Biden himself told donors and allied leaders that he was not dropping out. He held a press conference on July 11 that was intended to demonstrate his command of his brief; it was credible in substance but did not arrest the political bleeding.</p>
+            <div class="tl-sources"><span class="src-chip">Training data</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">July 21, 2024</div>
+              <div class="tl-title">The Withdrawal: "I Believe It Is in the Best Interest of My Party"</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>On July 21, 2024 — 107 days before the election — Biden announced via a letter posted on social media that he was withdrawing from the 2024 presidential race. He endorsed Vice President Kamala Harris. The decision, he wrote, was in "the best interest of my party and the country." It was the first time in modern American history that an incumbent president had stepped aside under pressure rather than defeat. Biden had spoken by phone with former President Barack Obama and former Secretary of State Hillary Clinton the night before; both had reportedly indicated, in carefully calibrated language, that they supported his assessment of the political situation.</p>
+            <p>The debate about whether Biden made the right decision, and whether he should have made it earlier, was immediate and will continue for years. Supporters argued it was a selfless act of democratic patriotism — putting the country ahead of personal ambition — and pointed out that the very willingness to step aside distinguished him from Trump in a fundamental way. Critics argued he had waited too long, that the delay after the debate had damaged Harris's campaign by consuming precious weeks, and that his earlier insistence that he was not stepping down had left the party with a chaotic, compressed timeline for selecting and building support for his successor. Harris ultimately lost the 2024 election to Donald Trump.</p>
+            <div class="tl-sources"><span class="src-chip">Training data</span></div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- LEGACY -->
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>Any assessment of Joe Biden's presidency written in 2024 or early 2025 must acknowledge that the lens is not yet fixed. He was a one-term president who lost to the man he had defeated four years earlier, and whose successor began dismantling his legislative achievements within hours of taking office — withdrawing from the Paris Agreement again, reversing his executive orders, pausing his student debt relief, and beginning to unwind the IRA's implementation. Whether the structural investments of the Infrastructure Act and the CHIPS Act prove durable or reversible will be a significant factor in long-term historical assessment.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">The case for a consequential presidency</div>
+            <ul>
+              <li>Passed more significant domestic legislation in one term than any president since Lyndon Johnson</li>
+              <li>Led the most effective Western response to Russian aggression since NATO was founded</li>
+              <li>Signed the most significant climate legislation in American history</li>
+              <li>Oversaw the fastest job creation of any presidency since records began</li>
+              <li>Restored American standing with allies after four years of transactional disruption</li>
+              <li>Made the selfless decision to step aside rather than risk handing the election to Trump through ego</li>
+              <li>Oversaw vaccine rollout that ended the acute COVID emergency</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">The case against: failures and costs</div>
+            <ul>
+              <li>The Afghanistan withdrawal's execution was a genuine failure that left allies and partners behind</li>
+              <li>Inflation — whatever its causes — was the dominant political reality of his term and he never recovered from it</li>
+              <li>The Gaza war put him on the wrong side of a major humanitarian crisis and cost his party with key constituencies</li>
+              <li>His age diminished his presidency before its end and his insistence on running until July 2024 may have cost Harris the election</li>
+              <li>Failed to pass major voting rights, immigration, or social spending legislation</li>
+              <li>Hunter Biden pardons undermined his claimed commitment to rule of law</li>
+              <li>Failed to build durable political support for his legislative achievements — most Americans couldn't name them</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legacy-card complex" style="margin-top:1.25rem;">
+          <div class="legacy-label">Genuinely contested</div>
+          <ul>
+            <li>The Afghanistan withdrawal: was the decision correct even if the execution was flawed? Miller (2021) offers the most sustained analysis — concluding the leverage argument was already exhausted before Biden took office</li>
+            <li>The inflation question: how much of the 2022 inflation surge was Biden's spending and how much was global supply chain disruption? Economists genuinely disagree</li>
+            <li>The Gaza question: could more pressure earlier have produced different outcomes, or was Israeli decision-making genuinely beyond American influence?</li>
+            <li>The stepping-aside question: did it help or hurt? The counterfactual — Biden staying in — is unknowable</li>
+          </ul>
+        </div>
+
+        <p>What distinguishes Biden from most of the other figures in this series is that his administration was not authoritarian — he left office voluntarily, transferred power peacefully, and accepted the result of a democratic election that went against his party. In an era when this has become a genuinely contested norm rather than an assumption, that matters more than it might otherwise seem. The historians who assess Biden a generation from now will likely argue about whether his legislative record was progressive or insufficient, whether his foreign policy was careful or timid — but the basic fact of democratic continuity may, in time, appear more significant than any individual policy.</p>
+
+        <div class="pull-quote">
+          <blockquote>"I've always believed you can define a man by what makes him angry. And Biden was always most angry about injustice — he just wasn't always sure exactly what to do about it."</blockquote>
+          <cite>— A former senior White House official, quoted anonymously in press accounts during the 2024 transition period</cite>
+        </div>
+      </section>
+
+      <!-- CONNECTED TOPICS -->
+      <section id="connected">
+        <h2>Connected Topics</h2>
+
+        <div class="topics-group">
+          <div class="topics-group-label">People directly connected</div>
+          <div class="topics-grid">
+            <a class="topic-card" href="obama.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg" alt="Barack Obama">
+              <span class="topic-type-tag person">Person</span>
+              <div class="topic-name">Barack Obama</div>
+              <div class="topic-preview">Biden served as Obama's VP for eight years, inheriting both his coalition and his foreign policy dilemmas.</div>
+            </a>
+            <a class="topic-card" href="hillary-clinton.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg" alt="Hillary Clinton">
+              <span class="topic-type-tag person">Person</span>
+              <div class="topic-name">Hillary Clinton</div>
+              <div class="topic-preview">Biden's Democratic rival in 2008 and Secretary of State — a figure whose career intersected his at almost every turn.</div>
+            </a>
+            <a class="topic-card" href="george-w-bush.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png" alt="George W. Bush">
+              <span class="topic-type-tag person">Person</span>
+              <div class="topic-name">George W. Bush</div>
+              <div class="topic-preview">Biden voted for the 2002 AUMF authorising the Iraq War — a vote that haunted both his 2008 campaign and his career.</div>
+            </a>
+            <a class="topic-card" href="dick-cheney.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg" alt="Dick Cheney">
+              <span class="topic-type-tag person">Person</span>
+              <div class="topic-name">Dick Cheney</div>
+              <div class="topic-preview">Biden's Senate career overlapped with Cheney's rise to power, and he inherited the wars Cheney's architecture produced.</div>
+            </a>
+            <a class="topic-card" href="bill-clinton.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg" alt="Bill Clinton">
+              <span class="topic-type-tag person">Person</span>
+              <div class="topic-name">Bill Clinton</div>
+              <div class="topic-preview">Biden championed Clinton's 1994 Crime Bill — legislation that became one of his most consequential and most contested legacies.</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="topics-group">
+          <div class="topics-group-label">Related events</div>
+          <div class="topics-grid">
+            <a class="topic-card" href="september-11.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg" alt="September 11, 2001">
+              <span class="topic-type-tag event">Event</span>
+              <div class="topic-name">September 11, 2001</div>
+              <div class="topic-preview">The attacks that launched the wars Biden spent the rest of his Senate career managing and ultimately ended as president.</div>
+            </a>
+            <a class="topic-card" href="iraq-war.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg" alt="The Iraq War">
+              <span class="topic-type-tag event">Event</span>
+              <div class="topic-name">The Iraq War</div>
+              <div class="topic-preview">Biden's 2002 vote to authorise force in Iraq was the most damaging vote of his Senate career and nearly ended his 2008 campaign.</div>
+            </a>
+            <a class="topic-card" href="arab-spring.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg" alt="The Arab Spring">
+              <span class="topic-type-tag event">Event</span>
+              <div class="topic-name">The Arab Spring</div>
+              <div class="topic-preview">As VP, Biden was in the room for the Obama administration's responses to the 2011 uprisings across the Middle East.</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="topics-group">
+          <div class="topics-group-label">Key concepts</div>
+          <div class="topics-grid">
+            <a class="topic-card" href="responsibility-to-protect.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="Responsibility to Protect">
+              <span class="topic-type-tag concept">Concept</span>
+              <div class="topic-name">Responsibility to Protect</div>
+              <div class="topic-preview">The doctrine that shaped Biden's response to Libya in 2011 and that he struggled to apply consistently in Gaza in 2023-24.</div>
+            </a>
+            <a class="topic-card" href="realpolitik.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik">
+              <span class="topic-type-tag concept">Concept</span>
+              <div class="topic-name">Realpolitik</div>
+              <div class="topic-preview">Biden's Afghan withdrawal reflected a realist calculation about American limits — accepting a bad outcome because the alternatives were worse.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOURCES -->
+      <section id="sources">
+        <h2>Sources</h2>
+
+        <ol class="sources-list">
+          <li>
+            <span class="src-num">1</span>
+            <strong class="src-title">Biden's Afghanistan Withdrawal: A Verdict on the Limits of American Power</strong>
+            <span class="src-journal"> — Laurel Miller. <em>Survival</em>, vol. 63, no. 3, June–July 2021, pp. 37–44. DOI: 10.1080/00396338.2021.1930404</span>
+            <div class="src-note">Miller is Director of the Asia Programme at the International Crisis Group and served as deputy and acting Special Representative for Afghanistan-Pakistan at the U.S. State Department, 2013–2017. This is the primary source for the Afghanistan withdrawal analysis in this article; it provides the most cogent near-contemporaneous assessment of Biden's decision-making framework and the leverage argument. Available through institutional access.</div>
+          </li>
+          <li>
+            <span class="src-num">2</span>
+            <strong class="src-title">Promises to Keep: On Life and Politics</strong>
+            <span class="src-journal"> — Joe Biden. Random House, 2007.</span>
+            <div class="src-note">Biden's memoir covering his early life, the death of his wife and daughter, his Senate career through the 1990s, and his personal philosophy. Particularly useful for the Scranton years, the 1972 tragedy, and his account of the Anita Hill hearings. Self-serving in places but candid about personal failure in ways that are useful for biographical context.</div>
+          </li>
+          <li>
+            <span class="src-num">3</span>
+            <strong class="src-title">Promise Me, Dad: A Year of Hope, Hardship, and Purpose</strong>
+            <span class="src-journal"> — Joe Biden. Flatiron Books, 2017.</span>
+            <div class="src-note">Biden's memoir specifically about the year 2015 — Beau Biden's illness and death — and his decision not to run for president in 2016. Essential for understanding the personal weight that shaped his 2020 campaign.</div>
+          </li>
+          <li>
+            <span class="src-num">4</span>
+            <strong class="src-title">The Long Alliance: The Imperfect Union of Joe Biden and Barack Obama</strong>
+            <span class="src-journal"> — Gabriel Debenedetti. Henry Holt, 2022.</span>
+            <div class="src-note">A detailed reconstruction of the Biden-Obama relationship from 2008 through 2021, based on extensive interviews. Particularly useful for understanding the dynamics of the vice presidency and Biden's political identity relative to his predecessor.</div>
+          </li>
+          <li>
+            <span class="src-num">5</span>
+            <strong class="src-title">The Afghanistan Papers: A Secret History of the War</strong>
+            <span class="src-journal"> — Craig Whitlock. Simon &amp; Schuster, 2021.</span>
+            <div class="src-note">Based on confidential government documents obtained by the Washington Post, this provides essential context for understanding the Afghanistan War's structural failure — the systemic problems of assessment, strategy, and political will that predated and shaped Biden's withdrawal decision.</div>
+          </li>
+          <li>
+            <span class="src-num">6</span>
+            <strong class="src-title">Notes on the claims in this article</strong>
+            <span class="src-journal"></span>
+            <div class="src-note">Beyond the Miller (2021) PDF provided as a primary source, factual claims about Biden's legislative record, the Ukraine response, the Gaza war, and the 2024 election events are drawn from the author's training data (knowledge cutoff May 2025), sourced to contemporaneous reporting by the New York Times, Washington Post, Associated Press, and Reuters. Figures for legislation costs, vote tallies, and polling numbers reflect the best available estimates as of early 2025; these may be refined by subsequent analysis.</div>
+          </li>
+        </ol>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list</div>
+
+<script>
+const CONTEXT_ARTICLES = [
+  { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+  { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+  { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+  { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+  { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+  { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+  { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+  { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+  { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+  { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+  { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+  { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+  { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+  { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+  { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+  { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+  { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+  { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+  { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+  { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+  { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+  { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+  { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+  { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+  { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+  { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+  { type: 'concept', title: 'The Non-Aligned Movement',       desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',    url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+  { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                            url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+  { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+  { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+  { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+  { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+  { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+  { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',  url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+  { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',  url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+  { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+  { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.',     url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+  { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+  { type: 'person', title: 'Henry Kissinger',          desc: 'The refugee who became America\'s most powerful and most controversial diplomat.',         url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+  { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+  { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+  { type: 'person', title: 'Barack Obama',             desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.',  url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+  { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+  { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+  { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+  _searchOpen = !_searchOpen;
+  btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+  if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+}
+function runSearch(q) {
+  const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+  const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES.filter(a =>
+    a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term));
+  _focusIdx = -1;
+  if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+  box.innerHTML = hits.map((a,i) =>
+    `<a class="search-result" href="${a.url}" data-i="${i}">
+       <div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span>
+       <span class="search-result-title">${a.title}</span></div>
+       <div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items = document.querySelectorAll('.search-result');
+  if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+  else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+  else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+  else if (e.key==='Escape') { toggleSearch(); return; }
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+window.addEventListener('scroll', () => {
+  document.getElementById('progressBar').style.width = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+function toggleSave() {
+  const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

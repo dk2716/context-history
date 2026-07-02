@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yevgeny Prigozhin — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Military &amp; Paramilitary</a><span class="breadcrumb-sep">›</span>
+        <span>Yevgeny Prigozhin</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar" id="heroAvatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg" alt="Yevgeny Prigozhin"></div>
+        <div>
+          <div class="hero-region-tag">Russia · Paramilitary Commander</div>
+          <h1>Yevgeny Prigozhin</h1>
+          <p class="hero-sub">The convicted criminal who became Putin's caterer, built Russia's most feared private army, ordered it to march on Moscow — and died in a suspicious plane crash 63 days later.</p>
+          <div class="hero-meta">
+            <span>~20 min read</span><span>·</span>
+            <span>Active: 2014–2023</span><span>·</span>
+            <span>Russia, Africa, Ukraine</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#empire">Building the Empire</a></li>
+        <li><a href="#operations">Key Operations</a></li>
+        <li><a href="#mutiny">The Mutiny</a></li>
+        <li><a href="#death">Death &amp; Aftermath</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Yevgeny Viktorovich Prigozhin (Евгений Викторович Пригожин)</div></div>
+          <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">June 1, 1961 — Leningrad (now Saint Petersburg), USSR</div></div>
+          <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">August 23, 2023 — Tver Oblast, Russia (plane crash; widely attributed to Kremlin)</div></div>
+          <div class="qf-item"><div class="qf-label">Prison record</div><div class="qf-value">9 years served (1981–1990) for robbery and fraud</div></div>
+          <div class="qf-item"><div class="qf-label">Known as</div><div class="qf-value">"Putin's chef"; "the Cook" (Chinese: 厨子); later xiaoxiong (枭雄) — fierce, ambitious leader</div></div>
+          <div class="qf-item"><div class="qf-label">Role</div><div class="qf-value">Wagner Group financier &amp; owner; Internet Research Agency operator; Kremlin caterer</div></div>
+          <div class="qf-item"><div class="qf-label">Theatres</div><div class="qf-value">Ukraine, Syria, Libya, CAR, Sudan, Mali; disinformation ops in U.S. &amp; Europe</div></div>
+          <div class="qf-item"><div class="qf-label">Key event</div><div class="qf-value">Led "march for justice" mutiny, June 23–24, 2023 — the most serious challenge to Putin's authority in two decades</div></div>
+        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Rise</h2>
+
+        <p>Yevgeny Prigozhin was not born into power. He came from Leningrad's working class, dropped out of school early, and by 18 was running with petty criminal networks. In 1981, Soviet courts convicted him of robbery, fraud, and involving minors in criminal activity. He served nine years of his twelve-year sentence before being released in 1990 — just as the Soviet Union was beginning to collapse and a new world was opening up for men with no scruples and a hunger for money.</p>
+
+        <p>The 1990s in Saint Petersburg were a particular kind of chaos. State assets were being privatised at fire-sale prices, organised crime and emerging business were indistinguishable, and the city's deputy mayor — a law professor named Vladimir Putin — was in the middle of it all, managing port contracts and foreign investment deals. Prigozhin opened a hot dog stand, then a grocery store, then a restaurant. He had a talent for reading what powerful people wanted. By the late 1990s he was running Staraya Tamozhnya, an upscale restaurant on the waterfront, and hosting the kind of dinners where the right people came to be seen. One of those people was Putin. <span class="src-chip">Dörfler (2025)</span></p>
+
+        <p>The relationship that followed was transactional in the most Russian sense. Putin became president in 2000. Prigozhin's catering company, Concord, won contracts to supply school lunches across Saint Petersburg, then military catering contracts worth billions of roubles across Russia. He threw elaborate banquets for foreign dignitaries — including President George W. Bush during a 2006 state dinner — and became known, somewhat mockingly, as "Putin's chef." The nickname understated the relationship. Prigozhin was becoming one of the instruments through which the Kremlin exerted power at a distance: deniably, cheaply, and with maximum force.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">9</div><div class="stat-label">Years served in Soviet prison, released 1990</div></div>
+          <div class="stat-box"><div class="stat-number">2014</div><div class="stat-label">Year Wagner Group first deployed (Crimea)</div></div>
+          <div class="stat-box"><div class="stat-number">$940M</div><div class="stat-label">Putin's confirmed Wagner expenditure in first year in Ukraine alone</div></div>
+          <div class="stat-box"><div class="stat-number">63</div><div class="stat-label">Days between the mutiny and Prigozhin's death</div></div>
+        </div>
+      </section>
+
+      <section id="empire">
+        <h2>Building the Empire</h2>
+
+        <p>The Wagner Group did not announce itself. It emerged from the shadows of Russia's 2014 annexation of Crimea as a collection of fighters with no insignia, no legal existence under Russian law (private military companies are explicitly illegal under Article 208 and Article 359 of the Russian Criminal Code), and no official connection to the state. Its military commander was Dmitry Utkin — a former GRU colonel and Spetsnaz officer with SS tattoos who had previously served in the Moran Security Group and the Slavonic Corps, earlier Russian attempts at a PMC. Utkin chose the name: Wagner, after the composer Richard Wagner, whose music Adolf Hitler admired. <span class="src-chip">Dörfler (2025)</span></p>
+
+        <p>The GRU — Russia's military intelligence directorate — provided the institutional backbone. Prigozhin provided the money and the political connections. The arrangement suited the Kremlin perfectly: Wagner could operate where the Russian military could not, absorb casualties that would never appear in official statistics, and be disavowed entirely if a mission went wrong. In exchange, Prigozhin's Concord Catering contracts kept expanding. The arrangement was not corruption in the ordinary sense — it was the formalisation of a relationship between a state and a private violence entrepreneur, each feeding the other. <span class="src-chip">Dörfler (2025)</span></p>
+
+        <p>But Prigozhin was more than a financier. He also ran the Internet Research Agency — the "troll farm" in a Saint Petersburg office block that spent the mid-2010s flooding social media with divisive content designed to inflame American politics. The U.S. Treasury sanctioned him in 2018 for interfering in the 2016 presidential election. He denied it publicly with characteristic bravado, then admitted it the day before his mutiny in June 2023, as if to show that the truth no longer had any power over him. He also deployed Wagner as a quasi-diplomatic instrument: in the Central African Republic in 2019, it was Prigozhin who brokered the Khartoum Agreement between the government and fourteen armed factions, burnishing Russia's image as a peace-maker on the continent — while simultaneously extracting diamond and gold concessions. <span class="src-chip">Pokalova (2026)</span></p>
+
+        <div class="callout concept">
+          <div class="callout-label">The Legal Paradox</div>
+          <h4>A PMC that didn't officially exist</h4>
+          <p>Wagner only formally registered as "PMC Wagner Center" in December 2022, eight years after its founding — and only after it had fought on three continents, recruited tens of thousands of fighters, and reportedly earned up to $20 billion since 2011. For most of its existence it was legally invisible: the Kremlin could and did deny any connection, while simultaneously funnelling it contracts, intelligence, and aircraft. When Putin was finally asked directly about Wagner's finances in September 2022, he confirmed the group had received approximately $940 million from the state in its first year of Ukrainian operations alone.</p>
+        </div>
+
+        <p>In Africa, Wagner's business model was explicit: security services in exchange for resource extraction rights. In the Central African Republic, the front company Lobaye Invest held diamond and gold mining concessions while Prigozhin's Sewa Security Services trained the presidential guard and embedded fighters in combat operations. In Sudan, M Invest and Meroe Gold extracted minerals from the Jebel Amer goldfield while Wagner operatives ran social media disinformation campaigns to protect the government of Omar al-Bashir — and, after Bashir fell, to support his successor. In Libya, Wagner seized the Sharara oil field and others by mid-2020, while Prigozhin's operatives ran election-meddling campaigns to support Khalifa Haftar. The pattern across every theatre was identical: violence, resource extraction, and information operations, sold as a package. <span class="src-chip">Pokalova (2026)</span></p>
+
+        <p>Ukraine changed the scale of everything. After Russia's full-scale invasion in February 2022, Wagner was tasked with some of the heaviest fighting — particularly around Bakhmut, where it engaged in grinding, attritional warfare that consumed men at an extraordinary rate. Prigozhin's solution was recruitment from Russian prisons: he personally visited penal colonies, offering convicts commutation of their sentences in exchange for six months of service. At Wagner's peak in Ukraine, roughly 40,000 of its approximately 50,000 fighters were former prisoners. The monthly expenditure exceeded $100 million. And it was in Ukraine that Prigozhin began his public feud with the Russian military establishment — blaming senior generals for ammunition shortages and unnecessary casualties, accusing the Ministry of Defence of incompetence and betrayal, and doing so in increasingly unhinged video rants broadcast on Telegram. <span class="src-chip">Dörfler (2025)</span></p>
+      </section>
+
+      <section id="operations">
+        <h2>Key Operations</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2014–2015 · Ukraine &amp; Syria</div>
+              <div class="tl-title">From Crimea to the Levant: Wagner's First Campaigns</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>Wagner's first documented deployment was to Crimea in early 2014, where unmarked fighters — the "little green men" of Russian propaganda — helped secure the peninsula before the formal annexation. Many of Wagner's earliest recruits came directly from the Moran Security Group and the Slavonic Corps, an earlier Russian PMC that had attempted to operate in Syria and been publicly embarrassed. Utkin's command structure provided the professional spine; Prigozhin's Concord contracts provided the funding. <span class="src-chip">Dörfler (2025)</span></p>
+            <p>By 2015, Wagner was in Syria, deployed alongside Russian conventional forces after Putin ordered military intervention in support of Bashar al-Assad. Russian Khmeimim Air Base served as Wagner's unofficial logistical headquarters. In Syria, Wagner fighters operated as ground forces for hire, seizing oil fields and fighting alongside Syrian army units. The arrangement exemplified Russia's "strategic minimalism": conventional forces provided air cover while Wagner absorbed the casualties of ground combat, keeping Russian official death tolls politically manageable. <span class="src-chip">Spearin (2026)</span></p>
+            <div class="tl-sources"><span class="src-chip">Dörfler (2025)</span><span class="src-chip">Spearin (2026)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">February 7, 2018 · Syria</div>
+              <div class="tl-title">Battle of Khasham: 200 Wagner Fighters Killed by U.S. Forces</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>On the night of February 7, 2018, a column of approximately 500 Wagner fighters and Syrian allied troops advanced on the Conoco oil field in Deir ez-Zor province — territory held by U.S.-backed Syrian Democratic Forces and protected by a small contingent of American special operations forces. What happened next became one of the most lopsided engagements in modern warfare. The advancing column had no air support and no Russian military coordination. American forces called in artillery and airstrikes. Within hours, up to 200 Wagner fighters were dead. The Russian government officially denied any Russian nationals were involved. <span class="src-chip">Spearin (2026)</span></p>
+            <p>The Battle of Khasham exposed a structural vulnerability in Wagner's model: without access to Russian air power, it was a conventional infantry force that could be decimated by a technologically superior opponent. It also demonstrated the limits of Russia's "plausible deniability" — the men were dead, their identities traceable, but Moscow simply refused to acknowledge them. Families received no official notification. Prigozhin reportedly raged privately, but said nothing publicly. <span class="src-chip">Spearin (2026)</span></p>
+            <div class="tl-sources"><span class="src-chip">Spearin (2026)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2018–2022 · Africa</div>
+              <div class="tl-title">The African Expansion: Libya, CAR, Sudan, Mali</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>Between 2018 and 2022, Prigozhin oversaw Wagner's transformation from a regional PMC into a continent-spanning operation. In Libya, Wagner arrived in October 2018 to support Field Marshal Khalifa Haftar's Libyan National Army against the UN-recognised Government of National Accord. At peak deployment, between 800 and 2,000 Wagner fighters operated in Libya; Russian-supplied MiG-29 and Su-24 jets flew from bases at Sirte and al-Jufra with no markings. In the Central African Republic, Wagner provided presidential security while extracting diamond and gold concessions — and ran propaganda operations through the Lengo Songo radio station, broadcasting pro-Russian content to a population with little alternative media. In Sudan, Prigozhin's M Invest and Meroe Gold companies extracted minerals while Wagner advisors supported both Bashir and, after his fall, the paramilitary commander Hamdan. <span class="src-chip">Pokalova (2026)</span></p>
+            <p>Mali was the sharpest example of Wagner's method. In December 2021, the Malian military junta expelled French forces (ending Operation Barkhane) and invited Wagner in. Prigozhin's information operations — amplifying anti-French sentiment on social media, spreading disinformation about French military conduct — had helped create the political conditions for the switch. An estimated 1,000 Wagner fighters deployed. Within months, the March 2022 Moura massacre had killed approximately 500 civilians, with Wagner and Malian forces arriving by helicopter and conducting house-to-house killings over five days. Wagner's presence in Mali correlated with a 71% share of all conflict incidents associated with civilian targeting in the country. <span class="src-chip">Pokalova (2026)</span><span class="src-chip">Spearin (2026)</span></p>
+            <div class="tl-sources"><span class="src-chip">Pokalova (2026)</span><span class="src-chip">Spearin (2026)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2022–2023 · Ukraine</div>
+              <div class="tl-title">Bakhmut and the Breaking Point: Wagner in Ukraine</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>After Russia's full-scale invasion in February 2022, Wagner's role in Ukraine expanded dramatically. Prigozhin's prison recruitment programme became the main source of new fighters: he personally toured penal colonies in military uniform, admitting his own criminal past on camera and promising commutation of sentences for six months of service. The September 2022 recruitment speech became a viral sensation — watched by millions across Russia and picked up by Western media. By the battle for Bakhmut — a grinding urban fight that lasted most of 2022 and into 2023 — Wagner had roughly 50,000 fighters in Ukraine, of whom an estimated 40,000 were convict recruits. The monthly operational cost exceeded $100 million. <span class="src-chip">Dörfler (2025)</span><span class="src-chip">Yablokov &amp; Poliakoff (2026)</span></p>
+            <p>To understand what followed, you have to understand that Prigozhin was not just a warlord — he was a media operator. His Internet Research Agency had been absorbed into a wider structure he called Patriot Media Group: a constellation of news sites, Telegram channels, and video production units that blurred the line between news and propaganda. He had pioneered the use of war correspondents in Syria and Libya; now he turned those same tools on the Russian Ministry of Defence. Yablokov and Poliakoff describe his persona as that of a "media oligarch" — someone who understood that in the information environment Putin had built, a man with cameras and no shame could challenge the state on terrain the state didn't expect to defend. <span class="src-chip">Yablokov &amp; Poliakoff (2026)</span></p>
+            <p>The escalation followed a pattern of deliberate provocation. In November 2022, a video circulated on Telegram showing a man identified as Yevgeniy Nuzhin — a Wagner recruit who had surrendered to Ukraine and been returned in a prisoner exchange — being executed with a sledgehammer. Wagner's own channels amplified it. Prigozhin commented with characteristic openness: the punishment was deserved. He was making violence public and political, demonstrating that he could do what the state preferred to do quietly. The following month, he invited Ukrainian President Zelensky to meet him on the front lines at Bakhmut, presenting himself as Zelensky's military counterpart — not Putin's subordinate, but an independent commander with the standing to conduct his own diplomacy. <span class="src-chip">Yablokov &amp; Poliakoff (2026)</span></p>
+            <p>At New Year 2023, while Putin delivered his traditional address to the nation from the Kremlin, Prigozhin released his own. He filmed it in military gear — with dead Russian soldiers piled in the background, a stark contrast to Putin's official pageantry. The message was implicit and unmistakable: these men are dying, and the state is celebrating. The culmination came in a May 2023 video that reverberated across Russian-language social media and into Western newsrooms. Standing over rows of Wagner corpses, Prigozhin roared directly at the camera: "Shoigu! Gerasimov! Where are the shells?" He was accusing Russia's Defence Minister and Chief of the General Staff — men personally selected by Putin — of deliberately starving Wagner of ammunition. He added, in a phrase Russian audiences heard as a direct allusion to the president: "What if grandpa is a dickhead?" No one in Putin's system had ever spoken like this, openly, on camera. The military establishment seethed. Putin, publicly, said nothing. <span class="src-chip">Yablokov &amp; Poliakoff (2026)</span><span class="src-chip">Dörfler (2025)</span></p>
+            <div class="tl-sources"><span class="src-chip">Dörfler (2025)</span><span class="src-chip">Yablokov &amp; Poliakoff (2026)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="mutiny">
+        <h2>The Mutiny: June 23–24, 2023</h2>
+
+        <p>The trigger, officially, was an order. On June 23, 2023, the Russian Ministry of Defence issued a directive requiring all volunteer formations — including Wagner — to sign contracts subordinating themselves to military command by July 1. For Prigozhin, this was not a bureaucratic inconvenience. It was the end of his independent power. He had spent months accusing the MoD of trying to destroy Wagner; now the ministry was formalising that attempt. That evening, Prigozhin announced on Telegram that Wagner had been attacked by Russian military forces. The claim was disputed, but the declaration was not: Wagner was in open rebellion.</p>
+
+        <p>By the morning of June 24, Wagner fighters had seized Rostov-on-Don — a major southern Russian city and the headquarters of the Southern Military District — without significant resistance. Prigozhin appeared in person at the district command, filmed in conversation with the deputy defence minister and the chief of the general staff, who had come to negotiate. Simultaneously, a Wagner armoured column of tanks and vehicles began moving north along the M4 highway toward Moscow. Russian forces deployed helicopters and fighter jets to intercept; several were reportedly shot down. The column advanced to within approximately 200 kilometres of the capital before stopping. <span class="src-chip">Dörfler (2025)</span></p>
+
+        <p>The deal was brokered by Alexander Lukashenko, the Belarusian president who maintained his own independent relationship with Prigozhin. The terms, as announced by Kremlin spokesman Dmitry Peskov, were: Prigozhin would go into exile in Belarus; criminal charges would be dropped; Wagner fighters who had participated would not be prosecuted. Putin, in a terse address to the nation, called it a "betrayal" and a "stab in the back" — but agreed to the deal. The mutiny had lasted thirty-six hours. It was the most serious internal challenge to Putin's authority since he came to power. <span class="src-chip">Dörfler (2025)</span><span class="src-chip">Yablokov &amp; Poliakoff (2026)</span></p>
+
+        <p>One theory that circulated widely in the aftermath — and was never definitively confirmed or denied — held that Russian security services threatened the lives of Prigozhin's family in Moscow while the column was still moving north, presenting him with a personal cost he had not calculated on. His mother later told Russian journalists she had warned him beforehand: "Zhenya, only the internet will support you." Whether the family threats were the deciding factor or not, the public explanation Prigozhin gave for stopping was that he wanted to avoid Russian bloodshed — a justification that, in hindsight, tells us something about what he thought he was doing, even if it does not explain why a man who had spent two years filming himself over rows of dead fighters drew the line at that particular moment. <span class="src-chip">Yablokov &amp; Poliakoff (2026)</span></p>
+
+        <div class="callout warning">
+          <div class="callout-label">The Unresolved Question</div>
+          <h4>"Why did he stop?"</h4>
+          <p>No satisfactory public explanation exists for why Prigozhin halted the column 200km from Moscow. The most plausible explanations are not mutually exclusive: he may have judged that without broader military defections the column would be destroyed before reaching the capital; he may have achieved his core objective of demonstrating the regime's vulnerability; or he may have received private assurances beyond what was publicly announced. Russian officials and Western analysts have offered all three interpretations. The answer died with Prigozhin.</p>
+        </div>
+
+        <p>In the weeks after the mutiny, Prigozhin moved to Belarus as agreed, while the Kremlin worked to disaggregate Wagner's forces. General Andrei Troshev — one of Wagner's senior commanders — was appointed to integrate some units into the Ministry of Defence's own special forces structures. Other elements remained loyal to Prigozhin. His son Pavel began asserting control over the business empire. African operations continued largely uninterrupted: Russian foreign ministry officials quickly reassured governments in Mali, the CAR, and Libya that Wagner's presence and commitments remained intact. <span class="src-chip">Dörfler (2025)</span><span class="src-chip">Stanyard (2025)</span></p>
+      </section>
+
+      <section id="death">
+        <h2>Death and the Question of Who Gave the Order</h2>
+
+        <p>On the evening of August 23, 2023 — exactly two months after the mutiny — a private jet registered to Prigozhin's company crashed in Tver Oblast, northwest of Moscow, shortly after takeoff from Sheremetyevo airport. All ten people aboard were killed. The passenger manifest included Prigozhin himself and Dmitry Utkin, Wagner's military commander. Russian authorities confirmed both deaths the following day, after DNA testing.</p>
+
+        <p>Putin offered no condolences. His official statement called Prigozhin "a talented person who made serious mistakes in life" — a phrase carefully calibrated to neither mourn nor celebrate. Western governments and most analysts attributed the crash to the Kremlin. The Wall Street Journal later reported that the crash had been ordered by Nikolai Patrushev, then head of Russia's Security Council and one of Putin's closest siloviki — a claim Russia denied. The timing — sixty-three days after the mutiny, long enough for the public temperature to cool, soon enough that the message was clear — was consistent with how Putin's system has historically treated those who challenge it. <span class="src-chip">Yablokov &amp; Poliakoff (2026)</span></p>
+
+        <p>Russia opened a criminal investigation into the crash. No findings have been made public. Several former Wagner commanders and associates have died in subsequent months in circumstances that Russian authorities have variously attributed to accidents, health problems, and unrelated violence. The Africa Corps — the successor organisation that absorbed the majority of Wagner's African operations, formed at the end of 2023 — operates with 70–80% Wagner personnel and follows the same modus operandi, now under closer MoD supervision. Prigozhin's name is not attached to it. In Saint Petersburg, an informal shrine appeared at his grave at Porokhovskoye cemetery. Flowers, candles, and Wagner insignia. Russian officials did not endorse the gatherings and did not prohibit them. <span class="src-chip">Spearin (2026)</span><span class="src-chip">Stanyard (2025)</span></p>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">What He Built</div>
+            <ul>
+              <li>Demonstrated that a private military force could operate at state scale — 50,000 fighters — without formal legal existence</li>
+              <li>Proved the PMC model viable as a geopolitical tool, influencing how other states (Turkey, UAE, Saudi Arabia) think about private military contractors</li>
+              <li>Sustained Russia's African presence during a period when conventional diplomacy was failing</li>
+              <li>Exposed — through the mutiny — the brittleness of Russia's command structure and the fragility of military loyalty under Putin</li>
+              <li>Built a propaganda and information operations apparatus that was, by Western analysts' assessments, genuinely effective in West Africa</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">What He Left Behind</div>
+            <ul>
+              <li>Directly linked to the Moura massacre (Mali, March 2022): ~500 civilian deaths in five days</li>
+              <li>Wagner operations in CAR documented by Human Rights Watch: beatings, torture, summary executions</li>
+              <li>Libya: landmine use, suspected chemical weapons, killing of civilians; EU sanctions</li>
+              <li>Sudan: disinformation campaigns that helped entrench authoritarian rule and suppress pro-democracy movements</li>
+              <li>Internet Research Agency: systematic interference in democratic elections across multiple countries</li>
+              <li>Prison recruitment in Ukraine: lured tens of thousands of convicts with promises that many did not survive to collect</li>
+            </ul>
+          </div>
+          <div class="legacy-card complex" style="grid-column: 1 / -1;">
+            <div class="legacy-label">The Contested Questions</div>
+            <ul>
+              <li>Was Prigozhin a loyal instrument of the Kremlin who got too big, or an independent actor who always had his own agenda? Academic opinion is divided — Dörfler argues the relationship was always one of mutual dependence rather than simple hierarchy</li>
+              <li>Did the mutiny represent genuine political dissent or was it a bargaining move within the system? The preparation suggests the former; the rapid resolution suggests the latter may have always been available</li>
+              <li>What does the Africa Corps succession reveal about state control? The fact that operations continued without interruption argues that Prigozhin was more replaceable than his persona suggested</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>The scholarly question that Prigozhin poses most sharply is the one about the relationship between the Russian state and private violence. Dörfler's analysis argues that Wagner was never truly independent — it was always a "PMC–state relation" in which the Kremlin controlled the ultimate levers while Prigozhin controlled the day-to-day operations and the public face. On this reading, Prigozhin's mistake was not the mutiny per se, but having become so publicly identified with Wagner that he could no longer be the silent instrument the arrangement required. When he began making demands openly and embarrassing the defence establishment, he became a political liability that the system could no longer afford to keep alive.</p>
+
+        <p>Pokalova's framing offers a complementary angle: Prigozhin as "quasi-state agent of influence" who was not merely a military contractor but the operator of a coherent foreign policy package — security services, resource extraction, diplomacy, and information operations — deployed in fragile states where Russia wanted presence without commitment. The Africa Corps continuation suggests this model was more durable than the man himself. What Prigozhin built, the Kremlin absorbed.</p>
+
+        <div class="pull-quote">
+          <blockquote>"Prigozhin was a talented person who made serious mistakes in life."</blockquote>
+          <cite>— Vladimir Putin, public statement on Prigozhin's death, August 24, 2023</cite>
+        </div>
+
+        <p>The sentence is worth reading carefully. "Talented" — Putin does not use that word lightly about adversaries. "Serious mistakes" — the passive construction that in Russian political language has long served as a death sentence dressed as a character assessment. What Putin did not say: that Prigozhin was loyal, that he was missed, that his death was a loss. The verdict was delivered. The case was closed.</p>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+
+        <div class="topics-group">
+          <div class="topics-group-label">The Wagner World</div>
+          <div class="topics-grid">
+            <a href="wagner-group.html" class="topic-card">
+              <span class="topic-type-tag concept">concept</span>
+              <div class="topic-name">The Wagner Group</div>
+              <div class="topic-preview">The GRU-linked paramilitary force Prigozhin built — its operations across Africa, Ukraine, and Syria, and its successor, Africa Corps.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png" alt="Wagner Group" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+            <a href="khalifa-haftar.html" class="topic-card">
+              <span class="topic-type-tag person">person</span>
+              <div class="topic-name">Khalifa Haftar</div>
+              <div class="topic-preview">The Libyan general whose Tripoli offensive Wagner supported from 2018 — one of Prigozhin's most consequential African partnerships.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg" alt="Khalifa Haftar" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+            <a href="libyan-civil-war.html" class="topic-card">
+              <span class="topic-type-tag event">event</span>
+              <div class="topic-name">The Libyan Civil War</div>
+              <div class="topic-preview">Wagner's first major African deployment — and where Prigozhin began building the resource-extraction model that defined subsequent operations.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg" alt="Libyan Civil War" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+            <a href="northern-mali-conflict.html" class="topic-card">
+              <span class="topic-type-tag event">event</span>
+              <div class="topic-name">The Northern Mali Conflict</div>
+              <div class="topic-preview">Where Wagner's information operations helped expel French forces — then its fighters participated in the Moura massacre of ~500 civilians.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg" alt="Mali conflict" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="topics-group">
+          <div class="topics-group-label">Russia &amp; Power</div>
+          <div class="topics-grid">
+            <a href="realpolitik.html" class="topic-card">
+              <span class="topic-type-tag concept">concept</span>
+              <div class="topic-name">Realpolitik</div>
+              <div class="topic-preview">The doctrine of state interest above law or morality — the intellectual framework within which Wagner's operations were always justified by Moscow.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+            <a href="resource-curse.html" class="topic-card">
+              <span class="topic-type-tag concept">concept</span>
+              <div class="topic-name">The Resource Curse</div>
+              <div class="topic-preview">The economic phenomenon Wagner exploited systematically — fragile states with mineral wealth traded security for concessions, deepening dependency.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg" alt="Resource Curse" style="width:44px;height:44px;border-radius:4px;object-fit:cover;object-position:center 20%;"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources</h2>
+        <ol class="sources-list">
+          <li>
+            <span class="src-num">1</span>
+            <span class="src-title">Dörfler, T. (2025). "The Wagner Group, Yevgeny Prigozhin, and PMC–State Relations in Russian Foreign Policy."</span>
+            <span class="src-journal">Politische Vierteljahresschrift.</span>
+            <span class="src-note"><em>The most comprehensive academic analysis of the Prigozhin–Kremlin relationship, the origins of Wagner in GRU structures, the Ukraine recruitment programme, and the mutiny. Draws on Russian-language primary sources and open-source intelligence. Academic journal; may require institutional access.</em></span>
+          </li>
+          <li>
+            <span class="src-num">2</span>
+            <span class="src-title">Spearin, C. (2026). "Airpower and Wagner Group's expeditionary operations: exploring the 'exceptionality'."</span>
+            <span class="src-journal">Defence Studies.</span>
+            <span class="src-note"><em>Analysis of Wagner's relationship with Russian air power across its deployments — Syria, Libya, CAR, Mali — and what the Battle of Khasham and the Tinzaouaten ambush reveal about structural vulnerabilities. Provides precise figures for aircraft types, casualties, and tactical decisions. Academic journal; check institutional access.</em></span>
+          </li>
+          <li>
+            <span class="src-num">3</span>
+            <span class="src-title">Pokalova, E. (2026). "The Wagner Group in Africa: Russia's Quasi-State Agent of Influence."</span>
+            <span class="src-journal">Studies in Conflict &amp; Terrorism.</span>
+            <span class="src-note"><em>Country-by-country case studies of Wagner operations in Libya, CAR, Sudan, and Mali — including resource extraction deals, propaganda operations, human rights violations, and the Moura massacre. Defines Prigozhin as operator of a "quasi-state agent" package beyond the standard PMC model. Academic journal; may require institutional access.</em></span>
+          </li>
+          <li>
+            <span class="src-num">4</span>
+            <span class="src-title">Yablokov, I. &amp; Poliakoff, J. (2026). "From 'Putin's Chef' to Rebel Warlord: Yevgeny Prigozhin, Media Power, and the Art of Political Survival in Russia."</span>
+            <span class="src-journal">Russian Politics, 11, 181–209.</span>
+            <span class="src-note"><em>The most detailed analysis of Prigozhin as a media operator — tracing the evolution of the Internet Research Agency into Patriot Media Group, his use of viral video to challenge the military establishment, the New Year 2023 address, the May 2023 corpse video, and the Nuzhin sledgehammer murder as political communication. Also provides the 36-hour mutiny duration and the Wall Street Journal Patrushev attribution. Academic journal; check institutional access.</em></span>
+          </li>
+          <li>
+            <span class="src-num">5</span>
+            <span class="src-title">Stanyard, J. (2025). "Mercenaries and illicit markets: Russia's Africa Corps and the business of conflict."</span>
+            <span class="src-journal">Global Initiative Against Transnational Organized Crime (GI-TOC).</span>
+            <span class="src-note"><em>Policy report on the Africa Corps successor organisation — its continuity with Wagner goals and personnel (70–80% overlap), its integration with Russian MoD structures, and the security and illicit economy implications for the Sahel. Freely available at globalinitiative.net.</em></span>
+          </li>
+        </ol>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list</div>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',             desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.', url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.', url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'person',  title: 'Khalifa Haftar',         desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement', desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',            desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'Democratic Socialism',   desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War', desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',      desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",              desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.', url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person', title: 'Saddam Hussein',          desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person', title: 'Henry Kissinger',         desc: 'The refugee who became America\'s most powerful and most controversial diplomat.', url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person', title: 'Salvador Allende',        desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person', title: 'Richard Nixon',           desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person', title: 'Barack Obama',            desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.', url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person', title: 'Gamal Abdel Nasser',     desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person', title: 'George W. Bush',          desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person', title: 'Ayatollah Khomeini',      desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.', url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles found.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown') { e.preventDefault(); _focusIdx = Math.min(_focusIdx + 1, items.length - 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); _focusIdx = Math.max(_focusIdx - 1, 0); }
+    else if (e.key === 'Enter' && _focusIdx >= 0) { items[_focusIdx].click(); return; }
+    else if (e.key === 'Escape') { toggleSearch(); return; }
+    items.forEach((r, i) => r.classList.toggle('focused', i === _focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.width = Math.min((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100, 100) + '%';
+    const sections = document.querySelectorAll('section[id]'), navItems = document.querySelectorAll('.sidebar-nav li');
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    navItems.forEach(item => { const link = item.querySelector('a'); item.classList.toggle('active', link && link.getAttribute('href') === '#' + current); });
+  });
+
+  function toggleItem(el) {
+    const wasActive = el.classList.contains('active');
+    document.querySelectorAll('.tl-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) el.classList.add('active');
+  }
+
+  function toggleSave() {
+    const btn = document.getElementById('saveBtn'), toast = document.getElementById('toast'), isSaved = btn.classList.contains('saved');
+    if (!isSaved) {
+      btn.classList.add('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;
+      toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 3000);
+    } else {
+      btn.classList.remove('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Halabja Chemical Attack — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="event-page">
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type event">Event</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+      <span>Events</span><span class="breadcrumb-sep">›</span>
+      <span>Middle East · Iraq</span><span class="breadcrumb-sep">›</span>
+      <span>The Halabja Chemical Attack</span>
+    </div>
+    <div class="hero-region-tag">Iraqi Kurdistan · March 16, 1988</div>
+    <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+      <div style="flex:1;min-width:0;">
+        <h1 style="margin-top:0;">The Halabja Chemical Attack</h1>
+        <p class="hero-sub">On a single afternoon in March 1988, the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000 people — the largest chemical weapons attack ever carried out against a civilian population, and the act that first gave the world the phrase "Chemical Ali."</p>
+        <div class="hero-meta">
+          <span>~14 min read</span><span>·</span>
+          <span>5 academic sources</span><span>·</span>
+          <span>Last updated June 2026</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg" alt="The Halabja Chemical Attack"
+          style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(232,168,56,0.25);display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="outer">
+  <aside class="sidebar">
+    <p class="sidebar-label">In this article</p>
+    <ul class="sidebar-nav">
+      <li><a href="#facts">Quick Facts</a></li>
+      <li><a href="#background">Background</a></li>
+      <li><a href="#figures">Key Figures</a></li>
+      <li><a href="#events">The Attack</a></li>
+      <li><a href="#anfal">The Anfal Campaign</a></li>
+      <li><a href="#response">International Response</a></li>
+      <li><a href="#turning">Turning Points</a></li>
+      <li><a href="#matters">Why It Matters</a></li>
+      <li><a href="#legacy">Legacy &amp; Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <article>
+
+    <section id="facts">
+      <div class="quick-facts">
+        <div class="quick-facts-label">Quick Facts</div>
+        <div class="qf-item"><div class="qf-label">Date</div><div class="qf-value">March 16, 1988 (primary attack) · preceded by months of Anfal campaign attacks</div></div>
+        <div class="qf-item"><div class="qf-label">Location</div><div class="qf-value">Halabja, Sulaymaniyah Governorate, Iraqi Kurdistan</div></div>
+        <div class="qf-item"><div class="qf-label">Perpetrator</div><div class="qf-value">Iraqi Armed Forces and security services under Saddam Hussein; operation directed by Ali Hassan al-Majid ("Chemical Ali")</div></div>
+        <div class="qf-item"><div class="qf-label">Agents used</div><div class="qf-value">Mustard gas, sarin, tabun, and VX nerve agent — a rare combination deployed simultaneously</div></div>
+        <div class="qf-item"><div class="qf-label">Death toll</div><div class="qf-value">~3,200–5,000 killed on March 16 alone; estimates vary · thousands more died of long-term complications</div></div>
+        <div class="qf-item"><div class="qf-label">Broader context</div><div class="qf-value">Part of the Anfal Campaign (1986–1989) — a campaign of genocide against Iraqi Kurds that killed 100,000+ and destroyed 4,000+ villages</div></div>
+        <div class="qf-item"><div class="qf-label">Legal classification</div><div class="qf-value">Genocide (recognised by Iraq, US Congress, Norway, Sweden, UK, and others) · crimes against humanity</div></div>
+        <div class="qf-item"><div class="qf-label">Accountability</div><div class="qf-value">Ali Hassan al-Majid convicted and executed 2010 · Saddam Hussein convicted posthumously · No international prosecution at the time of the attack</div></div>
+        <div class="qf-item"><div class="qf-label">Historical significance</div><div class="qf-value">Iraq became the first government in history to deploy chemical weapons against its own civilian population</div></div>
+      </div>
+    </section>
+
+    <section id="background">
+      <h2>Background</h2>
+      <p>The attack on Halabja did not emerge from nowhere. It was the most devastating single act in a systematic, decades-long campaign by the Iraqi Ba'athist government to resolve what it internally called the "Kurdish Problem" — the existence of a large, politically organised ethnic minority in northern Iraq that periodically aligned with Iran, Turkey, or simply sought autonomy from Baghdad. The Kurds had been a persistent problem for every Iraqi government since the British drew the borders of Mandatory Iraq in 1920. What changed under Saddam Hussein was the willingness to apply industrial-scale violence as a solution.</p>
+
+      <p>The Ba'ath Party had practiced "Arabization" in northern Iraq for years — forcibly removing Kurdish populations from their villages, resettling Arab families from the south, and demolishing hundreds of villages to depopulate strategic valleys near the Iranian border. By 1988 this policy had been running for over a decade. Tens of thousands of Kurds had already been killed, disappeared, or displaced. What Halabja represented was an escalation beyond organised terror toward outright genocide — the deliberate attempt to destroy the Kurdish people as a people, not merely to suppress their political activity.</p>
+
+      <p>The specific military context was the Iran-Iraq War (1980–1988). By early 1988, Iraqi forces were engaged in heavy fighting near the Iranian border in northern Iraq, where Kurdish peshmerga forces had aligned with Iran against Saddam's government. On March 13–15, 1988, Iranian forces and Kurdish peshmerga fighters from the Patriotic Union of Kurdistan captured Halabja, a town of approximately 80,000 people in the Sulaymaniyah Governorate. Nearly half of those 80,000 had themselves been recently displaced from other destroyed Kurdish villages — refugees from earlier stages of the same campaign that was about to consume them. The Iraqi government presented the subsequent attack as a counterattack on Iranian-backed insurgents. It was not. The vast majority of those killed were unarmed Kurdish civilians.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">5,000</div><div class="stat-label">Estimated deaths on March 16, 1988 alone — the deadliest single chemical weapons attack against civilians in history</div></div>
+        <div class="stat-box"><div class="stat-number">100,000+</div><div class="stat-label">Total Kurdish civilians killed in the broader Anfal campaign (1986–1989)</div></div>
+        <div class="stat-box"><div class="stat-number">4,000+</div><div class="stat-label">Kurdish villages destroyed by Iraqi government forces during the Anfal campaign</div></div>
+        <div class="stat-box"><div class="stat-number">80,000</div><div class="stat-label">Population of Halabja before the attack — of whom nearly half had themselves already been displaced from other destroyed villages</div></div>
+      </div>
+    </section>
+
+    <section id="figures">
+      <h2>Key Figures</h2>
+      <div class="figures-grid">
+        <div class="figure-card">
+          <div class="figure-name">Saddam Hussein</div>
+          <div class="figure-role">President of Iraq, 1979–2003 · Final authority for the Anfal campaign</div>
+          <div class="figure-desc">Saddam authorised and oversaw the Anfal genocide as the supreme political and military authority in Iraq. Documents recovered after 2003 — particularly those captured by peshmerga forces during the 1991 Gulf War and later turned over to Human Rights Watch — showed his direct involvement in the campaign's planning. He was convicted of crimes against humanity for the earlier massacre of Shia in Dujail but was executed in December 2006 before he could be tried for the Anfal genocide itself.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Ali Hassan al-Majid</div>
+          <div class="figure-role">Ba'ath Party Secretary-General for Northern Iraq · "Chemical Ali"</div>
+          <div class="figure-desc">A cousin of Saddam Hussein and the operational commander of the Anfal campaign. Documents from his office explicitly instructed forces to "kill the largest number of persons present" in the Kurdish north. His recorded telephone calls and written orders provided damning documentary evidence of genocidal intent. He directed the use of chemical weapons at Halabja and throughout the Anfal campaign. The Iraqi High Tribunal convicted him of genocide in 2007; he was executed by hanging in January 2010.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">The Kurds of Halabja</div>
+          <div class="figure-role">Victims and Survivors</div>
+          <div class="figure-desc">The 80,000 people of Halabja were caught between Iraqi and Iranian/peshmerga forces. When the chemical attack began, those who could run did — but chemical agents had blanketed low-lying areas and many who fled were overtaken by gas. Photographs taken by a visiting Iranian journalist, Kaveh Golestan, and documentary footage captured the bodies of families who had died together in the street. Halabja's survivors have suffered elevated rates of cancer, respiratory disease, miscarriages, and birth defects that continue decades later.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Peter Galbraith</div>
+          <div class="figure-role">US Senate Foreign Relations Committee Staff · Key documenter</div>
+          <div class="figure-desc">A Senate staffer who visited the region in the aftermath of the attack and was among the first Americans to document its scale. He subsequently authored a bill — the Prevention of Genocide Act of 1988 — that would have imposed sanctions on Iraq. The Reagan administration actively lobbied against the bill; it did not pass. Galbraith's account, and the report he co-authored for the Senate Foreign Relations Committee, became foundational documents for later genocide prosecution efforts.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">Jalal Talabani</div>
+          <div class="figure-role">Leader, Patriotic Union of Kurdistan (PUK)</div>
+          <div class="figure-desc">The PUK's peshmerga forces had aligned with Iran and helped capture Halabja in the days before the attack — a fact the Iraqi government used to frame the attack as a military operation against insurgents. Talabani later became Iraq's first Kurdish president (2005–2014) and was among the most important witnesses to what the Anfal campaign represented. The Talabani-led peshmerga presence in Halabja gave the Iraqi government its false military pretext for the attack.</div>
+        </div>
+        <div class="figure-card">
+          <div class="figure-name">The Reagan &amp; Bush Administrations</div>
+          <div class="figure-role">The United States: Strategic Partner and Bystander</div>
+          <div class="figure-desc">The US had been tilting toward Iraq throughout the Iran-Iraq War, providing satellite intelligence, precursor chemicals for weapons programmes, and diplomatic cover. After Halabja, the Reagan administration initially issued a statement suggesting both Iran and Iraq might have been responsible for the chemical attack — a false claim widely understood at the time as political cover for Baghdad. The US subsequently blocked sanctions on Iraq, restored full diplomatic relations, and continued to support Saddam's government until August 1990, when Iraq invaded Kuwait.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <h2>The Attack</h2>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">MARCH 13–15, 1988</div>
+            <div class="tl-title">Kurdish Peshmerga and Iranian Forces Capture Halabja</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>In mid-March 1988, as part of Iran's "Val Fajr 10" offensive, Iranian Revolutionary Guard forces and peshmerga fighters from Jalal Talabani's Patriotic Union of Kurdistan launched an assault on Iraqi positions around Halabja. The town had strategic value because of its proximity to the Iranian border and the Darbandikhan reservoir, which supplied water to Baghdad. By March 15, the Kurdish and Iranian forces had captured the town, and many Iraqi soldiers had retreated.</p>
+          <p>The Iraqi government's response was rapid. Having lost the town to pro-Iranian Kurdish forces, it immediately presented plans for a "recapture" operation. But what Ali Hassan al-Majid authorised was not a conventional military recapture — it was a chemical weapons attack on the town's entire civilian population as a punitive act and as part of the broader Anfal strategy of terrorising and eliminating Kurdish communities that provided support to peshmerga.</p>
+          <div class="tl-sources"><span class="src-chip">Hiltermann (2007)</span><span class="src-chip">Human Rights Watch (1993)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">MARCH 16, 1988 — AFTERNOON</div>
+            <div class="tl-title">The Chemical Attack Begins</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>On the afternoon of March 16, Iraqi aircraft began bombing Halabja. The first waves used conventional explosives to drive people into basements and shelters — standard procedure when the goal is to maximise casualties from a subsequent chemical attack, since basements concentrate gas. Then came the chemical munitions. Witnesses described a sweet smell — mustard gas is sometimes said to smell of garlic or mustard, but survivors often describe something sweeter — followed quickly by burning in the eyes, throat, and skin. The gas was heavier than air and settled into the low-lying streets, doorways, and the basements where people had taken shelter.</p>
+          <p>Iraqi aircraft dropped a combination of mustard gas (a blister agent) and nerve agents including sarin, tabun, and likely VX. The combination was unusual and particularly deadly: mustard gas incapacitated victims and caused burns, while nerve agents killed within minutes. Iranian journalist Kaveh Golestan reached the town within days and photographed the bodies — families slumped in their doorways, a man and child frozen in the moment of death, a scene that became one of the defining images of atrocity in the twentieth century. An estimated 3,200 to 5,000 people died on that single afternoon; the Global Centre for the Responsibility to Protect, drawing on available evidence, uses 5,000 as the central estimate.</p>
+          <div class="tl-sources"><span class="src-chip">Adams / Global R2P (2018)</span><span class="src-chip">Hiltermann (2007)</span><span class="src-chip">Power (2002)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">MARCH 16 ONWARDS</div>
+            <div class="tl-title">Flight and Aftermath</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Those who could flee the gas did. Survivors described running barefoot across fields, many already blinded or struggling to breathe. Iranian forces helped evacuate some survivors across the border into Iran. But the exodus itself was deadly: the gases lingered in low-lying areas, and many people who fled into ravines or ditches were killed by concentrated chemical agent. Roads out of Halabja were littered with bodies. Some survivors reached Iranian-controlled territory and were taken to hospitals, where Iranian doctors treated victims of chemical injuries they had not previously seen combined in this way.</p>
+          <p>The physical consequences for survivors extended decades into the future. The Halabja Medical Institute, established in the aftermath, has documented elevated rates of cancer (particularly lung and bladder cancer), spontaneous miscarriages, birth defects, and chronic respiratory disease among people who survived the attack. The mutagenic effects of the agents used mean that the attack's medical consequences have been intergenerational — children born to survivors have shown elevated rates of congenital abnormalities.</p>
+          <div class="tl-sources"><span class="src-chip">Hiltermann (2007)</span><span class="src-chip">Human Rights Watch (1993)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">MARCH 1988 — WESTERN REACTION</div>
+            <div class="tl-title">The United States Blames Iran</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The Reagan administration's immediate response to the Halabja attack was to issue a statement raising the possibility that Iran might have been responsible for the chemical deaths — a claim that was almost certainly false and that the administration likely knew to be false, given US satellite intelligence of Iraqi aircraft over Halabja. The State Department's Middle East Bureau, which had developed close ties with Baghdad as part of the US tilt toward Iraq in the Iran-Iraq War, drove the response. Samantha Power's account in "A Problem from Hell" documents how the State Department worked actively to soften any congressional response to the attack.</p>
+          <p>Senator Claiborne Pell and Peter Galbraith proposed the Prevention of Genocide Act in 1988, which would have imposed economic sanctions on Iraq. The Reagan administration lobbied against it, and Senate leadership allowed it to die. The United States continued providing Iraq with agricultural credits, intelligence sharing, and diplomatic cover until August 2, 1990 — when Iraq invaded Kuwait and the strategic calculus changed overnight.</p>
+          <p>As Dr. Simon Adams of the Global Centre for the Responsibility to Protect observed in his 2018 Halabja anniversary address: "In general, if governments didn't know about what Saddam was doing to the Kurds, it was because they didn't want to know." The warning signs were visible. UN Fact Finding teams had produced seven separate findings regarding Iraq's use of chemical weapons during the 1980s. The images from Halabja had appeared on front pages of the Washington Post and LA Times. The failure to respond was a choice.</p>
+          <div class="tl-sources"><span class="src-chip">Power (2002)</span><span class="src-chip">Adams / Global R2P (2018)</span><span class="src-chip">Hiltermann (2007)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="anfal">
+      <h2>The Anfal Campaign: The Wider Genocide</h2>
+      <p>Halabja was the most catastrophic single event, but it was one act within a systematic campaign. The Anfal Campaign — named after a Quranic chapter about the spoils of war, a choice with pointed theological implications — was a coordinated programme of genocide against the Kurdish people of northern Iraq directed by Ali Hassan al-Majid from 1986 to 1989. Its purpose was the elimination of Kurdish society in the areas of northern Iraq deemed security threats: the destruction of villages, the forced urbanisation of rural Kurds into government-controlled camps, and the killing of men of military age along with the deportation and killing of women, children, and the elderly.</p>
+
+      <div class="callout warning">
+        <div class="callout-label">Documented Atrocity</div>
+        <h4>The Barzani Clan Massacre — A Precursor to Halabja</h4>
+        <p>The 1983 abduction and summary execution of approximately 8,000 men and boys from the Kurdish Barzani clan — supporters of Masoud Barzani's Kurdistan Democratic Party — was an early demonstration of the Iraqi government's willingness to commit mass killing against the Kurds with no accountability. The men and boys were loaded onto buses and taken south; their fate was not confirmed for years. Their mass graves were later discovered near Samawa in the southern desert. This massacre, entirely unpunished, signalled to al-Majid and others that ethnic cleansing of the Kurds would face no international consequence.</p>
+      </div>
+
+      <p>By 1989 the Anfal campaign had destroyed more than 4,000 Kurdish villages — burning, bulldozing, or bombing them to prevent return — and killed an estimated 100,000 to 182,000 people. The Kurdish population of northern Iraq had been subjected to forced relocation, gassing, mass execution, and the complete physical destruction of their communities' material basis. Human Rights Watch's exhaustive documentation of the campaign — published in the 1993 report "Genocide in Iraq: The Anfal Campaign Against the Kurds" — drew on 75,000 captured Iraqi government documents as well as survivor testimony, and concluded without qualification that the campaign constituted genocide.</p>
+
+      <p>The critical legal element in establishing genocide — proving "intent to destroy, in whole or in part, a national, ethnical, racial or religious group" — was, as Dr. Simon Adams noted, unusually clear in the Anfal case. Al-Majid's own office had issued written decrees explicitly instructing forces to "kill the largest number of persons present" in target areas, and his recorded telephone conversations include statements that are among the most explicit documentary evidence of genocidal intent ever recovered. The difficulty in prosecuting the genocide was not evidentiary but political — a question of whether states that had been complicit in looking away in 1988 would support accountability in the years that followed.</p>
+    </section>
+
+    <section id="response">
+      <h2>International Response &amp; Justice</h2>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1988–1990</div>
+            <div class="tl-title">The International Community Looks Away</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Between the Halabja attack in March 1988 and Iraq's invasion of Kuwait in August 1990, the international community's response was almost comprehensively inadequate. The UN Security Council had passed Resolution 582 in 1986 "deploring" the use of chemical weapons in the Iran-Iraq war — but "deploring" was the extent of it. No sanctions were imposed; no international criminal mechanism was created; no state took concrete action to end the Anfal campaign. Iraq was simultaneously being courted by the US, France, Germany, and the USSR as a counterweight to Iran.</p>
+          <p>By 1988, 98 states had ratified the Genocide Convention, thereby pledging to take action to prevent and punish genocide. None acted on that pledge. Human Rights Watch's effort to file genocide charges before the International Court of Justice was unsuccessful. The institutional architecture for international criminal accountability that would later be created — the International Criminal Tribunal for the former Yugoslavia in 1993, the International Criminal Court in 2002 — did not yet exist. And even if it had, the political will to use it against a government that Western powers had been arming was absent.</p>
+          <div class="tl-sources"><span class="src-chip">Adams / Global R2P (2018)</span><span class="src-chip">Power (2002)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1991–2003</div>
+            <div class="tl-title">Gulf War, Safe Havens, and No-Fly Zones</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>After Iraq's invasion of Kuwait and the subsequent Gulf War, Saddam Hussein faced a Kurdish uprising in March 1991 — which he suppressed with equal violence, driving approximately two million Kurds toward the Turkish and Iranian borders in one of the largest refugee crises in the region's modern history. The images of Kurdish refugees freezing on mountain passes finally prompted international action: the US, UK, and France established a "safe haven" in northern Iraq and later a no-fly zone above the 36th parallel that gave the Kurdistan Regional Government its de facto autonomous territory.</p>
+          <p>This protection did not extend to accountability for the Anfal genocide. Throughout the 1990s, Saddam Hussein continued to rule Iraq and the international community focused on weapons inspections, oil-for-food, and containment rather than justice for the Kurdish victims. It was during the chaotic aftermath of the 1991 Gulf War that Kurdish peshmerga captured approximately 75,000 Iraqi government documents — the Ba'ath Party archives — that would later become the evidentiary backbone of genocide prosecutions.</p>
+          <div class="tl-sources"><span class="src-chip">Hiltermann (2007)</span><span class="src-chip">Human Rights Watch (1993)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">2003–2010</div>
+            <div class="tl-title">The Iraqi High Tribunal and Belated Justice</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The 2003 US-led invasion of Iraq removed Saddam Hussein, and the subsequent formation of an Iraqi transitional government created the Iraqi High Tribunal — a domestic court established to try senior Ba'athist officials for genocide, crimes against humanity, and war crimes. The tribunal was heavily criticised by international human rights organisations for procedural flaws, rushed proceedings, and the execution of Saddam Hussein before he could be tried for the Anfal genocide. He was instead executed in December 2006 for the earlier Dujail massacre of 148 Shia.</p>
+          <p>Ali Hassan al-Majid — "Chemical Ali" — was tried specifically for the Anfal campaign and the Halabja attack. The documentary evidence against him was overwhelming: his own signed decrees, his recorded telephone conversations explicitly describing the genocide he was conducting, and the testimony of hundreds of survivors. The Iraqi High Tribunal convicted him of genocide on June 24, 2007 and sentenced him to death. He was executed by hanging on January 25, 2010. It was the first prosecution for the Anfal genocide, coming twenty-two years after the attack. As Dr. Simon Adams observed, the trials were widely viewed as "flawed and lacking in credibility" — but they were the only accountability that materialised.</p>
+          <div class="tl-sources"><span class="src-chip">Adams / Global R2P (2018)</span><span class="src-chip">Hiltermann (2007)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="turning">
+      <h2>Turning Points</h2>
+      <div class="turning-points">
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 1</div>
+          <div class="turning-card-title">The Reagan Administration Blocked Sanctions in 1988</div>
+          <p>When Senator Pell's Prevention of Genocide Act reached the Senate in 1988, the Reagan administration actively lobbied against it to protect the US strategic relationship with Iraq. Had the bill passed and sanctions been imposed, it would have been the first concrete international consequence for Iraq's use of chemical weapons against civilians. Instead, the US continued supporting Saddam Hussein's government for two more years. The message to Saddam and al-Majid was that the Anfal campaign would proceed without meaningful consequences — a calculation that proved entirely correct.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 2</div>
+          <div class="turning-card-title">Iraq Used Chemical Weapons Against Iranian Forces First — and Faced No Consequence</div>
+          <p>UN teams had documented seven separate findings of Iraqi chemical weapons use against Iranian military and civilian targets throughout the 1980s. Each time, the Security Council "deplored" but did not act. This sequence of impunity — chemical weapons deployed, international condemnation issued, nothing changes — is the direct precondition for Halabja. Had any of the earlier uses triggered real accountability (sanctions, ICC referral, military response), the calculus for deploying chemical weapons against Kurdish civilians in 1988 would have been different. Halabja was made possible by everything that did not happen before it.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 3</div>
+          <div class="turning-card-title">The 1991 Capture of Ba'ath Party Documents</div>
+          <p>When Kurdish peshmerga captured approximately 75,000 Iraqi government documents during the 1991 uprising, they preserved the evidentiary basis for future genocide prosecutions. Without those documents — particularly al-Majid's signed decrees and telephone recordings — the "intent" element required by the Genocide Convention would have been much harder to prove. The decision by Kurdish authorities to preserve and eventually transfer those documents to Human Rights Watch, and later to the Iraqi High Tribunal, was the act that made any eventual accountability possible.</p>
+        </div>
+        <div class="turning-card">
+          <div class="turning-card-num">Turning Point 4</div>
+          <div class="turning-card-title">Assad's Syria Uses Chemical Weapons in 2013 — The Halabja Precedent Ignored</div>
+          <p>In August 2013, Syrian government forces deployed sarin against civilians in Ghouta outside Damascus, killing 1,400 people. The "red line" that President Obama had set was crossed, but the US ultimately did not respond militarily. The parallel with Halabja — chemical weapons deployed against civilians, international condemnation without consequence, perpetrators operating with impunity — was explicit in international commentary. The difference was that in 2013 Russia's Security Council veto had replaced the Cold War dynamics that had protected Iraq in 1988. The mechanism of impunity had changed; its outcome had not.</p>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"Kurdish civilians were rounded up and executed or gassed not because of anything they as individuals did, but simply because they were Kurds."</blockquote>
+        <cite>— Samantha Power, <em>A Problem from Hell: America and the Age of Genocide</em> (2002) — on the Anfal campaign and the clarity of genocidal intent that the international community chose not to acknowledge in real time.</cite>
+      </div>
+    </section>
+
+    <section id="matters">
+      <h2>Why It Matters Today</h2>
+      <div class="matters-grid">
+        <div class="matters-card">
+          <h3>The Chemical Weapons Taboo — Tested at Halabja and Broken in Syria</h3>
+          <p>Halabja is the foundational case study in what happens when the international prohibition on chemical weapons is violated without consequence. The Chemical Weapons Convention of 1993 was, in part, a response to Halabja's demonstration that existing norms were unenforceable. Yet Syria's use of chemical weapons against civilians from 2013 onwards — in defiance of both the CWC, which Syria joined in 2013, and the international community's stated red lines — shows that the taboo remains vulnerable to impunity.</p>
+          <ul class="matters-subpoints">
+            <li>Syria deployed chemical weapons in at least 50 documented attacks between 2013 and 2019</li>
+            <li>The Organisation for the Prohibition of Chemical Weapons (OPCW) has formally attributed attacks to Syrian government forces</li>
+            <li>Russia has consistently blocked Security Council referrals for accountability</li>
+            <li>The Halabja precedent — use, denunciation, no accountability — has repeated itself</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Yazidi Genocide — Iraq's Second Genocide in Three Decades</h3>
+          <p>When ISIS launched its genocidal campaign against the Yazidi people of Sinjar in August 2014 — massacring men, enslaving women, forcibly converting children — Iraq suffered its second genocide in thirty years. Dr. Simon Adams of the Global Centre for the Responsibility to Protect explicitly connected the two events: the failure to achieve justice and reconciliation after Halabja created conditions of impunity and inter-communal grievance that made another atrocity possible. The international community acted more decisively in 2014 than in 1988, but accountability for ISIS atrocities against the Yazidi remains incomplete.</p>
+          <ul class="matters-subpoints">
+            <li>At least 5,000 Yazidi men executed; 7,000 women and girls enslaved by ISIS in 2014</li>
+            <li>UN Security Council Resolution 2379 (2017) established an investigative team for ISIS crimes</li>
+            <li>Many mass graves remain unprotected; forensic evidence continues to be lost</li>
+            <li>The Yazidi Survivors Law (Iraq, 2021) provided reparations framework but implementation has been slow</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Legal Legacy: Genocide Recognition and Accountability Gaps</h3>
+          <p>The Halabja attack and Anfal campaign have been recognised as genocide by Iraq, the United States (Congress in 2007), Norway, Sweden, the UK, and several other states. This recognition matters: it establishes a legal and historical record that cannot be revised by governments. But recognition without a functioning accountability mechanism leaves survivors without justice. The Iraqi High Tribunal's flawed trials of al-Majid and other Anfal commanders remain the only criminal proceedings that addressed the genocide — and they were widely criticised for procedural failings.</p>
+          <ul class="matters-subpoints">
+            <li>Ali Hassan al-Majid was the only senior official convicted specifically for Anfal/Halabja</li>
+            <li>Saddam Hussein was executed before his Anfal trial could be completed</li>
+            <li>No international prosecution occurred — the ICC did not exist in 1988 and has no retroactive jurisdiction</li>
+            <li>Kurdish survivors and survivors' organisations continue to seek international recognition and legal accountability</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Lessons of Impunity — What Halabja Taught Future Perpetrators</h3>
+          <p>The single most important legacy of the international community's failure to respond to Halabja is the lesson it taught future perpetrators: that chemical weapons can be used against civilians without decisive consequence, that major powers will protect strategic partners regardless of atrocities committed, and that UN condemnation without enforcement is a cost-free outcome. Halabja in 1988 made possible Syria in 2013 not through direct causation, but through the demonstration that the international architecture for atrocity prevention was, in practice, optional.</p>
+          <ul class="matters-subpoints">
+            <li>The Syrian government specifically cited international inaction at Halabja in private communications justifying its own CW use (per later leaks)</li>
+            <li>The OPCW was strengthened after Halabja but lacks enforcement power without Security Council cooperation</li>
+            <li>The Responsibility to Protect framework (2005) was explicitly designed to prevent Halabja-type failures — its record in Syria suggests the design succeeded on paper only</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="legacy">
+      <h2>Legacy &amp; Debate</h2>
+      <p>Halabja is unusual among historical atrocities in that its core facts are not seriously contested — the documentary and physical evidence is overwhelming, and multiple prosecutions have established criminal responsibility. The debates that remain are not about what happened but about why the world responded as it did, and what the appropriate lessons are.</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Joost Hiltermann</div>
+          <div class="scholar-card-title">International Crisis Group · <em>A Poisonous Affair: America, Iraq, and the Gassing of Halabja</em> (2007, Cambridge)</div>
+          <div class="scholar-card-verdict">The definitive scholarly account of the Halabja attack and the international response. Hiltermann — who spent years in Iraq and the region — is particularly incisive on the US role: how the Reagan and Bush administrations received intelligence that confirmed Iraqi responsibility for the attack while simultaneously working to prevent any meaningful international response. His account of how the CIA and State Department managed the information about Iraqi chemical weapons use in the 1980s is disturbing and meticulously documented. Available in academic libraries; essential reading.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">Samantha Power</div>
+          <div class="scholar-card-title">Harvard Kennedy School · <em>A Problem from Hell: America and the Age of Genocide</em> (2002)</div>
+          <div class="scholar-card-verdict">Power's chapter on the Kurdish genocide places Halabja within her broader argument about how American policymakers systematically avoided responding to genocide throughout the twentieth century. Her documentation of the bureaucratic mechanisms by which the State Department deflected pressure to respond — including the false Iranian-responsibility narrative — is important for understanding not just Halabja but the structural conditions under which great powers fail to prevent atrocities. Pulitzer Prize winner. Widely available.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">Human Rights Watch / Middle East Watch</div>
+          <div class="scholar-card-title"><em>Genocide in Iraq: The Anfal Campaign Against the Kurds</em> (1993)</div>
+          <div class="scholar-card-verdict">The foundational investigative report on the Anfal campaign, based on 75,000 captured Iraqi government documents and hundreds of survivor interviews. Middle East Watch (a division of HRW) spent years analysing the documents — including al-Majid's signed orders and telephone recordings — and produced a legal and historical analysis concluding that the campaign constituted genocide under the Genocide Convention. The documentary appendices are particularly valuable. Freely available at hrw.org; essential primary reference.</div>
+        </div>
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Dr. Simon Adams</div>
+          <div class="scholar-card-title">Global Centre for the Responsibility to Protect · Keynote Address on 30th Anniversary (2018)</div>
+          <div class="scholar-card-verdict">Adams's 2018 speech at the Kurdistan Regional Government's Washington anniversary event provides the most direct connection between Halabja and the R2P framework. He explicitly links the impunity after Halabja to the subsequent ISIL genocide against the Yazidi, arguing that failure to achieve justice and reconciliation after one atrocity creates the conditions for the next. His framework — that the cycle of violence in Iraq is driven by unaddressed past injustices — is central to understanding the region today. Freely available at globalr2p.org.</div>
+        </div>
+      </div>
+
+      <h3>The Contested Question: Was US Complicity Exceptional?</h3>
+      <p>The most significant historiographical debate about Halabja concerns the degree to which the US, as Iraq's strategic partner, was complicit in the Anfal genocide. Hiltermann's account — the most detailed — argues that US policymakers had access to intelligence confirming Iraqi responsibility for Halabja within days of the attack, and that the subsequent "it might have been Iran" narrative was a deliberate fabrication to protect the US-Iraq strategic relationship. Power argues this was part of a pattern of deliberate avoidance that characterised US policy toward genocide throughout the twentieth century.</p>
+
+      <p>Some scholars have pushed back on the "deliberate complicity" framing, arguing that the Reagan administration's primary motivation was strategic rather than genocidal — that they didn't want Saddam to lose the Iran-Iraq War, and that the Kurdish killings were a disturbing side effect of that strategic priority rather than a policy they endorsed. This distinction matters legally (complicity in genocide carries different legal weight than ignoring a strategic partner's human rights abuses) but arguably not morally: the outcome for the Kurds was identical regardless of the motivation.</p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">US conduct as strategic cynicism, not deliberate complicity</div>
+          <ul>
+            <li>The primary US goal was preventing an Iranian victory in the Iran-Iraq War — Kurdish policy was secondary <span class="perspective-attr">— standard realist framing</span></li>
+            <li>The "Iran-may-be-responsible" statement reflected genuine uncertainty about battlefield facts rather than deliberate cover-up <span class="perspective-attr">— State Dept. defence</span></li>
+            <li>US aid to Iraq was arms-limited — agricultural credits and intelligence were not the same as endorsing chemical weapons use <span class="perspective-attr">— Reagan administration defence</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">US conduct as knowing complicity in genocide</div>
+          <ul>
+            <li>CIA and DIA intelligence confirmed Iraqi responsibility for Halabja within days — US officials knew <span class="perspective-attr">— Hiltermann (2007)</span></li>
+            <li>The Reagan administration actively lobbied against the Prevention of Genocide Act, blocking the only concrete congressional response <span class="perspective-attr">— Power (2002)</span></li>
+            <li>The US continued providing agricultural credits, dual-use technology, and diplomatic cover to Iraq until August 1990 — two years after Halabja <span class="perspective-attr">— documented in declassified cables</span></li>
+            <li>The precursor chemicals for Iraqi chemical weapons programmes came partly from Western companies, with government knowledge <span class="perspective-attr">— Senate investigations (1994)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pull-quote">
+        <blockquote>"Iraq became the first government to ever attack its own cities with chemical weapons. Yet the international community was hesitant to label this widespread and systematic campaign of atrocities as 'genocide,' despite the abundance of evidence."</blockquote>
+        <cite>— Dr. Simon Adams, Global Centre for the Responsibility to Protect, 30th Anniversary Address on the Halabja Attack, Washington D.C., 13 March 2018.</cite>
+      </div>
+    </section>
+
+    <section id="connected">
+      <h2>Connected Topics</h2>
+      <div class="topics-group">
+        <div class="topics-group-label">People directly involved</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="saddam-hussein.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Saddam_Hussein_in_1998.png" alt="Saddam Hussein">
+            <span class="topic-type-tag person">Person</span>
+            <div class="topic-name">Saddam Hussein</div>
+            <div class="topic-preview">The authorising authority for the Anfal genocide — convicted of crimes against humanity but executed before his Anfal trial was completed.</div>
+          </a>
+        </div>
+      </div>
+      <div class="topics-group">
+        <div class="topics-group-label">Related events</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="iran-iraq-war.html"><img class="topic-card-thumb" src="https://www.atlanticcouncil.org/wp-content/uploads/2018/08/IraqiMinister_Feature.jpg" alt="The Iran-Iraq War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Iran-Iraq War</div>
+            <div class="topic-preview">The eight-year war that provided the military pretext for Iraq's chemical attacks — both on Iranian forces and, at Halabja, on Kurdish civilians accused of supporting Iran.</div>
+          </a>
+          <a class="topic-card" href="iraq-war.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg" alt="The Iraq War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Iraq War</div>
+            <div class="topic-preview">The 2003 invasion that removed Saddam Hussein and created the imperfect legal process — the Iraqi High Tribunal — that produced the only criminal accountability for the Anfal genocide.</div>
+          </a>
+          <a class="topic-card" href="gulf-war.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg" alt="The Gulf War">
+            <span class="topic-type-tag event">Event</span>
+            <div class="topic-name">The Gulf War</div>
+            <div class="topic-preview">The 1991 war that ended with Kurdish peshmerga capturing 75,000 Iraqi government documents — the evidentiary backbone for all later genocide prosecutions — while Saddam remained in power to suppress another Kurdish uprising.</div>
+          </a>
+        </div>
+      </div>
+      <div class="topics-group">
+        <div class="topics-group-label">Concepts</div>
+        <div class="topics-grid">
+          <a class="topic-card" href="responsibility-to-protect.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="The Responsibility to Protect">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">The Responsibility to Protect</div>
+            <div class="topic-preview">The R2P norm was developed partly in response to failures like Halabja — the principle that sovereignty does not shield a government from international scrutiny when it commits atrocities against its own people.</div>
+          </a>
+          <a class="topic-card" href="baathism.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png" alt="Ba'athism">
+            <span class="topic-type-tag concept">Concept</span>
+            <div class="topic-name">Ba'athism</div>
+            <div class="topic-preview">The Ba'athist ideology that drove the "Arabization" of northern Iraq and provided the ideological framework — Arab nationalist priority over Kurdish ethnic identity — within which the Anfal genocide was conceived.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Hiltermann, J. R. (2007). <em>A Poisonous Affair: America, Iraq, and the Gassing of Halabja.</em></span>
+          <span class="src-journal"> Cambridge University Press.</span>
+          <span class="src-note">The definitive scholarly monograph on the Halabja attack and the international response. Hiltermann spent years researching in Iraq and the region and is the most authoritative source on US intelligence knowledge of Iraqi chemical weapons use and the Reagan administration's active suppression of the congressional response. Available in academic libraries.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Human Rights Watch / Middle East Watch. (1993). <em>Genocide in Iraq: The Anfal Campaign Against the Kurds.</em></span>
+          <span class="src-journal"> Human Rights Watch.</span>
+          <span class="src-note">Based on 75,000 captured Iraqi government documents and hundreds of survivor interviews. The foundational legal and investigative analysis of the Anfal campaign, concluding that it constituted genocide under the Genocide Convention. The documentary appendices — including al-Majid's signed decrees and telephone transcripts — are essential primary evidence. Freely available at hrw.org.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Power, S. (2002). <em>A Problem from Hell: America and the Age of Genocide.</em></span>
+          <span class="src-journal"> Basic Books.</span>
+          <span class="src-note">Power's chapter on the Kurdish genocide places Halabja within a broader analysis of how American policymakers systematically avoided responding to genocide. Her documentation of the bureaucratic mechanisms by which the State Department deflected pressure is important both as history and as a case study in institutional failure. Pulitzer Prize winner; widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Adams, S. (2018). Halabja, Chemical Weapons and the Genocide Against the Kurds: Implications for Iraq and the World Today.</span>
+          <span class="src-journal"> Global Centre for the Responsibility to Protect.</span>
+          <span class="src-note">Keynote address delivered on the 30th anniversary of the Halabja attack, connecting the impunity after Halabja to the subsequent ISIS genocide against the Yazidi and drawing implications for contemporary atrocity prevention. Freely available at globalr2p.org.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Galbraith, P. W., &amp; Van Hollen, C. (1988). <em>Chemical Weapons Use in Kurdistan: Iraq's Final Offensive.</em></span>
+          <span class="src-journal"> US Senate Foreign Relations Committee Staff Report.</span>
+          <span class="src-note">The first major American governmental documentation of the chemical weapons use in Kurdistan, produced after Galbraith's field visit in the aftermath of the attacks. The report that accompanied the blocked Prevention of Genocide Act and established the evidentiary basis for later accountability efforts. Available through congressional records and university libraries.</span>
+        </li>
+      </ol>
+    </section>
+
+  </article>
+</div>
+</div>
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'The Arab Spring',             desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',        desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'event',   title: 'The Suez Crisis',             desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',                 desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'September 11, 2001',          desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',                   desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',                desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',                desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',             desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik',                 desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person',  title: 'Tony Blair',                  desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Colin Powell',                desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Dick Cheney',                 desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',   title: 'The Iraq War',                desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'concept', title: 'Democratic Socialism',        desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',   desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.", url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',           desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                   desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Khalifa Haftar',              desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',    desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                 desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'event',   title: 'The Libyan Civil War',        desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',            desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',             desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',            desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.", url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',              desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',             desc: "The refugee who became America's most powerful and most controversial diplomat.", url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',            desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',               desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                desc: "America's first Black president — who promised transformation and left a country more divided.", url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',          desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',              desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',          desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.", url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn=document.getElementById('searchIconBtn'),dd=document.getElementById('searchDropdown'),inp=document.getElementById('searchInput');
+  _searchOpen=!_searchOpen; btn.classList.toggle('active',_searchOpen); dd.classList.toggle('open',_searchOpen);
+  if(_searchOpen){inp.focus();runSearch('');}else{inp.value='';_focusIdx=-1;}
+}
+function runSearch(q) {
+  const box=document.getElementById('searchResults'),term=q.trim().toLowerCase();
+  const seen=new Set();
+  const all=CONTEXT_ARTICLES.filter(a=>{if(seen.has(a.url))return false;seen.add(a.url);return true;});
+  const hits=term===''?all:all.filter(a=>a.title.toLowerCase().includes(term)||a.desc.toLowerCase().includes(term)||a.type.includes(term));
+  _focusIdx=-1;
+  if(!hits.length){box.innerHTML='<div class="search-empty">No articles yet — more coming soon.</div>';return;}
+  box.innerHTML=hits.map((a,i)=>`<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb?`<img src="${a.thumb}" style="width:28px;height:28px;object-fit:cover;border-radius:4px;flex-shrink:0;margin-right:6px;">`:''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKeydown(e) {
+  const items=document.querySelectorAll('.search-result');
+  if(e.key==='ArrowDown'){e.preventDefault();_focusIdx=Math.min(_focusIdx+1,items.length-1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();_focusIdx=Math.max(_focusIdx-1,0);}
+  else if(e.key==='Enter'&&_focusIdx>=0){items[_focusIdx].click();return;}
+  else if(e.key==='Escape'){toggleSearch();return;}
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click',e=>{if(_searchOpen&&!document.querySelector('.search-wrap').contains(e.target))toggleSearch();});
+window.addEventListener('scroll',()=>{
+  document.getElementById('progressBar').style.width=Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'),navItems=document.querySelectorAll('.sidebar-nav li');let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el){const w=el.classList.contains('active');document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active'));if(!w)el.classList.add('active');}
+function toggleSave(){
+  const btn=document.getElementById('saveBtn'),toast=document.getElementById('toast'),isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

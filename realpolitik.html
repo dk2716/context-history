@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realpolitik — Context</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="concept-page">
+
+<div id="progressBar"></div>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-right">
+    <span class="nav-topic-type concept">Concept</span>
+    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+    <div class="search-wrap">
+      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKey(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div id="toast" class="toast">Article saved to your list</div>
+
+<div class="page-wrap">
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a> › <span>Concepts</span> › <span>Political Theory</span> › <span>Realpolitik</span>
+    </div>
+    <div class="hero-region-tag">Political Theory · Coined 1853</div>
+    <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+      <div style="flex:1;min-width:0;">
+        <h1 style="margin-top:0;">Realpolitik</h1>
+        <p class="hero-sub">The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.</p>
+        <div class="hero-meta">
+          <span>~14 min read</span><span>·</span>
+          <span>5 academic sources</span><span>·</span>
+          <span>Last updated June 2025</span>
+        </div>
+      </div>
+      <div style="flex-shrink:0;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik"
+          style="width:340px;height:240px;object-fit:cover;border-radius:10px;
+                 border:1px solid rgba(61,186,126,0.25);display:block;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main layout -->
+<div class="outer">
+  <aside class="sidebar">
+    <div class="sidebar-label">On this page</div>
+    <ul class="sidebar-nav">
+      <li><a href="#what-is">What Is Realpolitik?</a></li>
+      <li><a href="#origins">Origins & Development</a></li>
+      <li><a href="#pillars">Core Principles</a></li>
+      <li><a href="#practice">In Practice</a></li>
+      <li><a href="#matters">Why It Matters Today</a></li>
+      <li><a href="#debate">Legacy & Debate</a></li>
+      <li><a href="#connected">Connected Topics</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ul>
+  </aside>
+
+  <main>
+
+    <!-- WHAT IS REALPOLITIK -->
+    <section id="what-is">
+      <h2>What Is Realpolitik?</h2>
+      <p>In 1853, a minor German liberal politician named Ludwig August von Rochau published a pamphlet that changed how European statesmen thought about power. His argument was simple and devastating: the revolutions of 1848 had failed because idealists had confused what <em>ought</em> to be with what <em>could</em> be. The liberals who had drafted constitutions and written rights declarations while Prussian armies marched around them had mistaken rhetoric for force. Rochau called his corrective <em>Realpolitik</em> — politics grounded in reality, specifically the reality of power.</p>
+
+      <p>The term stuck, but the idea is far older. What Rochau gave a name to was the operating logic of every successful European statesman from Richelieu to Metternich: that in international affairs, states pursue their own interests, that power is the currency of those pursuits, and that moral posturing is either self-deception or useful camouflage. Where liberal internationalists see the world as it might be improved, realpolitik practitioners see it as it actually functions — as an arena of competing powers with no referee, where survival requires clear eyes and a willingness to make ugly choices.</p>
+
+      <p>Realpolitik is not nihilism. It is a method. Its practitioners — Bismarck, Kissinger, Nixon — did not claim morality was meaningless; they claimed it was irrelevant to statecraft. A nation that sacrifices power on the altar of principle will soon have neither. The debate about whether this is wisdom or moral bankruptcy is one of the oldest arguments in political philosophy, and it has not been settled.</p>
+
+      <div class="callout concept">
+        <div class="callout-label">Key Distinction</div>
+        <h4>Realpolitik vs. Realism</h4>
+        <p>These terms are often conflated. <strong>Realpolitik</strong> is a practical guide for statecraft — how practitioners actually make foreign policy decisions. <strong>Realism</strong> is an academic theory of international relations that attempts to explain why states behave as they do. Morgenthau's realism and Bismarck's realpolitik share assumptions but serve different purposes: one explains, one prescribes. A statesman can practice realpolitik without having read a word of realist theory.</p>
+      </div>
+    </section>
+
+    <!-- ORIGINS -->
+    <section id="origins">
+      <h2>Origins &amp; Development</h2>
+      <p>The intellectual ancestry of realpolitik stretches back to Thucydides, who recorded the Athenian envoys at Melos informing the islanders that "the strong do what they can and the weak suffer what they must." Machiavelli systematised the logic in <em>The Prince</em> (1513), advising Lorenzo de' Medici that a ruler must be willing to act as both lion and fox — using force and deception as circumstances demanded, never constrained by what he had promised when circumstances were different. These thinkers did not invent power politics; they described it with uncomfortable clarity.</p>
+
+      <p>The modern practice was codified in the Concert of Europe after Napoleon's defeat. At the Congress of Vienna (1814–15), Klemens von Metternich of Austria constructed a European order not around principles — democracy, nationalism, self-determination — but around balance. Five great powers agreed to manage the continent collectively, adjusting borders and suppressing revolutions to maintain an equilibrium that would prevent any single state from dominating the others. It worked, imperfectly, for nearly a century.</p>
+
+      <p>Otto von Bismarck took these principles to their logical extreme. Appointed Minister-President of Prussia in 1862, he united Germany not through the liberal nationalism of 1848 — with its pamphlets and parliament — but through three wars, calculated diplomacy, and a masterful manipulation of great-power rivalries. He formed alliances he never intended to honour, provoked conflicts he had already planned to win, and built the German empire in less than a decade. When asked what guided him, he was frank: "The great questions of the day will not be settled by speeches and majority votes — but by iron and blood."</p>
+
+      <p>The 20th century's great realpolitik operator was Henry Kissinger, who came to power in the Nixon administration in 1969 and applied a self-consciously Bismarckian worldview to American foreign policy. His opening to China, détente with the Soviet Union, and ruthless management of Vietnam, Chile, and Bangladesh all followed the same logic: American power was the variable to be maximised; ideology and human rights were concerns to be managed, not goals to be pursued.</p>
+
+      <div class="stat-row">
+        <div class="stat-box"><div class="stat-number">1853</div><div class="stat-label">Year Rochau coined the term <em>Realpolitik</em></div></div>
+        <div class="stat-box"><div class="stat-number">1815</div><div class="stat-label">Congress of Vienna — modern balance-of-power system established</div></div>
+        <div class="stat-box"><div class="stat-number">1862–90</div><div class="stat-label">Bismarck's tenure as Prussia/Germany's dominant statesman</div></div>
+        <div class="stat-box"><div class="stat-number">1969–77</div><div class="stat-label">Kissinger's years as National Security Advisor and Secretary of State</div></div>
+      </div>
+
+      <!-- Timeline -->
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1513</div>
+            <div class="tl-title">Machiavelli Writes <em>The Prince</em> — The Founding Text</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Writing in Florentine exile, Niccolò Machiavelli composed what would become the most controversial political treatise in Western history. His advice was jarring in its directness: princes must learn how not to be good, must keep faith only when it serves them, and must be willing to use cruelty "well" — meaning efficiently, to establish control rather than to satisfy appetite. Machiavelli wasn't endorsing brutality for its own sake; he was describing the logic of political survival in a competitive system with no external enforcer.</p>
+          <p><em>The Prince</em> was not published until 1532, five years after Machiavelli's death. It was immediately condemned — "Machiavellian" became a term of abuse — while simultaneously being read by every European ruler with any pretension to sophistication. The tension between what statesmen said about morality and what Machiavelli showed they actually did has never been resolved.</p>
+          <div class="tl-sources"><span class="src-chip">Bew (2015)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1814–1815</div>
+            <div class="tl-title">The Congress of Vienna — Balance of Power as System</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>After twenty-three years of revolutionary and Napoleonic warfare, five European great powers met in Vienna to redesign the continent. Metternich of Austria, Castlereagh of Britain, Talleyrand of France, and Tsar Alexander I of Russia negotiated not on the basis of who deserved what, but on the principle of equilibrium. France, the defeated aggressor, was restored to something close to its pre-revolutionary boundaries and invited back into the concert of powers — because a permanently weakened France would create a vacuum that others would fight over.</p>
+          <p>The result was the longest period of great-power peace in European history: no general war from 1815 to 1914. This achievement — stability through balance rather than through justice — became the template that realpolitik practitioners have cited ever since. Kissinger wrote his doctoral dissertation on Metternich and the Concert of Europe, and his admiration for its cold-eyed construction of order never wavered.</p>
+          <div class="tl-sources"><span class="src-chip">Kissinger (1994)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1862–1871</div>
+            <div class="tl-title">Bismarck Unifies Germany — Realpolitik Applied</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Otto von Bismarck arrived as Minister-President of Prussia in 1862 with a clear objective — Prussian dominance of the German states — and an equally clear method: use every available tool, form alliances for as long as they were useful, and fight only wars he had already arranged to win. He allied with Austria to seize Schleswig-Holstein from Denmark in 1864, then turned on Austria in 1866 and crushed it in seven weeks, then maneuvered France into declaring war in 1870 and defeated it in six months. Germany was proclaimed at Versailles in January 1871.</p>
+          <p>What made Bismarck's achievement so striking was the restraint that followed. Having unified Germany through force, he devoted the next two decades to preserving what he had built through careful management of alliances — keeping Austria and Russia from going to war with each other, isolating France diplomatically, avoiding new conflicts that might attract intervention. He understood that the same ruthlessness that built an empire could destroy it if applied without judgment. When Wilhelm II dismissed him in 1890, the carefully balanced system Bismarck had constructed unravelled within a generation, ending at the Somme.</p>
+          <div class="tl-sources"><span class="src-chip">Morgenthau (1948)</span><span class="src-chip">Bew (2015)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1969–1977</div>
+            <div class="tl-title">Kissinger and Nixon — Realpolitik in the Nuclear Age</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Henry Kissinger arrived in Washington in 1969 as National Security Advisor to Richard Nixon carrying a mental model of international relations shaped by his study of 19th-century Europe. America, he believed, had been weakened by its moralistic foreign policy tradition — its tendency to frame every conflict in terms of democracy versus tyranny, which made flexibility impossible and antagonised potential partners. What was needed was a European-style balance-of-power management: engage adversaries when useful, contain them when necessary, and never let ideology dictate the choice.</p>
+          <p>The results were among the most consequential diplomatic moves of the Cold War era. The opening to China in 1972 exploited the Sino-Soviet split to give the United States a triangular advantage — pressuring the Soviets by improving relations with their rival. SALT I, signed the same year, froze the nuclear arms race at existing levels and opened two decades of détente. But the same logic authorised the 1973 Chilean coup that overthrew Salvador Allende, the secret bombing of Cambodia that killed tens of thousands of civilians, and the support for Pakistan's military as it massacred Bengalis in what became Bangladesh. For Kissinger, these were costs of maintaining American power, not moral failures requiring explanation.</p>
+          <div class="tl-sources"><span class="src-chip">Kissinger (1994)</span><span class="src-chip">Morgenthau (1948)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE PILLARS -->
+    <section id="pillars">
+      <h2>Core Principles</h2>
+      <p>Realpolitik is not a single doctrine with a fixed rulebook. It is a family of related assumptions about how states behave and how statesmen should act. These assumptions cluster around four interlocking principles, each of which challenges a competing moral or idealistic claim about foreign policy.</p>
+
+      <div class="ideology-grid">
+        <div class="ideology-card">
+          <div class="ideology-card-title">National Interest as the Pole Star</div>
+          <p>The state's primary obligation is to its own survival and power. Not to international law, not to its treaty partners, not to universal human rights. When these obligations conflict — and they frequently do — national interest wins. This does not mean other considerations are ignored; they are weighed against interest and found lighter.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Power as the Currency of Diplomacy</div>
+          <p>States that lack military, economic, or diplomatic power cannot enforce their preferences. Arguments, principles, and moral claims mean nothing without the capacity to back them. "You have no rights except those you can defend," as Bismarck might have put it. Building and maintaining power is therefore a first-order obligation of statecraft, not a means to some higher end.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Pragmatism Over Ideology</div>
+          <p>Alliances are situational, not permanent. Yesterday's enemy is today's partner if the balance of power demands it. Nixon shaking hands with Mao — the leader of a communist state that had fought American soldiers in Korea — was not hypocrisy; it was realpolitik. The alternative — refusing engagement because China was ideologically unacceptable — would have been sentimentality at America's expense.</p>
+        </div>
+        <div class="ideology-card">
+          <div class="ideology-card-title">Stability Through Balance</div>
+          <p>No single power should dominate the system. A world where one state is hegemonic is inherently unstable because all other states will eventually combine to resist it. The goal of great-power management is not victory but equilibrium — a situation where no state has enough advantage to risk a general war, and all have enough stake in the system to maintain it.</p>
+        </div>
+      </div>
+
+      <div class="callout warning">
+        <div class="callout-label">The Central Tension</div>
+        <h4>What Realpolitik Cannot Answer</h4>
+        <p>Realpolitik is silent on questions of purpose. It tells you how to accumulate and deploy power; it does not tell you what power is for. Bismarck knew how to build Germany — he was less certain what a unified Germany was supposed to do with itself. Kissinger secured American strategic advantage in the 1970s while presiding over policies — Cambodia, Chile, Bangladesh — whose human costs he largely declined to address. Critics argue that a statecraft without moral content is ultimately self-defeating: it generates stability for stability's sake, and eventually a system that is stable but unjust will be challenged by those it excludes.</p>
+      </div>
+    </section>
+
+    <!-- IN PRACTICE -->
+    <section id="practice">
+      <h2>Realpolitik in Practice</h2>
+      <p>Abstract principles are best understood through cases where they were applied — or where failing to apply them produced disaster. The following five episodes show realpolitik at work across different eras and contexts, each illustrating a different dimension of how power calculations override moral or ideological constraints.</p>
+
+      <div class="tl-item active" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">FEBRUARY 1972</div>
+            <div class="tl-title">Nixon Goes to China — The Signature Realpolitik Moment</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>When Richard Nixon landed in Beijing on February 21, 1972, he became the first sitting American president to visit the People's Republic. Twenty-three years earlier, Nixon had built his political career on anti-communist hysteria; now he was shaking hands with Mao Zedong, the man who had sent Chinese soldiers to kill Americans in Korea. The reversal was breathtaking — and entirely explicable in realpolitik terms.</p>
+          <p>Kissinger's strategic logic was triangular. The Sino-Soviet split of the 1960s had created an opportunity: by improving relations with China, the United States could pressure the Soviet Union from two directions simultaneously. The Soviets, facing potential encirclement, would have stronger incentives to negotiate on arms control and Vietnam. China, for its part, wanted American recognition as a counterweight to Soviet pressure on its northern border. Both sides had reasons to deal. That China was a communist dictatorship responsible for tens of millions of deaths during the Cultural Revolution was not irrelevant to Nixon — it simply did not change the strategic calculus.</p>
+          <p>The opening to China produced SALT I (signed three months later), accelerated the end of America's involvement in Vietnam, and established the triangular great-power framework that defined international relations for the next two decades. It is widely regarded as the most sophisticated deployment of realpolitik by any American administration.</p>
+          <div class="tl-sources"><span class="src-chip">Kissinger (1994)</span><span class="src-chip">Mearsheimer (2001)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">SEPTEMBER 1973</div>
+            <div class="tl-title">Kissinger and Pinochet — The Dark Side of the Ledger</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>On September 11, 1973, a military coup backed by the CIA overthrew Salvador Allende, Chile's democratically elected socialist president. General Augusto Pinochet seized power and within weeks was overseeing the torture and murder of thousands of political opponents. Kissinger, informed of what was happening, responded with what he considered appropriate brevity. In a declassified conversation with the new junta's foreign minister, he said: "We are not out to protect Chile. We want to help Chile."</p>
+          <p>The realpolitik calculus was clear: Allende's Chile was a Soviet-aligned government in the Western Hemisphere, threatening to demonstrate that socialism could succeed through elections. The United States had spent years destabilising the economy and funding the opposition. The coup ended that threat. That it also ended democracy in Chile, and inaugurated 17 years of authoritarian rule, was a cost Kissinger accepted without apparent anguish. In a 1973 conversation with Nixon he was explicit: "I mean our hand doesn't show on this one though... [Allende] is not going to simply let us kick him out."</p>
+          <p>Chile became the central exhibit in the prosecution of Kissinger-era realpolitik by its critics. Christopher Hitchens, in <em>The Trial of Henry Kissinger</em> (2001), argued that Kissinger had committed war crimes. Declassified documents from the Nixon library suggest the degree of direct American involvement was greater than Kissinger acknowledged in his memoirs. The case remains one of the clearest examples of how the separation of foreign policy from moral accountability produces outcomes that are not merely strategically debatable but morally catastrophic.</p>
+          <div class="tl-sources"><span class="src-chip">Bew (2015)</span><span class="src-chip">Carr (1939)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">1980–1988</div>
+            <div class="tl-title">The Iran-Iraq War — Arming Both Sides</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>When Saddam Hussein invaded Iran in September 1980, the United States faced a situation that would have been inconceivable a decade earlier: two hostile powers fighting each other. Iran under Khomeini had seized American hostages. Iraq was a Soviet client. The realpolitik response, adopted by the Reagan administration, was to help ensure neither won decisively — to "tilt" toward whichever side appeared to be losing, keeping the war going long enough to exhaust both.</p>
+          <p>In practice, this meant providing Iraq with satellite intelligence on Iranian troop deployments, removing Iraq from the terrorist list to allow American arms sales, and turning a blind eye to Saddam's use of chemical weapons against Iranian soldiers and, later, Kurdish civilians. The logic was Bismarckian in its cynicism: a weakened Iran prevented the spread of Khomeini's revolutionary Islam; a weakened Iraq prevented any regional hegemon emerging. Eight years and perhaps a million deaths later, neither country was capable of threatening American interests in the Gulf. The same Saddam Hussein whose chemical weapons use America had facilitated invaded Kuwait in 1990, requiring a very different American response.</p>
+          <div class="tl-sources"><span class="src-chip">Morgenthau (1948)</span><span class="src-chip">Mearsheimer (2001)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">POST-2001</div>
+            <div class="tl-title">The War on Terror — Realpolitik and Human Rights in Collision</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>The September 11 attacks produced two simultaneous American foreign policy responses that sat in direct tension. The Bush Doctrine — promoting democracy in the Middle East as a long-term counter-terrorism strategy — was Wilsonian in its idealism: the argument that liberal democratic states do not produce terrorists. But the operational response to 9/11 was pure realpolitik: forming alliances with authoritarian states (Saudi Arabia, Pakistan, Egypt, Uzbekistan) whose cooperation was needed for intelligence sharing, basing rights, and detention facilities, regardless of their human rights records.</p>
+          <p>The contradiction could not be sustained. When the Bush administration pressed Egypt for democratic reforms while simultaneously relying on Egyptian intelligence services for "extraordinary rendition" — the extrajudicial transfer of terrorism suspects to countries where they could be tortured — the moral credibility of the democracy-promotion agenda collapsed. Critics argued that the realpolitik alliance structure actively undermined the stated idealist objectives. Defenders of the approach argued that the idealist objectives were always rhetorical cover for the real strategic aims, and that the country was safer for the pragmatic alliances regardless.</p>
+          <div class="tl-sources"><span class="src-chip">Mearsheimer (2001)</span><span class="src-chip">Carr (1939)</span></div>
+        </div>
+      </div>
+
+      <div class="tl-item" onclick="toggleItem(this)">
+        <div class="tl-header">
+          <div class="tl-header-left">
+            <div class="tl-date">2022–PRESENT</div>
+            <div class="tl-title">Ukraine — Where Realpolitik Meets Its Limit</div>
+          </div>
+          <span class="tl-chevron">▼</span>
+        </div>
+        <div class="tl-body">
+          <p>Russia's full-scale invasion of Ukraine in February 2022 produced an unexpected result for realpolitik theorists. John Mearsheimer, the University of Chicago political scientist and leading offensive realist, had argued since 2014 that NATO expansion had given Russia legitimate security concerns and that the West's insistence on drawing Ukraine into its sphere of influence was reckless. When the invasion came, Mearsheimer's analysis was widely circulated — and widely criticised.</p>
+          <p>Critics pointed out that the realpolitik framework, taken seriously, would require accepting Russia's sphere of influence claim and abandoning Ukraine. But the Western response — massive military and economic support for Ukraine — suggested that liberal democracies were not, in fact, willing to apply pure realpolitik principles to their own neighbourhood. Ukraine's democratic identity, its right to choose its own alliances, and the principle that borders should not be changed by force were treated as genuine interests, not mere rhetoric. Whether this represented a vindication of liberal internationalism or simply a different calculation of Western national interest — containing Russian power — remained contested.</p>
+          <div class="tl-sources"><span class="src-chip">Mearsheimer (2001)</span><span class="src-chip">Bew (2015)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY IT MATTERS TODAY -->
+    <section id="matters">
+      <h2>Why It Matters Today</h2>
+      <p>Realpolitik is not a historical curiosity. The debates it provokes — between national interest and human rights, between stability and justice, between engagement and confrontation — are being replayed in real time across every major international crisis. Understanding the concept is essential to understanding why the world works the way it does.</p>
+
+      <div class="matters-grid">
+        <div class="matters-card">
+          <h3>The China Question: Engagement or Containment?</h3>
+          <p>The Nixon-Kissinger opening to China produced five decades of deepening engagement on the theory that integrating China into the international economic order would moderate its behaviour. The theory is now contested. As China has grown wealthier and more assertive, the realpolitik case for engagement is being challenged by a new realpolitik case for containment — forming alliances to balance Chinese power before it becomes truly hegemonic.</p>
+          <ul class="matters-subpoints">
+            <li>AUKUS, the Quad, and the Indo-Pacific strategy represent Mearsheimer-style balance-of-power thinking</li>
+            <li>The Taiwan question tests whether democratic solidarity is a genuine interest or rhetorical cover</li>
+            <li>Economic interdependence ("Chimerica") was itself a realpolitik choice — now being unwound on realpolitik grounds</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>Saudi Arabia and the Limits of Values-Based Foreign Policy</h3>
+          <p>The assassination of journalist Jamal Khashoggi at the Saudi consulate in Istanbul in 2018 produced calls for punishing Saudi Arabia and re-evaluating the US-Saudi relationship. The realpolitik response — maintaining the relationship because of oil, arms sales, regional stability, and Israeli-Arab normalisation — prevailed. This dynamic repeats itself across relationships with Egypt, UAE, Pakistan, and others: stated values losing out to calculated interests.</p>
+          <ul class="matters-subpoints">
+            <li>Biden administration initially froze arms sales to Saudi Arabia, then reversed course after oil prices spiked</li>
+            <li>The Abraham Accords prioritised Israel-Arab normalisation over Palestinian statehood — a realpolitik reshaping of regional alignments</li>
+            <li>The "Khashoggi exception" — finding a middle ground between full accountability and full impunity — satisfied neither camp</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Ukraine Precedent: Can Idealism Be a National Interest?</h3>
+          <p>Western support for Ukraine has been defended in both realpolitik terms (containing Russia, deterring Chinese aggression toward Taiwan, preserving the post-1945 rules-based order) and moral terms (defending a democracy against unprovoked aggression). The question of which argument is doing the work matters: if Ukraine support is purely interest-based, it could be withdrawn when the interest calculation changes; if it is values-based, it is more stable but harder to sustain domestically.</p>
+          <ul class="matters-subpoints">
+            <li>Mearsheimer's prediction that the West's Ukraine policy would produce disaster has been partially vindicated and partially refuted</li>
+            <li>The weapons and financial support provided ($200bn+) represents a commitment beyond narrow realpolitik interest</li>
+            <li>NATO's response has arguably strengthened the alliance — the opposite of what pure realists expected</li>
+          </ul>
+        </div>
+        <div class="matters-card">
+          <h3>The Return of Great Power Competition</h3>
+          <p>The post-Cold War "unipolar moment" — in which liberal internationalism briefly seemed to have won — is over. The 2020s are seeing a return to great-power rivalry between the United States, China, and Russia, which is also a return to the framework realpolitik was designed to analyse. Morgenthau's categories are back in use in foreign policy circles that had spent two decades talking about global governance and transnational threats.</p>
+          <ul class="matters-subpoints">
+            <li>The Biden administration's National Security Strategy explicitly names China and Russia as great-power competitors</li>
+            <li>Arms spending is rising across NATO, Asia, and the Middle East simultaneously</li>
+            <li>International institutions (UN Security Council, WTO) are increasingly gridlocked as great powers use them as arenas of competition rather than cooperation</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEGACY & DEBATE -->
+    <section id="debate">
+      <h2>Legacy &amp; Debate</h2>
+      <p>The core dispute about realpolitik is not empirical — few serious scholars doubt that states often do prioritise power and interest over principle. The dispute is normative: should they? And the subsidiary question: even on its own terms, does realpolitik work — does a foreign policy shorn of moral content actually produce stable, beneficial outcomes? These arguments have been running since Machiavelli and have not been resolved, largely because the answer seems to depend on the time horizon and the definition of "beneficial."</p>
+
+      <div class="scholars-row">
+        <div class="scholar-card pro">
+          <div class="scholar-card-name">Hans J. Morgenthau</div>
+          <div class="scholar-card-title">University of Chicago · <em>Politics Among Nations</em> (1948)</div>
+          <div class="scholar-card-verdict">Morgenthau argued that the anarchic international system — no world government, no enforcement mechanism — makes power politics inescapable. States that pursue moral goals at the expense of power end up with neither morality nor power. The realist tradition he founded remains the dominant framework in academic international relations.</div>
+        </div>
+        <div class="scholar-card critical">
+          <div class="scholar-card-name">E.H. Carr</div>
+          <div class="scholar-card-title">University of Wales · <em>The Twenty Years' Crisis</em> (1939)</div>
+          <div class="scholar-card-verdict">Carr's foundational critique of liberal utopianism predated Morgenthau but arrived at a more nuanced position. Pure realism, Carr argued, is ultimately self-defeating: a world in which power is the only value produces nothing worth preserving. Stable international orders require a moral element — not as an end in itself, but because legitimacy reduces the cost of maintaining power.</div>
+        </div>
+        <div class="scholar-card nuanced">
+          <div class="scholar-card-name">John Bew</div>
+          <div class="scholar-card-title">King's College London · <em>Realpolitik: A History</em> (2015)</div>
+          <div class="scholar-card-verdict">Bew's intellectual history shows that Rochau himself — the man who coined the term — was not the cynical power-worshipper the word later implied. Rochau wanted liberals to be effective, not to abandon their values. Realpolitik, in its original form, was about achieving moral goals through realistic means — a position that is very different from Kissinger's more radical separation of power from purpose.</div>
+        </div>
+      </div>
+
+      <h3>The Academic Debate: Offensive vs. Defensive Realism</h3>
+      <p>Within the realist tradition, a second-order dispute concerns how much power states actually seek. John Mearsheimer's offensive realism holds that states in an anarchic system are driven to seek as much power as possible — ideally regional hegemony, since no state can ever be certain enough of its security to stop expanding. Kenneth Waltz's defensive realism holds the opposite: states seek only as much power as they need to be secure, because overreach tends to provoke balancing coalitions that leave the aggressor worse off.</p>
+
+      <p>The debate matters practically. If Mearsheimer is right, then China's rise will inevitably produce great-power conflict as it pushes toward regional hegemony — and accommodation strategies are futile. If Waltz is right, then the key is ensuring China feels sufficiently secure that it does not feel compelled to expand aggressively. The engagement strategy of the 1990s and 2000s reflected Waltzian logic; the containment strategy now being assembled reflects Mearsheimerian logic.</p>
+
+      <div class="perspectives">
+        <div class="perspective-card for">
+          <div class="perspective-label">The Case For Realpolitik</div>
+          <ul>
+            <li>The Concert of Europe (1815–1914) produced nearly a century of great-power peace through balance, not idealism <span class="perspective-attr">Kissinger (1994)</span></li>
+            <li>Moral foreign policies tend to be inconsistent and unsustainable — domestic politics force retreat <span class="perspective-attr">Morgenthau (1948)</span></li>
+            <li>Engagement with adversaries (Nixon/China, Reagan/Gorbachev) has produced better outcomes than confrontation <span class="perspective-attr">Bew (2015)</span></li>
+            <li>States that lack power cannot advance any values — building power is a precondition for doing good <span class="perspective-attr">Morgenthau (1948)</span></li>
+          </ul>
+        </div>
+        <div class="perspective-card against">
+          <div class="perspective-label">The Case Against</div>
+          <ul>
+            <li>Realpolitik without moral content produces complicity in atrocities: Chile, Cambodia, Bangladesh <span class="perspective-attr">Bew (2015)</span></li>
+            <li>Stability built on authoritarian partnerships is fragile — the Arab Spring demonstrated that regimes backed by realpolitik partners collapse suddenly <span class="perspective-attr">Carr (1939)</span></li>
+            <li>Disregarding the internal character of states ignores a key driver of their behaviour — democracies rarely go to war with each other <span class="perspective-attr">Mearsheimer (2001)</span></li>
+            <li>A foreign policy that cannot be explained to citizens in moral terms is ultimately unsustainable democratically <span class="perspective-attr">Carr (1939)</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <p>The most honest synthesis is probably E.H. Carr's: neither pure realism nor pure idealism is adequate. A foreign policy built entirely on power calculations will eventually generate the enemies it was designed to manage. A foreign policy built entirely on moral principles will fail the moment principles conflict with each other — as they always do in practice (the right to self-determination versus the right not to be tortured, for instance). What Bismarck understood better than most was that the choice between realpolitik and morality is itself a false one: the real skill is knowing when each mode of thinking applies.</p>
+
+      <div class="pull-quote">
+        <blockquote>"The statesman must weigh the consequences of his actions. As philosopher he may have views on ultimate ends; but as statesman his business is the management of a world he did not make and cannot remake at will."</blockquote>
+        <cite>— Henry Kissinger, <em>A World Restored</em> (1957)</cite>
+      </div>
+    </section>
+
+    <!-- CONNECTED TOPICS -->
+    <section id="connected">
+      <h2>Connected Topics</h2>
+
+      <div class="topics-group">
+        <div class="topics-group-label">People who embodied or contested this doctrine</div>
+        <div class="topics-grid">
+          <a href="henry-kissinger.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg" alt="Henry Kissinger">
+            <div class="topic-type-tag person">Person</div>
+            <div class="topic-name">Henry Kissinger</div>
+            <div class="topic-preview">The 20th century's most self-conscious practitioner — and theorist — of realpolitik in American foreign policy.</div>
+          </a>
+          <a href="richard-nixon.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png" alt="Richard Nixon">
+            <div class="topic-type-tag person">Person</div>
+            <div class="topic-name">Richard Nixon</div>
+            <div class="topic-preview">Kissinger's president — ideologically a Cold Warrior, operationally a pragmatist whose China opening defined the era.</div>
+          </a>
+          <a href="george-w-bush.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png" alt="George W. Bush">
+            <div class="topic-type-tag person">Person</div>
+            <div class="topic-name">George W. Bush</div>
+            <div class="topic-preview">The president who tried to replace realpolitik with democracy promotion — and whose failure revived the realist critique.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Events where realpolitik shaped the outcome</div>
+        <div class="topics-grid">
+          <a href="operation-condor.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Operation_Condor_participants.svg/960px-Operation_Condor_participants.svg.png" alt="Operation Condor">
+            <div class="topic-type-tag event">Event</div>
+            <div class="topic-name">Operation Condor</div>
+            <div class="topic-preview">The transnational assassination network that Kissinger-era realpolitik enabled — the clearest case of power trumping human rights.</div>
+          </a>
+          <a href="iran-iraq-war.html" class="topic-card"><img class="topic-card-thumb" src="https://www.atlanticcouncil.org/wp-content/uploads/2018/08/IraqiMinister_Feature.jpg" alt="The Iran-Iraq War">
+            <div class="topic-type-tag event">Event</div>
+            <div class="topic-name">The Iran-Iraq War</div>
+            <div class="topic-preview">Eight years in which US realpolitik kept both belligerents fighting — preventing either from becoming a regional hegemon.</div>
+          </a>
+          <a href="iraq-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg" alt="The Iraq War">
+            <div class="topic-type-tag event">Event</div>
+            <div class="topic-name">The Iraq War</div>
+            <div class="topic-preview">The war that realpolitik theorists warned against — and whose failure revived Morgenthau's tradition in American foreign policy debate.</div>
+          </a>
+        </div>
+      </div>
+
+      <div class="topics-group">
+        <div class="topics-group-label">Related concepts</div>
+        <div class="topics-grid">
+          <a href="non-aligned-movement.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg" alt="The Non-Aligned Movement">
+            <div class="topic-type-tag concept">Concept</div>
+            <div class="topic-name">The Non-Aligned Movement</div>
+            <div class="topic-preview">An attempt to escape great-power realpolitik by building a third bloc — which itself required realpolitik management to survive.</div>
+          </a>
+          <a href="responsibility-to-protect.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="The Responsibility to Protect">
+            <div class="topic-type-tag concept">Concept</div>
+            <div class="topic-name">The Responsibility to Protect</div>
+            <div class="topic-preview">The direct idealist counter-argument to realpolitik sovereignty doctrine — that state power does not shield atrocity from external intervention.</div>
+          </a>
+          <a href="democratic-socialism.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg" alt="Democratic Socialism">
+            <div class="topic-type-tag concept">Concept</div>
+            <div class="topic-name">Democratic Socialism</div>
+            <div class="topic-preview">A system Kissinger's realpolitik actively worked to prevent — Allende's Chile was crushed precisely because its success would have undermined US strategic interests.</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOURCES -->
+    <section id="sources">
+      <h2>Sources</h2>
+      <ol class="sources-list">
+        <li>
+          <span class="src-num">1</span>
+          <span class="src-title">Morgenthau, H. J. (1948). <em>Politics Among Nations: The Struggle for Power and Peace.</em></span>
+          <span class="src-journal"> Alfred A. Knopf.</span>
+          <span class="src-note">The founding text of academic realism. Morgenthau's six principles of political realism remain the clearest statement of the realpolitik worldview. Widely available in university libraries; excerpts freely accessible online.</span>
+        </li>
+        <li>
+          <span class="src-num">2</span>
+          <span class="src-title">Kissinger, H. (1994). <em>Diplomacy.</em></span>
+          <span class="src-journal"> Simon &amp; Schuster.</span>
+          <span class="src-note">Kissinger's own account of realpolitik from Richelieu to the present — simultaneously a history of European statecraft and a defence of his own approach. Essential for understanding how its leading 20th-century practitioner understood the tradition. Widely available.</span>
+        </li>
+        <li>
+          <span class="src-num">3</span>
+          <span class="src-title">Carr, E. H. (1939). <em>The Twenty Years' Crisis, 1919–1939: An Introduction to the Study of International Relations.</em></span>
+          <span class="src-journal"> Macmillan.</span>
+          <span class="src-note">The most elegant critique of liberal internationalism from within the realist tradition. Carr demolishes the utopianism of interwar collective security while arguing that pure power politics is also self-defeating. The most sophisticated account of the realpolitik dilemma available. Widely available in academic libraries.</span>
+        </li>
+        <li>
+          <span class="src-num">4</span>
+          <span class="src-title">Mearsheimer, J. J. (2001). <em>The Tragedy of Great Power Politics.</em></span>
+          <span class="src-journal"> W. W. Norton &amp; Company.</span>
+          <span class="src-note">The definitive statement of offensive realism — the argument that great powers are structurally compelled to seek hegemony. Essential for understanding the theoretical debate between Mearsheimer's camp and defensive realists. Widely available; a revised edition (2014) updates the argument with material on China's rise.</span>
+        </li>
+        <li>
+          <span class="src-num">5</span>
+          <span class="src-title">Bew, J. (2015). <em>Realpolitik: A History.</em></span>
+          <span class="src-journal"> Oxford University Press.</span>
+          <span class="src-note">The best intellectual history of the concept. Bew traces realpolitik from Rochau through Bismarck to Kissinger, showing how the original meaning — achieving liberal goals through realistic means — was gradually distorted into pure power-worship. Crucial for understanding what the word originally meant and how it was misappropriated. Available in university libraries.</span>
+        </li>
+      </ol>
+    </section>
+
+  </main>
+</div><!-- /.outer -->
+</div><!-- /.page-wrap -->
+
+<script>
+const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',        desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                                                             url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',                desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                                                   url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                        desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.",                url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Khalifa Haftar',                   desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',                                           url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',         desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',                                         url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                      desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                                                              url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect',    desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.',                                         url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'event',   title: 'The Libyan Civil War',             desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',                                                                                  url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',                 desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',                                                  url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',                  desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',                                                                                             url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',                 desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.",                                                                                    url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',                   desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',                                                                                  url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',                  desc: "The refugee who became America's most powerful and most controversial diplomat.",                                                                                       url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',                 desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',                                                                                   url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',                    desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',                                                                                        url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                     desc: "America's first Black president — who promised transformation and left a country more divided.",                                                                        url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',               desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',                                                            url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',                   desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',                                                                         url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',               desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.",                                                                     url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+    { type: 'person',  title: 'Tony Blair',                       desc: 'The Labour prime minister who won a 1997 landslide then staked his legacy on Iraq.',                                                                                   url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                      desc: 'The Egyptian president who made peace with Israel and was killed for it.',                                                                                             url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',                 desc: "The Chilean general who overthrew democracy and ruled for 17 years.",                                                                                                  url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+];
+
+let _searchOpen = false, _focusIdx = -1;
+function toggleSearch() {
+  const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+  _searchOpen = !_searchOpen;
+  btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+  if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+}
+function runSearch(q) {
+  const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+  // deduplicate by url
+  const seen = new Set();
+  const all = CONTEXT_ARTICLES.filter(a => { if (seen.has(a.url)) return false; seen.add(a.url); return true; });
+  const hits = term === '' ? all : all.filter(a =>
+    a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term));
+  _focusIdx = -1;
+  if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+  box.innerHTML = hits.map((a,i) =>
+    `<a class="search-result" href="${a.url}" data-i="${i}">
+       <div class="search-result-top">${a.thumb?`<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">`:''}<span class="topic-type-tag ${a.type}">${a.type}</span>
+       <span class="search-result-title">${a.title}</span></div>
+       <div class="search-result-desc">${a.desc}</div></a>`).join('');
+}
+function searchKey(e) {
+  const items = document.querySelectorAll('.search-result');
+  if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+  else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+  else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+  else if (e.key==='Escape') { toggleSearch(); return; }
+  items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+}
+document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+window.addEventListener('scroll', () => {
+  document.getElementById('progressBar').style.width = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+  const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+  navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+});
+function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+function toggleSave() {
+  const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+  if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+  else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+}
+</script>
+</body>
+</html>

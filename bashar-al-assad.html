@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bashar al-Assad — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Heads of State</a><span class="breadcrumb-sep">›</span>
+        <span>Bashar al-Assad</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar" id="heroAvatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg" alt="Bashar al-Assad"></div>
+        <div>
+          <div class="hero-region-tag">Syria · President 2000–2024</div>
+          <h1>Bashar al-Assad</h1>
+          <p style="font-family:sans-serif;font-size:0.88rem;color:rgba(240,239,232,0.5);margin:0.2rem 0 0.6rem;">بشار حافظ الأسد</p>
+          <p class="hero-sub">The ophthalmologist who was never meant to rule Syria — until his brother died and he inherited a dictatorship, then used it to kill hundreds of thousands of his own people before fleeing to Moscow on the night his capital fell.</p>
+          <div class="hero-meta">
+            <span>~25 min read</span><span>·</span>
+            <span>5 academic sources</span><span>·</span>
+            <span>Active: 2000–2024</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#ideology">The Facade of Reform</a></li>
+        <li><a href="#repression">The Machinery of Repression</a></li>
+        <li><a href="#civil-war">The Civil War</a></li>
+        <li><a href="#fall">The Fall</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Bashar Hafez al-Assad (بشار حافظ الأسد)</div></div>
+          <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">September 11, 1965 — Damascus, Syria</div></div>
+          <div class="qf-item"><div class="qf-label">Training</div><div class="qf-value">Ophthalmologist; graduated Damascus University; specialised at the Western Eye Hospital, London</div></div>
+          <div class="qf-item"><div class="qf-label">In power</div><div class="qf-value">July 17, 2000 – December 8, 2024 (24 years)</div></div>
+          <div class="qf-item"><div class="qf-label">How came to power</div><div class="qf-value">Hereditary succession after father Hafez's death; ran unopposed in a referendum returning 97% approval; constitution amended in under an hour to lower minimum presidential age from 40 to 34</div></div>
+          <div class="qf-item"><div class="qf-label">Religion / sect</div><div class="qf-value">Alawi (heterodox Shia minority, ~12% of Syria's population)</div></div>
+          <div class="qf-item"><div class="qf-label">Spouse</div><div class="qf-value">Asma al-Assad (née Akhras; British-born, London-raised; former investment banker at JP Morgan and Deutsche Bank)</div></div>
+          <div class="qf-item"><div class="qf-label">Key foreign backers</div><div class="qf-value">Iran (IRGC); Hezbollah; Russia (from September 2015 directly); Shia militias from Iraq, Afghanistan, Pakistan</div></div>
+          <div class="qf-item"><div class="qf-label">Fell from power</div><div class="qf-value">December 8, 2024 — fled to Moscow as HTS-led forces captured Damascus; granted asylum by Russia</div></div>
+          <div class="qf-item"><div class="qf-label">Death toll under his rule</div><div class="qf-value">600,000+ killed (500,000+ named and documented); 14 million displaced; 300+ chemical weapons attacks documented by UN and OPCW</div></div>
+        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Rise: The Reluctant Heir</h2>
+
+        <p>Bashar al-Assad was not supposed to rule Syria. That role belonged to his older brother Bassel — groomed from birth for the presidency, visible on the billboards that lined Syrian highways, the physical and temperamental incarnation of everything their father Hafez projected about dynastic continuity. Bashar was the quiet one: studious, somewhat introverted, interested in medicine. He enrolled at Damascus University to study ophthalmology and, in 1992, moved to London to specialise at the Western Eye Hospital. By all accounts he was earnest about his career.</p>
+
+        <p>Then, in January 1994, Bassel drove his car at high speed into a barrier on the road to Damascus airport. He was killed instantly. Bashar was recalled from London. At twenty-eight, with a half-finished medical career, he became the designated successor to one of the Arab world's most elaborate police states. He was enrolled at the Syrian Military Academy in Homs, rapidly promoted through the ranks, and given visible portfolios — including command of Syrian forces in Lebanon — to establish credentials. When Hafez died on June 10, 2000, after twenty-nine years in power, the Syrian constitution was amended in under an hour to lower the minimum presidential age from forty to thirty-four. Bashar ran unopposed. A referendum returned 97.29% approval. The dynasty continued. <span class="src-chip">Irfan et al. (2025)</span></p>
+
+        <p>The family Bashar inherited was not merely a political dynasty but an entire system of governance. Hafez al-Assad had come from the Alawi minority — a heterodox Shia sect long marginalised in Syrian society, elevated under the French mandate, and then systematically placed by Hafez into the commanding heights of the military and intelligence apparatus. The Alawis were roughly 12% of the Syrian population in a majority-Sunni country. Hafez had bonded them to the regime through patronage, fear, and a shared understanding that the fall of his system would mean their exposure. He had demonstrated what that exposure looked like in February 1982, when his forces crushed a Muslim Brotherhood uprising in Hama by killing more than twenty-five thousand people. The massacre was both a signal to opponents and a template for the future. <span class="src-chip">CFR (2019)</span></p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">1994</div><div class="stat-label">Year Bassel al-Assad died in a car crash, ending Bashar's medical career</div></div>
+          <div class="stat-box"><div class="stat-number">97%</div><div class="stat-label">Approval in the uncontested 2000 referendum that made Bashar president</div></div>
+          <div class="stat-box"><div class="stat-number">29</div><div class="stat-label">Years Hafez ruled Syria before Bashar inherited the presidency</div></div>
+          <div class="stat-box"><div class="stat-number">24</div><div class="stat-label">Years Bashar held power before fleeing to Moscow in December 2024</div></div>
+        </div>
+      </section>
+
+      <section id="ideology">
+        <h2>The Facade of Reform: Ideology and the "Good Life"</h2>
+
+        <p>Bashar came to power promising something his father never offered: reform. In his inaugural address he spoke of modernisation, openness, and the need to confront corruption. A brief period known as the "Damascus Spring" followed — intellectuals and civil society groups were permitted to meet, publish, and debate with unusual freedom. It lasted less than a year. By mid-2001 the security services had arrested the most prominent voices, and Assad had demonstrated that what he meant by reform was economic liberalisation, not political opening. The intellectual space closed as suddenly as it had appeared.</p>
+
+        <p>The scholar Lisa Wedeen, who has spent decades studying the Assad system, describes the ideological mechanism through which the regime maintained itself in Bashar's early years as something more subtle than pure terror. It cultivated what she calls a "fantasy bribe" — a vision of the "good life" that incorporated aspirations for economic wellbeing, pride in Syria's multi-sectarian coexistence, and an image of the country as modern and cosmopolitan. Much of this image attached itself to Asma al-Assad: British-born, London-raised, a former banker at JP Morgan and Deutsche Bank, photographed in a famous Vogue profile in early 2011 as the "rose in the desert." The profile ran the same month the Syrian uprising began. The magazine later attempted to unpublish it. <span class="src-chip">Wedeen (2025)</span></p>
+
+        <p>Bashar's economic reforms were real but designed to concentrate their benefits. He broke up Ba'athist state monopolies and privatised significant sectors of the economy — but channelled the gains to the regime's inner circle. The Makhlouf family, relatives of the Assad clan, came to dominate Syrian telecoms, banking, and retail. Rural subsidies were cut; a 2006-2010 drought drove an estimated 1.5 million farmers to the cities and unemployment surged. The reforms produced not a middle class but a crony elite and a dispossessed rural periphery. When the Arab Spring reached Syria in 2011, it was that periphery — the farmers turned unemployed city-dwellers, the young men in Deraa — who first took to the streets. <span class="src-chip">CFR (2019)</span></p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">The Alawi Calculus</div>
+            <p>Assad elevated Alawi officers into the commanding positions of the military and mukhabarat, creating a minority-controlled security apparatus in a majority-Sunni state. Many Alawis understood this as a survival pact — the regime's fall would mean their exposure. It produced unusual cohesion in the security forces even as the state around them collapsed.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">The "Fantasy Bribe"</div>
+            <p>Lisa Wedeen identifies an "ambivalent middle" that sustained the Assad system — urban Syrians, minority community members, and educated professionals who feared the alternative more than they trusted the regime. Assad cultivated this constituency through promises of secular order, multi-sectarian accommodation, and a vision of cosmopolitan normality. The uprising exposed this as a "fantasy bribe": the normal life was always contingent on not asking too many questions. <span class="src-chip">Wedeen (2025)</span></p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">The Anti-Terror Frame</div>
+            <p>Ora Szekely's analysis of violence patterns in the Syrian war finds Assad's strategic framing to be pivotal. A dictator crushing a democratic revolt has limited international legitimacy; a government fighting terrorism and separatism can attract foreign support and prevent military defections. From the earliest stages of the uprising Assad described the opposition as foreign-backed terrorist infiltrators — and deliberately released jihadist prisoners in 2011 to ensure real extremists appeared among the rebels. <span class="src-chip">Szekely (2023)</span></p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Medicalized Dehumanisation</div>
+            <p>Assad weaponised the medical language of his professional training to describe opposition forces as "bacteria" and "germs" to be eradicated — rhetoric that echoed the biological framing used to justify mass atrocities elsewhere. His regime then did the inverse: it systematically targeted the healthcare system as a counter-insurgency tool, making hospitals the front line of a war on the civilian population itself. <span class="src-chip">Irfan et al. (2025)</span></p>
+          </div>
+        </div>
+      </section>
+
+      <section id="repression">
+        <h2>The Machinery of Repression</h2>
+
+        <p>What made the Assad system function was not the president's personal charisma — he had relatively little — but the institutional architecture his father had built and which he inherited intact. Syria under both Assads operated four parallel intelligence agencies, each reporting to the president and each surveilling not only the population but each other. The mukhabarat (secret police) ran an archipelago of detention centres where torture was systematic and documented. Saydnaya Military Prison, north of Damascus, became the most notorious: a facility that a 2017 Amnesty International report described as a "human slaughterhouse," where an estimated thirteen thousand people may have been executed between 2011 and 2015 alone.</p>
+
+        <p>The most detailed judicial record of how the system operated at the individual level came from Germany, not Syria. In January 2022, a German court convicted former Syrian intelligence officer Anwar Raslan — who had defected to Germany in 2014 — of crimes against humanity: thirty murders and more than four thousand acts of torture and sexual assault committed at the Damascus detention facility known as Branch 251 (al-Khatib) between 2011 and 2012. The testimony established that the torture was not ad hoc or the work of rogue officers: it was systematic, institutionally organised, and integrated into the intelligence apparatus that reported directly to Assad's government. <span class="src-chip">Wedeen (2025)</span></p>
+
+        <p>When the uprising began in 2011, Assad's response replicated the Hama template at national scale. Cities that had seen demonstrations were besieged — food, water, electricity, and communications cut off for days or weeks at a time. The purpose was dual: to raise the cost of resistance for civilian populations, and to destroy any local governance structures that might represent a viable alternative to the regime. Barrel bombs — improvised explosive devices dropped from helicopters, unlawful under international humanitarian law because of their indiscriminate nature — were deployed extensively in populated areas. <span class="src-chip">CFR (2019)</span><span class="src-chip">Szekely (2023)</span></p>
+
+        <div class="callout warning">
+          <div class="callout-label">Documented Crimes Against Humanity</div>
+          <h4>Chemical weapons and the targeting of healthcare</h4>
+          <p>The UN and the Organisation for the Prohibition of Chemical Weapons documented over 300 instances of chemical weapons use by pro-regime forces across the civil war. The deadliest single incident occurred on August 21, 2013: sarin rockets struck the Ghouta suburbs of Damascus, killing an estimated 1,400 civilians — the largest chemical weapons attack against a civilian population since Saddam Hussein's forces gassed the Kurds at Halabja in 1988. Simultaneously, healthcare was weaponised as a counter-insurgency instrument. Physicians for Human Rights found that pro-regime forces were responsible for 88% of all documented attacks on medical facilities. At least 610 medical personnel were killed; 97% of those killings were attributed to government forces. Some doctors were arrested, tortured, or executed specifically for treating patients the regime considered opponents. <span class="src-chip">Irfan et al. (2025)</span></p>
+        </div>
+      </section>
+
+      <section id="civil-war">
+        <h2>The Civil War: How Syria Burned</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">March 2011 · Deraa</div>
+              <div class="tl-title">The Spark: Schoolboys, Torture, and the Uprising That Could Not Be Stopped</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>The Syrian uprising began with something small and unjust. In mid-March 2011, fifteen schoolboys in the city of Deraa spray-painted a revolutionary slogan on a school wall: "The people want the fall of the regime." They were arrested by the security services and, according to their families, tortured. The community rallied around them. Security forces fired on the demonstrators. The news spread to Damascus, Hama, Homs, Latakia, and dozens of smaller cities. Within weeks, the Syrian army had deployed tanks to Deraa and was replicating the crackdown wherever protests appeared. <span class="src-chip">CFR (2019)</span></p>
+            <p>Assad's initial posture was a combination of token concessions and escalating force. He offered to lift the emergency law that had been in place since 1963 and then continued arresting and killing protesters under the same instruments by other names. The key decision, made early and consistently, was to treat the uprising as a terrorist insurgency — a framing that shaped every subsequent calculation about how much force was permissible. In the summer of 2011, Assad released hundreds of known Islamist militants from Syrian prisons, ensuring that real jihadists would appear among the opposition and making his terrorism framing easier to sustain internationally. <span class="src-chip">Szekely (2023)</span></p>
+            <div class="tl-sources"><span class="src-chip">CFR (2019)</span><span class="src-chip">Szekely (2023)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2012–2015 · Syria-wide</div>
+              <div class="tl-title">Internationalisation: Iran, Hezbollah, and Russia Enter the War</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>As defections from the Syrian army accelerated through 2012 and the Free Syrian Army gained territory, Assad could not suppress the uprising with Syrian forces alone. Iran was the first major external actor to commit substantially: the Revolutionary Guard Corps deployed advisors, and Iran organised foreign Shia militias from Iraq, Afghanistan, and Pakistan under the banner of protecting Shia holy sites. Hezbollah — Iran's Lebanese proxy — sent thousands of fighters and suffered thousands of casualties. Iran reportedly spent billions of dollars sustaining the Assad regime over the course of the war. <span class="src-chip">CFR (2019)</span></p>
+            <p>Russia's support was initially diplomatic: Moscow used its UN Security Council veto repeatedly to block resolutions that would have authorised intervention or imposed accountability for chemical weapons use, citing the Libya precedent as justification. But in September 2015, when the regime faced genuine territorial collapse, Russia intervened directly, deploying its air force from the Khmeimim base outside Latakia. Russian airstrikes were officially directed against ISIS and al-Qaeda; in practice they targeted the broader opposition — including U.S.-backed groups — enabling Assad to concentrate on recapturing the western population corridor. <span class="src-chip">CFR (2019)</span></p>
+            <div class="tl-sources"><span class="src-chip">CFR (2019)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">August 21, 2013 · Eastern Ghouta, Damascus</div>
+              <div class="tl-title">Ghouta: Sarin, Red Lines, and the World That Watched</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>At approximately 2:30 a.m. on August 21, 2013, rockets carrying sarin struck the Ghouta suburbs of Damascus. The UN's subsequent investigation confirmed the use of sarin delivered by surface-to-surface rockets consistent with Syrian military stockpiles. Casualty estimates ranged from around 280 to over 1,400 dead — the deadliest chemical weapons attack since Halabja in 1988. U.S. President Barack Obama had previously described chemical weapons use as a "red line" that would trigger direct American intervention. He did not intervene. <span class="src-chip">Irfan et al. (2025)</span></p>
+            <p>The diplomatic outcome was a Russian-brokered agreement under which Syria joined the Chemical Weapons Convention and surrendered its declared stockpiles. Assad complied in part. But subsequent attacks — documented in the hundreds by the UN and the OPCW — demonstrated that undeclared capabilities survived. A second major attack in Khan Shaykhun in April 2017 prompted a U.S. Tomahawk missile strike on a Syrian airbase. A third in Douma in April 2018 killed dozens more. The international community's failure to enforce its own red lines after Ghouta was interpreted by the Assad regime as confirmation that chemical weapons could be used without existential consequence. They were used more than 300 times in total. <span class="src-chip">Irfan et al. (2025)</span></p>
+            <div class="tl-sources"><span class="src-chip">Irfan et al. (2025)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">December 2016 · Aleppo</div>
+              <div class="tl-title">The Fall of Aleppo: Assad's Pyrrhic Triumph</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>The capture of eastern Aleppo in December 2016 was Assad's most significant military victory of the civil war — and also his most revealing. In 2013, opposition forces had nearly encircled the regime-held western part of the city. Four years of siege, Russian air bombardment, and Hezbollah ground operations had reversed the situation entirely. When the last rebel enclave fell in December 2016, a UN spokesperson described the final days as "a complete meltdown of humanity" — with scores of civilians reportedly massacred as forces moved through the streets. <span class="src-chip">CFR (2019)</span></p>
+            <p>The victory demonstrated how dependent Assad had become on external backers. His own army, weakened by casualties and defections, could not have retaken Aleppo without Russian air power and Hezbollah's infantry. The terms of his survival — sustained by Iranian money, Hezbollah fighters, and Russian planes — meant that he was no longer simply ruling Syria; he was administering a territory on behalf of a coalition of foreign interests. Syria's economic infrastructure was demolished. By the war's later years, more than 90% of the population lived in poverty. <span class="src-chip">CFR (2019)</span></p>
+            <div class="tl-sources"><span class="src-chip">CFR (2019)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2018–2024 · Syria</div>
+              <div class="tl-title">Victory Declared, Nothing Rebuilt: The Frozen War</div>
+            </div>
+            <span class="tl-chevron">▼</span>
+          </div>
+          <div class="tl-body">
+            <p>By 2019-2020, Assad had recaptured most of Syria's major population centres and declared victory. But it was a peculiar kind of victory: the country he had "won" had lost more than half its prewar population to displacement, had seen 600,000 of its people killed, and had most of its economic infrastructure demolished. Western sanctions under the U.S. Caesar Act further strangled the economy without dislodging Assad. Lisa Wedeen describes what remained as a poverty-stricken narco-state: parts of the country demolished, most residents unable to access basic services, the regime surviving largely through captagon amphetamine exports. <span class="src-chip">Wedeen (2025)</span></p>
+            <p>A February 2023 earthquake measuring 7.8 struck northwest Syria and southern Turkey, killing between six thousand and eight thousand Syrians. International aid was disrupted by the division of the country between HTS-controlled Idlib and regime-held areas, and by the legal complications created by Western sanctions. The disaster exposed how ungovernable Syria had become even in territory the regime nominally controlled. When the HTS offensive came in late 2024, Assad's army — underfunded, demoralised, and dependent on allies who were themselves stretched thin — offered almost no resistance. The country it was defending had already ceased to exist in any meaningful sense. <span class="src-chip">CFR (2019)</span></p>
+            <div class="tl-sources"><span class="src-chip">CFR (2019)</span><span class="src-chip">Wedeen (2025)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="fall">
+        <h2>The Fall: December 2024</h2>
+
+        <p>The speed of the end was startling. On November 27, 2024, Hayat Tahrir al-Sham and allied rebel factions launched an offensive from Idlib province. Within days they had taken Aleppo — a city the regime had spent years and tens of thousands of lives recapturing. By November 30 they were in Hama. By December 7, Homs. Syrian government forces offered almost no resistance. Hezbollah had been severely weakened by an Israeli military campaign in Lebanon. Iran had been hobbled by Israeli strikes. Russia was consumed by Ukraine. The alliance that had kept Assad in power for thirteen years had not disappeared — it had simply been stretched thin enough that a well-organised, well-supplied offensive could pass through what remained. <span class="src-chip">Wedeen (2025)</span><span class="src-chip">Lefèvre (2026)</span></p>
+
+        <p>On the night of December 7-8, 2024, Assad boarded a plane and flew to Moscow. Russian state media confirmed he had been granted asylum. He did not address the Syrian people. He did not explain his departure. The man who had spent twenty-four years positioning himself as the indispensable guardian of Syrian stability simply left — abandoning his palace, his military, and the hundreds of thousands of people whose deaths his decisions had caused. The prisons opened. Some detainees who emerged were unaware that Hafez al-Assad had died more than two decades earlier. Children who had been born in captivity had never breathed outdoor air. <span class="src-chip">Wedeen (2025)</span></p>
+
+        <p>In the days after his departure, Syrians descended on his residences, pulling down statues and burning portraits. The revolutionary flag — green, black, and white — replaced the Ba'athist tricolour on government buildings. The Koblenz precedent had demonstrated that some accountability was reachable through universal jurisdiction; Assad himself, however, sits in a jurisdiction that has shown no inclination to deliver him to any court.</p>
+
+        <div class="callout warning">
+          <div class="callout-label">The Full Accounting</div>
+          <h4>What Assad's 24-year rule cost Syria</h4>
+          <p>By the most credible estimates: more than 600,000 people killed, with over 500,000 of these named and documented by the Syrian Observatory for Human Rights. Nearly 14 million displaced — more than half of Syria's prewar population of 22 million, including approximately 7 million internal refugees and another 7 million abroad. More than 300 chemical weapons attacks documented by the OPCW and the UN. Pro-regime forces responsible for 88% of attacks on medical facilities and 97% of killings of healthcare workers. More than 90% of the remaining population living in poverty by the time he fled. The historic districts of Aleppo, one of the world's oldest continuously inhabited cities, substantially demolished. The country that emerged from twenty-four years of Assad rule was a shattered remnant of what it had been. <span class="src-chip">Irfan et al. (2025)</span><span class="src-chip">CFR (2019)</span></p>
+        </div>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">What Supporters Claimed</div>
+            <ul>
+              <li>Maintained a secular, multi-sectarian state that protected religious minorities from Sunni Islamist rule</li>
+              <li>Resisted Western and Israeli pressure on behalf of Arab sovereignty and Palestinian solidarity</li>
+              <li>Sustained Syrian territorial integrity against fragmentation, Kurdish separatism, and jihadist takeover</li>
+              <li>Provided a degree of order that the post-Gaddafi Libya and post-Saddam Iraq experience suggested alternatives might not</li>
+              <li>Many Alawi, Christian, and Druze communities genuinely feared opposition rule more than they feared the regime</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">What the Record Shows</div>
+            <ul>
+              <li>600,000+ dead, the majority civilians, most killed by regime forces rather than ISIS or rebel factions</li>
+              <li>300+ chemical weapons attacks — the most extensive use of chemical weapons against civilians since the First World War</li>
+              <li>88% of attacks on medical infrastructure by pro-regime forces; 610+ healthcare workers killed</li>
+              <li>The largest refugee crisis since the Second World War: nearly 14 million displaced</li>
+              <li>Deliberate targeting of civilian water systems, electricity, and hospitals as counter-insurgency tools</li>
+              <li>A systematic torture and detention network documented by the OPCW, the UN, and European courts</li>
+              <li>Released jihadist prisoners in 2011 to poison the opposition, directly facilitating the rise of ISIS and HTS</li>
+            </ul>
+          </div>
+          <div class="legacy-card complex" style="grid-column: 1 / -1;">
+            <div class="legacy-label">The Genuinely Contested Questions</div>
+            <ul>
+              <li>Was the uprising fundamentally a genuine democratic movement, or was it — as Assad insisted — externally funded and jihadist-adjacent from the start? The scholarly consensus is the former: Szekely's detailed analysis finds that early opposition was primarily pro-democratic, and that Assad deliberately cultivated the jihadist presence by releasing militants</li>
+              <li>Could Assad have survived if he had offered genuine reforms in 2011? Several scholars have argued that early concessions — multiparty elections, a genuine transition — might have channelled the uprising into political competition rather than war; others contend that the structural logic of his regime made any concession that preserved his power impossible</li>
+              <li>Who bears responsibility for the post-2024 situation in Syria? The HTS government under Ahmad al-Sharaa faces its own questions about minority rights, women's freedoms, and whether the new Syria will escape the authoritarianism that defined the old one — and some observers argue that Western sanctions imposed during the war bear partial responsibility for the depth of civilian suffering</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>The scholarly question Bashar al-Assad poses most acutely is about the relationship between personal culpability and systemic violence. Assad was not primarily a military commander — he was a political operator who managed a coalition of domestic and foreign interests and made the calculations required to keep himself in power. His decisions — to fight rather than negotiate, to deploy chemical weapons, to target hospitals, to accept Russian and Iranian control of his own sovereign territory — were made under real constraints. But they were decisions, made by him and by the people he chose to command around him.</p>
+
+        <p>Lisa Wedeen's analysis of what finally caused the regime's collapse cuts through the military narrative. She argues that by 2024 the "fantasy bribe" that had sustained the ambivalent middle was exhausted: the economy was in ruins, the country's borders were being violated by Israel, and even many who had supported the regime found they could no longer maintain the disavowal required to continue doing so. Even Alawi revolutionary guards were reportedly repulsed by Assad's flight into exile — he had abandoned them without a word. The system he had built was not loyal to anything beyond his own survival; when his survival required abandoning it, he did. <span class="src-chip">Wedeen (2025)</span></p>
+
+        <div class="pull-quote">
+          <blockquote>"When the prisons were liberated, some of those who emerged were unaware that Hafez al-Assad had died almost a quarter-century ago. There were children born in captivity who had never taken a breath of outdoor air."</blockquote>
+          <cite>— Lisa Wedeen, <em>Journal of Democracy</em>, April 2025</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+
+        <div class="topics-group">
+          <div class="topics-group-label">The Syrian Crisis</div>
+          <div class="topics-grid">
+            <a href="syrian-civil-war.html" class="topic-card">
+              <span class="topic-type-tag event">event</span>
+              <div class="topic-name">The Syrian Civil War</div>
+              <div class="topic-preview">The thirteen-year conflict that Assad's choices turned from an uprising into one of the twenty-first century's deadliest and most complex wars.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png" alt="The Syrian Civil War"></div>
+            </a>
+            <a href="arab-spring.html" class="topic-card">
+              <span class="topic-type-tag event">event</span>
+              <div class="topic-name">The Arab Spring</div>
+              <div class="topic-preview">The regional uprising that reached Syria in March 2011 — which Assad chose to answer with tanks rather than political concession.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg" alt="Arab Spring"></div>
+            </a>
+            <a href="halabja-chemical-attack.html" class="topic-card">
+              <span class="topic-type-tag event">event</span>
+              <div class="topic-name">The Halabja Chemical Attack</div>
+              <div class="topic-preview">The 1988 benchmark for chemical weapons use against civilians — until Assad's 2013 Ghouta attack exceeded its death toll.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg" alt="Halabja"></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="topics-group">
+          <div class="topics-group-label">Related People &amp; Concepts</div>
+          <div class="topics-grid">
+            <a href="baathism.html" class="topic-card">
+              <span class="topic-type-tag concept">concept</span>
+              <div class="topic-name">Ba'athism</div>
+              <div class="topic-preview">The Arab nationalist ideology that brought both the Assad dynasty and Saddam Hussein to power — and whose collapse in Syria reveals the limits of secular Arab dictatorship.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png" alt="Ba'athism"></div>
+            </a>
+            <a href="responsibility-to-protect.html" class="topic-card">
+              <span class="topic-type-tag concept">concept</span>
+              <div class="topic-name">The Responsibility to Protect</div>
+              <div class="topic-preview">The international norm Syria tested to destruction — Russia's Security Council veto blocked every meaningful application of R2P to Assad's atrocities.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="R2P"></div>
+            </a>
+            <a href="saddam-hussein.html" class="topic-card">
+              <span class="topic-type-tag person">person</span>
+              <div class="topic-name">Saddam Hussein</div>
+              <div class="topic-preview">Another Ba'athist dictator who used chemical weapons against his own people — the comparison Assad's defenders used to argue that external intervention only makes things worse.</div>
+              <div class="topic-card-thumb-wrap"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png" alt="Saddam Hussein"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources</h2>
+        <ol class="sources-list">
+          <li>
+            <span class="src-num">1</span>
+            <span class="src-title">Irfan, B., Tarab, B. &amp; Alabed, A. (2025). "Syria's Bashar al-Assad: the crimes of a physician."</span>
+            <span class="src-journal"><em>The Lancet</em>, Vol. 405, January 11, 2025.</span>
+            <span class="src-note"><em>Medical ethics analysis of Assad's use of chemical weapons (300+ documented instances; 1,400 killed in the August 2013 Ghouta attack alone) and his regime's systematic weaponisation of healthcare — responsible for 88% of attacks on medical facilities and 97% of documented killings of healthcare workers. Densely sourced with UN, OPCW, and Physicians for Human Rights data. Available via The Lancet; institutional access may be required.</em></span>
+          </li>
+          <li>
+            <span class="src-num">2</span>
+            <span class="src-title">Wedeen, L. (2025). '"Forever Has Fallen": The End of Syria's Assad.'</span>
+            <span class="src-journal"><em>Journal of Democracy</em>, Vol. 36, No. 2 (April 2025), pp. 50–58.</span>
+            <span class="src-note"><em>Political analysis of the ideological mechanisms — the "fantasy bribe," the "ambivalent middle" — through which the Assad regime maintained itself, and what the December 2024 collapse reveals about authoritarian power. Wedeen is the author of two books on Syrian authoritarianism. Check institutional access or the Journal of Democracy's free article archive.</em></span>
+          </li>
+          <li>
+            <span class="src-num">3</span>
+            <span class="src-title">Szekely, O. (2023). <em>Syria Divided: Patterns of Violence in a Complex Civil War.</em></span>
+            <span class="src-journal">Columbia University Press.</span>
+            <span class="src-note"><em>Academic monograph using interviews, datasets, and social media propaganda analysis to map patterns of violence across all major factions in the Syrian civil war. Key finding: Assad's framing of the conflict as anti-terrorism rather than anti-democracy was strategic, and he deliberately targeted pro-democratic opposition more than the jihadists who legitimised his framing. Available via university libraries.</em></span>
+          </li>
+          <li>
+            <span class="src-num">4</span>
+            <span class="src-title">Lefèvre, R. (2026). "The Radicals' Dilemma After Civil Wars: Evidence from Syria."</span>
+            <span class="src-journal"><em>Survival</em>, Vol. 68, No. 2, pp. 143–160.</span>
+            <span class="src-note"><em>Analysis of the HTS post-Assad government's ideological tensions and the dynamics of the December 2024 regime collapse — including the role of weakened Hezbollah, strained Iran, and a Russia consumed by Ukraine. Available via Taylor &amp; Francis; institutional access likely required.</em></span>
+          </li>
+          <li>
+            <span class="src-num">5</span>
+            <span class="src-title">Council on Foreign Relations. (Updated 2024). "Syria's Civil War: The Descent Into Horror."</span>
+            <span class="src-journal">CFR Visual Stories.</span>
+            <span class="src-note"><em>Comprehensive chronological narrative of the Syrian civil war from the 2011 Deraa protests through Assad's flight from Damascus in December 2024 — covering the internationalisation of the conflict, the rise of ISIS and HTS, the refugee crisis, the Aleppo siege, and the 2023 earthquake. Freely available at cfr.org.</em></span>
+          </li>
+        </ol>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list</div>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',          desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War',      desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin',         desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',           desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',            desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',                desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',            desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',       desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',  desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.', url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',       desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.', url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX on a Kurdish town of 80,000, killing an estimated 5,000 in hours.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',          desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',                   desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',                desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — and planted the seeds of a costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',                desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',             desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik',                 desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person',  title: 'Tony Blair',                  desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person',  title: 'Colin Powell',                desc: 'The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.', url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Dick Cheney',                 desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',   title: 'The Iraq War',                desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'person',  title: 'Khalifa Haftar',              desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.', url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',    desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.', url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                 desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.', url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'Democratic Socialism',         desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.', url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',   desc: 'Sadat\'s surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.', url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',           desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.', url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                   desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'event',   title: 'The Libyan Civil War',        desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.', url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',            desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.', url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',             desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',            desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.', url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',              desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',             desc: 'The refugee who became America\'s most powerful and most controversial diplomat.', url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',            desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',               desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.', url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',          desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.', url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',              desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.', url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',          desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.', url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles found.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown') { e.preventDefault(); _focusIdx = Math.min(_focusIdx + 1, items.length - 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); _focusIdx = Math.max(_focusIdx - 1, 0); }
+    else if (e.key === 'Enter' && _focusIdx >= 0) { items[_focusIdx].click(); return; }
+    else if (e.key === 'Escape') { toggleSearch(); return; }
+    items.forEach((r, i) => r.classList.toggle('focused', i === _focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.width = Math.min((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100, 100) + '%';
+    const sections = document.querySelectorAll('section[id]'), navItems = document.querySelectorAll('.sidebar-nav li');
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    navItems.forEach(item => { const link = item.querySelector('a'); item.classList.toggle('active', link && link.getAttribute('href') === '#' + current); });
+  });
+
+  function toggleItem(el) {
+    const wasActive = el.classList.contains('active');
+    document.querySelectorAll('.tl-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) el.classList.add('active');
+  }
+
+  function toggleSave() {
+    const btn = document.getElementById('saveBtn'), toast = document.getElementById('toast'), isSaved = btn.classList.contains('saved');
+    if (!isSaved) {
+      btn.classList.add('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    } else {
+      btn.classList.remove('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;
+    }
+  }
+</script>
+
+</body>
+</html>

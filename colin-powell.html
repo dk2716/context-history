@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Colin Powell — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">U.S. Officials</a><span class="breadcrumb-sep">›</span>
+        <span>Colin Powell</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG" alt="Colin Powell"></div>
+        <div>
+          <div class="hero-region-tag">United States · Secretary of State 2001–2005</div>
+          <h1>Colin Powell</h1>
+          <p class="hero-sub">The son of Jamaican immigrants who became America's first Black National Security Advisor, Chairman of the Joint Chiefs, and Secretary of State — and who delivered a 76-minute UN speech in February 2003 that he would spend the rest of his life calling "a blot on my record."</p>
+          <div class="hero-meta">
+            <span>~15 min read</span><span>·</span>
+            <span>Active: 1958–2005</span><span>·</span>
+            <span>United States</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#doctrine">The Powell Doctrine</a></li>
+        <li><a href="#secretary">Secretary of State</a></li>
+        <li><a href="#un-speech">The UN Speech</a></li>
+        <li><a href="#abu-ghraib">Abu Ghraib &amp; Interrogation</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          
+            <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Colin Luther Powell</div></div>
+            <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">April 5, 1937 — Harlem, New York City (grew up in South Bronx)</div></div>
+            <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">October 18, 2021 — Bethesda, Maryland (COVID-19 complications; underlying multiple myeloma)</div></div>
+            <div class="qf-item"><div class="qf-label">Parents</div><div class="qf-value">Jamaican immigrants Luther Powell (shipping clerk) and Maud Ariel McKoy</div></div>
+            <div class="qf-item"><div class="qf-label">Military career</div><div class="qf-value">US Army 1958–1993 · Two tours Vietnam · National Security Advisor 1987–89 · Chairman, Joint Chiefs 1989–93</div></div>
+            <div class="qf-item"><div class="qf-label">Secretary of State</div><div class="qf-value">January 2001 – January 2005 (under George W. Bush)</div></div>
+            <div class="qf-item"><div class="qf-label">Firsts</div><div class="qf-value">First Black National Security Advisor · First Black Chairman of the Joint Chiefs · First Black Secretary of State</div></div>
+            <div class="qf-item"><div class="qf-label">Defining moment</div><div class="qf-value">UN Security Council presentation on Iraqi WMDs, February 5, 2003 — later described by Powell as "a blot on my record"</div></div>        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Rise</h2>
+
+        <p>Colin Powell was born in Harlem to Jamaican parents who had come to New York in the wave of Caribbean immigration of the 1920s and 1930s. His father Luther worked in the garment district; his mother Maud as a seamstress. They settled in the South Bronx, a working-class neighbourhood that Powell later described as ethnically mixed — Jews, Poles, Italians, Puerto Ricans, blacks — and deeply community-oriented. He was, by his own account, an indifferent student with no clear direction, until he discovered the Reserve Officers' Training Corps at City College of New York. The military gave him what school had not: structure, purpose, and a clear pathway to achievement.</p>
+
+        <p>He commissioned as a second lieutenant in the US Army in 1958 and was sent to West Germany, then to Vietnam — twice. His first tour, in 1962–63, was as a military adviser to South Vietnamese forces in the A Shau Valley, where he was wounded stepping on a punji stick. His second tour, in 1968–69, was as a major serving as an assistant to the commanding general of the Americal Division — the same division responsible for the My Lai massacre of March 1968. Powell was tasked with investigating a soldier's letter alleging atrocities. His report, which found no evidence of wrongdoing, was later found to have been inadequate and to have failed to follow the evidence. Powell acknowledged in his memoir that he was not proud of this episode.</p>
+
+        <p>After Vietnam, Powell moved through a series of staff and policy positions that brought him steadily closer to the political centre of American power. He served as a White House Fellow under Nixon, as a senior aide in the Carter administration's Defence Department, and increasingly in roles that put him at the interface between military planning and political decision-making. Under Reagan, he served as Military Assistant to the Deputy Secretary of Defense and then as National Security Advisor — the first Black official to hold that role. It was in this position, from 1987 to 1989, that he managed the later stages of the Iran-Contra affair and built the bipartisan relationships that would define his reputation as a trusted, non-partisan military professional.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">35</div><div class="stat-label">Years of combined military and senior government service</div></div>
+          <div class="stat-box"><div class="stat-number">1989</div><div class="stat-label">Year Powell became Chairman of the Joint Chiefs — the youngest and first Black to hold the role</div></div>
+          <div class="stat-box"><div class="stat-number">500,000</div><div class="stat-label">US troops Powell assembled for Operation Desert Storm in the Gulf War (1991)</div></div>
+          <div class="stat-box"><div class="stat-number">65%</div><div class="stat-label">Powell's approval rating in 1995 polls — when he was considering a presidential run he ultimately declined</div></div>
+        </div>
+      </section>
+
+      <section id="doctrine">
+        <h2>The Powell Doctrine</h2>
+
+        <p>Powell's most durable intellectual contribution emerged from his experience in Vietnam and his reading of why the US had failed there. A military man who had seen what happened when political leaders committed forces to an open-ended conflict with vague objectives and insufficient strength, he developed a set of principles for the use of American military power that became known as the Powell Doctrine. It was not, strictly speaking, a doctrine he ever formally articulated — it was assembled from his writings, speeches, and the practice of the 1991 Gulf War into a coherent framework.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Overwhelming Force</div>
+            <p>Military action should only be taken with enough force to achieve the objective quickly and decisively. Gradual escalation, as in Vietnam, allows adversaries to adapt and creates endless entanglement. If you go in, go in with everything you need to win fast.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Clear Political Objective</div>
+            <p>Before committing forces, political leaders must define precisely what success looks like — and what the military is being asked to achieve. Vague objectives like "restoring stability" guarantee open-ended commitments. Powell regarded the 1993 Somalia intervention, which expanded without clear objectives, as a cautionary tale.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Exit Strategy</div>
+            <p>There must be a defined endpoint. How will you know when the mission is accomplished? How will you withdraw? Without an exit strategy, military commitments expand to fill political vacuums indefinitely. The Gulf War ended when the specific objective — expelling Iraq from Kuwait — was achieved.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Last Resort</div>
+            <p>Military force should be used only when all other options — diplomacy, economic pressure, international coalitions — have been genuinely exhausted. Powell was famously the voice for exhausting diplomacy first, which put him in structural tension with Cheney and the neoconservative officials who dominated the Bush White House's foreign policy.</p>
+          </div>
+        </div>
+
+        <p>The Gulf War of 1991, which Powell helped plan and execute as Chairman of the Joint Chiefs, is the paradigmatic example of the Doctrine working. George H.W. Bush set a clear objective (expel Iraqi forces from Kuwait), assembled an overwhelming coalition, authorised decisive military action with 500,000 troops, and then stopped — controversially to some — when that objective was achieved, rather than marching on Baghdad. Powell supported the decision to stop. He would later watch his successor's war in Iraq — the one that did march on Baghdad — as a partial refutation of his own framework, and as a demonstration of everything he had warned against.</p>
+
+        <div class="pull-quote">
+          <blockquote>"Once you've got Baghdad, it's not clear what you do with it. It's not clear what kind of government you would put in place of the one that's currently there now. Is it going to be a Shia regime, a Sunni regime or a Kurdish regime? Or one that tilts toward the Baathists, or one that tilts toward the Islamic fundamentalists? How much credibility is that government going to have if it's set up by the United States military when it's there?"</blockquote>
+          <cite>— Colin Powell, 1994 interview, explaining why the Gulf War did not march on Baghdad</cite>
+        </div>
+      </section>
+
+      <section id="secretary">
+        <h2>Secretary of State: The Reluctant Warrior</h2>
+
+        <p>When George W. Bush appointed Powell Secretary of State in January 2001, many observers expected him to be the dominant foreign policy voice in the administration. He was the most prominent Republican on the international stage, the most experienced military figure in the Cabinet, and broadly popular in the country. Instead, he found himself consistently outmanoeuvred by Dick Cheney and the network of neoconservative officials — Paul Wolfowitz, Douglas Feith, Scooter Libby — who had the Vice President's ear and who had spent years arguing for the removal of Saddam Hussein by force.</p>
+
+        <p>The internal debates of 2001 and 2002 are well documented. Powell argued for engaging the UN, for building a broad international coalition before any military action, for allowing the weapons inspectors to complete their work. Cheney argued that going to the UN was a waste of time and that inspections would not work. Bush ultimately sided with a hybrid approach: go to the UN, but treat it as a step toward war rather than an alternative to it. Powell was sent to New York to deliver the resolution.</p>
+
+        <p>A critical warning Powell gave Bush — reportedly in a private dinner meeting in August 2002 — became known as the "Pottery Barn Rule." Powell told Bush: "If you break it, you own it." Meaning: if the United States invaded Iraq and shattered the existing state structure, it would be responsible for everything that followed — the reconstruction, the governance, the security, the enormous human cost. The warning was prescient. It was not heeded. The post-invasion planning, led by the Pentagon and the Coalition Provisional Authority rather than the State Department, proceeded without the kind of serious civilian reconstruction planning that Powell's warning implied was necessary.</p>
+
+        <div class="callout info">
+          <div class="callout-label">Internal Divisions</div>
+          <h4>State vs. Pentagon</h4>
+          <p>The Bush administration's foreign policy was marked by an unusual degree of open conflict between State (Powell) and Defense (Rumsfeld/Cheney). State Department officials were largely excluded from post-war planning for Iraq. Powell's Future of Iraq Project — which had gathered extensive analysis from Iraqi experts on post-invasion governance — was sidelined by the Pentagon. The results of that sidelining became visible within weeks of the fall of Baghdad.</p>
+        </div>
+      </section>
+
+      <section id="un-speech">
+        <h2>The UN Speech: February 5, 2003</h2>
+
+        <p>By late 2002, Powell had concluded — reluctantly, and based on the intelligence he was shown — that Saddam Hussein did possess weapons of mass destruction and was actively concealing them from UN inspectors. He was given the task of presenting the case to the UN Security Council in a speech that would make the public argument for the intelligence the administration was using to justify war. CIA Director George Tenet sat directly behind him at the Security Council table — a visual signal that the intelligence community stood behind every claim Powell was about to make.</p>
+
+        <p>The presentation on February 5, 2003 lasted 76 minutes. It included audio recordings of intercepted Iraqi communications (which Powell claimed showed Iraqi officers ordering the concealment of weapons), satellite imagery of what were described as chemical weapons production facilities, and assertions about mobile biological weapons laboratories. Powell stated: "Every statement I make today is backed up by sources, solid sources. These are not assertions. What we're giving you are facts and conclusions based on solid intelligence." He argued that Iraq posed an "immediate and existing threat" and that Saddam had "what is assessed to be mobile biological weapons production" capacity.</p>
+
+        <p>Almost none of the specific claims held up. The audio intercepts were ambiguous. The satellite images showed facilities that could have had multiple uses. The mobile biological weapons laboratories — the most dramatic element of the presentation — were described by post-invasion investigators as food-testing trucks. The intelligence Powell presented had been assembled under intense pressure from the Office of the Vice President, which had pushed the CIA to find stronger links between Saddam and al-Qaeda and to harden assessments about WMD capacity. Powell himself spent four days at CIA headquarters in the run-up to the speech scrubbing claims he found unconvincing — but the underlying intelligence assessments he was working from were themselves flawed. <span class="src-chip">AJIL (2004)</span></p>
+
+        <p>When the Iraq Survey Group reported in September 2004 that Saddam had abandoned his WMD programmes in 1991 and had not resumed them, Powell gave a television interview in which he said the speech was "a blot on my record" and that it was "painful" to him. He was the senior US official who most clearly and publicly acknowledged the error.</p>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">FEBRUARY 5, 2003</div>
+              <div class="tl-title">76 Minutes at the UN Security Council</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Powell's presentation was watched live by an estimated 200 million people worldwide. It was designed to replicate Adlai Stevenson's famous 1962 moment during the Cuban Missile Crisis, when the US ambassador confronted the Soviet Union with U-2 photographs of missile installations. But where Stevenson's evidence was real and verified, Powell's was, in crucial respects, fabricated or misrepresented.</p>
+            <p>The claim about mobile biological weapons factories — described by Powell as "one of the most worrisome things that emerges from the thick intelligence file" — was based in large part on the testimony of a single Iraqi defector, codenamed "Curveball," whose information the German intelligence service had told US counterparts was likely fabricated. The Defense Intelligence Agency had flagged Curveball as unreliable before the speech. Powell was not told this, or, accounts differ, was told but proceeded anyway.</p>
+            <div class="tl-sources"><span class="src-chip">Senate Intelligence Committee (2004)</span><span class="src-chip">Drogin, Curveball (2007)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">SEPTEMBER 2004</div>
+              <div class="tl-title">"A Blot on My Record"</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>After the Iraq Survey Group's definitive report that no WMDs existed, Powell sat down with NBC's Tim Russert and stated: "I'm the one who presented it on behalf of the United States to the world, and it will always be a part of my record. It was painful. It's painful now." He acknowledged that the information he had been given was wrong and that he had presented it as fact.</p>
+            <p>Powell resigned as Secretary of State in November 2004, shortly after Bush won re-election. He was replaced by Condoleezza Rice. His departure was widely interpreted as the triumph of the Cheney-Rumsfeld axis over the more cautious approach Powell had represented — though Powell's caution had not, in the end, prevented the war.</p>
+            <div class="tl-sources"><span class="src-chip">NBC Meet the Press (2005)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="abu-ghraib">
+        <h2>Abu Ghraib &amp; the Interrogation Debates</h2>
+
+        <p>The Abu Ghraib scandal — photographs of Iraqi detainees being abused, sexually humiliated, and tortured by members of the 372nd Military Police Company, published in April 2004 — produced a political and legal crisis that cut across the entire Bush administration. The abuse had occurred between October and December 2003. An internal army investigation ordered by General Richard Sanchez in January 2004, led by General Antonio Taguba, found "systemic and illegal abuse" and concluded that military intelligence officers and CIA personnel had "actively requested" that the MP guards help set "physical and mental conditions for favorable interrogation." <span class="src-chip">AJIL (2004)</span></p>
+
+        <p>Powell's relationship to Abu Ghraib was complicated. The State Department, which he led, was not directly involved in detention policy or interrogation; those were handled by the Department of Defense under Rumsfeld and ultimately overseen by Cheney's office. But the broader policy framework that created Abu Ghraib — the decision to apply "enhanced interrogation" techniques beyond the Army Field Manual, the legal arguments that the Geneva Conventions did not apply to "unlawful combatants" — had been contested internally, and Powell had been among the most prominent internal dissenters. <span class="src-chip">AJIL (2004)</span></p>
+
+        <p>In January 2002, Powell had written a memorandum to White House Counsel Alberto Gonzales arguing strongly that the US should apply the Geneva Conventions to all detainees in Afghanistan. His argument was both legal and pragmatic: violating Geneva would "reverse over a century of U.S. policy and practice in supporting the Geneva Conventions" and could expose US military personnel to legal jeopardy in future conflicts. His memo was rejected. The administration's position — developed in a series of legal opinions by John Yoo and Jay Bybee at the Office of Legal Counsel — was that the Conventions did not apply to Taliban or al-Qaeda detainees, and that the President's authority as Commander-in-Chief could override statutory prohibitions on torture. <span class="src-chip">AJIL (2004)</span></p>
+
+        <div class="callout warning">
+          <div class="callout-label">Key Finding</div>
+          <h4>The April 2003 DoD Working Group Report</h4>
+          <p>On April 14, 2003, a DoD working group delivered a report to Secretary Rumsfeld on interrogation techniques for use at Guantanamo. The report concluded that while the Convention Against Torture applied, narrow exceptions existed; it also asserted that the President's Commander-in-Chief authority could override criminal statutes prohibiting torture. Rumsfeld approved 24 interrogation techniques on April 16, 2003. The Taguba Report found that these authorizations, which extended beyond what the Army Field Manual permitted, contributed to the conditions that produced Abu Ghraib. Powell's State Department was not part of this process. <span class="src-chip">AJIL (2004)</span></p>
+        </div>
+
+        <p>After leaving government, Powell became a critic of the interrogation policies he had been unable to stop from within. He opposed Bush's 2006 Military Commissions Act, which sought to redefine the Geneva Conventions' "cruel treatment" standard. In a public letter, he wrote that the world "is beginning to doubt the moral basis of our fight against terrorism." In 2008, he endorsed Barack Obama for president — a break with the Republican Party that marked the final rupture between his views and the direction the party had taken under Bush and Cheney.</p>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>Colin Powell's legacy is defined by two competing images. One is the decorated soldier and statesman who broke racial barriers, built the Gulf War coalition with disciplined professionalism, and repeatedly counselled caution against the wars he feared would end badly. The other is the man at the UN Security Council podium, presenting intelligence he did not fully believe as established fact, lending his enormous credibility to a case for war that he knew was contested. Both images are accurate. The question is how to weigh them.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">Achievements</div>
+            <ul>
+              <li>First Black National Security Advisor, Chairman of the Joint Chiefs, and Secretary of State — breaking significant barriers in each role</li>
+              <li>Gulf War (1991): helped design and execute one of the most professionally managed US military operations in history</li>
+              <li>Powell Doctrine: remains an influential framework for thinking about when and how to use military force</li>
+              <li>Opposed applying "enhanced interrogation" to detainees — warned it violated Geneva Conventions and would damage US standing</li>
+              <li>Publicly acknowledged the UN speech was wrong — one of the few senior Bush officials to do so clearly</li>
+              <li>Endorsed Obama in 2008, citing concerns about Republican foreign policy direction — an act of political courage</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">Failures &amp; Criticisms</div>
+            <ul>
+              <li>Delivered UN speech based on flawed intelligence presented as certainty — despite personal doubts about some of its content</li>
+              <li>Failed to stop the Iraq War despite being the Cabinet's most credible military voice against it</li>
+              <li>Did not resign over Iraq — stayed in administration after the war began, lending continued credibility to Bush's foreign policy</li>
+              <li>Vietnam: 1969 investigation report into Americal Division atrocities found "no wrongdoing" — later found to be inadequate</li>
+              <li>His "Pottery Barn Rule" warning was ignored; critics argue he should have insisted harder or resigned when it was</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="scholars-row">
+          <div class="scholar-card pro">
+            <div class="scholar-card-name">Karen DeYoung</div>
+            <div class="scholar-card-title">Washington Post · <em>Soldier: The Life of Colin Powell</em> (2006)</div>
+            <div class="scholar-card-verdict">Powell was consistently the voice of caution in a Cabinet that had decided on war. He was deceived by the intelligence he was given and by colleagues who withheld exculpatory information. His decision to stay in the administration rather than resign reflects a military culture in which loyalty and institutional service outweigh personal disagreement.</div>
+          </div>
+          <div class="scholar-card critical">
+            <div class="scholar-card-name">Lawrence Wilkerson</div>
+            <div class="scholar-card-title">Powell's Chief of Staff · Public critic post-2004</div>
+            <div class="scholar-card-verdict">Wilkerson, who helped prepare the UN speech, became a sharp public critic of both the Bush administration's foreign policy and of Powell's failure to resign. "I participated in a hoax on the American people, the international community and the United Nations Security Council," Wilkerson said in 2005. He believed Powell should have spoken out earlier and louder.</div>
+          </div>
+          <div class="scholar-card nuanced">
+            <div class="scholar-card-name">The Senate Select Committee on Intelligence (2004)</div>
+            <div class="scholar-card-title">Phase I Report on Pre-War Intelligence</div>
+            <div class="scholar-card-verdict">Found that the CIA's pre-war assessments were flawed and that the Intelligence Community made "serious errors" in its analysis of Iraqi WMD programs. The Senate report partially exculpates Powell in the sense that the intelligence he received was itself incorrect — though it also documents the pressure applied by the Office of the Vice President to harden assessments.</div>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"I worked very hard to present the intelligence case as solidly and as honestly as I could. I was wrong. I'm sorry for it."</blockquote>
+          <cite>— Colin Powell, <em>My American Journey</em> and subsequent interviews, reflecting on the February 2003 UN speech</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People Directly Connected</div>
+          <div class="topics-grid">
+            <a href="george-w-bush.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png" alt="George W. Bush">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">George W. Bush</div>
+              <div class="topic-preview">The president who appointed Powell but whose foreign policy was ultimately shaped more by Cheney and Rumsfeld than by the Secretary of State.</div>
+            </a>
+            <a href="dick-cheney.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg" alt="Dick Cheney">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Dick Cheney</div>
+              <div class="topic-preview">The vice president whose office drove the most hawkish aspects of post-9/11 foreign policy and who consistently outmanoeuvred Powell in the internal debates over Iraq.</div>
+            </a>
+            <a href="tony-blair.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg" alt="Tony Blair">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Tony Blair</div>
+              <div class="topic-preview">The British prime minister who was making the same public case for Iraqi WMDs in the UK Parliament at the same time Powell was making it at the UN.</div>
+            </a>
+            <a href="saddam-hussein.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Saddam_Hussein_in_1998.png" alt="Saddam Hussein">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Saddam Hussein</div>
+              <div class="topic-preview">The Iraqi dictator Powell accused of hiding WMDs in front of the UN Security Council — an accusation the Iraq Survey Group found had no basis.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Related Events</div>
+          <div class="topics-grid">
+            <a href="iraq-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg" alt="The Iraq War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Iraq War</div>
+              <div class="topic-preview">The war Powell's UN speech helped justify — and whose aftermath bore out the warnings he gave Bush in private before the invasion began.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">American Journal of International Law. (2004). U.S. Abuse of Iraqi Detainees at Abu Ghraib Prison. </span>
+            <span class="src-journal">American Journal of International Law</span>, Vol. 98, No. 3, pp. 591–596.
+            <span class="src-note">Legal analysis of Abu Ghraib under international law, including the Taguba Report findings, the DoD working group recommendations, and the role of Rumsfeld's interrogation authorizations. Documents the chain of policy decisions that produced the conditions for abuse.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">DeYoung, K. (2006). </span>
+            <span class="src-journal">Soldier: The Life of Colin Powell</span>. Knopf.
+            <span class="src-note">The most comprehensive biography, drawing on extensive access to Powell and to officials across multiple administrations. Detailed on the internal debates over Iraq and on the preparation and aftermath of the UN speech. The authoritative single-source account.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Senate Select Committee on Intelligence. (2004). </span>
+            <span class="src-journal">Report on the U.S. Intelligence Community's Prewar Intelligence Assessments on Iraq</span>. U.S. Senate.
+            <span class="src-note">Phase I of the Senate investigation, finding systematic errors in intelligence assessments of Iraqi WMDs. Documents how the intelligence Powell was given was itself flawed. Available free online. Phase II (2008) addressed the manipulation of that intelligence by policymakers.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">Drogin, B. (2007). </span>
+            <span class="src-journal">Curveball: Spies, Lies, and the Con Man Who Caused a War</span>. Random House.
+            <span class="src-note">The definitive account of the Iraqi defector whose fabricated claims about mobile biological weapons factories formed a centrepiece of Powell's UN presentation — and how his unreliability was known but suppressed within the intelligence community.</span>
+          </li>
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">Powell, C. (1995). </span>
+            <span class="src-journal">My American Journey</span>. Random House.
+            <span class="src-note">Powell's memoir, covering his life through the Gulf War and his early consideration of a presidential run. Essential for understanding his worldview and the principles behind the Powell Doctrine. Does not cover his time as Secretary of State.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="index.html" style="color:var(--purple);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',       desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',    url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                            url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',  url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',  url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.",     url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person', title: 'Henry Kissinger',          desc: "The refugee who became America's most powerful and most controversial diplomat.",         url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person', title: 'Barack Obama',             desc: "America's first Black president — who promised transformation, delivered incremental change, and left a country more divided.",  url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person', title: 'Ayatollah Khomeini',       desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.",  url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+    else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+    else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+    else if (e.key==='Escape') { toggleSearch(); return; }
+    items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.width = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+    const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+  });
+  function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+  function toggleSave() {
+    const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+    if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+    else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Libyan Civil War — Context</title>
+<style>
+  :root {
+    --bg: #0e0e10;
+    --surface: #18181c;
+    --surface2: #222228;
+    --surface3: #2a2a32;
+    --accent: #e8a838;
+    --accent2: #c4392d;
+    --text: #f0efe8;
+    --muted: #8a8a96;
+    --green: #3dba7e;
+    --blue: #4a9eff;
+    --purple: #9b7fe8;
+    --red: #e05252;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 1.75;
+  }
+
+  #progressBar {
+    position: fixed; top: 0; left: 0;
+    height: 3px; width: 0%;
+    background: var(--accent);
+    z-index: 1000;
+    transition: width 0.1s linear;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 56px;
+    background: rgba(14,14,16,0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; z-index: 900;
+  }
+
+  .nav-logo {
+    font-family: 'Georgia', serif; font-size: 1.25rem;
+    font-weight: bold; color: var(--accent);
+    letter-spacing: 0.05em; text-decoration: none;
+  }
+
+  .nav-actions { display: flex; align-items: center; gap: 1rem; }
+
+  .nav-topic-type {
+    font-size: 0.75rem; font-family: sans-serif;
+    background: rgba(232,168,56,0.12); color: var(--accent);
+    border: 1px solid rgba(232,168,56,0.3);
+    padding: 0.2rem 0.6rem; border-radius: 3px;
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  .save-btn {
+    background: transparent; border: 1px solid rgba(255,255,255,0.15);
+    color: var(--muted); font-family: sans-serif; font-size: 0.8rem;
+    padding: 0.35rem 0.9rem; border-radius: 4px; cursor: pointer;
+    transition: all 0.2s; display: flex; align-items: center; gap: 0.4rem;
+  }
+  .save-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .save-btn.saved { border-color: var(--green); color: var(--green); }
+
+  /* ── SEARCH ── */
+  .search-wrap { position: relative; }
+  .search-icon-btn {
+    background: transparent; border: 1px solid rgba(255,255,255,0.15);
+    color: var(--muted); width: 32px; height: 32px; border-radius: 4px;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: all 0.2s; flex-shrink: 0;
+  }
+  .search-icon-btn:hover, .search-icon-btn.active { border-color: var(--accent); color: var(--accent); }
+  .search-dropdown {
+    position: absolute; top: calc(100% + 10px); right: 0; width: 300px;
+    background: var(--surface2); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px; overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5); display: none; z-index: 999;
+  }
+  .search-dropdown.open { display: block; }
+  .search-input {
+    width: 100%; background: transparent; border: none;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    color: var(--text); font-family: sans-serif; font-size: 0.88rem;
+    padding: 0.7rem 1rem; outline: none;
+  }
+  .search-input::placeholder { color: var(--muted); }
+  .search-results { max-height: 300px; overflow-y: auto; }
+  .search-result {
+    display: block; padding: 0.7rem 1rem; text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.12s;
+  }
+  .search-result:last-child { border-bottom: none; }
+  .search-result:hover, .search-result.focused { background: rgba(255,255,255,0.05); }
+  .search-result-top { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem; }
+  .search-result-title { font-family: sans-serif; font-size: 0.84rem; font-weight: bold; color: var(--text); }
+  .search-result-desc { font-family: sans-serif; font-size: 0.73rem; color: var(--muted); line-height: 1.35; }
+  .search-empty { padding: 1rem; font-family: sans-serif; font-size: 0.82rem; color: var(--muted); text-align: center; }
+
+  .toast {
+    position: fixed; bottom: 2rem; right: 2rem;
+    background: var(--surface2); border: 1px solid rgba(255,255,255,0.1);
+    border-left: 3px solid var(--green); padding: 0.9rem 1.4rem;
+    border-radius: 6px; font-family: sans-serif; font-size: 0.85rem;
+    color: var(--text); z-index: 999; opacity: 0;
+    transform: translateY(8px); transition: all 0.3s ease; pointer-events: none;
+  }
+  .toast.show { opacity: 1; transform: translateY(0); }
+
+  .page-wrap { padding-top: 56px; }
+
+  .hero {
+    background: linear-gradient(180deg, #1a0f04 0%, var(--bg) 100%);
+    border-bottom: 1px solid rgba(232,168,56,0.15);
+    padding: 4rem 2rem 3rem;
+  }
+  .hero-inner { max-width: 1160px; margin: 0 auto; }
+
+  .breadcrumb {
+    font-family: sans-serif; font-size: 0.75rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;
+  }
+  .breadcrumb a { color: var(--muted); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb-sep { opacity: 0.4; }
+
+  .hero-region-tag {
+    display: inline-block; font-family: sans-serif; font-size: 0.7rem;
+    background: rgba(74,158,255,0.12); color: var(--blue);
+    border: 1px solid rgba(74,158,255,0.25);
+    padding: 0.2rem 0.65rem; border-radius: 3px;
+    text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem); font-weight: bold;
+    line-height: 1.15; margin-bottom: 1rem; color: var(--text);
+  }
+
+  .hero-sub {
+    font-size: 1.1rem; color: var(--muted); max-width: 640px;
+    margin-bottom: 1.5rem; font-family: sans-serif; line-height: 1.5;
+  }
+
+  .hero-meta {
+    display: flex; align-items: center; gap: 1.5rem;
+    font-family: sans-serif; font-size: 0.8rem; color: var(--muted); flex-wrap: wrap;
+  }
+
+  .outer {
+    max-width: 1160px; margin: 0 auto; padding: 2.5rem 2rem;
+    display: grid; grid-template-columns: 200px 1fr; gap: 3rem; align-items: start;
+  }
+
+  .sidebar { position: sticky; top: 80px; }
+
+  .sidebar-label {
+    font-family: sans-serif; font-size: 0.65rem;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--muted); margin-bottom: 0.75rem;
+  }
+
+  .sidebar-nav { list-style: none; }
+  .sidebar-nav li { border-left: 2px solid rgba(255,255,255,0.08); }
+  .sidebar-nav a {
+    display: block; padding: 0.4rem 0.8rem;
+    font-family: sans-serif; font-size: 0.78rem;
+    color: var(--muted); text-decoration: none; transition: all 0.2s; line-height: 1.3;
+  }
+  .sidebar-nav li.active { border-left-color: var(--accent); }
+  .sidebar-nav li.active a { color: var(--accent); }
+  .sidebar-nav a:hover { color: var(--text); }
+
+  .sidebar-cta {
+    margin-top: 2rem; padding: 1rem;
+    background: var(--surface); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 6px; font-family: sans-serif; font-size: 0.78rem;
+    color: var(--muted); line-height: 1.4;
+  }
+  .sidebar-cta strong { display: block; color: var(--text); margin-bottom: 0.3rem; font-size: 0.82rem; }
+  .sidebar-cta-btn {
+    display: block; margin-top: 0.75rem;
+    background: rgba(232,168,56,0.1); border: 1px solid rgba(232,168,56,0.25);
+    color: var(--accent); text-align: center; padding: 0.45rem; border-radius: 4px;
+    font-size: 0.75rem; cursor: pointer; text-decoration: none; transition: all 0.2s;
+  }
+  .sidebar-cta-btn:hover { background: rgba(232,168,56,0.2); }
+
+  article { min-width: 0; }
+  section { margin-bottom: 3.5rem; scroll-margin-top: 80px; }
+
+  section h2 {
+    font-size: 1.5rem; font-weight: bold; margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); color: var(--text);
+  }
+
+  section h3 {
+    font-size: 1.1rem; font-weight: bold; margin: 1.75rem 0 0.6rem; color: var(--text);
+  }
+
+  p { margin-bottom: 1rem; color: rgba(240,239,232,0.88); }
+
+  /* MAP */
+  .map-container {
+    background: #0c0c14;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+  .map-container svg { display: block; width: 100%; height: auto; }
+
+  /* STAT CARDS — fixed alignment */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.65rem;
+    margin-bottom: 1rem;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px;
+    padding: 0.9rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-height: 84px;
+  }
+
+  .stat-card-label {
+    font-family: sans-serif;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+  }
+
+  .stat-card-value {
+    font-family: sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.15;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.01em;
+  }
+
+  .stat-card-sub {
+    font-family: sans-serif;
+    font-size: 0.65rem;
+    color: var(--muted);
+    line-height: 1.35;
+    margin-top: auto;
+  }
+
+  /* FIGURES */
+  .figures-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem; margin-top: 1rem;
+  }
+  .figure-card {
+    background: var(--surface); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 8px; padding: 1.25rem;
+  }
+  .figure-name { font-size: 0.95rem; font-weight: bold; margin-bottom: 0.25rem; color: var(--text); }
+  .figure-role { font-family: sans-serif; font-size: 0.72rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6rem; }
+  .figure-desc { font-size: 0.85rem; color: var(--muted); line-height: 1.5; font-family: sans-serif; }
+
+  /* TIMELINE */
+  .tl-item { border-left: 2px solid rgba(255,255,255,0.08); margin-left: 0.5rem; padding-left: 1.5rem; margin-bottom: 0; position: relative; cursor: pointer; }
+  .tl-item::before { content: ''; position: absolute; left: -5px; top: 22px; width: 8px; height: 8px; border-radius: 50%; background: var(--surface2); border: 2px solid rgba(255,255,255,0.2); transition: border-color 0.2s, background 0.2s; }
+  .tl-item.active::before { background: var(--accent); border-color: var(--accent); }
+  .tl-header { padding: 1rem 0 0.5rem; display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+  .tl-header-left { flex: 1; }
+  .tl-date { font-family: sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 0.3rem; }
+  .tl-title { font-size: 1rem; font-weight: bold; color: var(--text); line-height: 1.3; }
+  .tl-chevron { color: var(--muted); font-size: 0.8rem; margin-top: 0.35rem; transition: transform 0.25s; flex-shrink: 0; }
+  .tl-item.active .tl-chevron { transform: rotate(180deg); }
+  .tl-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding-bottom: 0; }
+  .tl-item.active .tl-body { max-height: 2000px; padding-bottom: 1.25rem; }
+  .tl-body p { font-size: 0.92rem; margin-bottom: 0.85rem; }
+  .tl-sources { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  .src-chip { font-family: sans-serif; font-size: 0.68rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 0.15rem 0.5rem; border-radius: 3px; color: var(--muted); }
+
+  /* PULL QUOTE */
+  .pull-quote { border-left: 3px solid var(--accent); padding: 1rem 1.5rem; margin: 2rem 0; background: rgba(232,168,56,0.04); border-radius: 0 6px 6px 0; }
+  .pull-quote blockquote { font-size: 1.05rem; line-height: 1.6; color: var(--text); font-style: italic; margin-bottom: 0.5rem; }
+  .pull-quote cite { font-family: sans-serif; font-size: 0.75rem; color: var(--muted); font-style: normal; }
+
+  /* PERSPECTIVES */
+  .perspectives { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.5rem 0; }
+  .perspective-card { background: var(--surface); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 1.25rem; }
+  .perspective-card.for { border-top: 3px solid var(--green); }
+  .perspective-card.against { border-top: 3px solid var(--red); }
+  .perspective-label { font-family: sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; font-weight: bold; }
+  .perspective-card.for .perspective-label { color: var(--green); }
+  .perspective-card.against .perspective-label { color: var(--red); }
+  .perspective-card ul { list-style: none; font-family: sans-serif; font-size: 0.82rem; color: rgba(240,239,232,0.82); line-height: 1.5; }
+  .perspective-card ul li { padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); padding-left: 1.1rem; position: relative; }
+  .perspective-card ul li:last-child { border-bottom: none; }
+  .perspective-card ul li::before { content: '→'; position: absolute; left: 0; color: var(--muted); font-size: 0.7rem; top: 0.45rem; }
+  .perspective-attr { font-size: 0.72rem; color: var(--muted); font-style: italic; }
+
+  /* SCHOLARS */
+  .scholars-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .scholar-card { background: var(--surface2); border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; padding: 1.1rem 1.2rem; }
+  .scholar-card-name { font-family: sans-serif; font-size: 0.82rem; font-weight: bold; color: var(--text); margin-bottom: 0.15rem; }
+  .scholar-card-title { font-family: sans-serif; font-size: 0.68rem; color: var(--muted); margin-bottom: 0.6rem; font-style: italic; }
+  .scholar-card-verdict { font-family: sans-serif; font-size: 0.78rem; color: rgba(240,239,232,0.8); line-height: 1.4; padding-left: 0.75rem; border-left: 2px solid; }
+  .scholar-card.pro .scholar-card-verdict { border-color: var(--green); }
+  .scholar-card.critical .scholar-card-verdict { border-color: var(--red); }
+  .scholar-card.nuanced .scholar-card-verdict { border-color: var(--accent); }
+
+  /* STAT ROW */
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .stat-box { background: var(--surface); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 1.1rem; text-align: center; }
+  .stat-number { font-size: 1.8rem; font-weight: bold; color: var(--accent); line-height: 1; margin-bottom: 0.3rem; }
+  .stat-label { font-family: sans-serif; font-size: 0.72rem; color: var(--muted); line-height: 1.3; }
+
+  /* CALLOUT */
+  .callout { border-radius: 8px; padding: 1.25rem 1.5rem; margin: 2rem 0; border: 1px solid; }
+  .callout.concept { background: rgba(155,127,232,0.06); border-color: rgba(155,127,232,0.2); }
+  .callout.warning { background: rgba(196,57,45,0.06); border-color: rgba(196,57,45,0.2); }
+  .callout.info { background: rgba(74,158,255,0.06); border-color: rgba(74,158,255,0.2); }
+  .callout-label { font-family: sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.12em; font-weight: bold; margin-bottom: 0.5rem; }
+  .callout.concept .callout-label { color: var(--purple); }
+  .callout.warning .callout-label { color: var(--red); }
+  .callout.info .callout-label { color: var(--blue); }
+  .callout h4 { font-size: 0.95rem; margin-bottom: 0.5rem; color: var(--text); }
+  .callout p { font-size: 0.85rem; margin-bottom: 0; font-family: sans-serif; line-height: 1.6; }
+
+  /* WHY IT MATTERS */
+  .matters-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
+  .matters-card { background: var(--surface); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 1.4rem; border-top: 3px solid; }
+  .matters-card:nth-child(1) { border-top-color: var(--accent); }
+  .matters-card:nth-child(2) { border-top-color: var(--red); }
+  .matters-card:nth-child(3) { border-top-color: var(--blue); }
+  .matters-card:nth-child(4) { border-top-color: var(--purple); }
+  .matters-card h3 { font-size: 0.95rem; margin-bottom: 0.5rem; margin-top: 0; color: var(--text); border: none; }
+  .matters-card p { font-family: sans-serif; font-size: 0.82rem; color: rgba(240,239,232,0.72); line-height: 1.5; margin-bottom: 0.5rem; }
+  .matters-subpoints { list-style: none; font-family: sans-serif; font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+  .matters-subpoints li { padding: 0.2rem 0; padding-left: 1rem; position: relative; }
+  .matters-subpoints li::before { content: '·'; position: absolute; left: 0; color: var(--accent); }
+
+  /* CONNECTED TOPICS */
+  .topics-group { margin-bottom: 2rem; }
+  .topics-group-label { font-family: sans-serif; font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 0.75rem; }
+  .topics-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 0.75rem; }
+  .topic-card { background: var(--surface); border: 1px solid rgba(255,255,255,0.06); border-radius: 6px; padding: 1rem; cursor: pointer; transition: all 0.2s; text-decoration: none; display: block; position: relative; }
+  .topic-card:hover { border-color: rgba(255,255,255,0.15); background: var(--surface2); transform: translateY(-2px); }
+  .topic-card-thumb { position: absolute; top: 0.65rem; right: 0.65rem; width: 44px; height: 44px; border-radius: 5px; object-fit: cover; object-position: center 20%; border: 1px solid rgba(255,255,255,0.08); flex-shrink: 0; }
+  .topic-card:has(.topic-card-thumb) { padding-right: 3.75rem; }
+  .topic-type-tag { font-family: sans-serif; font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.15rem 0.45rem; border-radius: 3px; margin-bottom: 0.5rem; display: inline-block; }
+  .topic-type-tag.person { background: rgba(155,127,232,0.15); color: var(--purple); }
+  .topic-type-tag.event { background: rgba(196,57,45,0.15); color: var(--red); }
+  .topic-type-tag.region { background: rgba(74,158,255,0.15); color: var(--blue); }
+  .topic-type-tag.concept { background: rgba(61,186,126,0.15); color: var(--green); }
+  .topic-name { font-size: 0.88rem; font-weight: bold; color: var(--text); margin-bottom: 0.25rem; line-height: 1.2; }
+  .topic-preview { font-family: sans-serif; font-size: 0.72rem; color: var(--muted); line-height: 1.4; }
+
+  /* SOURCES */
+  .sources-list { list-style: none; font-family: sans-serif; font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+  .sources-list li { padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); padding-left: 2.5rem; position: relative; }
+  .sources-list li:last-child { border-bottom: none; }
+  .src-num { position: absolute; left: 0; top: 0.75rem; font-size: 0.7rem; color: var(--accent); font-weight: bold; width: 1.8rem; text-align: center; background: rgba(232,168,56,0.1); border-radius: 3px; padding: 0.1rem 0; }
+  .src-title { color: var(--text); }
+  .src-journal { color: var(--blue); font-style: italic; }
+  .src-note { display: block; font-size: 0.78rem; color: var(--muted); margin-top: 0.2rem; font-style: italic; }
+
+  footer { border-top: 1px solid rgba(255,255,255,0.06); padding: 2rem; text-align: center; font-family: sans-serif; font-size: 0.78rem; color: var(--muted); }
+
+  @media (max-width: 900px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .outer { grid-template-columns: 1fr; }
+    .sidebar { display: none; }
+    .perspectives { grid-template-columns: 1fr; }
+    .scholars-row { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.9rem; }
+    .stat-row { grid-template-columns: repeat(2, 1fr); }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Event</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="#">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Events</a><span class="breadcrumb-sep">›</span>
+        <a href="#">North Africa</a><span class="breadcrumb-sep">›</span>
+        <span>The Libyan Civil War</span>
+      </div>
+      <div class="hero-region-tag">North Africa · 2011–present</div>
+      <div style="display:flex;align-items:center;gap:2.5rem;margin-top:0.5rem;">
+        <div style="flex:1;min-width:0;">
+          <h1 style="margin-top:0;">The Libyan Civil War</h1>
+          <p class="hero-sub">How the fall of one of the Arab world's most enduring dictatorships sparked a decade of chaos — and why NATO's role remains one of the most contested interventions in modern history.</p>
+          <div class="hero-meta">
+            <span>~20 min read</span><span>·</span>
+            <span>8 academic sources</span><span>·</span>
+            <span>Last updated June 2026</span>
+          </div>
+        </div>
+        <div style="flex-shrink:0;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg" alt="The Libyan Civil War" style="width:340px;height:240px;object-fit:cover;border-radius:10px;border:1px solid rgba(74,158,255,0.25);display:block;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#glance">Libya at a Glance</a></li>
+        <li><a href="#background">Background</a></li>
+        <li><a href="#figures">Key Figures</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#nato-debate">The NATO Debate</a></li>
+        <li><a href="#aftermath">The Aftermath</a></li>
+        <li><a href="#isis">ISIS in Libya</a></li>
+        <li><a href="#matters">Why It Matters</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <!-- AT A GLANCE -->
+      <section id="glance">
+        <h2>Libya at a Glance</h2>
+
+        <!--
+          Map coordinate system:
+          Covers 5°W → 40°E (45°) and 7°N → 38°N (31°)
+          SVG 700×430px → scale: x=(lon+5)×15.56, y=(38-lat)×13.87
+          All polygon vertices computed from real border coordinates.
+        -->
+
+
+        <!-- STAT CARDS — 4-column grid, consistent alignment -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-card-label">Population</div>
+            <div class="stat-card-value">7.1M</div>
+            <div class="stat-card-sub">2023 estimate</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Area</div>
+            <div class="stat-card-value">1.76M km²</div>
+            <div class="stat-card-sub">4th largest in Africa</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">GDP (nominal)</div>
+            <div class="stat-card-value">$36.9B</div>
+            <div class="stat-card-sub">2022, oil-dependent</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Capital</div>
+            <div class="stat-card-value">Tripoli</div>
+            <div class="stat-card-sub">Pop. ~1.2 million</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Independence</div>
+            <div class="stat-card-value">Dec 1951</div>
+            <div class="stat-card-sub">From Italian/UN administration</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Oil Reserves</div>
+            <div class="stat-card-value">~48B bbl</div>
+            <div class="stat-card-sub">Largest proven in Africa</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Desert</div>
+            <div class="stat-card-value">~90%</div>
+            <div class="stat-card-sub">Sahara covers most of Libya</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-card-label">Government (2026)</div>
+            <div class="stat-card-value">Divided</div>
+            <div class="stat-card-sub">GNU (Tripoli) vs HoR (east)</div>
+          </div>
+        </div>
+
+        <p style="font-family:sans-serif; font-size:0.82rem; color:var(--muted); margin-top:0.75rem;">Libya sits at the crossroads of the Mediterranean world and sub-Saharan Africa. Despite vast oil wealth, it has one of the most sparsely populated interiors on Earth — a vast Saharan space that became a critical corridor for weapons, migrants, and jihadist fighters after the 2011 civil war.</p>
+      </section>
+
+      <!-- BACKGROUND -->
+      <section id="background">
+        <h2>Background: Gaddafi's Libya</h2>
+        <p>To understand the Libyan Civil War, you need to understand the system it destroyed — and why destroying it left almost nothing in its place. Muammar Gaddafi had ruled Libya since 1969, when he led a military coup against the monarchy at the age of 27. What followed was one of the Arab world's most bizarre and durable dictatorships: a state held together not by functioning institutions but by a combination of oil money, tribal patronage, and the personal authority of one man.</p>
+        <p>Gaddafi's philosophy, written up in his "Green Book," rejected both capitalism and communism in favour of what he called a Third Universal Theory — in practice, a system where power was formally distributed to thousands of "people's committees" while real decisions flowed through Gaddafi's inner circle, his family, and the tribes of his home region. Libya had no political parties, no independent judiciary, no free press. Civic institutions that elsewhere allow a country to function — a professional civil service, independent courts, a military with clear command structures — were deliberately kept weak. Gaddafi feared that strong institutions would become rivals.</p>
+        <p>Libya's oil wealth meant that for much of the 20th century this arrangement was tolerable for many Libyans. Gaddafi used oil revenues to subsidise food, fuel, and housing. Literacy rates rose. But the system also bred deep resentment, particularly in the east — the region of Cyrenaica — which had historically been marginalised compared to the west. When protests erupted across the Arab world in early 2011, it was in the eastern city of Benghazi that Libya's uprising began.</p>
+      </section>
+
+      <!-- KEY FIGURES -->
+      <section id="figures">
+        <h2>Key Figures</h2>
+        <div class="figures-grid">
+          <div class="figure-card">
+            <div class="figure-name">Muammar Gaddafi</div>
+            <div class="figure-role">Libyan Leader, 1969–2011</div>
+            <p class="figure-desc">Ruled Libya for 42 years through oil wealth and tribal patronage. Deliberately weakened institutions to prevent rivals. Killed by rebels in October 2011.</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-name">Mahmoud Jibril</div>
+            <div class="figure-role">NTC Prime Minister</div>
+            <p class="figure-desc">Led the National Transitional Council, Libya's rebel government recognised internationally. Struggled to unite the fractious coalition fighting Gaddafi.</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-name">Barack Obama</div>
+            <div class="figure-role">U.S. President</div>
+            <p class="figure-desc">Authorised U.S. participation in NATO's intervention. Later called Libya his "worst mistake" — not because intervention was wrong, but because post-war planning was inadequate.</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-name">Nicolas Sarkozy</div>
+            <div class="figure-role">French President</div>
+            <p class="figure-desc">The driving force behind Western intervention. France was first to recognise the NTC and first to launch airstrikes. His motivations have since been questioned.</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-name">Khalifa Haftar</div>
+            <div class="figure-role">Warlord / LNA Commander</div>
+            <p class="figure-desc">Former Gaddafi general who defected in the 1980s. Re-emerged after 2011 to command the Libyan National Army, backed by Russia, UAE, and Egypt.</p>
+          </div>
+          <div class="figure-card">
+            <div class="figure-name">Daalder & Stavridis</div>
+            <div class="figure-role">NATO's Political & Military Chiefs</div>
+            <p class="figure-desc">Daalder was U.S. Ambassador to NATO; Stavridis was Supreme Allied Commander Europe. The two men who ran the intervention defended it as a model of multilateral action saving "tens of thousands of lives."</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE -->
+      <section id="timeline">
+        <h2>Timeline of Events</h2>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">February 15, 2011</div>
+              <div class="tl-title">The Uprising Begins — But It Wasn't Simply Peaceful Protest</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>The standard narrative of Libya's uprising — peaceful protesters fired on by a vicious state — is accurate in outline but misleading in detail. Protests did begin in Benghazi on February 15th, sparked partly by the arrest of a human rights lawyer. But political scientist Alan Kuperman's research documents that many protesters were armed from the very first day of the uprising, and that Gaddafi's government initially responded with non-lethal crowd control before escalating.</p>
+            <p>Within the first week, rebel fighters had seized military bases and weapons depots across eastern Libya. The city of Derna — historically the most radicalised region in the country — fell to armed groups almost immediately. What began as a political protest rapidly became an armed insurgency in the east, even as genuine civilian demonstrations continued elsewhere. Daalder and Stavridis, NATO's own commanders, describe it differently: they characterise the uprising as people rising against Gaddafi with hopes of following Tunisia and Egypt's peaceful paths — until Gaddafi "launched a brutal crackdown."</p>
+            <p>Both accounts contain truth. The question of whether the uprising was primarily civilian or significantly militarised from the start directly shapes whether Gaddafi's response constituted targeting civilians — and therefore whether the international legal basis for intervention was solid.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Kuperman (2013)</span>
+              <span class="src-chip">Daalder & Stavridis (2012)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">February–March 2011</div>
+              <div class="tl-title">The UN Authorises Intervention: Resolution 1973</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>As fighting spread, casualty figures became politically explosive. A French doctor working with Libyan rebels claimed over 2,000 people had been killed by late February. Kuperman's research cross-referencing Human Rights Watch's documentation found the actual documented death toll was around 233 — still appalling, but roughly one-tenth of what was being claimed. The inflated figure was crucial in building the Western political will for intervention.</p>
+            <p>On March 17th, the UN Security Council passed Resolution 1973, authorising "all necessary measures" to protect civilians. It passed with ten votes in favour and five abstentions — Russia, China, Germany, India, and Brazil all refused to vote for it. The Arab League's decision to endorse a no-fly zone was, as Daalder and Stavridis note, politically critical: it demonstrated that the intervention had regional support, not just Western imposition. Jordan, Morocco, Qatar, and the UAE would go on to join the coalition directly.</p>
+            <p>On March 19th, the United States led the first strikes, destroying a large concentration of armoured vehicles approaching Benghazi — home to 750,000 people. Gaddafi had famously called opponents "rats" and threatened to "cleanse Libya house by house." NATO took command of Operation Unified Protector on March 27th.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Daalder & Stavridis (2012)</span>
+              <span class="src-chip">Kuperman (2013)</span>
+              <span class="src-chip">UN Res. 1973</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">March–August 2011</div>
+              <div class="tl-title">Six Months of Stalemate as the Mission Shifts</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Resolution 1973 authorised a no-fly zone and civilian protection. It explicitly prohibited a foreign occupation force. But from early in the campaign, NATO's actions went considerably beyond its letter. Alliance aircraft bombed retreating government forces — not, at that moment, threatening civilians. NATO struck the infrastructure of Gaddafi's military and, ultimately, his command network. In late March, Obama, Cameron, and Sarkozy co-authored a piece stating explicitly that Gaddafi must go. The mission had become regime change.</p>
+            <p>Gareth Evans — the man who co-created the Responsibility to Protect doctrine that justified the intervention — was watching closely. His verdict: the original Benghazi intervention was justified and likely saved thousands of lives. But what went wrong was "the determination of the United States, UK and France to transform the limited civilian protection mandate into an open-ended regime-change one, without being willing to explore alternative approaches, and without allowing any serious further debate." South Africa, sitting on the Security Council at the time, wanted to explore a ceasefire with Gaddafi. That opportunity was never given.</p>
+            <p>The city of Misurata endured a horrific months-long siege by Gaddafi's forces. Gaddafi made multiple ceasefire offers throughout this period; rebels, backed by NATO air power, repeatedly rejected them. They had little incentive to compromise while NATO was bombing for them.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Evans (2020)</span>
+              <span class="src-chip">Kuperman (2013)</span>
+              <span class="src-chip">Zifcak (2012)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">August–October 2011</div>
+              <div class="tl-title">Tripoli Falls; Gaddafi Is Killed</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>In late August 2011, rebel forces backed by NATO air support breached Tripoli. The city fell with surprising speed. Gaddafi fled to his tribal stronghold of Sirte — the same city that would later become ISIS's Libyan capital — where he was captured and killed on October 20th. The manner of his death, filmed on mobile phones as he was beaten and then shot, was itself a sign of what was to come: a country without institutions to administer justice, or anything else.</p>
+            <p>NATO declared the end of its operations on October 31st — 222 days after it had begun. The alliance coordinated the actions of 18 countries under unified command. France and the UK flew over 40% of the sorties, together destroying more than a third of overall targets. The United States provided 75% of the intelligence, surveillance, and reconnaissance data, and 75% of the refueling aircraft. Zero allied casualties. U.S. cost: $1.1 billion — a fraction of Iraq or Afghanistan.</p>
+            <p>Kuperman's counterfactual analysis argues that without NATO intervention, Gaddafi's forces would likely have retaken Benghazi within roughly two weeks, ending the uprising with an estimated 1,000–1,100 deaths. With intervention, the war lasted 36 weeks and the death toll reached 8,000–11,500. Daalder and Stavridis counter that NATO "saved tens of thousands of lives from almost certain destruction." The two estimates are not as contradictory as they seem: the question is whether the people in Benghazi counted in Kuperman's counterfactual would actually have been killed.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Daalder & Stavridis (2012)</span>
+              <span class="src-chip">Kuperman (2013)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2012–2014</div>
+              <div class="tl-title">The State Collapses Into Competing Militias</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>The post-Gaddafi transition unravelled quickly. The NTC held elections in 2012 and handed power to a new General National Congress — but this parliament had no real authority over the hundreds of armed militias that had fought in the civil war and refused to disarm. Many militias were incorporated onto the government payroll without being integrated into a unified military structure. They took their salaries and kept their weapons and their separate command structures.</p>
+            <p>The assassination of U.S. Ambassador Chris Stevens in Benghazi in September 2012 was an early indicator of the security vacuum. In 2014, a second civil war began between rival parliamentary bodies: the House of Representatives in the east (backed by Khalifa Haftar) and a rival Islamist-linked parliament in Tripoli. The country effectively split in two.</p>
+            <p>Into this vacuum poured weapons, foreign fighters, and jihadist organisations. Gaddafi's substantial arms stockpiles were looted by militias and trafficked across the region. Kuperman's research estimates that 15,000 man-portable air-defence systems (MANPADs) — capable of shooting down commercial aircraft — were left unaccounted for, spreading to at least 14 countries. Returning Tuareg fighters who had served in Gaddafi's army brought arms and organisation to the Sahel, directly precipitating Mali's collapse in 2012.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Kuperman (2013)</span>
+              <span class="src-chip">Vandewalle (2012)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2014–2016</div>
+              <div class="tl-title">ISIS Establishes a Libyan Province</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>ISIS was a latecomer to the Libyan conflict but the collapsed state was ideal for it to exploit. In October 2014, jihadists in Derna pledged allegiance to ISIS leader Abu Bakr al-Baghdadi, making Libya ISIS's first official "province" outside Iraq and Syria. Beccaro's research documents that approximately 84% of Libyan foreign fighters who had travelled to Iraq and Afghanistan came from the Cyrenaica region — 60% specifically from Derna — creating a pre-existing jihadist infrastructure that ISIS could build on.</p>
+            <p>ISIS quickly moved to Sirte, capturing strategic assets including al-Qardabiya Air Base and a major power station by mid-2015, controlling roughly 250 kilometres of Libyan coastline. The UN-backed Government of National Accord launched an offensive in May 2016, with the U.S. providing 495 precision airstrikes between August and December. Sirte was liberated on December 7, 2016.</p>
+            <p>But ISIS had already dispersed fighters across the Sahara and into Tunisia, Algeria, and Egypt, where it enabled some of the region's deadliest attacks — including the 2015 Bardo Museum massacre in Tunis (22 killed) and the Sousse beach attack (38 killed). The Libyan failed state had become a regional security exporter.</p>
+            <div class="tl-sources">
+              <span class="src-chip">Beccaro (2022)</span>
+              <span class="src-chip">UN Panel of Experts (2016)</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- NATO DEBATE -->
+      <section id="nato-debate">
+        <h2>The NATO Debate: Three Ways to Read the Intervention</h2>
+
+        <p>The Libya intervention has produced one of the most genuinely contested debates in recent international relations scholarship. This is not a simple divide between those who think military intervention is always wrong and those who think it is sometimes right. The three most substantive voices — Daalder and Stavridis, Kuperman, and Evans — all accept that Gaddafi was a brutal authoritarian. Where they diverge sharply is on the evidence, the consequences, and what Libya should teach us about the future.</p>
+
+        <div class="scholars-row">
+          <div class="scholar-card pro">
+            <div class="scholar-card-name">Daalder & Stavridis</div>
+            <div class="scholar-card-title">NATO's political and military chiefs — <em>Foreign Affairs</em>, 2012</div>
+            <div class="scholar-card-verdict">NATO "saved tens of thousands of lives" and proved multilateral intervention can work at low cost with broad legitimacy.</div>
+          </div>
+          <div class="scholar-card critical">
+            <div class="scholar-card-name">Alan J. Kuperman</div>
+            <div class="scholar-card-title">University of Texas — <em>International Security</em>, 2013</div>
+            <div class="scholar-card-verdict">The intervention multiplied the death toll 7–10× and destabilised neighbouring countries — the wrong cure for a misdiagnosed crisis.</div>
+          </div>
+          <div class="scholar-card nuanced">
+            <div class="scholar-card-name">Gareth Evans</div>
+            <div class="scholar-card-title">Architect of R2P doctrine — gevans.org, 2020</div>
+            <div class="scholar-card-verdict">The initial Benghazi intervention was right. What went wrong was NATO's mission creep into regime change — which poisoned the Security Council for Syria.</div>
+          </div>
+        </div>
+
+        <h3>The commanders' case: why NATO called it a success</h3>
+
+        <p>Daalder and Stavridis were not outside observers — they ran the campaign. Their 2012 <em>Foreign Affairs</em> assessment provides specifics that purely academic accounts sometimes lack. Their core claim: NATO responded to a real and immediate threat. Benghazi had 750,000 residents. Gaddafi had called opponents "rats" and explicitly threatened to "cleanse Libya house by house." When NATO struck the armoured column approaching the city on March 19th, it destroyed a force that was hours away from the largest rebel stronghold.</p>
+
+        <p>The operational record, they argue, speaks for itself. NATO coordinated 18 countries — 14 member states and four Arab partners — under a unified command. France and the UK flew 40% of combat sorties. The United States provided 75% of the intelligence, surveillance, and reconnaissance data, and 75% of the refueling aircraft. Total U.S. cost: $1.1 billion — compared to trillions spent in Iraq and Afghanistan. Zero allied casualties. The Arab states' participation gave the mission political legitimacy in the region that a purely Western operation could never have achieved.</p>
+
+        <div class="pull-quote">
+          <blockquote>"NATO saved tens of thousands of lives from almost certain destruction. It conducted an air campaign of unparalleled precision, which, although not perfect, greatly minimized collateral damage. And it accomplished all of this without a single allied casualty."</blockquote>
+          <cite>— Daalder, I.H. & Stavridis, J.G. "NATO's Victory in Libya." <em>Foreign Affairs</em>, 91(2), 2012</cite>
+        </div>
+
+        <h3>The revisionist challenge: Kuperman's uncomfortable arithmetic</h3>
+
+        <p>Alan Kuperman's 2013 <em>International Security</em> article is the most systematic challenge to that narrative. His argument rests not on a principled objection to intervention but on a close examination of the evidence. He finds that the Benghazi massacre that NATO prevented may never have materialised — that the feared bloodbath was a projection, not a documented plan.</p>
+
+        <p>His key data points: the early death toll was inflated roughly tenfold (2,000 claimed; ~233 documented by Human Rights Watch). In cities Gaddafi's forces retook before NATO intervened — Zawiya, Ajdabiya — there were no mass reprisals against surrendered civilians. Only 3% of the wounded admitted to Misurata's hospitals during the siege were female, a demographic pattern more consistent with fighters than with indiscriminate civilian targeting. And Gaddafi made multiple ceasefire offers that the rebels, emboldened by NATO air cover, refused to negotiate.</p>
+
+        <p>The consequence: instead of a short war ending in approximately 1,100 deaths, the intervention produced a 36-week war with 8,000–11,500 dead. And the regional aftermath — 15,000 MANPADs unaccounted for, weapons in 14+ countries, Mali's collapse in 2012 — represents a security disaster that NATO's commanders do not address in their self-assessment.</p>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-number">~1,100</div>
+            <div class="stat-label">Estimated deaths without NATO (Kuperman)</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">8,000–11,500</div>
+            <div class="stat-label">Actual deaths during the war</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">7–10×</div>
+            <div class="stat-label">Death toll multiplier from intervention</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">15,000</div>
+            <div class="stat-label">MANPADs unaccounted for post-war</div>
+          </div>
+        </div>
+
+        <h3>Evans: the right start, the wrong ending — and the Syria consequence</h3>
+
+        <p>Gareth Evans occupies a uniquely authoritative position in this debate. He co-chaired the commission that created the Responsibility to Protect doctrine in 2001 — the legal and moral framework invoked to justify the Libya intervention. His 2020 assessment of what went right and wrong is perhaps the sharpest available from a single author.</p>
+
+        <p>Evans agrees with Daalder and Stavridis on the initial intervention: stopping Gaddafi's advance on Benghazi was justified, and "impossible to know how many thousands of lives were saved." The comparison to Rwanda and Srebrenica was not wrong. But Evans is equally direct about what came next: NATO's decision to convert the civilian protection mandate into a regime-change campaign, "without being willing to explore alternative approaches," was a serious mistake with consequences far beyond Libya.</p>
+
+        <div class="pull-quote">
+          <blockquote>"What went wrong in Libya in 2011 was not the granting or exercise of the original mandate... Rather, what really went wrong was the determination of the United States, UK and France to transform the limited civilian protection mandate into an open-ended regime-change one, without allowing any serious further debate."</blockquote>
+          <cite>— Evans, G. "Libya 2011: The Real R2P Story." gevans.org, July 2020</cite>
+        </div>
+
+        <p>The BRICS states — Brazil, Russia, India, China, and South Africa — were all on the Security Council in 2011 and had abstained rather than blocking Resolution 1973. They felt betrayed when that mandate became regime change. South Africa wanted to explore whether Gaddafi would accept a ceasefire and political transition; that option was never seriously pursued. The result: when Syria began to explode in mid-2011, Russia and China blocked every Security Council response. Evans heard NATO being referred to in UN corridors not as "the P3" but as "FUKUS" — France, UK, and US — a sign of how deeply the resentment ran.</p>
+
+        <div class="callout concept">
+          <div class="callout-label">Key Concept</div>
+          <h4>Responsibility to Protect (R2P)</h4>
+          <p>R2P is the 2005 UN doctrine holding that when a state fails to protect its own civilians from mass atrocities, the international community has the right — and arguably the duty — to intervene. Libya was its first major test. Russia and China have since cited Libya as justification for blocking Security Council action on Syria, Yemen, and elsewhere. Evans, its architect, argues R2P as a principle remains sound — what failed was its execution.</p>
+        </div>
+
+        <h3>Where the evidence sits</h3>
+
+        <div class="perspectives">
+          <div class="perspective-card for">
+            <div class="perspective-label">The case for intervention</div>
+            <ul>
+              <li>Benghazi had 750,000 residents; Gaddafi had made specific threats to "cleanse" it house by house — the danger was not hypothetical <span class="perspective-attr">(Daalder & Stavridis)</span></li>
+              <li>Zero allied casualties; $1.1B U.S. cost — a fraction of Iraq or Afghanistan, with a coalition of 18 countries including Arab states <span class="perspective-attr">(Daalder & Stavridis)</span></li>
+              <li>The initial Benghazi intervention "almost certainly" saved thousands; inaction in Rwanda and Srebrenica showed the cost of doing nothing <span class="perspective-attr">(Evans)</span></li>
+              <li>Arab states (Jordan, Qatar, UAE, Morocco) chose to join — giving the operation legitimacy that pure Western intervention lacked <span class="perspective-attr">(Daalder & Stavridis)</span></li>
+              <li>Even Evans, who criticises the mandate overreach, agrees the initial intervention to protect Benghazi was justified under R2P</li>
+            </ul>
+          </div>
+          <div class="perspective-card against">
+            <div class="perspective-label">The case against intervention</div>
+            <ul>
+              <li>Early death toll exaggerated ~10×; cities Gaddafi retook before NATO arrived showed no mass reprisals against civilians <span class="perspective-attr">(Kuperman)</span></li>
+              <li>The war lasted 6× longer and killed 7–10× more people than if Gaddafi had won quickly — intervention increased total deaths <span class="perspective-attr">(Kuperman)</span></li>
+              <li>NATO's mandate was civilian protection; it became regime change without Security Council consent — a line even Evans, the doctrine's creator, says should not have been crossed <span class="perspective-attr">(Evans)</span></li>
+              <li>The mandate betrayal destroyed Security Council consensus, directly enabling Russia and China to block all action on Syria <span class="perspective-attr">(Evans)</span></li>
+              <li>15,000 MANPADs spread to 14+ countries; Mali's state collapsed — regional damage not accounted for in NATO's self-assessment <span class="perspective-attr">(Kuperman)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>The moral hazard problem</h3>
+
+        <p>Perhaps the most troubling of Kuperman's arguments concerns what economists call moral hazard: when you insure someone against risk, you change their behaviour. His research suggests that rebel groups in Libya — and later in Syria — militarised their uprisings partly because they anticipated Western intervention. The prospect of NATO air cover transformed what might have been a political opposition into an armed insurgency willing to fight a war it could not win on its own. If true, this means Western intervention in Libya may have helped trigger the far bloodier conflict in Syria — where no intervention came, and where over 300,000 people have died.</p>
+      </section>
+
+      <!-- AFTERMATH -->
+      <section id="aftermath">
+        <h2>The Aftermath: Why Libya Couldn't Rebuild</h2>
+        <p>When Gaddafi was killed, Libya had no functioning bureaucracy, no national army, no independent courts, and no political parties with established roots. Forty-two years of deliberate institutional starvation meant there was almost no infrastructure for a state to operate through, even if the new government had wanted to build one.</p>
+        <p>The militias that fought the revolution refused to disband. Many were incorporated into formal security structures on paper while retaining their actual independence. The Gulf states and NATO allies failed to provide meaningful post-war support for institution-building. Daalder and Stavridis acknowledge in their 2012 assessment that NATO's capability gaps were a problem during the campaign, but their article is notably silent on post-war planning.</p>
+        <div class="pull-quote">
+          <blockquote>"Gaddafi had deliberately built a weak state so that no institution could challenge him. The rebels inherited that deliberate weakness."</blockquote>
+          <cite>— Dirk Vandewalle, <em>A History of Modern Libya</em> (2012)</cite>
+        </div>
+        <p>By 2014, Libya had two rival parliaments and two rival governments, each backed by different coalitions of militias and different foreign powers. The internationally recognised Government of National Accord in Tripoli was backed by Turkey and Qatar. The Libyan National Army of Khalifa Haftar in the east was backed by Russia, the UAE, and Egypt. The weapons and training flowing in from multiple directions prevented either side from winning, locking the country in a slow-burning conflict that continues today.</p>
+      </section>
+
+      <!-- ISIS -->
+      <section id="isis">
+        <h2>ISIS in Libya: A Province Built on Chaos</h2>
+        <p>ISIS's expansion into Libya is a case study in how jihadist organisations exploit state collapse. The group had played no role in the 2011 revolution — it didn't exist in its current form — but the conditions the revolution created were almost perfectly suited to its strategy: no government control, unpoliced borders, marginalised tribal groups, and abandoned weapons stockpiles.</p>
+
+        <h3>Derna: The First Foothold</h3>
+        <p>The city of Derna, in the far east of Libya near the Egyptian border, was where ISIS first took root. Beccaro's research explains why: approximately 60% of all Libyan foreign fighters who had travelled to Iraq and Afghanistan came from Derna alone, with 24% more from Benghazi. When those fighters returned after 2011, they returned to a city with no police, no government, and no counterbalancing power. In October 2014, jihadists in Derna pledged formal allegiance to Abu Bakr al-Baghdadi, making Libya ISIS's first wilayat — province — outside Iraq and Syria. By July 2015, ISIS had been expelled from Derna by local competing factions — a rare early defeat.</p>
+
+        <div class="callout info">
+          <div class="callout-label">Context: Geography</div>
+          <h4>Why Eastern Libya Produced So Many Jihadists</h4>
+          <p>The Cyrenaica region had been radicalised over decades by marginalisation under Gaddafi, Salafi religious networks, and returning veterans from Afghan training camps. Beccaro documents that 84% of Libyan foreign fighters over the 2000s came from Cyrenaica — creating a concentrated pool of trained jihadists who played a major role in Libya's post-2011 landscape.</p>
+        </div>
+
+        <h3>Sirte: The Caliphate's Libyan Capital</h3>
+        <p>Losing Derna, ISIS moved west to Sirte — Gaddafi's hometown and the stronghold of his tribe, the Qaddafa, who had been marginalised after his death. Some former regime loyalists saw ISIS as a vehicle to regain relevance. By early 2015, ISIS controlled significant portions of the city; by mid-2015, it had extended its reach along roughly 250 kilometres of Libyan coastline, capturing al-Qardabiya Air Base and a major power station.</p>
+        <p>Beccaro characterises ISIS in Libya as a "hybrid militia" — combining terrorist tactics, guerrilla warfare, and conventional military operations in a way that made it difficult to counter using any single strategy. Unlike in Iraq and Syria, ISIS in Libya never acquired heavy armour. It relied on pickup trucks, small-unit infiltration, and Libya's vast ungoverned desert interior.</p>
+
+        <h3>The Spread and Defeat</h3>
+        <p>Libya functioned as a hub for ISIS's regional expansion. The March 2015 attack on the Bardo National Museum in Tunis (22 killed), the June 2015 Sousse beach attack (38 killed), and a 2016 assault on the Tunisian border town of Ben Gardane were all planned by fighters who had trained in Libya. The GNA launched an offensive against ISIS in Sirte in May 2016. In August, the United States began 495 precision airstrikes in support. Sirte was liberated on December 7, 2016 — but ISIS fighters dispersed into the desert rather than surrendering, and the failed state that had enabled them remained entirely unresolved.</p>
+      </section>
+
+      <!-- WHY IT MATTERS -->
+      <section id="matters">
+        <h2>Why It Matters Today</h2>
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>The Migration Crisis</h3>
+            <p>Libya is the main departure point for migrants crossing the Mediterranean to Europe. The collapse of the Libyan state eliminated controls that previously existed on cross-border movement.</p>
+            <ul class="matters-subpoints">
+              <li>Smuggling networks expanded dramatically after 2011, operating without government interference</li>
+              <li>Tens of thousands crossed in dangerous conditions annually at peak crisis; thousands drowned</li>
+              <li>EU-funded Libyan Coast Guard has been credibly accused of returning migrants to detention camps where abuse is documented</li>
+              <li>The political backlash in Europe fuelled the rise of far-right parties across Italy, France, and Germany</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Weapons Proliferation Across Africa</h3>
+            <p>Gaddafi had accumulated large stocks of weapons over four decades. When his armouries were looted in 2011, those weapons spread across the continent and are still circulating today.</p>
+            <ul class="matters-subpoints">
+              <li>~15,000 MANPADs — shoulder-fired missiles capable of downing aircraft — went unaccounted for (Kuperman, 2013)</li>
+              <li>Weapons spread to at least 14 countries including Mali, Niger, Chad, and Sudan</li>
+              <li>Tuareg fighters who served in Gaddafi's army returned to Mali armed, triggering the 2012 crisis</li>
+              <li>The Sahel remains one of the world's fastest-growing jihadist conflict zones, directly linked to this proliferation</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The Template for Future Intervention</h3>
+            <p>Libya fundamentally changed the debate about humanitarian military intervention. R2P cannot be discussed today without discussing what happened after 2011.</p>
+            <ul class="matters-subpoints">
+              <li>Russia and China cite Libya to justify blocking Security Council action in Syria and elsewhere (Evans, 2020)</li>
+              <li>Obama's "worst mistake" designation has shaped U.S. reluctance to intervene in subsequent crises</li>
+              <li>The gap between military success and post-conflict stabilisation is now central to intervention debates</li>
+              <li>Kuperman's moral hazard argument is cited by scholars arguing Western doctrine inadvertently encourages armed uprisings</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Russia's Return to Africa</h3>
+            <p>Libya became a testing ground for Russia's re-emergence as an African power, using the Wagner Group as a proxy force that has since spread across the continent.</p>
+            <ul class="matters-subpoints">
+              <li>Wagner fighters backed Khalifa Haftar's eastern faction from around 2019, providing drones and snipers</li>
+              <li>Russia used Libya to test the hybrid warfare model it later expanded in Mali, CAR, Sudan, and Niger</li>
+              <li>Wagner's Libyan operation gave Russia intelligence on U.S. and European military systems supplied to GNA forces</li>
+              <li>Prigozhin's 2023 mutiny disrupted but did not end Russian influence; the group rebranded as the Africa Corps</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONNECTED TOPICS -->
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People</div>
+          <div class="topics-grid">
+            <a href="yevgeny-prigozhin.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg" alt="Yevgeny Prigozhin">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Yevgeny Prigozhin</div>
+              <div class="topic-preview">The hot-dog seller who built Putin's private army — and died trying to overthrow it.</div>
+            </a>
+            <a href="khalifa-haftar.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg" alt="Khalifa Haftar">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Khalifa Haftar</div>
+              <div class="topic-preview">The warlord who controls eastern Libya — and what he wants from Russia.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Abu Bakr al-Baghdadi</div>
+              <div class="topic-preview">How a theology student became the self-declared Caliph of the Islamic State.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Events</div>
+          <div class="topics-grid">
+            <a class="topic-card" href="arab-spring.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Tahrir_Square_Rally.jpg/960px-Tahrir_Square_Rally.jpg" alt="The Arab Spring">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Arab Spring</div>
+              <div class="topic-preview">The wave of uprisings that swept the Middle East in 2011 — and why most of them failed.</div>
+            </a>
+            <a href="syrian-civil-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png" alt="The Syrian Civil War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Syrian Civil War</div>
+              <div class="topic-preview">The uprising that became a proxy war — and how Libya changed Western calculations about intervening.</div>
+            </a>
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The 2012 Mali Coup</div>
+              <div class="topic-preview">How Gaddafi's fall destabilised a neighbour — and opened the door to jihadists in the Sahel.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Regions & Concepts</div>
+          <div class="topics-grid">
+            <a href="#" class="topic-card">
+              <div class="topic-type-tag region">Region</div>
+              <div class="topic-name">The Sahel</div>
+              <div class="topic-preview">The vast semi-arid belt below the Sahara — now the world's fastest-growing jihadist conflict zone.</div>
+            </a>
+            <a href="wagner-group.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png" alt="Wagner Group">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Wagner Group / Africa Corps</div>
+              <div class="topic-preview">Russia's private military contractor — and how it spread from Libya across Africa.</div>
+            </a>
+            <a href="responsibility-to-protect.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG" alt="Responsibility to Protect (R2P)">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Responsibility to Protect (R2P)</div>
+              <div class="topic-preview">The UN doctrine that justified the Libya intervention — and the controversy it created.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SOURCES -->
+      <section id="sources">
+        <h2>Academic Sources</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">Kuperman, A.J. (2013). "A Model Humanitarian Intervention? Reassessing NATO's Libya Campaign." </span>
+            <span class="src-journal">International Security</span>, 38(1), 105–136.
+            <span class="src-note">The definitive critical reassessment. Argues intervention multiplied the death toll 7–10× and destabilised neighbouring countries. Analyses casualty data, rebel motivation, ceasefire offers, and moral hazard.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">Daalder, I.H. & Stavridis, J.G. (2012). "NATO's Victory in Libya: The Right Way to Run an Intervention." </span>
+            <span class="src-journal">Foreign Affairs</span>, 91(2), 2–7.
+            <span class="src-note">Written by NATO's political representative and Supreme Allied Commander. Defends the intervention as saving "tens of thousands of lives" at low cost with broad multilateral legitimacy. Acknowledges capability gaps.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Evans, G. (2020). "Libya 2011: The Real R2P Story." </span>
+            <span class="src-journal">gevans.org</span> (response to Project Syndicate, July 2020). [Open access]
+            <span class="src-note">The architect of the R2P doctrine distinguishes between the justified initial Benghazi intervention and the unjustified mandate creep into regime change, and traces how the latter poisoned Security Council consensus on Syria.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">Beccaro, A. (2022). "ISIS in Libya and beyond, 2014–2016." </span>
+            <span class="src-journal">Journal of North African Studies</span>, 27(1), 160–179.
+            <span class="src-note">Detailed operational analysis of ISIS as a "hybrid militia" in Libya, documenting its establishment in Derna, expansion in Sirte, and cross-border operations into Tunisia, Algeria, and Egypt.</span>
+          </li>
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">Vandewalle, D. (2012). </span>
+            <span class="src-journal">A History of Modern Libya</span>. Cambridge University Press.
+            <span class="src-note">The standard historical account of Libya from independence through the revolution, with particular strength on how Gaddafi deliberately weakened state institutions.</span>
+          </li>
+          <li>
+            <span class="src-num">[6]</span>
+            <span class="src-title">Zifcak, S. (2012). "The Responsibility to Protect after Libya and Syria." </span>
+            <span class="src-journal">Melbourne Journal of International Law</span>, 13(1).
+            <span class="src-note">Analysis of how the Libya intervention tested and arguably strained the R2P doctrine, and what the precedent means for future Security Council authorisations.</span>
+          </li>
+          <li>
+            <span class="src-num">[7]</span>
+            <span class="src-title">Human Rights Watch (2011). </span>
+            <span class="src-journal">Death of a Dictator: Bloody Vengeance in Sirte</span>.
+            <span class="src-note">Documents human rights abuses on both sides of the conflict, including the circumstances of Gaddafi's killing and reprisals against dark-skinned migrant workers.</span>
+          </li>
+          <li>
+            <span class="src-num">[8]</span>
+            <span class="src-title">UN Panel of Experts on Libya (2016). </span>
+            <span class="src-journal">Final Report</span>, S/2016/209.
+            <span class="src-note">Documents weapons proliferation, arms trafficking, and the activities of armed groups including ISIS in Libya during the period of maximum fragmentation.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem">This is a prototype. More topics coming soon.</p>
+</footer>
+
+<script>
+  /* ── SEARCH ── */
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',       desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',    url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                   desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                            url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'The Responsibility to Protect', desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.', url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html', thumb: 'https://mwi.westpoint.edu/wp-content/uploads/2017/10/Israeli_Artillery.jpg?w=1200&h=640&crop=1' },
+    { type: 'event',   title: 'The Iran-Iraq War',             desc: 'Eight years of industrialised slaughter between two revolutionary states — and how the United States armed both sides.',                    url: 'iran-iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Iran-Iraq_War_Montage.png/960px-Iran-Iraq_War_Montage.png' },
+    { type: 'concept', title: "Ba'athism",                     desc: "The Arab nationalist ideology that brought Saddam Hussein and the Assad dynasty to power — and what its collapse reveals about secular Arab dictatorship.", url: 'baathism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'event',  title: 'The Libyan Civil War',   desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',  url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',  title: 'Operation Condor',        desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',  url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.',     url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person', title: 'Henry Kissinger',          desc: 'The refugee who became America\'s most powerful and most controversial diplomat.',         url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person', title: 'Barack Obama',             desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.',  url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person', title: 'Gamal Abdel Nasser',      desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',  url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person', title: 'George W. Bush',           desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',  url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person', title: 'Ayatollah Khomeini',       desc: 'The cleric who overthrew a U.S.-backed Shah and built the world\'s first modern Islamic Republic.',  url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+  ];
+  let _searchOpen = false, _focusIdx = -1;
+
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn');
+    const dd  = document.getElementById('searchDropdown');
+    const inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen);
+    dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); }
+    else { inp.value = ''; _focusIdx = -1; }
+  }
+
+  function runSearch(q) {
+    const box = document.getElementById('searchResults');
+    const term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a, i) => `
+      <a class="search-result" href="${a.url}" data-i="${i}">
+        <div class="search-result-top">
+          ${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}
+          <span class="topic-type-tag ${a.type}">${a.type}</span>
+          <span class="search-result-title">${a.title}</span>
+        </div>
+        <div class="search-result-desc">${a.desc}</div>
+      </a>`).join('');
+  }
+
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key === 'ArrowDown')  { e.preventDefault(); _focusIdx = Math.min(_focusIdx + 1, items.length - 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); _focusIdx = Math.max(_focusIdx - 1, 0); }
+    else if (e.key === 'Enter' && _focusIdx >= 0) { items[_focusIdx].click(); return; }
+    else if (e.key === 'Escape') { toggleSearch(); return; }
+    items.forEach((r, i) => r.classList.toggle('focused', i === _focusIdx));
+  }
+
+  document.addEventListener('click', e => {
+    if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch();
+  });
+
+  /* ── SCROLL PROGRESS + SIDEBAR ── */
+  window.addEventListener('scroll', () => {
+    const progress = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('progressBar').style.height = Math.min(progress, 100) + '%';
+    updateSidebar();
+  });
+
+  function updateSidebar() {
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.sidebar-nav li');
+    let current = '';
+    sections.forEach(section => {
+      if (window.scrollY >= section.offsetTop - 120) current = section.getAttribute('id');
+    });
+    navItems.forEach(item => {
+      const link = item.querySelector('a');
+      item.classList.toggle('active', link && link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  function toggleItem(el) {
+    const wasActive = el.classList.contains('active');
+    document.querySelectorAll('.tl-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) el.classList.add('active');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const firstItem = document.querySelector('.tl-item');
+    if (firstItem) firstItem.classList.add('active');
+  });
+
+  function toggleSave() {
+    const btn = document.getElementById('saveBtn');
+    const toast = document.getElementById('toast');
+    const isSaved = btn.classList.contains('saved');
+    if (!isSaved) {
+      btn.classList.add('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3000);
+    } else {
+      btn.classList.remove('saved');
+      btn.innerHTML = `<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;
+    }
+  }
+</script>
+</body>
+</html>
