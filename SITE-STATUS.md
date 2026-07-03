@@ -4,15 +4,26 @@ Last updated: 2026-07-03
 
 Keep this file current after every session — Cowork sessions should read it first, and update it before finishing.
 
-## Live pages (48 total — see note below)
+## Live pages (51 total — see note below)
 
-**People:** Abdel Fattah el-Sisi, Abu Bakr al-Baghdadi, Anwar Sadat, Augusto Pinochet, Ayatollah Khomeini, Barack Obama, Bashar al-Assad, Bill Clinton, Colin Powell, Dick Cheney, Gamal Abdel Nasser, George W. Bush, Henry Kissinger, Hillary Clinton, Hugo Chávez, Joe Biden, Khalifa Haftar, Muammar Gaddafi, Richard Nixon, Saddam Hussein, Salvador Allende, Tony Blair, Yevgeny Prigozhin
+**People:** Abdel Fattah el-Sisi, Abu Bakr al-Baghdadi, Anwar Sadat, Augusto Pinochet, Ayatollah Khomeini, Barack Obama, Bashar al-Assad, Bill Clinton, Colin Powell, Dick Cheney, Gamal Abdel Nasser, George W. Bush, Henry Kissinger, Hillary Clinton, Hugo Chávez, Joe Biden, Khalifa Haftar, Muammar Gaddafi, Osama bin Laden, Richard Nixon, Saddam Hussein, Salvador Allende, Tony Blair, Yevgeny Prigozhin
 
-**Events:** 1973 Arab-Israeli War, Angola Civil War, Arab Spring, Gulf War, Halabja Chemical Attack, Iran-Iraq War, Iraq War, Libyan Civil War, Northern Mali Conflict, Operation Condor, Rwandan Genocide, September 11, Suez Crisis, Syrian Civil War, Watergate
+**Events:** 1973 Arab-Israeli War, Angola Civil War, Arab Spring, The Fall of the Assad Regime, Gulf War, Halabja Chemical Attack, Iran-Iraq War, Iraq War, Libyan Civil War, Northern Mali Conflict, Operation Condor, Rwandan Genocide, September 11, Suez Crisis, Syrian Civil War, Watergate
 
-**Concepts:** Ba'athism, Democratic Socialism, Non-Aligned Movement, Pan-Arabism, Realpolitik, Resource Curse, Responsibility to Protect, Wagner Group
+**Concepts:** Ba'athism, Democratic Socialism, Non-Aligned Movement, Pan-Arabism, Realpolitik, Resource Curse, Responsibility to Protect, Wagner Group, The War on Terror
 
-**Note:** `isis-islamic-state.html` exists on disk and is a real, working page (linked from Baghdadi's CONTEXT_ARTICLES entry), but it was never added to this list — bringing the true live-page count to 48, not 47. Add "ISIS / The Islamic State" to the Events list above once confirmed intentional; flagged this session, not yet resolved.
+**Note:** `isis-islamic-state.html` exists on disk and is a real, working page (linked from Baghdadi's CONTEXT_ARTICLES entry, and now also from all three pages added this session), but it was never added to this list — bringing the true live-page count to 51, not 50. Add "ISIS / The Islamic State" to the Events list above once confirmed intentional; flagged previously, still not resolved.
+
+## Session log — 2026-07-03 (later session): three new pages built
+
+Built and verified three new pages per Dexter's spec:
+- `fall-of-assad-regime.html` — event, amber, `class="event-page"`, structural template `iran-iraq-war.html`. Covers the December 2024 collapse of the Assad regime: the 11-day military collapse, geopolitical winners/losers (Iran, Russia, Israel, Turkiye, U.S., Gulf states), and HTS's post-takeover "radicals' dilemma."
+- `osama-bin-laden.html` — person, purple, no body class, structural template `khalifa-haftar.html`. Covers his radicalization, al-Qaeda's ideology, key attacks, the Abbottabad raid, and the empirical evidence that his killing did not produce a global deterrent effect on terrorism.
+- `war-on-terror.html` — concept, green, `class="concept-page"`, structural template `baathism.html`. Covers the Bush Doctrine, the just-war case for Afghanistan vs. Iraq, domestic threat-perception psychology, the "victory trap," and the al-Qaeda-to-ISIS ideological comparison. Deliberately kept at the doctrinal level per Dexter's instruction, since dedicated Iraq War and (future) Afghanistan pages exist separately.
+
+Verification performed before sign-off: every href checked against the actual file list on disk (no `context-v2/v3/v4.html`, `template.html`, or `event-template.html`); every topic-card thumbnail copied from the actual linked page's real hero image (checked by opening each linked file directly — `bashar-al-assad.html`, `syrian-civil-war.html`, `iraq-war.html`, `isis-islamic-state.html`, `september-11.html`, `george-w-bush.html`, `abu-bakr-al-baghdadi.html`, `dick-cheney.html`, `colin-powell.html`, `obama.html`, `baathism.html` — rather than trusting any CONTEXT_ARTICLES thumb field); `runSearch`/`searchKeydown` copied verbatim from `khalifa-haftar.html` (thumbnail rendering + relevance sort both present, confirmed via grep); nav uses the canonical `nav`/`nav-actions` structure; bin Laden's Quick Facts use a flat `.qf-item` list with no `.quick-facts-grid` wrapper; all images are `upload.wikimedia.org` at 960px+; div-tag balance and internal link resolution checked programmatically.
+
+**Explicitly not done this session (deferred to a follow-up):** no CONTEXT_ARTICLES entries were added to the other 48 pre-existing pages, `index.html` was not touched, and no Connected Topics cards were added FROM pre-existing pages INTO these three new ones. The three new pages cross-link to each other and to pre-existing pages, but nothing pre-existing links back yet — a site-wide sync pass is needed in a separate session.
 
 ## Completed this session (2026-07-03)
 

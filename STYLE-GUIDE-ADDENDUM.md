@@ -39,17 +39,23 @@ If a Connected Topics card references a topic with no real matching page, delete
 Confirm the actual file list Cowork has access to matches what you intended to upload - a stale "connected folder" from an earlier session can silently override or supplement what you just attached. Ask Cowork to list every filename it can see before it starts editing anything.
 # Context Site Status
 
-Last updated: 2026-07-02
+Last updated: 2026-07-03
 
 Keep this file current after every session — Cowork sessions should read it first, and update it before finishing.
 
-## Live pages (47 total)
+## Live pages (50 total)
 
-**People:** 1973 Arab-Israeli War participants aside — Abdel Fattah el-Sisi, Abu Bakr al-Baghdadi, Anwar Sadat, Augusto Pinochet, Ayatollah Khomeini, Barack Obama, Bashar al-Assad, Bill Clinton, Colin Powell, Dick Cheney, Gamal Abdel Nasser, George W. Bush, Henry Kissinger, Hillary Clinton, Hugo Chávez, Joe Biden, Khalifa Haftar, Muammar Gaddafi, Richard Nixon, Saddam Hussein, Salvador Allende, Tony Blair, Yevgeny Prigozhin
+**People:** 1973 Arab-Israeli War participants aside — Abdel Fattah el-Sisi, Abu Bakr al-Baghdadi, Anwar Sadat, Augusto Pinochet, Ayatollah Khomeini, Barack Obama, Bashar al-Assad, Bill Clinton, Colin Powell, Dick Cheney, Gamal Abdel Nasser, George W. Bush, Henry Kissinger, Hillary Clinton, Hugo Chávez, Joe Biden, Khalifa Haftar, Muammar Gaddafi, Osama bin Laden, Richard Nixon, Saddam Hussein, Salvador Allende, Tony Blair, Yevgeny Prigozhin
 
-**Events:** 1973 Arab-Israeli War, Angola Civil War, Arab Spring, Gulf War, Halabja Chemical Attack, Iran-Iraq War, Iraq War, Libyan Civil War, Northern Mali Conflict, Operation Condor, Rwandan Genocide, September 11, Suez Crisis, Syrian Civil War, Watergate
+**Events:** 1973 Arab-Israeli War, Angola Civil War, Arab Spring, The Fall of the Assad Regime, Gulf War, Halabja Chemical Attack, Iran-Iraq War, Iraq War, ISIS / The Islamic State, Libyan Civil War, Northern Mali Conflict, Operation Condor, Rwandan Genocide, September 11, Suez Crisis, Syrian Civil War, Watergate
 
-**Concepts:** Ba'athism, Democratic Socialism, Non-Aligned Movement, Pan-Arabism, Realpolitik, Resource Curse, Responsibility to Protect, Wagner Group
+**Concepts:** Ba'athism, Democratic Socialism, Non-Aligned Movement, Pan-Arabism, Realpolitik, Resource Curse, Responsibility to Protect, Wagner Group, The War on Terror
+
+## Session log — July 3, 2026
+
+Built three new pages: `fall-of-assad-regime.html` (event, amber, structural template iran-iraq-war.html), `osama-bin-laden.html` (person, purple, no body class, structural template khalifa-haftar.html), `war-on-terror.html` (concept, green, structural template baathism.html). All three verified for: real hrefs only (no dev/prototype files), topic-card thumbnails copied from each linked page's actual hero image (checked by opening the linked file directly, not CONTEXT_ARTICLES thumb fields), canonical `runSearch`/`searchKeydown` copied verbatim from khalifa-haftar.html (thumbnail rendering + relevance sort both present), canonical nav/nav-actions structure, and flat `.qf-item` Quick Facts list on the bin Laden page (no grid wrapper). All hero and topic-card images are upload.wikimedia.org at 960px+.
+
+**Not done this session (explicitly deferred):** the site-wide sync — CONTEXT_ARTICLES entries on the other 47 pre-existing pages were not updated to reference these three new pages, `index.html` was not touched, and no Connected Topics cross-links were added FROM other existing pages INTO these three. The three new pages do cross-link to each other and to pre-existing pages, but nothing pre-existing links back to them yet. This is planned as a separate follow-up session.
 
 ## Known issues / in progress
 

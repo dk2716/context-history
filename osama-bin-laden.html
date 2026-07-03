@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Osama bin Laden — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Middle East</a><span class="breadcrumb-sep">›</span>
+        <span>Osama bin Laden</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Osama_bin_Laden%2C_portr%C3%A6t.jpg/960px-Osama_bin_Laden%2C_portr%C3%A6t.jpg" alt="Osama bin Laden" style="width:120px;height:120px;object-fit:cover;border-radius:10px;display:block;">
+        </div>
+        <div class="hero-content">
+          <div class="hero-region-tag">Person</div>
+          <h1>Osama bin Laden</h1>
+          <div class="hero-native">أسامة بن لادن</div>
+          <p class="hero-sub">The Saudi construction heir who bankrolled the mujahideen, founded al-Qaeda, orchestrated the deadliest terrorist attack in history, and spent his final decade hiding in plain sight a mile from Pakistan's military academy.</p>
+          <div class="hero-meta">
+            <span>~17 min read</span><span>·</span>
+            <span>1957–2011</span><span>·</span>
+            <span>Saudi Arabia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Radicalisation</a></li>
+        <li><a href="#ideology">Founding al-Qaeda &amp; Ideology</a></li>
+        <li><a href="#campaigns">Key Campaigns</a></li>
+        <li><a href="#hiding">A Decade in Hiding</a></li>
+        <li><a href="#death">Death &amp; the Deterrence Question</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Osama bin Mohammed bin Awad bin Laden</div></div>
+          <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">March 10, 1957, Riyadh, Saudi Arabia</div></div>
+          <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">May 2, 2011 (aged 54), Abbottabad, Pakistan — killed by U.S. Navy SEALs in Operation Neptune Spear</div></div>
+          <div class="qf-item"><div class="qf-label">Organization founded</div><div class="qf-value">al-Qaeda ("the base"), founded 1988 in Peshawar, Pakistan</div></div>
+          <div class="qf-item"><div class="qf-label">Ideology</div><div class="qf-value">Salafi-jihadism; framed the U.S. and its allies as a "Zionist-Crusader alliance" waging war on Islam</div></div>
+          <div class="qf-item"><div class="qf-label">Family background</div><div class="qf-value">Son of Mohammed bin Awad bin Laden, founder of the Saudi Binladin Group, one of the Arab world's largest construction conglomerates</div></div>
+          <div class="qf-item"><div class="qf-label">Signature operations</div><div class="qf-value">1998 U.S. embassy bombings in Kenya and Tanzania; 2000 USS Cole bombing; September 11, 2001 attacks</div></div>
+          <div class="qf-item"><div class="qf-label">Wanted status</div><div class="qf-value">FBI Most Wanted Terrorists list from 1999; $25 million reward offered under the Rewards for Justice program</div></div>
+        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Radicalisation</h2>
+
+        <p>Osama bin Laden was born in Riyadh in 1957, the seventeenth of roughly fifty-four children of Mohammed bin Awad bin Laden, a Yemeni-born construction magnate whose company, the Saudi Binladin Group, built much of the Saudi kingdom's modern infrastructure — including extensive renovation work on the holy mosques in Mecca and Medina. The family's proximity to the Saudi royal family and its vast wealth gave the young Osama an upbringing of considerable privilege, including private schooling and a university education in civil engineering and business administration at King Abdulaziz University in Jeddah, where he was exposed to the writings of Sayyid Qutb and the broader currents of political Islam then circulating among educated Saudi youth.</p>
+
+        <p>The defining radicalising event of bin Laden's early life was the December 1979 Soviet invasion of Afghanistan. Bin Laden traveled to Pakistan within weeks, using his family's wealth and connections to help finance and organize the flow of Arab volunteers — later known as the "Afghan Arabs" — into the anti-Soviet mujahideen resistance. Working alongside Palestinian scholar Abdullah Azzam, bin Laden helped build the Maktab al-Khidamat ("Services Office"), a logistics and recruitment network that funneled money, weapons, and fighters from across the Arab world into the Afghan jihad — with considerable indirect support from a U.S., Saudi, and Pakistani intelligence effort aimed at bleeding Soviet forces.</p>
+
+        <p>The Soviet withdrawal from Afghanistan in 1989 left bin Laden with a transnational network of trained fighters, a reputation as a battlefield financier and organizer, and a conviction — one he would act on almost immediately — that the same model of transnational jihad that had defeated one superpower in Afghanistan could be turned against the other. The 1990–91 Gulf War then supplied the specific grievance that would define the rest of his life: bin Laden had offered his Afghan-veteran fighters to defend Saudi Arabia against Iraq, and was instead humiliated when the Saudi government invited U.S. troops to base on Saudi soil. He regarded the continued American military presence near Islam's holiest sites after the war as an act of occupation, and it became the central justification he invoked for everything that followed.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">1988</div><div class="stat-label">Year al-Qaeda was founded in Peshawar, Pakistan, out of the Afghan-Arab mujahideen network</div></div>
+          <div class="stat-box"><div class="stat-number">1996</div><div class="stat-label">Year bin Laden issued his first public declaration of war against the United States, from Sudan and then Afghanistan</div></div>
+          <div class="stat-box"><div class="stat-number">2,977</div><div class="stat-label">People killed in the September 11, 2001 attacks he orchestrated</div></div>
+          <div class="stat-box"><div class="stat-number">~10</div><div class="stat-label">Years bin Laden evaded capture after 9/11, living undetected in Abbottabad, Pakistan, from around 2005</div></div>
+        </div>
+      </section>
+
+      <section id="ideology">
+        <h2>Founding al-Qaeda &amp; Ideology</h2>
+
+        <p>Al-Qaeda's ideology, as reconstructed by scholars analysing its propaganda output, is built around a specific "identity field": bin Laden and his followers cast themselves as protectors of a global Muslim community (the ummah) under existential assault from what al-Qaeda propaganda consistently termed the "Zionist-Crusader alliance" — a framing in which the United States, more than any other single antagonist, is targeted in the overwhelming majority of al-Qaeda's rhetorical references to enemies.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Diagnosis: A War on Islam</div>
+            <p>Al-Qaeda's core grievance narrative (what framing theorists call its "diagnostic frame") emphasizes the oppression of Muslims worldwide, the moral and political flaws of Western societies, the apostasy of Muslim rulers who cooperate with the West, and — closely tied together — Zionism and the presence of U.S. military forces on the Arabian Peninsula. Bin Laden's 1996 "Declaration of War against the Americans Occupying the Land of the Two Holy Places" and his 1998 fatwa co-signed with other jihadist leaders explicitly framed killing Americans, military and civilian alike, as a religious obligation for Muslims everywhere.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Prognosis: Hijrah and Jihad</div>
+            <p>Where al-Qaeda's rival and later offshoot ISIS emphasized building a physical caliphate as its central prescriptive goal, al-Qaeda's own propaganda output overwhelmingly emphasized "hijrah and jihad" — emigration to join the armed struggle — far more than calls to establish a caliphate or convert non-believers. This reflects al-Qaeda's founding model as a mobile, transnational vanguard organization rather than a territory-holding state, a structural choice traceable directly to its Afghan-Arab mujahideen origins.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">A Political, Not Purely Religious, Appeal</div>
+            <p>Comparative framing analysis finds that al-Qaeda relied more heavily on explicitly political grievances — anti-Americanism, opposition to Western foreign policy, critiques of Muslim ruler collaboration with the West — than religious theology alone, and used "master frame alignment" strategies designed to broaden its appeal beyond committed Salafi-jihadists to a wider audience of aggrieved Muslims sympathetic to anti-imperialist politics even if not to jihadist theology.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Salafism-Jihadism as Shared Foundation</div>
+            <p>Both al-Qaeda and its later, more extreme offshoot ISIS shared a foundational Salafi-jihadist theology — a belief in a return to what its adherents consider the practices of the earliest generations of Islam, combined with a doctrine that armed jihad is a personal religious obligation. Where the two organizations diverged sharply was in priority and audience: al-Qaeda's diagnosis centered on external oppressors (the West), while ISIS's would later center overwhelmingly on the alleged religious "deviance" of rival Muslim and jihadist factions — a divergence that would eventually put the two organizations at war with each other.</p>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"The call to wage war against America was made because America has spearheaded the crusade against the Islamic nation, sending tens of thousands of its troops to the land of the two holy mosques."</blockquote>
+          <cite>— Osama bin Laden, 1998 fatwa, "Jihad Against Jews and Crusaders"</cite>
+        </div>
+      </section>
+
+      <section id="campaigns">
+        <h2>Key Campaigns</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">1996–1998</div>
+              <div class="tl-title">Declaring War from Sudan and Afghanistan</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Expelled from Sudan in 1996 under U.S. and Saudi diplomatic pressure, bin Laden relocated to Afghanistan, where the Taliban — which took control of Kabul that same year — provided him safe haven in exchange for financial and military support. From this new base, bin Laden issued his 1996 declaration of war and, in February 1998, co-signed a fatwa with Ayman al-Zawahiri and other jihadist leaders under the banner of the "World Islamic Front for Jihad Against Jews and Crusaders," formally declaring that killing Americans — civilian or military — anywhere in the world was a religious duty for Muslims.</p>
+            <div class="tl-sources"><span class="src-chip">Kavrakis (2023)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">August 1998</div>
+              <div class="tl-title">The East Africa Embassy Bombings</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>On August 7, 1998, al-Qaeda operatives detonated near-simultaneous truck bombs outside the U.S. embassies in Nairobi, Kenya, and Dar es Salaam, Tanzania, killing 224 people — the overwhelming majority African civilians rather than American targets — and injuring over 4,000. The attacks placed bin Laden on the FBI's Most Wanted Terrorists list for the first time and prompted retaliatory U.S. cruise missile strikes against an al-Qaeda training camp in Afghanistan and a pharmaceutical plant in Sudan, neither of which meaningfully disrupted the organization.</p>
+            <div class="tl-sources"><span class="src-chip">Fisher &amp; Becker (2021)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">October 2000</div>
+              <div class="tl-title">The USS Cole Bombing</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Al-Qaeda operatives detonated an explosive-laden small boat alongside the USS Cole, a U.S. Navy destroyer refuelling in the port of Aden, Yemen, on October 12, 2000, killing 17 American sailors. The attack demonstrated al-Qaeda's growing operational capability against hardened military targets and foreshadowed the far larger attack being planned against the American homeland itself.</p>
+            <div class="tl-sources"><span class="src-chip">Fisher &amp; Becker (2021)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">September 11, 2001</div>
+              <div class="tl-title">The Attacks on New York and Washington</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Nineteen al-Qaeda hijackers seized four commercial airliners, crashing two into the World Trade Center towers in New York, one into the Pentagon, and a fourth — after passengers fought back — into a field in Shanksville, Pennsylvania. The attacks killed 2,977 people and remain the deadliest terrorist attack in modern history. Bin Laden did not publicly acknowledge direct responsibility until a 2004 video statement, though U.S. and allied intelligence agencies attributed the operation to al-Qaeda within days. The attacks triggered the U.S.-led invasion of Afghanistan within a month and set in motion what would become known as the War on Terror.</p>
+            <div class="tl-sources"><span class="src-chip">Mishra &amp; Manhas (2025)</span><span class="src-chip">Hall, J. (2024)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="hiding">
+        <h2>A Decade in Hiding</h2>
+
+        <p>After the fall of the Taliban regime in late 2001, bin Laden evaded capture at the Battle of Tora Bora in December 2001 — a near-miss that some U.S. military critics have argued reflected an under-resourced pursuit effort, as U.S. forces at the time relied heavily on Afghan militia allies rather than committing sufficient American ground troops to seal off his escape routes into Pakistan's tribal areas. For the next several years, bin Laden was widely believed to be hiding in the rugged Afghanistan-Pakistan border region, issuing periodic audio and video messages that kept al-Qaeda's brand alive even as his direct operational control over the organization's global network diminished.</p>
+
+        <p>In reality, from around 2005 onward, bin Laden was living not in a remote mountain cave but in a large, custom-built compound in Abbottabad, Pakistan — a garrison town roughly a mile from Pakistan's premier military academy, the Pakistan Military Academy at Kakul. The compound, built with unusually high walls and barbed wire, had no internet or telephone connection; bin Laden communicated with the outside world exclusively through trusted couriers, a operational security practice that kept him electronically invisible to signals intelligence for years even as it eventually became the specific thread — tracing one courier's identity and movements — that led the CIA to his location.</p>
+
+        <div class="callout warning">
+          <div class="callout-label">Operation Neptune Spear</div>
+          <h4>May 2, 2011 — U.S. Navy SEALs raid the Abbottabad compound</h4>
+          <p>Acting on intelligence developed over years of tracking bin Laden's courier network, U.S. Navy SEAL Team Six conducted a helicopter raid on the Abbottabad compound on the night of May 1–2, 2011 (local time), without informing the Pakistani government in advance out of concern for operational security. Bin Laden was shot and killed during the raid; his body was buried at sea within 24 hours, a decision the Obama administration said was intended to avoid creating a martyr's shrine. The operation was conducted without authorization from or advance notice to Pakistan, straining the already difficult U.S.-Pakistan relationship and raising uncomfortable questions about what elements of the Pakistani state, if any, knew of bin Laden's presence so close to a major military installation.</p>
+        </div>
+      </section>
+
+      <section id="death">
+        <h2>Death &amp; the Deterrence Question</h2>
+
+        <p>Bin Laden's killing was received in the United States as a moment of closure nearly ten years after September 11 — President Obama announced it in a late-night televised address, and crowds gathered spontaneously outside the White House and at Ground Zero. But the empirical question of whether killing bin Laden actually reduced global terrorism is more complicated, and less reassuring, than the immediate celebratory reaction suggested.</p>
+
+        <p>A rigorous dual-trajectory statistical analysis of global terrorism patterns from November 2007 to May 2014 — spanning several years before and after the killing — found that removing bin Laden did not produce the deterrent effect that "decapitation" theories of counterterrorism predict. Al-Qaeda's own average monthly attack rate actually rose sharply after the killing, from roughly 4.17 attacks per month in the period before May 2011 to roughly 26.42 attacks per month between mid-2012 and the end of 2014 — an increase driven substantially by escalating al-Qaeda activity in Iraq and Yemen. Globally, the average number of terrorist attacks per country per six-month period rose from about 6.80 before the killing to about 10.24 afterward.</p>
+
+        <div class="callout concept">
+          <div class="callout-label">A "Black Swan" Recognition Event, Not a Deterrent</div>
+          <h4>The killing generated enormous global attention without translating into reduced violence</h4>
+          <p>Researchers found that bin Laden's death functioned more as what they termed a "black swan" media and recognition event than as an act that meaningfully weakened al-Qaeda's operational capacity: an estimated 576,397 news articles referenced bin Laden between 1998 and 2014, with more than 70,000 published in 2011 alone, the overwhelming majority clustered around the killing. The one partial exception to the broader non-deterrence finding was the United States itself, which showed a modest downward shift in its own domestic terrorism trajectory group following the killing — suggesting some possible national-level effect that did not generalize globally. Syria, by contrast, jumped dramatically from a "very low" to a "very high" terrorism incidence group over the same period — a shift researchers attribute to the unrelated eruption of the Syrian Civil War rather than to any connection with bin Laden's death.</p>
+        </div>
+
+        <p>This finding matters beyond the specific case of bin Laden: it is frequently cited in the broader academic literature as evidence against "decapitation" strategies in counterterrorism generally — the assumption, embedded in two decades of U.S. targeted-killing policy against jihadist leaders from bin Laden to Zarqawi to Baghdadi, that removing a movement's founding or symbolic leader will meaningfully degrade the movement itself. Al-Qaeda's continued operational activity in Yemen, Syria, and the Sahel in the years following bin Laden's death is frequently cited as evidence that the organization's resilience depended far less on any single individual than U.S. strategy assumed.</p>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>Bin Laden's historical significance is not seriously contested — he founded and led the organization responsible for the deadliest terrorist attack in modern history and reshaped global security policy, international law, and American foreign policy for two decades. What remains genuinely debated among scholars is the nature and durability of his strategic achievement, and what his death did and did not accomplish.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card negative">
+            <div class="legacy-label">What the evidence shows</div>
+            <ul>
+              <li>Al-Qaeda under bin Laden killed thousands of civilians across multiple continents in pursuit of a maximalist, unattainable political goal — the expulsion of U.S. influence from the Muslim world and the establishment of a transnational Islamic order</li>
+              <li>His September 11 attacks provoked a two-decade U.S. military and security response — the War on Terror — whose own human and financial costs, particularly the 2003 Iraq invasion, are widely judged by scholars to have caused more strategic damage to U.S. interests than al-Qaeda could have inflicted on its own</li>
+              <li>His organization's ideology and organizational template directly seeded later, even more destructive movements, most consequentially ISIS, whose founding cadre included former al-Qaeda in Iraq operatives</li>
+              <li>The empirical record on his killing shows it did not meaningfully deter global terrorism, undercutting the strategic rationale offered for a decade-long, resource-intensive manhunt</li>
+            </ul>
+          </div>
+          <div class="legacy-card complex" style="margin-top:0;">
+            <div class="legacy-label">What remains genuinely contested</div>
+            <ul>
+              <li>Whether bin Laden should be understood primarily as a religious ideologue or as a shrewd political-military strategist who used religious framing instrumentally to mobilize a broader coalition than pure theology could reach</li>
+              <li>Whether the "decapitation" logic behind his killing (and the broader targeted-killing campaigns against al-Qaeda and ISIS leadership) reflects a fundamentally flawed model of how transnational terrorist organizations sustain themselves</li>
+              <li>How much of al-Qaeda's post-2011 resilience reflects bin Laden's institutional design versus the independent adaptability of regional affiliates in Yemen, the Sahel, and elsewhere that had already developed significant operational autonomy before his death</li>
+              <li>Whether the extraordinary domestic and international political closure attributed to his killing was proportionate to its actual strategic impact, or was primarily a symbolic and psychological event for the American public</li>
+            </ul>
+          </div>
+        </div>
+
+        <p>The most defensible synthesis of the evidence is that bin Laden was simultaneously more consequential and less strategically successful than either his supporters or the narrative of his 2011 killing suggested. He built an organization and an ideological template that outlived him by design — deliberately decentralized to survive the loss of any single leader — and that goal was, in a grim sense, achieved: al-Qaeda's regional affiliates continued operating in Yemen, Somalia, the Sahel, and Syria for years after his death, exactly the kind of institutional durability a founder concerned with his own eventual killing or capture would have tried to engineer.</p>
+
+        <div class="pull-quote">
+          <blockquote>"The killing of Osama bin Laden functioned as a significant, globally recognised event — but the data show no corresponding deterrent effect on the terrorism patterns it was intended to disrupt."</blockquote>
+          <cite>— Paraphrased from Fisher &amp; Becker, European Journal of Criminology, 2021</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People directly connected</div>
+          <div class="topics-grid">
+            <a href="george-w-bush.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png" alt="George W. Bush">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">George W. Bush</div>
+              <div class="topic-preview">The president who declared war on bin Laden's organisation within days of September 11 and made "dead or alive" the defining promise of his first term.</div>
+            </a>
+            <a href="abu-bakr-al-baghdadi.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg" alt="Abu Bakr al-Baghdadi">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Abu Bakr al-Baghdadi</div>
+              <div class="topic-preview">The ISIS founder whose movement grew out of al-Qaeda in Iraq before splitting violently from bin Laden's organisation over ideology and strategy.</div>
+            </a>
+            <a href="bashar-al-assad.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg" alt="Bashar al-Assad">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Bashar al-Assad</div>
+              <div class="topic-preview">The dictator whose fall in 2024 was led by HTS, a movement directly descended from an al-Qaeda affiliate bin Laden's ideology inspired.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Events &amp; Concepts</div>
+          <div class="topics-grid">
+            <a href="september-11.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/National_Park_Service_9-11_Statue_of_Liberty_and_WTC_fire.jpg/960px-National_Park_Service_9-11_Statue_of_Liberty_and_WTC_fire.jpg" alt="September 11, 2001">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">September 11, 2001</div>
+              <div class="topic-preview">The attack bin Laden orchestrated and later claimed responsibility for — the single event that defined the rest of his life and death.</div>
+            </a>
+            <a href="war-on-terror.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg/960px-1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg" alt="The War on Terror">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">The War on Terror</div>
+              <div class="topic-preview">The two-decade U.S. campaign launched explicitly to destroy bin Laden's organisation and the ideology it represented.</div>
+            </a>
+            <a href="iraq-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Iraqi_Freedom_DVIDS1832462.jpg/960px-Iraqi_Freedom_DVIDS1832462.jpg" alt="The Iraq War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Iraq War</div>
+              <div class="topic-preview">Justified partly by a false claim of ties to bin Laden's network — the invasion instead created the al-Qaeda in Iraq franchise that became ISIS.</div>
+            </a>
+            <a href="isis-islamic-state.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png" alt="ISIS / The Islamic State">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">ISIS / The Islamic State</div>
+              <div class="topic-preview">Al-Qaeda's most consequential offshoot — sharing bin Laden's Salafi-jihadist theology while breaking violently from his organisation's strategy and priorities.</div>
+            </a>
+            <a href="fall-of-assad-regime.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/HTS_Rebels_coordinating_at_Hama.png/960px-HTS_Rebels_coordinating_at_Hama.png" alt="The Fall of the Assad Regime">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Fall of the Assad Regime</div>
+              <div class="topic-preview">The 2024 collapse was led by HTS, an organisation tracing its lineage through al-Nusra Front to bin Laden's al-Qaeda.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">Fisher, D. &amp; Becker, M. (2021). </span>
+            <span class="src-journal">The Heterogeneous Repercussions of Killing Osama bin Laden on Global Terrorism Patterns</span>. European Journal of Criminology, 18(3), 301–324.
+            <span class="src-note">A rigorous dual-trajectory statistical study of global and al-Qaeda-specific terrorism patterns from 2007–2014, finding no global deterrent effect from bin Laden's killing. The primary empirical source for this article's deterrence-question section.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">Kavrakis, K. (2023). </span>
+            <span class="src-journal">Identity and Ideology through the Frames of Al Qaeda and Islamic State</span>. Terrorism and Political Violence, 35(5), 1235–1252.
+            <span class="src-note">Frame-theory analysis comparing al-Qaeda and ISIS ideological construction, diagnostic/prognostic framing, and identity fields. Source for the comparative ideology section.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Mishra, S. &amp; Manhas, N. (2025). </span>
+            <span class="src-journal">Nothing Global in the Global War on Terror: Perspectives on Two Decades of U.S. Response to 9/11</span>. The International History Review, 47(5), 838–852.
+            <span class="src-note">Critical assessment of the U.S. counterterrorism response bin Laden's attacks provoked, including analysis of decapitation strategy and the Pakistan relationship.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">Hall, J. (2024). </span>
+            <span class="src-journal">The War on Terror and the Victory Trap</span>. Foreign Policy Analysis, orae012.
+            <span class="src-note">Discusses bin Laden's killing as a paradigmatic case of a presidential "decapitation" strike used as evidence of illusory victory in the broader War on Terror. Relevant for the political reception of his death.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="index.html" style="color:var(--purple);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Osama bin Laden', desc: 'The Saudi construction heir who founded al-Qaeda, orchestrated the September 11 attacks, and spent a decade hiding in Pakistan before a U.S. raid killed him in 2011.', url: 'osama-bin-laden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Osama_bin_Laden%2C_portr%C3%A6t.jpg/960px-Osama_bin_Laden%2C_portr%C3%A6t.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/National_Park_Service_9-11_Statue_of_Liberty_and_WTC_fire.jpg/960px-National_Park_Service_9-11_Statue_of_Liberty_and_WTC_fire.jpg' },
+    { type: 'concept', title: 'The War on Terror', desc: 'The doctrine that took the United States from Kabul to Baghdad in the name of fighting terrorism — and whose contradictions helped produce the very insurgency it was meant to prevent.', url: 'war-on-terror.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg/960px-1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg' },
+    { type: 'event',   title: 'The Fall of the Assad Regime', desc: 'Eleven days. A 54-year dynasty. How a lightning rebel offensive out of Idlib ended the Assad family\'s rule of Syria — and rearranged the Middle East\'s balance of power in the process.', url: 'fall-of-assad-regime.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/HTS_Rebels_coordinating_at_Hama.png/960px-HTS_Rebels_coordinating_at_Hama.png' },
+    { type: 'event',   title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Iraqi_Freedom_DVIDS1832462.jpg/960px-Iraqi_Freedom_DVIDS1832462.jpg' },
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
+    { type: 'person',  title: 'George W. Bush',                  desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',                                        url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_%284x5%29.png/960px-George_W._Bush_2003_%284x5%29.png' },
+    { type: 'person',  title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'person',  title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person',  title: 'Barack Obama',                    desc: "America's first Black president — who promised transformation and left a country more divided.",                                       url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Saddam Hussein',                  desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',                                                 url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Saddam_Hussein_in_1998.png/960px-Saddam_Hussein_in_1998.png' },
+    { type: 'person',  title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+    else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+    else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+    else if (e.key==='Escape') { toggleSearch(); return; }
+    items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.height = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+    const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+  });
+  function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+  function toggleSave() {
+    const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+    if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+    else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+  }
+</script>
+</body>
+</html>
