@@ -548,7 +548,7 @@ const CONTEXT_ARTICLES = [
   { type: 'person', title: 'Muammar Gaddafi',         desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',               url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
   { type: 'person', title: 'Augusto Pinochet',        desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.',     url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
   { type: 'person', title: 'Saddam Hussein',           desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',    url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
-  { type: 'person', title: 'Henry Kissinger',          desc: 'The refugee who became America\'s most powerful and most controversial diplomat.',         url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+  { type: 'person', title: 'Henry Kissinger',          desc: 'The refugee who became America\'s most powerful and most controversial diplomat.',         url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg/960px-Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
   { type: 'person', title: 'Salvador Allende',         desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',      url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
   { type: 'person', title: 'Richard Nixon',            desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',           url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
   { type: 'person', title: 'Barack Obama',             desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.',  url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
@@ -566,15 +566,13 @@ function toggleSearch() {
 }
 function runSearch(q) {
   const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
-  const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES.filter(a =>
-    a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term));
+  const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+  const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+    .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+    .sort((a, b) => sc(b.title) - sc(a.title));
   _focusIdx = -1;
   if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
-  box.innerHTML = hits.map((a,i) =>
-    `<a class="search-result" href="${a.url}" data-i="${i}">
-       <div class="search-result-top"><span class="topic-type-tag ${a.type}">${a.type}</span>
-       <span class="search-result-title">${a.title}</span></div>
-       <div class="search-result-desc">${a.desc}</div></a>`).join('');
+  box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
 }
 function searchKeydown(e) {
   const items = document.querySelectorAll('.search-result');

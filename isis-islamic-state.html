@@ -10,23 +10,23 @@
 
 <div id="progressBar"></div>
 
-<nav class="nav">
+<nav>
   <a href="index.html" class="nav-logo">Context</a>
-  <div class="nav-right">
-    <span class="nav-topic-type event">Event</span>
-    <button class="save-btn" id="saveBtn" onclick="toggleSave()">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
-      Save article
-    </button>
-    <div class="search-wrap">
-      <button class="search-icon-btn" id="searchIconBtn" onclick="toggleSearch()" aria-label="Search">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </button>
       <div class="search-dropdown" id="searchDropdown">
-        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKey(event)">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
         <div class="search-results" id="searchResults"></div>
       </div>
     </div>
+    <span class="nav-topic-type">Event</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
   </div>
 </nav>
 
@@ -408,7 +408,7 @@
             <div class="topic-name">George W. Bush</div>
             <div class="topic-preview">The 2003 invasion he ordered, and the de-Ba'athification policy that followed it, created the pool of displaced Iraqi officers ISIS's founders would later organise.</div>
           </a>
-          <a class="topic-card" href="saddam-hussein.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Saddam_Hussein_in_1998.png" alt="Saddam Hussein">
+          <a class="topic-card" href="saddam-hussein.html"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Saddam_Hussein_in_1998.png/960px-Saddam_Hussein_in_1998.png" alt="Saddam Hussein">
             <span class="topic-type-tag person">Person</span>
             <div class="topic-name">Saddam Hussein</div>
             <div class="topic-preview">The Ba'athist military and intelligence officers his regime trained went on, after his fall, to build the Islamic State's governing bureaucracy.</div>
@@ -523,7 +523,7 @@
     { type: 'person',  title: 'Muammar Gaddafi',               desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',                                                                   url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
     { type: 'person',  title: 'Augusto Pinochet',              desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.",                                                         url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
     { type: 'person',  title: 'Saddam Hussein',                desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',                                                       url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
-    { type: 'person',  title: 'Henry Kissinger',               desc: "The refugee who became America's most powerful and most controversial diplomat.",                                                             url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Henry Kissinger',               desc: "The refugee who became America's most powerful and most controversial diplomat.",                                                             url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg/960px-Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
     { type: 'person',  title: 'Salvador Allende',              desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',                                                        url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
     { type: 'person',  title: 'Richard Nixon',                 desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',                                                             url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
     { type: 'person',  title: 'Barack Obama',                  desc: "America's first Black president — who promised transformation and left a country more divided.",                                             url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
@@ -551,7 +551,7 @@
     if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
     box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
   }
-  function searchKey(e) {
+  function searchKeydown(e) {
     const results = document.querySelectorAll('.search-result');
     if (e.key === 'ArrowDown') { e.preventDefault(); _focusIdx = Math.min(_focusIdx + 1, results.length - 1); results.forEach((r,i) => r.classList.toggle('focused', i === _focusIdx)); }
     else if (e.key === 'ArrowUp') { e.preventDefault(); _focusIdx = Math.max(_focusIdx - 1, 0); results.forEach((r,i) => r.classList.toggle('focused', i === _focusIdx)); }

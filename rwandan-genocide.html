@@ -10,21 +10,20 @@
 
 <div id="progressBar" style="position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:9999;width:0%;transition:width 0.1s;"></div>
 
-<nav class="nav">
+<nav>
   <a href="index.html" class="nav-logo">Context</a>
-  <div class="nav-right">
-    <span class="nav-topic-type">Event</span>
-    <div id="searchWrap" style="position:relative;display:inline-block;">
-      <button id="searchIconBtn" onclick="toggleSearch()" style="background:none;border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:0.35rem 0.7rem;cursor:pointer;color:var(--muted);font-size:0.78rem;display:flex;align-items:center;gap:0.4rem;">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        Search
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </button>
-      <div id="searchDropdown" class="search-dropdown">
-        <input id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off">
-        <div id="searchResults"></div>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
       </div>
     </div>
-    <button id="saveBtn" onclick="toggleSave()" class="save-btn">
+    <span class="nav-topic-type">Event</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
       Save article
     </button>
@@ -541,7 +540,7 @@
     { type: 'person',  title: 'Muammar Gaddafi',             desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.', url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
     { type: 'person',  title: 'Augusto Pinochet',            desc: 'The general who overthrew Chile\'s democracy and ran a brutal 16-year dictatorship.', url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
     { type: 'person',  title: 'Saddam Hussein',              desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.', url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
-    { type: 'person',  title: 'Henry Kissinger',             desc: 'The refugee who became America\'s most powerful and most controversial diplomat.', url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Henry Kissinger',             desc: 'The refugee who became America\'s most powerful and most controversial diplomat.', url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg/960px-Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
     { type: 'person',  title: 'Salvador Allende',            desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.', url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
     { type: 'person',  title: 'Richard Nixon',               desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.', url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
     { type: 'person',  title: 'Barack Obama',                desc: 'America\'s first Black president — who promised transformation, delivered incremental change, and left a country more divided.', url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
