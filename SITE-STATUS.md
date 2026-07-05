@@ -1,18 +1,37 @@
 # Context Site Status
 
-Last updated: 2026-07-03
+Last updated: 2026-07-05
 
 Keep this file current after every session — Cowork sessions should read it first, and update it before finishing.
 
-## Live pages (51 total — see note below)
+## Live pages (51 total: 50 content pages + index.html)
 
-**People:** Abdel Fattah el-Sisi, Abu Bakr al-Baghdadi, Anwar Sadat, Augusto Pinochet, Ayatollah Khomeini, Barack Obama, Bashar al-Assad, Bill Clinton, Colin Powell, Dick Cheney, Gamal Abdel Nasser, George W. Bush, Henry Kissinger, Hillary Clinton, Hugo Chávez, Joe Biden, Khalifa Haftar, Muammar Gaddafi, Osama bin Laden, Richard Nixon, Saddam Hussein, Salvador Allende, Tony Blair, Yevgeny Prigozhin
+**People (24):** Abdel Fattah el-Sisi, Abu Bakr al-Baghdadi, Anwar Sadat, Augusto Pinochet, Ayatollah Khomeini, Barack Obama, Bashar al-Assad, Bill Clinton, Colin Powell, Dick Cheney, Gamal Abdel Nasser, George W. Bush, Henry Kissinger, Hillary Clinton, Hugo Chávez, Joe Biden, Khalifa Haftar, Muammar Gaddafi, Osama bin Laden, Richard Nixon, Saddam Hussein, Salvador Allende, Tony Blair, Yevgeny Prigozhin
 
-**Events:** 1973 Arab-Israeli War, Angola Civil War, Arab Spring, The Fall of the Assad Regime, Gulf War, Halabja Chemical Attack, Iran-Iraq War, Iraq War, Libyan Civil War, Northern Mali Conflict, Operation Condor, Rwandan Genocide, September 11, Suez Crisis, Syrian Civil War, Watergate
+**Events (17):** 1973 Arab-Israeli War, Angola Civil War, Arab Spring, The Fall of the Assad Regime, Gulf War, Halabja Chemical Attack, Iran-Iraq War, Iraq War, ISIS / The Islamic State, Libyan Civil War, Northern Mali Conflict, Operation Condor, Rwandan Genocide, September 11, Suez Crisis, Syrian Civil War, Watergate
 
-**Concepts:** Ba'athism, Democratic Socialism, Non-Aligned Movement, Pan-Arabism, Realpolitik, Resource Curse, Responsibility to Protect, Wagner Group, The War on Terror
+**Concepts (9):** Ba'athism, Democratic Socialism, Non-Aligned Movement, Pan-Arabism, Realpolitik, Resource Curse, Responsibility to Protect, Wagner Group, The War on Terror
 
-**Note:** `isis-islamic-state.html` exists on disk and is a real, working page (linked from Baghdadi's CONTEXT_ARTICLES entry, and now also from all three pages added this session), but it was never added to this list — bringing the true live-page count to 51, not 50. Add "ISIS / The Islamic State" to the Events list above once confirmed intentional; flagged previously, still not resolved.
+**Note:** `isis-islamic-state.html` is now formally included in the Events list above (resolved this session — previously flagged as missing from the written list despite being a real, live page).
+
+## Session log — 2026-07-05: site-wide integration of the three new pages
+
+The three pages built in the 2026-07-03 session (`fall-of-assad-regime.html`, `osama-bin-laden.html`, `war-on-terror.html`) have now been fully integrated site-wide:
+
+1. **CONTEXT_ARTICLES entries added to all 47 pre-existing content pages plus `index.html`** (48 files touched) — each now carries all three new entries with `thumb` fields copied from each new page's actual hero image src (verified by opening each new page directly, not guessed): `fall-of-assad-regime.html` → `HTS_Rebels_coordinating_at_Hama.png`, `osama-bin-laden.html` → `Osama_bin_Laden,_portræt.jpg`, `war-on-terror.html` → `1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg`, all at 960px Wikimedia URLs. Insertion done via a single anchored, verified-unique-per-file string replacement (`CONTEXT_ARTICLES = [`), not a full-file rewrite. The three new pages themselves were skipped (they already cross-link to each other from the prior session).
+2. **`index.html` browse grid updated:** added `osama-bin-laden.html` to the People tab (alphabetically between Muammar Gaddafi and Richard Nixon), `fall-of-assad-regime.html` to the Events tab (between Arab Spring and Gulf War), `war-on-terror.html` to the Concepts tab (after Wagner Group, last alphabetically). Category counts in the hero tagline updated 23/16/8 → 24/17/9. `entry-card-thumb` images added for all three using the same verified hero-image URLs. `homeRunSearch` required no direct code change — it already reads from `CONTEXT_ARTICLES`, which now includes all three entries.
+3. **Connected Topics cards added** (all targets confirmed to exist on disk before linking):
+   - `bashar-al-assad.html` ↔ `fall-of-assad-regime.html` (added to "The Syrian Crisis" group)
+   - `syrian-civil-war.html` ↔ `fall-of-assad-regime.html` (added to "Related Events & Concepts" group)
+   - `september-11.html` ↔ `osama-bin-laden.html` (added to "People at the centre of the response") and ↔ `war-on-terror.html` (added to "Events that followed directly")
+   - `isis-islamic-state.html` ↔ `osama-bin-laden.html` (added to "People at the centre of this event")
+   - `abu-bakr-al-baghdadi.html` ↔ `osama-bin-laden.html` (added to "People directly connected")
+   - `george-w-bush.html` ↔ `war-on-terror.html` (added to "Events")
+   - `iraq-war.html` ↔ `war-on-terror.html` (added to "Related Events")
+   All cards use each page's existing markup pattern (some pages use `topic-card-thumb-wrap` div wrapper, others put the `<img>` directly inside the `<a>` — matched per-file rather than forcing one style) and real hero-image thumbnails, not guessed URLs.
+4. **Verification performed:** Node `new Function()` syntax check across all 51 HTML files' inline `<script>` blocks (zero errors); div-tag balance check on all 8 directly-edited files (all balanced); confirmed each new page is now referenced exactly 51 times site-wide (48 newly-touched files + the 3 new pages' pre-existing mutual self-references); confirmed no dev/prototype filenames (`context-v2/v3/v4.html`, `template.html`, `event-template.html`) were introduced into any live page (the only match was `template.html`'s own pre-existing, untouched internal scaffold links).
+
+**Not done / out of scope this session:** no new pages were built, no hero images were changed, the 13 non-Wikimedia hero images flagged in the prior session remain unresolved (still blocked on verified Commons URLs from Dexter), and the pre-existing duplicate "The Iraq War" entry inside `khalifa-haftar.html`'s `CONTEXT_ARTICLES` array (two near-identical entries, lines ~481–482 in the pre-session file) was noticed but left alone as out of scope for this pass — flagging it below.
 
 ## Session log — 2026-07-03 (later session): three new pages built
 
@@ -24,6 +43,8 @@ Built and verified three new pages per Dexter's spec:
 Verification performed before sign-off: every href checked against the actual file list on disk (no `context-v2/v3/v4.html`, `template.html`, or `event-template.html`); every topic-card thumbnail copied from the actual linked page's real hero image (checked by opening each linked file directly — `bashar-al-assad.html`, `syrian-civil-war.html`, `iraq-war.html`, `isis-islamic-state.html`, `september-11.html`, `george-w-bush.html`, `abu-bakr-al-baghdadi.html`, `dick-cheney.html`, `colin-powell.html`, `obama.html`, `baathism.html` — rather than trusting any CONTEXT_ARTICLES thumb field); `runSearch`/`searchKeydown` copied verbatim from `khalifa-haftar.html` (thumbnail rendering + relevance sort both present, confirmed via grep); nav uses the canonical `nav`/`nav-actions` structure; bin Laden's Quick Facts use a flat `.qf-item` list with no `.quick-facts-grid` wrapper; all images are `upload.wikimedia.org` at 960px+; div-tag balance and internal link resolution checked programmatically.
 
 **Explicitly not done this session (deferred to a follow-up):** no CONTEXT_ARTICLES entries were added to the other 48 pre-existing pages, `index.html` was not touched, and no Connected Topics cards were added FROM pre-existing pages INTO these three new ones. The three new pages cross-link to each other and to pre-existing pages, but nothing pre-existing links back yet — a site-wide sync pass is needed in a separate session.
+
+**Update 2026-07-05: this deferred sync pass is now complete — see the session log above.**
 
 ## Completed this session (2026-07-03)
 
@@ -54,11 +75,14 @@ Verification performed before sign-off: every href checked against the actual fi
 ## Known issues / in progress
 
 - [ ] 13 hero images still on non-Wikimedia domains — see candidate list above, blocked on verified URLs
-- [ ] `isis-islamic-state.html` needs to be formally added to the live-pages list (or confirmed as intentionally excluded)
+- [x] `isis-islamic-state.html` formally added to the live-pages list — resolved 2026-07-05
 - [x] The 18-page "recovered from old session" nav/search sync — resolved this session (see above)
 - [x] Connected Topics audit complete on original 29 pages (broken hrefs fixed, phantom links removed, thumbnails verified against real hero images)
 - [x] Stale `outputs/` folder removed from repo
 - [x] Source PDFs moved to `.gitignore`d local-only `uploads/` folder
+- [x] Site-wide integration of `fall-of-assad-regime.html`, `osama-bin-laden.html`, `war-on-terror.html` (CONTEXT_ARTICLES, index.html, Connected Topics) — resolved 2026-07-05
+- [ ] `khalifa-haftar.html` has a pre-existing duplicate "The Iraq War" entry in its `CONTEXT_ARTICLES` array (two near-identical objects) — noticed 2026-07-05, not fixed, out of scope for that session
+- [ ] `STYLE-GUIDE-ADDENDUM.md` appears to have an old, stale copy of `SITE-STATUS.md` (dated content, pre-July-3 session, "50 total" page count) appended after its own rule #7 — looks like an accidental paste, not intentional content; flagged 2026-07-05, not cleaned up
 
 ## Planned pages (priority order)
 
