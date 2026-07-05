@@ -1,8 +1,17 @@
 # Context Site Status
 
-Last updated: 2026-07-05 (citation standardization pass)
+Last updated: 2026-07-05 (later session: 4th Iraq War source + style guide cleanup)
 
 Keep this file current after every session — Cowork sessions should read it first, and update it before finishing.
+
+## Session log — 2026-07-05 (latest session): 4th source added to Iraq War; STYLE-GUIDE-ADDENDUM.md cleaned up
+
+Two small, targeted follow-ups from the citation-standardization pass:
+
+1. **`iraq-war.html` now has 4 sources** (was flagged below the minimum). Added `Hatemi, Peter K. and Rose McDermott. "How the United States lost the 'forever war'." Journal of Strategic Studies, 2025.` as citation 4, in the standard format, with a `.src-note` describing its argument (false assumptions about the enemy, failure to learn from history, inconsistent strategy across administrations, misreading Al-Qaeda as a state actor rather than a non-state ideological movement). Beyond the Sources list itself: updated the hero stat from "3 academic sources" to "4 academic sources"; added a fourth `scholar-card` to the Legacy & Debate section's `scholars-row` summarizing Hatemi & McDermott's argument; and added a sentence plus `<span class="src-chip">Hatemi &amp; McDermott (2025)</span>` citation to the closing paragraph of the Legacy & Debate section, connecting their broader "forever war" thesis to the article's existing account of why the invasion's aims collapsed into insurgency. Verified after editing: citation count is 4, div tags balanced, zero JS syntax errors.
+2. **`STYLE-GUIDE-ADDENDUM.md` cleaned up** — removed the stale, accidentally-appended old copy of `SITE-STATUS.md` (dated content, pre-July-3, "50 total" page count) that had been sitting after rule 8 since at least the July 3 session. The file now ends cleanly after "## 8. Sources section citation format" (56 lines total, was 145).
+
+**Iraq War Sources section is now fully compliant:** 4 sources, all in the standard `Author. "Title." Journal, Year.` format, meeting both rule 8 requirements (format and minimum count).
 
 ## Session log — 2026-07-05 (later session): Sources section citation standardization
 
@@ -110,9 +119,9 @@ Verification performed before sign-off: every href checked against the actual fi
 - [x] Source PDFs moved to `.gitignore`d local-only `uploads/` folder
 - [x] Site-wide integration of `fall-of-assad-regime.html`, `osama-bin-laden.html`, `war-on-terror.html` (CONTEXT_ARTICLES, index.html, Connected Topics) — resolved 2026-07-05
 - [ ] `khalifa-haftar.html` has a pre-existing duplicate "The Iraq War" entry in its `CONTEXT_ARTICLES` array (two near-identical objects) — noticed 2026-07-05, not fixed, out of scope for that session
-- [ ] `STYLE-GUIDE-ADDENDUM.md` appears to have an old, stale copy of `SITE-STATUS.md` (dated content, pre-July-3 session, "50 total" page count) appended after its own rule #7 — looks like an accidental paste, not intentional content; flagged 2026-07-05, not cleaned up
+- [x] `STYLE-GUIDE-ADDENDUM.md` had an old, stale copy of `SITE-STATUS.md` appended after rule 8 — removed 2026-07-05 (latest session)
 - [x] Sources section citation format standardized site-wide — resolved 2026-07-05 (later session), see session log above
-- [ ] `iraq-war.html` has only 3 sources, below the new 4-source minimum (Style Guide Addendum rule 8) — flagged 2026-07-05, needs a real fourth source added
+- [x] `iraq-war.html` was below the 4-source minimum — resolved 2026-07-05 (latest session), 4th source added
 - [ ] Three citations flagged during the citation-standardization pass rather than force-fit to the new format: `gaddafi.html` (Green Book, multi-year primary source), `operation-condor.html` (National Security Archive, "Various years"), `joe-biden.html` (a methodology note, not a real citation) — see session log above for detail
 
 ## Planned pages (priority order)
