@@ -37,6 +37,22 @@ If a Connected Topics card references a topic with no real matching page, delete
 ## 7. Before starting any batch edit across multiple files
 
 Confirm the actual file list Cowork has access to matches what you intended to upload - a stale "connected folder" from an earlier session can silently override or supplement what you just attached. Ask Cowork to list every filename it can see before it starts editing anything.
+
+## 8. Sources section citation format
+
+Every citation in a page's Sources section must follow one consistent format, in this field order, every time:
+
+`Author Last, First. "Title." Publisher/Journal, Year.`
+
+Author comes first, then the title (quoted, or italicized for books - match whichever convention the citation already uses if it's internally consistent), then the publisher or journal (with volume/issue/page detail folded in as needed), then the year - and the year must be the last element, not placed in parentheses immediately after the author. Common violations found during the July 2026 pass:
+- Year placed right after the author in parentheses (`Author. (Year). "Title." Journal.`) instead of at the end
+- The actual title placed in the `.src-journal` span with only "Author. (Year)." left in `.src-title` - a reversed/mislabeled structure
+- A title given no quotation marks or italics at all
+- A citation whose "author" position is actually the publication's own name doubling as both author and publisher - acceptable for institutional/anonymous reports (e.g. Human Rights Watch, UN bodies) where the organization is the legitimate author, but do not force a real distinct author into that slot if none exists in the source material - reorder only, never invent an author, title, publisher, or year.
+
+If a citation is missing one of the four fields entirely (no author, no year, etc.), don't guess or invent it - flag it for Dexter instead and leave the citation as-is. Multi-year primary sources (e.g. a document published across several years) and "ongoing/updated" collections don't force cleanly into a single Year field - use judgment and flag rather than fabricate a single date.
+
+**Minimum source count:** every page should have at least 4 sources in its Sources section. Don't add placeholder sources to hit this number - flag any page below the minimum instead, for Dexter to address by adding real sources separately.
 # Context Site Status
 
 Last updated: 2026-07-03

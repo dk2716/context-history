@@ -1,8 +1,36 @@
 # Context Site Status
 
-Last updated: 2026-07-05
+Last updated: 2026-07-05 (citation standardization pass)
 
 Keep this file current after every session — Cowork sessions should read it first, and update it before finishing.
+
+## Session log — 2026-07-05 (later session): Sources section citation standardization
+
+Standardized every page's Sources section to one citation format: `Author Last, First. "Title." Publisher/Journal, Year.` — see Style Guide Addendum rule 8 for the full rule (added this session).
+
+**Scope:** all 50 content pages, 318 citations total, confirmed present before starting.
+
+**Result: 241 citations reformatted across 41 pages; 77 citations across 9 pages were already compliant and left untouched.**
+
+Reformatted counts per page (41 pages touched):
+`abdel-fattah-el-sisi` 5, `abu-bakr-al-baghdadi` 7, `anwar-sadat` 6, `arab-spring` 6, `augusto-pinochet` 7, `ayatollah-khomeini` 6, `bashar-al-assad` 5, `bill-clinton` 5, `colin-powell` 5, `dick-cheney` 6, `fall-of-assad-regime` 6, `gaddafi` 6, `gamal-abdel-nasser` 6, `george-w-bush` 6, `gulf-war` 5, `halabja-chemical-attack` 5, `henry-kissinger` 6, `hillary-clinton` 5, `iraq-war` 3, `joe-biden` 5, `khalifa-haftar` 6, `libyan-civil-war` 8, `non-aligned-movement` 6, `obama` 7, `operation-condor` 8, `osama-bin-laden` 4, `pan-arabism` 6, `realpolitik` 5, `resource-curse` 6, `responsibility-to-protect` 7, `richard-nixon` 6, `saddam-hussein` 8, `salvador-allende` 5, `september-11` 8, `suez-crisis` 7, `syrian-civil-war` 5, `tony-blair` 5, `wagner-group` 5, `war-on-terror` 6, `watergate` 7, `yevgeny-prigozhin` 5.
+
+**Already fully compliant (0 changes needed):** `1973-arab-israeli-war`, `angola-civil-war`, `baathism`, `democratic-socialism`, `hugo-chavez`, `iran-iraq-war`, `isis-islamic-state`, `northern-mali-conflict`, `rwandan-genocide`.
+
+**Common violation patterns found and fixed:**
+1. Year in parentheses right after the author, before the title (`Author. (Year). "Title." Journal.`) — moved to the end.
+2. Title mislabeled into the `.src-journal` span with only "Author. (Year)." left in `.src-title` — swapped so the real title moved to `.src-title` in quotes, and the real publisher/journal (previously sitting as unstructured trailing text) moved into `.src-journal` with the year appended.
+3. A handful of `<strong class="src-title">` citations on `joe-biden.html` that put the title first, then " — Author. Publisher, Year." in the journal span — fully rebuilt to Author → "Title." → Publisher, Year, and the tag normalized from `<strong>` to `<span>` to match every other citation on the site.
+4. Institutional/self-published citations (Human Rights Watch, U.S. Dept of Defense, etc.) with an empty publisher field — publisher set to the same organization name, which is the correct, non-invented value already present as the author.
+
+**Flagged, not touched (per the "don't guess" rule):**
+- `gaddafi.html` citation 5 — Gaddafi's *The Green Book*, originally published 1975–1979 across three volumes; forcing a single Year would lose real information already in the citation.
+- `operation-condor.html` citation 7 — National Security Archive collection marked "(Various years)"; an ongoing archive with no single publication year.
+- `joe-biden.html` citation 6 — "Notes on the claims in this article" is a methodology/sourcing note, not a real citation to an external work; has no Author/Title/Journal/Year fields to reformat.
+
+**Pages below the 4-source minimum:** only `iraq-war.html`, with 3 sources. Flagged per Dexter's instruction — no placeholder sources added; needs a real fourth source added separately.
+
+**Verification performed:** re-extracted and re-counted every Sources section after editing (318 citations before and after — none lost or duplicated); div/span/strong tag-balance check on all 41 touched files' Sources sections (all balanced); Node `new Function()` syntax check across all 52 HTML files' inline scripts (zero errors); a second full-site regex sweep specifically for the `Author (YYYY).` early-year pattern inside `.src-title` spans confirmed zero remaining violations after fixes.
 
 ## Live pages (51 total: 50 content pages + index.html)
 
@@ -83,6 +111,9 @@ Verification performed before sign-off: every href checked against the actual fi
 - [x] Site-wide integration of `fall-of-assad-regime.html`, `osama-bin-laden.html`, `war-on-terror.html` (CONTEXT_ARTICLES, index.html, Connected Topics) — resolved 2026-07-05
 - [ ] `khalifa-haftar.html` has a pre-existing duplicate "The Iraq War" entry in its `CONTEXT_ARTICLES` array (two near-identical objects) — noticed 2026-07-05, not fixed, out of scope for that session
 - [ ] `STYLE-GUIDE-ADDENDUM.md` appears to have an old, stale copy of `SITE-STATUS.md` (dated content, pre-July-3 session, "50 total" page count) appended after its own rule #7 — looks like an accidental paste, not intentional content; flagged 2026-07-05, not cleaned up
+- [x] Sources section citation format standardized site-wide — resolved 2026-07-05 (later session), see session log above
+- [ ] `iraq-war.html` has only 3 sources, below the new 4-source minimum (Style Guide Addendum rule 8) — flagged 2026-07-05, needs a real fourth source added
+- [ ] Three citations flagged during the citation-standardization pass rather than force-fit to the new format: `gaddafi.html` (Green Book, multi-year primary source), `operation-condor.html` (National Security Archive, "Various years"), `joe-biden.html` (a methodology note, not a real citation) — see session log above for detail
 
 ## Planned pages (priority order)
 
@@ -109,3 +140,5 @@ Verification performed before sign-off: every href checked against the actual fi
 - Quick Facts: no `.quick-facts-grid` wrapper — flat list of `.qf-item`s directly under the label
 - When bulk-replacing the nav block, check that the `onkeydown` handler name in the new nav matches a function actually defined on that page — some older pages named it `searchKey` instead of `searchKeydown`, and a blind nav swap will silently break keyboard navigation in search
 - This Cowork sandbox cannot fetch `wikimedia.org` / `commons.wikimedia.org` (empty response, no error) — don't attempt to construct hash-prefixed `upload.wikimedia.org` URLs from memory for pages not already using them; verify first or ask for the URL directly
+- Sources section citations: Author → "Title." → Publisher/Journal → Year, in that order, every time — see Style Guide Addendum rule 8. When a citation's title has been mislabeled into the wrong span (title text sitting in `.src-journal` while `.src-title` holds only "Author. (Year)."), the fix is a full swap, not just a reorder — check which span actually holds the title text before assuming a simple find-and-replace will work
+- Institutional/anonymous citations where the author name and the publisher name are the same organization (Human Rights Watch, UN bodies, government agencies) are legitimate, not errors — don't flag or "fix" these by inventing a distinct human author
