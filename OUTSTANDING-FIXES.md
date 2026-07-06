@@ -13,10 +13,17 @@ The three pages built earlier in this batch (`vladimir-putin.html`, `war-in-afgh
 - [x] `george-w-bush.html` → `war-in-afghanistan-2001-2021.html` Connected Topics card — resolved 2026-07-06
 - [x] `fall-of-assad-regime.html` → `withdrawal-from-afghanistan-2021.html` Connected Topics card — resolved 2026-07-06
 
-**Newly discovered this sync session:**
-- [ ] `wagner-group.html` and `yevgeny-prigozhin.html` still don't have inbound Connected Topics cards pointing to `vladimir-putin.html` — both discuss Putin's regime at length. Deliberately not added mechanically this session (writing a good preview sentence is a content judgment call, not a sync task) — flag for the next content-judgment session.
-- [ ] `osama-bin-laden.html`, `september-11.html`, and `war-on-terror.html` also don't yet have inbound Connected Topics cards pointing to `war-in-afghanistan-2001-2021.html`, despite all discussing related material — same reasoning, deferred to a content session rather than force-added mechanically.
-- [ ] Process note: when delegating bulk mechanical file edits to subagents, verify their self-reported results programmatically before trusting them. One subagent in this session reported "4 files already had the entry, skipped as duplicate" for a task with only 1 logged tool call — actually those 4 files (`obama.html`, `syrian-civil-war.html`, `wagner-group.html`, `yevgeny-prigozhin.html`) were simply missing the entry, not duplicates. Caught and fixed via an independent grep-based audit; site-wide href/div/JS sweep afterward confirmed all 54 non-template pages are clean.
+**Resolved 2026-07-06 (dedicated content-judgment linking session):**
+- [x] `wagner-group.html` → `vladimir-putin.html` Connected Topics card added ("People at the Centre" group), framed around Wagner as the instrument of Putin's hybrid state.
+- [x] `yevgeny-prigozhin.html` → `vladimir-putin.html` Connected Topics card added ("The Wagner World" group), explicitly framed around the loyalty-then-rebellion arc (two decades of service, then the June 2023 mutiny and death 63 days later) rather than simple subordination.
+- [x] Confirmed `vladimir-putin.html`'s existing outbound links to both `wagner-group.html` and `yevgeny-prigozhin.html` were already present from the original build, and the Prigozhin blurb already correctly reflected the mutiny/death arc — no edit needed on that side.
+- [x] `september-11.html` → `war-in-afghanistan-2001-2021.html` Connected Topics card added ("Events that followed directly").
+- [x] `osama-bin-laden.html` → `war-in-afghanistan-2001-2021.html` Connected Topics card added ("Events & Concepts").
+- [x] `war-on-terror.html` → `war-in-afghanistan-2001-2021.html` Connected Topics card added ("Events the doctrine produced").
+- [x] Confirmed `war-in-afghanistan-2001-2021.html` already linked back to all three (plus george-w-bush.html, obama.html, joe-biden.html, isis-islamic-state.html, withdrawal-from-afghanistan-2021.html) — all three are now bidirectional. No stronger 4th candidate page was found beyond the three named; none flagged.
+- [x] All 5 touched files verified: div balance matched, embedded JS parsed cleanly, no phantom hrefs, and `git diff` confirmed only additive changes (citations/sources/hero images untouched).
+
+**Process note (carried forward):** when delegating bulk mechanical file edits to subagents, verify their self-reported results programmatically before trusting them. One subagent in the prior sync session reported "4 files already had the entry, skipped as duplicate" for a task with only 1 logged tool call — actually those 4 files (`obama.html`, `syrian-civil-war.html`, `wagner-group.html`, `yevgeny-prigozhin.html`) were simply missing the entry, not duplicates. Caught and fixed via an independent grep-based audit; site-wide href/div/JS sweep afterward confirmed all 54 non-template pages are clean.
 
 ## Remaining batch pages not yet built
 

@@ -162,6 +162,16 @@ Verification performed before sign-off: every href checked against the actual fi
   - Also noticed in passing (not yet actioned): `gaddafi.html`'s Connected Topics card linking to `responsibility-to-protect.html` still uses a gstatic thumbnail — will need updating once that page's hero is fixed.
 - [x] Item 5 — re-confirmed the 5 phantom Connected Topics cards (`href="#"`) are still the only ones site-wide: "The 2012 Mali Coup" and "The Sahel" (both on `libyan-civil-war.html`; `gaddafi.html` does NOT currently have phantom cards for these, contrary to the prior note — it already links out correctly), "Universal Jurisdiction" (on `operation-condor.html` and `responsibility-to-protect.html` separately), "Weapons of Mass Destruction" (on `saddam-hussein.html`). No new phantoms introduced by this session's edits. All 5 still map to Tier 2/3 planned pages below.
 
+## Session log — 2026-07-06 (targeted linking session: Putin ↔ Wagner/Prigozhin, War in Afghanistan inbound links)
+
+Follow-up to the same day's sync session, resolving the two "newly discovered, deferred to a content-judgment session" items from `OUTSTANDING-FIXES.md`.
+
+- Read `vladimir-putin.html`, `wagner-group.html`, and `yevgeny-prigozhin.html` fully before editing. Found `vladimir-putin.html` already linked outbound to both pages from the original build, and its Prigozhin card blurb already correctly described the June 2023 mutiny and his death 63 days later — no edit needed there.
+- Added inbound Connected Topics cards: `wagner-group.html` → `vladimir-putin.html` (framed around Wagner as the deniable instrument of Putin's hybrid state) and `yevgeny-prigozhin.html` → `vladimir-putin.html` (framed explicitly around the loyalty-then-rebellion arc — two decades of service as Wagner's builder, then the armed mutiny and death — per instruction not to flatten this into simple subordination).
+- Checked `september-11.html`, `osama-bin-laden.html`, and `war-on-terror.html` for existing links to `war-in-afghanistan-2001-2021.html` — none existed despite all three already carrying its CONTEXT_ARTICLES search entry. Added one Connected Topics card to each, placed in the most relevant existing topics-group on that page. Confirmed `war-in-afghanistan-2001-2021.html` already links back to all three, making all three bidirectional. No stronger 4th candidate page turned up; nothing flagged.
+- Verified all 5 touched files: div open/close counts matched, embedded `<script>` blocks parsed cleanly via Node, no phantom hrefs (every link target confirmed to exist on disk), and `git diff --stat` confirmed each file only gained lines — no citation, source, or hero-image content was touched.
+- Both punch-list items in `OUTSTANDING-FIXES.md` marked resolved.
+
 ## Known issues / in progress
 
 - [ ] 13 hero images still on non-Wikimedia domains — see candidate list above, blocked on verified URLs
