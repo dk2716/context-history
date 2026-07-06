@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vladimir Putin — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Russia &amp; Eurasia</a><span class="breadcrumb-sep">›</span>
+        <span>Vladimir Putin</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Vladimir_Vladimirovich_Putin_2022.jpg/960px-Vladimir_Vladimirovich_Putin_2022.jpg" alt="Vladimir Putin" style="width:120px;height:120px;object-fit:cover;border-radius:10px;display:block;">
+        </div>
+        <div class="hero-content">
+          <div class="hero-region-tag">Person</div>
+          <h1>Vladimir Putin</h1>
+          <div class="hero-native">Владимир Путин</div>
+          <p class="hero-sub">The KGB lieutenant colonel who watched the Soviet empire collapse from a courtyard in Dresden, rose through patronage to Russia's presidency in a single decade, and has spent the quarter-century since rebuilding a personalized, hybrid state built to outlast reform — and to fight, when he judged it necessary, a war his own scholars call a case study in hubris.</p>
+          <div class="hero-meta">
+            <span>~20 min read</span><span>·</span>
+            <span>b. 1952</span><span>·</span>
+            <span>Russia</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Path to Power</a></li>
+        <li><a href="#regime">The Hybrid State</a></li>
+        <li><a href="#ideology">Ideology &amp; Derzhavnost</a></li>
+        <li><a href="#invasion">Explaining the 2022 Invasion</a></li>
+        <li><a href="#why-it-matters">Why It Matters Today</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+
+            <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Vladimir Vladimirovich Putin</div></div>
+            <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">October 7, 1952, Leningrad, Soviet Union (now St. Petersburg, Russia)</div></div>
+            <div class="qf-item"><div class="qf-label">Status</div><div class="qf-value">Alive; President of the Russian Federation (2000–2008, 2012–present); Prime Minister (1999–2000, 2008–2012)</div></div>
+            <div class="qf-item"><div class="qf-label">Career arc</div><div class="qf-value">KGB foreign intelligence officer (1975–1990, including a posting in Dresden, East Germany) → aide to reformist St. Petersburg mayor Anatoly Sobchak → Kremlin property administration → FSB director (1998) → Prime Minister (Aug. 1999) → Acting President (Dec. 1999) → elected President (March 2000)</div></div>
+            <div class="qf-item"><div class="qf-label">Ideology</div><div class="qf-value">Derzhavnost (great-power statism), gosudarstvennichestvo (primacy of the state over the individual), and a "Russian idea" of patriotism and social solidarity — scholars describe a hardening toward totalitarian consolidation since 2012</div></div>
+            <div class="qf-item"><div class="qf-label">Regime structure</div><div class="qf-value">A "hybrid state" (Graeme P. Herd) — a personalized power network spanning the formal constitutional state, state-owned "parastatal" corporations, and an oligarchic court bound by loyalty, patronage, and kompromat</div></div>
+            <div class="qf-item"><div class="qf-label">Defining conflicts</div><div class="qf-value">Second Chechen War (1999–2009), Russo-Georgian War (2008), annexation of Crimea (2014), full-scale invasion of Ukraine (2022–present)</div></div>
+            <div class="qf-item"><div class="qf-label">Key instruments</div><div class="qf-value">FSB and other security services (siloviki); state corporations (Rosneft, Gazprom, Rostec); the Wagner Group and its successor, Africa Corps</div></div>        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Path to Power</h2>
+
+        <p>Vladimir Putin was born on October 7, 1952, in Leningrad, into a family of modest means: his father worked in a factory, his grandfather had once cooked for Stalin, and the family shared a communal flat's kitchen with two other households. He studied law and German at Leningrad State University from 1970 to 1975 and became a city judo champion. Political scientist Peter Rutland, whose 2000 study of Putin's rise remains one of the earliest and most detailed English-language accounts, describes a man whose biography "suggests humble origins and modest ambition: intelligent, competent, and loyal; an organization man and a team player" — the opposite, in other words, of an obvious future autocrat.</p>
+
+        <p>Joining the KGB had been Putin's ambition since before he entered university, and he achieved it directly after graduating. He worked in foreign intelligence in Leningrad before being posted to Dresden, East Germany, in 1985, where he rose to the modest rank of lieutenant colonel. It was there, in November 1989, that Putin witnessed the collapse of the German Democratic Republic at first hand — describing decades later how he helped hold off an angry crowd outside the KGB's Dresden office while a call for military backup to the nearest Soviet garrison went unanswered for hours. "Moscow was silent," he later said. Biographers and scholars alike treat this moment — watching the Soviet security apparatus fail to protect its own outpost — as a formative memory behind Putin's later preoccupation with state weakness and humiliation.</p>
+
+        <p>Putin returned to Leningrad, briefly continued KGB work at the university, and then in 1990 was recruited as an aide to Anatoly Sobchak — the reformist, newly elected mayor of Leningrad (soon renamed St. Petersburg) and Putin's former law professor. He resigned from the KGB on the first day of the August 1991 coup against Gorbachev. Under Sobchak, Putin handled the city's dealings with foreign investors, reportedly capably, and built a reputation as a discreet, effective fixer. When Sobchak lost re-election in 1996, Putin — out of a job — moved to Moscow, joining the presidential property administration under Pavel Borodin with the backing of liberal reformist patrons Anatoly Chubais and Alexei Kudrin.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">1985</div><div class="stat-label">Year Putin was posted to Dresden, East Germany, as a KGB foreign intelligence officer</div></div>
+          <div class="stat-box"><div class="stat-number">1998</div><div class="stat-label">Year Yeltsin appointed Putin director of the FSB, the KGB's successor agency</div></div>
+          <div class="stat-box"><div class="stat-number">Aug. 1999</div><div class="stat-label">Putin named Prime Minister — a virtual unknown among five rapidly rotating Yeltsin-era premiers</div></div>
+          <div class="stat-box"><div class="stat-number">Dec. 31, 1999</div><div class="stat-label">Yeltsin's surprise resignation makes Putin Acting President; he is elected in his own right three months later</div></div>
+        </div>
+
+        <p>Putin's rise through the 1990s followed the classic pattern of Yeltsin-era Kremlin politics: promotion through patronage rather than elections or party competition. In March 1997 he was made deputy presidential chief of staff overseeing relations with Russia's regions, and a year later, first deputy chief of staff. In July 1998, Yeltsin appointed him director of the FSB. Then, in August 1999, in a decision that surprised even seasoned Russia-watchers — Putin's name had not appeared on any serious list of successors as late as spring 1999 — Yeltsin named him Prime Minister. Political scientists at the time were tracking Yevgeny Primakov, Gennady Zyuganov, Yuri Luzhkov, and other established figures; Putin, an outsider with no electoral base, was not among the names discussed.</p>
+
+        <p>What followed cemented his position. The Second Chechen War began that same August, triggered by a Chechen-based incursion into Dagestan and a wave of apartment-building bombings in Russian cities that killed nearly 300 people and were blamed on Chechen militants. Putin's blunt, uncompromising rhetoric about the war — he vowed to pursue terrorists "even in the outhouse" — and his association with a decisive military response drove his approval ratings from obscurity to dominance within months. On December 31, 1999, Yeltsin abruptly resigned, making Putin Acting President; his first act was to sign a decree granting Yeltsin and his family immunity from prosecution. Putin won the March 2000 presidential election with just over 50% of the vote — Russia's first peaceful, constitutional transfer of presidential power in its history, and the first electoral test of a leader assembled almost entirely by patronage rather than public political life.</p>
+
+      </section>
+
+      <section id="regime">
+        <h2>The Hybrid State</h2>
+
+        <p>Political scientists have struggled for two decades to name the system Putin built. Richard Sakwa's 2010 concept of a Russian "dual state" — a formal constitutional order shadowed by an informal "administrative state" of factional conflict and para-constitutional practice — captured something real but, as Graeme P. Herd argued in a widely cited 2018 analysis, understated how thoroughly the system had by then become personalized around access to Putin himself rather than institutional rank.</p>
+
+        <p>Herd's alternative framework — the "hybrid state" — distributes power across three interlocking pillars. The first is the visible, formal "normative state": the Presidential Administration, Cabinet of Ministers, State Duma, courts, and bureaucracy, encompassing roughly 73 senior officials by a 2018 U.S. Treasury count. The second pillar is semi-official: heads of "parastatal" entities, roughly 29 large state-owned corporations in which the state holds a 25% stake or greater — enterprises that by some estimates generate 70% of Russia's GDP and account for a third of its jobs. Rosneft, under Igor Sechin, exemplifies this tier: a state-within-a-state with a quarter-million employees and tens of billions in revenue, run by a figure who, in the words of one Russian defense analyst, "has never occupied high posts in the executive branch" and yet wields more real influence than most cabinet ministers.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">The Third Pillar: The Oligarchic Court</div>
+            <p>Herd identifies roughly 96 individuals — including figures like the Kovalchuk brothers, Gennady Timchenko, and Arkady Rotenberg — who form Putin's informal inner circle, each with a net worth exceeding $1 billion, gained and sustained through demonstrated political loyalty. As one political consultant put it, "Rotenberg is more influential than a lot of federal ministers. But who is Rotenberg?" — the point being that formal office is a poor predictor of real power in Putin's system.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Carrots and Sticks</div>
+            <p>Putin manages the tensions between these pillars through a mix of incentives: favored access, sanctioned corruption, and property redistribution on one hand; FSB surveillance, kompromat, selective prosecution, and intimidation on the other. As one former economic minister who fell from favor described the machinery bluntly: a person is invited for a walk, asked to hold a briefcase — and then arrested.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Survival Over Reform</div>
+            <p>Herd's central argument is that Putin's regime is "focused on survival and self-preservation rather than reform, development and expansion" — and that since roughly 2007, destabilizing Russia's neighbors has functioned as a rational strategy for a system unable or unwilling to pursue genuine structural reform at home. Manufactured confrontation with the West offers a domestic political payoff: it justifies "military-patriotic mobilization" precisely when economic reform is off the table.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Deniable Proxies</div>
+            <p>The hybrid state's defining feature, per Herd, is its deliberate blurring of public and private, domestic and external. This is the logic behind Russia's use of organized crime networks, "active measures" intelligence operations, and above all private military companies — the Wagner Group chief among them — which let the Kremlin project force in Libya, Mali, Syria, and Ukraine while maintaining official deniability.</p>
+          </div>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"Some of those in office are not in power, and some of those in power are not in office."</blockquote>
+          <cite>— Graeme P. Herd, "Russia's Hybrid State and President Putin's Fourth-Term Foreign Policy?" (2018)</cite>
+        </div>
+      </section>
+
+      <section id="ideology">
+        <h2>Ideology &amp; Derzhavnost</h2>
+
+        <p>It is tempting, historian and Russian opposition politician Vladimir Ryzhkov argues, to see Putin as "a venal thug — unprincipled, pragmatic, cynical and kleptocratic." Ryzhkov's 2024 analysis pushes back hard on this reading: Putin, he contends, has a genuine — if, in Ryzhkov's judgment, deeply misguided — ideology, and understanding it is a precondition for dealing with him effectively. "He's a true believer," Ryzhkov writes.</p>
+
+        <p>That ideology was laid out with striking explicitness in Putin's own programmatic essay, "Russia at the Turn of the Millennium," published on December 30, 1999 — days before he became Acting President. It named four pillars of a "Russian idea": patriotism, understood as pride in the Fatherland's history; <em>derzhavnost</em>, roughly meaning enduring great-power status; <em>gosudarstvennichestvo</em>, or statehood, explicitly opposed to liberal Western models of individual rights; and social solidarity, the priority of collectivism over individualism. "For Russians," Putin wrote, "a strong state is not an anomaly, not something to be fought against, but, on the contrary, the source and guarantor of order, the initiator and the main driving force behind any change."</p>
+
+        <p>Ryzhkov traces a radicalization of these ideas across two decades: the 2007 Munich speech, in which Putin publicly broke with the West's post-Cold War order; the 2008 Russo-Georgian war; the 2014 annexation of Crimea; and the full-scale 2022 invasion of Ukraine, each framed as a defense of Russia's rightful sphere of influence against Western encroachment. Domestically, the turning point came in 2012, after mass urban protests against Putin's return to the presidency and allegations of rigged Duma elections. From that year, Ryzhkov argues, Putin's government pursued an intensifying emphasis on "traditional values," dismantling federalism, eliminating the separation of powers, and systematically restricting civil society, religious and sexual minorities, and independent media — culminating, after the 2022 invasion, in comprehensive censorship, mandated ideological history curricula (including a new university course on "the Fundamentals of Russian Statehood"), and the criminalization of dissent as foreign-agent activity.</p>
+
+        <p>Ryzhkov's conclusion is stark: Putin's Russia is in the process of "consolidating a totalitarian system" — one that, while unlikely to mirror the Soviet Union's or Nazi Germany's exact institutional form, represents a comparable expansion of state control into spheres of life previously left unregulated. He draws an explicit parallel to George Orwell's observation that permanent war against a purportedly existential enemy is the optimal framework for mobilizing a population and justifying repression. "The Kremlin's main enemy is not Ukraine but the West," Ryzhkov writes. "The weakening, retreat or, better yet, the collapse of the West is its goal."</p>
+
+      </section>
+
+      <section id="invasion">
+        <h2>Explaining the 2022 Invasion</h2>
+
+        <p>Why did Putin invade Ukraine in February 2022? Realist scholars like John Mearsheimer and Stephen Walt locate the answer in structural power politics: NATO's post-Cold War enlargement, in this reading, produced a threatening shift in the balance of power that Russia had rational strategic reasons to resist by force. Ryuta Ito's 2023 article in <em>International Affairs</em> takes this thesis seriously but argues it cannot, on its own, explain the war Russia actually fought — a war that killed large numbers of Russian soldiers who did not want to be there, devastated the Russian economy, and turned Moscow into an international pariah. As Ito puts it, citing fellow scholar Harald Edinger, "the current invasion is a strategic disaster." A rational, power-maximizing actor does not usually choose strategic disasters.</p>
+
+        <p>Ito's answer is a concept he calls "hubris balancing" — a form of what balance-of-power theorists call overbalancing, in which a state misperceives a defensively minded rival as an aggressor and responds with force disproportionate to any real threat. Ito grounds this in the psychology of self-deception: the well-documented human tendency to overestimate one's own power and underestimate risk, described by biologist Robert Trivers as denying "the truth to ourselves" through repression, rationalization, and self-serving cognitive distortion. Applied to Putin, Ito identifies three interlocking pathways.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Overconfidence</div>
+            <p>Putin, by multiple scholarly accounts, genuinely believed Ukraine would not meaningfully resist and that a swift, decisive campaign would install a compliant government in Kyiv. Angela Stent, in a source that anchors the closing analysis of this article, describes Putin as having been "led to believe that the war would be over after a 72-hour blitzkrieg" — so confident of victory that Russian officers reportedly carried ceremonial uniforms for a planned victory parade. Volodymyr Zelenskyy's approval rating stood near 30% before the war; Putin's advisers, scholars argue, told him what he wanted to hear rather than what was true.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Anger</div>
+            <p>Ito and the scholars he cites (notably Richard Ned Lebow) describe an emotional dimension inseparable from the strategic one: Putin's enduring fury at the Soviet collapse and at what he frames as Western moral and civilizational aggression — explicit, for instance, in his own remarks tying the war to his rejection of Western LGBTQ+ rights discourse as a threat to "our own future." Putin has cast the war as a "clash of civilizations," not a narrow territorial dispute.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Nationalist Myth-Making</div>
+            <p>Ito highlights Putin's July 2021 essay "On the Historical Unity of Russians and Ukrainians" as a case study in what he terms nationalist myth-making — the use of a highly selective, thousand-year historical narrative to deny Ukraine's legitimacy as a distinct nation, laying rhetorical groundwork for the invasion well before it began.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">The Putin Doctrine</div>
+            <p>Angela Stent's "Putin Doctrine" framing, published in <em>Foreign Affairs</em> days before the 2022 invasion, ties these threads to three linked strategic ambitions: reversing what Putin has called the "greatest geopolitical catastrophe" of the Soviet Union's collapse, splitting the Western transatlantic alliance, and renegotiating the post-Cold War European security settlement Russia views as imposed under duress in the 1990s.</p>
+          </div>
+        </div>
+
+        <p>These frameworks are not mutually exclusive with Ryzhkov's ideological account or Herd's hybrid-state model — if anything, they reinforce one another. A leader steeped in derzhavnost ideology, operating atop a personalized power network insulated from dissenting information by design, is structurally primed for exactly the kind of self-deceiving overconfidence Ito describes. The invasion's catastrophic early failures — the retreat from Kyiv, the atrocities at Bucha, the humiliating exposure of Russian military weakness — did not, notably, produce a course correction. Herd's "hybrid state" framework helps explain why: a system built around loyalty and deniability rather than institutional accountability has few internal mechanisms for admitting error.</p>
+
+        <div class="pull-quote">
+          <blockquote>"Putin apparently had been led to believe that the war would be over after a 72-hour blitzkrieg, Kyiv would fall, and [Zelenskyy] would surrender or flee and be replaced by a puppet government controlled by Russia."</blockquote>
+          <cite>— Angela Stent, quoted in Ryuta Ito, "Hubris Balancing" (2023)</cite>
+        </div>
+      </section>
+
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+        <p>Putin is not a historical figure. As of 2026 he remains in power, presiding over a full-scale war in Europe now well into its fifth year, a hybrid state that has proven far more durable than many Western analysts expected, and a Russia whose global posture — in Ukraine, Syria, Africa, and beyond — continues to be shaped by the ideological and psychological patterns scholars have spent two decades trying to name.</p>
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>The War in Ukraine Continues to Define European Security</h3>
+            <p>The invasion Ito describes as a "strategic disaster" has nonetheless proven durable — Russia continues to hold significant Ukrainian territory, and the war has reshaped NATO, European defense spending, and global energy markets. Whether the invasion is ultimately judged a rational, if costly, strategic gambit or the hubris-driven miscalculation Ito describes remains one of the central open questions of contemporary international relations.</p>
+          </div>
+          <div class="matters-card">
+            <h3>The Hybrid State Has Outlasted Predictions of Its Collapse</h3>
+            <p>Sanctions, battlefield losses, and the 2023 Wagner mutiny were each, at various points, predicted to fracture Putin's power network. None has. Herd's argument — that the hybrid state's blend of formal legitimacy and deniable proxy power makes it unusually resilient to external pressure — has held up better than many alternative predictions.</p>
+          </div>
+          <div class="matters-card">
+            <h3>Succession Remains Genuinely Unresolved</h3>
+            <p>Herd's 2018 analysis flagged succession as the central long-term vulnerability of Putin's system: a successor must be loyal enough to protect Putin but not so strong as to challenge him. No such figure has been publicly identified, and the question of what happens to Russia's hybrid state after Putin — whether it fragments along elite factional lines or reproduces itself under a chosen heir — remains entirely open.</p>
+          </div>
+          <div class="matters-card">
+            <h3>The Wagner Model Has Been Exported Globally</h3>
+            <p>The deniable, hybrid-state logic Herd identifies did not stay confined to Russia's near abroad. It was exported, via the Wagner Group and its state-controlled successor Africa Corps, to Libya, Mali, the Central African Republic, and Sudan — making Putin's model of statecraft a template studied and, in places, imitated by other authoritarian governments.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>Putin's legacy, like Herd's "hybrid state" itself, resists a single settled verdict — not least because, unlike most subjects of a historical biography, his story has no ending yet. What can be said is that he inherited a Russia widely perceived (accurately or not) as chaotic and humiliated, built a system that has proven durable under extraordinary external pressure, and chose, in 2022, to gamble that system's stability on a war that scholarly consensus increasingly treats as a serious strategic and moral miscalculation.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">What his supporters argue</div>
+            <ul>
+              <li>He ended the political and economic chaos of the 1990s, restoring a functioning, centralized Russian state after Yeltsin-era near-collapse</li>
+              <li>He restored Russia's standing as a great power capable of shaping outcomes in Syria, Africa, and its immediate neighborhood, after a decade of post-Soviet marginalization</li>
+              <li>His emphasis on "traditional values" and social solidarity reflects a genuine conservative constituency in Russia exhausted by 1990s liberal shock therapy</li>
+              <li>He built a hybrid state resilient enough to withstand the most extensive Western sanctions regime ever assembled against a major economy</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">What the evidence shows</div>
+            <ul>
+              <li>Since 2012 he has dismantled federalism, eliminated meaningful separation of powers, and — per Ryzhkov — moved the country toward what scholars describe as an emerging totalitarian system</li>
+              <li>The 2022 invasion of Ukraine has killed and displaced enormous numbers of civilians and soldiers on both sides, for strategic goals Ito and others argue were built on self-deceiving overconfidence rather than sound assessment</li>
+              <li>His power network, per Herd, is organized around personal loyalty, kompromat, and sanctioned corruption rather than institutional accountability or the rule of law</li>
+              <li>Political opposition, independent media, and civil society have been systematically criminalized, particularly after 2022</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legacy-card complex" style="margin-top:1.25rem;">
+          <div class="legacy-label">What remains genuinely contested</div>
+          <ul>
+            <li>Was the 2022 invasion a rational response to NATO enlargement, as realists like Mearsheimer argue, or the ideologically and psychologically driven miscalculation described by Ryzhkov and Ito?</li>
+            <li>Is Putin's "hybrid state" a durable new model of authoritarian governance, or a personalized system that cannot survive his own departure from power?</li>
+            <li>Did Putin's ideology precede and drive his consolidation of power, or did the ideology harden in service of a power-preservation project that began for more pragmatic reasons?</li>
+            <li>Can a system this dependent on one man's judgment and one network's cohesion actually plan for succession — or is a succession crisis, as Herd suggested in 2018, effectively inevitable?</li>
+          </ul>
+        </div>
+
+        <p>The most defensible reading, drawing on all four scholarly accounts behind this article, is that Putin's rise and rule cannot be reduced to either pure cynicism or pure ideological conviction. He is, per Ryzhkov, a genuine believer in Russian great-power restoration; he is, per Herd, the architect and referee of a power network organized around personal loyalty rather than institutions; and he is, per Ito, a leader whose confidence in his own and his country's power has, at critical junctures, badly outrun reality. None of these three descriptions is complete without the others.</p>
+
+        <div class="pull-quote">
+          <blockquote>"Putin has had a guiding ideology from his regime's earliest days. He consolidated power not merely to seize the country's wealth, but also to advance an ideal Russia and secure what he considered its rightful place in the world."</blockquote>
+          <cite>— Vladimir Ryzhkov, "Putin's Ideological State" (2024)</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People directly connected</div>
+          <div class="topics-grid">
+            <a href="yevgeny-prigozhin.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg" alt="Yevgeny Prigozhin">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Yevgeny Prigozhin</div>
+              <div class="topic-preview">The caterer-turned-warlord who built Wagner as a deniable instrument of Putin's hybrid state — until his 2023 mutiny against Moscow itself, and his death in a plane crash 63 days later.</div>
+            </a>
+            <a href="bashar-al-assad.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg" alt="Bashar al-Assad">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Bashar al-Assad</div>
+              <div class="topic-preview">The Syrian dictator Putin's 2015 military intervention kept in power for nine additional years — until Assad fled to Moscow when his regime collapsed in December 2024.</div>
+            </a>
+            <a href="khalifa-haftar.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg" alt="Khalifa Haftar">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Khalifa Haftar</div>
+              <div class="topic-preview">The Libyan warlord whose forces Wagner Group mercenaries backed from 2018 — one of the clearest illustrations of Putin's hybrid state exporting deniable military force abroad.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Events &amp; Concepts</div>
+          <div class="topics-grid">
+            <a href="wagner-group.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png" alt="The Wagner Group">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">The Wagner Group</div>
+              <div class="topic-preview">The paradigmatic instrument of Putin's hybrid statecraft — a nominally private mercenary force that let the Kremlin project power across three continents with plausible deniability.</div>
+            </a>
+            <a href="syrian-civil-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png" alt="The Syrian Civil War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Syrian Civil War</div>
+              <div class="topic-preview">Putin's 2015 intervention was Russia's first major post-Soviet military expedition outside its immediate neighborhood — the proving ground for tools later used in Ukraine and Africa.</div>
+            </a>
+            <a href="fall-of-assad-regime.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/HTS_Rebels_coordinating_at_Hama.png/960px-HTS_Rebels_coordinating_at_Hama.png" alt="The Fall of the Assad Regime">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Fall of the Assad Regime</div>
+              <div class="topic-preview">The December 2024 collapse of Russia's most important Middle Eastern client — a stark demonstration of the limits of Putin's power projection while Russia's military was consumed by Ukraine.</div>
+            </a>
+            <a href="realpolitik.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg" alt="Realpolitik">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">Realpolitik</div>
+              <div class="topic-preview">The doctrine of state interest above morality or law that many realist scholars invoke to explain Putin's foreign policy — and whose limits Ito's "hubris balancing" thesis directly challenges.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">Ryzhkov, Vladimir. "Putin's Ideological State."</span>
+            <span class="src-journal">Survival, 66:5, 2024, pp. 49–54.</span>
+            <span class="src-note">A Russian opposition politician and historian's argument that Putin is a genuine ideological "true believer" in Russian great-power restoration (derzhavnost, gosudarstvennichestvo), not merely a cynical kleptocrat — and that his post-2012 governance represents a deliberate consolidation of totalitarian control. The central source for this article's Ideology section.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">Ito, Ryuta. "Hubris Balancing: Classical Realism, Self-Deception and Putin's War Against Ukraine."</span>
+            <span class="src-journal">International Affairs, 99:5, 2023, pp. 2037–2055.</span>
+            <span class="src-note">Develops the concept of "hubris balancing" — a form of overbalancing driven by leader self-deception — and applies it directly to Putin's 2022 invasion decision, examining overconfidence, anger at Western liberalism, and nationalist myth-making as three interlocking causal pathways. The central source for this article's section on explaining the 2022 invasion.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Herd, Graeme P. "Russia's Hybrid State and President Putin's Fourth-Term Foreign Policy?"</span>
+            <span class="src-journal">The RUSI Journal, 163:4, 2018, pp. 20–28.</span>
+            <span class="src-note">Develops the "hybrid state" model of Putin's power network across three pillars — the normative state, parastatal corporations, and the oligarchic court — and argues that destabilizing neighbors functions as a rational regime-survival strategy. The central source for this article's section on regime structure.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">Rutland, Peter. "Putin's Path to Power."</span>
+            <span class="src-journal">Post-Soviet Affairs, 16:4, 2000, pp. 313–354.</span>
+            <span class="src-note">Written during the spring 2000 election campaign itself, this remains one of the earliest and most detailed English-language accounts of Putin's KGB career, his patronage-driven rise under Sobchak and then Yeltsin, and the circumstances of his appointment as prime minister and then acting president. The central source for this article's Origins &amp; Path to Power section.</span>
+          </li>
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">Stent, Angela. "The Putin Doctrine: A Move on Ukraine Has Always Been Part of the Plan."</span>
+            <span class="src-journal">Foreign Affairs, January 27, 2022.</span>
+            <span class="src-note">Published days before the full-scale invasion, this article frames Putin's ambitions around three linked goals: reversing the "greatest geopolitical catastrophe" of the Soviet collapse, splitting the Western transatlantic alliance, and renegotiating the post-Cold War European security settlement. Cited throughout this article via the doctrine framing described above.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="index.html" style="color:var(--purple);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Vladimir Putin', desc: 'The KGB lieutenant colonel who rose through patronage to Russia\'s presidency, built a personalized hybrid state, and invaded Ukraine in a war his own scholars call a case study in hubris.', url: 'vladimir-putin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Vladimir_Vladimirovich_Putin_2022.jpg/960px-Vladimir_Vladimirovich_Putin_2022.jpg' },
+    { type: 'event',   title: 'The Fall of the Assad Regime', desc: 'Eleven days. A 54-year dynasty. How a lightning rebel offensive out of Idlib ended the Assad family\'s rule of Syria — and rearranged the Middle East\'s balance of power in the process.', url: 'fall-of-assad-regime.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/HTS_Rebels_coordinating_at_Hama.png/960px-HTS_Rebels_coordinating_at_Hama.png' },
+    { type: 'person',  title: 'Osama bin Laden', desc: 'The Saudi construction heir who founded al-Qaeda, orchestrated the September 11 attacks, and spent a decade hiding in Pakistan before a U.S. raid killed him in 2011.', url: 'osama-bin-laden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Osama_bin_Laden%2C_portr%C3%A6t.jpg/960px-Osama_bin_Laden%2C_portr%C3%A6t.jpg' },
+    { type: 'concept', title: 'The War on Terror', desc: 'The doctrine that took the United States from Kabul to Baghdad in the name of fighting terrorism — and whose contradictions helped produce the very insurgency it was meant to prevent.', url: 'war-on-terror.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg/960px-1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg' },
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Car_bomb_in_Iraq.jpg/960px-Car_bomb_in_Iraq.jpg' },
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',        desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',       url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                    desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                               url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect',   desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.',        url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Yom_Kippur_War_%28G-1-4063-%D7%93%D7%A6%29.jpg/960px-Yom_Kippur_War_%28G-1-4063-%D7%93%D7%A6%29.jpg' },
+    { type: 'event',   title: 'The Libyan Civil War',            desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',                                                  url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',                desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',                url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',                 desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',                                                             url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',                desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.",                                                    url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',                  desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',                                                 url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',                 desc: "The refugee who became America's most powerful and most controversial diplomat.",                                                       url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg/960px-Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',                desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',                                                  url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',                   desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',                                                       url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                    desc: "America's first Black president — who promised transformation and left a country more divided.",                                       url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',              desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',                            url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',                  desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',                                        url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',              desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.",                                    url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+    else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+    else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+    else if (e.key==='Escape') { toggleSearch(); return; }
+    items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.height = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+    const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+  });
+  function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+  function toggleSave() {
+    const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+    if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+    else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+  }
+</script>
+</body>
+</html>
