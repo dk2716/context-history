@@ -2,15 +2,25 @@
 
 This file did not previously exist in the repo — created 2026-07-06 to give the batch-page sessions (Putin, Soleimani, Mubarak, War in Afghanistan 2001–2021, Withdrawal from Afghanistan 2021, Egyptian Revolution 2011, Regime Change) a dedicated punch-list separate from SITE-STATUS.md's session log. Seeded from SITE-STATUS.md's existing "Known issues / in progress" section plus items flagged during the current 7-page batch. Keep this file current alongside SITE-STATUS.md — update it whenever an item is resolved or a new one is found.
 
-## Sync session required once all 7 batch pages are built
+## Sync session required once remaining batch pages are built
 
-The following pages have been built in isolated sessions and are cross-link-complete only *outward* (they link to pre-existing pages), not *inward* (pre-existing pages do not yet link to them). This mirrors how the `fall-of-assad-regime.html` / `osama-bin-laden.html` / `war-on-terror.html` batch was handled in July — built individually, then synced in one dedicated pass.
+The three pages built earlier in this batch (`vladimir-putin.html`, `war-in-afghanistan-2001-2021.html`, `withdrawal-from-afghanistan-2021.html`) were fully synced site-wide on 2026-07-06 — see SITE-STATUS.md's session log for full detail. Resolved this pass:
 
-- [ ] `vladimir-putin.html` (built 2026-07-06) — needs: CONTEXT_ARTICLES entries added to all other content pages; `index.html` browse grid + category count update; Connected Topics cards added FROM `wagner-group.html` and `yevgeny-prigozhin.html` (both discuss Putin's regime at length but don't link to his page yet)
-- [ ] `war-in-afghanistan-2001-2021.html` (built 2026-07-06) — needs: CONTEXT_ARTICLES entries added to all other content pages; `index.html` browse grid + category count update; Connected Topics cards added FROM `george-w-bush.html`, `obama.html`, `joe-biden.html`, `osama-bin-laden.html`, `september-11.html`, and `war-on-terror.html` (all discuss the Afghanistan war but don't link to this page yet). Its cross-link to `withdrawal-from-afghanistan-2021.html` was already added directly (both the inline text link and a Connected Topics card) since that page now exists — resolved 2026-07-06.
-- [x] Cross-link from `war-in-afghanistan-2001-2021.html` to `withdrawal-from-afghanistan-2021.html` — resolved 2026-07-06, added directly once the target page existed (both the forward-pointer sentence and a Connected Topics card)
-- [ ] `withdrawal-from-afghanistan-2021.html` (built 2026-07-06) — needs: CONTEXT_ARTICLES entries added to all other content pages; `index.html` browse grid + category count update (Events 18 → 19); Connected Topics cards added FROM `joe-biden.html`, `george-w-bush.html`, and `fall-of-assad-regime.html` (all discuss related material but don't link to this page yet)
-- [ ] Remaining batch pages not yet built: Soleimani, Mubarak, Egyptian Revolution 2011, Regime Change — once built, add to this same sync pass rather than doing separate syncs. `withdrawal-from-afghanistan-2021.html` in particular is a strong candidate for a Connected Topics link FROM the future Regime Change concept page once it exists.
+- [x] CONTEXT_ARTICLES entries for all 3 new pages added to all 50 pre-existing content pages plus `index.html` — resolved 2026-07-06
+- [x] `index.html` browse grid cards + category count update (24/17/9 → 25/19/9) — resolved 2026-07-06
+- [x] Cross-link from `war-in-afghanistan-2001-2021.html` to `withdrawal-from-afghanistan-2021.html` — resolved 2026-07-06 (done in the content session once the target page existed)
+- [x] `joe-biden.html` → `withdrawal-from-afghanistan-2021.html` Connected Topics card — resolved 2026-07-06
+- [x] `george-w-bush.html` → `war-in-afghanistan-2001-2021.html` Connected Topics card — resolved 2026-07-06
+- [x] `fall-of-assad-regime.html` → `withdrawal-from-afghanistan-2021.html` Connected Topics card — resolved 2026-07-06
+
+**Newly discovered this sync session:**
+- [ ] `wagner-group.html` and `yevgeny-prigozhin.html` still don't have inbound Connected Topics cards pointing to `vladimir-putin.html` — both discuss Putin's regime at length. Deliberately not added mechanically this session (writing a good preview sentence is a content judgment call, not a sync task) — flag for the next content-judgment session.
+- [ ] `osama-bin-laden.html`, `september-11.html`, and `war-on-terror.html` also don't yet have inbound Connected Topics cards pointing to `war-in-afghanistan-2001-2021.html`, despite all discussing related material — same reasoning, deferred to a content session rather than force-added mechanically.
+- [ ] Process note: when delegating bulk mechanical file edits to subagents, verify their self-reported results programmatically before trusting them. One subagent in this session reported "4 files already had the entry, skipped as duplicate" for a task with only 1 logged tool call — actually those 4 files (`obama.html`, `syrian-civil-war.html`, `wagner-group.html`, `yevgeny-prigozhin.html`) were simply missing the entry, not duplicates. Caught and fixed via an independent grep-based audit; site-wide href/div/JS sweep afterward confirmed all 54 non-template pages are clean.
+
+## Remaining batch pages not yet built
+
+- [ ] Soleimani, Mubarak, Egyptian Revolution 2011, Regime Change — once built, add to a dedicated sync pass rather than doing separate syncs. `withdrawal-from-afghanistan-2021.html` in particular is a strong candidate for a Connected Topics link FROM the future Regime Change concept page once it exists.
 
 ## Carried over from SITE-STATUS.md
 

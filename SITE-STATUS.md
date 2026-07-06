@@ -1,8 +1,25 @@
 # Context Site Status
 
-Last updated: 2026-07-06 (latest session: withdrawal-from-afghanistan-2021.html built)
+Last updated: 2026-07-06 (latest session: site-wide sync of Putin, War in Afghanistan, Withdrawal from Afghanistan pages)
 
 Keep this file current after every session — Cowork sessions should read it first, and update it before finishing.
+
+## Session log — 2026-07-06 (latest session): site-wide sync of the three newest pages
+
+Sync/audit session (not content creation) integrating `vladimir-putin.html`, `war-in-afghanistan-2001-2021.html`, and `withdrawal-from-afghanistan-2021.html` — all three built in separate prior sessions — into the rest of the site, following the same pattern used for the `fall-of-assad-regime.html`/`osama-bin-laden.html`/`war-on-terror.html` batch in the prior cycle.
+
+1. **CONTEXT_ARTICLES entries added to all 50 pre-existing content pages plus `index.html`'s separate array** (51 files touched total). Each now carries all three new entries with `thumb` fields copied from each new page's actual hero image src: `vladimir-putin.html` → `Vladimir_Vladimirovich_Putin_2022.jpg`, `war-in-afghanistan-2001-2021.html` → `An_operation_in_Bak_District_Image_9_of_10.jpg`, `withdrawal-from-afghanistan-2021.html` → `Afghanistan_withdrawal_Image_7_of_7.jpg`, all at 960px Wikimedia URLs. Work was delegated to two parallel subagents (25 files each) for the mechanical insertion; one subagent's self-reported completion (batch 2, 25 files) was independently verified afterward and found to be wrong for 4 files (`obama.html`, `syrian-civil-war.html`, `wagner-group.html`, `yevgeny-prigozhin.html` — each was missing the Vladimir Putin entry specifically despite the subagent reporting it as an intentional duplicate-skip). All 4 were corrected directly and every one of the 50 files was independently re-verified via a script checking exact entry count (3), div balance, and JS syntax — all 50 pass. **Lesson for future sync sessions: subagent self-reports on bulk mechanical edits must be spot-checked programmatically, not trusted at face value — this one had only 1 logged tool call for a 25-file task, which should have been a red flag.**
+2. **`index.html` browse grid updated:** added `vladimir-putin.html` to the People tab (after Yevgeny Prigozhin, last alphabetically in that section), `war-in-afghanistan-2001-2021.html` and `withdrawal-from-afghanistan-2021.html` to the Events tab (after Watergate). Category counts in the hero tagline updated 24/17/9 → 25/19/9. `entry-card-thumb` images added for all three using the same verified hero-image URLs. `homeRunSearch` required no direct code change — it already reads from `CONTEXT_ARTICLES`, which now includes all three entries; confirmed "Putin," "Withdrawal," and the substring "ghani" (which also happens to match inside "Afghanistan") all resolve to real hits programmatically.
+3. **Connected Topics cards added** (all targets confirmed to exist on disk before linking):
+   - `joe-biden.html` ↔ `withdrawal-from-afghanistan-2021.html` (added to "Related events")
+   - `george-w-bush.html` ↔ `war-in-afghanistan-2001-2021.html` (added to "Events")
+   - `fall-of-assad-regime.html` ↔ `withdrawal-from-afghanistan-2021.html` (added to "Related events" — the parallel rapid-regime-collapse comparison flagged in the prior session)
+   - No reciprocal link was force-added into `vladimir-putin.html` from these three — checked first and confirmed Putin's page already links to `fall-of-assad-regime.html` from its original build (a genuine connection via Assad fleeing to Moscow); no genuine connection exists to Biden or Bush specifically, so none was added, per instruction not to force cross-links.
+4. **Verification performed:** div-tag balance and Node `new Function()` JS syntax check on every one of the 54 touched files (50 synced pages + `index.html` + `joe-biden.html` + `george-w-bush.html` + `fall-of-assad-regime.html`); a full site-wide href sweep across all 54 non-template `.html` files confirmed zero broken/missing link targets (only the pre-existing tracked `href="#"` phantoms remain, see Outstanding Fixes); citation (`src-num`) counts spot-checked on the three inbound-link pages to confirm sources were untouched.
+
+**Not done this session (deferred, per instruction):** no changes to any page's actual prose/content, sources, or hero images — this was sync-only. `wagner-group.html` and `yevgeny-prigozhin.html` still don't have inbound Connected Topics cards pointing to `vladimir-putin.html` (only CONTEXT_ARTICLES entries were added this session, not Connected Topics cards) — flagged in Outstanding Fixes for a content-judgment session, since adding those cards well means writing real preview text, not just mechanically inserting a link.
+
+## Session log — 2026-07-06: `withdrawal-from-afghanistan-2021.html` built (3rd page of the 7-page batch)
 
 ## Session log — 2026-07-06 (latest session): `withdrawal-from-afghanistan-2021.html` built (3rd page of the 7-page batch)
 
