@@ -1,8 +1,34 @@
 # Context Site Status
 
-Last updated: 2026-07-08 (latest session: Soleimani and Mubarak pages built, ISIS grammar fix, Afghanistan cost figure updated)
+Last updated: 2026-07-08 (latest session: site-wide sync of qasem-soleimani.html and hosni-mubarak.html)
 
 Keep this file current after every session — Cowork sessions should read it first, and update it before finishing.
+
+## Session log — 2026-07-08 (latest session): site-wide sync of `qasem-soleimani.html` and `hosni-mubarak.html`
+
+Sync/audit session (not content creation) integrating the two pages built earlier the same day into the rest of the site, following the same two-phase pattern used for every prior page-build batch (build session → separate sync session).
+
+1. **`index.html` browse grid updated:** added `hosni-mubarak.html` to the People tab (alphabetically between Hillary Clinton and Hugo Chávez) and `qasem-soleimani.html` to the People tab (alphabetically between Osama bin Laden and Richard Nixon). Hero tagline category count updated 25/19/9 → **27/19/9** (people count only — no new events or concepts this batch). `entry-card-thumb` images for both use the exact hero-image URLs verified directly from each page's own `hero-avatar` markup, not a CONTEXT_ARTICLES thumb field. `index.html`'s own separate `CONTEXT_ARTICLES` array (used by `homeRunSearch`, distinct from the browse grid's static cards) also updated with both entries, inserted at the top of the array — `homeRunSearch` required no code change, it already reads from this array.
+2. **CONTEXT_ARTICLES entries added to all 53 other pre-existing content pages** (54 files touched total including `qasem-soleimani.html` itself, which was missing the Mubarak entry since it was built before Mubarak existed — added there too). Insertion done via a Python script anchored on `CONTEXT_ARTICLES = [` (regex-matched regardless of leading indentation, since roughly a third of pages declare the array at 0-indent and the rest at 2-space indent — both patterns confirmed present and handled), inserting both new entries as the first two array items, not a full-file rewrite. Every file independently verified afterward via script: exactly one `qasem-soleimani.html` URL and exactly one `hosni-mubarak.html` URL present per file, zero duplicates, zero misses. **Lesson from the prior sync session (Putin/Afghanistan batch) applied here: this entire batch was executed directly via a single verified script rather than delegated to a subagent, then independently re-verified programmatically — no self-reported-but-unverified work this time.**
+3. **`runSearch` canonical-match check performed on all 55 touched pages plus the two new pages** (57 total): confirmed all 57 have both thumbnail rendering and relevance-sort logic present and functionally identical to `khalifa-haftar.html`'s canonical version. One page, `libyan-civil-war.html`, has a whitespace/formatting variant (multi-line template literal instead of one-line) that is functionally identical — not a real violation of Style Guide rule 3, which concerns thumbnail rendering and sort logic being present, not exact formatting — left untouched per instruction not to make unrelated changes.
+4. **Connected Topics cross-links verified and extended.** The five existing inbound cards from the build session (`ayatollah-khomeini.html`, `bashar-al-assad.html` → Soleimani; `anwar-sadat.html`, `abdel-fattah-el-sisi.html`, `arab-spring.html` → Mubarak) were re-confirmed correct — all five are genuine, well-documented connections, not phantom links. Six additional real inbound cards added after reviewing every page Soleimani's or Mubarak's own pages already link out to:
+   - `iran-iraq-war.html` → Soleimani ("People at the centre of this event" group — the war that forged him as a field commander)
+   - `iraq-war.html` → Soleimani ("People directly connected" group — his Quds Force armed the Shia insurgency against U.S. occupation)
+   - `isis-islamic-state.html` → Soleimani ("People at the centre of this event" group — his personal coordination of Iraq's anti-ISIS militia response)
+   - `war-on-terror.html` → Soleimani ("People who shaped the doctrine" group — his 2020 killing was justified under War on Terror-era preemption doctrine)
+   - `syrian-civil-war.html` → Soleimani ("People Directly Connected" group — his role securing Assad's survival and the Russian intervention)
+   - `1973-arab-israeli-war.html` → Mubarak ("People at the centre of this event" group — his Egyptian Air Force command, later the foundation of his post-uprising rehabilitation)
+   
+   **One candidate considered and deliberately not added:** `gamal-abdel-nasser.html` → Mubarak. Nasser's own Connected Topics already represents the Egyptian-leader succession chain via a single card to Anwar Sadat (his direct successor) and does not separately card Abdel Fattah el-Sisi either, despite Sisi being a later leader in the same lineage. Adding Mubarak here — two links removed from Nasser (Nasser → Sadat → Mubarak), with no direct personal/event connection between the two men — would have been weaker than the existing pattern on that page and risked exactly the "force-matched" link Style Guide rule 6 warns against. Left out; flagged here rather than silently added.
+   
+   All eleven total inbound cards (5 from the build session + 6 new) point to real, on-disk targets — every href verified against the actual file list before linking, per Style Guide rule 1.
+5. **Verification performed:** div-tag balance and Node `new Function()` JS syntax check on all touched files this session (`index.html`, `qasem-soleimani.html`, plus all 53 other content pages, plus the 6 files that received new Connected Topics cards) — all pass, zero mismatches, zero JS syntax errors; confirmed `index.html`'s browse grid now contains exactly 55 `entry-card-name` divs (27 people + 19 events + 9 concepts, matching the corrected tagline count); confirmed every newly-added topic-card thumbnail was copied from the actual linked page's real hero image src, not guessed or copied from a stale CONTEXT_ARTICLES field.
+
+**Newly discovered but explicitly out of scope for this session (flagged, not fixed):** `war-on-terror.html`'s own "Events the doctrine produced" Connected Topics card for the War in Afghanistan still reads "$982 billion" — stale since the prior session's cost-figure update only touched `war-in-afghanistan-2001-2021.html` itself and its own CONTEXT_ARTICLES entry, not this pre-existing card on `war-on-terror.html`. Similarly, `index.html`'s own CONTEXT_ARTICLES array carries the same stale "$982 billion" Afghanistan description (untouched by that session for the same reason). Both are one-line `str_replace` fixes for a future targeted session; not touched here since this session's scope was the Soleimani/Mubarak sync only.
+
+**Explicitly not done this session (out of scope, per instruction):** no changes to any page's prose/content, sources, or hero images. No new Connected Topics candidates were pursued beyond the six identified above (e.g., no attempt was made to force additional connections onto pages with only a loose thematic relationship). Egyptian Revolution 2011 and Regime Change — the last two pages of the original 7-page batch — remain unbuilt.
+
+**Sync task closed out:** both `qasem-soleimani.html` and `hosni-mubarak.html` are now fully live site-wide — findable via every page's search box, present in the homepage browse grid and homepage search index, and reachable via eleven genuine Connected Topics cards from ten other pages. No further sync work is outstanding for these two pages.
 
 ## Session log — 2026-07-08 (latest session): `qasem-soleimani.html` and `hosni-mubarak.html` built; ISIS grammar fix; Afghanistan cost figure updated
 
@@ -120,7 +146,7 @@ Reformatted counts per page (41 pages touched):
 
 **Concepts (9):** Ba'athism, Democratic Socialism, Non-Aligned Movement, Pan-Arabism, Realpolitik, Resource Curse, Responsibility to Protect, Wagner Group, The War on Terror
 
-**Note:** `isis-islamic-state.html` is now formally included in the Events list above (resolved 2026-07-05 — previously flagged as missing from the written list despite being a real, live page). `qasem-soleimani.html` and `hosni-mubarak.html` added to the People list this session (2026-07-08) — both exist on disk and are cross-linked from five other pages, but are not yet reachable from `index.html`'s browse grid (see Known Issues below).
+**Note:** `isis-islamic-state.html` is now formally included in the Events list above (resolved 2026-07-05 — previously flagged as missing from the written list despite being a real, live page). `qasem-soleimani.html` and `hosni-mubarak.html`, added to the People list in the 2026-07-08 build session, are now fully site-wide synced as of the 2026-07-08 sync session — reachable from `index.html`'s browse grid and homepage search, findable in every other page's search box, and cross-linked via eleven Connected Topics cards from ten other pages.
 
 ## Session log — 2026-07-05: site-wide integration of the three new pages
 
@@ -207,7 +233,9 @@ Follow-up to the same day's sync session, resolving the two "newly discovered, d
 - [x] `qasem-soleimani.html` and `hosni-mubarak.html` built — resolved 2026-07-08 (latest session)
 - [x] ISIS page grammar error ("A al-Qaeda splinter group" → "An al-Qaeda splinter group") — resolved 2026-07-08 (latest session)
 - [x] `war-in-afghanistan-2001-2021.html`'s headline cost figure updated from SIGAR's $982B wartime-only total to Bilmes's $4–6T combined long-term Iraq+Afghanistan estimate — resolved 2026-07-08 (latest session)
-- [ ] `qasem-soleimani.html` and `hosni-mubarak.html` are not yet in `index.html`'s browse grid, category counts, or search index, and no CONTEXT_ARTICLES entries for them were added to the ~55 other pre-existing pages — flagged 2026-07-08 for the next full sync session, same pattern as every prior page-build batch
+- [x] `qasem-soleimani.html` and `hosni-mubarak.html` fully synced site-wide — resolved 2026-07-08 (latest session): `index.html` browse grid + category counts + search index, CONTEXT_ARTICLES entries on all 53 other pre-existing pages, eleven Connected Topics cross-links from ten pages
+- [ ] `war-on-terror.html`'s Connected Topics card for the War in Afghanistan, and `index.html`'s own CONTEXT_ARTICLES description for the same page, both still read the stale "$982 billion" figure — the 2026-07-08 cost-figure update only touched `war-in-afghanistan-2001-2021.html` itself; flagged 2026-07-08 (latest session) for a future targeted fix
+- [ ] `gamal-abdel-nasser.html` → `hosni-mubarak.html` Connected Topics link considered and deliberately not added during the 2026-07-08 sync session — the connection is two links removed (Nasser → Sadat → Mubarak) with no direct personal/event link, and adding it would have been inconsistent with that page's existing succession-chain pattern (which also excludes Sisi). Noted here in case a future session judges otherwise.
 
 ## Planned pages (priority order)
 

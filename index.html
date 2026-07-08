@@ -27,7 +27,7 @@
     <div class="home-search-results search-results" id="homeSearchResults"></div>
   </div>
   <p style="font-family:sans-serif;font-size:0.8rem;color:rgba(138,138,150,0.6);">
-    25 people &nbsp;·&nbsp; 19 events &nbsp;·&nbsp; 9 concepts &nbsp;·&nbsp; growing weekly
+    27 people &nbsp;·&nbsp; 19 events &nbsp;·&nbsp; 9 concepts &nbsp;·&nbsp; growing weekly
   </p>
 </div>
 
@@ -173,6 +173,14 @@
         <div class="entry-card-desc">First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.</div>
       </div>
     </a>
+    <a class="entry-card" href="hosni-mubarak.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Hosni_Mubarak_ritratto.jpg/960px-Hosni_Mubarak_ritratto.jpg" alt="Hosni Mubarak">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Hosni Mubarak</div>
+        <div class="entry-card-desc">The air force commander who ruled Egypt for three decades, was toppled by the 2011 uprising and branded a pharaoh — then, within a decade, was given a state military funeral and remembered by many Egyptians as a patriot and hero.</div>
+      </div>
+    </a>
     <a class="entry-card" href="hugo-chavez.html">
       <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg" alt="Hugo Chávez">
       <div class="entry-card-body">
@@ -211,6 +219,14 @@
         <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
         <div class="entry-card-name">Osama bin Laden</div>
         <div class="entry-card-desc">The Saudi construction heir who founded al-Qaeda, orchestrated the September 11 attacks, and spent a decade hiding in Pakistan before a U.S. raid killed him in 2011.</div>
+      </div>
+    </a>
+    <a class="entry-card" href="qasem-soleimani.html">
+      <img class="entry-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Qasem_soleimani_2017.jpeg/960px-Qasem_soleimani_2017.jpeg" alt="Qasem Soleimani">
+      <div class="entry-card-body">
+        <div style="margin-bottom:0.35rem;"><span class="topic-type-tag person">Person</span></div>
+        <div class="entry-card-name">Qasem Soleimani</div>
+        <div class="entry-card-desc">The peasant's son who became commander of Iran's Quds Force, built a regional network of Shia militias spanning four countries, and was killed by a U.S. drone strike that Washington called self-defense and much of the world called an assassination.</div>
       </div>
     </a>
     <a class="entry-card" href="richard-nixon.html">
@@ -528,6 +544,8 @@
 
 <script>
 const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Qasem Soleimani', desc: "The peasant's son who became commander of Iran's Quds Force, built a regional network of Shia militias spanning four countries, and was killed by a U.S. drone strike that Washington called self-defense and much of the world called an assassination.", url: 'qasem-soleimani.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Qasem_soleimani_2017.jpeg/960px-Qasem_soleimani_2017.jpeg' },
+    { type: 'person',  title: 'Hosni Mubarak', desc: 'The air force commander who ruled Egypt for three decades, was toppled by the 2011 uprising and branded a pharaoh — then, within a decade, was given a state military funeral and remembered by many Egyptians as a patriot and hero.', url: 'hosni-mubarak.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Hosni_Mubarak_ritratto.jpg/960px-Hosni_Mubarak_ritratto.jpg' },
     { type: 'person',  title: 'Vladimir Putin', desc: 'The KGB lieutenant colonel who rose through patronage to Russia\'s presidency, built a personalized hybrid state, and invaded Ukraine in a war his own scholars call a case study in hubris.', url: 'vladimir-putin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Vladimir_Vladimirovich_Putin_2022.jpg/960px-Vladimir_Vladimirovich_Putin_2022.jpg' },
     { type: 'event',   title: 'The War in Afghanistan (2001–2021)', desc: 'Twenty years, $982 billion, and 2,443 American lives — how the U.S. and its allies toppled the Taliban in weeks, then spent two decades failing to build a state that could survive without them.', url: 'war-in-afghanistan-2001-2021.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/An_operation_in_Bak_District_Image_9_of_10.jpg/960px-An_operation_in_Bak_District_Image_9_of_10.jpg' },
     { type: 'event',   title: 'The Withdrawal from Afghanistan (2021)', desc: "A peace deal that excluded the Afghan government, a president who fled by helicopter, and a republic that didn't lose a war so much as dissolve — how eleven days ended twenty years.", url: 'withdrawal-from-afghanistan-2021.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Afghanistan_withdrawal_Image_7_of_7.jpg/960px-Afghanistan_withdrawal_Image_7_of_7.jpg' },
