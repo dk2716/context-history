@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qasem Soleimani — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">Middle East</a><span class="breadcrumb-sep">›</span>
+        <span>Qasem Soleimani</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Qasem_soleimani_2017.jpeg/960px-Qasem_soleimani_2017.jpeg" alt="Qasem Soleimani" style="width:120px;height:120px;object-fit:cover;border-radius:10px;display:block;">
+        </div>
+        <div class="hero-content">
+          <div class="hero-region-tag">Person</div>
+          <h1>Qasem Soleimani</h1>
+          <div class="hero-native">قاسم سلیمانی</div>
+          <p class="hero-sub">The peasant's son who became commander of Iran's Quds Force, built a regional network of Shia militias spanning four countries, and was killed by a U.S. drone strike that Washington called self-defense and much of the world called an assassination.</p>
+          <div class="hero-meta">
+            <span>~14 min read</span><span>·</span>
+            <span>1957 – 2020</span><span>·</span>
+            <span>Iran</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#doctrine">Building the Axis of Resistance</a></li>
+        <li><a href="#campaigns">Key Campaigns</a></li>
+        <li><a href="#rule">Instruments of Influence</a></li>
+        <li><a href="#late-career">The Killing &amp; Succession</a></li>
+        <li><a href="#why-it-matters">Why It Matters Today</a></li>
+        <li><a href="#legacy">Legacy &amp; Debate</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Qasem Soleimani (also rendered Qassem Suleimani)</div></div>
+          <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">March 11, 1957, Rabor district, Kerman province, Iran, to an impoverished farming family</div></div>
+          <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">January 3, 2020, Baghdad, Iraq — killed in a U.S. MQ-9 Reaper drone strike near Baghdad International Airport</div></div>
+          <div class="qf-item"><div class="qf-label">Position</div><div class="qf-value">Commander, Islamic Revolutionary Guard Corps (IRGC) Quds Force, 1998–2020</div></div>
+          <div class="qf-item"><div class="qf-label">Rank</div><div class="qf-value">Major-General, Islamic Revolutionary Guard Corps</div></div>
+          <div class="qf-item"><div class="qf-label">Career arc</div><div class="qf-value">Water-company laborer → IRGC recruit (1979) → Iran-Iraq War field commander → Quds Force commander (1998) → architect of Iran's regional militia network → killed by U.S. airstrike (2020)</div></div>
+          <div class="qf-item"><div class="qf-label">Ideology</div><div class="qf-value">Shia Islamist revolutionary; personally loyal to Supreme Leader Ali Khamenei and the doctrine of velayat-e faqih</div></div>
+          <div class="qf-item"><div class="qf-label">Successor</div><div class="qf-value">Brigadier-General Esmail Qaani, a Quds Force deputy since 1997, widely seen as lacking Soleimani's charisma and personal networks</div></div>
+        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Rise</h2>
+
+        <p>Qasem Soleimani was born in 1957 in the mountainous, impoverished Rabor district of Kerman province in southeastern Iran, to a family of farmers. As a teenager he travelled to the city of Kerman to work construction jobs and pay off an agricultural debt his father owed the state — an origin story far removed from the clerical and mercantile backgrounds of many of Iran's post-revolutionary elite, and one that Iranian state media would later mythologise as evidence of his authenticity as a man of the people. He found work with the Kerman water department, a job he held when the 1979 Islamic Revolution overthrew the Shah.</p>
+
+        <p>At 22, Soleimani joined the newly formed Islamic Revolutionary Guard Corps (IRGC), the parallel military force built to protect the revolution and its clerical leadership. He received only a few weeks of formal training but was quickly identified as a capable officer and set to work training recruits. The formative experience of his early career was the Iran-Iraq War (1980–1988), in which he served as a field commander noted for reconnaissance skill, a willingness to take personal risks, and close bonds with the soldiers under his command — qualities that built the personal loyalty networks he would rely on for the rest of his career.</p>
+
+        <p>In 1998 Soleimani was appointed commander of the Quds Force, the IRGC's expeditionary and clandestine-operations wing, tasked with extending Iranian influence beyond its borders — primarily by cultivating and arming Shia militias and allied movements across the Middle East. He held the post for more than two decades, transforming a relatively obscure unit into what the IISS has called Iran's "main instrument of influence in the region," compensating for the conventional weakness of Iran's military with a patchwork of loyal, ideologically aligned proxy forces.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">1979</div><div class="stat-label">Year Soleimani joined the IRGC, at age 22, months after the Islamic Revolution</div></div>
+          <div class="stat-box"><div class="stat-number">1998</div><div class="stat-label">Year he was appointed commander of the Quds Force, a post he held for over two decades</div></div>
+          <div class="stat-box"><div class="stat-number">4</div><div class="stat-label">Countries — Iraq, Syria, Lebanon, Yemen — where Quds Force-backed militias operated under his direction</div></div>
+          <div class="stat-box"><div class="stat-number">10</div><div class="stat-label">People killed alongside Soleimani in the January 3, 2020 drone strike, including PMU leader Abu Mahdi al-Muhandis</div></div>
+        </div>
+      </section>
+
+      <section id="doctrine">
+        <h2>Building the Axis of Resistance</h2>
+
+        <p>Soleimani's defining achievement was organisational: he built, personally and deliberately, the hierarchical regional network that came to be known as the "axis of resistance" — a coalition of Iran-aligned state and non-state actors spanning Lebanese Hizbullah, Iraqi Shia militias organised under the Popular Mobilisation Units (PMU), Yemen's Houthi movement, Palestinian Hamas and Islamic Jihad, and the Assad government in Syria. According to Chatham House's 2025 study of the network, Soleimani "established a hierarchical regional network with himself and the Quds Force at the apex," directing the axis's politics, operations and logistics through field commanders who served as his personal deputies across each country.</p>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Personal Relationships as Strategy</div>
+            <p>Soleimani maintained close personal ties to the region's senior Shia commanders — Hassan Nasrallah of Hizbullah and Abu Mahdi al-Muhandis of Iraq's Kataib Hizbullah among them — using those relationships to shape government formation and navigate crises in both Lebanon and Iraq. This was not simply patronage: it was a command structure built on trust and shared ideology rather than formal chains of authority, which made the network both resilient to formal sanctions and, later, vulnerable to the loss of the one man who held it together.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">From Shadow Operative to Public Statesman</div>
+            <p>Until roughly 2010, most of Soleimani's work happened out of public view. He then reinvented himself as a visible statesman and diplomat — negotiating the terms of Iran's 2015 wartime partnership with Russia directly with President Vladimir Putin, and cultivating an Instagram following built on photographs of himself alongside militia fighters in Iraq and Syria. The publicity made him one of the most popular figures in Iran even as it made him one of the most reviled in the Gulf Arab states, where he was blamed for sectarian violence, threats against Gulf governments, and an alleged role in the 2005 assassination of former Lebanese prime minister Rafik Hariri.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Securing Assad in Syria</div>
+            <p>When the Syrian uprising turned into civil war after 2011, Soleimani organised Bashar al-Assad's defence against domestic insurgents, coordinating Shia militias — including Hizbullah fighters redirected from Lebanon — into a unified pro-Assad force. His 2015 trip to Moscow, where he presented Russian officials with the case for direct military intervention, is widely credited with helping secure the Russian air campaign that reversed the war's momentum in Assad's favour.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Top-Down by Design</div>
+            <p>Unlike a loose alliance of convenience, the axis under Soleimani operated as what Chatham House researchers describe as a top-down organisation, with constituent members taking direction from Tehran through Soleimani personally. This gave Iran unusual coordination and reach across multiple theatres simultaneously — but it also concentrated an enormous amount of institutional knowledge and personal authority in a single, targetable individual.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="campaigns">
+        <h2>Key Campaigns</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2003–2011</div>
+              <div class="tl-title">Arming the Iraqi Insurgency Against U.S. Forces</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Following the 2003 U.S. invasion of Iraq, Soleimani directed the Quds Force's support for the Shia insurgency against the American occupation, most notoriously by funnelling explosively formed penetrators (EFPs) — armour-piercing roadside bombs — to allied militias through Iraq. The United States held him personally responsible for killing hundreds and wounding thousands of American soldiers as a result. Discussion of targeting Soleimani directly reportedly arose during both the George W. Bush and Barack Obama administrations but was dismissed each time as strategically counterproductive.</p>
+            <div class="tl-sources"><span class="src-chip">IISS Strategic Comments (2020)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2006</div>
+              <div class="tl-title">Guiding Hizbullah's War With Israel</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Soleimani was instrumental in arming Lebanese Hizbullah in the years before its 2006 war with Israel, and reportedly guided aspects of the group's operations during the conflict itself. The war cemented Hizbullah's role as the most militarily capable member of Iran's regional network and deepened Soleimani's personal relationship with Hassan Nasrallah, a partnership that would remain central to the axis of resistance for the rest of his life.</p>
+            <div class="tl-sources"><span class="src-chip">IISS Strategic Comments (2020)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2014–2017</div>
+              <div class="tl-title">The Campaign Against ISIS</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>When the Islamic State seized Mosul in June 2014, Soleimani arrived in Baghdad within hours to coordinate Iraq's Shia militia response, and spent the following three years overseeing IRGC-backed operations to retake territory from the group — including the battles for Tikrit, Fallujah and, in coordination with Iraqi security forces, the broader anti-ISIS campaign across Anbar province. His visible, often photographed presence at these front lines — visiting Kurdish Peshmerga commanders, Iraqi Shia clerics and militia leaders alike — became central to his domestic popularity in Iran and his public image as a hands-on battlefield commander rather than a distant intelligence official.</p>
+            <div class="tl-sources"><span class="src-chip">IISS Strategic Comments (2020)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2019</div>
+              <div class="tl-title">Escalation After the U.S. Withdrawal From the Nuclear Deal</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>After the Trump administration withdrew from the 2015 nuclear agreement in May 2018 and imposed a "maximum pressure" sanctions campaign, Soleimani played a central role in shaping Iran's calibrated retaliation: Iranian-backed militias in Iraq harassed U.S. installations, Iran shot down a U.S. surveillance drone over the Persian Gulf in June 2019, and Iranian cruise missiles and drones struck Saudi Aramco oil facilities in September 2019. On December 27, 2019, a rocket attack blamed on the Iran-aligned militia Kataib Hizbullah killed a U.S. contractor near Kirkuk, triggering U.S. airstrikes on militia bases and, in turn, a mass protest at the U.S. embassy in Baghdad — the immediate backdrop against which the decision to kill Soleimani was made.</p>
+            <div class="tl-sources"><span class="src-chip">IISS Strategic Comments (2020)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="rule">
+        <h2>Instruments of Influence</h2>
+
+        <h3>Ruthlessness and Adaptability</h3>
+        <p>Soleimani's reputation combined ideological conviction with tactical pragmatism. He was, in the IISS's description, "a skilled strategist animated by ideological zeal" who achieved "extraordinary standing at home and abroad" through a combination of personal popularity, Shia religious commitment, and a consistent record of tactical success. That record made him a trusted adviser to Supreme Leader Ali Khamenei — achieving, according to the same account, greater practical influence than many officials who formally outranked him within Iran's governing hierarchy.</p>
+
+        <h3>Plausible Deniability Through Proxies</h3>
+        <p>The Quds Force model Soleimani built and refined relied on operating through local partners rather than direct Iranian action — a structure that let Tehran exercise power across Iraq, Syria, Lebanon, Yemen and the Palestinian territories while retaining the ability to deny direct responsibility for any specific attack. Iran's ballistic missile programme was reserved for the rare moments when this indirection was set aside: researcher Mohammad Eslami's study of Iran's missile doctrine notes that in the four decades since the Iran-Iraq War, Iran directly employed its ballistic missile arsenal only four times — including its January 2020 strike on U.S. forces at Ain al-Asad and Al-Taji airbases in Iraq, launched in retaliation for Soleimani's killing, which Ayatollah Khamenei described publicly as merely "a slap" rather than the full revenge Iran had promised.</p>
+
+        <h3>Vilification and Popularity, Simultaneously</h3>
+        <p>Few figures in the modern Middle East attracted such starkly divided reputations. In Iran, Soleimani was a national hero whose funeral drew what state media described as millions of mourners. Across much of the Sunni Arab world and the Gulf states, he was viewed as an architect of sectarian violence and a direct threat to regional governments, blamed for interventions that fuelled ethnic cleansing and for frequent public threats against Gulf capitals. Both reputations were, in essence, accurate reflections of the same activity viewed from opposing sides of a regional sectarian and geopolitical divide.</p>
+      </section>
+
+      <section id="late-career">
+        <h2>The Killing &amp; Succession</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">January 3, 2020</div>
+              <div class="tl-title">The Baghdad Airstrike</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>In the early hours of January 3, 2020, a U.S. MQ-9 Reaper drone fired on a two-car convoy departing Baghdad International Airport, killing Soleimani, PMU deputy commander Abu Mahdi al-Muhandis, and eight others. President Trump claimed responsibility the same day, and administration officials initially argued the strike was defensive, citing unspecified intelligence that Soleimani was "actively developing plans to attack American diplomats and service members." Within two weeks, that justification had substantially unravelled: Secretary of Defense Mark Esper publicly acknowledged seeing no evidence of the specific embassy plots the administration had cited, and no supporting intelligence was formally transmitted to the UN Security Council to substantiate the Article 51 self-defense claim the U.S. relied on.</p>
+            <div class="tl-sources"><span class="src-chip">IISS Strategic Comments (2020)</span><span class="src-chip">Hemeida (2025)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">January 8, 2020</div>
+              <div class="tl-title">Iran's Retaliation at Ain al-Asad</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Five days after the strike, Iran fired between 10 and 20 conventionally armed ballistic missiles at Iraq's Ayn al-Asad airbase, housing U.S. forces engaged in anti-ISIS operations. The attack damaged airbase infrastructure and gave scores of U.S. soldiers traumatic brain injuries, but killed no one — a calibrated response widely read as satisfying domestic Iranian demand for retaliation while stopping short of triggering a full-scale war. Iran's foreign ministry characterised the strike as an act of self-defense and declared the round of reprisals over, even as IRGC commanders and Khamenei himself warned it was only the opening move in a longer campaign.</p>
+            <div class="tl-sources"><span class="src-chip">IISS Strategic Comments (2020)</span><span class="src-chip">Eslami (2021)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">2020–present</div>
+              <div class="tl-title">Qaani's Succession and the Axis's Restructuring</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Soleimani's successor, Brigadier-General Esmail Qaani, a Quds Force deputy since 1997 who had built the Afghan Shia militia Liwa Fatimiyoun, inherited an organisation his predecessor's death had exposed as dangerously personalised. According to Chatham House's 2025 research, Qaani "struggled to replicate Soleimani's charismatic leadership and deep-rooted personal connections with axis leaders," and responded by deliberately restructuring the network — shifting it from Soleimani's top-down, Tehran-directed model toward one granting constituent groups significantly greater autonomy, with Hassan Nasrallah's Hizbullah emerging as an increasingly important broker in its own right, even providing strategic guidance to Qaani himself. Iran's post-2023 reliance on this more decentralised network — after Hezbollah's own leadership losses and the fall of the Assad regime — is, per Chatham House, direct evidence that the restructuring Soleimani's death forced has made the axis more resilient to the loss of any single leader, even as it has made it harder for Tehran to direct with the precision Soleimani once provided.</p>
+            <div class="tl-sources"><span class="src-chip">Mansour, Al-Shakeri &amp; Haid (2025)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+        <p>Soleimani has been dead for more than six years, but the network he built and the precedent his killing set both remain central to how the Middle East functions. Understanding him is inseparable from understanding both the ongoing Iran-Israel confrontation and the unresolved legal debate over how far states may go in targeting individuals outside declared wars.</p>
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>The Legal Precedent of Targeted Killing</h3>
+            <p>The strike on Soleimani remains one of the most-cited case studies in international law on the limits of self-defense doctrine. Legal analysis of the killing has concluded it failed to meet the "imminent threat" standard required to justify preemptive self-defense under the UN Charter, violated Iraqi sovereignty under Article 2(4), and breached international humanitarian law's requirements of distinction and proportionality. The UN Special Rapporteur on extrajudicial executions reached a similar conclusion in a formal 2020 report.</p>
+            <ul class="matters-subpoints">
+              <li>The U.S. never demonstrated Soleimani posed an "instant, overwhelming" threat under the customary Caroline standard for preemptive self-defense</li>
+              <li>A 2008 U.S.-Iraq security agreement explicitly barred the U.S. from using Iraqi territory for offensive operations, a restriction the strike arguably violated regardless of self-defense claims</li>
+              <li>The precedent — a state killing a senior foreign military official outside a declared war, based on undisclosed intelligence — has been invoked in subsequent debates over the legality of targeted strikes elsewhere</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Iran-U.S. Relations Hardened, Not Reset</h3>
+            <p>Far from "restoring deterrence," as some Trump administration officials predicted, the killing united Iran's usually fractious political elite against the United States and strengthened domestic hardliners at the direct expense of officials open to nuclear diplomacy — a hardening whose effects outlasted the immediate crisis and shaped Iran's negotiating posture for years afterward.</p>
+            <ul class="matters-subpoints">
+              <li>Large crowds of mourners at Soleimani's funeral and a nationalist surge in Iranian public sentiment strengthened hardliners ahead of February 2020 legislative elections</li>
+              <li>The killing shifted Iraq's internal debate toward reducing the U.S.-led coalition's presence in the country, since it was seen domestically as a violation of the narrow counter-ISIS mandate under which U.S. forces remained</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>A More Resilient, More Diffuse Axis of Resistance</h3>
+            <p>The network Soleimani spent two decades personally building did not collapse after his death, but it did change shape. Its post-Soleimani decentralisation — designed to survive the loss of any single leader — helped the axis absorb even heavier blows after October 2023, including the deaths of most of Hezbollah's senior leadership and the fall of the Assad regime in Syria, without Iran's regional strategy collapsing outright.</p>
+            <ul class="matters-subpoints">
+              <li>Iran has extended relationships beyond the axis itself, deepening ties with China and Russia partly to compensate for the axis's post-2024 setbacks</li>
+              <li>The axis's more horizontal, autonomous structure under Qaani gives Iran continued plausible deniability even as it complicates Tehran's ability to direct events with Soleimani-era precision</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy &amp; Debate</h2>
+
+        <p>Soleimani's legacy is inseparable from the sharply divided reputations he cultivated deliberately during his lifetime. He built, arguably, the single most consequential non-state military network in the modern Middle East — and did so through methods that, in the territories where his proxies operated, were frequently indistinguishable from sectarian violence and coercion.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">What his admirers argue</div>
+            <ul>
+              <li>He built an effective counterweight to the Islamic State when Iraqi state forces had collapsed in 2014, personally coordinating the militia response that helped prevent Baghdad's fall</li>
+              <li>His network gave Iran, a country with a conventionally weak military relative to its adversaries, an asymmetric capacity to project power and deter attack across the region</li>
+              <li>He was, by most accounts, personally austere and battlefield-present rather than a distant bureaucrat — a trait that built genuine loyalty among the fighters under his influence</li>
+              <li>His 2015 diplomacy with Russia is widely credited with saving the Assad government from near-certain collapse, which his supporters frame as preventing a jihadist takeover of Syria</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">What the evidence shows</div>
+            <ul>
+              <li>The U.S. held him directly responsible for the deaths of hundreds of American soldiers in Iraq through EFP-armed militias — a documented, not merely alleged, campaign</li>
+              <li>His network's actions across Lebanon, Iraq and Syria are widely tied to sectarian violence and, in the Syrian case, to defending a government that killed hundreds of thousands of its own civilians</li>
+              <li>He was implicated, though not conclusively proven responsible, in the 2005 assassination of Lebanese prime minister Rafik Hariri</li>
+              <li>His personal, highly centralised command structure left the entire axis of resistance dangerously exposed to a single point of failure — his own death exposed this immediately in the ensuing succession crisis</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legacy-card complex" style="margin-top:1.25rem;">
+          <div class="legacy-label">What remains genuinely contested</div>
+          <ul>
+            <li>Was the U.S. strike a legitimate act of self-defense against an active, ongoing threat, or an extrajudicial killing that violated Iraqi sovereignty and international law — as most international law scholars examining the case have concluded?</li>
+            <li>Did Soleimani's death meaningfully weaken Iran's regional strategy, or did it force a restructuring that ultimately made the axis of resistance more durable?</li>
+            <li>Is Soleimani best understood as a strategic mastermind whose personal relationships were irreplaceable, or as one skilled operator within a system whose durability was always more institutional than personal?</li>
+          </ul>
+        </div>
+
+        <div class="pull-quote">
+          <blockquote>"Soleimani had established a hierarchical regional network with himself and the Quds Force at the apex. This structure enabled him to direct Iran's networks politically, operationally and logistically."</blockquote>
+          <cite>— Renad Mansour, Hayder Al-Shakeri and Haid Haid, <em>The Shape-Shifting 'Axis of Resistance'</em> (Chatham House, 2025)</cite>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People directly connected</div>
+          <div class="topics-grid">
+            <a href="ayatollah-khomeini.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg" alt="Ayatollah Khomeini">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Ayatollah Khomeini</div>
+              <div class="topic-preview">Founder of the Islamic Republic and the velayat-e faqih doctrine that gave Soleimani's superior, Ali Khamenei, the religious authority Soleimani served for his entire career.</div>
+            </a>
+            <a href="bashar-al-assad.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg" alt="Bashar al-Assad">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Bashar al-Assad</div>
+              <div class="topic-preview">Soleimani personally organised Assad's military defence after 2011 and secured the Russian intervention that kept his regime in power for another decade — until its collapse in 2024.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Events &amp; Concepts</div>
+          <div class="topics-grid">
+            <a href="iran-iraq-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Iran-Iraq_War%2C_color_photos_%E2%80%93_Defapress_%2805%29.jpg/960px-Iran-Iraq_War%2C_color_photos_%E2%80%93_Defapress_%2805%29.jpg" alt="Iran-Iraq War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">Iran-Iraq War</div>
+              <div class="topic-preview">The war that forged Soleimani as a field commander and built the personal loyalty networks he relied on for the rest of his career.</div>
+            </a>
+            <a href="iraq-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Iraqi_Freedom_DVIDS1832462.jpg/960px-Iraqi_Freedom_DVIDS1832462.jpg" alt="The Iraq War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Iraq War</div>
+              <div class="topic-preview">The 2003 U.S. invasion gave Soleimani's Quds Force its most direct opportunity yet — arming the Shia insurgency against American occupation forces.</div>
+            </a>
+            <a href="isis-islamic-state.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png" alt="ISIS / The Islamic State">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">ISIS / The Islamic State</div>
+              <div class="topic-preview">Soleimani personally coordinated Iraq's Shia militia response to the Islamic State's 2014 offensive, arriving in Baghdad within hours of Mosul's fall.</div>
+            </a>
+            <a href="war-on-terror.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg/960px-1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg" alt="The War on Terror">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">The War on Terror</div>
+              <div class="topic-preview">Soleimani's killing was carried out under legal justifications that trace directly back to the post-9/11 doctrine of preemptive self-defense the War on Terror established.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">"The Soleimani Killing's Regional Implications."</span>
+            <span class="src-journal">Strategic Comments, International Institute for Strategic Studies (IISS), 2020.</span>
+            <span class="src-note">The core account used for this page's coverage of Soleimani's career, the January 2020 killing, and the succession crisis that followed. A concise, detailed contemporaneous analysis published within weeks of the strike, covering both the U.S. rationale and Iran's calibrated retaliation.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">Mansour, Renad, Hayder Al-Shakeri and Haid Haid. "The Shape-Shifting 'Axis of Resistance': How Iran and Its Networks Adapt to External Pressures."</span>
+            <span class="src-journal">Chatham House, 2025.</span>
+            <span class="src-note">The core source for Soleimani's role building the axis of resistance and the network's post-assassination restructuring under Qaani. A rigorously researched 2025 Chatham House study tracing the axis's evolution from Soleimani's top-down personal command structure through its more decentralised present-day form.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Eslami, Mohammad. "Iran's Ballistic Missile Program and Its Foreign and Security Policy towards the United States under the Trump Administration."</span>
+            <span class="src-journal">Revista Española de Ciencia Política, 2021.</span>
+            <span class="src-note">Used sparingly, for one to two sentences on Iran's January 2020 ballistic missile retaliation at Ain al-Asad and Al-Taji. Not treated as a core source for this page; its primary focus is Iran's broader missile doctrine rather than Soleimani himself.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">Hemeida, Mohammad. "License to Kill? Self-Defense, Sovereignty, and the Laws of War in the U.S. Assassination of Qasem Soleimani."</span>
+            <span class="src-journal">Columbia Undergraduate Law Review, 2025.</span>
+            <span class="src-note">A detailed legal analysis arguing the strike failed the "imminent threat" standard for self-defense, violated Iraqi sovereignty, and breached humanitarian law's distinction and proportionality requirements. Used for this page's "Why It Matters Today" section on the killing's ongoing legal significance.</span>
+          </li>
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">"Qassem Soleimani."</span>
+            <span class="src-journal">Encyclopaedia Britannica, 2020.</span>
+            <span class="src-note">Used for baseline biographical facts — birth date, birthplace, and early-life details — supplementing the more analytical core sources above.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="index.html" style="color:var(--purple);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Qasem Soleimani', desc: "The peasant's son who became commander of Iran's Quds Force, built a regional network of Shia militias spanning four countries, and was killed by a U.S. drone strike that Washington called self-defense and much of the world called an assassination.", url: 'qasem-soleimani.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Qasem_soleimani_2017.jpeg/960px-Qasem_soleimani_2017.jpeg' },
+    { type: 'person',  title: 'Vladimir Putin', desc: 'The KGB lieutenant colonel who rose through patronage to Russia\'s presidency, built a personalized hybrid state, and invaded Ukraine in a war his own scholars call a case study in hubris.', url: 'vladimir-putin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Vladimir_Vladimirovich_Putin_2022.jpg/960px-Vladimir_Vladimirovich_Putin_2022.jpg' },
+    { type: 'event',   title: 'The War in Afghanistan (2001–2021)', desc: 'Twenty years, $982 billion, and 2,443 American lives — how the U.S. and its allies toppled the Taliban in weeks, then spent two decades failing to build a state that could survive without them.', url: 'war-in-afghanistan-2001-2021.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/An_operation_in_Bak_District_Image_9_of_10.jpg/960px-An_operation_in_Bak_District_Image_9_of_10.jpg' },
+    { type: 'event',   title: 'The Withdrawal from Afghanistan (2021)', desc: "A peace deal that excluded the Afghan government, a president who fled by helicopter, and a republic that didn't lose a war so much as dissolve — how eleven days ended twenty years.", url: 'withdrawal-from-afghanistan-2021.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Afghanistan_withdrawal_Image_7_of_7.jpg/960px-Afghanistan_withdrawal_Image_7_of_7.jpg' },
+    { type: 'event',   title: 'The Fall of the Assad Regime', desc: 'Eleven days. A 54-year dynasty. How a lightning rebel offensive out of Idlib ended the Assad family\'s rule of Syria — and rearranged the Middle East\'s balance of power in the process.', url: 'fall-of-assad-regime.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/HTS_Rebels_coordinating_at_Hama.png/960px-HTS_Rebels_coordinating_at_Hama.png' },
+    { type: 'person',  title: 'Osama bin Laden', desc: 'The Saudi construction heir who founded al-Qaeda, orchestrated the September 11 attacks, and spent a decade hiding in Pakistan before a U.S. raid killed him in 2011.', url: 'osama-bin-laden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Osama_bin_Laden%2C_portr%C3%A6t.jpg/960px-Osama_bin_Laden%2C_portr%C3%A6t.jpg' },
+    { type: 'concept', title: 'The War on Terror', desc: 'The doctrine that took the United States from Kabul to Baghdad in the name of fighting terrorism — and whose contradictions helped produce the very insurgency it was meant to prevent.', url: 'war-on-terror.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg/960px-1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg' },
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Iraqi_Freedom_DVIDS1832462.jpg/960px-Iraqi_Freedom_DVIDS1832462.jpg' },
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',        desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',       url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                    desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                               url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect',   desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.',        url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Yom_Kippur_War_%28G-1-4063-%D7%93%D7%A6%29.jpg/960px-Yom_Kippur_War_%28G-1-4063-%D7%93%D7%A6%29.jpg' },
+    { type: 'event',   title: 'The Libyan Civil War',            desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',                                                  url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',                desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',                url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',                 desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',                                                             url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',                desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.",                                                    url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',                  desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',                                                 url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',                 desc: "The refugee who became America's most powerful and most controversial diplomat.",                                                       url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg/960px-Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',                desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',                                                  url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',                   desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',                                                       url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                    desc: "America's first Black president — who promised transformation and left a country more divided.",                                       url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',              desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',                            url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',                  desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',                                        url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',              desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.",                                    url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+    else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+    else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+    else if (e.key==='Escape') { toggleSearch(); return; }
+    items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.height = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+    const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+  });
+  function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+  function toggleSave() {
+    const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+    if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+    else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+  }
+</script>
+</body>
+</html>

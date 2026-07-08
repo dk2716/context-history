@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hosni Mubarak — Context</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Context</a>
+  <div class="nav-actions">
+    <div class="search-wrap" id="searchWrap">
+      <button class="search-icon-btn" onclick="toggleSearch()" id="searchIconBtn" aria-label="Search articles">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <div class="search-dropdown" id="searchDropdown">
+        <input class="search-input" id="searchInput" type="text" placeholder="Search articles…" oninput="runSearch(this.value)" onkeydown="searchKeydown(event)" autocomplete="off" spellcheck="false">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+    </div>
+    <span class="nav-topic-type">Person</span>
+    <button class="save-btn" onclick="toggleSave()" id="saveBtn">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+      Save article
+    </button>
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a><span class="breadcrumb-sep">›</span>
+        <a href="#">People</a><span class="breadcrumb-sep">›</span>
+        <a href="#">North Africa</a><span class="breadcrumb-sep">›</span>
+        <span>Hosni Mubarak</span>
+      </div>
+      <div class="hero-person-layout">
+        <div class="hero-avatar">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Hosni_Mubarak_ritratto.jpg/960px-Hosni_Mubarak_ritratto.jpg" alt="Hosni Mubarak" style="width:120px;height:120px;object-fit:cover;border-radius:10px;display:block;">
+        </div>
+        <div class="hero-content">
+          <div class="hero-region-tag">Person</div>
+          <h1>Hosni Mubarak</h1>
+          <div class="hero-native">محمد حسني مبارك</div>
+          <p class="hero-sub">The air force commander who ruled Egypt for three decades, was toppled by the 2011 uprising and branded a pharaoh — then, within a decade, was given a state military funeral and remembered by many Egyptians as a patriot and hero.</p>
+          <div class="hero-meta">
+            <span>~13 min read</span><span>·</span>
+            <span>1928 – 2020</span><span>·</span>
+            <span>Egypt</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <aside class="sidebar">
+      <p class="sidebar-label">In this article</p>
+      <ul class="sidebar-nav" id="sidebarNav">
+        <li><a href="#quick-facts">Quick Facts</a></li>
+        <li><a href="#origins">Origins &amp; Rise</a></li>
+        <li><a href="#rule">Thirty Years in Power</a></li>
+        <li><a href="#campaigns">The Fall</a></li>
+        <li><a href="#trial">Trial, Retrial, Acquittal</a></li>
+        <li><a href="#legacy">Legacy: From Pharaoh to Hero</a></li>
+        <li><a href="#why-it-matters">Why It Matters Today</a></li>
+        <li><a href="#connected">Connected Topics</a></li>
+        <li><a href="#sources">Sources</a></li>
+      </ul>
+      <div class="sidebar-cta">
+        <strong>Track your reading</strong>
+        Save articles, build a reading list, and see what you've covered.
+        <a href="#" class="sidebar-cta-btn">Create free account →</a>
+      </div>
+    </aside>
+
+    <article>
+
+      <section id="quick-facts">
+        <div class="quick-facts">
+          <div class="quick-facts-label">Quick Facts</div>
+          <div class="qf-item"><div class="qf-label">Full name</div><div class="qf-value">Muhammad Hosni Sayyid Mubarak</div></div>
+          <div class="qf-item"><div class="qf-label">Born</div><div class="qf-value">May 4, 1928, Kafr el-Meselha, Monufia Governorate, Egypt</div></div>
+          <div class="qf-item"><div class="qf-label">Died</div><div class="qf-value">February 25, 2020, Cairo, Egypt, at age 91</div></div>
+          <div class="qf-item"><div class="qf-label">In power</div><div class="qf-value">President of Egypt, October 1981 – February 11, 2011 (nearly 30 years)</div></div>
+          <div class="qf-item"><div class="qf-label">Prior roles</div><div class="qf-value">Commander of the Egyptian Air Force (1972–1975); Vice President under Anwar Sadat (1975–1981)</div></div>
+          <div class="qf-item"><div class="qf-label">Career arc</div><div class="qf-value">Air force pilot → Air Force commander in the 1973 war → Sadat's vice president → president after Sadat's 1981 assassination → toppled by the 2011 uprising → tried, retried, acquitted → died a rehabilitated figure in 2020</div></div>
+          <div class="qf-item"><div class="qf-label">Ousted by</div><div class="qf-value">The 2011 Egyptian uprising, part of the wider Arab Spring; resigned after 18 days of mass protest</div></div>
+          <div class="qf-item"><div class="qf-label">Legal outcome</div><div class="qf-value">Initially sentenced to life in prison (2012) for complicity in protester deaths; sentence overturned on appeal; fully acquitted of that charge in 2017</div></div>
+        </div>
+      </section>
+
+      <section id="origins">
+        <h2>Origins &amp; Rise</h2>
+
+        <p>Hosni Mubarak was born in 1928 in Kafr el-Meselha, a village in Egypt's Nile Delta, and built his career entirely within the military rather than through the political or clerical routes more common among his predecessors. He trained as an Air Force pilot, rose through its command structure, and was appointed commander of the Egyptian Air Force in 1972 — a position that placed him at the center of Egypt's preparation for the October 1973 war against Israel. Egyptian state media would later credit him, with the initial air strike of that war, as one of the architects of an operation that restored a measure of Egyptian military pride after the catastrophic defeat of 1967.</p>
+
+        <p>Anwar Sadat appointed Mubarak vice president in 1975, a position that placed him next in line for the presidency without any expectation, at the time, that he would need it soon. That changed on October 6, 1981, when Islamist militants assassinated Sadat during a military parade commemorating the 1973 war. Mubarak, seated beside Sadat, was wounded in the attack but survived, and assumed the presidency days later. He would go on to hold it, through a succession of single-candidate referendums in 1987, 1993 and 1999, for nearly thirty years — one of the longest presidential tenures in modern Egyptian history.</p>
+
+        <div class="stat-row">
+          <div class="stat-box"><div class="stat-number">1981</div><div class="stat-label">Year Mubarak became president after Anwar Sadat's assassination, at whose side he was sitting when Sadat was killed</div></div>
+          <div class="stat-box"><div class="stat-number">~30</div><div class="stat-label">Years Mubarak ruled Egypt, from October 1981 to his resignation on February 11, 2011</div></div>
+          <div class="stat-box"><div class="stat-number">18</div><div class="stat-label">Days of mass protest in January–February 2011 that forced his resignation</div></div>
+          <div class="stat-box"><div class="stat-number">2020</div><div class="stat-label">Year of Mubarak's death — after which he received a state military funeral, unlike most other ousted Arab Spring leaders</div></div>
+        </div>
+      </section>
+
+      <section id="rule">
+        <h2>Thirty Years in Power</h2>
+
+        <div class="ideology-grid">
+          <div class="ideology-card">
+            <div class="ideology-card-title">Continuity Over Reform</div>
+            <p>Mubarak governed as a cautious continuity figure rather than a visionary reformer, maintaining Sadat's peace treaty with Israel and his alliance with the United States while presiding over a political system built on emergency law, rigged elections, and a security and intelligence apparatus that suppressed organized dissent — the same apparatus that would later shape his popular memory as, in the phrasing widely used during the 2011 uprising, a "pharaoh."</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Neoliberal Reform, Crony Capitalism</div>
+            <p>From the early 1990s, and accelerating after 2004, Mubarak's government pursued market-liberalizing economic reforms broadly in line with the Washington Consensus — privatizing state assets and opening Egypt's economy to foreign investment. Scholarly research on the period, including a large empirical study of politically connected firms under his rule, has documented how these reforms simultaneously entrenched a form of crony capitalism, directing state resources and privatization windfalls disproportionately toward a narrow circle of regime-linked businessmen, with measurable negative effects on broader economic growth.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">Dynastic Succession Plans</div>
+            <p>In his later years in power, Mubarak was widely understood to be positioning his son Gamal, a prominent figure in the ruling National Democratic Party's business-friendly reform wing, as his successor — a prospect many Egyptians viewed as an attempt to convert a nominal republic into a hereditary one. Public anger over this "under the guise of a democratic process" succession plan became one of the specific grievances protesters raised against him in 2011.</p>
+          </div>
+          <div class="ideology-card">
+            <div class="ideology-card-title">A Regime Built on Public Symbolism</div>
+            <p>Like other Arab authoritarian leaders of his era, Mubarak cultivated an extensive public visual presence — his name and image affixed to schools, hospitals, streets and squares across the country. This carefully constructed public mythology, rather than any specific policy, became the first and most immediate target of the 2011 uprising: protesters defaced his portraits, and a wave of official renaming stripped his name from public institutions within months of his fall.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="campaigns">
+        <h2>The Fall</h2>
+
+        <div class="tl-item active" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">January 25 – February 11, 2011</div>
+              <div class="tl-title">Eighteen Days in Tahrir Square</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>Mass protests erupted across Egypt on January 25, 2011, mobilized by grievances that had built for years — poverty, unemployment, government corruption, police brutality, and the prospect of dynastic succession — and catalyzed in part by the killing of Khaled Said, a young man beaten to death by security forces the previous year, whose image circulated widely online. Protesters occupied Tahrir Square in central Cairo for eighteen days, successfully mobilizing Egyptians across class and political lines into a single coalition against the government in a way few analysts had thought possible. On February 11, 2011, Mubarak resigned and transferred authority to the Supreme Council of the Armed Forces (SCAF).</p>
+            <div class="tl-sources"><span class="src-chip">Lavie (2025)</span><span class="src-chip">Cook (2020)</span></div>
+          </div>
+        </div>
+
+        <div class="tl-item" onclick="toggleItem(this)">
+          <div class="tl-header">
+            <div class="tl-header-left">
+              <div class="tl-date">February–April 2011</div>
+              <div class="tl-title">Erasing the Pharaoh</div>
+            </div>
+            <div class="tl-chevron">▼</div>
+          </div>
+          <div class="tl-body">
+            <p>In the immediate aftermath of Mubarak's fall, a spontaneous and then official effort worked to dismantle his public image. Protesters defaced his portraits and covered them with graffiti; within ten days, Prime Minister Ahmad Shafiq's government began renaming streets after "martyrs" of the uprising, and the Suzanne Mubarak Specialized Hospital was renamed. An Egyptian court later ruled that Hosni and Suzanne Mubarak's names be removed from all public facilities — affecting an estimated 549 schools alone. Even a mosaic at Cairo's October 6 Panorama museum depicting Mubarak in the 1973 war operations room was altered to remove his likeness, restoring the image of the chief of staff, Saʿd al-Din al-Shazli, that Mubarak's critics alleged he had originally displaced.</p>
+            <div class="tl-sources"><span class="src-chip">Lavie (2025)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="trial">
+        <h2>Trial, Retrial, Acquittal</h2>
+
+        <h3>"The Trial of the Century"</h3>
+        <p>In August 2012, Mubarak appeared at his first trial hearing confined in a cage inside the courtroom — a scene broadcast live across Egypt and the world, and a striking departure from how other deposed Arab leaders, tried in absentia or not tried at all, were handled elsewhere. A 2011 YouGov survey found 67% of Egyptians wanted him to receive a death sentence if convicted, rising to 77% among 18-24-year-olds. In June 2012 he was sentenced to life in prison for complicity in the killing of 239 protesters during the uprising.</p>
+
+        <h3>A Retrial Under a Different Political Atmosphere</h3>
+        <p>The political context shifted decisively after the July 2013 military removal of Mohammed Morsi, Egypt's first freely elected president, and the installation of Abdel Fattah el-Sisi's military-backed government. In January 2013 an appeals court had already overturned Mubarak's life sentence and ordered a retrial; by August 2013 he was released from prison to house arrest. His August 2014 retrial testimony, broadcast live, allowed him — for the first time — to publicly deny ordering the killing of protesters and to describe a "sixty-two-year career" of service to Egypt as a military commander, vice president and president. He was fully acquitted of the protester-killing charges in November 2014 and again, following a final appeal, in March 2017 — leaving only lesser corruption convictions related to gifted villas and gas-contract irregularities on his record.</p>
+
+        <h3>Death and State Honors</h3>
+        <p>Mubarak died in a Cairo hospital on February 25, 2020, at age 91. Unlike Libya's Muammar Gaddafi, killed and buried in an unmarked desert grave, or Tunisia's Zine El Abidine Ben Ali, who died in Saudi exile, Mubarak was laid to rest in his homeland with a full state military funeral attended by senior religious and political figures, including the Grand Sheikh of al-Azhar and the head of the Arab League. State broadcasts of the funeral emphasized his 1973 war service and his role in Egypt's post-treaty diplomatic reintegration with the Arab world — a deliberately selective framing of a career that, at his overthrow nine years earlier, had been remembered in starkly different terms.</p>
+      </section>
+
+      <section id="legacy">
+        <h2>Legacy: From Pharaoh to Hero</h2>
+
+        <p>Limor Lavie's 2025 study of Mubarak's post-uprising collective memory argues that his image in Egyptian society has moved through at least three competing, overlapping phases: an initial revolutionary memory that dismantled his carefully built mythology and cast him as a tyrant; a resurgent counter-revolutionary popular memory, propagated especially through pro-Mubarak Facebook communities with millions of combined followers, that idealized his legacy and expressed open nostalgia for his era; and a post-2013 official memory that deliberately threads between the two — exalting his 1973 military service while conspicuously avoiding endorsement of his political record, a balancing act that serves the interests of Abdel Fattah el-Sisi's own military-dominated government.</p>
+
+        <div class="legacy-grid">
+          <div class="legacy-card positive">
+            <div class="legacy-label">What his rehabilitators argue</div>
+            <ul>
+              <li>He commanded the Egyptian Air Force during the October 1973 war and is credited by pro-Mubarak narratives with its opening air strike — a source of genuine national pride Lavie documents as central to his official rehabilitation</li>
+              <li>He maintained Egypt's peace treaty with Israel and stability in the country for three decades, a record millions of Egyptians have come to view favorably against the instability that followed his fall</li>
+              <li>Pro-Mubarak Facebook groups, some with over four million followers, portray him as a humble, family-oriented patriot who dedicated his life to Egypt without personal self-enrichment ambitions</li>
+              <li>He was fully and finally acquitted, after two trials, of the charge that most defined his post-uprising vilification — ordering the killing of protesters</li>
+            </ul>
+          </div>
+          <div class="legacy-card negative">
+            <div class="legacy-label">What the revolutionary memory documented</div>
+            <ul>
+              <li>He presided over three decades of authoritarian rule under emergency law, with widespread documentation of torture, rigged elections and suppression of political opposition</li>
+              <li>He was initially convicted of complicity in the deaths of 239 protesters killed during the 18-day uprising against him</li>
+              <li>Scholarly research on his economic policies has documented how market reforms after 1991 and 2004 entrenched crony capitalism, concentrating privatization gains among a narrow, politically connected business elite</li>
+              <li>He was widely understood to be grooming his son Gamal for a hereditary succession — a central grievance of the uprising that ended his rule</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="legacy-card complex" style="margin-top:1.25rem;">
+          <div class="legacy-label">What remains genuinely contested</div>
+          <ul>
+            <li>Was the 2017 acquittal a genuine correction of an initial, politically pressured rush to judgment, or a sign of counter-revolutionary forces successfully rewriting the historical record once the political balance of power shifted after 2013?</li>
+            <li>Is Mubarak's positive post-uprising memory a spontaneous popular reassessment, or a phenomenon actively cultivated by a military-dominated successor government that shares an interest in normalizing authoritarian rule?</li>
+            <li>Lavie's research frames Mubarak's case as comparable to other deposed dictators — Romania's Ceaușescu, the Philippines' Marcos — whose negative memories were later contested or reversed. Does this pattern reveal something structural about how societies process the removal of long-ruling leaders, beyond Mubarak's individual case?</li>
+          </ul>
+        </div>
+
+        <p>The most striking feature of Mubarak's afterlife in Egyptian memory is precisely that it has one at all — that a leader toppled by a genuine mass uprising, initially sentenced to life in prison, could be buried nine years later with full state honors and be openly mourned by millions. Lavie's research suggests this is not an accident but the product of a deliberate official strategy: by neither fully vindicating nor fully condemning Mubarak, Egypt's current government preserves enough ambiguity to prevent any single narrative — revolutionary or restorationist — from becoming a political rallying point against it.</p>
+
+        <div class="pull-quote">
+          <blockquote>"Unlike other deposed Arab leaders during the 'Arab Spring,' Mubarak received a state military funeral, elevating him to a revered patriot and hero."</blockquote>
+          <cite>— Limor Lavie, <em>From Pharaoh to Hero: Contested Constructions of Mubarak's Image in Egyptian Post-Uprising Collective Memory</em> (2025)</cite>
+        </div>
+      </section>
+
+      <section id="why-it-matters">
+        <h2>Why It Matters Today</h2>
+        <p>Mubarak's contested afterlife is not a historical footnote — it is a live illustration of how post-authoritarian societies process, and sometimes reverse, the verdicts their revolutions initially reach.</p>
+        <div class="matters-grid">
+          <div class="matters-card">
+            <h3>A Template for Authoritarian Legitimation</h3>
+            <p>The selective, dual-track official memory Egypt's government has constructed around Mubarak — celebrating his military record while withholding endorsement of his political rule — provides a template other governments emerging from popular uprisings can study, for better or worse, in managing the legacy of a toppled predecessor without fully repudiating the system that produced him.</p>
+            <ul class="matters-subpoints">
+              <li>El-Sisi's government, itself installed by a 2013 military takeover, has a direct interest in rehabilitating military-led governance generally, of which Mubarak's rule is the most recent prior example</li>
+              <li>School textbooks and state media continue to selectively emphasize Mubarak's 1973 war role over his presidency, according to Lavie's analysis of the official post-2013 narrative</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>The Arab Spring's Unfinished Reckoning</h3>
+            <p>Egypt's trajectory — revolution, counter-revolution, and a rehabilitated former dictator honored in death — is one of the starkest illustrations of how the broader Arab Spring's early democratic gains were rolled back across the region, and offers a case study for understanding the wave's disappointing long-term outcomes relative to its initial promise.</p>
+            <ul class="matters-subpoints">
+              <li>Mubarak's case sits alongside contested memory politics elsewhere — Ceaușescu in Romania, Marcos in the Philippines — as part of a broader pattern of authoritarian rehabilitation Lavie situates her research within</li>
+            </ul>
+          </div>
+          <div class="matters-card">
+            <h3>Crony Capitalism's Long Shadow</h3>
+            <p>The economic structures built during Mubarak's neoliberal reform era — concentrated ownership, politically connected conglomerates, military-linked economic enterprises — did not disappear with his fall. Understanding how his government built and protected these structures is essential to understanding why Egypt's post-uprising economic outcomes have disappointed many of the protesters who took to Tahrir Square in 2011.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="connected">
+        <h2>Connected Topics</h2>
+        <div class="topics-group">
+          <div class="topics-group-label">People directly connected</div>
+          <div class="topics-grid">
+            <a href="anwar-sadat.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg" alt="Anwar Sadat">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Anwar Sadat</div>
+              <div class="topic-preview">Mubarak's predecessor and patron, whose 1981 assassination — while Mubarak sat beside him — brought Mubarak to the presidency he would hold for three decades.</div>
+            </a>
+            <a href="abdel-fattah-el-sisi.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg" alt="Abdel Fattah el-Sisi">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Abdel Fattah el-Sisi</div>
+              <div class="topic-preview">The general whose 2013 military takeover created the political conditions for Mubarak's rehabilitation — and whose own military-dominated rule has an interest in celebrating, selectively, the precedent Mubarak set.</div>
+            </a>
+            <a href="gamal-abdel-nasser.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg" alt="Gamal Abdel Nasser">
+              <div class="topic-type-tag person">Person</div>
+              <div class="topic-name">Gamal Abdel Nasser</div>
+              <div class="topic-preview">The first in the line of Egyptian military-background presidents that Sadat and then Mubarak continued — a pattern of military rule Mubarak's own fall did not ultimately break.</div>
+            </a>
+          </div>
+        </div>
+        <div class="topics-group">
+          <div class="topics-group-label">Events &amp; Concepts</div>
+          <div class="topics-grid">
+            <a href="arab-spring.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg" alt="The Arab Spring">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The Arab Spring</div>
+              <div class="topic-preview">Mubarak's 18-day fall in Tahrir Square was one of the Arab Spring's defining early victories — and Egypt's subsequent counter-revolution is one of the wave's starkest disappointments.</div>
+            </a>
+            <a href="1973-arab-israeli-war.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Yom_Kippur_War_%28G-1-4063-%D7%93%D7%A6%29.jpg/960px-Yom_Kippur_War_%28G-1-4063-%D7%93%D7%A6%29.jpg" alt="The 1973 Arab-Israeli War">
+              <div class="topic-type-tag event">Event</div>
+              <div class="topic-name">The 1973 Arab-Israeli War</div>
+              <div class="topic-preview">Mubarak's command of the Egyptian Air Force during this war is the foundation of his post-uprising rehabilitation as a military hero, deliberately emphasized over his political record.</div>
+            </a>
+            <a href="resource-curse.html" class="topic-card"><img class="topic-card-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg" alt="The Resource Curse">
+              <div class="topic-type-tag concept">Concept</div>
+              <div class="topic-name">The Resource Curse</div>
+              <div class="topic-preview">A parallel case study in how concentrated, politically connected economic control — whether through natural resources or, as under Mubarak, privatization — entrenches authoritarian rule at broad public cost.</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources">
+        <h2>Sources &amp; Further Reading</h2>
+        <ul class="sources-list">
+          <li>
+            <span class="src-num">[1]</span>
+            <span class="src-title">Lavie, Limor. "From Pharaoh to Hero: Contested Constructions of Mubarak's Image in Egyptian Post-Uprising Collective Memory."</span>
+            <span class="src-journal">British Journal of Middle Eastern Studies, 2025.</span>
+            <span class="src-note">The core source for both this page's account of Mubarak's career and its dedicated Legacy section on his contested post-uprising memory. A rigorously researched, peer-reviewed study tracing the evolution of Mubarak's public image across revolutionary, counter-revolutionary and official-state memory strands from 2011 through the present.</span>
+          </li>
+          <li>
+            <span class="src-num">[2]</span>
+            <span class="src-title">"Hosni Mubarak."</span>
+            <span class="src-journal">Encyclopaedia Britannica.</span>
+            <span class="src-note">Used for baseline biographical and career facts — birth date, military career timeline, and presidential tenure — supplementing Lavie's more analytical, memory-focused account.</span>
+          </li>
+          <li>
+            <span class="src-num">[3]</span>
+            <span class="src-title">Chekir, Hamouda and Ishac Diwan. "Crony Capitalism in Egypt."</span>
+            <span class="src-journal">Journal of Globalization and Development, 2014.</span>
+            <span class="src-note">An empirical study of politically connected firms under Mubarak's rule, documenting the negative growth effects of crony capitalism entrenched by his economic liberalization program — used for this page's account of his neoliberal reforms and their political economy.</span>
+          </li>
+          <li>
+            <span class="src-num">[4]</span>
+            <span class="src-title">Cook, Steven A. "Hosni Mubarak Is Dead. The Factors That Prompted His Downfall Remain."</span>
+            <span class="src-journal">Foreign Policy, 2020.</span>
+            <span class="src-note">A contemporaneous obituary-analysis published at Mubarak's death, assessing how the securitized, narrowly beneficial economic and political system he built made his 2011 overthrow, in retrospect, close to inevitable.</span>
+          </li>
+          <li>
+            <span class="src-num">[5]</span>
+            <span class="src-title">"Egypt Uprising of 2011."</span>
+            <span class="src-journal">Encyclopaedia Britannica.</span>
+            <span class="src-note">Used for baseline factual detail on the 18-day uprising itself — timeline, key events and immediate outcomes — supplementing the page's primary sources on Mubarak's fall.</span>
+          </li>
+        </ul>
+      </section>
+
+    </article>
+  </div>
+</div>
+
+<div class="toast" id="toast">Article saved to your reading list ✓</div>
+
+<footer>
+  <p>Context — Making history accessible. Content is synthesised from academic sources listed above.</p>
+  <p style="margin-top:0.5rem"><a href="index.html" style="color:var(--purple);text-decoration:none;">← Back to home</a></p>
+</footer>
+
+<script>
+  const CONTEXT_ARTICLES = [
+    { type: 'person',  title: 'Hosni Mubarak', desc: 'The air force commander who ruled Egypt for three decades, was toppled by the 2011 uprising and branded a pharaoh — then, within a decade, was given a state military funeral and remembered by many Egyptians as a patriot and hero.', url: 'hosni-mubarak.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Hosni_Mubarak_ritratto.jpg/960px-Hosni_Mubarak_ritratto.jpg' },
+    { type: 'person',  title: 'Qasem Soleimani', desc: "The peasant's son who became commander of Iran's Quds Force, built a regional network of Shia militias spanning four countries, and was killed by a U.S. drone strike that Washington called self-defense and much of the world called an assassination.", url: 'qasem-soleimani.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Qasem_soleimani_2017.jpeg/960px-Qasem_soleimani_2017.jpeg' },
+    { type: 'person',  title: 'Vladimir Putin', desc: 'The KGB lieutenant colonel who rose through patronage to Russia\'s presidency, built a personalized hybrid state, and invaded Ukraine in a war his own scholars call a case study in hubris.', url: 'vladimir-putin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Vladimir_Vladimirovich_Putin_2022.jpg/960px-Vladimir_Vladimirovich_Putin_2022.jpg' },
+    { type: 'event',   title: 'The War in Afghanistan (2001–2021)', desc: 'Twenty years, $982 billion, and 2,443 American lives — how the U.S. and its allies toppled the Taliban in weeks, then spent two decades failing to build a state that could survive without them.', url: 'war-in-afghanistan-2001-2021.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/An_operation_in_Bak_District_Image_9_of_10.jpg/960px-An_operation_in_Bak_District_Image_9_of_10.jpg' },
+    { type: 'event',   title: 'The Withdrawal from Afghanistan (2021)', desc: "A peace deal that excluded the Afghan government, a president who fled by helicopter, and a republic that didn't lose a war so much as dissolve — how eleven days ended twenty years.", url: 'withdrawal-from-afghanistan-2021.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Afghanistan_withdrawal_Image_7_of_7.jpg/960px-Afghanistan_withdrawal_Image_7_of_7.jpg' },
+    { type: 'event',   title: 'The Fall of the Assad Regime', desc: 'Eleven days. A 54-year dynasty. How a lightning rebel offensive out of Idlib ended the Assad family\'s rule of Syria — and rearranged the Middle East\'s balance of power in the process.', url: 'fall-of-assad-regime.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/HTS_Rebels_coordinating_at_Hama.png/960px-HTS_Rebels_coordinating_at_Hama.png' },
+    { type: 'person',  title: 'Osama bin Laden', desc: 'The Saudi construction heir who founded al-Qaeda, orchestrated the September 11 attacks, and spent a decade hiding in Pakistan before a U.S. raid killed him in 2011.', url: 'osama-bin-laden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Osama_bin_Laden%2C_portr%C3%A6t.jpg/960px-Osama_bin_Laden%2C_portr%C3%A6t.jpg' },
+    { type: 'concept', title: 'The War on Terror', desc: 'The doctrine that took the United States from Kabul to Baghdad in the name of fighting terrorism — and whose contradictions helped produce the very insurgency it was meant to prevent.', url: 'war-on-terror.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg/960px-1_CEB_Clears_Rout_611_During_Operation_Outlaw_Wrath.jpg' },
+    { type: 'person',  title: 'Joe Biden',             desc: 'The senator who spent 36 years in Congress, lost a wife and daughter to a car crash and a son to cancer, won the White House at 77 — and then stepped aside to save his party from himself.', url: 'joe-biden.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/960px-Joe_Biden_presidential_portrait.jpg' },
+    { type: 'event',   title: 'The Rwandan Genocide',       desc: 'In 100 days in 1994, an estimated 800,000 Tutsi and moderate Hutu were killed by a government that had spent years planning it — while the world watched and did nothing.', url: 'rwandan-genocide.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Nyamata_Memorial_Site_13.jpg/960px-Nyamata_Memorial_Site_13.jpg' },
+    { type: 'person',  title: 'Bashar al-Assad',     desc: 'The ophthalmologist who inherited Syria\'s dictatorship, fought a 13-year civil war that killed 600,000 people, then fled to Moscow the night his capital fell to rebel forces.', url: 'bashar-al-assad.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Bashar_al-Assad_in_May_2024.jpg/960px-Bashar_al-Assad_in_May_2024.jpg' },
+    { type: 'event',   title: 'The Syrian Civil War', desc: 'Thirteen years of war between a dictatorship and its people — drawing in Russia, Iran, Turkey, ISIS, and the United States, and producing one of the worst humanitarian disasters of the 21st century.', url: 'syrian-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Syrian_civil_war_01_02_2016.png/960px-Syrian_civil_war_01_02_2016.png' },
+    { type: 'person',  title: 'Yevgeny Prigozhin', desc: 'The caterer who built Russia\'s most feared private army, launched a failed mutiny against Moscow, and died in a mysterious plane crash 63 days later.', url: 'yevgeny-prigozhin.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Yevgeny_Prigozhin_%2813-06-2023%29.jpg/960px-Yevgeny_Prigozhin_%2813-06-2023%29.jpg' },
+    { type: 'concept', title: 'The Wagner Group',   desc: 'The GRU-linked mercenary force that operated across three continents, recruited from Russian prisons, massacred civilians in Mali, and briefly seized a Russian city — until its leader died in a suspicious plane crash.', url: 'wagner-group.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/PMC_wagner_in_belarus_2.png/960px-PMC_wagner_in_belarus_2.png' },
+    { type: 'event',   title: 'The Suez Crisis',         desc: 'The week Britain and France invaded Egypt to retake a canal — and Eisenhower forced them to leave, ending the age of European empire.', url: 'suez-crisis.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/British_carriers_during_Suez_Crisis_1956.jpg/960px-British_carriers_during_Suez_Crisis_1956.jpg' },
+    { type: 'concept', title: 'Pan-Arabism',             desc: 'The dream of a united Arab nation — how it rose with Nasser, peaked at Suez, and collapsed in the wreckage of the 1967 Six-Day War.', url: 'pan-arabism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'event',   title: 'The Arab Spring',         desc: 'The wave of uprisings that swept the Arab world in 2011 — overthrowing four governments, igniting civil wars, and ultimately producing a counter-revolution more authoritarian than what it replaced.', url: 'arab-spring.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Tahrir_Square_on_July_29_2011.jpg/960px-Tahrir_Square_on_July_29_2011.jpg' },
+    { type: 'person',  title: 'Abdel Fattah el-Sisi',   desc: 'The general who overthrew Egypt\'s first elected president, ordered the bloodiest single-day crackdown in modern Egyptian history, and has ruled ever since.', url: 'abdel-fattah-el-sisi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Abdel_Fattah_el-Sisi_in_2017.jpg/960px-Abdel_Fattah_el-Sisi_in_2017.jpg' },
+    { type: 'person',  title: 'Hugo Chávez',                  desc: 'The paratrooper who failed a coup, won an election instead, and spent fourteen years turning Venezuela\'s oil wealth into a revolution — and a dependency.', url: 'hugo-chavez.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg/960px-Hugo_Ch%C3%A1vez_%2802-04-2010%29.jpg' },
+    { type: 'event',   title: 'The Northern Mali Conflict',   desc: 'A Tuareg independence struggle hijacked by jihadists, complicated by military coups, and never resolved — a war that is still ongoing.',  url: 'northern-mali-conflict.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Arm%C3%A9e_malienne_Gao_2013.jpg/960px-Arm%C3%A9e_malienne_Gao_2013.jpg' },
+    { type: 'event',   title: 'The Angolan Civil War',        desc: 'Twenty-seven years of war between MPLA and UNITA, fuelled by Cold War proxies and conflict resources.',  url: 'angola-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg/960px-Ural-375D_with_BM-21_Grad_in_Angola_%28433%29.jpg' },
+    { type: 'event',   title: 'The Halabja Chemical Attack', desc: 'March 16, 1988 — the Iraqi government dropped mustard gas, sarin, and VX nerve agent on a Kurdish town of 80,000, killing an estimated 5,000 in hours. The largest chemical weapons attack against a civilian population in history.', url: 'halabja-chemical-attack.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg/960px-Family_Graves_for_Victims_of_1988_Chemical_Attack_-_Halabja_-_Kurdistan_-_Iraq.jpg' },
+    { type: 'concept', title: 'The Resource Curse',          desc: 'Why countries rich in oil and minerals often end up poorer, less free, and more violent — and what that means for how we think about natural wealth and political development.', url: 'resource-curse.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Oil_well.jpg/960px-Oil_well.jpg' },
+    { type: 'event',   title: 'September 11, 2001',     desc: 'The morning nineteen al-Qaeda operatives killed 2,977 people and launched two decades of war — and the contested questions about what it cost to respond.', url: 'september-11.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/WTC_smoking_on_9-11.jpeg/960px-WTC_smoking_on_9-11.jpeg' },
+    { type: 'event',   title: 'Watergate',               desc: 'How a third-rate burglary became a constitutional crisis — and how Nixon\'s cover-up destroyed his presidency and changed American politics forever.', url: 'watergate.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/WatergateFromAir.JPG/960px-WatergateFromAir.JPG' },
+    { type: 'event',   title: 'The Gulf War',          desc: 'How Iraq\'s invasion of Kuwait triggered the largest military coalition since World War II — a 42-day war that liberated one country, left a dictator in power, and planted the seeds of a second, far costlier conflict twelve years later.', url: 'gulf-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg/960px-USAF_F-16A_F-15C_F-15E_Desert_Storm_edit2.jpg' },
+    { type: 'person',  title: 'Bill Clinton',           desc: 'The president who presided over America\'s longest peacetime economic boom — and whose personal failings handed his enemies the tools to impeach him.', url: 'bill-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bill_Clinton.jpg/960px-Bill_Clinton.jpg' },
+    { type: 'person',  title: 'Hillary Clinton',        desc: 'First Lady, Senator, Secretary of State, and two-time presidential candidate — the most consequential and most contested woman in American political history.', url: 'hillary-clinton.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg/960px-Hillary_Clinton_official_Secretary_of_State_portrait_crop.jpg' },
+    { type: 'concept', title: 'Realpolitik', desc: 'The doctrine that states must pursue power and national interest above morality, ideology, or international law — and how it has shaped every major geopolitical decision of the last 170 years.', url: 'realpolitik.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Otto_von_Bismarck_1885.jpg/960px-Otto_von_Bismarck_1885.jpg' },
+    { type: 'person', title: 'Tony Blair',   desc: 'The Labour prime minister who won a historic 1997 landslide — then staked his legacy on the Iraq War and paid the price.', url: 'tony-blair.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Tony_Blair_in_2002.jpg/960px-Tony_Blair_in_2002.jpg' },
+    { type: 'person', title: 'Colin Powell', desc: "The reluctant warrior whose UN presentation on Iraqi WMDs became the defining moment he spent the rest of his life trying to explain.", url: 'colin-powell.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/GEN_Colin_Powell.JPG/960px-GEN_Colin_Powell.JPG' },
+    { type: 'person', title: 'Dick Cheney',  desc: 'The most powerful vice president in American history — architect of the Iraq War, champion of expanded executive power, and defender of waterboarding.', url: 'dick-cheney.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Richard_Cheney_2003_official_portrait.jpg/960px-Richard_Cheney_2003_official_portrait.jpg' },
+    { type: 'event',  title: 'The Iraq War', desc: 'How contested intelligence, neoconservative ideology, and a divided UN Security Council led to an invasion that reshaped the Middle East.', url: 'iraq-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Iraqi_Freedom_DVIDS1832462.jpg/960px-Iraqi_Freedom_DVIDS1832462.jpg' },
+    { type: 'person',  title: 'Khalifa Haftar',                  desc: 'The Gaddafi general who defected, spent two decades in CIA-linked exile in Virginia, then came back to seize half of Libya.',          url: 'khalifa-haftar.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/General_Haftar.jpg/960px-General_Haftar.jpg' },
+    { type: 'concept', title: 'The Non-Aligned Movement',        desc: 'The Cold War project to build a third way between the U.S. and Soviet blocs — and why it mattered more than it is remembered.',       url: 'non-aligned-movement.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg/960px-Group_Photo_of_Ministerial_Meeting_preceding_the_18th_Summit_of_the_Non-Aligned_Movement_in_Baku_October_23%2C_2019.jpg' },
+    { type: 'person',  title: 'Anwar Sadat',                    desc: 'The Egyptian president who crossed enemy lines to make peace with Israel — and was assassinated for it.',                               url: 'anwar-sadat.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Anwar_El_Sadat.jpg/960px-Anwar_El_Sadat.jpg' },
+    { type: 'concept', title: 'The Responsibility to Protect',   desc: 'The idea that sovereignty is not a shield — and what happens when the international community tries to enforce that principle.',        url: 'responsibility-to-protect.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG/960px-Blue_Helmet_of_UN_peacekeeping_forces,_1990s.JPG' },
+    { type: 'concept', title: 'Democratic Socialism',             desc: 'The argument that capitalism can be replaced through votes rather than revolution — and the long, contested history of what happens when governments actually try.',    url: 'democratic-socialism.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'event',   title: 'The 1973 Arab-Israeli War',       desc: "Sadat's surprise attack crossed a canal, shook an army, and — by not quite winning — made peace possible.",                             url: '1973-arab-israeli-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Yom_Kippur_War_%28G-1-4063-%D7%93%D7%A6%29.jpg/960px-Yom_Kippur_War_%28G-1-4063-%D7%93%D7%A6%29.jpg' },
+    { type: 'event',   title: 'The Libyan Civil War',            desc: 'How the fall of Gaddafi sparked a decade of chaos and a contested NATO intervention.',                                                  url: 'libyan-civil-war.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Libyan_Civil_War_in_October_2011_%2809%29.jpg/960px-Libyan_Civil_War_in_October_2011_%2809%29.jpg' },
+    { type: 'event',   title: 'Operation Condor',                desc: 'How six South American dictatorships built a secret transnational assassination network — and how much the U.S. knew.',                url: 'operation-condor.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Muammar Gaddafi',                 desc: 'The Bedouin goat-herder who seized power at 27 and held it for 42 years.',                                                             url: 'gaddafi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Muammar_al-Gaddafi_1-1.jpg/960px-Muammar_al-Gaddafi_1-1.jpg' },
+    { type: 'person',  title: 'Augusto Pinochet',                desc: "The general who overthrew Chile's democracy and ran a brutal 16-year dictatorship.",                                                    url: 'augusto-pinochet.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Pinochet_de_Civil2.jpg/960px-Pinochet_de_Civil2.jpg' },
+    { type: 'person',  title: 'Saddam Hussein',                  desc: 'The Iraqi dictator who ruled through terror for 24 years before a U.S.-led invasion.',                                                 url: 'saddam-hussein.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_the_Ba%27ath_Party.svg/960px-Flag_of_the_Ba%27ath_Party.svg.png' },
+    { type: 'person',  title: 'Henry Kissinger',                 desc: "The refugee who became America's most powerful and most controversial diplomat.",                                                       url: 'henry-kissinger.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg/960px-Henry_A._Kissinger%2C_U.S._Secretary_of_State%2C_1973-1977.jpg' },
+    { type: 'person',  title: 'Salvador Allende',                desc: 'The first democratically elected Marxist president — overthrown and killed in 1973.',                                                  url: 'salvador-allende.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Party_of_Democratic_Socialism_Quebec_1995.jpg/960px-Party_of_Democratic_Socialism_Quebec_1995.jpg' },
+    { type: 'person',  title: 'Richard Nixon',                   desc: 'The president who opened China, deepened Vietnam, and resigned over Watergate.',                                                       url: 'richard-nixon.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Richard-M-Nixon-NARA-1972.png/960px-Richard-M-Nixon-NARA-1972.png' },
+    { type: 'person',  title: 'Barack Obama',                    desc: "America's first Black president — who promised transformation and left a country more divided.",                                       url: 'obama.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Official_portrait_of_Barack_Obama.jpg/960px-Official_portrait_of_Barack_Obama.jpg' },
+    { type: 'person',  title: 'Gamal Abdel Nasser',              desc: 'The Egyptian revolutionary who humiliated Britain at Suez and inspired a generation of Arab nationalists.',                            url: 'gamal-abdel-nasser.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Nasser_1961.jpg/960px-Nasser_1961.jpg' },
+    { type: 'person',  title: 'George W. Bush',                  desc: 'The president who launched the War on Terror, invaded Iraq, and set the Middle East on fire.',                                        url: 'george-w-bush.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/George_W._Bush_2003_(4x5).png/960px-George_W._Bush_2003_(4x5).png' },
+    { type: 'person',  title: 'Ayatollah Khomeini',              desc: "The cleric who overthrew a U.S.-backed Shah and built the world's first modern Islamic Republic.",                                    url: 'ayatollah-khomeini.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg/960px-Portrait_of_Ruhollah_Khomeini_By_Ali_Kaveh.jpg' },
+    { type: 'event',   title: 'ISIS / The Islamic State',      desc: 'An al-Qaeda splinter that seized a third of Iraq and Syria, declared itself a caliphate, and built the deadliest jihadist movement in history — before losing every inch of that territory in five years.', url: 'isis-islamic-state.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg/960px-Flag_of_the_Islamic_State_of_Iraq_and_the_Levant2.svg.png' },
+    { type: 'person',  title: 'Abu Bakr al-Baghdadi',          desc: 'The Camp Bucca detainee who rebuilt a shattered insurgency, declared himself caliph over millions, and detonated a suicide vest rather than be captured.', url: 'abu-bakr-al-baghdadi.html', thumb: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg/960px-Mugshot_of_Abu_Bakr_al-Baghdadi%2C_2004.jpg' },
+  ];
+
+  let _searchOpen = false, _focusIdx = -1;
+  function toggleSearch() {
+    const btn = document.getElementById('searchIconBtn'), dd = document.getElementById('searchDropdown'), inp = document.getElementById('searchInput');
+    _searchOpen = !_searchOpen;
+    btn.classList.toggle('active', _searchOpen); dd.classList.toggle('open', _searchOpen);
+    if (_searchOpen) { inp.focus(); runSearch(''); } else { inp.value = ''; _focusIdx = -1; }
+  }
+  function runSearch(q) {
+    const box = document.getElementById('searchResults'), term = q.trim().toLowerCase();
+    const sc = t => t.toLowerCase() === term ? 3 : t.toLowerCase().startsWith(term) ? 2 : t.toLowerCase().includes(term) ? 1 : 0;
+    const hits = term === '' ? CONTEXT_ARTICLES : CONTEXT_ARTICLES
+      .filter(a => a.title.toLowerCase().includes(term) || a.desc.toLowerCase().includes(term) || a.type.includes(term))
+      .sort((a, b) => sc(b.title) - sc(a.title));
+    _focusIdx = -1;
+    if (!hits.length) { box.innerHTML = '<div class="search-empty">No articles yet — more coming soon.</div>'; return; }
+    box.innerHTML = hits.map((a,i) => `<a class="search-result" href="${a.url}" data-i="${i}"><div class="search-result-top">${a.thumb ? `<img src="${a.thumb}" alt="" style="width:28px;height:28px;border-radius:4px;object-fit:cover;flex-shrink:0;margin-right:2px;">` : ''}<span class="topic-type-tag ${a.type}">${a.type}</span><span class="search-result-title">${a.title}</span></div><div class="search-result-desc">${a.desc}</div></a>`).join('');
+  }
+  function searchKeydown(e) {
+    const items = document.querySelectorAll('.search-result');
+    if (e.key==='ArrowDown') { e.preventDefault(); _focusIdx=Math.min(_focusIdx+1,items.length-1); }
+    else if (e.key==='ArrowUp') { e.preventDefault(); _focusIdx=Math.max(_focusIdx-1,0); }
+    else if (e.key==='Enter'&&_focusIdx>=0) { items[_focusIdx].click(); return; }
+    else if (e.key==='Escape') { toggleSearch(); return; }
+    items.forEach((r,i)=>r.classList.toggle('focused',i===_focusIdx));
+  }
+  document.addEventListener('click', e => { if (_searchOpen && !document.getElementById('searchWrap').contains(e.target)) toggleSearch(); });
+  window.addEventListener('scroll', () => {
+    document.getElementById('progressBar').style.height = Math.min((window.scrollY/(document.body.scrollHeight-window.innerHeight))*100,100)+'%';
+    const sections=document.querySelectorAll('section[id]'), navItems=document.querySelectorAll('.sidebar-nav li'); let current='';
+    sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id;});
+    navItems.forEach(item=>{const link=item.querySelector('a');item.classList.toggle('active',link&&link.getAttribute('href')==='#'+current);});
+  });
+  function toggleItem(el) { const w=el.classList.contains('active'); document.querySelectorAll('.tl-item').forEach(i=>i.classList.remove('active')); if(!w)el.classList.add('active'); }
+  function toggleSave() {
+    const btn=document.getElementById('saveBtn'), toast=document.getElementById('toast'), isSaved=btn.classList.contains('saved');
+    if(!isSaved){btn.classList.add('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg> Saved`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),3000);}
+    else{btn.classList.remove('saved');btn.innerHTML=`<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> Save article`;}
+  }
+</script>
+</body>
+</html>
